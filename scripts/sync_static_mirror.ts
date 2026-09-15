@@ -263,7 +263,11 @@ async function main() {
       });
     }
   }
-  const volume = buildStaticVolume(points, categories);
+  const volume = buildStaticVolume(
+    points,
+    categories,
+    existingVolume?.methodology,
+  );
   const candidateDates = [...volume.points]
     .map((point) => point.announcementDate)
     .reverse();

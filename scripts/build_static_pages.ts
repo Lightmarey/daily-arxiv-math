@@ -287,7 +287,7 @@ function renderDayPage(
   const body = `<div class="page-head"><p class="eyebrow">${day.announcementDate}</p><h1>今日值得读什么</h1><p>完整收录 ${day.coverage.publishedCount} / ${day.coverage.expectedCount} · 明确披露 AI 协作 ${day.aiDisclosureCount} 篇</p></div>
   ${renderOverview(day)}
   <section class="reports"><div class="section-head"><h2>全部论文</h2><p>按主题与阅读优先级排列</p></div>${renderControls(day, manifest)}<div data-report-list>${renderInteractiveReports(day, basePath)}</div></section>
-  <section class="trend"><div class="section-head"><div><p class="eyebrow">Publication pulse</p><h2>每周发文趋势</h2></div><button type="button" data-trend-toggle aria-expanded="false">展开至 2 年</button></div><p><span data-trend-range>近 6 个月</span>；按配置分类统计 New submissions 与 Cross-lists，缺失分类显示为断点。</p><div class="trend-legend">${manifest.config.categories
+  <section class="trend"><div class="section-head"><div><p class="eyebrow">Publication pulse</p><h2>每周发文趋势</h2></div><button type="button" data-trend-toggle aria-expanded="false">展开至 2 年</button></div><p><span data-trend-range>近 6 个月</span>；${volume.methodology ? '已有精确公告量优先，缺失历史按 arXiv 分类元数据的首次提交日补齐；不抓取论文正文。' : '按配置分类统计 New submissions 与 Cross-lists，缺失分类显示为断点。'}</p><div class="trend-legend">${manifest.config.categories
     .filter((item) => manifest.config.displayCategories.includes(item.id))
     .map(
       (item) =>

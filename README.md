@@ -35,7 +35,7 @@ npm run math:backfill -- --apply
 3. 每个分类独立分析，读取该分类的主题与阅读偏好；较低成本 subagent 逐篇读取 PDF 或 HTML 正文，输出带节、定理、引理或页码证据的证明大纲，并检查致谢、声明和正文末尾的 AI 使用披露。正文不可用时明确保留为“尚未补读正文／尚未核查 AI 声明”。
 4. `scripts/build_complete_report.py --category ...` 只组装结构化分析，生成一个 `ReportBatchV3`。
 5. `scripts/publish_payload.py --endpoint report-v3` 发布到 `/api/ingest/v3`。服务端在同一事务中校验当前配置版本和抓取范围，并只替换该分类、该公告日的报告。
-6. `scripts/backfill_volume.py` 只接受官方 catchup 可证实的历史事件；未证实日期保持缺失，不按当前论文元数据推算，也不补成零。
+6. `scripts/backfill_volume.py` 用官方 catchup 页回填精确公告事件；`scripts/backfill_volume_metadata.py` 则从 arXiv OAI 分类元数据批量补足长期趋势，不下载论文正文，并保留已有的精确公告计数优先级。页面会明确披露两种统计口径。
 
 论文元数据按 arXiv ID 共享，分析按“分类＋公告日＋论文＋版本”保存。同一论文跨分类时列表按 `displayCategories` 顺序显示一张卡，详情保留各分类分析。趋势点使用 `counts: Record<categoryId, number | null>`，因此已确认零篇和未采集可以区分。
 

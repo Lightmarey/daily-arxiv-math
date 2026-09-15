@@ -50,6 +50,14 @@ export interface StaticPaperV2 {
 
 export interface StaticVolumeV2 {
   schemaVersion: typeof STATIC_MIRROR_SCHEMA_VERSION;
+  methodology?: {
+    generatedAt: string;
+    startDate: string;
+    endDate: string;
+    source: string;
+    metric: string;
+    paperBodiesFetched: false;
+  };
   points: VolumePoint[];
   weeks26: WeeklyVolumePoint[];
   weeks104: WeeklyVolumePoint[];
@@ -187,6 +195,7 @@ export function buildStaticDay(
 export function buildStaticVolume(
   points: VolumePoint[],
   categories: string[],
+  methodology?: StaticVolumeV2['methodology'],
 ): StaticVolumeV2 {
   const allOrdered = [...points].sort((a, b) =>
     a.announcementDate.localeCompare(b.announcementDate),
@@ -201,6 +210,7 @@ export function buildStaticVolume(
   const weeks = aggregateWeeklyVolumes(ordered, categories);
   return {
     schemaVersion: STATIC_MIRROR_SCHEMA_VERSION,
+    ...(methodology ? { methodology } : {}),
     points: ordered,
     weeks26: weeks.slice(-26),
     weeks104: weeks.slice(-104),

@@ -226,7 +226,14 @@ const points = [
   announcementDate,
   counts: { 'math.AP': 1, 'cs.LG': 2 },
 }));
-const volume = buildStaticVolume(points, ['math.AP', 'cs.LG']);
+const volume = buildStaticVolume(points, ['math.AP', 'cs.LG'], {
+  generatedAt: '2026-09-06T00:00:00Z',
+  startDate: '2026-08-31',
+  endDate: '2026-09-05',
+  source: 'arXiv OAI category metadata',
+  metric: 'first submission date',
+  paperBodiesFetched: false,
+});
 assert.equal(volume.weeks26[0].counts['cs.LG'], 10);
 const root = await mkdtemp(join(tmpdir(), 'configurable-static-test-')),
   content = join(root, 'content'),
@@ -283,6 +290,7 @@ assert.match(html, /摘要级分析/);
 assert.match(html, /data-chart/);
 assert.match(html, /data-trend-range/);
 assert.match(html, /data-trend-toggle aria-expanded="false"/);
+assert.match(html, /不抓取论文正文/);
 assert.match(
   await readFile(join(out, 'assets/site.js'), 'utf8'),
   /Number\.isInteger\(week\.counts/,
