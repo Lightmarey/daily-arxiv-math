@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08320",
+  "slug": "2609.08320",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08320:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08320",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Compact implicit high-resolution numerical scheme for multicomponent transport problems with Langmuir sorption",
+    "authors": [
+      "Dagmar Zakova",
+      "Peter Frolkovic"
+    ],
+    "abstract": "We present a compact implicit high-resolution finite volume scheme for one-dimensional multicomponent transport problems with nonlinear Langmuir sorption. The method combines a second order compact implicit discretization with WENO reconstruction and a time limiter for the treatment of steep gradients and discontinuities. A special attention is given to the Courant number used in the limiter, where local characteristic Courant numbers based on the eigenvalues of the inverse retardation matrix are considered. The compact implicit schemes are compared with analogous explicit first and second order methods. Numerical experiments show second order convergence for smooth solutions and demonstrate that the implicit approach can be used with significantly larger Courant numbers. The method is also applied to a three-component displacement chromatography problem with sharp concentration fronts.",
+    "categories": [
+      "math.NA",
+      "math.AP"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2609.08320",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08320",
+    "submittedAt": "2026-09-08T06:45:00Z",
+    "updatedAt": "2026-09-08T06:45:00Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文提出用于带 Langmuir 吸附的多组分一维输运系统的紧致隐式高分辨率有限体积方法。守恒变量在新时间层通过局部二阶紧致界面公式更新，每个网格单元只需局部 Newton/Gauss–Seidel 求解；WENO 重构根据局部平滑性调节空间 stencil，time limiter 在大 Courant 数或陡峭前沿处把二阶修正压回稳健的一阶上风形式。数值部分比较隐式/显式、一阶/二阶和 WENO 变体，并用高斯初值、线性 benchmark 和三组分 displacement chromatography 测试收敛、效率与尖锐前沿捕获。",
+    "techniques": [
+      "紧致二阶隐式有限体积离散",
+      "Langmuir 非线性吸附守恒变量",
+      "WENO 局部重构",
+      "时间 limiter 与特征 Courant 数",
+      "局部 Newton 和非线性 Gauss–Seidel 扫描"
+    ],
+    "breakthrough": "将局部代数求解的紧致隐式二阶格式、WENO 与时间限制器组合到强耦合 Langmuir 多组分系统，使高分辨率计算可使用明显大于显式 CFL 限制的时间步，同时在数值实验中保持二阶平滑解精度并捕获位移色谱尖锐前沿。",
+    "limitations": "论文只处理一维无扩散/弥散的 advective hyperbolic 模型，结论来自有限组数值实验而非一般稳定性、守恒性或收敛定理。实现假定正速度和给定 Langmuir 参数，时间步放大虽可行但精度、局部 Newton 收敛及高维推广仍需额外分析。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "not_applicable",
+      "steps": []
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查模型、格式推导、WENO/time-limiter 算法、三个数值实验、Python/NumPy/Matplotlib 实现说明、结论和 References，并检索 AI、LLM、ChatGPT、Claude、generative 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码、编辑、校对、翻译、排版或图表。",
+    "aiEvidenceSource": "PDF 第 1-24 页全文；重点核查第 1-10 页方法、第 11-21 页数值实验、第 21 页结论及第 22-24 页 References。",
+    "priorityScore": 55,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08320:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08320",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Compact implicit high-resolution numerical scheme for multicomponent transport problems with Langmuir sorption",
+        "authors": [
+          "Dagmar Zakova",
+          "Peter Frolkovic"
+        ],
+        "abstract": "We present a compact implicit high-resolution finite volume scheme for one-dimensional multicomponent transport problems with nonlinear Langmuir sorption. The method combines a second order compact implicit discretization with WENO reconstruction and a time limiter for the treatment of steep gradients and discontinuities. A special attention is given to the Courant number used in the limiter, where local characteristic Courant numbers based on the eigenvalues of the inverse retardation matrix are considered. The compact implicit schemes are compared with analogous explicit first and second order methods. Numerical experiments show second order convergence for smooth solutions and demonstrate that the implicit approach can be used with significantly larger Courant numbers. The method is also applied to a three-component displacement chromatography problem with sharp concentration fronts.",
+        "categories": [
+          "math.NA",
+          "math.AP"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2609.08320",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08320",
+        "submittedAt": "2026-09-08T06:45:00Z",
+        "updatedAt": "2026-09-08T06:45:00Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文提出用于带 Langmuir 吸附的多组分一维输运系统的紧致隐式高分辨率有限体积方法。守恒变量在新时间层通过局部二阶紧致界面公式更新，每个网格单元只需局部 Newton/Gauss–Seidel 求解；WENO 重构根据局部平滑性调节空间 stencil，time limiter 在大 Courant 数或陡峭前沿处把二阶修正压回稳健的一阶上风形式。数值部分比较隐式/显式、一阶/二阶和 WENO 变体，并用高斯初值、线性 benchmark 和三组分 displacement chromatography 测试收敛、效率与尖锐前沿捕获。",
+        "techniques": [
+          "紧致二阶隐式有限体积离散",
+          "Langmuir 非线性吸附守恒变量",
+          "WENO 局部重构",
+          "时间 limiter 与特征 Courant 数",
+          "局部 Newton 和非线性 Gauss–Seidel 扫描"
+        ],
+        "breakthrough": "将局部代数求解的紧致隐式二阶格式、WENO 与时间限制器组合到强耦合 Langmuir 多组分系统，使高分辨率计算可使用明显大于显式 CFL 限制的时间步，同时在数值实验中保持二阶平滑解精度并捕获位移色谱尖锐前沿。",
+        "limitations": "论文只处理一维无扩散/弥散的 advective hyperbolic 模型，结论来自有限组数值实验而非一般稳定性、守恒性或收敛定理。实现假定正速度和给定 Langmuir 参数，时间步放大虽可行但精度、局部 Newton 收敛及高维推广仍需额外分析。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "not_applicable",
+          "steps": []
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查模型、格式推导、WENO/time-limiter 算法、三个数值实验、Python/NumPy/Matplotlib 实现说明、结论和 References，并检索 AI、LLM、ChatGPT、Claude、generative 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码、编辑、校对、翻译、排版或图表。",
+        "aiEvidenceSource": "PDF 第 1-24 页全文；重点核查第 1-10 页方法、第 11-21 页数值实验、第 21 页结论及第 22-24 页 References。",
+        "priorityScore": 55,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

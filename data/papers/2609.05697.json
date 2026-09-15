@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05697",
+  "slug": "2609.05697",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.05697:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.05697",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global asymptotic stability of KdV-Burgers fronts in a weakly two-dimensional model",
+    "authors": [
+      "Jared C. Bronski",
+      "Olivia Clifton",
+      "Vera Mikyoung Hur"
+    ],
+    "abstract": "We study front-type solutions of nonlinear dispersive-dissipative PDEs modeling the propagation of undular bores in a channel in two dimensions. The system extends the Korteweg-de Vries-Burgers (KdVB) equation by incorporating weak transverse motion, and admits the KdVB fronts as one-dimensional solutions. We investigate their stability under general two-dimensional perturbations. We prove that a one-dimensional front is a global asymptotic attractor in the weakly two-dimensional setting when the channel is sufficiently narrow in the transverse direction and the relative dispersion parameter lies in a range for stability to one-dimensional perturbations. Particularly, the front is unique up to spatial translations. The proof extends the energy method for temporally-modulated perturbed solutions, developed previously in the one-dimensional setting, to accommodate the transverse dynamics.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05697",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05697",
+    "submittedAt": "2026-09-04T20:08:33Z",
+    "updatedAt": "2026-09-04T20:08:33Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "本文研究弱二维 KdV–Burgers 条带系统中一维前沿在任意二维扰动下的全局渐近稳定性。作者以时间调制的 front 位置 x0(t) 分解 $u=\\phi (x-x0(t))+w$，并将横向变量 v 一并纳入 L2 能量；调制方程消除平移零模，谱假设和足够窄的条带使线性化算子正半定。能量耗散先给出梯度耗散可积，再通过梯度微分不等式排除反复 excursions，最后用 Poincare/Gagliardo–Nirenberg 型不等式和 Sobolev 插值将梯度衰减转成 Lp 前沿扰动衰减，并在更强 x 权重下得到代数速率。",
+    "techniques": [
+      "时间调制平移与零模投影",
+      "KdV–Burgers 线性化谱估计",
+      "横向 Poincare 不等式",
+      "Lyapunov 能量和梯度耗散",
+      "Gagliardo–Nirenberg/Sobolev 插值"
+    ],
+    "breakthrough": "论文把一维 KdVB front 的时间调制能量法扩展到弱二维耦合系统，在无初始扰动小性要求下证明足够窄条带内一维前沿是全局吸引子，并给出横向扰动也被耗散的稳定性和代数衰减。",
+    "limitations": "稳定性要求横向半宽 L<Lmax、Schrödinger 型一维算子恰有一个负特征值，并依赖所假设的 $H^3$ 全局适定性；L 的限制被作者认为可能只是方法限制，数值上更宽条带或许仍稳定。代数速率需要更强 x 加权初值，结论限于给定弱二维模型和条带边界。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "调制位置 x0(t) 可消除前沿平移零模，并使扰动能量满足含线性化算子的耗散恒等式。",
+          "route": "令 $u=\\phi (x-x0(t))+w$，按 w 与 $\\phi x$ 的 L2 内积定义 x0′；投影项抵消时间平移产生的中性方向，剩余方程对 (w,v) 测试得到能量导数等于梯度耗散减去二次型。",
+          "evidence": "第2节 Energy method 与式(6)、(9)（PDF 第4–5页）；Theorem 2.1 假设（PDF 第6页）。"
+        },
+        {
+          "claim": "谱条件与窄条带条件使线性化二次型正半定，从而扰动能量单调不增。",
+          "route": "一维算子 $-d^{2}/dx^{2}+\\phi x/2$ 只有一个负特征值时，用 rank-one 平移投影补掉负模；横向 Dirichlet 模式的最小本征值为 $\\pi ^{2}/(4L^{2})$，当 L<Lmax 时吸收该负方向，得到完整二维算子的非负性。",
+          "evidence": "第2节谱讨论（PDF 第4–6页）；Theorem 2.1 条件 L<Lmax（PDF 第6页）。"
+        },
+        {
+          "claim": "梯度耗散趋于零，且不可能通过越来越短的时间段反复返回到 O(1)。",
+          "route": "能量不等式先积分出 $∫_0^\\infty (||\\nabla w||^{2}+||\\nabla v||^{2})dt<\\infty $；再对 $\\zeta (t)=||\\nabla w||^{2}+||\\nabla v||^{2}$ 推导由有限幂次控制的微分不等式，排除有限积分下的无限高幅 excursions，故 $\\zeta (t)\\to 0$。",
+          "evidence": "Theorem 2.1 proof overview Step 1–2（PDF 第7页）；第2节证明中梯度微分不等式（PDF 第9–14页）。"
+        },
+        {
+          "claim": "在 p>2 下解趋于某个平移前沿，在更强初值权重下还获得代数衰减。",
+          "route": "v 满足横向 Dirichlet 条件，直接用 Poincare 控制其 Lp；w 的 Neumann 零模则由调制正交条件和带一维平均的插值估计控制，结合梯度趋零得到 Lp 收敛。Section 3 对加权能量重复该链并追踪时间幂次。",
+          "evidence": "Theorem 2.1（PDF 第6页）；Section 2 Step 3（PDF 第7–15页）；Theorem 3.1（PDF 第15–16页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–17页的正文三节、Acknowledgement 和 References，并检索 AI/LLM 相关词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–17页全文检查，重点为第17页 Acknowledgement/References 及全文 AI/LLM 词项核查。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.05697:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.05697",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global asymptotic stability of KdV-Burgers fronts in a weakly two-dimensional model",
+        "authors": [
+          "Jared C. Bronski",
+          "Olivia Clifton",
+          "Vera Mikyoung Hur"
+        ],
+        "abstract": "We study front-type solutions of nonlinear dispersive-dissipative PDEs modeling the propagation of undular bores in a channel in two dimensions. The system extends the Korteweg-de Vries-Burgers (KdVB) equation by incorporating weak transverse motion, and admits the KdVB fronts as one-dimensional solutions. We investigate their stability under general two-dimensional perturbations. We prove that a one-dimensional front is a global asymptotic attractor in the weakly two-dimensional setting when the channel is sufficiently narrow in the transverse direction and the relative dispersion parameter lies in a range for stability to one-dimensional perturbations. Particularly, the front is unique up to spatial translations. The proof extends the energy method for temporally-modulated perturbed solutions, developed previously in the one-dimensional setting, to accommodate the transverse dynamics.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05697",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05697",
+        "submittedAt": "2026-09-04T20:08:33Z",
+        "updatedAt": "2026-09-04T20:08:33Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "本文研究弱二维 KdV–Burgers 条带系统中一维前沿在任意二维扰动下的全局渐近稳定性。作者以时间调制的 front 位置 x0(t) 分解 $u=\\phi (x-x0(t))+w$，并将横向变量 v 一并纳入 L2 能量；调制方程消除平移零模，谱假设和足够窄的条带使线性化算子正半定。能量耗散先给出梯度耗散可积，再通过梯度微分不等式排除反复 excursions，最后用 Poincare/Gagliardo–Nirenberg 型不等式和 Sobolev 插值将梯度衰减转成 Lp 前沿扰动衰减，并在更强 x 权重下得到代数速率。",
+        "techniques": [
+          "时间调制平移与零模投影",
+          "KdV–Burgers 线性化谱估计",
+          "横向 Poincare 不等式",
+          "Lyapunov 能量和梯度耗散",
+          "Gagliardo–Nirenberg/Sobolev 插值"
+        ],
+        "breakthrough": "论文把一维 KdVB front 的时间调制能量法扩展到弱二维耦合系统，在无初始扰动小性要求下证明足够窄条带内一维前沿是全局吸引子，并给出横向扰动也被耗散的稳定性和代数衰减。",
+        "limitations": "稳定性要求横向半宽 L<Lmax、Schrödinger 型一维算子恰有一个负特征值，并依赖所假设的 $H^3$ 全局适定性；L 的限制被作者认为可能只是方法限制，数值上更宽条带或许仍稳定。代数速率需要更强 x 加权初值，结论限于给定弱二维模型和条带边界。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "调制位置 x0(t) 可消除前沿平移零模，并使扰动能量满足含线性化算子的耗散恒等式。",
+              "route": "令 $u=\\phi (x-x0(t))+w$，按 w 与 $\\phi x$ 的 L2 内积定义 x0′；投影项抵消时间平移产生的中性方向，剩余方程对 (w,v) 测试得到能量导数等于梯度耗散减去二次型。",
+              "evidence": "第2节 Energy method 与式(6)、(9)（PDF 第4–5页）；Theorem 2.1 假设（PDF 第6页）。"
+            },
+            {
+              "claim": "谱条件与窄条带条件使线性化二次型正半定，从而扰动能量单调不增。",
+              "route": "一维算子 $-d^{2}/dx^{2}+\\phi x/2$ 只有一个负特征值时，用 rank-one 平移投影补掉负模；横向 Dirichlet 模式的最小本征值为 $\\pi ^{2}/(4L^{2})$，当 L<Lmax 时吸收该负方向，得到完整二维算子的非负性。",
+              "evidence": "第2节谱讨论（PDF 第4–6页）；Theorem 2.1 条件 L<Lmax（PDF 第6页）。"
+            },
+            {
+              "claim": "梯度耗散趋于零，且不可能通过越来越短的时间段反复返回到 O(1)。",
+              "route": "能量不等式先积分出 $∫_0^\\infty (||\\nabla w||^{2}+||\\nabla v||^{2})dt<\\infty $；再对 $\\zeta (t)=||\\nabla w||^{2}+||\\nabla v||^{2}$ 推导由有限幂次控制的微分不等式，排除有限积分下的无限高幅 excursions，故 $\\zeta (t)\\to 0$。",
+              "evidence": "Theorem 2.1 proof overview Step 1–2（PDF 第7页）；第2节证明中梯度微分不等式（PDF 第9–14页）。"
+            },
+            {
+              "claim": "在 p>2 下解趋于某个平移前沿，在更强初值权重下还获得代数衰减。",
+              "route": "v 满足横向 Dirichlet 条件，直接用 Poincare 控制其 Lp；w 的 Neumann 零模则由调制正交条件和带一维平均的插值估计控制，结合梯度趋零得到 Lp 收敛。Section 3 对加权能量重复该链并追踪时间幂次。",
+              "evidence": "Theorem 2.1（PDF 第6页）；Section 2 Step 3（PDF 第7–15页）；Theorem 3.1（PDF 第15–16页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–17页的正文三节、Acknowledgement 和 References，并检索 AI/LLM 相关词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–17页全文检查，重点为第17页 Acknowledgement/References 及全文 AI/LLM 词项核查。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

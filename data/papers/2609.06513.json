@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06513",
+  "slug": "2609.06513",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06513:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06513",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Exact Analytic Solution for the Time-Fractional Hunter-Saxton Equation with Caputo derivative",
+    "authors": [
+      "Weiguang Huang"
+    ],
+    "abstract": "A time fractional extension of the Hunter Saxton equation is examined, in which the temporal derivative of u_x is replaced by a Caputo derivative of order 0 < alpha <= 1. This modification introduces memory effects into a model traditionally associated with director field dynamics in nematic liquid crystals. By employing a fractional separation of variables strategy together with the exponential spatial profile phi(x) = exp(b+x), which cancels the nonlinear structure exactly, the governing nonlinear partial differential equation is reduced to a fractional relaxation ODE, whose closed form solution is the one-parameter Mittag Leffler function. The exact analytic solution is derived algebraically from the separation process. This appears to be the first exact closed form solution of the Caputo time fractional Hunter Saxton equation. The result is validated symbolically using the MathHandbook computer-algebra system. Quantitative analysis in both the fractional (0 < alpha < 1) and classical (alpha -> 1) limits demonstrates how fractional-order memory slows temporal relaxation relative to the exponential baseline. The solution provides a reliable benchmark for numerical schemes and clarifies how fractional dynamics influence nonlinear wave propagation in orientationally ordered fluids.",
+    "categories": [
+      "cond-mat.soft",
+      "math-ph",
+      "math.AP",
+      "math.DS"
+    ],
+    "primaryCategory": "cond-mat.soft",
+    "arxivUrl": "https://arxiv.org/abs/2609.06513",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06513",
+    "submittedAt": "2026-09-06T10:08:57Z",
+    "updatedAt": "2026-09-06T10:08:57Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "分析结果",
+    "workSummary": "论文研究带 Caputo 时间分数阶导数的 Hunter–Saxton 方程。作者从可分离形式 $u(x,t)=psi(t)phi(x)+c$ 出发，选取满足 phi $prime=phi$ double $prime=phi$ 的指数空间模态 $phi(x)=exp(b+x)$，使两个二次非线性项逐项抵消，原偏微分方程因此退化为 Caputo 分数阶松弛方程。该方程由一参数 Mittag–Leffler 函数精确求解，作者随后用初值、经典 $alpha=1$ 极限和 MathHandbook 符号展开核验残差，并比较分数阶记忆造成的慢衰减。",
+    "techniques": [
+      "分离变量构造",
+      "指数空间模态的非线性消去",
+      "Caputo 分数阶松弛方程",
+      "Mittag–Leffler 函数求解",
+      "符号代数残差验证"
+    ],
+    "breakthrough": "给出 Caputo 型时间分数阶 Hunter–Saxton 方程在指数空间模态上的显式 Mittag–Leffler 解，为分数阶数值方法提供了可重复的精确基准，并把记忆效应直接表现为相对指数衰减的慢松弛。",
+    "limitations": "闭式解只覆盖指数空间剖面和可分离初值 $u0(x)=exp(b+x)+c$；它没有处理一般初值下的适定性、稳定性或唯一性，也没有把符号核验扩展成数值误差分析。参数 c、b 和 $0<alpha\\le 1$ 的设定限制了该解作为一般非线性动力学描述的范围。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "可分离代入把时间分数阶 Hunter–Saxton 方程化为含 psi、phi 的代数关系。",
+          "route": "令 $u=psi(t)phi(x)+c$，利用 Caputo 算子只作用于时间且与空间因子交换，得到对 $u_x、u_xx$ 和 $Caputo(u_x)$ 的逐项表达；代回原方程后把时间因子与空间因子分离。",
+          "evidence": "PDF 第 3 页 Section 3.1，equations (3)–(5)；模型方程见第 3 页 Section 2 equation (1)。"
+        },
+        {
+          "claim": "指数剖面使两个二次非线性项完全抵消，剩下 Caputo psi minus c psi equals 0。",
+          "route": "取 $phi(x)=exp(b+x)$，于是 phi $prime=phi$ double $prime=phi$ 且 phi double prime over phi $prime=1$；代入展开式时，来自 minus u $u_xx$ 的 psi squared phi 项与来自 $(u_x)^2$ 的同项符号相反，唯一剩余项形成线性分数阶松弛方程。",
+          "evidence": "PDF 第 3-4 页 Section 3.2–3.3，equations (6)–(9)。"
+        },
+        {
+          "claim": "分数阶松弛方程的初值解为 $psi(t)=E_alpha(c$ $t^alpha)$，从而得到闭式 PDE 解。",
+          "route": "使用 Caputo 对 Mittag–Leffler 函数的特征恒等式和 Laplace 变换 $s^(alpha-1)/(s^alpha-c)$，匹配初值 $psi(0)=1$；再把 psi 与指数 phi 合回分离 ansatz，得到 $u=E_alpha(c$ $t^alpha)exp(b+x)+c$。",
+          "evidence": "PDF 第 4 页 Section 3.4 equation (10)–(11) 与 Section 4 equation (12)；初值约束见 equation (13)。"
+        },
+        {
+          "claim": "所得表达式满足原方程，并在 alpha趋近1 时退化为经典指数松弛。",
+          "route": "把闭式解的 Caputo 导数、乘积 u $u_xx$ 与平方 $(u_x)^2$ 分别展开，两个 $E_alpha$ 平方项逐项相消，线性项由 Caputo 特征关系抵消；再用 Mittag–Leffler 的 $alpha=1$ 极限和大时间渐近比较两种衰减。",
+          "evidence": "PDF 第 4 页 Section 5.1 symbolic verification；第 4 页 equation (15)；第 4 页 Section 5.2 的 fractional/classical decay discussion。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文只说明使用 MathHandbook（formerly SymbMath）计算机代数系统进行符号验证；这属于作者明确提到的普通 CAS 工具，未披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-4 页全文，重点为第 1 页摘要、第 3-4 页 Sections 3–5，以及第 4 页 MathHandbook verification 段落和 References。",
+    "priorityScore": 56,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06513:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06513",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Exact Analytic Solution for the Time-Fractional Hunter-Saxton Equation with Caputo derivative",
+        "authors": [
+          "Weiguang Huang"
+        ],
+        "abstract": "A time fractional extension of the Hunter Saxton equation is examined, in which the temporal derivative of u_x is replaced by a Caputo derivative of order 0 < alpha <= 1. This modification introduces memory effects into a model traditionally associated with director field dynamics in nematic liquid crystals. By employing a fractional separation of variables strategy together with the exponential spatial profile phi(x) = exp(b+x), which cancels the nonlinear structure exactly, the governing nonlinear partial differential equation is reduced to a fractional relaxation ODE, whose closed form solution is the one-parameter Mittag Leffler function. The exact analytic solution is derived algebraically from the separation process. This appears to be the first exact closed form solution of the Caputo time fractional Hunter Saxton equation. The result is validated symbolically using the MathHandbook computer-algebra system. Quantitative analysis in both the fractional (0 < alpha < 1) and classical (alpha -> 1) limits demonstrates how fractional-order memory slows temporal relaxation relative to the exponential baseline. The solution provides a reliable benchmark for numerical schemes and clarifies how fractional dynamics influence nonlinear wave propagation in orientationally ordered fluids.",
+        "categories": [
+          "cond-mat.soft",
+          "math-ph",
+          "math.AP",
+          "math.DS"
+        ],
+        "primaryCategory": "cond-mat.soft",
+        "arxivUrl": "https://arxiv.org/abs/2609.06513",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06513",
+        "submittedAt": "2026-09-06T10:08:57Z",
+        "updatedAt": "2026-09-06T10:08:57Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "分析结果",
+        "workSummary": "论文研究带 Caputo 时间分数阶导数的 Hunter–Saxton 方程。作者从可分离形式 $u(x,t)=psi(t)phi(x)+c$ 出发，选取满足 phi $prime=phi$ double $prime=phi$ 的指数空间模态 $phi(x)=exp(b+x)$，使两个二次非线性项逐项抵消，原偏微分方程因此退化为 Caputo 分数阶松弛方程。该方程由一参数 Mittag–Leffler 函数精确求解，作者随后用初值、经典 $alpha=1$ 极限和 MathHandbook 符号展开核验残差，并比较分数阶记忆造成的慢衰减。",
+        "techniques": [
+          "分离变量构造",
+          "指数空间模态的非线性消去",
+          "Caputo 分数阶松弛方程",
+          "Mittag–Leffler 函数求解",
+          "符号代数残差验证"
+        ],
+        "breakthrough": "给出 Caputo 型时间分数阶 Hunter–Saxton 方程在指数空间模态上的显式 Mittag–Leffler 解，为分数阶数值方法提供了可重复的精确基准，并把记忆效应直接表现为相对指数衰减的慢松弛。",
+        "limitations": "闭式解只覆盖指数空间剖面和可分离初值 $u0(x)=exp(b+x)+c$；它没有处理一般初值下的适定性、稳定性或唯一性，也没有把符号核验扩展成数值误差分析。参数 c、b 和 $0<alpha\\le 1$ 的设定限制了该解作为一般非线性动力学描述的范围。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "可分离代入把时间分数阶 Hunter–Saxton 方程化为含 psi、phi 的代数关系。",
+              "route": "令 $u=psi(t)phi(x)+c$，利用 Caputo 算子只作用于时间且与空间因子交换，得到对 $u_x、u_xx$ 和 $Caputo(u_x)$ 的逐项表达；代回原方程后把时间因子与空间因子分离。",
+              "evidence": "PDF 第 3 页 Section 3.1，equations (3)–(5)；模型方程见第 3 页 Section 2 equation (1)。"
+            },
+            {
+              "claim": "指数剖面使两个二次非线性项完全抵消，剩下 Caputo psi minus c psi equals 0。",
+              "route": "取 $phi(x)=exp(b+x)$，于是 phi $prime=phi$ double $prime=phi$ 且 phi double prime over phi $prime=1$；代入展开式时，来自 minus u $u_xx$ 的 psi squared phi 项与来自 $(u_x)^2$ 的同项符号相反，唯一剩余项形成线性分数阶松弛方程。",
+              "evidence": "PDF 第 3-4 页 Section 3.2–3.3，equations (6)–(9)。"
+            },
+            {
+              "claim": "分数阶松弛方程的初值解为 $psi(t)=E_alpha(c$ $t^alpha)$，从而得到闭式 PDE 解。",
+              "route": "使用 Caputo 对 Mittag–Leffler 函数的特征恒等式和 Laplace 变换 $s^(alpha-1)/(s^alpha-c)$，匹配初值 $psi(0)=1$；再把 psi 与指数 phi 合回分离 ansatz，得到 $u=E_alpha(c$ $t^alpha)exp(b+x)+c$。",
+              "evidence": "PDF 第 4 页 Section 3.4 equation (10)–(11) 与 Section 4 equation (12)；初值约束见 equation (13)。"
+            },
+            {
+              "claim": "所得表达式满足原方程，并在 alpha趋近1 时退化为经典指数松弛。",
+              "route": "把闭式解的 Caputo 导数、乘积 u $u_xx$ 与平方 $(u_x)^2$ 分别展开，两个 $E_alpha$ 平方项逐项相消，线性项由 Caputo 特征关系抵消；再用 Mittag–Leffler 的 $alpha=1$ 极限和大时间渐近比较两种衰减。",
+              "evidence": "PDF 第 4 页 Section 5.1 symbolic verification；第 4 页 equation (15)；第 4 页 Section 5.2 的 fractional/classical decay discussion。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文只说明使用 MathHandbook（formerly SymbMath）计算机代数系统进行符号验证；这属于作者明确提到的普通 CAS 工具，未披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-4 页全文，重点为第 1 页摘要、第 3-4 页 Sections 3–5，以及第 4 页 MathHandbook verification 段落和 References。",
+        "priorityScore": 56,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

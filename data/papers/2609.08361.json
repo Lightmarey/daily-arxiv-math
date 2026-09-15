@@ -3,91 +3,157 @@
   "arxivId": "2609.08361",
   "slug": "2609.08361",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.08361:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.08361",
-    "metadata": {
-      "title": "Continuation and reduction of steady vortex sheets under metric deformations on a disk",
-      "authors": [
-        "Yuuki Shimizu"
-      ],
-      "abstract": "We study the local continuation of a steady vortex sheet under a prescribed deformation $g_s= e^{2σ_s}g_{\\mathrm{e}}$ of a conformal metric on the unit disk. Representing the moving sheet by a normal graph, we formulate the streamline and Bernoulli conditions as a nonlinear residual whose two components have different Sobolev orders. If the two one-sided tangential velocities of the reference sheet do not vanish simultaneously, the derivative of the unnormalized residual is Fredholm of index two. Fixing the mean normal displacement and the total circulation gives an index-zero problem; when the normalization differential restricted to the unnormalized kernel is onto $\\mathbb{R}^2$, we obtain a parameter-dependent Lyapunov-Schmidt reduction. This yields a locally unique normalized branch in the nondegenerate case and explicit first- and second-order necessary conditions in the degenerate case. For a rotationally symmetric reference metric and a concentric circular sheet, the linearized problem separates into Fourier blocks and only finitely many modes can be resonant. In the constant-curvature disk family, every mode $k\\geq2$ is nonresonant, whereas the first mode produces a two-dimensional reduced problem. The two first-mode kernel profiles are normal traces of ambient Killing fields, but they do not generate fixed-boundary symmetries or, by themselves, a nonconcentric branch.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-08T07:29:29Z",
-      "updatedAt": "2026-09-08T07:29:29Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Continuation and reduction of steady vortex sheets under metric deformations on a disk",
+    "authors": [
+      "Yuuki Shimizu"
+    ],
+    "abstract": "We study the local continuation of a steady vortex sheet under a prescribed deformation $g_s= e^{2σ_s}g_{\\mathrm{e}}$ of a conformal metric on the unit disk. Representing the moving sheet by a normal graph, we formulate the streamline and Bernoulli conditions as a nonlinear residual whose two components have different Sobolev orders. If the two one-sided tangential velocities of the reference sheet do not vanish simultaneously, the derivative of the unnormalized residual is Fredholm of index two. Fixing the mean normal displacement and the total circulation gives an index-zero problem; when the normalization differential restricted to the unnormalized kernel is onto $\\mathbb{R}^2$, we obtain a parameter-dependent Lyapunov-Schmidt reduction. This yields a locally unique normalized branch in the nondegenerate case and explicit first- and second-order necessary conditions in the degenerate case. For a rotationally symmetric reference metric and a concentric circular sheet, the linearized problem separates into Fourier blocks and only finitely many modes can be resonant. In the constant-curvature disk family, every mode $k\\geq2$ is nonresonant, whereas the first mode produces a two-dimensional reduced problem. The two first-mode kernel profiles are normal traces of ambient Killing fields, but they do not generate fixed-boundary symmetries or, by themselves, a nonconcentric branch.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.08361",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08361",
+    "submittedAt": "2026-09-08T07:29:29Z",
+    "updatedAt": "2026-09-08T07:29:29Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究单位圆盘上共形度量路径下稳态涡片的局部延拓。作者用支持曲线的法向图 f、片强扰动 h 及流线/Bernoulli 常数构造非线性残差；Green 层势和 transmission 正则性给出不同 Sobolev 阶的残差映射。在线性化中，单层算子阶 −1 与平均法向导数阶 1 组成混合主矩阵，非停滞条件保证其椭圆性，从而未归一化导数 Fredholm 指数为2；加入平均位移和总环流两个约束后用参数依赖 Lyapunov–Schmidt 化为有限维方程。旋转对称情形按 Fourier 模分块，常曲率族只有一阶模共振，退化方程仍未解决是否存在非同心分支。",
+    "techniques": [
+      "Dirichlet Green 层势与 transmission 正则性",
+      "移动边界单层/双层算子形状微分",
+      "阶−1/阶1 混合主符号与 Fredholm 同伦",
+      "平均位移/环流归一化",
+      "参数依赖 Lyapunov–Schmidt reduction 与 Fourier 分块"
+    ],
+    "breakthrough": "建立了在给定共形度量变形下、无需圆形参考曲线的稳态涡片局部延拓框架；归一化后的非退化点给出唯一分支，旋转对称分析进一步把常曲率圆盘的全部退化压缩为二维一阶模约化问题。",
+    "limitations": "结果是法向图坐标中的局部 $C^{2}$ 结论，要求参考片光滑、两侧切向速度逐点不同步为零且度量路径 $C^{3}$。退化时只得到有限维约化方程和一、二阶必要条件，不给出分支存在性、数量或尺度；常曲率族的一阶核虽来自 Killing 场法向迹，但这些流不保持外圆边界。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Green 表示和 transmission 正则性把片数据转化为可控的两侧流函数，并将稳态条件等价为流线常数与 Bernoulli 常数条件。",
+          "route": "对片测度和背景涡量解 Dirichlet 问题，固定 Green 核给出流函数表示及法向导数跳跃；连续迹使法向速度条件等价于曲线上的流函数常数，分部积分把 Euler 弱恒等式化为 $\\gamma ⟨v⟩\\tau =\\beta $。",
+          "evidence": "PDF 第3–5页 Proposition 1、Proposition 2、Proposition 4，尤其公式(7)–(14)。"
+        },
+        {
+          "claim": "法向图参数下的非线性残差 F 具有 $H^{m+1}\\times H^m$ 目标并为 $C^{2}$，且其零点正好是稳态涡片。",
+          "route": "移动曲线的单层和平均法向算子在形状参数上 $C^{2}$，层势的跳跃公式提供主奇异项；Lemma 22 控制曲线几何与片密度，组合到 Definition 14 的两个残差后得 Proposition 23 的 $C^{2}$ 映射。Proposition 21 再逐项把残差零点识别为流线/Bernoulli 条件。",
+          "evidence": "PDF 第10页 Lemma 18；PDF 第16页 Definition 14、Proposition 21；PDF 第16–17页 Lemma 22 与 Proposition 23。"
+        },
+        {
+          "claim": "若两侧切向速度不同时为零，未归一化线性化 Fredholm 指数为2；加入两个物理归一化后指数为0。",
+          "route": "从完整 transmission 线性化提取单层 S0 的 −1 阶和法向算子 T0 的 1 阶主部，主矩阵行列式由两侧切向速度平方和控制，因此可构造双侧参数；剩余项由层势形状微分给出紧扰动，连续 Fredholm 同伦保持指数。平均法向位移和总环流两行约束恰好降低指数2。",
+          "evidence": "PDF 第2页公式(1)与主符号说明；PDF 第18页 Theorem 25；PDF 第10页 Definition/Fact 17 的(28)及第18–19页 Theorem 26。"
+        },
+        {
+          "claim": "归一化问题可约化为有限维 $B(s,\\zeta )=0$；非退化时有唯一分支，退化时只有一、二阶必要条件。",
+          "route": "将未知分解为线性化核 K 与补空间，投影到余核的范围分量上用参数依赖隐函数定理解出补空间变量 $\\xi (s,\\zeta )$，余核投影定义 B。若核维数为零则直接应用隐函数定理；若不为零，对 $B(s,\\zeta (s))$ 两次微分得到一、二阶障碍条件。",
+          "evidence": "PDF 第27–28页 Theorem 27 的(102)–(103)与 Corollary 28；PDF 第33页 Proof of Theorem 29。"
+        },
+        {
+          "claim": "旋转对称下所有共振模可由显式行列式检测；常曲率圆盘仅一阶模共振且其约化维数为2。",
+          "route": "将 Green 核 Fourier 展开，计算单层、法向算子在 $e^{ik\\theta }$ 上的乘子并组装 $2\\times 2$ 模块，得到行列式 $D̊_k^\\sigma (\\ell)$。常曲率代入后用正项分解证明 $k\\ge 2$ 行列式严格为负，而 $k=1$ 秩降；核函数与 Killing 场法向迹对应，但外边界迹非零阻止直接生成非同心分支。",
+          "evidence": "PDF 第33页 Definition 18；PDF 第35页公式(134)–(136)；PDF 第37页 Corollary 44；PDF 第39页 Proposition 46 与 Corollary 47。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新方法/构造",
-      "workSummary": "在圆盘共形度量变形下建立定常涡片的局部延续和退化情形约化。",
-      "techniques": [
-        "Fredholm 指数",
-        "Lyapunov–Schmidt",
-        "Fourier 分块"
-      ],
-      "breakthrough": "区分环境 Killing 核与固定边界下真实分支。",
-      "limitations": "结果局部且需速度及归一化横截条件；核存在不自动产生新分支。 研究结论按摘要级分析；未完成正文方法核验。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 64,
-      "priorityReason": "几何 PDE 分岔方法可参考，模型特定。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We study the local continuation of a steady vortex sheet under a prescribed deformation $g_s= e^{2σ_s}g_{\\mathrm{e}}$ of a conformal metric on the unit disk. Representing the moving sheet by a normal graph, we formulate the streamline and Bernoulli conditions as a nonlinear residual whose two components have different Sobolev orders. If the two one-sided tangential velocities of the reference sheet do not vanish simultaneously, the derivative of the unnormalized residual is Fredholm of index two. Fixing the mean normal displacement and the total circulation gives an index-zero problem; when the normalization differential restricted to the unnormalized kernel is onto $\\mathbb{R}^2$, we obtain a parameter-dependent Lyapunov-Schmidt reduction. This yields a locally unique normalized branch in the nondegenerate case and explicit first- and second-order necessary conditions in the degenerate case. For a rotationally symmetric reference metric and a concentric circular sheet, the linearized problem separates into Fourier blocks and only finitely many modes can be resonant. In the constant-curvature disk family, every mode $k\\geq2$ is nonresonant, whereas the first mode produces a two-dimensional reduced problem. The two first-mode kernel profiles are normal traces of ambient Killing fields, but they do not generate fixed-boundary symmetries or, by themselves, a nonconcentric branch.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "检查摘要、Introduction、Sections 2–7、Acknowledgments 与 References，并全文检索 AI、LLM、ChatGPT、Claude、人工智能；未见作者明确披露 AI 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–41页全文以及末尾致谢/参考文献。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08361:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.08361",
-        "metadata": {
-          "title": "Continuation and reduction of steady vortex sheets under metric deformations on a disk",
-          "authors": [
-            "Yuuki Shimizu"
-          ],
-          "abstract": "We study the local continuation of a steady vortex sheet under a prescribed deformation $g_s= e^{2σ_s}g_{\\mathrm{e}}$ of a conformal metric on the unit disk. Representing the moving sheet by a normal graph, we formulate the streamline and Bernoulli conditions as a nonlinear residual whose two components have different Sobolev orders. If the two one-sided tangential velocities of the reference sheet do not vanish simultaneously, the derivative of the unnormalized residual is Fredholm of index two. Fixing the mean normal displacement and the total circulation gives an index-zero problem; when the normalization differential restricted to the unnormalized kernel is onto $\\mathbb{R}^2$, we obtain a parameter-dependent Lyapunov-Schmidt reduction. This yields a locally unique normalized branch in the nondegenerate case and explicit first- and second-order necessary conditions in the degenerate case. For a rotationally symmetric reference metric and a concentric circular sheet, the linearized problem separates into Fourier blocks and only finitely many modes can be resonant. In the constant-curvature disk family, every mode $k\\geq2$ is nonresonant, whereas the first mode produces a two-dimensional reduced problem. The two first-mode kernel profiles are normal traces of ambient Killing fields, but they do not generate fixed-boundary symmetries or, by themselves, a nonconcentric branch.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-08T07:29:29Z",
-          "updatedAt": "2026-09-08T07:29:29Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Continuation and reduction of steady vortex sheets under metric deformations on a disk",
+        "authors": [
+          "Yuuki Shimizu"
+        ],
+        "abstract": "We study the local continuation of a steady vortex sheet under a prescribed deformation $g_s= e^{2σ_s}g_{\\mathrm{e}}$ of a conformal metric on the unit disk. Representing the moving sheet by a normal graph, we formulate the streamline and Bernoulli conditions as a nonlinear residual whose two components have different Sobolev orders. If the two one-sided tangential velocities of the reference sheet do not vanish simultaneously, the derivative of the unnormalized residual is Fredholm of index two. Fixing the mean normal displacement and the total circulation gives an index-zero problem; when the normalization differential restricted to the unnormalized kernel is onto $\\mathbb{R}^2$, we obtain a parameter-dependent Lyapunov-Schmidt reduction. This yields a locally unique normalized branch in the nondegenerate case and explicit first- and second-order necessary conditions in the degenerate case. For a rotationally symmetric reference metric and a concentric circular sheet, the linearized problem separates into Fourier blocks and only finitely many modes can be resonant. In the constant-curvature disk family, every mode $k\\geq2$ is nonresonant, whereas the first mode produces a two-dimensional reduced problem. The two first-mode kernel profiles are normal traces of ambient Killing fields, but they do not generate fixed-boundary symmetries or, by themselves, a nonconcentric branch.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.08361",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08361",
+        "submittedAt": "2026-09-08T07:29:29Z",
+        "updatedAt": "2026-09-08T07:29:29Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究单位圆盘上共形度量路径下稳态涡片的局部延拓。作者用支持曲线的法向图 f、片强扰动 h 及流线/Bernoulli 常数构造非线性残差；Green 层势和 transmission 正则性给出不同 Sobolev 阶的残差映射。在线性化中，单层算子阶 −1 与平均法向导数阶 1 组成混合主矩阵，非停滞条件保证其椭圆性，从而未归一化导数 Fredholm 指数为2；加入平均位移和总环流两个约束后用参数依赖 Lyapunov–Schmidt 化为有限维方程。旋转对称情形按 Fourier 模分块，常曲率族只有一阶模共振，退化方程仍未解决是否存在非同心分支。",
+        "techniques": [
+          "Dirichlet Green 层势与 transmission 正则性",
+          "移动边界单层/双层算子形状微分",
+          "阶−1/阶1 混合主符号与 Fredholm 同伦",
+          "平均位移/环流归一化",
+          "参数依赖 Lyapunov–Schmidt reduction 与 Fourier 分块"
+        ],
+        "breakthrough": "建立了在给定共形度量变形下、无需圆形参考曲线的稳态涡片局部延拓框架；归一化后的非退化点给出唯一分支，旋转对称分析进一步把常曲率圆盘的全部退化压缩为二维一阶模约化问题。",
+        "limitations": "结果是法向图坐标中的局部 $C^{2}$ 结论，要求参考片光滑、两侧切向速度逐点不同步为零且度量路径 $C^{3}$。退化时只得到有限维约化方程和一、二阶必要条件，不给出分支存在性、数量或尺度；常曲率族的一阶核虽来自 Killing 场法向迹，但这些流不保持外圆边界。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Green 表示和 transmission 正则性把片数据转化为可控的两侧流函数，并将稳态条件等价为流线常数与 Bernoulli 常数条件。",
+              "route": "对片测度和背景涡量解 Dirichlet 问题，固定 Green 核给出流函数表示及法向导数跳跃；连续迹使法向速度条件等价于曲线上的流函数常数，分部积分把 Euler 弱恒等式化为 $\\gamma ⟨v⟩\\tau =\\beta $。",
+              "evidence": "PDF 第3–5页 Proposition 1、Proposition 2、Proposition 4，尤其公式(7)–(14)。"
+            },
+            {
+              "claim": "法向图参数下的非线性残差 F 具有 $H^{m+1}\\times H^m$ 目标并为 $C^{2}$，且其零点正好是稳态涡片。",
+              "route": "移动曲线的单层和平均法向算子在形状参数上 $C^{2}$，层势的跳跃公式提供主奇异项；Lemma 22 控制曲线几何与片密度，组合到 Definition 14 的两个残差后得 Proposition 23 的 $C^{2}$ 映射。Proposition 21 再逐项把残差零点识别为流线/Bernoulli 条件。",
+              "evidence": "PDF 第10页 Lemma 18；PDF 第16页 Definition 14、Proposition 21；PDF 第16–17页 Lemma 22 与 Proposition 23。"
+            },
+            {
+              "claim": "若两侧切向速度不同时为零，未归一化线性化 Fredholm 指数为2；加入两个物理归一化后指数为0。",
+              "route": "从完整 transmission 线性化提取单层 S0 的 −1 阶和法向算子 T0 的 1 阶主部，主矩阵行列式由两侧切向速度平方和控制，因此可构造双侧参数；剩余项由层势形状微分给出紧扰动，连续 Fredholm 同伦保持指数。平均法向位移和总环流两行约束恰好降低指数2。",
+              "evidence": "PDF 第2页公式(1)与主符号说明；PDF 第18页 Theorem 25；PDF 第10页 Definition/Fact 17 的(28)及第18–19页 Theorem 26。"
+            },
+            {
+              "claim": "归一化问题可约化为有限维 $B(s,\\zeta )=0$；非退化时有唯一分支，退化时只有一、二阶必要条件。",
+              "route": "将未知分解为线性化核 K 与补空间，投影到余核的范围分量上用参数依赖隐函数定理解出补空间变量 $\\xi (s,\\zeta )$，余核投影定义 B。若核维数为零则直接应用隐函数定理；若不为零，对 $B(s,\\zeta (s))$ 两次微分得到一、二阶障碍条件。",
+              "evidence": "PDF 第27–28页 Theorem 27 的(102)–(103)与 Corollary 28；PDF 第33页 Proof of Theorem 29。"
+            },
+            {
+              "claim": "旋转对称下所有共振模可由显式行列式检测；常曲率圆盘仅一阶模共振且其约化维数为2。",
+              "route": "将 Green 核 Fourier 展开，计算单层、法向算子在 $e^{ik\\theta }$ 上的乘子并组装 $2\\times 2$ 模块，得到行列式 $D̊_k^\\sigma (\\ell)$。常曲率代入后用正项分解证明 $k\\ge 2$ 行列式严格为负，而 $k=1$ 秩降；核函数与 Killing 场法向迹对应，但外边界迹非零阻止直接生成非同心分支。",
+              "evidence": "PDF 第33页 Definition 18；PDF 第35页公式(134)–(136)；PDF 第37页 Corollary 44；PDF 第39页 Proposition 46 与 Corollary 47。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新方法/构造",
-          "workSummary": "在圆盘共形度量变形下建立定常涡片的局部延续和退化情形约化。",
-          "techniques": [
-            "Fredholm 指数",
-            "Lyapunov–Schmidt",
-            "Fourier 分块"
-          ],
-          "breakthrough": "区分环境 Killing 核与固定边界下真实分支。",
-          "limitations": "结果局部且需速度及归一化横截条件；核存在不自动产生新分支。 研究结论按摘要级分析；未完成正文方法核验。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 64,
-          "priorityReason": "几何 PDE 分岔方法可参考，模型特定。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We study the local continuation of a steady vortex sheet under a prescribed deformation $g_s= e^{2σ_s}g_{\\mathrm{e}}$ of a conformal metric on the unit disk. Representing the moving sheet by a normal graph, we formulate the streamline and Bernoulli conditions as a nonlinear residual whose two components have different Sobolev orders. If the two one-sided tangential velocities of the reference sheet do not vanish simultaneously, the derivative of the unnormalized residual is Fredholm of index two. Fixing the mean normal displacement and the total circulation gives an index-zero problem; when the normalization differential restricted to the unnormalized kernel is onto $\\mathbb{R}^2$, we obtain a parameter-dependent Lyapunov-Schmidt reduction. This yields a locally unique normalized branch in the nondegenerate case and explicit first- and second-order necessary conditions in the degenerate case. For a rotationally symmetric reference metric and a concentric circular sheet, the linearized problem separates into Fourier blocks and only finitely many modes can be resonant. In the constant-curvature disk family, every mode $k\\geq2$ is nonresonant, whereas the first mode produces a two-dimensional reduced problem. The two first-mode kernel profiles are normal traces of ambient Killing fields, but they do not generate fixed-boundary symmetries or, by themselves, a nonconcentric branch.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "检查摘要、Introduction、Sections 2–7、Acknowledgments 与 References，并全文检索 AI、LLM、ChatGPT、Claude、人工智能；未见作者明确披露 AI 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–41页全文以及末尾致谢/参考文献。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

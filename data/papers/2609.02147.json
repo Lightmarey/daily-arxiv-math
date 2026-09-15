@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02147",
+  "slug": "2609.02147",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02147:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02147",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Normalized solutions of $L^2$-supercritical NLS equations with periodic potentials and localized nonlinearities",
+    "authors": [
+      "Zhentao He",
+      "Norihisa Ikoma",
+      "Chao Ji"
+    ],
+    "abstract": "In this paper, we study the existence of normalized solutions to the following $L^2$-supercritical nonlinear Schrödinger equation with a periodic potential \\[ \\begin{dcases} -Δu +V (x)u + λu=χ_{Ω}(x)f(u)\\quad \\text{in }\\mathbb{R}^N, u>0 \\quad \\text{in} \\ \\mathbb{R}^N, \\int_{\\mathbb{R}^N}\\abs{u}^2\\, dx =μ, \\end{dcases} \\] where $N \\geq 1$, $μ>0$ is prescribed, $λ\\in \\mathbb{R}$ is a Lagrange multiplier, $V\\in C(\\mathbb{R}^N)$ is $1$-periodic in $x_1,...,x_N$, $f \\in C^1(\\mathbb{R})$ exhibits a general mass supercritical growth at infinity, $Ω\\subset \\mathbb{R}^N$ is a (nonempty) bounded open set with smooth boundary $\\partial Ω$ and $χ_{Ω}$ is the characteristic function of $Ω$. We prove the existence of normalized solutions for all $μ>0$ sufficiently small. Moreover, if $f$ further has a mass-supercritical growth near the origin, then the existence result extends to every $μ>0$. The result is obtained through a combination of the monotonicity trick, minimax principle with Morse index information for constrained functionals and blow-up analysis.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02147",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02147",
+    "submittedAt": "2026-09-02T06:01:44Z",
+    "updatedAt": "2026-09-02T06:01:44Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "存在性与变分分析",
+    "workSummary": "论文研究带周期势和局部化非线性的 $L^{2}-$超临界非线性薛定谔方程的归一化正解。作者把约束泛函分解为一族参数泛函，先建立统一山路几何，再用单调性技巧和带 Morse 指标信息的 Palais–Smale 序列得到几乎所有参数的临界点；随后通过局部化非线性下的 Liouville 结论与 blow-up 分析排除尺度发散，最后令参数趋于 1 得到小质量解及在额外增长条件下任意质量解。",
+    "techniques": [
+      "约束泛函的单调性技巧与山路几何",
+      "带 Morse 指标的 Palais–Smale 紧性",
+      "周期势下的 Gagliardo–Nirenberg 与 Liouville 估计",
+      "局部化非线性 blow-up 分析和强收敛"
+    ],
+    "breakthrough": "论文在一般周期势和有界区域特征函数局部化非线性的 $L^{2}-$超临界范围证明归一化解存在：小质量情形适用于全部维数，若原点附近也满足质量超临界增长，则在 $N\\le 4$ 时扩展到任意质量。",
+    "limitations": "小质量结论依赖假设 (A1)–(A4)，任意质量结论还需 (A5) 且维数限制为 $1\\le N\\le 4$；证明中的紧性、Morse 指标和 blow-up 排除依赖周期势、光滑有界 $\\Omega $ 及特征函数局部化结构。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemmas 3.1–3.2 为参数泛函 $E_{V,\\tau }|_{S_\\mu }$ 建立统一山路几何，从而可应用单调性技巧。",
+          "route": "把非线性分成 $f_1+f_2$，利用周期势下的 Gagliardo–Nirenberg 型不等式控制低能层；选择小尺度测试函数使能量先低，再用质量超临界增长的集中缩放构造高能路径，得到 $\\tau \\in [1/2,1]$ 一致的正山路值 $c_\\tau $。",
+          "evidence": "PDF 第5–7页，第1.3节 proof strategy；PDF 第14–16页，第3.1–3.2节 Lemmas 3.1–3.2、式(3.1)–(3.6)。"
+        },
+        {
+          "claim": "Theorems 5.2–5.3 对几乎所有 $\\tau \\in [1/2,1]$ 产生满足约束、正性和 Morse 指标界的临界点 $(u_\\tau ,\\lambda _\\tau )$。",
+          "route": "将统一山路几何代入带 Morse 信息的单调性技巧，得到有界 Palais–Smale 序列；用周期势的谱分解、Lemma 4.1–4.2 的紧性和 $\\lambda _\\tau >0$ 排除质量逸出，把弱收敛提升为 $H^1$ 强收敛，并把切空间 Morse 指标转成全空间指标至多 2。",
+          "evidence": "PDF 第17–20页，第4–5节 Lemmas 4.1–4.2、Theorems 5.2–5.3 及其证明；PDF 第19–20页，式(5.1)和 $\\lambda _\\tau >0$ 后的强收敛。"
+        },
+        {
+          "claim": "Lemma 6.3 及其后续 Liouville/半空间分析排除 $\\tau _n\\to 1$ 时解序列的 $H^1$ 无界 blow-up。",
+          "route": "若 $‖u_n‖_{H^1}$ 发散，则 $\\lambda _n\\to \\infty $；在峰值点按 $\\lambda _n$ 和峰值尺度重标度，得到全空间或半空间极限方程及 Morse 指标不增。全空间用正解分类，半空间用 Lemma 2.5 的稳定性非存在性排除，故爆破序列不可能存在。",
+          "evidence": "PDF 第20–28页，第6节 Lemmas 6.1、6.3、Propositions 6.4–6.5；PDF 第21–24页式(6.2)–(6.16)的重标度、极限方程和 Morse 指标矛盾。"
+        },
+        {
+          "claim": "Section 7 由 $\\tau _n↗1$ 的有界性和强收敛得到 Theorems 1.1 与 1.3 的归一化解存在。",
+          "route": "把 Theorems 5.2–5.3 产生的临界点序列代入第6节 blow-up 排除，得到 $(u_{\\tau _n},\\lambda _{\\tau _n})$ 的有界 Palais–Smale 子列；周期势下的局部正则性和 $\\lambda >0$ 给出 $H^1$ 强收敛，极限通过约束和方程传递成为 $\\tau =1$ 的正归一化解。",
+          "evidence": "PDF 第28–29页，第7节 Proofs of Theorems 1.1 and 1.3；PDF 第29页 $\\lambda _n\\to \\lambda >0、Lemma$ 6.3/Proposition 6.5 的应用及极限强收敛。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在 AI Usage Statement 中明确说明：Gemini 3.1 Pro 用于获取 Subsection 2.1 中 [Ea73] 论证的帮助，Gemini 3.6 Flash 用于 Lemma 2.5 证明中 [EsLi82] 论证的帮助，ChatGPT 5.6 Sol 用于 Theorem C.1 证明中 [Bo20] 论证的帮助；并说明准备稿件时 AI 只用于改善 exposition，所有论证由作者独立修订和核查。",
+    "aiEvidenceSource": "PDF 第38页，Conflict of interest、Data Availability Statements 后的 AI Usage Statement；涉及 Subsection 2.1、proof of Lemma 2.5、proof of Theorem C.1。",
+    "priorityScore": 66,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02147:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02147",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Normalized solutions of $L^2$-supercritical NLS equations with periodic potentials and localized nonlinearities",
+        "authors": [
+          "Zhentao He",
+          "Norihisa Ikoma",
+          "Chao Ji"
+        ],
+        "abstract": "In this paper, we study the existence of normalized solutions to the following $L^2$-supercritical nonlinear Schrödinger equation with a periodic potential \\[ \\begin{dcases} -Δu +V (x)u + λu=χ_{Ω}(x)f(u)\\quad \\text{in }\\mathbb{R}^N, u>0 \\quad \\text{in} \\ \\mathbb{R}^N, \\int_{\\mathbb{R}^N}\\abs{u}^2\\, dx =μ, \\end{dcases} \\] where $N \\geq 1$, $μ>0$ is prescribed, $λ\\in \\mathbb{R}$ is a Lagrange multiplier, $V\\in C(\\mathbb{R}^N)$ is $1$-periodic in $x_1,...,x_N$, $f \\in C^1(\\mathbb{R})$ exhibits a general mass supercritical growth at infinity, $Ω\\subset \\mathbb{R}^N$ is a (nonempty) bounded open set with smooth boundary $\\partial Ω$ and $χ_{Ω}$ is the characteristic function of $Ω$. We prove the existence of normalized solutions for all $μ>0$ sufficiently small. Moreover, if $f$ further has a mass-supercritical growth near the origin, then the existence result extends to every $μ>0$. The result is obtained through a combination of the monotonicity trick, minimax principle with Morse index information for constrained functionals and blow-up analysis.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02147",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02147",
+        "submittedAt": "2026-09-02T06:01:44Z",
+        "updatedAt": "2026-09-02T06:01:44Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "存在性与变分分析",
+        "workSummary": "论文研究带周期势和局部化非线性的 $L^{2}-$超临界非线性薛定谔方程的归一化正解。作者把约束泛函分解为一族参数泛函，先建立统一山路几何，再用单调性技巧和带 Morse 指标信息的 Palais–Smale 序列得到几乎所有参数的临界点；随后通过局部化非线性下的 Liouville 结论与 blow-up 分析排除尺度发散，最后令参数趋于 1 得到小质量解及在额外增长条件下任意质量解。",
+        "techniques": [
+          "约束泛函的单调性技巧与山路几何",
+          "带 Morse 指标的 Palais–Smale 紧性",
+          "周期势下的 Gagliardo–Nirenberg 与 Liouville 估计",
+          "局部化非线性 blow-up 分析和强收敛"
+        ],
+        "breakthrough": "论文在一般周期势和有界区域特征函数局部化非线性的 $L^{2}-$超临界范围证明归一化解存在：小质量情形适用于全部维数，若原点附近也满足质量超临界增长，则在 $N\\le 4$ 时扩展到任意质量。",
+        "limitations": "小质量结论依赖假设 (A1)–(A4)，任意质量结论还需 (A5) 且维数限制为 $1\\le N\\le 4$；证明中的紧性、Morse 指标和 blow-up 排除依赖周期势、光滑有界 $\\Omega $ 及特征函数局部化结构。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemmas 3.1–3.2 为参数泛函 $E_{V,\\tau }|_{S_\\mu }$ 建立统一山路几何，从而可应用单调性技巧。",
+              "route": "把非线性分成 $f_1+f_2$，利用周期势下的 Gagliardo–Nirenberg 型不等式控制低能层；选择小尺度测试函数使能量先低，再用质量超临界增长的集中缩放构造高能路径，得到 $\\tau \\in [1/2,1]$ 一致的正山路值 $c_\\tau $。",
+              "evidence": "PDF 第5–7页，第1.3节 proof strategy；PDF 第14–16页，第3.1–3.2节 Lemmas 3.1–3.2、式(3.1)–(3.6)。"
+            },
+            {
+              "claim": "Theorems 5.2–5.3 对几乎所有 $\\tau \\in [1/2,1]$ 产生满足约束、正性和 Morse 指标界的临界点 $(u_\\tau ,\\lambda _\\tau )$。",
+              "route": "将统一山路几何代入带 Morse 信息的单调性技巧，得到有界 Palais–Smale 序列；用周期势的谱分解、Lemma 4.1–4.2 的紧性和 $\\lambda _\\tau >0$ 排除质量逸出，把弱收敛提升为 $H^1$ 强收敛，并把切空间 Morse 指标转成全空间指标至多 2。",
+              "evidence": "PDF 第17–20页，第4–5节 Lemmas 4.1–4.2、Theorems 5.2–5.3 及其证明；PDF 第19–20页，式(5.1)和 $\\lambda _\\tau >0$ 后的强收敛。"
+            },
+            {
+              "claim": "Lemma 6.3 及其后续 Liouville/半空间分析排除 $\\tau _n\\to 1$ 时解序列的 $H^1$ 无界 blow-up。",
+              "route": "若 $‖u_n‖_{H^1}$ 发散，则 $\\lambda _n\\to \\infty $；在峰值点按 $\\lambda _n$ 和峰值尺度重标度，得到全空间或半空间极限方程及 Morse 指标不增。全空间用正解分类，半空间用 Lemma 2.5 的稳定性非存在性排除，故爆破序列不可能存在。",
+              "evidence": "PDF 第20–28页，第6节 Lemmas 6.1、6.3、Propositions 6.4–6.5；PDF 第21–24页式(6.2)–(6.16)的重标度、极限方程和 Morse 指标矛盾。"
+            },
+            {
+              "claim": "Section 7 由 $\\tau _n↗1$ 的有界性和强收敛得到 Theorems 1.1 与 1.3 的归一化解存在。",
+              "route": "把 Theorems 5.2–5.3 产生的临界点序列代入第6节 blow-up 排除，得到 $(u_{\\tau _n},\\lambda _{\\tau _n})$ 的有界 Palais–Smale 子列；周期势下的局部正则性和 $\\lambda >0$ 给出 $H^1$ 强收敛，极限通过约束和方程传递成为 $\\tau =1$ 的正归一化解。",
+              "evidence": "PDF 第28–29页，第7节 Proofs of Theorems 1.1 and 1.3；PDF 第29页 $\\lambda _n\\to \\lambda >0、Lemma$ 6.3/Proposition 6.5 的应用及极限强收敛。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在 AI Usage Statement 中明确说明：Gemini 3.1 Pro 用于获取 Subsection 2.1 中 [Ea73] 论证的帮助，Gemini 3.6 Flash 用于 Lemma 2.5 证明中 [EsLi82] 论证的帮助，ChatGPT 5.6 Sol 用于 Theorem C.1 证明中 [Bo20] 论证的帮助；并说明准备稿件时 AI 只用于改善 exposition，所有论证由作者独立修订和核查。",
+        "aiEvidenceSource": "PDF 第38页，Conflict of interest、Data Availability Statements 后的 AI Usage Statement；涉及 Subsection 2.1、proof of Lemma 2.5、proof of Theorem C.1。",
+        "priorityScore": 66,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

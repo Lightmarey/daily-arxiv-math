@@ -3,91 +3,145 @@
   "arxivId": "2609.01565",
   "slug": "2609.01565",
   "latest": {
+    "id": "math.AP:2026-09-02:2609.01565:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
     "arxivId": "2609.01565",
-    "metadata": {
-      "title": "Hypersurfaces of constant higher order mean curvature in hyperbolic space with prescribed asymptotic boundary at infinity",
-      "authors": [
-        "Bin Wang"
-      ],
-      "abstract": "In this note, we prove the existence of smooth complete admissible hypersurfaces in hyperbolic space with constant higher order mean curvature and a prescribed asymptotic boundary at infinity. Unexpectedly, our result holds for a large part of indices in the subcritical range where the concavity inequality loses its effectiveness. We supply with new arguments to reduce the proof to a semi-convex situation in which case the concavity inequality can play a role.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-01T17:31:11Z",
-      "updatedAt": "2026-09-01T17:31:11Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Hypersurfaces of constant higher order mean curvature in hyperbolic space with prescribed asymptotic boundary at infinity",
+    "authors": [
+      "Bin Wang"
+    ],
+    "abstract": "In this note, we prove the existence of smooth complete admissible hypersurfaces in hyperbolic space with constant higher order mean curvature and a prescribed asymptotic boundary at infinity. Unexpectedly, our result holds for a large part of indices in the subcritical range where the concavity inequality loses its effectiveness. We supply with new arguments to reduce the proof to a semi-convex situation in which case the concavity inequality can play a role.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.01565",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01565",
+    "submittedAt": "2026-09-01T17:31:11Z",
+    "updatedAt": "2026-09-01T17:31:11Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "双曲空间高阶常曲率超曲面",
+    "workSummary": "论文在双曲空间中为给定无穷远边界构造常高阶平均曲率的光滑完整 admissible 超曲面。对 $2k\\le n$ 与 2k>n 两个范围，作者建立主曲率下界和上界；在传统 concavity 不够有效的次临界区间，先用新的半凸性论证把曲率向量限制到可用 concavity 的区域，再应用截断近似和紧性得到解。",
+    "techniques": [
+      "Gårding 锥曲率代数",
+      "最大值原理和主曲率估计",
+      "半凸性约化",
+      "截断 Dirichlet 近似与紧性"
+    ],
+    "breakthrough": "论文将 concavity 失效的较大指标区间重新约化到半凸情形，恢复主曲率估计所需的结构，从而把常高阶曲率渐近 Plateau 的存在性推进到更大部分次临界范围。",
+    "limitations": "结论依赖指定对称曲率函数、凸锥和边界正则性，并按 $2k\\le n$ 与 2k>n 分情况；它只给出 admissible 完整解存在，不处理所有指标、唯一性或稳定性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemmas 2.2–2.7 提供 Gårding 锥内主曲率的对称多项式不等式、单调性和高阶曲率代数控制。",
+          "route": "对有序曲率向量应用 Newton–Maclaurin 型关系和线性化算子正性，分别控制最大、最小主曲率以及 $\\sigma k$ 的偏导；这些不等式为最大值函数的二阶微分提供符号。",
+          "evidence": "PDF 第6–9页 Section 2 Lemmas 2.2–2.7；式(2.1)–(2.7)及其后对曲率函数的应用。"
+        },
+        {
+          "claim": "Theorem 3.1 在 $2k\\le n$ 情况下通过最大主曲率辅助函数得到独立于截断域的 curvature estimate。",
+          "route": "在最大特征值处对辅助函数取线性化算子，使用 Lemmas 2.2–2.4 吸收三阶项；Lemma 3.5 先给出最小曲率下界，再用 Lemma 3.7 的 Ren–Wang 型不等式压制最大曲率爆炸。",
+          "evidence": "PDF 第10–20页 Section 3 Theorem 3.1；Lemma 3.5、Lemma 3.7 及其证明中的最大值计算。"
+        },
+        {
+          "claim": "Theorem 4.1 在 2k>n 的范围用半凸性约化恢复同样的 curvature estimate。",
+          "route": "先通过新的半凸性论证排除过多负主曲率，使曲率向量进入 concavity 可用的子区域；随后重复线性化最大值估计，并用边界条件控制剩余项，得到与截断高度无关的主曲率界。",
+          "evidence": "PDF 第21–22页 Section 4 Theorem 4.1；半凸性约化、式(4.1)附近的估计和结尾 curvature estimate。"
+        },
+        {
+          "claim": "Theorem 1.1 由两种曲率估计、截断 Dirichlet 问题和紧性取极限，构造给定无穷远边界的完整 admissible 超曲面。",
+          "route": "在有限高度区域解近似图形问题，先用曲率估计和边界障碍得到统一 $C2,\\alpha $ 界；对任意紧子集提取平滑子列，令截断高度趋于无穷后，极限保持方程、Gårding 锥条件和指定的渐近边界。",
+          "evidence": "PDF 第3–5页 Theorem 1.1；PDF 第20–23页两类 curvature estimate 的完成段落与引言中由估计到存在性的近似/紧性说明。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新方法/构造",
-      "workSummary": "构造双曲空间中具有指定无穷远渐近边界、常高阶平均曲率的光滑完备超曲面。",
-      "techniques": [
-        "半凸约化",
-        "完全非线性曲率方程",
-        "凹性不等式"
-      ],
-      "breakthrough": "以新的半凸化论证覆盖传统凹性工具失效的较大次临界指标区间。",
-      "limitations": "摘要未给出指标区间端点、边界数据正则性和唯一性。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 85,
-      "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 85/100。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "In this note, we prove the existence of smooth complete admissible hypersurfaces in hyperbolic space with constant higher order mean curvature and a prescribed asymptotic boundary at infinity. Unexpectedly, our result holds for a large part of indices in the subcritical range where the concavity inequality loses its effectiveness. We supply with new arguments to reduce the proof to a semi-convex situation in which case the concavity inequality can play a role.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–23页（含支持致谢与 References）；缓存全文 2609.01565.txt。",
+    "priorityScore": 59,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-02",
-      "entry": {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01565:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
         "arxivId": "2609.01565",
-        "metadata": {
-          "title": "Hypersurfaces of constant higher order mean curvature in hyperbolic space with prescribed asymptotic boundary at infinity",
-          "authors": [
-            "Bin Wang"
-          ],
-          "abstract": "In this note, we prove the existence of smooth complete admissible hypersurfaces in hyperbolic space with constant higher order mean curvature and a prescribed asymptotic boundary at infinity. Unexpectedly, our result holds for a large part of indices in the subcritical range where the concavity inequality loses its effectiveness. We supply with new arguments to reduce the proof to a semi-convex situation in which case the concavity inequality can play a role.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-01T17:31:11Z",
-          "updatedAt": "2026-09-01T17:31:11Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Hypersurfaces of constant higher order mean curvature in hyperbolic space with prescribed asymptotic boundary at infinity",
+        "authors": [
+          "Bin Wang"
+        ],
+        "abstract": "In this note, we prove the existence of smooth complete admissible hypersurfaces in hyperbolic space with constant higher order mean curvature and a prescribed asymptotic boundary at infinity. Unexpectedly, our result holds for a large part of indices in the subcritical range where the concavity inequality loses its effectiveness. We supply with new arguments to reduce the proof to a semi-convex situation in which case the concavity inequality can play a role.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.01565",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01565",
+        "submittedAt": "2026-09-01T17:31:11Z",
+        "updatedAt": "2026-09-01T17:31:11Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "双曲空间高阶常曲率超曲面",
+        "workSummary": "论文在双曲空间中为给定无穷远边界构造常高阶平均曲率的光滑完整 admissible 超曲面。对 $2k\\le n$ 与 2k>n 两个范围，作者建立主曲率下界和上界；在传统 concavity 不够有效的次临界区间，先用新的半凸性论证把曲率向量限制到可用 concavity 的区域，再应用截断近似和紧性得到解。",
+        "techniques": [
+          "Gårding 锥曲率代数",
+          "最大值原理和主曲率估计",
+          "半凸性约化",
+          "截断 Dirichlet 近似与紧性"
+        ],
+        "breakthrough": "论文将 concavity 失效的较大指标区间重新约化到半凸情形，恢复主曲率估计所需的结构，从而把常高阶曲率渐近 Plateau 的存在性推进到更大部分次临界范围。",
+        "limitations": "结论依赖指定对称曲率函数、凸锥和边界正则性，并按 $2k\\le n$ 与 2k>n 分情况；它只给出 admissible 完整解存在，不处理所有指标、唯一性或稳定性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemmas 2.2–2.7 提供 Gårding 锥内主曲率的对称多项式不等式、单调性和高阶曲率代数控制。",
+              "route": "对有序曲率向量应用 Newton–Maclaurin 型关系和线性化算子正性，分别控制最大、最小主曲率以及 $\\sigma k$ 的偏导；这些不等式为最大值函数的二阶微分提供符号。",
+              "evidence": "PDF 第6–9页 Section 2 Lemmas 2.2–2.7；式(2.1)–(2.7)及其后对曲率函数的应用。"
+            },
+            {
+              "claim": "Theorem 3.1 在 $2k\\le n$ 情况下通过最大主曲率辅助函数得到独立于截断域的 curvature estimate。",
+              "route": "在最大特征值处对辅助函数取线性化算子，使用 Lemmas 2.2–2.4 吸收三阶项；Lemma 3.5 先给出最小曲率下界，再用 Lemma 3.7 的 Ren–Wang 型不等式压制最大曲率爆炸。",
+              "evidence": "PDF 第10–20页 Section 3 Theorem 3.1；Lemma 3.5、Lemma 3.7 及其证明中的最大值计算。"
+            },
+            {
+              "claim": "Theorem 4.1 在 2k>n 的范围用半凸性约化恢复同样的 curvature estimate。",
+              "route": "先通过新的半凸性论证排除过多负主曲率，使曲率向量进入 concavity 可用的子区域；随后重复线性化最大值估计，并用边界条件控制剩余项，得到与截断高度无关的主曲率界。",
+              "evidence": "PDF 第21–22页 Section 4 Theorem 4.1；半凸性约化、式(4.1)附近的估计和结尾 curvature estimate。"
+            },
+            {
+              "claim": "Theorem 1.1 由两种曲率估计、截断 Dirichlet 问题和紧性取极限，构造给定无穷远边界的完整 admissible 超曲面。",
+              "route": "在有限高度区域解近似图形问题，先用曲率估计和边界障碍得到统一 $C2,\\alpha $ 界；对任意紧子集提取平滑子列，令截断高度趋于无穷后，极限保持方程、Gårding 锥条件和指定的渐近边界。",
+              "evidence": "PDF 第3–5页 Theorem 1.1；PDF 第20–23页两类 curvature estimate 的完成段落与引言中由估计到存在性的近似/紧性说明。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新方法/构造",
-          "workSummary": "构造双曲空间中具有指定无穷远渐近边界、常高阶平均曲率的光滑完备超曲面。",
-          "techniques": [
-            "半凸约化",
-            "完全非线性曲率方程",
-            "凹性不等式"
-          ],
-          "breakthrough": "以新的半凸化论证覆盖传统凹性工具失效的较大次临界指标区间。",
-          "limitations": "摘要未给出指标区间端点、边界数据正则性和唯一性。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 85,
-          "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 85/100。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "In this note, we prove the existence of smooth complete admissible hypersurfaces in hyperbolic space with constant higher order mean curvature and a prescribed asymptotic boundary at infinity. Unexpectedly, our result holds for a large part of indices in the subcritical range where the concavity inequality loses its effectiveness. We supply with new arguments to reduce the proof to a semi-convex situation in which case the concavity inequality can play a role.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–23页（含支持致谢与 References）；缓存全文 2609.01565.txt。",
+        "priorityScore": 59,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

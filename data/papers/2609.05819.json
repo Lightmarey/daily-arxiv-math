@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05819",
+  "slug": "2609.05819",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.05819:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.05819",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global existence and finite-time blow-up for a strongly damped wave--MGT system with fully subcritical logarithmic nonlinearity",
+    "authors": [
+      "Tae Gab Ha"
+    ],
+    "abstract": "We study a coupled strongly damped wave--Moore--Gibson--Thompson (MGT) system with logarithmic source $f(u)=|u|^{γ-2}u\\ln|u|$ in the full Sobolev-subcritical range $2<γ<2^*:=2n/(n-2)$. The main difficulty is that, in this full range, the logarithmic nonlinearity does not admit the standard compactness and difference estimates available in the lower subcritical regime. Using the augmented variable $w=v+τv_t$, we derive the exact energy-dissipation identity for the strongly damped system and exploit the associated coupled potential-well structure. For the local theory, a Faedo--Galerkin scheme combined with a closed nonlinear differential inequality and a spatial domain-splitting argument yields local existence. The strong damping provides the additional regularity needed to prove uniqueness throughout the full subcritical range and to establish a continuation principle. Below the well depth $d_α$, we then obtain a sharp dynamical dichotomy: solutions with initial data in the stable set exist globally and decay exponentially, whereas solutions with initial data in the unstable set blow up in finite time. The blow-up argument reveals a structural cancellation specific to the augmented formulation: once the logarithmic contribution is reconstructed through the exact energy identity, the unfavorable MGT residual in Levine's concavity functional is absorbed algebraically. This allows the concavity method to close without imposing any additional sign condition on the initial velocities.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05819",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05819",
+    "submittedAt": "2026-09-05T02:29:24Z",
+    "updatedAt": "2026-09-05T02:29:24Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "$theorem_proof_reviewed$",
+    "workSummary": "论文研究带强阻尼的 wave–Moore–Gibson–Thompson 耦合系统，在完整 Sobolev 次临界范围 $2<\\gamma <2*=2n/(n-2)$ 下处理对数源 $f(u)=|u|^{\\gamma -2}u$ log|u|。正文先以增广变量 $w=v+\\tau v_t$ 建立精确能量耗散恒等式，第 2 节用 Faedo–Galerkin、域分割和闭合微分不等式得到局部适定与延拓准则，第 4 节构造耦合势阱，第 5 节用稳定/不稳定集合证明全局衰减和有限时爆破。Theorems 2.7–2.8 给出势阱下的全局—爆破二分。",
+    "techniques": [
+      "增广变量与精确能量律",
+      "Faedo–Galerkin 逼近",
+      "对数 Sobolev 与域分割",
+      "耦合势阱/Néhari 流形",
+      "凹性微分不等式"
+    ],
+    "breakthrough": "关键结果覆盖整个次临界 $\\gamma $ 区间：强阻尼不仅提供局部正则性与唯一性，还使对数非线性在增广能量中形成可用的势阱；低于井深 $d_\\alpha $ 时，稳定集解全局指数衰减，不稳定集解因增广变量中的结构性抵消在有限时间爆破。",
+    "limitations": "需要有界光滑域、强阻尼$/\\tau $ 参数$、2<\\gamma <2*$ 和相应初始能量；全局衰减与爆破分别只对势阱稳定集和不稳定集成立，临界井深或超临界对数增长不在结论内。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "增广变量 $w=v+\\tau v_t$ 把 wave–MGT 系统写成具有正耗散项的二阶耦合系统，并产生精确能量—耗散恒等式。",
+          "route": "将 MGT 高阶时间项替换为 w，分别以 $v_t、w$ 和空间梯度测试方程；积分分部后$，\\tau $ 相关交叉项正好被增广能量吸收，得到 $E'(t)+D(t)=0$ 的结构，而非只估计不定交叉项。",
+          "evidence": "Section 1 的增广系统与能量定义（PDF 第 2–4 页）；Section 2 Theorem 2.7/2.8 所用能量恒等式（PDF 第 11、18–20 页）。"
+        },
+        {
+          "claim": "Galerkin 近似在全次临界 $\\gamma $ 范围内存在局部解，且统一先验界给出强解的 continuation criterion。",
+          "route": "投影到有限维特征空间，利用对数非线性在有界区间的局部 Lipschitz 性和域分割估计控制源项；Proposition 2.6 给出非线性微分不等式，结合强阻尼提供的额外空间导数闭合近似能量，再取弱/强极限。",
+          "evidence": "Section 2 Proposition 2.6（PDF 第 11、15 页）；Section 2 Lemmas 2.3–2.5（PDF 第 8–10 页）；局部存在与延拓讨论（PDF 第 17–20 页）。"
+        },
+        {
+          "claim": "势阱水平 $d_\\alpha $ 将初值分为稳定集和不稳定集，并保持相应的能量/Néhari 符号。",
+          "route": "将能量沿射线 tu 取最大定义井深 $d_\\alpha $，再以 Néhari 泛函符号区分两集合；能量耗散禁止稳定集轨道穿过 Néhari 分界，强阻尼和势项估计把解留在对应的势阱区域。",
+          "evidence": "Section 1 的势阱定义与 Theorem 2.7–2.8（PDF 第 5、11 页）；Section 4 Proposition 4.1（PDF 第 18 页）及 Section 5 预备估计（PDF 第 22 页）。"
+        },
+        {
+          "claim": "稳定集中的解全局存在并指数衰减，而不稳定集中的解满足有限时爆破。",
+          "route": "稳定分支用能量耗散、Poincare/对数 Sobolev 估计建立 $E(t)\\le Ce^{-ct}E(0)$，再通过 continuation criterion 延拓；不稳定分支对增广能量构造正的凹性测试泛函，利用对数源与 $w=v+\\tau v_t$ 的抵消得到 $F″F-(1+\\kappa )(F')^{2}\\ge 0$，凹性积分迫使 F 在有限时间发散。",
+          "evidence": "Theorem 2.7（PDF 第 11 页）对应 Section 5 的全局衰减证明（PDF 第 24–25 页）；Theorem 2.8（PDF 第 11 页）及 Proposition 5.1（PDF 第 22、25 页）的爆破微分不等式。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查正文引言、证明章节、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文逐页核查，包含主证明章节、末页致谢/声明和 References。",
+    "priorityScore": 77,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.05819:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.05819",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global existence and finite-time blow-up for a strongly damped wave--MGT system with fully subcritical logarithmic nonlinearity",
+        "authors": [
+          "Tae Gab Ha"
+        ],
+        "abstract": "We study a coupled strongly damped wave--Moore--Gibson--Thompson (MGT) system with logarithmic source $f(u)=|u|^{γ-2}u\\ln|u|$ in the full Sobolev-subcritical range $2<γ<2^*:=2n/(n-2)$. The main difficulty is that, in this full range, the logarithmic nonlinearity does not admit the standard compactness and difference estimates available in the lower subcritical regime. Using the augmented variable $w=v+τv_t$, we derive the exact energy-dissipation identity for the strongly damped system and exploit the associated coupled potential-well structure. For the local theory, a Faedo--Galerkin scheme combined with a closed nonlinear differential inequality and a spatial domain-splitting argument yields local existence. The strong damping provides the additional regularity needed to prove uniqueness throughout the full subcritical range and to establish a continuation principle. Below the well depth $d_α$, we then obtain a sharp dynamical dichotomy: solutions with initial data in the stable set exist globally and decay exponentially, whereas solutions with initial data in the unstable set blow up in finite time. The blow-up argument reveals a structural cancellation specific to the augmented formulation: once the logarithmic contribution is reconstructed through the exact energy identity, the unfavorable MGT residual in Levine's concavity functional is absorbed algebraically. This allows the concavity method to close without imposing any additional sign condition on the initial velocities.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05819",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05819",
+        "submittedAt": "2026-09-05T02:29:24Z",
+        "updatedAt": "2026-09-05T02:29:24Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "$theorem_proof_reviewed$",
+        "workSummary": "论文研究带强阻尼的 wave–Moore–Gibson–Thompson 耦合系统，在完整 Sobolev 次临界范围 $2<\\gamma <2*=2n/(n-2)$ 下处理对数源 $f(u)=|u|^{\\gamma -2}u$ log|u|。正文先以增广变量 $w=v+\\tau v_t$ 建立精确能量耗散恒等式，第 2 节用 Faedo–Galerkin、域分割和闭合微分不等式得到局部适定与延拓准则，第 4 节构造耦合势阱，第 5 节用稳定/不稳定集合证明全局衰减和有限时爆破。Theorems 2.7–2.8 给出势阱下的全局—爆破二分。",
+        "techniques": [
+          "增广变量与精确能量律",
+          "Faedo–Galerkin 逼近",
+          "对数 Sobolev 与域分割",
+          "耦合势阱/Néhari 流形",
+          "凹性微分不等式"
+        ],
+        "breakthrough": "关键结果覆盖整个次临界 $\\gamma $ 区间：强阻尼不仅提供局部正则性与唯一性，还使对数非线性在增广能量中形成可用的势阱；低于井深 $d_\\alpha $ 时，稳定集解全局指数衰减，不稳定集解因增广变量中的结构性抵消在有限时间爆破。",
+        "limitations": "需要有界光滑域、强阻尼$/\\tau $ 参数$、2<\\gamma <2*$ 和相应初始能量；全局衰减与爆破分别只对势阱稳定集和不稳定集成立，临界井深或超临界对数增长不在结论内。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "增广变量 $w=v+\\tau v_t$ 把 wave–MGT 系统写成具有正耗散项的二阶耦合系统，并产生精确能量—耗散恒等式。",
+              "route": "将 MGT 高阶时间项替换为 w，分别以 $v_t、w$ 和空间梯度测试方程；积分分部后$，\\tau $ 相关交叉项正好被增广能量吸收，得到 $E'(t)+D(t)=0$ 的结构，而非只估计不定交叉项。",
+              "evidence": "Section 1 的增广系统与能量定义（PDF 第 2–4 页）；Section 2 Theorem 2.7/2.8 所用能量恒等式（PDF 第 11、18–20 页）。"
+            },
+            {
+              "claim": "Galerkin 近似在全次临界 $\\gamma $ 范围内存在局部解，且统一先验界给出强解的 continuation criterion。",
+              "route": "投影到有限维特征空间，利用对数非线性在有界区间的局部 Lipschitz 性和域分割估计控制源项；Proposition 2.6 给出非线性微分不等式，结合强阻尼提供的额外空间导数闭合近似能量，再取弱/强极限。",
+              "evidence": "Section 2 Proposition 2.6（PDF 第 11、15 页）；Section 2 Lemmas 2.3–2.5（PDF 第 8–10 页）；局部存在与延拓讨论（PDF 第 17–20 页）。"
+            },
+            {
+              "claim": "势阱水平 $d_\\alpha $ 将初值分为稳定集和不稳定集，并保持相应的能量/Néhari 符号。",
+              "route": "将能量沿射线 tu 取最大定义井深 $d_\\alpha $，再以 Néhari 泛函符号区分两集合；能量耗散禁止稳定集轨道穿过 Néhari 分界，强阻尼和势项估计把解留在对应的势阱区域。",
+              "evidence": "Section 1 的势阱定义与 Theorem 2.7–2.8（PDF 第 5、11 页）；Section 4 Proposition 4.1（PDF 第 18 页）及 Section 5 预备估计（PDF 第 22 页）。"
+            },
+            {
+              "claim": "稳定集中的解全局存在并指数衰减，而不稳定集中的解满足有限时爆破。",
+              "route": "稳定分支用能量耗散、Poincare/对数 Sobolev 估计建立 $E(t)\\le Ce^{-ct}E(0)$，再通过 continuation criterion 延拓；不稳定分支对增广能量构造正的凹性测试泛函，利用对数源与 $w=v+\\tau v_t$ 的抵消得到 $F″F-(1+\\kappa )(F')^{2}\\ge 0$，凹性积分迫使 F 在有限时间发散。",
+              "evidence": "Theorem 2.7（PDF 第 11 页）对应 Section 5 的全局衰减证明（PDF 第 24–25 页）；Theorem 2.8（PDF 第 11 页）及 Proposition 5.1（PDF 第 22、25 页）的爆破微分不等式。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查正文引言、证明章节、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文逐页核查，包含主证明章节、末页致谢/声明和 References。",
+        "priorityScore": 77,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

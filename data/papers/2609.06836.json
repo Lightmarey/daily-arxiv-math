@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06836",
+  "slug": "2609.06836",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06836:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06836",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Non-decaying weak solutions to the 2D quasi-geostrophic equations",
+    "authors": [
+      "David M. Ambrose",
+      "Ryan Aschoff",
+      "Elaine Cozzi",
+      "James P. Kelliher"
+    ],
+    "abstract": "We investigate weak solutions to the two-dimensional quasi-geostrophic equations without dissipation. We establish global existence of weak solutions for temperature bounded and lacking spatial decay and velocity in the space $L^2_{ul}(\\mathbb{R}^2)$. Our methods rely on a spectral Serfati identity, which we use to establish uniform $L^2_{ul}$ bounds on a sequence of velocities satisfying the dissipative equations. These bounds, combined with a maximum principle on the scalar temperature, allow us to pass to the zero-dissipation limit, giving global-in-time weak solutions.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06836",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06836",
+    "submittedAt": "2026-09-06T21:19:53Z",
+    "updatedAt": "2026-09-06T21:19:53Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文在温度有界、速度仅具有 uniformly local $L^{2}$ 控制且不衰减的框架下，构造二维无耗散 SQG 的全局弱解。作者先对黏性 SQG 解做 Littlewood–Paley 低/高频分解，推导频率版 Serfati 恒等式，把低频输运项、高频核项和黏性项分别控制，得到与黏性参数无关的 $L^{2}_ul$ 速度界。随后对初值做低频平滑，取 $\\nu \\to 0$ 的光滑解子列；最大原理给出温度 $L\\infty $ 界，弱星紧性和时间测试函数估计给出候选极限。最关键的非线性项收敛通过固定频带、截断高频尾和核的 $L^{1}/$衰减估计完成，最后恢复齐次 constitutive law、散度约束和 Serfati 恒等式。",
+    "techniques": [
+      "Littlewood–Paley 低/高频分解",
+      "频率版 Serfati 恒等式",
+      "均匀局部 $L^{2}$ 速度估计",
+      "黏性趋零的弱星紧性",
+      "非线性输运项的固定频带与高频尾分解"
+    ],
+    "breakthrough": "论文把非衰减初值的速度控制从空间局部化转为频率局部化，建立了温度 $L\\infty $、速度 $L^{2}_ul$ 的二维无耗散 SQG 全局弱解存在性，并保留可追踪的 Serfati 恒等式；这使非线性项在不要求空间衰减时仍能通过黏性极限闭合。",
+    "limitations": "解是非唯一的，因为任意连续的无穷远速度场 $U\\infty $ 可通过平移/速度修正产生同初值解；结论限于二维无耗散 SQG 的非衰减数据和弱解类 $L\\infty \\times L^{2}_ul$，未给出唯一性、正则性或奇异性排除。初值还必须满足每个 Littlewood–Paley 块的齐次 constitutive law。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "光滑非衰减黏性解满足频率版 Serfati 恒等式，并获得与低频截断 N 相关但可用于极限的 $L^{2}_ul$ 速度估计。",
+          "route": "把速度按 $S_N+H_N$ 分解，对低频部分用紧支撑截断和 Littlewood–Paley 核的尺度界估计输运/黏性项；高频部分直接写成 $H_NK∗(\\theta (t)-\\theta _0)$。合并后得到含 $U\\infty $ 的式(4.1)，再令 $N\\to -\\infty $ 得到 Proposition 4.4 的高频表示。",
+          "evidence": "Phase I 与 Theorem 4.1（PDF第3、13页）；Lemma 4.2–4.3及 Proposition 4.4、式(4.1)、(4.19)（PDF第14–19页）。"
+        },
+        {
+          "claim": "平滑黏性近似序列具有统一温度 $L\\infty $ 界和速度 $L^{2}_ul$ 界，并可抽取候选极限。",
+          "route": "用 $S_k$ 平滑初值构造 $\\nu =1/k$ 的经典解；最大原理保持 $||\\theta _k||\\infty \\le ||\\theta _0||\\infty 。Serfati$ 估计给出 $u_k$ 的 uniformly local $L^{2}$ 界，局部空间正则和时间弱连续性再通过 Banach–Alaoglu、对角抽取与测试函数时间等距性产生 $\\theta 、u$ 及初值轨迹的收敛。",
+          "evidence": "Phase II（PDF第3页）；Section 5.1–5.2、式(5.1)–(5.2)及 Proposition 5.1–5.4（PDF第19–22页）。"
+        },
+        {
+          "claim": "近似非线性项 $\\theta _k$ $u_k$ 在分布配对中收敛到 $\\theta u$，即使速度和温度均不衰减。",
+          "route": "先固定低频截断 N，将初值差、低频输运项和高频卷积项分开；Rellich 紧性处理固定 N 的低频部分，弱星收敛处理与极限的线性因子。再以 $M\\ge N$ 截断 $H_N，Theorem$ 2.9 把剩余核尾压到 $C2^{-M}$，先取 $k\\to \\infty $ 再取 $M\\to \\infty $，从而控制四项双线性差异。",
+          "evidence": "Proposition 6.1的策略说明（PDF第25–26页）；Propositions 6.2–6.4及式(6.4)、(6.6)、(6.11)–(6.16)（PDF第27–31页）。"
+        },
+        {
+          "claim": "候选极限满足无耗散 SQG 的弱方程、齐次 constitutive law、散度约束和 Serfati 恒等式。",
+          "route": "将黏性弱形式中的 $k^{-1}\\Delta \\theta _k$ 项用温度统一界压到零；Proposition 6.5 用非线性收敛传递输运项，Proposition 5.6–5.7 传递每个频率块的 constitutive law，分布极限传递散度。最后对黏性 Serfati 恒等式逐项取极限，低频项保留为时间积分而黏性项消失，得到 Proposition 6.6；结合 Galilean 变换的非唯一性构造完成 Theorem 1.1。",
+          "evidence": "Proposition 6.5（PDF第31–32页）；Proposition 6.6及式(6.18)–(6.22)（PDF第32–33页）；Theorem 1.1证明（PDF第33页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–33页的引言、黏性估计、候选极限、非线性收敛、弱解证明、Acknowledgments、Data Availability 和 References，并检索 AI、LLM、ChatGPT、language model 等词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–33页全文核查，覆盖 Theorem 1.1、Theorem 4.1、Section 5–6 全部极限论证及文末声明区域。",
+    "priorityScore": 63,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06836:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06836",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Non-decaying weak solutions to the 2D quasi-geostrophic equations",
+        "authors": [
+          "David M. Ambrose",
+          "Ryan Aschoff",
+          "Elaine Cozzi",
+          "James P. Kelliher"
+        ],
+        "abstract": "We investigate weak solutions to the two-dimensional quasi-geostrophic equations without dissipation. We establish global existence of weak solutions for temperature bounded and lacking spatial decay and velocity in the space $L^2_{ul}(\\mathbb{R}^2)$. Our methods rely on a spectral Serfati identity, which we use to establish uniform $L^2_{ul}$ bounds on a sequence of velocities satisfying the dissipative equations. These bounds, combined with a maximum principle on the scalar temperature, allow us to pass to the zero-dissipation limit, giving global-in-time weak solutions.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06836",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06836",
+        "submittedAt": "2026-09-06T21:19:53Z",
+        "updatedAt": "2026-09-06T21:19:53Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文在温度有界、速度仅具有 uniformly local $L^{2}$ 控制且不衰减的框架下，构造二维无耗散 SQG 的全局弱解。作者先对黏性 SQG 解做 Littlewood–Paley 低/高频分解，推导频率版 Serfati 恒等式，把低频输运项、高频核项和黏性项分别控制，得到与黏性参数无关的 $L^{2}_ul$ 速度界。随后对初值做低频平滑，取 $\\nu \\to 0$ 的光滑解子列；最大原理给出温度 $L\\infty $ 界，弱星紧性和时间测试函数估计给出候选极限。最关键的非线性项收敛通过固定频带、截断高频尾和核的 $L^{1}/$衰减估计完成，最后恢复齐次 constitutive law、散度约束和 Serfati 恒等式。",
+        "techniques": [
+          "Littlewood–Paley 低/高频分解",
+          "频率版 Serfati 恒等式",
+          "均匀局部 $L^{2}$ 速度估计",
+          "黏性趋零的弱星紧性",
+          "非线性输运项的固定频带与高频尾分解"
+        ],
+        "breakthrough": "论文把非衰减初值的速度控制从空间局部化转为频率局部化，建立了温度 $L\\infty $、速度 $L^{2}_ul$ 的二维无耗散 SQG 全局弱解存在性，并保留可追踪的 Serfati 恒等式；这使非线性项在不要求空间衰减时仍能通过黏性极限闭合。",
+        "limitations": "解是非唯一的，因为任意连续的无穷远速度场 $U\\infty $ 可通过平移/速度修正产生同初值解；结论限于二维无耗散 SQG 的非衰减数据和弱解类 $L\\infty \\times L^{2}_ul$，未给出唯一性、正则性或奇异性排除。初值还必须满足每个 Littlewood–Paley 块的齐次 constitutive law。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "光滑非衰减黏性解满足频率版 Serfati 恒等式，并获得与低频截断 N 相关但可用于极限的 $L^{2}_ul$ 速度估计。",
+              "route": "把速度按 $S_N+H_N$ 分解，对低频部分用紧支撑截断和 Littlewood–Paley 核的尺度界估计输运/黏性项；高频部分直接写成 $H_NK∗(\\theta (t)-\\theta _0)$。合并后得到含 $U\\infty $ 的式(4.1)，再令 $N\\to -\\infty $ 得到 Proposition 4.4 的高频表示。",
+              "evidence": "Phase I 与 Theorem 4.1（PDF第3、13页）；Lemma 4.2–4.3及 Proposition 4.4、式(4.1)、(4.19)（PDF第14–19页）。"
+            },
+            {
+              "claim": "平滑黏性近似序列具有统一温度 $L\\infty $ 界和速度 $L^{2}_ul$ 界，并可抽取候选极限。",
+              "route": "用 $S_k$ 平滑初值构造 $\\nu =1/k$ 的经典解；最大原理保持 $||\\theta _k||\\infty \\le ||\\theta _0||\\infty 。Serfati$ 估计给出 $u_k$ 的 uniformly local $L^{2}$ 界，局部空间正则和时间弱连续性再通过 Banach–Alaoglu、对角抽取与测试函数时间等距性产生 $\\theta 、u$ 及初值轨迹的收敛。",
+              "evidence": "Phase II（PDF第3页）；Section 5.1–5.2、式(5.1)–(5.2)及 Proposition 5.1–5.4（PDF第19–22页）。"
+            },
+            {
+              "claim": "近似非线性项 $\\theta _k$ $u_k$ 在分布配对中收敛到 $\\theta u$，即使速度和温度均不衰减。",
+              "route": "先固定低频截断 N，将初值差、低频输运项和高频卷积项分开；Rellich 紧性处理固定 N 的低频部分，弱星收敛处理与极限的线性因子。再以 $M\\ge N$ 截断 $H_N，Theorem$ 2.9 把剩余核尾压到 $C2^{-M}$，先取 $k\\to \\infty $ 再取 $M\\to \\infty $，从而控制四项双线性差异。",
+              "evidence": "Proposition 6.1的策略说明（PDF第25–26页）；Propositions 6.2–6.4及式(6.4)、(6.6)、(6.11)–(6.16)（PDF第27–31页）。"
+            },
+            {
+              "claim": "候选极限满足无耗散 SQG 的弱方程、齐次 constitutive law、散度约束和 Serfati 恒等式。",
+              "route": "将黏性弱形式中的 $k^{-1}\\Delta \\theta _k$ 项用温度统一界压到零；Proposition 6.5 用非线性收敛传递输运项，Proposition 5.6–5.7 传递每个频率块的 constitutive law，分布极限传递散度。最后对黏性 Serfati 恒等式逐项取极限，低频项保留为时间积分而黏性项消失，得到 Proposition 6.6；结合 Galilean 变换的非唯一性构造完成 Theorem 1.1。",
+              "evidence": "Proposition 6.5（PDF第31–32页）；Proposition 6.6及式(6.18)–(6.22)（PDF第32–33页）；Theorem 1.1证明（PDF第33页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–33页的引言、黏性估计、候选极限、非线性收敛、弱解证明、Acknowledgments、Data Availability 和 References，并检索 AI、LLM、ChatGPT、language model 等词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–33页全文核查，覆盖 Theorem 1.1、Theorem 4.1、Section 5–6 全部极限论证及文末声明区域。",
+        "priorityScore": 63,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

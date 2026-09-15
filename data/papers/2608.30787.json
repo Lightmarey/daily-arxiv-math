@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.30787",
+  "slug": "2608.30787",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.30787:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.30787",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Ancient cylindrical flows with fast or slow convergence",
+    "authors": [
+      "Kyeongsu Choi",
+      "Robert Haslhofer"
+    ],
+    "abstract": "In a recent breakthrough, Bamler-Lai proved the mean-convex neighborhood conjecture in all dimensions by showing that any nontrivial ancient asymptotically cylindrical mean curvature flow is -- up to splitting Euclidean factors -- either a translating bowl, or an ancient oval, or a translating oval-bowl. In this paper, we provide a short alternative argument for two of the three scenarios. Specifically, using more elementary/traditional methods, we show that if the convergence to the round cylinder is fast then the solution is a bowl times a Euclidean factor, and if the convergence is slow then the solution is an ancient oval. Moreover, the present paper also yields a new proof of the mean-convex neighborhood conjecture for neck-singularities that substantially simplifies and streamlines the approach from our prior work joint with Hershkovits (Acta '22) and Hershkovits-White (Inventiones '22).",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2608.30787",
+    "pdfUrl": "https://arxiv.org/pdf/2608.30787",
+    "submittedAt": "2026-08-31T13:44:53Z",
+    "updatedAt": "2026-08-31T13:44:53Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "古老柱状平均曲率流分类",
+    "workSummary": "论文研究古老渐近柱状平均曲率流趋近圆柱时的快慢二分。作者在快收敛情形将柱面函数与最佳拟合平移 bowl 比较，通过线性化演化、模态分解、最优平移和快速衰减证明流就是 bowl 乘欧氏因子；在慢收敛情形用可见不稳定模态和几何障碍证明只能是古老 oval。",
+    "techniques": [
+      "柱面函数与 Ornstein–Uhlenbeck 线性化",
+      "不稳定模态分解",
+      "最佳拟合平移与快速衰减",
+      "Hausdorff 控制和避免原理"
+    ],
+    "breakthrough": "论文把古老柱状流的两种渐近速率直接提升为刚性分类：快收敛消除全部非模型误差并强制平移 bowl，慢收敛则保留可见不稳定模态并通过几何尺度矛盾排除 bowl，最终得到 ancient oval。",
+    "limitations": "结论建立在古老、unit-regular、积分 Brakke 流及渐近柱状假设上，并依赖 Bamler–Lai 的整体分类和已有精细柱面展开；混合收敛的 oval-bowl 情形留给外部分类结果。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Proposition 2.18 和 Corollary 2.30 将与最佳拟合 bowl 的差函数衰减提升到可选平移后的 $o(e^{\\tau /2})$。",
+          "route": "对差函数 wX 使用线性化算子 L 的常数和线性函数不稳定模态分解，结合能量微分不等式和 Merle–Zaag 型 ODE 引理排除线性模态主导；再选择唯一平移 $\\eta (X)$ 消除剩余 $e^{\\tau /2}$ 分量。",
+          "evidence": "PDF 第5–7页，第2.1节 Proposition 2.18、Corollary 2.30；式(2.20)–(2.29)给出模态能量和最佳拟合平移。"
+        },
+        {
+          "claim": "Theorem 2.34 证明最佳拟合后的差函数具有 $O(e^{50\\tau })$ 的快速衰减。",
+          "route": "将 Corollary 2.30 的加权小量代回差函数能量方程，利用 $⟨Lw,w⟩=||w||^{2}-||\\nabla w||^{2}$ 吸收梯度项，得到 $||w||^{2}$ 的一阶微分不等式；从 $\\tau \\to -\\infty $ 的初始衰减积分出指数 $50\\tau $。",
+          "evidence": "PDF 第7页 Theorem 2.34 及证明；式(2.35)–(2.37)明确给出能量不等式和积分结论。"
+        },
+        {
+          "claim": "Lemma 2.41、Corollary 2.42 和 Proposition 2.45 将快速函数衰减转为高位面 Hausdorff 接近和帽部尺度控制。",
+          "route": "用反证缩放控制柱面尺度 Z(X)，否则得到与灭绝时间矛盾的圆柱极限；再把函数范数衰减转为截面 Hausdorff 距离，结合渐近斜率和 Kleene–Moller shrinker 的避免原理，排除向柱面下方无限延伸的帽部。",
+          "evidence": "PDF 第7–9页 Lemma 2.41、Corollary 2.42、Proposition 2.45；式(2.40)、(2.43)、(2.46)及避免原理应用。"
+        },
+        {
+          "claim": "Theorem 2.48 证明快收敛古老柱状流与最佳拟合的 $R^{k-1}\\times Bowl$ 完全相同；慢收敛时 Theorem 3.25 排除 bowl 并得到 ancient oval。",
+          "route": "快情形把截面 Hausdorff 接近与帽部下界结合，在任意下移模型域和流之间应用避免原理，得到无接触并推出两个流相等；慢情形保留可见不稳定模态，在大柱面区域构造几何障碍，若仍为 bowl 则与快情形刚性矛盾，故只能进入古老 oval 分支。",
+          "evidence": "PDF 第9页 Theorem 2.48 及证明；PDF 第11–13页 Section 3 Lemma 3.3、Proposition 3.9、Theorem 3.25 的慢收敛障碍与最终分类。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–14页（含 Acknowledgments 与 References）；缓存全文 2608.30787.txt。",
+    "priorityScore": 55,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.30787:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.30787",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Ancient cylindrical flows with fast or slow convergence",
+        "authors": [
+          "Kyeongsu Choi",
+          "Robert Haslhofer"
+        ],
+        "abstract": "In a recent breakthrough, Bamler-Lai proved the mean-convex neighborhood conjecture in all dimensions by showing that any nontrivial ancient asymptotically cylindrical mean curvature flow is -- up to splitting Euclidean factors -- either a translating bowl, or an ancient oval, or a translating oval-bowl. In this paper, we provide a short alternative argument for two of the three scenarios. Specifically, using more elementary/traditional methods, we show that if the convergence to the round cylinder is fast then the solution is a bowl times a Euclidean factor, and if the convergence is slow then the solution is an ancient oval. Moreover, the present paper also yields a new proof of the mean-convex neighborhood conjecture for neck-singularities that substantially simplifies and streamlines the approach from our prior work joint with Hershkovits (Acta '22) and Hershkovits-White (Inventiones '22).",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2608.30787",
+        "pdfUrl": "https://arxiv.org/pdf/2608.30787",
+        "submittedAt": "2026-08-31T13:44:53Z",
+        "updatedAt": "2026-08-31T13:44:53Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "古老柱状平均曲率流分类",
+        "workSummary": "论文研究古老渐近柱状平均曲率流趋近圆柱时的快慢二分。作者在快收敛情形将柱面函数与最佳拟合平移 bowl 比较，通过线性化演化、模态分解、最优平移和快速衰减证明流就是 bowl 乘欧氏因子；在慢收敛情形用可见不稳定模态和几何障碍证明只能是古老 oval。",
+        "techniques": [
+          "柱面函数与 Ornstein–Uhlenbeck 线性化",
+          "不稳定模态分解",
+          "最佳拟合平移与快速衰减",
+          "Hausdorff 控制和避免原理"
+        ],
+        "breakthrough": "论文把古老柱状流的两种渐近速率直接提升为刚性分类：快收敛消除全部非模型误差并强制平移 bowl，慢收敛则保留可见不稳定模态并通过几何尺度矛盾排除 bowl，最终得到 ancient oval。",
+        "limitations": "结论建立在古老、unit-regular、积分 Brakke 流及渐近柱状假设上，并依赖 Bamler–Lai 的整体分类和已有精细柱面展开；混合收敛的 oval-bowl 情形留给外部分类结果。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Proposition 2.18 和 Corollary 2.30 将与最佳拟合 bowl 的差函数衰减提升到可选平移后的 $o(e^{\\tau /2})$。",
+              "route": "对差函数 wX 使用线性化算子 L 的常数和线性函数不稳定模态分解，结合能量微分不等式和 Merle–Zaag 型 ODE 引理排除线性模态主导；再选择唯一平移 $\\eta (X)$ 消除剩余 $e^{\\tau /2}$ 分量。",
+              "evidence": "PDF 第5–7页，第2.1节 Proposition 2.18、Corollary 2.30；式(2.20)–(2.29)给出模态能量和最佳拟合平移。"
+            },
+            {
+              "claim": "Theorem 2.34 证明最佳拟合后的差函数具有 $O(e^{50\\tau })$ 的快速衰减。",
+              "route": "将 Corollary 2.30 的加权小量代回差函数能量方程，利用 $⟨Lw,w⟩=||w||^{2}-||\\nabla w||^{2}$ 吸收梯度项，得到 $||w||^{2}$ 的一阶微分不等式；从 $\\tau \\to -\\infty $ 的初始衰减积分出指数 $50\\tau $。",
+              "evidence": "PDF 第7页 Theorem 2.34 及证明；式(2.35)–(2.37)明确给出能量不等式和积分结论。"
+            },
+            {
+              "claim": "Lemma 2.41、Corollary 2.42 和 Proposition 2.45 将快速函数衰减转为高位面 Hausdorff 接近和帽部尺度控制。",
+              "route": "用反证缩放控制柱面尺度 Z(X)，否则得到与灭绝时间矛盾的圆柱极限；再把函数范数衰减转为截面 Hausdorff 距离，结合渐近斜率和 Kleene–Moller shrinker 的避免原理，排除向柱面下方无限延伸的帽部。",
+              "evidence": "PDF 第7–9页 Lemma 2.41、Corollary 2.42、Proposition 2.45；式(2.40)、(2.43)、(2.46)及避免原理应用。"
+            },
+            {
+              "claim": "Theorem 2.48 证明快收敛古老柱状流与最佳拟合的 $R^{k-1}\\times Bowl$ 完全相同；慢收敛时 Theorem 3.25 排除 bowl 并得到 ancient oval。",
+              "route": "快情形把截面 Hausdorff 接近与帽部下界结合，在任意下移模型域和流之间应用避免原理，得到无接触并推出两个流相等；慢情形保留可见不稳定模态，在大柱面区域构造几何障碍，若仍为 bowl 则与快情形刚性矛盾，故只能进入古老 oval 分支。",
+              "evidence": "PDF 第9页 Theorem 2.48 及证明；PDF 第11–13页 Section 3 Lemma 3.3、Proposition 3.9、Theorem 3.25 的慢收敛障碍与最终分类。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–14页（含 Acknowledgments 与 References）；缓存全文 2608.30787.txt。",
+        "priorityScore": 55,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

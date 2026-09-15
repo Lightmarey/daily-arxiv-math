@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05669",
+  "slug": "2609.05669",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.05669:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.05669",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The stability conjecture for the Bernoulli problem in dimension four",
+    "authors": [
+      "Xavier Fernández-Real",
+      "Joaquim Serra"
+    ],
+    "abstract": "We prove that every global classical stable solution to the one-phase Bernoulli problem in $\\mathbb R^4$ is one-dimensional. In particular, if nonempty, its free boundary consists of one or two parallel hyperplanes. This settles the stability conjecture for the Bernoulli problem in dimension four. As consequences, we obtain universal local Hessian and free-boundary curvature estimates for classical stable solutions in $\\mathbb R^4$, as well as axial symmetry of global classical solutions with finite Morse index in $\\mathbb R^4$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05669",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05669",
+    "submittedAt": "2026-09-04T19:03:51Z",
+    "updatedAt": "2026-09-04T19:03:51Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文解决四维一相 Bernoulli 问题的稳定性猜想：任意全局经典稳定解都必须是一维，故非空自由边界只能是一条或两条平行超平面。证明先以 blow-down 和一阶齐次稳定锥分类把大尺度模型压到 half-space 或 vee；再在非平坦假设下定义 neck 中心、横向稳定性缺陷和 neck charge，构造带对数传播的 Gaussian Weiss excess。通过选择幂次、中心和尺度建立 dyadic free-boundary ball tree，将 vee 两侧组织成带可控通量误差的有符号区域，最后以 Neumann 线性化和 flat-scale 改善把两侧曲率能量推入严格次临界范围，产生与初始归一化 Hessian 矛盾的衰减。",
+    "techniques": [
+      "Weiss 单调性与 blow-down 紧性",
+      "稳定性不等式和 neck charge",
+      "Gaussian Weiss excess 的对数跨尺度传播",
+      "自由边界 dyadic ball tree",
+      "Neumann 线性化与 flat-scale improvement"
+    ],
+    "breakthrough": "论文把稳定性提供的横向缺陷、neck 几何和自由边界通量误差连接成一个可跨尺度传播的 excess，最终在临界维度四排除非平坦全球稳定解，建立 Bernoulli 稳定性猜想并推出局部 Hessian、自由边界曲率和有限 Morse 指数轴对称性估计。",
+    "limitations": "分类结论限于全局经典稳定一相解的 $R^4$；证明依赖稳定性、自由边界经典性和四维齐次稳定锥分类，不覆盖一般弱稳定解或更高维度。文中关于五维的可推广性只是展望，数值/实验性 proof-development 记录不构成额外定理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "经重心平移和缩放后，任何假设非平坦的全球稳定解可归一化为自由边界上 Hessian 非零且全局 Hessian 有界的解。",
+          "route": "利用全局 Lipschitz 与稳定解的 blow-down 紧性选择尺度和中心，使 $0\\in FB(u)、|\\nabla u|\\le 1、|D^{2}u(0)|=1$；这把最终反证固定在单位 Hessian 归一化上。",
+          "evidence": "第2节 Proof overview（PDF 第4页，式(2.1)）；Theorem 3.5、Theorem 5.2 的归一化输入（PDF 第8、14页）。"
+        },
+        {
+          "claim": "足够大尺度的 blow-down 只能接近 unit-slope vee 或 half-space，且 neck 处横向稳定性产生统一的非零缺陷和可加 neck charge。",
+          "route": "Weiss 单调性先使齐次极限落入分类锥；若 neck 尺度的切向缺陷趋零，紧性和降维会给出二维极限并由低维刚性判平，这与非平坦 neck 矛盾，于是得到定量 gap，再以有界重叠求和形成 charge。",
+          "evidence": "第4节 Theorem 4.8、Theorem 4.12（PDF 第13、22页）；第6节 Theorem 6.4、6.8–6.11（PDF 第16–20页）。"
+        },
+        {
+          "claim": "Gaussian Weiss excess 能控制 neck charge 并以对数损失跨尺度传播，随后选择最优幂次、中心和尺度。",
+          "route": "移动 Weiss 中心检测 ridge 的切向梯度，得到 $charge\\le C$ excess；固定中心的单调性、中心移动估计和径向 trace 界给出 $E(R)\\le C|log$ $\\eta |E(\\eta R)$，再按 excess/charge 的交换率选取临界幂次与近最大化球。",
+          "evidence": "第7节 Theorem 7.2、7.5、7.7、7.9（PDF 第21–25页）；第8节 Theorem 8.2–8.5（PDF 第26–30页）。"
+        },
+        {
+          "claim": "自由边界树和两侧线性化改善最终排除非平坦解，故每个全球经典稳定解在正集内 $D^{2}u$恒为零。",
+          "route": "在选定 vee 尺度构造 U+、U− 两个 signed regions，树估计把所有终端球的高度与倾斜误差汇总为可控通量；对两侧作 Neumann 线性化并迭代 flat scale，得到严格幂次 gain，与归一化 $|D^{2}u(0)|=1$ 矛盾。",
+          "evidence": "第9–10节 Theorem 9.1–9.17、Theorem 10.1–10.4（PDF 第31–46页）；第11节 flat-scale 论证（PDF 第47–54页）；第12节 Theorem 1.1 反证（PDF 第55–62页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在引言第3–4页专门列出 AI 使用：构建以 OpenAI Codex 为主、偶用 Claude Code 的 proof-development 环境，用于保存和协调证明块、起草与检查局部技术段落、暴露障碍、核对假设/数值、传播修订并改善表述；作者同时说明策略和关键计算由人类设计。",
+    "aiEvidenceSource": "PDF 第3–4页 §1.2 “Use of artificial intelligence” 及其工作流清单。",
+    "priorityScore": 69,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.05669:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.05669",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The stability conjecture for the Bernoulli problem in dimension four",
+        "authors": [
+          "Xavier Fernández-Real",
+          "Joaquim Serra"
+        ],
+        "abstract": "We prove that every global classical stable solution to the one-phase Bernoulli problem in $\\mathbb R^4$ is one-dimensional. In particular, if nonempty, its free boundary consists of one or two parallel hyperplanes. This settles the stability conjecture for the Bernoulli problem in dimension four. As consequences, we obtain universal local Hessian and free-boundary curvature estimates for classical stable solutions in $\\mathbb R^4$, as well as axial symmetry of global classical solutions with finite Morse index in $\\mathbb R^4$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05669",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05669",
+        "submittedAt": "2026-09-04T19:03:51Z",
+        "updatedAt": "2026-09-04T19:03:51Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文解决四维一相 Bernoulli 问题的稳定性猜想：任意全局经典稳定解都必须是一维，故非空自由边界只能是一条或两条平行超平面。证明先以 blow-down 和一阶齐次稳定锥分类把大尺度模型压到 half-space 或 vee；再在非平坦假设下定义 neck 中心、横向稳定性缺陷和 neck charge，构造带对数传播的 Gaussian Weiss excess。通过选择幂次、中心和尺度建立 dyadic free-boundary ball tree，将 vee 两侧组织成带可控通量误差的有符号区域，最后以 Neumann 线性化和 flat-scale 改善把两侧曲率能量推入严格次临界范围，产生与初始归一化 Hessian 矛盾的衰减。",
+        "techniques": [
+          "Weiss 单调性与 blow-down 紧性",
+          "稳定性不等式和 neck charge",
+          "Gaussian Weiss excess 的对数跨尺度传播",
+          "自由边界 dyadic ball tree",
+          "Neumann 线性化与 flat-scale improvement"
+        ],
+        "breakthrough": "论文把稳定性提供的横向缺陷、neck 几何和自由边界通量误差连接成一个可跨尺度传播的 excess，最终在临界维度四排除非平坦全球稳定解，建立 Bernoulli 稳定性猜想并推出局部 Hessian、自由边界曲率和有限 Morse 指数轴对称性估计。",
+        "limitations": "分类结论限于全局经典稳定一相解的 $R^4$；证明依赖稳定性、自由边界经典性和四维齐次稳定锥分类，不覆盖一般弱稳定解或更高维度。文中关于五维的可推广性只是展望，数值/实验性 proof-development 记录不构成额外定理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "经重心平移和缩放后，任何假设非平坦的全球稳定解可归一化为自由边界上 Hessian 非零且全局 Hessian 有界的解。",
+              "route": "利用全局 Lipschitz 与稳定解的 blow-down 紧性选择尺度和中心，使 $0\\in FB(u)、|\\nabla u|\\le 1、|D^{2}u(0)|=1$；这把最终反证固定在单位 Hessian 归一化上。",
+              "evidence": "第2节 Proof overview（PDF 第4页，式(2.1)）；Theorem 3.5、Theorem 5.2 的归一化输入（PDF 第8、14页）。"
+            },
+            {
+              "claim": "足够大尺度的 blow-down 只能接近 unit-slope vee 或 half-space，且 neck 处横向稳定性产生统一的非零缺陷和可加 neck charge。",
+              "route": "Weiss 单调性先使齐次极限落入分类锥；若 neck 尺度的切向缺陷趋零，紧性和降维会给出二维极限并由低维刚性判平，这与非平坦 neck 矛盾，于是得到定量 gap，再以有界重叠求和形成 charge。",
+              "evidence": "第4节 Theorem 4.8、Theorem 4.12（PDF 第13、22页）；第6节 Theorem 6.4、6.8–6.11（PDF 第16–20页）。"
+            },
+            {
+              "claim": "Gaussian Weiss excess 能控制 neck charge 并以对数损失跨尺度传播，随后选择最优幂次、中心和尺度。",
+              "route": "移动 Weiss 中心检测 ridge 的切向梯度，得到 $charge\\le C$ excess；固定中心的单调性、中心移动估计和径向 trace 界给出 $E(R)\\le C|log$ $\\eta |E(\\eta R)$，再按 excess/charge 的交换率选取临界幂次与近最大化球。",
+              "evidence": "第7节 Theorem 7.2、7.5、7.7、7.9（PDF 第21–25页）；第8节 Theorem 8.2–8.5（PDF 第26–30页）。"
+            },
+            {
+              "claim": "自由边界树和两侧线性化改善最终排除非平坦解，故每个全球经典稳定解在正集内 $D^{2}u$恒为零。",
+              "route": "在选定 vee 尺度构造 U+、U− 两个 signed regions，树估计把所有终端球的高度与倾斜误差汇总为可控通量；对两侧作 Neumann 线性化并迭代 flat scale，得到严格幂次 gain，与归一化 $|D^{2}u(0)|=1$ 矛盾。",
+              "evidence": "第9–10节 Theorem 9.1–9.17、Theorem 10.1–10.4（PDF 第31–46页）；第11节 flat-scale 论证（PDF 第47–54页）；第12节 Theorem 1.1 反证（PDF 第55–62页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在引言第3–4页专门列出 AI 使用：构建以 OpenAI Codex 为主、偶用 Claude Code 的 proof-development 环境，用于保存和协调证明块、起草与检查局部技术段落、暴露障碍、核对假设/数值、传播修订并改善表述；作者同时说明策略和关键计算由人类设计。",
+        "aiEvidenceSource": "PDF 第3–4页 §1.2 “Use of artificial intelligence” 及其工作流清单。",
+        "priorityScore": 69,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

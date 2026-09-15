@@ -3,91 +3,147 @@
   "arxivId": "2609.11647",
   "slug": "2609.11647",
   "latest": {
+    "id": "math.AP:2026-09-11:2609.11647:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
     "arxivId": "2609.11647",
-    "metadata": {
-      "title": "Stable solutions in the abelian Higgs model",
-      "authors": [
-        "Marco Badran"
-      ],
-      "abstract": "We classify entire stable solutions with quadratic energy growth in the $4$-dimensional abelian Higgs model. More precisely, we prove that such solutions are holomorphic with respect to some complex structure, namely they satisfy the first order equations introduced by Bradlow, and consequently their nodal sets are holomorphic curves. Conversely, we construct solutions whose nodal set is any prescribed holomorphic curve with quadratic area growth. As a corollary, we show that all stable solutions with linear energy growth in $\\mathbb{R}^3$ are two-dimensional Bogomolnyi vortices.",
-      "categories": [
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "math.AP",
-      "version": 1,
-      "submittedAt": "2026-09-10T14:52:22Z",
-      "updatedAt": "2026-09-10T14:52:22Z"
+    "version": 1,
+    "entryKind": "new",
+    "title": "Stable solutions in the abelian Higgs model",
+    "authors": [
+      "Marco Badran"
+    ],
+    "abstract": "We classify entire stable solutions with quadratic energy growth in the $4$-dimensional abelian Higgs model. More precisely, we prove that such solutions are holomorphic with respect to some complex structure, namely they satisfy the first order equations introduced by Bradlow, and consequently their nodal sets are holomorphic curves. Conversely, we construct solutions whose nodal set is any prescribed holomorphic curve with quadratic area growth. As a corollary, we show that all stable solutions with linear energy growth in $\\mathbb{R}^3$ are two-dimensional Bogomolnyi vortices.",
+    "categories": [
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11647",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11647",
+    "submittedAt": "2026-09-10T14:52:22Z",
+    "updatedAt": "2026-09-10T14:52:22Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "稳定性",
+    "workSummary": "论文分类具有二次能量增长的整个稳定 Abelian Higgs 解：稳定性迫使解满足某个复结构下的 Bradlow 一阶方程，节点集因此是全纯曲线；反向地，任意具有二次面积增长的全纯曲线都可构造对应解，并推出三维线性能量增长解是二维 Bogomolnyi 涡旋。",
+    "techniques": [
+      "Bogomolnyi 分解",
+      "稳定二次变分",
+      "复结构",
+      "全纯曲线",
+      "规范变换"
+    ],
+    "breakthrough": "把四维稳定 Abelian Higgs 解完全约化到一阶全纯方程，并证明任意适当全纯曲线都能反向产生稳定解。",
+    "limitations": "分类要求整个解、二次能量增长和稳定性；非稳定临界点、奇异节点集及更高能量增长没有分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1 将四维稳定且二次能量增长解约化为某复结构下的 Bradlow 方程。",
+          "route": "对能量作 Bogomolnyi 完平方分解，稳定性给出曲率与协变导数的二阶变分非负；用径向 cutoff 让边界误差按二次增长可控，取半径极限后负项必须消失，得到一阶方程。",
+          "evidence": "PDF 第 3 页，Theorem 1。"
+        },
+        {
+          "claim": "Theorem 2 证明给定二次面积增长的全纯曲线可反向构造稳定解。",
+          "route": "先用全纯曲线定义零集和局部规范截面，再解对应的标量 Kazdan–Warner 型方程调节 Hermitian 度量；最大值原理给出 $|u|\\le 1$，曲率方程与一阶条件同时成立，二次面积增长控制总能量。",
+          "evidence": "PDF 第 4–8 页，Theorem 2。"
+        },
+        {
+          "claim": "Corollary 1 将三维线性能量增长稳定解识别为二维 Bogomolnyi 涡旋。",
+          "route": "对 $R^3$ 中线性增长解作沿轴向的 blow-down，能量密度的单调性迫使解在一个平面方向不变；Theorem 1 的一阶方程限制到该平面后正是 Bradlow/Bogomolnyi vortex 方程。",
+          "evidence": "PDF 第 4 页，Corollary 1。"
+        },
+        {
+          "claim": "Lemma 3.1 处理 $g_+≡0$ 的规范分支并验证其确为 Bradlow vortex。",
+          "route": "在选定复结构和规范下分解连接的 (1,0)/(0,1) 部分$，g_+≡0$ 消去一个曲率分量；剩余方程与节点曲线的全纯性匹配，故分类中的一阶解满足完整二阶 Euler–Lagrange 方程。",
+          "evidence": "PDF 第 10 页，Lemma 3.1。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新定理/分类",
-      "workSummary": "分类四维 abelian Higgs 模型中二次能量增长的全空间稳定解，证明其结点为全纯曲线并给出反向构造。",
-      "techniques": [
-        "稳定性",
-        "Bradlow 一阶方程",
-        "全纯曲线"
-      ],
-      "breakthrough": "把稳定解几何与复结构联系，推出三维线性能量增长解为二维涡旋。",
-      "limitations": "增长条件和可选复结构重要，不是所有稳定解的无条件分类。 已补读引言或主结果片段，尚未逐行验证完整证明。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "正文声明稳定算子的某个不等式及其使用由 ChatGPT 建议，另辅助语言与检查。",
-      "aiEvidenceSource": "https://arxiv.org/html/2609.11647v1 — Acknowledgements / before References",
-      "priorityScore": 89,
-      "priorityReason": "几何 PDE 稳定性及分类与主线联系强。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We classify entire stable solutions with quadratic energy growth in the $4$-dimensional abelian Higgs model. More precisely, we prove that such solutions are holomorphic with respect to some complex structure, namely they satisfy the first order equations introduced by Bradlow, and consequently their nodal sets are holomorphic curves. Conversely, we construct solutions whose nodal set is any prescribed holomorphic curve with quadratic area growth. As a corollary, we show that all stable solutions with linear energy growth in $\\mathbb{R}^3$ are two-dimensional Bogomolnyi vortices.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 84,
+    "priorityTier": "high",
+    "priorityReason": "四维 Abelian Higgs 稳定解分类与全纯曲线构造是几何变分核心。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
   },
   "history": [
     {
-      "date": "2026-09-11",
-      "entry": {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11647:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
         "arxivId": "2609.11647",
-        "metadata": {
-          "title": "Stable solutions in the abelian Higgs model",
-          "authors": [
-            "Marco Badran"
-          ],
-          "abstract": "We classify entire stable solutions with quadratic energy growth in the $4$-dimensional abelian Higgs model. More precisely, we prove that such solutions are holomorphic with respect to some complex structure, namely they satisfy the first order equations introduced by Bradlow, and consequently their nodal sets are holomorphic curves. Conversely, we construct solutions whose nodal set is any prescribed holomorphic curve with quadratic area growth. As a corollary, we show that all stable solutions with linear energy growth in $\\mathbb{R}^3$ are two-dimensional Bogomolnyi vortices.",
-          "categories": [
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "math.AP",
-          "version": 1,
-          "submittedAt": "2026-09-10T14:52:22Z",
-          "updatedAt": "2026-09-10T14:52:22Z"
+        "version": 1,
+        "entryKind": "new",
+        "title": "Stable solutions in the abelian Higgs model",
+        "authors": [
+          "Marco Badran"
+        ],
+        "abstract": "We classify entire stable solutions with quadratic energy growth in the $4$-dimensional abelian Higgs model. More precisely, we prove that such solutions are holomorphic with respect to some complex structure, namely they satisfy the first order equations introduced by Bradlow, and consequently their nodal sets are holomorphic curves. Conversely, we construct solutions whose nodal set is any prescribed holomorphic curve with quadratic area growth. As a corollary, we show that all stable solutions with linear energy growth in $\\mathbb{R}^3$ are two-dimensional Bogomolnyi vortices.",
+        "categories": [
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11647",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11647",
+        "submittedAt": "2026-09-10T14:52:22Z",
+        "updatedAt": "2026-09-10T14:52:22Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "稳定性",
+        "workSummary": "论文分类具有二次能量增长的整个稳定 Abelian Higgs 解：稳定性迫使解满足某个复结构下的 Bradlow 一阶方程，节点集因此是全纯曲线；反向地，任意具有二次面积增长的全纯曲线都可构造对应解，并推出三维线性能量增长解是二维 Bogomolnyi 涡旋。",
+        "techniques": [
+          "Bogomolnyi 分解",
+          "稳定二次变分",
+          "复结构",
+          "全纯曲线",
+          "规范变换"
+        ],
+        "breakthrough": "把四维稳定 Abelian Higgs 解完全约化到一阶全纯方程，并证明任意适当全纯曲线都能反向产生稳定解。",
+        "limitations": "分类要求整个解、二次能量增长和稳定性；非稳定临界点、奇异节点集及更高能量增长没有分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1 将四维稳定且二次能量增长解约化为某复结构下的 Bradlow 方程。",
+              "route": "对能量作 Bogomolnyi 完平方分解，稳定性给出曲率与协变导数的二阶变分非负；用径向 cutoff 让边界误差按二次增长可控，取半径极限后负项必须消失，得到一阶方程。",
+              "evidence": "PDF 第 3 页，Theorem 1。"
+            },
+            {
+              "claim": "Theorem 2 证明给定二次面积增长的全纯曲线可反向构造稳定解。",
+              "route": "先用全纯曲线定义零集和局部规范截面，再解对应的标量 Kazdan–Warner 型方程调节 Hermitian 度量；最大值原理给出 $|u|\\le 1$，曲率方程与一阶条件同时成立，二次面积增长控制总能量。",
+              "evidence": "PDF 第 4–8 页，Theorem 2。"
+            },
+            {
+              "claim": "Corollary 1 将三维线性能量增长稳定解识别为二维 Bogomolnyi 涡旋。",
+              "route": "对 $R^3$ 中线性增长解作沿轴向的 blow-down，能量密度的单调性迫使解在一个平面方向不变；Theorem 1 的一阶方程限制到该平面后正是 Bradlow/Bogomolnyi vortex 方程。",
+              "evidence": "PDF 第 4 页，Corollary 1。"
+            },
+            {
+              "claim": "Lemma 3.1 处理 $g_+≡0$ 的规范分支并验证其确为 Bradlow vortex。",
+              "route": "在选定复结构和规范下分解连接的 (1,0)/(0,1) 部分$，g_+≡0$ 消去一个曲率分量；剩余方程与节点曲线的全纯性匹配，故分类中的一阶解满足完整二阶 Euler–Lagrange 方程。",
+              "evidence": "PDF 第 10 页，Lemma 3.1。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新定理/分类",
-          "workSummary": "分类四维 abelian Higgs 模型中二次能量增长的全空间稳定解，证明其结点为全纯曲线并给出反向构造。",
-          "techniques": [
-            "稳定性",
-            "Bradlow 一阶方程",
-            "全纯曲线"
-          ],
-          "breakthrough": "把稳定解几何与复结构联系，推出三维线性能量增长解为二维涡旋。",
-          "limitations": "增长条件和可选复结构重要，不是所有稳定解的无条件分类。 已补读引言或主结果片段，尚未逐行验证完整证明。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "正文声明稳定算子的某个不等式及其使用由 ChatGPT 建议，另辅助语言与检查。",
-          "aiEvidenceSource": "https://arxiv.org/html/2609.11647v1 — Acknowledgements / before References",
-          "priorityScore": 89,
-          "priorityReason": "几何 PDE 稳定性及分类与主线联系强。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We classify entire stable solutions with quadratic energy growth in the $4$-dimensional abelian Higgs model. More precisely, we prove that such solutions are holomorphic with respect to some complex structure, namely they satisfy the first order equations introduced by Bradlow, and consequently their nodal sets are holomorphic curves. Conversely, we construct solutions whose nodal set is any prescribed holomorphic curve with quadratic area growth. As a corollary, we show that all stable solutions with linear energy growth in $\\mathbb{R}^3$ are two-dimensional Bogomolnyi vortices.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 84,
+        "priorityTier": "high",
+        "priorityReason": "四维 Abelian Higgs 稳定解分类与全纯曲线构造是几何变分核心。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
       }
     }
   ]

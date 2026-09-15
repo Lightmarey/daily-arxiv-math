@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09512",
+  "slug": "2609.09512",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09512:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09512",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global well-posedness for Vlasov equations with power-law interactions in $d\\ge4$",
+    "authors": [
+      "Emmanouil Katriadakis"
+    ],
+    "abstract": "We study the Vlasov equation with general power-law (Riesz-type) potentials with exponent \\(α\\). We prove global well-posedness in every dimension \\(d\\ge4\\), for both attractive and repulsive interactions, throughout the range \\(0<α<3\\), for arbitrary nonnegative compactly supported bounded initial data. No smallness condition is imposed on the initial data. For the attractive problem, the virial identity gives finite-time breakdown for negative-energy solutions when \\(α\\ge3\\). The proof of global well-posedness combines the analysis of characteristics, estimates in Lagrangian coordinates, and a crucial application of a \\emph{compensated integrability} inequality due to Denis Serre.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09512",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09512",
+    "submittedAt": "2026-09-08T22:53:53Z",
+    "updatedAt": "2026-09-08T22:53:53Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文证明 $d\\ge 4、0<\\alpha <3$ 时带 Riesz 型幂律相互作用的 Vlasov 方程对任意非负紧支撑有界初值全局适定，吸引和排斥号均不需要小数据。局部理论由特征线和速度支撑控制$；\\alpha \\le 1$ 的易区间直接用近场/远场场估计$，1<\\alpha <3$ 的核心区间则把相空间密度沿 Lagrangian 流拉回，利用 divergence-controlled slab estimate 和 kinetic determinant bound 控制速度支撑增长。反设有限时失控时，分层预算和 tail amplification 给出矛盾；对吸引号 $\\alpha \\ge 3，virial$ identity 则产生负能量有限时 breakdown 障碍。",
+    "techniques": [
+      "characteristic flow",
+      "near–far Riesz estimates",
+      "Lagrangian coordinates",
+      "compensated integrability",
+      "velocity-tail amplification"
+    ],
+    "breakthrough": "在所有 $d\\ge 4$ 和 $0<\\alpha <3$ 中去掉小数据假设，统一获得吸引/排斥 Vlasov 的全局有界强解，并把 $\\alpha =3$ 识别为吸引号 virial 机制的临界障碍。",
+    "limitations": "初值要求非负、紧支撑且有界，模型为无外场全空间幂律相互作用；全局范围依赖 $d\\ge 4$ 和 $\\alpha <3$，不能据此覆盖低维、非紧支撑重尾或临界 $\\alpha =3$ 的一般初值。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "局部有界强解存在，且只要速度支撑不在有限时间发散就能延拓。",
+          "route": "特征方程的场由紧支撑密度的近场/远场积分控制，Picard 迭代给出局部双 Lipschitz 流；沿特征保持 f 的 $L\\infty $ 和非负性，速度支撑是唯一可能的延拓障碍。",
+          "evidence": "PDF 第 5-8 页 Section 2 Theorem 2.2、Corollary 2.3，equations (2.1)–(2.18)。"
+        },
+        {
+          "claim": "$\\alpha \\le 1$ 时近场/远场 Riesz 估计直接给出全局速度支撑界。",
+          "route": "把场积分在 $|x-y|\\le 1$ 与远区分开，近区用密度 $L\\infty $、远区用质量和幂次衰减；特征加速度至多按可积时间增长，代入速度支撑微分不等式并 Grönwall，排除有限时支撑爆炸。",
+          "evidence": "PDF 第 8-11 页 Section 3 Lemma 3.1、Proposition 3.2，equations (3.1)–(3.18)。"
+        },
+        {
+          "claim": "$1<\\alpha <3$ 时，divergence-controlled slab 与 kinetic determinant bound 控制 Lagrangian 速度增量。",
+          "route": "在任意解 slab 上把相空间流映射的速度 Jacobian 与 divergence 约束组合，Theorem 5.1 给 slab 积分不等式；Lemma 5.2 控制速度方向的动能行列式，Proposition 5.3 将其转为单条 Lagrangian characteristic 的增长预算。",
+          "evidence": "PDF 第 12-17 页 Sections 5–6 Theorem 5.1、Lemma 5.2、Proposition 5.3，equations (5.1)–(6.18)。"
+        },
+        {
+          "claim": "分阶段预算和尾部放大排除有限时速度支撑发散，得到全局解$；\\alpha \\ge 3$ 的吸引号受 virial obstruction 限制。",
+          "route": "先用第一预算把大部分特征限制在可控速度层，再以 tail amplification 递推剩余层的质量/动能衰减，若 T*有限则得到与定义的最大速度层矛盾；反向对比，吸引号的 virial 二阶矩在负能量条件下严格向下弯曲，于 $\\alpha \\ge 3$ 可在有限时间失控。",
+          "evidence": "PDF 第 18-22 页 Sections 6–8 Propositions 6.1、7.1、Corollary 7.2、Theorem 1.3，equations (6.1)–(8.22)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、Sections 1–8、特征线/virial/compensated-integrability 证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-22 页全文。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09512:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09512",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global well-posedness for Vlasov equations with power-law interactions in $d\\ge4$",
+        "authors": [
+          "Emmanouil Katriadakis"
+        ],
+        "abstract": "We study the Vlasov equation with general power-law (Riesz-type) potentials with exponent \\(α\\). We prove global well-posedness in every dimension \\(d\\ge4\\), for both attractive and repulsive interactions, throughout the range \\(0<α<3\\), for arbitrary nonnegative compactly supported bounded initial data. No smallness condition is imposed on the initial data. For the attractive problem, the virial identity gives finite-time breakdown for negative-energy solutions when \\(α\\ge3\\). The proof of global well-posedness combines the analysis of characteristics, estimates in Lagrangian coordinates, and a crucial application of a \\emph{compensated integrability} inequality due to Denis Serre.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09512",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09512",
+        "submittedAt": "2026-09-08T22:53:53Z",
+        "updatedAt": "2026-09-08T22:53:53Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文证明 $d\\ge 4、0<\\alpha <3$ 时带 Riesz 型幂律相互作用的 Vlasov 方程对任意非负紧支撑有界初值全局适定，吸引和排斥号均不需要小数据。局部理论由特征线和速度支撑控制$；\\alpha \\le 1$ 的易区间直接用近场/远场场估计$，1<\\alpha <3$ 的核心区间则把相空间密度沿 Lagrangian 流拉回，利用 divergence-controlled slab estimate 和 kinetic determinant bound 控制速度支撑增长。反设有限时失控时，分层预算和 tail amplification 给出矛盾；对吸引号 $\\alpha \\ge 3，virial$ identity 则产生负能量有限时 breakdown 障碍。",
+        "techniques": [
+          "characteristic flow",
+          "near–far Riesz estimates",
+          "Lagrangian coordinates",
+          "compensated integrability",
+          "velocity-tail amplification"
+        ],
+        "breakthrough": "在所有 $d\\ge 4$ 和 $0<\\alpha <3$ 中去掉小数据假设，统一获得吸引/排斥 Vlasov 的全局有界强解，并把 $\\alpha =3$ 识别为吸引号 virial 机制的临界障碍。",
+        "limitations": "初值要求非负、紧支撑且有界，模型为无外场全空间幂律相互作用；全局范围依赖 $d\\ge 4$ 和 $\\alpha <3$，不能据此覆盖低维、非紧支撑重尾或临界 $\\alpha =3$ 的一般初值。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "局部有界强解存在，且只要速度支撑不在有限时间发散就能延拓。",
+              "route": "特征方程的场由紧支撑密度的近场/远场积分控制，Picard 迭代给出局部双 Lipschitz 流；沿特征保持 f 的 $L\\infty $ 和非负性，速度支撑是唯一可能的延拓障碍。",
+              "evidence": "PDF 第 5-8 页 Section 2 Theorem 2.2、Corollary 2.3，equations (2.1)–(2.18)。"
+            },
+            {
+              "claim": "$\\alpha \\le 1$ 时近场/远场 Riesz 估计直接给出全局速度支撑界。",
+              "route": "把场积分在 $|x-y|\\le 1$ 与远区分开，近区用密度 $L\\infty $、远区用质量和幂次衰减；特征加速度至多按可积时间增长，代入速度支撑微分不等式并 Grönwall，排除有限时支撑爆炸。",
+              "evidence": "PDF 第 8-11 页 Section 3 Lemma 3.1、Proposition 3.2，equations (3.1)–(3.18)。"
+            },
+            {
+              "claim": "$1<\\alpha <3$ 时，divergence-controlled slab 与 kinetic determinant bound 控制 Lagrangian 速度增量。",
+              "route": "在任意解 slab 上把相空间流映射的速度 Jacobian 与 divergence 约束组合，Theorem 5.1 给 slab 积分不等式；Lemma 5.2 控制速度方向的动能行列式，Proposition 5.3 将其转为单条 Lagrangian characteristic 的增长预算。",
+              "evidence": "PDF 第 12-17 页 Sections 5–6 Theorem 5.1、Lemma 5.2、Proposition 5.3，equations (5.1)–(6.18)。"
+            },
+            {
+              "claim": "分阶段预算和尾部放大排除有限时速度支撑发散，得到全局解$；\\alpha \\ge 3$ 的吸引号受 virial obstruction 限制。",
+              "route": "先用第一预算把大部分特征限制在可控速度层，再以 tail amplification 递推剩余层的质量/动能衰减，若 T*有限则得到与定义的最大速度层矛盾；反向对比，吸引号的 virial 二阶矩在负能量条件下严格向下弯曲，于 $\\alpha \\ge 3$ 可在有限时间失控。",
+              "evidence": "PDF 第 18-22 页 Sections 6–8 Propositions 6.1、7.1、Corollary 7.2、Theorem 1.3，equations (6.1)–(8.22)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、Sections 1–8、特征线/virial/compensated-integrability 证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-22 页全文。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

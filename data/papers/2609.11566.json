@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11566",
+  "slug": "2609.11566",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11566:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11566",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Diffeomorphism Invariance of the Favre-Filtered Compressible Navier--Stokes System under Spacetime Dilation",
+    "authors": [
+      "Yuanya Li"
+    ],
+    "abstract": "We prove that the system of Favre-filtered compressible Navier--Stokes equations with subgrid-scale closure terms, written in the coordinates $(Lt,Lx_1,Lx_2,Lx_3)$ for an arbitrary parameter $L>0$, is obtained from the system written in standard coordinates $(t,x_1,x_2,x_3)$ by the action of a smooth diffeomorphism of the underlying spacetime manifold. The proof begins with a self-contained treatment of infinite-dimensional manifolds and the Fr\\'echet manifold of smooth field configurations. We then define the one-parameter dilation group $\\{\\phi_L\\}_{L>0}$, verify that each $\\phi_L$ is a diffeomorphism, and compute its tangent and cotangent actions. The induced pullback action on sections of the configuration bundle is shown to commute with the total derivative operator, which implies that the first-jet prolongation of $\\phi_L$ maps the equation submanifold of the system onto itself. Equation-by-equation verification---continuity, momentum, and energy---confirms that every residual is multiplied by the common nonzero factor $L^{-1}$ (or, equivalently, is identically zero in the transformed coordinates), so that the solution set is preserved. We conclude that the family of systems parameterised by $L>0$ satisfies the diffeomorphism transformation expression and that solution spaces are canonically isomorphic for all $L$.",
+    "categories": [
+      "math.AP",
+      "math-ph"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11566",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11566",
+    "submittedAt": "2026-09-10T13:59:41Z",
+    "updatedAt": "2026-09-10T13:59:41Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "不变性",
+    "workSummary": "论文在 Frechet 场配置流形上定义时空 dilation $ϕ_L:(t,x)\\mapsto (Lt,Lx)$，计算其切丛、余切丛和一阶 jet prolongation；随后逐项验证 Favre-filtered 压缩 Navier–Stokes 的连续性、动量和能量残差均按同一 $L^{-1}$ 因子变换，证明各 L 系统解空间典范同构。",
+    "techniques": [
+      "Frechet 流形",
+      "jet prolongation",
+      "pullback",
+      "Lie 导数",
+      "守恒律残差协变性"
+    ],
+    "breakthrough": "把含亚格子闭合项的 Favre-filtered 可压缩系统完整纳入时空微分同胚不变性框架。",
+    "limitations": "结果是形式协变性，不提供滤波闭合的物理标定或解的存在正则性；依赖平滑场配置和所选 dilation。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 2.2 和 Theorem 2.5 建立 dilation $ϕ_L$ 的微分同胚与一参数群结构。",
+          "route": "直接计算 $ϕ_L$ 的 Jacobian、逆映射和复合律，Volume form 按 $L^4$ 缩放；无穷小生成元由 d/d(log L) 在 $L=1$ 处取值得到。",
+          "evidence": "PDF 第 4–5 页，Theorem 2.2、Theorem 2.5。"
+        },
+        {
+          "claim": "Proposition 3.7 的一阶 jet prolongation 与总导数交换。",
+          "route": "先对 pullback section 使用 Lemma 3.4 的链式法则，再把导数矩阵乘以 dilation Jacobian；因此一阶 jet 上的 transformed derivative 正好是原 derivative 的坐标变换。",
+          "evidence": "PDF 第 6–7 页，Lemma 3.4、Proposition 3.7。"
+        },
+        {
+          "claim": "Theorem 4.7、Theorem 4.9 证明连续性、动量和能量残差的共同协变因子。",
+          "route": "逐式代入 pullback 后的密度、速度、压力与亚格子源项，链式法则使时间/空间导数各贡献 $L^{-1}$；三条残差都获得同一个非零因子，源项扩展后仍保持等式零集。",
+          "evidence": "PDF 第 7–12 页，Theorems 4.7、4.9。"
+        },
+        {
+          "claim": "Theorem 5.1 给出所有 L>0 系统解空间的典范同构。",
+          "route": "由前述残差零集保持性$，ϕ_L$ 的 pullback 将标准坐标解送到 (Lt,Lx) 解；逆 dilation 给出逆映射，故解空间而非单个公式保持不变。",
+          "evidence": "PDF 第 12–13 页，Theorem 5.1、Corollary 5.2。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 72,
+    "priorityTier": "medium",
+    "priorityReason": "该文是严格的微分几何坐标变换证明，主题直接但理论复用性中等。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11566:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11566",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Diffeomorphism Invariance of the Favre-Filtered Compressible Navier--Stokes System under Spacetime Dilation",
+        "authors": [
+          "Yuanya Li"
+        ],
+        "abstract": "We prove that the system of Favre-filtered compressible Navier--Stokes equations with subgrid-scale closure terms, written in the coordinates $(Lt,Lx_1,Lx_2,Lx_3)$ for an arbitrary parameter $L>0$, is obtained from the system written in standard coordinates $(t,x_1,x_2,x_3)$ by the action of a smooth diffeomorphism of the underlying spacetime manifold. The proof begins with a self-contained treatment of infinite-dimensional manifolds and the Fr\\'echet manifold of smooth field configurations. We then define the one-parameter dilation group $\\{\\phi_L\\}_{L>0}$, verify that each $\\phi_L$ is a diffeomorphism, and compute its tangent and cotangent actions. The induced pullback action on sections of the configuration bundle is shown to commute with the total derivative operator, which implies that the first-jet prolongation of $\\phi_L$ maps the equation submanifold of the system onto itself. Equation-by-equation verification---continuity, momentum, and energy---confirms that every residual is multiplied by the common nonzero factor $L^{-1}$ (or, equivalently, is identically zero in the transformed coordinates), so that the solution set is preserved. We conclude that the family of systems parameterised by $L>0$ satisfies the diffeomorphism transformation expression and that solution spaces are canonically isomorphic for all $L$.",
+        "categories": [
+          "math.AP",
+          "math-ph"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11566",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11566",
+        "submittedAt": "2026-09-10T13:59:41Z",
+        "updatedAt": "2026-09-10T13:59:41Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "不变性",
+        "workSummary": "论文在 Frechet 场配置流形上定义时空 dilation $ϕ_L:(t,x)\\mapsto (Lt,Lx)$，计算其切丛、余切丛和一阶 jet prolongation；随后逐项验证 Favre-filtered 压缩 Navier–Stokes 的连续性、动量和能量残差均按同一 $L^{-1}$ 因子变换，证明各 L 系统解空间典范同构。",
+        "techniques": [
+          "Frechet 流形",
+          "jet prolongation",
+          "pullback",
+          "Lie 导数",
+          "守恒律残差协变性"
+        ],
+        "breakthrough": "把含亚格子闭合项的 Favre-filtered 可压缩系统完整纳入时空微分同胚不变性框架。",
+        "limitations": "结果是形式协变性，不提供滤波闭合的物理标定或解的存在正则性；依赖平滑场配置和所选 dilation。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 2.2 和 Theorem 2.5 建立 dilation $ϕ_L$ 的微分同胚与一参数群结构。",
+              "route": "直接计算 $ϕ_L$ 的 Jacobian、逆映射和复合律，Volume form 按 $L^4$ 缩放；无穷小生成元由 d/d(log L) 在 $L=1$ 处取值得到。",
+              "evidence": "PDF 第 4–5 页，Theorem 2.2、Theorem 2.5。"
+            },
+            {
+              "claim": "Proposition 3.7 的一阶 jet prolongation 与总导数交换。",
+              "route": "先对 pullback section 使用 Lemma 3.4 的链式法则，再把导数矩阵乘以 dilation Jacobian；因此一阶 jet 上的 transformed derivative 正好是原 derivative 的坐标变换。",
+              "evidence": "PDF 第 6–7 页，Lemma 3.4、Proposition 3.7。"
+            },
+            {
+              "claim": "Theorem 4.7、Theorem 4.9 证明连续性、动量和能量残差的共同协变因子。",
+              "route": "逐式代入 pullback 后的密度、速度、压力与亚格子源项，链式法则使时间/空间导数各贡献 $L^{-1}$；三条残差都获得同一个非零因子，源项扩展后仍保持等式零集。",
+              "evidence": "PDF 第 7–12 页，Theorems 4.7、4.9。"
+            },
+            {
+              "claim": "Theorem 5.1 给出所有 L>0 系统解空间的典范同构。",
+              "route": "由前述残差零集保持性$，ϕ_L$ 的 pullback 将标准坐标解送到 (Lt,Lx) 解；逆 dilation 给出逆映射，故解空间而非单个公式保持不变。",
+              "evidence": "PDF 第 12–13 页，Theorem 5.1、Corollary 5.2。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 72,
+        "priorityTier": "medium",
+        "priorityReason": "该文是严格的微分几何坐标变换证明，主题直接但理论复用性中等。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

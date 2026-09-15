@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05193",
+  "slug": "2609.05193",
+  "latest": {
+    "id": "math.AP:2026-09-07:2609.05193:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-07",
+    "arxivId": "2609.05193",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global well-posedness of the 3D Navier-Stokes equations with helical $L^1$ vorticity",
+    "authors": [
+      "Francisco Gancedo",
+      "Antonio Hidalgo-Torné"
+    ],
+    "abstract": "We show that the Navier-Stokes equations on $\\mathbb R^2\\times\\mathbb T$ are globally well posed for initial vorticities that are both helically symmetric and integrable. This class of data typically generates velocity fields of infinite kinetic energy, so this result is not covered by the classical finite-energy well-posedness theory. This result is supercritical from the perspective of the three-dimensional Navier-Stokes scaling, and it is made possible by the special structure of helical flows using time-weighted Kato-type spaces.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05193",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05193",
+    "submittedAt": "2026-09-04T14:27:06Z",
+    "updatedAt": "2026-09-04T14:27:06Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "存在性",
+    "workSummary": "证明带 helical L1 涡量的 $R2\\times T$ 三维 Navier--Stokes 全局适定：先利用螺旋对称把速度表示为标量流函数和轴向分量，再用 L1 到 Lp 的 Biot--Savart 估计构造局部 mild 解，最后通过涡量控制和重启延拓到全局。",
+    "techniques": [
+      "螺旋对称约化",
+      "Biot--Savart/Riesz 估计",
+      "热半群",
+      "固定点",
+      "L1 涡量全局控制"
+    ],
+    "breakthrough": "在螺旋对称下把三维涡量的关键非线性压缩到可控的二维结构，允许仅 L1 初始涡量并获得全局强解。",
+    "limitations": "螺旋对称$、R2\\times T$ 几何和无散约束不可去除；全局性依赖初值 L1 与文中对称结构，不覆盖一般三维 Navier--Stokes。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "螺旋对称场的速度和涡量可由标量分量表示。",
+          "route": "在柱坐标/螺旋坐标中展开不变性条件，将 divergence-free 约束转成流函数关系；Biot--Savart 表示给出速度由涡量的积分控制。",
+          "evidence": "第 2 节 Lemmas 2.1--2.10、Proposition 2.12（PDF 第 4--9 页）。"
+        },
+        {
+          "claim": "线性热-输运方程给出 L1 到 Lp 的短时平滑估计。",
+          "route": "对约化涡量方程使用热半群和 Duhamel 公式，利用 Riesz 变换有界性控制非局部速度项，得到 $t-\\alpha $ 的 Lp 界。",
+          "evidence": "第 3 节 Theorem 3.1（PDF 第 7--11 页）。"
+        },
+        {
+          "claim": "固定点方法构造唯一局部 mild 解并给出连续依赖。",
+          "route": "在时间加权 Lp 空间中定义双线性演化映射，Proposition 2.12 控制二次项；差值估计使映射收缩，得到 Theorem 3.2 和 Corollary 3.4。",
+          "evidence": "第 3 节 Theorem 3.2、Corollary 3.4（PDF 第 7--10 页）。"
+        },
+        {
+          "claim": "涡量 L1 控制排除有限时间爆破并延拓解。",
+          "route": "利用涡量符号/螺旋结构和局部能量估计获得时间一致的 L1 界；在任意有限时刻重启局部构造，Theorem 3.5 的 continuation criterion 给出全局解和唯一性。",
+          "evidence": "第 3 节 Theorem 3.5、Theorem 1.1（PDF 第 10--19 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--19 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-07",
+      "report": {
+        "id": "math.AP:2026-09-07:2609.05193:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-07",
+        "arxivId": "2609.05193",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global well-posedness of the 3D Navier-Stokes equations with helical $L^1$ vorticity",
+        "authors": [
+          "Francisco Gancedo",
+          "Antonio Hidalgo-Torné"
+        ],
+        "abstract": "We show that the Navier-Stokes equations on $\\mathbb R^2\\times\\mathbb T$ are globally well posed for initial vorticities that are both helically symmetric and integrable. This class of data typically generates velocity fields of infinite kinetic energy, so this result is not covered by the classical finite-energy well-posedness theory. This result is supercritical from the perspective of the three-dimensional Navier-Stokes scaling, and it is made possible by the special structure of helical flows using time-weighted Kato-type spaces.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05193",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05193",
+        "submittedAt": "2026-09-04T14:27:06Z",
+        "updatedAt": "2026-09-04T14:27:06Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "存在性",
+        "workSummary": "证明带 helical L1 涡量的 $R2\\times T$ 三维 Navier--Stokes 全局适定：先利用螺旋对称把速度表示为标量流函数和轴向分量，再用 L1 到 Lp 的 Biot--Savart 估计构造局部 mild 解，最后通过涡量控制和重启延拓到全局。",
+        "techniques": [
+          "螺旋对称约化",
+          "Biot--Savart/Riesz 估计",
+          "热半群",
+          "固定点",
+          "L1 涡量全局控制"
+        ],
+        "breakthrough": "在螺旋对称下把三维涡量的关键非线性压缩到可控的二维结构，允许仅 L1 初始涡量并获得全局强解。",
+        "limitations": "螺旋对称$、R2\\times T$ 几何和无散约束不可去除；全局性依赖初值 L1 与文中对称结构，不覆盖一般三维 Navier--Stokes。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "螺旋对称场的速度和涡量可由标量分量表示。",
+              "route": "在柱坐标/螺旋坐标中展开不变性条件，将 divergence-free 约束转成流函数关系；Biot--Savart 表示给出速度由涡量的积分控制。",
+              "evidence": "第 2 节 Lemmas 2.1--2.10、Proposition 2.12（PDF 第 4--9 页）。"
+            },
+            {
+              "claim": "线性热-输运方程给出 L1 到 Lp 的短时平滑估计。",
+              "route": "对约化涡量方程使用热半群和 Duhamel 公式，利用 Riesz 变换有界性控制非局部速度项，得到 $t-\\alpha $ 的 Lp 界。",
+              "evidence": "第 3 节 Theorem 3.1（PDF 第 7--11 页）。"
+            },
+            {
+              "claim": "固定点方法构造唯一局部 mild 解并给出连续依赖。",
+              "route": "在时间加权 Lp 空间中定义双线性演化映射，Proposition 2.12 控制二次项；差值估计使映射收缩，得到 Theorem 3.2 和 Corollary 3.4。",
+              "evidence": "第 3 节 Theorem 3.2、Corollary 3.4（PDF 第 7--10 页）。"
+            },
+            {
+              "claim": "涡量 L1 控制排除有限时间爆破并延拓解。",
+              "route": "利用涡量符号/螺旋结构和局部能量估计获得时间一致的 L1 界；在任意有限时刻重启局部构造，Theorem 3.5 的 continuation criterion 给出全局解和唯一性。",
+              "evidence": "第 3 节 Theorem 3.5、Theorem 1.1（PDF 第 10--19 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--19 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

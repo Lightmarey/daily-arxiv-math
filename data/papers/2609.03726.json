@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03726",
+  "slug": "2609.03726",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03726:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03726",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Inverse Scattering for Single Photons in Quantum Optics",
+    "authors": [
+      "Giovanni Covi",
+      "Matti Lassas",
+      "Medet Nursultanov",
+      "Lauri Oksanen",
+      "Mikko Salo",
+      "John C. Schotland"
+    ],
+    "abstract": "We study inverse problems for a time-harmonic one-photon model describing the interaction of a single photon with a medium of stationary two-level atoms. After time-harmonic reduction, the unknown compactly supported atomic density appears as a frequency-dependent potential in a scattering equation for the half Laplacian. We prove high-frequency uniqueness results for three types of intensity data: source-driven measurements, renormalized far-field intensity measurements, and phaseless far-field measurements obtained from coherent superpositions of incident plane waves. In each case, the corresponding data, given at all sufficiently large frequencies, determine the atomic density uniquely; the source-driven result requires a geometric visibility condition on the source and observation sets.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03726",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03726",
+    "submittedAt": "2026-09-03T11:57:36Z",
+    "updatedAt": "2026-09-03T11:57:36Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "唯一性",
+    "workSummary": "研究单光子量子光学中的逆散射：先把源到解数据和远场强度写成散射振幅，建立 Born/高频展开及衰减估计，再证明散射数据唯一恢复介质密度，并讨论无相位叠加数据。",
+    "techniques": [
+      "单光子散射模型",
+      "Lippmann--Schwinger 方程",
+      "高频 resolvent 估计",
+      "散射振幅",
+      "逆唯一性"
+    ],
+    "breakthrough": "证明不同类型的单光子观测数据（源到解、重整化远场强度及无相位叠加）足以恢复介质密度，为量子光学逆问题提供从可测量量到介质参数的多种唯一性通道。",
+    "limitations": "介质需紧支撑、正则性和小/高频条件满足文中假设；无相位结果依赖特定叠加实验设置，不等同于任意 phaseless 数据的唯一性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "单光子散射问题可通过 resolvent 和散射解表示。",
+          "route": "将量子光学耦合消去为带介质势的 Helmholtz/Schrödinger 型方程，构造 outgoing resolvent，并用加权 L2 估计控制散射解。",
+          "evidence": "第 2 节 Theorems 2.3--2.5（PDF 第 7--9 页）。"
+        },
+        {
+          "claim": "高频散射振幅的首项编码介质密度的 Fourier 变换。",
+          "route": "对 resolvent 迭代展开，使用核函数的远场渐近和紧支撑，使首项成为密度的 Fourier 模式，余项由 k 的负幂估计控制。",
+          "evidence": "第 3 节 Lemmas 3.2--3.7（PDF 第 11--17 页）。"
+        },
+        {
+          "claim": "源到解和重整化远场强度数据可以唯一决定密度。",
+          "route": "先从源到解数据恢复散射算子，再从远场强度的高频首项恢复密度 Fourier 变换；紧支撑下 Fourier 反演给出全局唯一性。",
+          "evidence": "第 2 节 Theorems 2.3--2.4（PDF 第 7--8 页）与第 4 节 Theorem 4.4（PDF 第 18--22 页）。"
+        },
+        {
+          "claim": "无相位叠加观测也能通过极化恒等式恢复交叉散射信息。",
+          "route": "使用不同源/参考场的 phaseless superposition，取强度差构造交叉项，结合上一唯一性链恢复散射振幅，最终反演介质密度。",
+          "evidence": "第 2 节 Theorem 2.5（PDF 第 8--9 页）与第 5 节 Proposition 5.1、Corollary 5.2（PDF 第 25--31 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确说明在研究准备期间使用 Claude 和 ChatGPT 简化并核验少量计算、改善写作清晰度和可读性，并声明作者审阅核验 AI 辅助内容。",
+    "aiEvidenceSource": "PDF 第 35 页 Declaration of generative AI use（文本行约 2128--2132）。",
+    "priorityScore": 80,
+    "priorityTier": "high",
+    "priorityReason": "问题连接半拉普拉斯非局部算子、无相位观测与高频唯一性，观测模型和几何条件对逆问题分析具有较强复用价值。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03726:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03726",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Inverse Scattering for Single Photons in Quantum Optics",
+        "authors": [
+          "Giovanni Covi",
+          "Matti Lassas",
+          "Medet Nursultanov",
+          "Lauri Oksanen",
+          "Mikko Salo",
+          "John C. Schotland"
+        ],
+        "abstract": "We study inverse problems for a time-harmonic one-photon model describing the interaction of a single photon with a medium of stationary two-level atoms. After time-harmonic reduction, the unknown compactly supported atomic density appears as a frequency-dependent potential in a scattering equation for the half Laplacian. We prove high-frequency uniqueness results for three types of intensity data: source-driven measurements, renormalized far-field intensity measurements, and phaseless far-field measurements obtained from coherent superpositions of incident plane waves. In each case, the corresponding data, given at all sufficiently large frequencies, determine the atomic density uniquely; the source-driven result requires a geometric visibility condition on the source and observation sets.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03726",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03726",
+        "submittedAt": "2026-09-03T11:57:36Z",
+        "updatedAt": "2026-09-03T11:57:36Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "唯一性",
+        "workSummary": "研究单光子量子光学中的逆散射：先把源到解数据和远场强度写成散射振幅，建立 Born/高频展开及衰减估计，再证明散射数据唯一恢复介质密度，并讨论无相位叠加数据。",
+        "techniques": [
+          "单光子散射模型",
+          "Lippmann--Schwinger 方程",
+          "高频 resolvent 估计",
+          "散射振幅",
+          "逆唯一性"
+        ],
+        "breakthrough": "证明不同类型的单光子观测数据（源到解、重整化远场强度及无相位叠加）足以恢复介质密度，为量子光学逆问题提供从可测量量到介质参数的多种唯一性通道。",
+        "limitations": "介质需紧支撑、正则性和小/高频条件满足文中假设；无相位结果依赖特定叠加实验设置，不等同于任意 phaseless 数据的唯一性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "单光子散射问题可通过 resolvent 和散射解表示。",
+              "route": "将量子光学耦合消去为带介质势的 Helmholtz/Schrödinger 型方程，构造 outgoing resolvent，并用加权 L2 估计控制散射解。",
+              "evidence": "第 2 节 Theorems 2.3--2.5（PDF 第 7--9 页）。"
+            },
+            {
+              "claim": "高频散射振幅的首项编码介质密度的 Fourier 变换。",
+              "route": "对 resolvent 迭代展开，使用核函数的远场渐近和紧支撑，使首项成为密度的 Fourier 模式，余项由 k 的负幂估计控制。",
+              "evidence": "第 3 节 Lemmas 3.2--3.7（PDF 第 11--17 页）。"
+            },
+            {
+              "claim": "源到解和重整化远场强度数据可以唯一决定密度。",
+              "route": "先从源到解数据恢复散射算子，再从远场强度的高频首项恢复密度 Fourier 变换；紧支撑下 Fourier 反演给出全局唯一性。",
+              "evidence": "第 2 节 Theorems 2.3--2.4（PDF 第 7--8 页）与第 4 节 Theorem 4.4（PDF 第 18--22 页）。"
+            },
+            {
+              "claim": "无相位叠加观测也能通过极化恒等式恢复交叉散射信息。",
+              "route": "使用不同源/参考场的 phaseless superposition，取强度差构造交叉项，结合上一唯一性链恢复散射振幅，最终反演介质密度。",
+              "evidence": "第 2 节 Theorem 2.5（PDF 第 8--9 页）与第 5 节 Proposition 5.1、Corollary 5.2（PDF 第 25--31 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确说明在研究准备期间使用 Claude 和 ChatGPT 简化并核验少量计算、改善写作清晰度和可读性，并声明作者审阅核验 AI 辅助内容。",
+        "aiEvidenceSource": "PDF 第 35 页 Declaration of generative AI use（文本行约 2128--2132）。",
+        "priorityScore": 80,
+        "priorityTier": "high",
+        "priorityReason": "问题连接半拉普拉斯非局部算子、无相位观测与高频唯一性，观测模型和几何条件对逆问题分析具有较强复用价值。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

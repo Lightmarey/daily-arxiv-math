@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06817",
+  "slug": "2609.06817",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06817:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06817",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Sharp Hessian integrability for fully nonlinear elliptic supersolutions in low dimensions",
+    "authors": [
+      "Thialita M. Nascimento",
+      "Eduardo V. Teixeira"
+    ],
+    "abstract": "We settle the planar sharp Hessian-integrability conjecture of Armstrong, Silvestre, and Smart [\\emph{Comm. Pure Appl. Math.} \\textbf{65} (2012), 1169--1184] for viscosity supersolutions of fully nonlinear uniformly elliptic equations. If $κ=Λ/λ$, then the optimal exponent in the $W^{2,ε}$ regularity theory in the plane is exactly $$ ε_2(κ)=\\frac{2}{κ+1}. $$ The same mechanism reaches the known upper obstruction in dimension three throughout the full range $1\\le κ\\le 4$ and therefore gives $$ ε_3(κ)=\\frac{3}{2κ+1} \\qquad(1\\leκ\\le4). $$ Beyond this threshold, it yields a closed algebraic lower bound and identifies the precise spectral configuration responsible for the remaining gap. The proof introduces a spectrally resolved continuum-in-opening mechanism for contact geometry. Throughout the contact evolution, the vertex Jacobian retains the negative index of the Hessian and its mean negative curvature---data erased by the classical pointwise reduction---and these variables are optimized only after integration over all openings. This reduces the analysis to a finite family of explicit one-dimensional kernels whose critical exponents recover the sharp planar threshold, identify the exact three-dimensional regime above, and expose a broader principle for extracting second-order regularity from the spectral geometry of contact sets.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06817",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06817",
+    "submittedAt": "2026-09-06T20:19:50Z",
+    "updatedAt": "2026-09-06T20:19:50Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "论文研究一致椭圆全非线性方程黏性次解的 Hessian 可积性指数 $\\epsilon _n(\\kappa )$，其中 $\\kappa =\\Lambda /\\lambda $ 是椭圆率。正文先在第 2 节用凹帽定位和 inf-convolution 把连续黏性次解约化为半凹对象，再在第 3–4 节追踪抛物面接触的顶点 Jacobian、负特征值个数与平均负曲率，最后第 5 节计算平面和三维阈值、第 6 节比较一般维度的显式核。结果是 $\\epsilon _2(\\kappa )=2/(\\kappa +1)$，且 $1\\le \\kappa \\le 4$ 时 $\\epsilon _3(\\kappa )=3/(2\\kappa +1)$，一般维度给出由一维积分方程确定的下界。",
+    "techniques": [
+      "Pucci 极值算子与黏性解",
+      "凹帽定位和 inf-convolution",
+      "抛物面接触的面积公式",
+      "Hessian 负谱分层",
+      "开口变量积分与一维核分析"
+    ],
+    "breakthrough": "关键新结论是把接触过程中的负指标和平均负曲率保留到对所有开口积分之后，因此在二维得到与径向障碍相匹配的精确指数，并在三维 $\\kappa \\le 4$ 时闭合原先只知道上界的谱分支$；\\kappa >4$ 时还明确了剩余间隙来自哪一种负谱配置。",
+    "limitations": "结果针对 Pucci 极值不等式控制的统一椭圆黏性次解，常数依赖维数、椭圆率和取用的 $p<\\epsilon _n(\\kappa )$；三维 $\\kappa >4$ 仍只有上下界，一般维度的指数由显式代数积分条件给出而未宣称处处锐。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "对 B1 中满足 $M^-_{\\lambda ,\\Lambda }(D^{2}u)\\le 0$ 的连续次解，凹帽定位后可把 B1/2 的开口函数 $\\Theta (u,B1)$ 转移到紧内区域。",
+          "route": "先作正的仿射归一化，在 B1 外接上凹抛物帽并取两个次解的最小值；凹帽把所有大开口接触限制在内部，从而后续面积公式没有边界漏项。",
+          "evidence": "Section 2.2 Lemma 2.3（PDF 第 7 页）；该引理的(1)–(4)分别给出定位、紧包含和 $\\Theta $ 的比较。"
+        },
+        {
+          "claim": "inf-convolution $u_j$ 在膨胀球 $B_{R_j}$ 上仍是黏性次解，且 $\\Theta (u,B1)\\le liminf_j$ $\\Theta (u_j,B_{R_j})$。",
+          "route": "定义 $u_j(x)=inf_y[u(y)+j|x-y|^{2}]$，由极小点距离界得到 $R_j↑1$；下接触抛物面可转移回 u，均匀收敛后对支撑抛物面取极限，保留下开口的下极限不等式。",
+          "evidence": "Section 2.3 Lemma 2.4（PDF 第 8–9 页），尤其公式(2.6)–(2.8)及结论(2.7)。"
+        },
+        {
+          "claim": "固定负特征值指标 r 的新接触集合满足含平均负曲率 s 的精确顶点 Jacobian 不等式。",
+          "route": "把开口 a 到 b 的接触演化改写为 $U_a=u+a|x|^{2}/2$，并对新接触顶点映射求微分；Alexandrov 二阶可微点的 Hessian 按 r 个负特征值分层，面积公式给出含 $P_{n,r,\\kappa }(z)$ 的积分核。",
+          "evidence": "Section 3 Proposition 3.1（PDF 第 10–12 页）；公式(3.3)–(3.6)定义 r、s 并给出谱分层 Jacobian。"
+        },
+        {
+          "claim": "对所有开口积分后，任意 $p<p_n(\\kappa )$ 有 $∫_{B1/2}\\Theta (u,B1)^p\\le C||u||\\infty ^p$，并在二维、三维给出所述锐阈值。",
+          "route": "在 Section 4 对开口变量使用终端截断，把各 r 分支的核积分化为 $∫_0^1$ $z^{-p}P_{n,r,\\kappa }(z)'dz$；选择使该积分为零的 $p_n(\\kappa )$ 后吸收接触层，Section 5 再逐项计算 $n=2$ 与 $n=3$ 的最小分支。",
+          "evidence": "Section 4 的连续开口积分（PDF 第 16–20 页）；Section 5 Theorem 1.1/1.2（PDF 第 22–24 页）；Section 6 Proposition 6.2（PDF 第 23 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查引言、证明、致谢和参考文献，并全文检索 AI、LLM、ChatGPT、artificial intelligence；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1–27 页全文；重点核查 Section 1.5 的结构说明、末页致谢和 References。",
+    "priorityScore": 93,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06817:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06817",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Sharp Hessian integrability for fully nonlinear elliptic supersolutions in low dimensions",
+        "authors": [
+          "Thialita M. Nascimento",
+          "Eduardo V. Teixeira"
+        ],
+        "abstract": "We settle the planar sharp Hessian-integrability conjecture of Armstrong, Silvestre, and Smart [\\emph{Comm. Pure Appl. Math.} \\textbf{65} (2012), 1169--1184] for viscosity supersolutions of fully nonlinear uniformly elliptic equations. If $κ=Λ/λ$, then the optimal exponent in the $W^{2,ε}$ regularity theory in the plane is exactly $$ ε_2(κ)=\\frac{2}{κ+1}. $$ The same mechanism reaches the known upper obstruction in dimension three throughout the full range $1\\le κ\\le 4$ and therefore gives $$ ε_3(κ)=\\frac{3}{2κ+1} \\qquad(1\\leκ\\le4). $$ Beyond this threshold, it yields a closed algebraic lower bound and identifies the precise spectral configuration responsible for the remaining gap. The proof introduces a spectrally resolved continuum-in-opening mechanism for contact geometry. Throughout the contact evolution, the vertex Jacobian retains the negative index of the Hessian and its mean negative curvature---data erased by the classical pointwise reduction---and these variables are optimized only after integration over all openings. This reduces the analysis to a finite family of explicit one-dimensional kernels whose critical exponents recover the sharp planar threshold, identify the exact three-dimensional regime above, and expose a broader principle for extracting second-order regularity from the spectral geometry of contact sets.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06817",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06817",
+        "submittedAt": "2026-09-06T20:19:50Z",
+        "updatedAt": "2026-09-06T20:19:50Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "论文研究一致椭圆全非线性方程黏性次解的 Hessian 可积性指数 $\\epsilon _n(\\kappa )$，其中 $\\kappa =\\Lambda /\\lambda $ 是椭圆率。正文先在第 2 节用凹帽定位和 inf-convolution 把连续黏性次解约化为半凹对象，再在第 3–4 节追踪抛物面接触的顶点 Jacobian、负特征值个数与平均负曲率，最后第 5 节计算平面和三维阈值、第 6 节比较一般维度的显式核。结果是 $\\epsilon _2(\\kappa )=2/(\\kappa +1)$，且 $1\\le \\kappa \\le 4$ 时 $\\epsilon _3(\\kappa )=3/(2\\kappa +1)$，一般维度给出由一维积分方程确定的下界。",
+        "techniques": [
+          "Pucci 极值算子与黏性解",
+          "凹帽定位和 inf-convolution",
+          "抛物面接触的面积公式",
+          "Hessian 负谱分层",
+          "开口变量积分与一维核分析"
+        ],
+        "breakthrough": "关键新结论是把接触过程中的负指标和平均负曲率保留到对所有开口积分之后，因此在二维得到与径向障碍相匹配的精确指数，并在三维 $\\kappa \\le 4$ 时闭合原先只知道上界的谱分支$；\\kappa >4$ 时还明确了剩余间隙来自哪一种负谱配置。",
+        "limitations": "结果针对 Pucci 极值不等式控制的统一椭圆黏性次解，常数依赖维数、椭圆率和取用的 $p<\\epsilon _n(\\kappa )$；三维 $\\kappa >4$ 仍只有上下界，一般维度的指数由显式代数积分条件给出而未宣称处处锐。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "对 B1 中满足 $M^-_{\\lambda ,\\Lambda }(D^{2}u)\\le 0$ 的连续次解，凹帽定位后可把 B1/2 的开口函数 $\\Theta (u,B1)$ 转移到紧内区域。",
+              "route": "先作正的仿射归一化，在 B1 外接上凹抛物帽并取两个次解的最小值；凹帽把所有大开口接触限制在内部，从而后续面积公式没有边界漏项。",
+              "evidence": "Section 2.2 Lemma 2.3（PDF 第 7 页）；该引理的(1)–(4)分别给出定位、紧包含和 $\\Theta $ 的比较。"
+            },
+            {
+              "claim": "inf-convolution $u_j$ 在膨胀球 $B_{R_j}$ 上仍是黏性次解，且 $\\Theta (u,B1)\\le liminf_j$ $\\Theta (u_j,B_{R_j})$。",
+              "route": "定义 $u_j(x)=inf_y[u(y)+j|x-y|^{2}]$，由极小点距离界得到 $R_j↑1$；下接触抛物面可转移回 u，均匀收敛后对支撑抛物面取极限，保留下开口的下极限不等式。",
+              "evidence": "Section 2.3 Lemma 2.4（PDF 第 8–9 页），尤其公式(2.6)–(2.8)及结论(2.7)。"
+            },
+            {
+              "claim": "固定负特征值指标 r 的新接触集合满足含平均负曲率 s 的精确顶点 Jacobian 不等式。",
+              "route": "把开口 a 到 b 的接触演化改写为 $U_a=u+a|x|^{2}/2$，并对新接触顶点映射求微分；Alexandrov 二阶可微点的 Hessian 按 r 个负特征值分层，面积公式给出含 $P_{n,r,\\kappa }(z)$ 的积分核。",
+              "evidence": "Section 3 Proposition 3.1（PDF 第 10–12 页）；公式(3.3)–(3.6)定义 r、s 并给出谱分层 Jacobian。"
+            },
+            {
+              "claim": "对所有开口积分后，任意 $p<p_n(\\kappa )$ 有 $∫_{B1/2}\\Theta (u,B1)^p\\le C||u||\\infty ^p$，并在二维、三维给出所述锐阈值。",
+              "route": "在 Section 4 对开口变量使用终端截断，把各 r 分支的核积分化为 $∫_0^1$ $z^{-p}P_{n,r,\\kappa }(z)'dz$；选择使该积分为零的 $p_n(\\kappa )$ 后吸收接触层，Section 5 再逐项计算 $n=2$ 与 $n=3$ 的最小分支。",
+              "evidence": "Section 4 的连续开口积分（PDF 第 16–20 页）；Section 5 Theorem 1.1/1.2（PDF 第 22–24 页）；Section 6 Proposition 6.2（PDF 第 23 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查引言、证明、致谢和参考文献，并全文检索 AI、LLM、ChatGPT、artificial intelligence；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1–27 页全文；重点核查 Section 1.5 的结构说明、末页致谢和 References。",
+        "priorityScore": 93,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

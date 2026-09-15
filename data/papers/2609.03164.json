@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03164",
+  "slug": "2609.03164",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03164:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03164",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Energy Decay Induced by Localized Coercivity in the 3D Navier--Stokes Equations",
+    "authors": [
+      "Amadou Cissé"
+    ],
+    "abstract": "Energy-based analysis of the three-dimensional incompressible Navier--Stokes equations with spatially localized dissipation is developed at the level of kinetic energy and Leray--Hopf weak solutions. A localized coercivity property linking viscosity and damping to global $L^2$ control is introduced and related to observability and spectral inequalities for the associated Stokes operator. Under this condition, exponential energy decay is established without regularity or linearization assumptions, and time-dependent damping is treated within a nonautonomous framework. A finite-dimensional spectral quantity is proposed as a computable proxy for coercivity, yielding explicit decay estimates for reduced-order models.",
+    "categories": [
+      "math.AP",
+      "math.OC"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03164",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03164",
+    "submittedAt": "2026-09-02T21:08:19Z",
+    "updatedAt": "2026-09-02T21:08:19Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "稳定性",
+    "workSummary": "研究三维 Navier--Stokes 在局部 coercivity 条件下的能量衰减：先从局部耗散权得到全局能量不等式，再构造演化族和离散 Galerkin 系统，证明连续与离散解的指数稳定性及调度鲁棒性。",
+    "techniques": [
+      "局部 coercivity",
+      "Leray--Hopf 能量不等式",
+      "演化族",
+      "Galerkin 离散",
+      "指数稳定性"
+    ],
+    "breakthrough": "将只在局部区域作用的耗散性编码成可传播的 coercivity 常数，并同时给出连续 PDE、有限维离散系统和时间调度下的统一指数衰减机制。",
+    "limitations": "需要文中局部权函数、域几何和正下界假设；离散结果依赖有限维截断，指数率不是无条件对所有控制策略成立。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "局部 coercivity 给出能量耗散项的正下界。",
+          "route": "将 Leray--Hopf 方程与局部权函数配对，利用 Poincare/局部观测不等式把局部梯度控制成全场能量，再将其代入能量不等式。",
+          "evidence": "第 2 节 Lemma 2.1、Proposition 2.2、Theorem 2.6（PDF 第 5--10 页）。"
+        },
+        {
+          "claim": "正下界使连续 Navier--Stokes 演化族具有一致耗散和指数衰减。",
+          "route": "对 Galerkin 逼近先建立生成性和 uniform dissipativity，再把时间依赖的局部 coercivity 常数压到 Kmin，积分微分不等式得到 evolution family 的指数界。",
+          "evidence": "第 3--4 节 Proposition 3.1、Proposition 3.4、Theorem 4.3（PDF 第 12--19 页）。"
+        },
+        {
+          "claim": "有限维离散系统继承 coercivity 和指数衰减。",
+          "route": "将局部权矩阵与质量/刚度矩阵写成对称半正定块，证明离散 coercivity 常数非负并在 Kmin>0 时给出离散能量递推。",
+          "evidence": "第 5 节 Lemma 5.1、Proposition 5.2、Proposition 5.4（PDF 第 21--25 页）。"
+        },
+        {
+          "claim": "局部耗散率在空间调度下保持鲁棒。",
+          "route": "比较不同调度产生的局部权和演化矩阵，利用最小 coercivity 单调性把每个时刻的耗散压到同一 Kmin，故指数率对 admissible scheduling 不变。",
+          "evidence": "第 5 节 Proposition 5.5、Proposition 5.6（PDF 第 25--28 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--28 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 88,
+    "priorityTier": "high",
+    "priorityReason": "在三维弱解框架下把局部耗散、观测性和全局能量衰减连起来，聚焦稳定性机制并给出潜在可计算代理。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03164:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03164",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Energy Decay Induced by Localized Coercivity in the 3D Navier--Stokes Equations",
+        "authors": [
+          "Amadou Cissé"
+        ],
+        "abstract": "Energy-based analysis of the three-dimensional incompressible Navier--Stokes equations with spatially localized dissipation is developed at the level of kinetic energy and Leray--Hopf weak solutions. A localized coercivity property linking viscosity and damping to global $L^2$ control is introduced and related to observability and spectral inequalities for the associated Stokes operator. Under this condition, exponential energy decay is established without regularity or linearization assumptions, and time-dependent damping is treated within a nonautonomous framework. A finite-dimensional spectral quantity is proposed as a computable proxy for coercivity, yielding explicit decay estimates for reduced-order models.",
+        "categories": [
+          "math.AP",
+          "math.OC"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03164",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03164",
+        "submittedAt": "2026-09-02T21:08:19Z",
+        "updatedAt": "2026-09-02T21:08:19Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "稳定性",
+        "workSummary": "研究三维 Navier--Stokes 在局部 coercivity 条件下的能量衰减：先从局部耗散权得到全局能量不等式，再构造演化族和离散 Galerkin 系统，证明连续与离散解的指数稳定性及调度鲁棒性。",
+        "techniques": [
+          "局部 coercivity",
+          "Leray--Hopf 能量不等式",
+          "演化族",
+          "Galerkin 离散",
+          "指数稳定性"
+        ],
+        "breakthrough": "将只在局部区域作用的耗散性编码成可传播的 coercivity 常数，并同时给出连续 PDE、有限维离散系统和时间调度下的统一指数衰减机制。",
+        "limitations": "需要文中局部权函数、域几何和正下界假设；离散结果依赖有限维截断，指数率不是无条件对所有控制策略成立。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "局部 coercivity 给出能量耗散项的正下界。",
+              "route": "将 Leray--Hopf 方程与局部权函数配对，利用 Poincare/局部观测不等式把局部梯度控制成全场能量，再将其代入能量不等式。",
+              "evidence": "第 2 节 Lemma 2.1、Proposition 2.2、Theorem 2.6（PDF 第 5--10 页）。"
+            },
+            {
+              "claim": "正下界使连续 Navier--Stokes 演化族具有一致耗散和指数衰减。",
+              "route": "对 Galerkin 逼近先建立生成性和 uniform dissipativity，再把时间依赖的局部 coercivity 常数压到 Kmin，积分微分不等式得到 evolution family 的指数界。",
+              "evidence": "第 3--4 节 Proposition 3.1、Proposition 3.4、Theorem 4.3（PDF 第 12--19 页）。"
+            },
+            {
+              "claim": "有限维离散系统继承 coercivity 和指数衰减。",
+              "route": "将局部权矩阵与质量/刚度矩阵写成对称半正定块，证明离散 coercivity 常数非负并在 Kmin>0 时给出离散能量递推。",
+              "evidence": "第 5 节 Lemma 5.1、Proposition 5.2、Proposition 5.4（PDF 第 21--25 页）。"
+            },
+            {
+              "claim": "局部耗散率在空间调度下保持鲁棒。",
+              "route": "比较不同调度产生的局部权和演化矩阵，利用最小 coercivity 单调性把每个时刻的耗散压到同一 Kmin，故指数率对 admissible scheduling 不变。",
+              "evidence": "第 5 节 Proposition 5.5、Proposition 5.6（PDF 第 25--28 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--28 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 88,
+        "priorityTier": "high",
+        "priorityReason": "在三维弱解框架下把局部耗散、观测性和全局能量衰减连起来，聚焦稳定性机制并给出潜在可计算代理。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

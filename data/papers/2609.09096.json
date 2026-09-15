@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09096",
+  "slug": "2609.09096",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.09096:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.09096",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Pathwise Global-in-Time Existence for the generalised KPZ Equation in the Full Subcritical Regime",
+    "authors": [
+      "Jonas Sauer",
+      "Rhys Steele"
+    ],
+    "abstract": "We provide a pathwise proof of global-in-time well-posedness for the generalised KPZ equation in the full subcritical regime by an adaptation of the strategy recently applied to the generalised Parabolic Anderson Model in [ES26]. Since this strategy relies crucially on the assumption that control of the supremum norm is sufficient to continue the solution, the main additional ingredient required is a treatment of the initial layer for gKPZ with merely $L^\\infty$ initial data, rather than the more usual setting of $C^θ$ initial data with $θ> 0$. Our approach is based on an expansion around a deterministic profile followed by the introduction of an integrating factor in order to remove the terms which have critical scaling at time $0$. For pedagogical purposes, we first demonstrate the proof techniques in the case of the standard $(1+1)$-dimensional KPZ equation before turning to the more computationally involved case of generalised KPZ.",
+    "categories": [
+      "math.AP",
+      "math.PR"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09096",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09096",
+    "submittedAt": "2026-09-08T17:38:03Z",
+    "updatedAt": "2026-09-08T17:38:03Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文证明空间周期广义 KPZ 方程在完整次临界范围内的路径级全局存在性和局部 Lipschitz 解映射。作者在正则结构框架中先处理平滑模型，利用对称性和模型重整化定义；对一般 $C^\\theta $ 初值，短时固定点理论给出局部解与爆破替代。关键初始层分析把解展开在只含梯度平方的确定性 profile 周围，引入积分因子消除 $t=0$ 附近临界缩放的交叉项，并验证这些变换与重整化兼容。平滑模型上建立 supremum norm 比较原理和不爆破估计，再通过模型逼近把结论传给任意对称模型。",
+    "techniques": [
+      "正则结构固定点与加权初始层空间",
+      "对称重整化模型与反射兼容性",
+      "确定性 profile 展开",
+      "积分因子消除临界交叉项",
+      "supremum norm 比较原理与模型逼近"
+    ],
+    "breakthrough": "论文解决了广义 KPZ 在仅有 $L\\infty $ 初值初始层的关键障碍：围绕确定性 profile 的积分因子把本来 $t^{-1}$ 临界的梯度交叉项变为可吸收项，并在逐模型证明后与重整化相容，从而把局部爆破替代提升为全局 $C^\\theta $ 控制。",
+    "limitations": "结论针对空间周期、对称重整化模型和满足文中噪声 Hölder/次临界条件的驱动，初值正则性需 $0<\\theta <\\alpha +2$；全局性依赖 supremum norm 足以继续解的机制，不覆盖非对称模型、非周期域或超临界参数。AI 工具仅用于少量表格/机械计算、文献检索和校对，证明策略和主体证明由作者完成。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "对称模型上的 gKPZ 固定点解可在短时间内构造，并且常数初值有一致的模型范数控制。",
+          "route": "在加权正则结构空间中把非线性写为 $A[(DW)^2+\\Xi ]$，利用 A、B 只取多项式 sector 的乘积估计和热核 Schauder 界做 contraction。对常数初值通过平移 profile 把系数范数变成与常数值无关的 $C^k$ 界，因此短时存在区间可对初值常数一致。",
+          "evidence": "PDF 第5–10页 Section 2、Lemma 2.1、Lemma 2.5–2.6 及固定点方程(2)。"
+        },
+        {
+          "claim": "对称模型下 supremum norm 有局部比较原理，从而得到由初值上下常数控制的短时间 $L\\infty $ 界。",
+          "route": "先在平滑噪声上把重整化方程写成含显式 counterterm 的 PDE；空间反射对称让模型项的奇阶不对称贡献消失，比较两个常数初值解时最大值原理控制上下包络。再用模型逼近把比较界传给正则结构解。",
+          "evidence": "PDF 第11–17页 Theorem 2.10、Corollary 2.9、Section 3 的 Proposition 3.7–3.8。"
+        },
+        {
+          "claim": "初始层积分因子变换与重整化相容，并把 $C^\\theta $ 继续准则降到 $L\\infty $ 不爆破。",
+          "route": "令 $h_\\psi $ 为确定性 profile，写 $u=h-h_\\psi $ 并对 $e^{h_\\psi }u$ 做变换；Cole–Hopf 型恒等式抵消 $2\\partial _x$ $h_\\psi \\partial _x u$，使剩余梯度平方按 $t^{\\delta -1}$ 可积。正则结构中逐树计算 counterterm，证明变换后的模型方程仍具有正确的重整化项，得到 Lemma 4.1/4.4 的平滑模型一致估计。",
+          "evidence": "PDF 第4–6页初始层策略；PDF 第21–23页 Lemma 4.1、公式(17)及 counterterm 兼容性计算。"
+        },
+        {
+          "claim": "任意有限时间内解的 $C^\\theta $ 范数不爆破，故对称模型的 gKPZ 解全局存在且解映射局部 Lipschitz。",
+          "route": "用初始层估计先在短小时间片把 $L\\infty $ 界推进到 $C^\\theta $ 界；若存在有限爆破时刻，比较原理给出的分片 $L\\infty $ 上界和局部正则结构理论会在爆破前保持统一 $C^\\theta $ 界，矛盾。局部固定点解的模型/初值 Lipschitz 依赖再沿有限个时间片拼接，得到 Theorem 1.1。",
+          "evidence": "PDF 第10–12页 Theorem 2.10；PDF 第16–18页 Lemma 3.5；PDF 第24–25页 Theorem 1.1 的全局收束与模型连续性。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露：ChatGPT 5.6 Sol 用于 Lemma 3.1 的前两张参数表和 Lemma 4.1 早期版本中的少量机械计算；ChatGPT 5.6 Sol 与 6 Astra 还用于文献检索和最终稿排版/校对。作者同时说明总体策略、证明和正文并非 AI 生成。",
+    "aiEvidenceSource": "PDF 第4页“AI assistance”披露段落，明确列出表格、机械计算、文献综述和校对用途；并核查 PDF 第1–25页相关 Lemma 与结尾。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.09096:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.09096",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Pathwise Global-in-Time Existence for the generalised KPZ Equation in the Full Subcritical Regime",
+        "authors": [
+          "Jonas Sauer",
+          "Rhys Steele"
+        ],
+        "abstract": "We provide a pathwise proof of global-in-time well-posedness for the generalised KPZ equation in the full subcritical regime by an adaptation of the strategy recently applied to the generalised Parabolic Anderson Model in [ES26]. Since this strategy relies crucially on the assumption that control of the supremum norm is sufficient to continue the solution, the main additional ingredient required is a treatment of the initial layer for gKPZ with merely $L^\\infty$ initial data, rather than the more usual setting of $C^θ$ initial data with $θ> 0$. Our approach is based on an expansion around a deterministic profile followed by the introduction of an integrating factor in order to remove the terms which have critical scaling at time $0$. For pedagogical purposes, we first demonstrate the proof techniques in the case of the standard $(1+1)$-dimensional KPZ equation before turning to the more computationally involved case of generalised KPZ.",
+        "categories": [
+          "math.AP",
+          "math.PR"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09096",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09096",
+        "submittedAt": "2026-09-08T17:38:03Z",
+        "updatedAt": "2026-09-08T17:38:03Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文证明空间周期广义 KPZ 方程在完整次临界范围内的路径级全局存在性和局部 Lipschitz 解映射。作者在正则结构框架中先处理平滑模型，利用对称性和模型重整化定义；对一般 $C^\\theta $ 初值，短时固定点理论给出局部解与爆破替代。关键初始层分析把解展开在只含梯度平方的确定性 profile 周围，引入积分因子消除 $t=0$ 附近临界缩放的交叉项，并验证这些变换与重整化兼容。平滑模型上建立 supremum norm 比较原理和不爆破估计，再通过模型逼近把结论传给任意对称模型。",
+        "techniques": [
+          "正则结构固定点与加权初始层空间",
+          "对称重整化模型与反射兼容性",
+          "确定性 profile 展开",
+          "积分因子消除临界交叉项",
+          "supremum norm 比较原理与模型逼近"
+        ],
+        "breakthrough": "论文解决了广义 KPZ 在仅有 $L\\infty $ 初值初始层的关键障碍：围绕确定性 profile 的积分因子把本来 $t^{-1}$ 临界的梯度交叉项变为可吸收项，并在逐模型证明后与重整化相容，从而把局部爆破替代提升为全局 $C^\\theta $ 控制。",
+        "limitations": "结论针对空间周期、对称重整化模型和满足文中噪声 Hölder/次临界条件的驱动，初值正则性需 $0<\\theta <\\alpha +2$；全局性依赖 supremum norm 足以继续解的机制，不覆盖非对称模型、非周期域或超临界参数。AI 工具仅用于少量表格/机械计算、文献检索和校对，证明策略和主体证明由作者完成。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "对称模型上的 gKPZ 固定点解可在短时间内构造，并且常数初值有一致的模型范数控制。",
+              "route": "在加权正则结构空间中把非线性写为 $A[(DW)^2+\\Xi ]$，利用 A、B 只取多项式 sector 的乘积估计和热核 Schauder 界做 contraction。对常数初值通过平移 profile 把系数范数变成与常数值无关的 $C^k$ 界，因此短时存在区间可对初值常数一致。",
+              "evidence": "PDF 第5–10页 Section 2、Lemma 2.1、Lemma 2.5–2.6 及固定点方程(2)。"
+            },
+            {
+              "claim": "对称模型下 supremum norm 有局部比较原理，从而得到由初值上下常数控制的短时间 $L\\infty $ 界。",
+              "route": "先在平滑噪声上把重整化方程写成含显式 counterterm 的 PDE；空间反射对称让模型项的奇阶不对称贡献消失，比较两个常数初值解时最大值原理控制上下包络。再用模型逼近把比较界传给正则结构解。",
+              "evidence": "PDF 第11–17页 Theorem 2.10、Corollary 2.9、Section 3 的 Proposition 3.7–3.8。"
+            },
+            {
+              "claim": "初始层积分因子变换与重整化相容，并把 $C^\\theta $ 继续准则降到 $L\\infty $ 不爆破。",
+              "route": "令 $h_\\psi $ 为确定性 profile，写 $u=h-h_\\psi $ 并对 $e^{h_\\psi }u$ 做变换；Cole–Hopf 型恒等式抵消 $2\\partial _x$ $h_\\psi \\partial _x u$，使剩余梯度平方按 $t^{\\delta -1}$ 可积。正则结构中逐树计算 counterterm，证明变换后的模型方程仍具有正确的重整化项，得到 Lemma 4.1/4.4 的平滑模型一致估计。",
+              "evidence": "PDF 第4–6页初始层策略；PDF 第21–23页 Lemma 4.1、公式(17)及 counterterm 兼容性计算。"
+            },
+            {
+              "claim": "任意有限时间内解的 $C^\\theta $ 范数不爆破，故对称模型的 gKPZ 解全局存在且解映射局部 Lipschitz。",
+              "route": "用初始层估计先在短小时间片把 $L\\infty $ 界推进到 $C^\\theta $ 界；若存在有限爆破时刻，比较原理给出的分片 $L\\infty $ 上界和局部正则结构理论会在爆破前保持统一 $C^\\theta $ 界，矛盾。局部固定点解的模型/初值 Lipschitz 依赖再沿有限个时间片拼接，得到 Theorem 1.1。",
+              "evidence": "PDF 第10–12页 Theorem 2.10；PDF 第16–18页 Lemma 3.5；PDF 第24–25页 Theorem 1.1 的全局收束与模型连续性。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露：ChatGPT 5.6 Sol 用于 Lemma 3.1 的前两张参数表和 Lemma 4.1 早期版本中的少量机械计算；ChatGPT 5.6 Sol 与 6 Astra 还用于文献检索和最终稿排版/校对。作者同时说明总体策略、证明和正文并非 AI 生成。",
+        "aiEvidenceSource": "PDF 第4页“AI assistance”披露段落，明确列出表格、机械计算、文献综述和校对用途；并核查 PDF 第1–25页相关 Lemma 与结尾。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

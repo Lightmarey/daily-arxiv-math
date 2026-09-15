@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02779",
+  "slug": "2609.02779",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02779:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02779",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Sharp convergence rates for the vanishing discount problem with hyperbolic Aubry sets",
+    "authors": [
+      "Panrui Ni"
+    ],
+    "abstract": "Let $H\\in C^2(T^*M)$ be a Tonelli Hamiltonian on a closed connected manifold and let $u_λ$ solve \\[ λu_λ+H(x,Du_λ)=c(H)\\qquad\\text{in }M. \\] We study the convergence rate of $u_λ$ to the selected critical solution $u_0$. Assume that the lifted Aubry set is a finite union $\\widetilde{A}=Γ_1\\sqcup\\cdots\\sqcupΓ_N$, where each $Γ_i$ is either a hyperbolic equilibrium or a periodic orbit hyperbolic in the critical energy level. We prove \\[ -Cλ\\le u_λ-u_0\\le Cλ|\\logλ|. \\] Let $μ_i$ be the projected Mather measure associated with $Γ_i$. If \\[ \\int_M u_0\\,\\mathrm dμ_i=0\\qquad \\text{for every }i, \\] then \\[ \\|u_λ-u_0\\|_\\infty\\le Cλ. \\] In particular, if the lifted Aubry set consists of a single hyperbolic equilibrium or a single hyperbolic periodic orbit, the convergence rate is $O(λ)$. We give examples showing that both convergence rates $O(λ)$ and $O(λ|\\logλ|)$ are optimal. Without hyperbolicity, finite-order degenerate examples give lower bounds of order $λ^{1/(2r-1)}$ with $r\\ge2$. We also construct infinite-order degenerate examples with arbitrarily slow convergence. Taken together, these results provide, to our knowledge, the first systematic quantitative theory for the vanishing discount problem in the Tonelli setting.",
+    "categories": [
+      "math.AP",
+      "math.DS"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02779",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02779",
+    "submittedAt": "2026-09-02T16:14:43Z",
+    "updatedAt": "2026-09-02T16:14:43Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "分析结果",
+    "workSummary": "对 Tonelli Hamiltonian 的有限个双曲平衡点或双曲周期轨道组成的 lifted Aubry 集，建立消失折扣解趋向选定临界解的定量速率：一般为下界 $O(\\lambda)$、上界 $O(\\lambda|\\log\\lambda|)$，所有 Mather 平均为零时提升为 $O(\\lambda)$，并给出达到两种速率的例子。",
+    "techniques": [
+      "校准曲线积分恒等式",
+      "双曲轨道邻域估计",
+      "严格子解与加权时间控制",
+      "Peierls 障碍有限时近似",
+      "曲线切割与指数作用量误差"
+    ],
+    "breakthrough": "曲线切割把双曲 Aubry 几何的指数靠近转化为 $R\u0007symp|\\log\\lambda|$ 的最优折扣误差，从而系统区分所有 Mather 平均为零与存在非活动分量时的两类收敛速率。",
+    "limitations": "Aubry 集被限制为有限个双曲平衡点/周期轨道；一般双曲 Aubry 集和非双曲情形只给出示例性慢速现象。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "消失折扣差 $u_\\lambda-u_0$ 可化为两条校准曲线上 $u_0$ 的加权积分。",
+          "route": "沿 $u_0$-和 $u_\\lambda$-校准曲线分别对 Hamilton--Jacobi 方程积分，并用折扣因子分部积分，把点态差转成 cotangent lifts 上的加权轨道积分。",
+          "evidence": "第 2 节公式 (2.1)--(2.6) 及 Theorem 1.1 proof outline（PDF 第 3--4 页）。"
+        },
+        {
+          "claim": "双曲 Aubry 分量控制校准轨道在其邻域外的总时间和邻域内的加权距离。",
+          "route": "用严格于 Aubry 集外的临界子解定义 $q$，使 $q$ 的正下界控制离开邻域的停留；再用 Lemmas 3.1--3.2 的双曲稳定/不稳定估计控制一次访问的距离积分，并用嵌套邻域的穿越时间界计数访问次数。",
+          "evidence": "第 3--4 节 Lemma 2.1、Lemmas 3.1--3.2、Lemma 4.2（PDF 第 4--10 页）。"
+        },
+        {
+          "claim": "所有分量的 Mather 平均为零时，得到 $\\|u_\\lambda-u_0\\|_\\infty\\le C\\lambda$；一般情形仍有下界 $-C\\lambda$。",
+          "route": "在每个双曲分量附近解 $X_H\\Phi=u_0\\circ\\pi_M-m_i$，若 $m_i=0$ 则两条校准曲线积分均一致有界；若某 $m_i<0$，其半无限加权积分只给出一侧的 $1/\\lambda$ 贡献，乘折扣后产生统一线性下界。",
+          "evidence": "第 4 节 Lemma 4.1--4.2、公式 (4.17) 及 Theorem 1.1（PDF 第 3--4、12--17 页）。"
+        },
+        {
+          "claim": "上界为 $C\\lambda|\\log\\lambda|$，且单一双曲分量时为 $O(\\lambda)$；两种速率均可达到。",
+          "route": "用 Lemma 4.3 的有限时 Peierls 障碍构造曲线，在双曲邻域外切断并把作用量误差压成 $e^{-\\kappa R}$；取 $R$ 与 $|\\log\\lambda|$ 同阶平衡折扣和切割误差，单一分量则无需该对数切割损失，最后以第 5--6 节显式模型验证尖锐性。",
+          "evidence": "第 4 节 Lemma 4.3 与 Proof of Theorem 1.1（PDF 第 13--17 页）；Corollary 1.2（PDF 第 3 页）；第 5--6 节 Examples（PDF 第 28--37 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明使用 OpenAI ChatGPT 辅助检查计算、改善部分论证的呈现并润色英语，同时说明所有数学论证由作者独立核验并承担责任。",
+    "aiEvidenceSource": "PDF 第 37 页 Declarations 下的“AI declaration”。",
+    "priorityScore": 76,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02779:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02779",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Sharp convergence rates for the vanishing discount problem with hyperbolic Aubry sets",
+        "authors": [
+          "Panrui Ni"
+        ],
+        "abstract": "Let $H\\in C^2(T^*M)$ be a Tonelli Hamiltonian on a closed connected manifold and let $u_λ$ solve \\[ λu_λ+H(x,Du_λ)=c(H)\\qquad\\text{in }M. \\] We study the convergence rate of $u_λ$ to the selected critical solution $u_0$. Assume that the lifted Aubry set is a finite union $\\widetilde{A}=Γ_1\\sqcup\\cdots\\sqcupΓ_N$, where each $Γ_i$ is either a hyperbolic equilibrium or a periodic orbit hyperbolic in the critical energy level. We prove \\[ -Cλ\\le u_λ-u_0\\le Cλ|\\logλ|. \\] Let $μ_i$ be the projected Mather measure associated with $Γ_i$. If \\[ \\int_M u_0\\,\\mathrm dμ_i=0\\qquad \\text{for every }i, \\] then \\[ \\|u_λ-u_0\\|_\\infty\\le Cλ. \\] In particular, if the lifted Aubry set consists of a single hyperbolic equilibrium or a single hyperbolic periodic orbit, the convergence rate is $O(λ)$. We give examples showing that both convergence rates $O(λ)$ and $O(λ|\\logλ|)$ are optimal. Without hyperbolicity, finite-order degenerate examples give lower bounds of order $λ^{1/(2r-1)}$ with $r\\ge2$. We also construct infinite-order degenerate examples with arbitrarily slow convergence. Taken together, these results provide, to our knowledge, the first systematic quantitative theory for the vanishing discount problem in the Tonelli setting.",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02779",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02779",
+        "submittedAt": "2026-09-02T16:14:43Z",
+        "updatedAt": "2026-09-02T16:14:43Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "分析结果",
+        "workSummary": "对 Tonelli Hamiltonian 的有限个双曲平衡点或双曲周期轨道组成的 lifted Aubry 集，建立消失折扣解趋向选定临界解的定量速率：一般为下界 $O(\\lambda)$、上界 $O(\\lambda|\\log\\lambda|)$，所有 Mather 平均为零时提升为 $O(\\lambda)$，并给出达到两种速率的例子。",
+        "techniques": [
+          "校准曲线积分恒等式",
+          "双曲轨道邻域估计",
+          "严格子解与加权时间控制",
+          "Peierls 障碍有限时近似",
+          "曲线切割与指数作用量误差"
+        ],
+        "breakthrough": "曲线切割把双曲 Aubry 几何的指数靠近转化为 $R\u0007symp|\\log\\lambda|$ 的最优折扣误差，从而系统区分所有 Mather 平均为零与存在非活动分量时的两类收敛速率。",
+        "limitations": "Aubry 集被限制为有限个双曲平衡点/周期轨道；一般双曲 Aubry 集和非双曲情形只给出示例性慢速现象。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "消失折扣差 $u_\\lambda-u_0$ 可化为两条校准曲线上 $u_0$ 的加权积分。",
+              "route": "沿 $u_0$-和 $u_\\lambda$-校准曲线分别对 Hamilton--Jacobi 方程积分，并用折扣因子分部积分，把点态差转成 cotangent lifts 上的加权轨道积分。",
+              "evidence": "第 2 节公式 (2.1)--(2.6) 及 Theorem 1.1 proof outline（PDF 第 3--4 页）。"
+            },
+            {
+              "claim": "双曲 Aubry 分量控制校准轨道在其邻域外的总时间和邻域内的加权距离。",
+              "route": "用严格于 Aubry 集外的临界子解定义 $q$，使 $q$ 的正下界控制离开邻域的停留；再用 Lemmas 3.1--3.2 的双曲稳定/不稳定估计控制一次访问的距离积分，并用嵌套邻域的穿越时间界计数访问次数。",
+              "evidence": "第 3--4 节 Lemma 2.1、Lemmas 3.1--3.2、Lemma 4.2（PDF 第 4--10 页）。"
+            },
+            {
+              "claim": "所有分量的 Mather 平均为零时，得到 $\\|u_\\lambda-u_0\\|_\\infty\\le C\\lambda$；一般情形仍有下界 $-C\\lambda$。",
+              "route": "在每个双曲分量附近解 $X_H\\Phi=u_0\\circ\\pi_M-m_i$，若 $m_i=0$ 则两条校准曲线积分均一致有界；若某 $m_i<0$，其半无限加权积分只给出一侧的 $1/\\lambda$ 贡献，乘折扣后产生统一线性下界。",
+              "evidence": "第 4 节 Lemma 4.1--4.2、公式 (4.17) 及 Theorem 1.1（PDF 第 3--4、12--17 页）。"
+            },
+            {
+              "claim": "上界为 $C\\lambda|\\log\\lambda|$，且单一双曲分量时为 $O(\\lambda)$；两种速率均可达到。",
+              "route": "用 Lemma 4.3 的有限时 Peierls 障碍构造曲线，在双曲邻域外切断并把作用量误差压成 $e^{-\\kappa R}$；取 $R$ 与 $|\\log\\lambda|$ 同阶平衡折扣和切割误差，单一分量则无需该对数切割损失，最后以第 5--6 节显式模型验证尖锐性。",
+              "evidence": "第 4 节 Lemma 4.3 与 Proof of Theorem 1.1（PDF 第 13--17 页）；Corollary 1.2（PDF 第 3 页）；第 5--6 节 Examples（PDF 第 28--37 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明使用 OpenAI ChatGPT 辅助检查计算、改善部分论证的呈现并润色英语，同时说明所有数学论证由作者独立核验并承担责任。",
+        "aiEvidenceSource": "PDF 第 37 页 Declarations 下的“AI declaration”。",
+        "priorityScore": 76,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

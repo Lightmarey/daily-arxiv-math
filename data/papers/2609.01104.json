@@ -3,93 +3,147 @@
   "arxivId": "2609.01104",
   "slug": "2609.01104",
   "latest": {
+    "id": "math.AP:2026-09-02:2609.01104:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
     "arxivId": "2609.01104",
-    "metadata": {
-      "title": "The asymptotic Plateau problem for Hypersurfaces of constant $H_{k}$ curvature in hyperbolic space",
-      "authors": [
-        "Xinqun Mei",
-        "Jin Yan"
-      ],
-      "abstract": "In this paper, we study the asymptotic Plateau problem in hyperbolic space for hypersurfaces of constant $H_k$-curvature. We prove the existence of a smooth complete $k$-convex hypersurface in $\\mathbb{H}^{n+1}$ satisfying \\[ H_k(κ)=σ, \\qquad σ\\in(0,1), \\] with prescribed asymptotic boundary at infinity. In particular, our result extends the range of the constant $σ$ in the existence theorem of Guan and Spruck [J. Eur. Math. Soc. 12 (2010), no. 3, 797--817] for $H_{k}$ curvature to the full interval $(0,1)$.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-01T11:47:16Z",
-      "updatedAt": "2026-09-01T11:47:16Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "The asymptotic Plateau problem for Hypersurfaces of constant $H_{k}$ curvature in hyperbolic space",
+    "authors": [
+      "Xinqun Mei",
+      "Jin Yan"
+    ],
+    "abstract": "In this paper, we study the asymptotic Plateau problem in hyperbolic space for hypersurfaces of constant $H_k$-curvature. We prove the existence of a smooth complete $k$-convex hypersurface in $\\mathbb{H}^{n+1}$ satisfying \\[ H_k(κ)=σ, \\qquad σ\\in(0,1), \\] with prescribed asymptotic boundary at infinity. In particular, our result extends the range of the constant $σ$ in the existence theorem of Guan and Spruck [J. Eur. Math. Soc. 12 (2010), no. 3, 797--817] for $H_{k}$ curvature to the full interval $(0,1)$.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.01104",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01104",
+    "submittedAt": "2026-09-01T11:47:16Z",
+    "updatedAt": "2026-09-01T11:47:16Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "双曲空间常 Hk 曲率渐近 Plateau 问题",
+    "workSummary": "论文解决双曲空间中给定无穷远边界的常 Hk 曲率渐近 Plateau 问题。作者先对竖直图方程建立最大值、边界梯度和二阶曲率估计，利用 concavity 不等式控制最大主曲率；再在截断域上解近似 Dirichlet 问题，通过全局到边界估计和紧性令截断高度趋于无穷，得到完整光滑 k-凸超曲面。",
+    "techniques": [
+      "完全非线性曲率方程",
+      "最大值原理和 concavity 不等式",
+      "边界梯度与二阶估计",
+      "截断域近似和紧性"
+    ],
+    "breakthrough": "论文把常 Hk 曲率渐近图形的存在范围扩展到完整 $\\sigma \\in (0,1)$，关键在于用最大主曲率的 concavity 估计跨越以往参数限制，并将局部二阶控制传递到无穷远边界的完整解。",
+    "limitations": "假设有界光滑域边界具有非负欧氏平均曲率，且 $2\\le k\\le n-1$；构造是图形型、k-凸和给定圆柱无穷远边界，不覆盖非图形拓扑$、k=n$ 或任意边界几何。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.2 建立竖直图常 Hk 方程的内部曲率控制，尤其给出独立于近似域高度的最大主曲率界。",
+          "route": "在最大主曲率附近对方程使用辅助函数和二阶特征值微分公式，借 Proposition 2.3–2.4 的 Gårding 锥代数不等式吸收三阶项；concavity 不等式排除最大特征值过大，从而闭合内部估计。",
+          "evidence": "PDF 第3–5页 Theorem 1.2；PDF 第6–10页 Propositions 2.3–2.4、Theorem 2.5、Lemma 2.6 及 Proof of Theorem 1.2。"
+        },
+        {
+          "claim": "在截断域上，最大值原理和边界梯度估计给出 $u>0、u=0$ 于边界以及统一 C1 控制。",
+          "route": "先用常值和垂直平移构造上下障碍，得到图形解的高度和正性；再在边界距离函数上应用曲率方程的线性化算子，并结合 $\\partial \\Omega $ 的非负平均曲率，控制 |Du| 直到边界。",
+          "evidence": "PDF 第3–4页 Theorem 1.1 的图形表述；PDF 第10–14页 Proof of Theorem 1.2 中的辅助函数、边界梯度估计和式(1.7)–(1.8)。"
+        },
+        {
+          "claim": "Theorem 1.2 的全局到边界二阶估计使近似解在每个紧子域上具有统一 $C2,\\alpha $ 界，并保持 admissibility。",
+          "route": "将内部最大曲率界与边界处的切向/法向分解结合，对线性化方程应用 Schauder 估计；由于 $\\sigma <1$ 和 Gårding 锥保持，估计常数不依赖截断高度，故可在固定紧集上提取平滑子列。",
+          "evidence": "PDF 第10–13页 Proof of Theorem 1.2 结尾；式(1.8)及引用 Lemma 2.6、Theorem 2.5 后的 global-to-boundary curvature estimate 段落。"
+        },
+        {
+          "claim": "Proof of Theorem 1.1 通过截断域近似和紧性令高度趋于无穷，得到具有给定无穷远边界的完整光滑 k-凸超曲面。",
+          "route": "在高度有限的近似域上求解 Dirichlet 问题，使用前述高度、梯度和曲率界确保解不在内部退化；对任意紧子域取一致收敛子列，极限满足常 Hk 方程和 k-凸性，边界高度趋零则在上半空间模型中恢复 $\\partial \\Omega \\times {0}$。",
+          "evidence": "PDF 第2–3页 Theorem 1.1；PDF 第13–14页 Proof of Theorem 1.1，明确说明引用 Theorem 1.2 后只需建立 global-to-boundary curvature estimates 并进行 approximation/compactness。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "推广/加强",
-      "workSummary": "证明双曲空间中具有指定无穷远边界的光滑完备 k-凸常 Hk 曲率超曲面存在。",
-      "techniques": [
-        "渐近 Plateau 问题",
-        "完全非线性曲率方程",
-        "k-凸性"
-      ],
-      "breakthrough": "把 Guan--Spruck 存在定理中的常数范围扩展到完整区间 0<σ<1。",
-      "limitations": "摘要未说明边界正则性、唯一性及先验估计的完整假设。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 84,
-      "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 84/100。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "In this paper, we study the asymptotic Plateau problem in hyperbolic space for hypersurfaces of constant $H_k$-curvature. We prove the existence of a smooth complete $k$-convex hypersurface in $\\mathbb{H}^{n+1}$ satisfying \\[ H_k(κ)=σ, \\qquad σ\\in(0,1), \\] with prescribed asymptotic boundary at infinity. In particular, our result extends the range of the constant $σ$ in the existence theorem of Guan and Spruck [J. Eur. Math. Soc. 12 (2010), no. 3, 797--817] for $H_{k}$ curvature to the full interval $(0,1)$.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–14页（含 Acknowledgment 与 References）；缓存全文 2609.01104.txt。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-02",
-      "entry": {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01104:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
         "arxivId": "2609.01104",
-        "metadata": {
-          "title": "The asymptotic Plateau problem for Hypersurfaces of constant $H_{k}$ curvature in hyperbolic space",
-          "authors": [
-            "Xinqun Mei",
-            "Jin Yan"
-          ],
-          "abstract": "In this paper, we study the asymptotic Plateau problem in hyperbolic space for hypersurfaces of constant $H_k$-curvature. We prove the existence of a smooth complete $k$-convex hypersurface in $\\mathbb{H}^{n+1}$ satisfying \\[ H_k(κ)=σ, \\qquad σ\\in(0,1), \\] with prescribed asymptotic boundary at infinity. In particular, our result extends the range of the constant $σ$ in the existence theorem of Guan and Spruck [J. Eur. Math. Soc. 12 (2010), no. 3, 797--817] for $H_{k}$ curvature to the full interval $(0,1)$.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-01T11:47:16Z",
-          "updatedAt": "2026-09-01T11:47:16Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "The asymptotic Plateau problem for Hypersurfaces of constant $H_{k}$ curvature in hyperbolic space",
+        "authors": [
+          "Xinqun Mei",
+          "Jin Yan"
+        ],
+        "abstract": "In this paper, we study the asymptotic Plateau problem in hyperbolic space for hypersurfaces of constant $H_k$-curvature. We prove the existence of a smooth complete $k$-convex hypersurface in $\\mathbb{H}^{n+1}$ satisfying \\[ H_k(κ)=σ, \\qquad σ\\in(0,1), \\] with prescribed asymptotic boundary at infinity. In particular, our result extends the range of the constant $σ$ in the existence theorem of Guan and Spruck [J. Eur. Math. Soc. 12 (2010), no. 3, 797--817] for $H_{k}$ curvature to the full interval $(0,1)$.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.01104",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01104",
+        "submittedAt": "2026-09-01T11:47:16Z",
+        "updatedAt": "2026-09-01T11:47:16Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "双曲空间常 Hk 曲率渐近 Plateau 问题",
+        "workSummary": "论文解决双曲空间中给定无穷远边界的常 Hk 曲率渐近 Plateau 问题。作者先对竖直图方程建立最大值、边界梯度和二阶曲率估计，利用 concavity 不等式控制最大主曲率；再在截断域上解近似 Dirichlet 问题，通过全局到边界估计和紧性令截断高度趋于无穷，得到完整光滑 k-凸超曲面。",
+        "techniques": [
+          "完全非线性曲率方程",
+          "最大值原理和 concavity 不等式",
+          "边界梯度与二阶估计",
+          "截断域近似和紧性"
+        ],
+        "breakthrough": "论文把常 Hk 曲率渐近图形的存在范围扩展到完整 $\\sigma \\in (0,1)$，关键在于用最大主曲率的 concavity 估计跨越以往参数限制，并将局部二阶控制传递到无穷远边界的完整解。",
+        "limitations": "假设有界光滑域边界具有非负欧氏平均曲率，且 $2\\le k\\le n-1$；构造是图形型、k-凸和给定圆柱无穷远边界，不覆盖非图形拓扑$、k=n$ 或任意边界几何。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.2 建立竖直图常 Hk 方程的内部曲率控制，尤其给出独立于近似域高度的最大主曲率界。",
+              "route": "在最大主曲率附近对方程使用辅助函数和二阶特征值微分公式，借 Proposition 2.3–2.4 的 Gårding 锥代数不等式吸收三阶项；concavity 不等式排除最大特征值过大，从而闭合内部估计。",
+              "evidence": "PDF 第3–5页 Theorem 1.2；PDF 第6–10页 Propositions 2.3–2.4、Theorem 2.5、Lemma 2.6 及 Proof of Theorem 1.2。"
+            },
+            {
+              "claim": "在截断域上，最大值原理和边界梯度估计给出 $u>0、u=0$ 于边界以及统一 C1 控制。",
+              "route": "先用常值和垂直平移构造上下障碍，得到图形解的高度和正性；再在边界距离函数上应用曲率方程的线性化算子，并结合 $\\partial \\Omega $ 的非负平均曲率，控制 |Du| 直到边界。",
+              "evidence": "PDF 第3–4页 Theorem 1.1 的图形表述；PDF 第10–14页 Proof of Theorem 1.2 中的辅助函数、边界梯度估计和式(1.7)–(1.8)。"
+            },
+            {
+              "claim": "Theorem 1.2 的全局到边界二阶估计使近似解在每个紧子域上具有统一 $C2,\\alpha $ 界，并保持 admissibility。",
+              "route": "将内部最大曲率界与边界处的切向/法向分解结合，对线性化方程应用 Schauder 估计；由于 $\\sigma <1$ 和 Gårding 锥保持，估计常数不依赖截断高度，故可在固定紧集上提取平滑子列。",
+              "evidence": "PDF 第10–13页 Proof of Theorem 1.2 结尾；式(1.8)及引用 Lemma 2.6、Theorem 2.5 后的 global-to-boundary curvature estimate 段落。"
+            },
+            {
+              "claim": "Proof of Theorem 1.1 通过截断域近似和紧性令高度趋于无穷，得到具有给定无穷远边界的完整光滑 k-凸超曲面。",
+              "route": "在高度有限的近似域上求解 Dirichlet 问题，使用前述高度、梯度和曲率界确保解不在内部退化；对任意紧子域取一致收敛子列，极限满足常 Hk 方程和 k-凸性，边界高度趋零则在上半空间模型中恢复 $\\partial \\Omega \\times {0}$。",
+              "evidence": "PDF 第2–3页 Theorem 1.1；PDF 第13–14页 Proof of Theorem 1.1，明确说明引用 Theorem 1.2 后只需建立 global-to-boundary curvature estimates 并进行 approximation/compactness。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "推广/加强",
-          "workSummary": "证明双曲空间中具有指定无穷远边界的光滑完备 k-凸常 Hk 曲率超曲面存在。",
-          "techniques": [
-            "渐近 Plateau 问题",
-            "完全非线性曲率方程",
-            "k-凸性"
-          ],
-          "breakthrough": "把 Guan--Spruck 存在定理中的常数范围扩展到完整区间 0<σ<1。",
-          "limitations": "摘要未说明边界正则性、唯一性及先验估计的完整假设。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 84,
-          "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 84/100。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "In this paper, we study the asymptotic Plateau problem in hyperbolic space for hypersurfaces of constant $H_k$-curvature. We prove the existence of a smooth complete $k$-convex hypersurface in $\\mathbb{H}^{n+1}$ satisfying \\[ H_k(κ)=σ, \\qquad σ\\in(0,1), \\] with prescribed asymptotic boundary at infinity. In particular, our result extends the range of the constant $σ$ in the existence theorem of Guan and Spruck [J. Eur. Math. Soc. 12 (2010), no. 3, 797--817] for $H_{k}$ curvature to the full interval $(0,1)$.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–14页（含 Acknowledgment 与 References）；缓存全文 2609.01104.txt。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

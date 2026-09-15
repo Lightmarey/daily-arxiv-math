@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12804",
+  "slug": "2609.12804",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12804:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12804",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Random field approximation and local counting statistics for the weakly interacting thermal Bose gas",
+    "authors": [
+      "Andreas Deuchert",
+      "Marcin Napiórkowski",
+      "Błażej Ruba"
+    ],
+    "abstract": "We study weakly interacting bosons on the three-dimensional torus at temperatures proportional to the critical temperature for Bose--Einstein condensation. We show that, as the expected particle number tends to infinity, the grand canonical Gibbs state is asymptotically described by the coherent state quantization of a random field that converges to a novel Bogoliubov random field. Moreover, the point process associated with the Gibbs state can be approximated by a Cox process. These results are based on and extend the approximation of the Gibbs state recently obtained by the first two authors and Nam. Using these approximations, we compute limiting distributions of the number of particles outside the condensate, the joint occupation statistics of finitely many momentum modes, and particle-number fluctuations in macroscopic subsets of the torus, all governed by the Bogoliubov field. We further prove convergence of the empirical measure of the associated point process to the uniform measure and convergence of the microscopic particle-number statistics to the boson point process. The latter result establishes the universality of particle-number statistics on microscopic length scales.",
+    "categories": [
+      "math-ph",
+      "math.AP",
+      "math.PR",
+      "quant-ph"
+    ],
+    "primaryCategory": "math-ph",
+    "arxivUrl": "https://arxiv.org/abs/2609.12804",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12804",
+    "submittedAt": "2026-09-11T13:01:00Z",
+    "updatedAt": "2026-09-11T13:01:00Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "随机场极限与局部统计",
+    "workSummary": "论文研究三维单位环面上弱相互作用玻色气体在临界温度尺度附近的巨正则 Gibbs 态。当期望粒子数 $N\\to\\infty$ 且 $\\beta/\\beta_c\\to\\kappa$ 时，作者在凝聚相构造由凝聚模与热云组成的随机场近似，证明其热云收敛到新的 Bogoliubov 随机场，并将 Gibbs 态对应的点过程近似为 Cox 过程。由此得到凝聚相中量子场、非凝聚粒子数、动量模占据数及宏观区域粒子数的极限分布，并证明微观尺度 $N^{-1/3}$ 上的粒子统计收敛到与相互作用无关的玻色点过程；非凝聚相则通过理想气体的 Fredholm 行列式分析得到宏观和微观统计。",
+    "techniques": [
+      "将 Fock 空间按动量对分解为二模张量积，显式对角化温度依赖的二次 Bogoliubov Hamiltonian，并用 Weyl--Wigner、上符号和下符号把二模 Gibbs 算子表示为复高斯随机向量。",
+      "从带动量截断的高斯模构造随机 Fourier 场 $\\Phi_N$，用共同高斯种子逐模耦合到 Bogoliubov 场 $\\Psi$；通过协方差差异、Sobolev 加权求和和指数矩估计证明场收敛。",
+      "利用 coherent-state quantization 的迹范数近似，将场近似传递到量子观测量；对动量占据数和粒子数使用 Gaussian 总变差估计、Wasserstein 耦合、混合 Poisson 表示及 Wick 平方。",
+      "对点过程的线性统计和区域计数使用特征函数、Cox 过程条件混合 Poisson 结构及局部核耦合；在微观尺度上通过协方差核的 Hilbert--Schmidt 和迹范数收敛识别玻色点过程。",
+      "在非凝聚相将相互作用 Gibbs 态约化为理想气体，利用 Jacobi theta 函数、Poisson 求和、Schatten 范数估计和正则化 Fredholm 行列式展开，分别处理宏观中心极限定理、微观有效质量场及临界尺度的 Wick 型极限。"
+    ],
+    "breakthrough": "核心贡献是给出弱相互作用正温玻色气体的随机场和点过程统一描述：凝聚相 Gibbs 态在迹范数意义下由凝聚模随机变量与 $N$ 依赖高斯热云场的 coherent-state quantization 近似，热云场收敛到新的 Bogoliubov 场。由此，宏观粒子数波动呈现凝聚涨落与热云场的叠加，而微观尺度 $N^{-1/3}$ 上的统计收敛到与相互作用势无关的玻色点过程，严格证明了相互作用体系中的微观普适性和玻色 bunching。",
+    "limitations": "主要结果依赖三维单位环面、非负偶周期相互作用势、加权 Fourier 可求和条件及平均场缩放 $N^{-1}$。Theorems 1--3 的完整凝聚相表述针对 $\\kappa>1$，非凝聚相 Theorem 5 针对 $\\kappa<1$；临界点 $\\kappa=1$ 只在部分尺度和命题中讨论，未给出所有临界与介观尺度的统一定理。Bogoliubov 场仅几乎处处属于 $H^s$（$s<-1/2$），高阶相关函数的控制依赖既有结果且作者明确未覆盖更高阶情形。微观统计分析主要约化到理想气体或有效二次理论，未涉及动力学、非环面几何或更强相互作用缩放。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "构造带截断的 Bogoliubov 参考 Gibbs 态及其高斯随机场上符号。",
+          "route": "先按动量对分解非零模 Fock 空间，将二模 Bogoliubov Hamiltonian 对角化并计算其 Weyl 特征函数。Lemma 13 将 Weyl、下符号和上符号分别识别为复高斯分布；Lemma 14 验证在截断参数 $p_c=O(N^{1/3})$ 下上符号存在，随后式 $(145)$--$(146)$ 定义随机 Fourier 场 $\\Phi_N$。通过单模协方差公式和正则性估计保证 $\\Phi_N$ 几乎处处为光滑函数。",
+          "evidence": "第 3.2--3.4 节的有效理论，PDF 第 15--22 页；第 4 节 Lemmas 13--16，式 $(126)$--$(146)$，PDF 第 22--26 页。"
+        },
+        {
+          "claim": "证明凝聚相 Gibbs 态的迹范数近似、$\\Phi_N$ 到 Bogoliubov 场的收敛以及 Cox 点过程近似。",
+          "route": "将全 Gibbs 态与截断 Bogoliubov 态比较，利用已有 Gibbs 态估计和半经典符号误差得到 Theorem 1(a) 的迹范数界 $(19)$。再用同一组独立高斯变量构造 $\\Phi_N$ 和 $\\Psi$ 的共同耦合，逐模比较式 $(158)$--$(163)$ 的系数，并用 Sobolev 权重求和得到 $(21)$ 及 Corollary 18 的定量收敛。最后对 coherent-state 点过程计算特征函数 $(165)$，识别随机强度测度，结合迹范数误差完成 Theorem 1(c)。",
+          "evidence": "Theorem 1，式 $(19)$--$(23)$，PDF 第 7--8 页；第 4 节 Theorem 1(a) 证明及式 $(158)$--$(165)$，PDF 第 26--28 页。"
+        },
+        {
+          "claim": "从高斯场和混合 Poisson 表示推出凝聚相的量子场、动量占据数及宏观和微观计数统计。",
+          "route": "Section 5 先用 Gaussian 协方差比较、Pinsker 不等式和 Proposition 21 得到总变差与 Wasserstein 收敛，再以 Lemma 24 的混合 Poisson 表示和最大耦合把参考占据数传回真实 Gibbs 态，得到 Theorem 2 的 $(27)$--$(31)$。Section 6.1 对宏观区域使用协方差核估计和 Gaussian 耦合得到 $(33)$--$(36)$，对微观区域将缩放核收敛到局部 Bogoliubov 场并由 Cox 过程特征函数得到 $(37)$。",
+          "evidence": "Theorem 2 及其证明，Propositions 21--22、Lemma 24，式 $(166)$--$(223)$，PDF 第 28--33 页；Theorem 3 及其证明，式 $(224)$--$(250)$，PDF 第 33--39 页。"
+        },
+        {
+          "claim": "在非凝聚和临界高温尺度上通过理想气体 Fredholm 行列式识别局部统计极限。",
+          "route": "利用状态近似式 $(62)$ 将 Theorem 5 约化为理想气体。对宏观区域先由 Jacobi theta 函数和 Poisson 求和求粒子数方差，再把特征函数写成行列式 $(276)$，用 $\\|A\\|_3=o(1)$ 和正则化行列式展开 $(280)$--$(282)$ 得到 Gaussian 极限。对微观尺度 $\\delta=N^{-1/3}$，将环面核经单位ary 缩放后用 Appendix B 的核渐近 $(287)$--$(288)$ 证明迹范数收敛，行列式极限 $(289)$ 识别为有效质量 Gaussian 场驱动的 Cox 过程；更大相关长度的临界情形由 Proposition 30 的 $(290)$--$(296)$ 处理。",
+          "evidence": "第 6.2 节 Theorem 5、Propositions 27、29、30，式 $(252)$--$(296)$，PDF 第 39--44 页；Appendix B 的核渐近，PDF 第 46--50 页；Appendix C 的正则化 Fredholm 行列式，PDF 第 50--54 页。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露使用语言模型 GPT-5.6 Sol 和 Gemini 3.1 Pro 来改进论文表达、帮助学习数学概念、辅助计算以及校对；同时明确声明所有主要思想、数学表述、定理陈述和证明均由作者独立构思和发展。",
+    "aiEvidenceSource": "已核查 PDF 第 1--54 页全文，包括摘要、引言、Section 2--6、Appendices A--C、Acknowledgments、AI Disclosure、Data availability statement、References 及正文末尾。Acknowledgments 和 AI Disclosure 位于 PDF 第 44 页：前者列出 NSF 与 NCN 资助，后者列出 GPT-5.6 Sol 和 Gemini 3.1 Pro 的表达、概念学习、计算辅助和校对用途，并排除其对主要思想、数学表述、定理和证明的作者归属。Data availability sta……",
+    "priorityScore": 83,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“随机场极限与局部统计”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 83/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12804:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12804",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Random field approximation and local counting statistics for the weakly interacting thermal Bose gas",
+        "authors": [
+          "Andreas Deuchert",
+          "Marcin Napiórkowski",
+          "Błażej Ruba"
+        ],
+        "abstract": "We study weakly interacting bosons on the three-dimensional torus at temperatures proportional to the critical temperature for Bose--Einstein condensation. We show that, as the expected particle number tends to infinity, the grand canonical Gibbs state is asymptotically described by the coherent state quantization of a random field that converges to a novel Bogoliubov random field. Moreover, the point process associated with the Gibbs state can be approximated by a Cox process. These results are based on and extend the approximation of the Gibbs state recently obtained by the first two authors and Nam. Using these approximations, we compute limiting distributions of the number of particles outside the condensate, the joint occupation statistics of finitely many momentum modes, and particle-number fluctuations in macroscopic subsets of the torus, all governed by the Bogoliubov field. We further prove convergence of the empirical measure of the associated point process to the uniform measure and convergence of the microscopic particle-number statistics to the boson point process. The latter result establishes the universality of particle-number statistics on microscopic length scales.",
+        "categories": [
+          "math-ph",
+          "math.AP",
+          "math.PR",
+          "quant-ph"
+        ],
+        "primaryCategory": "math-ph",
+        "arxivUrl": "https://arxiv.org/abs/2609.12804",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12804",
+        "submittedAt": "2026-09-11T13:01:00Z",
+        "updatedAt": "2026-09-11T13:01:00Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "随机场极限与局部统计",
+        "workSummary": "论文研究三维单位环面上弱相互作用玻色气体在临界温度尺度附近的巨正则 Gibbs 态。当期望粒子数 $N\\to\\infty$ 且 $\\beta/\\beta_c\\to\\kappa$ 时，作者在凝聚相构造由凝聚模与热云组成的随机场近似，证明其热云收敛到新的 Bogoliubov 随机场，并将 Gibbs 态对应的点过程近似为 Cox 过程。由此得到凝聚相中量子场、非凝聚粒子数、动量模占据数及宏观区域粒子数的极限分布，并证明微观尺度 $N^{-1/3}$ 上的粒子统计收敛到与相互作用无关的玻色点过程；非凝聚相则通过理想气体的 Fredholm 行列式分析得到宏观和微观统计。",
+        "techniques": [
+          "将 Fock 空间按动量对分解为二模张量积，显式对角化温度依赖的二次 Bogoliubov Hamiltonian，并用 Weyl--Wigner、上符号和下符号把二模 Gibbs 算子表示为复高斯随机向量。",
+          "从带动量截断的高斯模构造随机 Fourier 场 $\\Phi_N$，用共同高斯种子逐模耦合到 Bogoliubov 场 $\\Psi$；通过协方差差异、Sobolev 加权求和和指数矩估计证明场收敛。",
+          "利用 coherent-state quantization 的迹范数近似，将场近似传递到量子观测量；对动量占据数和粒子数使用 Gaussian 总变差估计、Wasserstein 耦合、混合 Poisson 表示及 Wick 平方。",
+          "对点过程的线性统计和区域计数使用特征函数、Cox 过程条件混合 Poisson 结构及局部核耦合；在微观尺度上通过协方差核的 Hilbert--Schmidt 和迹范数收敛识别玻色点过程。",
+          "在非凝聚相将相互作用 Gibbs 态约化为理想气体，利用 Jacobi theta 函数、Poisson 求和、Schatten 范数估计和正则化 Fredholm 行列式展开，分别处理宏观中心极限定理、微观有效质量场及临界尺度的 Wick 型极限。"
+        ],
+        "breakthrough": "核心贡献是给出弱相互作用正温玻色气体的随机场和点过程统一描述：凝聚相 Gibbs 态在迹范数意义下由凝聚模随机变量与 $N$ 依赖高斯热云场的 coherent-state quantization 近似，热云场收敛到新的 Bogoliubov 场。由此，宏观粒子数波动呈现凝聚涨落与热云场的叠加，而微观尺度 $N^{-1/3}$ 上的统计收敛到与相互作用势无关的玻色点过程，严格证明了相互作用体系中的微观普适性和玻色 bunching。",
+        "limitations": "主要结果依赖三维单位环面、非负偶周期相互作用势、加权 Fourier 可求和条件及平均场缩放 $N^{-1}$。Theorems 1--3 的完整凝聚相表述针对 $\\kappa>1$，非凝聚相 Theorem 5 针对 $\\kappa<1$；临界点 $\\kappa=1$ 只在部分尺度和命题中讨论，未给出所有临界与介观尺度的统一定理。Bogoliubov 场仅几乎处处属于 $H^s$（$s<-1/2$），高阶相关函数的控制依赖既有结果且作者明确未覆盖更高阶情形。微观统计分析主要约化到理想气体或有效二次理论，未涉及动力学、非环面几何或更强相互作用缩放。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "构造带截断的 Bogoliubov 参考 Gibbs 态及其高斯随机场上符号。",
+              "route": "先按动量对分解非零模 Fock 空间，将二模 Bogoliubov Hamiltonian 对角化并计算其 Weyl 特征函数。Lemma 13 将 Weyl、下符号和上符号分别识别为复高斯分布；Lemma 14 验证在截断参数 $p_c=O(N^{1/3})$ 下上符号存在，随后式 $(145)$--$(146)$ 定义随机 Fourier 场 $\\Phi_N$。通过单模协方差公式和正则性估计保证 $\\Phi_N$ 几乎处处为光滑函数。",
+              "evidence": "第 3.2--3.4 节的有效理论，PDF 第 15--22 页；第 4 节 Lemmas 13--16，式 $(126)$--$(146)$，PDF 第 22--26 页。"
+            },
+            {
+              "claim": "证明凝聚相 Gibbs 态的迹范数近似、$\\Phi_N$ 到 Bogoliubov 场的收敛以及 Cox 点过程近似。",
+              "route": "将全 Gibbs 态与截断 Bogoliubov 态比较，利用已有 Gibbs 态估计和半经典符号误差得到 Theorem 1(a) 的迹范数界 $(19)$。再用同一组独立高斯变量构造 $\\Phi_N$ 和 $\\Psi$ 的共同耦合，逐模比较式 $(158)$--$(163)$ 的系数，并用 Sobolev 权重求和得到 $(21)$ 及 Corollary 18 的定量收敛。最后对 coherent-state 点过程计算特征函数 $(165)$，识别随机强度测度，结合迹范数误差完成 Theorem 1(c)。",
+              "evidence": "Theorem 1，式 $(19)$--$(23)$，PDF 第 7--8 页；第 4 节 Theorem 1(a) 证明及式 $(158)$--$(165)$，PDF 第 26--28 页。"
+            },
+            {
+              "claim": "从高斯场和混合 Poisson 表示推出凝聚相的量子场、动量占据数及宏观和微观计数统计。",
+              "route": "Section 5 先用 Gaussian 协方差比较、Pinsker 不等式和 Proposition 21 得到总变差与 Wasserstein 收敛，再以 Lemma 24 的混合 Poisson 表示和最大耦合把参考占据数传回真实 Gibbs 态，得到 Theorem 2 的 $(27)$--$(31)$。Section 6.1 对宏观区域使用协方差核估计和 Gaussian 耦合得到 $(33)$--$(36)$，对微观区域将缩放核收敛到局部 Bogoliubov 场并由 Cox 过程特征函数得到 $(37)$。",
+              "evidence": "Theorem 2 及其证明，Propositions 21--22、Lemma 24，式 $(166)$--$(223)$，PDF 第 28--33 页；Theorem 3 及其证明，式 $(224)$--$(250)$，PDF 第 33--39 页。"
+            },
+            {
+              "claim": "在非凝聚和临界高温尺度上通过理想气体 Fredholm 行列式识别局部统计极限。",
+              "route": "利用状态近似式 $(62)$ 将 Theorem 5 约化为理想气体。对宏观区域先由 Jacobi theta 函数和 Poisson 求和求粒子数方差，再把特征函数写成行列式 $(276)$，用 $\\|A\\|_3=o(1)$ 和正则化行列式展开 $(280)$--$(282)$ 得到 Gaussian 极限。对微观尺度 $\\delta=N^{-1/3}$，将环面核经单位ary 缩放后用 Appendix B 的核渐近 $(287)$--$(288)$ 证明迹范数收敛，行列式极限 $(289)$ 识别为有效质量 Gaussian 场驱动的 Cox 过程；更大相关长度的临界情形由 Proposition 30 的 $(290)$--$(296)$ 处理。",
+              "evidence": "第 6.2 节 Theorem 5、Propositions 27、29、30，式 $(252)$--$(296)$，PDF 第 39--44 页；Appendix B 的核渐近，PDF 第 46--50 页；Appendix C 的正则化 Fredholm 行列式，PDF 第 50--54 页。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露使用语言模型 GPT-5.6 Sol 和 Gemini 3.1 Pro 来改进论文表达、帮助学习数学概念、辅助计算以及校对；同时明确声明所有主要思想、数学表述、定理陈述和证明均由作者独立构思和发展。",
+        "aiEvidenceSource": "已核查 PDF 第 1--54 页全文，包括摘要、引言、Section 2--6、Appendices A--C、Acknowledgments、AI Disclosure、Data availability statement、References 及正文末尾。Acknowledgments 和 AI Disclosure 位于 PDF 第 44 页：前者列出 NSF 与 NCN 资助，后者列出 GPT-5.6 Sol 和 Gemini 3.1 Pro 的表达、概念学习、计算辅助和校对用途，并排除其对主要思想、数学表述、定理和证明的作者归属。Data availability sta……",
+        "priorityScore": 83,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“随机场极限与局部统计”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 83/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

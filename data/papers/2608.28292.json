@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28292",
+  "slug": "2608.28292",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28292:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28292",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Small-Data Lifespan for a One-Dimensional Wave Equation with Mixed Characteristic-Time Derivative Source",
+    "authors": [
+      "Firas Kaabi"
+    ],
+    "abstract": "We study the lifespan of classical solutions to \\[ v_{tt}-v_{xx}=|v_t+v_x|^m|v_t|^n, \\qquad x\\in\\R,\\quad t>0, \\] where \\(m>1\\) and \\(n>1\\). For compactly supported data \\((ηφ,ηψ)\\), with \\(φ\\in C_0^2(\\R)\\) and \\(ψ\\in C_0^1(\\R)\\), we prove the two-sided estimate \\[ cη^{-(m+n-1)} \\leq T(η) \\leq Cη^{-(m+n-1)} \\] under the single one-sided assumption \\(ψ-φ'\\geq0\\) on \\(\\R\\), the data being nontrivial. The lower bound is obtained from the characteristic integral system and holds without any sign restriction; the upper bound follows from a scalar superlinear inequality along a selected characteristic. A short argument shows that the sign assumption already forces \\(ψ(x_0)+φ'(x_0)>0\\) at some point, so that no separate activation hypothesis is needed. We also show that the compatible cancellation condition \\(ψ+φ'\\equiv0\\) produces the global free wave \\(v(x,t)=ηφ(x-t)\\), and that this cancellation regime meets the sign assumption only for trivial data. The model therefore separates a cancellation regime from a finite-time amplification regime with an exactly determined lifespan scale.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28292",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28292",
+    "submittedAt": "2026-08-28T12:57:03Z",
+    "updatedAt": "2026-08-28T12:57:03Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "一维混合特征–时间导数源项波动方程的小数据寿命",
+    "workSummary": "正文研究一维波动方程 $v_tt-v_xx=|v_t+v_x|^m|v_t|^n$ 的小数据解寿命。通过 $P=v_t+v_x、Q=v_t-v_x$ 的特征变量把方程化为沿两族特征线的积分系统；Picard 映射给出存在时间下界，随后在 $\\psi -\\phi '\\ge 0$ 的条件下传播 $Q\\ge 0$，并证明除自由波抵消分支外 P 会被激活。沿左行特征线把 P 的增长下界化为标量 ODE，得到与局部存在下界匹配的 $T(\\eta )\\approx \\eta ^{-(m+n-1)}$。",
+    "techniques": [
+      "特征变量 $P=v_t+v_x、Q=v_t-v_x$ 的对角化",
+      "特征锥上的 Picard 映射、不变球和收缩",
+      "自由波抵消分支的精确识别",
+      "特征线上的符号传播与非线性激活",
+      "标量微分不等式和上下寿命匹配"
+    ],
+    "breakthrough": "论文区分了 P0≡0 的全局自由波情形与一般单侧初值的有限寿命机制，并在后一情形给出精确幂指数。核心不是仅有局部解，而是把混合特征源项沿特征线转成可积分的正增长，从而证明上下寿命同阶。",
+    "limitations": "寿命结论依赖一维、紧支撑小数据、m,n 的正文条件及单侧符号 $\\psi -\\phi '\\ge 0$；抵消分支需要额外的 $\\psi +\\phi '≡0$。文章没有处理高维、无符号初值、一般非齐次项或临界指数之外的长期散射。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "方程可化为特征系统 (8)。",
+          "route": "令 $P=v_t+v_x、Q=v_t-v_x$，使波算子沿 x−t 与 x+t 两族特征线分别对角化；原源项直接变成 P、Q 的齐次乘积，从而可沿特征积分。",
+          "evidence": "PDF 第4页，Section 2 的特征系统 (8)。"
+        },
+        {
+          "claim": "Proposition 3.2 给出小数据局部存在和寿命下界。",
+          "route": "在特征锥上定义 Picard 映射，利用有限传播保持支撑并选取 T 与 $\\eta $ 使映射保持不变球；源项的齐次性使 Lipschitz 常数为 $T\\eta ^{m+n-1}$ 量级，收缩后导数收敛并重建 v。",
+          "evidence": "PDF 第7–8页，Section 3 的 Proposition 3.2。"
+        },
+        {
+          "claim": "Proposition 4.1 识别全局自由波抵消分支。",
+          "route": "当 $\\psi +\\phi '≡0$ 时初始 P 为零，沿特征系统 P 保持零，原非线性源项消失；解退化为 $v(t,x)=\\eta \\phi (x-t)$，因此不存在由该源项造成的有限时刻爆破。",
+          "evidence": "PDF 第9页，Section 4 的 Proposition 4.1。"
+        },
+        {
+          "claim": "Lemma 5.1、Lemma 5.2 和 Proposition 5.4 建立有限寿命上界。",
+          "route": "由 $Q0=\\psi -\\phi '\\ge 0$ 及特征积分式传播 $Q\\ge 0$；紧支撑和非抵消条件保证 P0 在某处严格为正。沿相应左行特征线，P 满足 $Y'\\ge 2^{-n}Y^{m+n}$，积分该标量不等式得到 $T\\le C\\eta ^{-(m+n-1)}$。",
+          "evidence": "PDF 第9–11页，Section 5 的 Lemma 5.1、Lemma 5.2 和 Proposition 5.4。"
+        },
+        {
+          "claim": "Theorem 6.1 得到精确寿命阶。",
+          "route": "把 Proposition 3.2 的存在下界与 Proposition 5.4 的增长上界在同一幂指数 m+n−1 上配对，并单独排除 Proposition 4.1 的抵消分支，得到 $T(\\eta )$与 $\\eta ^{-(m+n-1)}$ 同阶。",
+          "evidence": "PDF 第11–13页，Section 6 的 Theorem 6.1。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查正文、引言、结论、参考文献和文末致谢，并全文搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "本地缓存 PDF 全文第1–14页，含文末致谢区域与关键词检索。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28292:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28292",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Small-Data Lifespan for a One-Dimensional Wave Equation with Mixed Characteristic-Time Derivative Source",
+        "authors": [
+          "Firas Kaabi"
+        ],
+        "abstract": "We study the lifespan of classical solutions to \\[ v_{tt}-v_{xx}=|v_t+v_x|^m|v_t|^n, \\qquad x\\in\\R,\\quad t>0, \\] where \\(m>1\\) and \\(n>1\\). For compactly supported data \\((ηφ,ηψ)\\), with \\(φ\\in C_0^2(\\R)\\) and \\(ψ\\in C_0^1(\\R)\\), we prove the two-sided estimate \\[ cη^{-(m+n-1)} \\leq T(η) \\leq Cη^{-(m+n-1)} \\] under the single one-sided assumption \\(ψ-φ'\\geq0\\) on \\(\\R\\), the data being nontrivial. The lower bound is obtained from the characteristic integral system and holds without any sign restriction; the upper bound follows from a scalar superlinear inequality along a selected characteristic. A short argument shows that the sign assumption already forces \\(ψ(x_0)+φ'(x_0)>0\\) at some point, so that no separate activation hypothesis is needed. We also show that the compatible cancellation condition \\(ψ+φ'\\equiv0\\) produces the global free wave \\(v(x,t)=ηφ(x-t)\\), and that this cancellation regime meets the sign assumption only for trivial data. The model therefore separates a cancellation regime from a finite-time amplification regime with an exactly determined lifespan scale.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28292",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28292",
+        "submittedAt": "2026-08-28T12:57:03Z",
+        "updatedAt": "2026-08-28T12:57:03Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "一维混合特征–时间导数源项波动方程的小数据寿命",
+        "workSummary": "正文研究一维波动方程 $v_tt-v_xx=|v_t+v_x|^m|v_t|^n$ 的小数据解寿命。通过 $P=v_t+v_x、Q=v_t-v_x$ 的特征变量把方程化为沿两族特征线的积分系统；Picard 映射给出存在时间下界，随后在 $\\psi -\\phi '\\ge 0$ 的条件下传播 $Q\\ge 0$，并证明除自由波抵消分支外 P 会被激活。沿左行特征线把 P 的增长下界化为标量 ODE，得到与局部存在下界匹配的 $T(\\eta )\\approx \\eta ^{-(m+n-1)}$。",
+        "techniques": [
+          "特征变量 $P=v_t+v_x、Q=v_t-v_x$ 的对角化",
+          "特征锥上的 Picard 映射、不变球和收缩",
+          "自由波抵消分支的精确识别",
+          "特征线上的符号传播与非线性激活",
+          "标量微分不等式和上下寿命匹配"
+        ],
+        "breakthrough": "论文区分了 P0≡0 的全局自由波情形与一般单侧初值的有限寿命机制，并在后一情形给出精确幂指数。核心不是仅有局部解，而是把混合特征源项沿特征线转成可积分的正增长，从而证明上下寿命同阶。",
+        "limitations": "寿命结论依赖一维、紧支撑小数据、m,n 的正文条件及单侧符号 $\\psi -\\phi '\\ge 0$；抵消分支需要额外的 $\\psi +\\phi '≡0$。文章没有处理高维、无符号初值、一般非齐次项或临界指数之外的长期散射。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "方程可化为特征系统 (8)。",
+              "route": "令 $P=v_t+v_x、Q=v_t-v_x$，使波算子沿 x−t 与 x+t 两族特征线分别对角化；原源项直接变成 P、Q 的齐次乘积，从而可沿特征积分。",
+              "evidence": "PDF 第4页，Section 2 的特征系统 (8)。"
+            },
+            {
+              "claim": "Proposition 3.2 给出小数据局部存在和寿命下界。",
+              "route": "在特征锥上定义 Picard 映射，利用有限传播保持支撑并选取 T 与 $\\eta $ 使映射保持不变球；源项的齐次性使 Lipschitz 常数为 $T\\eta ^{m+n-1}$ 量级，收缩后导数收敛并重建 v。",
+              "evidence": "PDF 第7–8页，Section 3 的 Proposition 3.2。"
+            },
+            {
+              "claim": "Proposition 4.1 识别全局自由波抵消分支。",
+              "route": "当 $\\psi +\\phi '≡0$ 时初始 P 为零，沿特征系统 P 保持零，原非线性源项消失；解退化为 $v(t,x)=\\eta \\phi (x-t)$，因此不存在由该源项造成的有限时刻爆破。",
+              "evidence": "PDF 第9页，Section 4 的 Proposition 4.1。"
+            },
+            {
+              "claim": "Lemma 5.1、Lemma 5.2 和 Proposition 5.4 建立有限寿命上界。",
+              "route": "由 $Q0=\\psi -\\phi '\\ge 0$ 及特征积分式传播 $Q\\ge 0$；紧支撑和非抵消条件保证 P0 在某处严格为正。沿相应左行特征线，P 满足 $Y'\\ge 2^{-n}Y^{m+n}$，积分该标量不等式得到 $T\\le C\\eta ^{-(m+n-1)}$。",
+              "evidence": "PDF 第9–11页，Section 5 的 Lemma 5.1、Lemma 5.2 和 Proposition 5.4。"
+            },
+            {
+              "claim": "Theorem 6.1 得到精确寿命阶。",
+              "route": "把 Proposition 3.2 的存在下界与 Proposition 5.4 的增长上界在同一幂指数 m+n−1 上配对，并单独排除 Proposition 4.1 的抵消分支，得到 $T(\\eta )$与 $\\eta ^{-(m+n-1)}$ 同阶。",
+              "evidence": "PDF 第11–13页，Section 6 的 Theorem 6.1。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查正文、引言、结论、参考文献和文末致谢，并全文搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "本地缓存 PDF 全文第1–14页，含文末致谢区域与关键词检索。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12967",
+  "slug": "2609.12967",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12967:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12967",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Differential Harnack inequalities and maximum principles of Morel-Oswald type for elliptic PDE in divergence form",
+    "authors": [
+      "Philippe Souplet",
+      "Boyan Sirakov"
+    ],
+    "abstract": "This paper presents two types of novel, qualitative and quantitative, estimates for positive solutions of general uniformly elliptic PDEs in divergence form. First, we prove a Morel-Oswald type of extension of the Hopf-Oleinik lemma, in which in addition we specify the sharp dependence of the constant in the data of the operator and the size of the domain. Second, we establish a new differential Harnack (logarithmic gradient) estimate for non-homogeneous equations, as well as an optimal global differential Harnack estimate for homogeneous equations.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.12967",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12967",
+    "submittedAt": "2026-09-11T15:30:02Z",
+    "updatedAt": "2026-09-11T15:30:02Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "定量强最大原理与微分 Harnack 不等式",
+    "workSummary": "论文研究一般散度型一致椭圆方程正解和正超解的定量估计。作者证明带显式系数和区域尺度依赖的 Morel--Oswald 型边界增长估计，并建立齐次与非齐次方程的全局微分 Harnack 不等式，控制 $d(x)|\\nabla u(x)|/u(x)$。",
+    "techniques": [
+      "局部归一化与边界扁平化",
+      "小系数 Morel--Oswald 引理",
+      "受控半径球覆盖与 Harnack 链",
+      "对数变换 $v=\\log u$",
+      "doubling lemma 与反证缩放",
+      "标准梯度估计和 Harnack 不等式",
+      "对偶算子与障碍函数",
+      "径向构造验证常数尖锐性"
+    ],
+    "breakthrough": "定理 2.1 给出一般 $C^{1,\\bar\\alpha}$ 有界区域和散度型算子的统一结果：正超解满足 $u(x)/d(x)$ 的显式 Morel--Oswald 下界；齐次方程满足 $d(x)|\\nabla u(x)|/u(x)$ 的全局微分 Harnack 估计；非齐次方程在 $f\\geq0$ 时增加一个含 $\\|f\\|_{L^q}$ 与加权 $L^1_d$ 范数的定量项。定理 2.2 同时给出全局边界 Harnack 不等式。结果允许一阶漂移和势项仅具有 $L^q$ 正则性，并明确展示了系数规模与区域几何的依赖。",
+    "limitations": "主要结果要求 $q>n$、主系数 Hölder 连续且区域边界为 $C^{1,\\bar\\alpha}$；作者只讨论了向 Dini 正则性的可能推广，未写出相应显式常数。非齐次微分 Harnack 中加权 $L^1_d$ 分母在高维的最优性仍未完全确定，右侧第二项前的指数常数是否尖锐也未解决。若右端项不满足非负性，梯度比值可失控；当主系数或边界仅连续而非 Hölder 时，Morel--Oswald 估计可能失败。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "定理 2.1(i) 的 Morel--Oswald 估计由局部小系数引理和有限覆盖拼接得到。",
+          "route": "引理 4.1 在归一化内球或半球型区域中构造辅助 Dirichlet 解，借助对偶算子、全局弱 Harnack 不等式和最大值原理证明 $v/d$ 控制源项的加权积分。引理 4.2 通过半径 $r=\\delta r_0$ 的缩放把原算子变成小系数形式。再用命题 8.2 选取数量受控、每个球承载固定体积的内外球覆盖，从所有局部估计中选取一个承载足够 $\\int f d$ 的球，并与全局 Harnack 下界合并，得到全局指数常数。",
+          "evidence": "第 4 节引理 4.1、公式（4.1）--（4.11），PDF 第 11--14 页；引理 4.2、公式（4.12）--（4.14），PDF 第 14--15 页；定理 2.1(i) 证明、公式（4.15）--（4.19），PDF 第 15--16 页；覆盖命题 8.2，PDF 第 31--34 页。"
+        },
+        {
+          "claim": "定理 2.1(ii)--(iii) 的微分 Harnack 估计通过局部缩放与对数变换的 doubling 反证闭合。",
+          "route": "先以 $v=\\log u$ 将方程改写为含二次梯度项的方程（5.2），并假设归一化梯度比值在某点发散。doubling lemma 选出局部近最大点 $x_k$，以 $\\rho_k=|\\nabla v_k(x_k)|^{-1}$ 缩放，使梯度在每个固定球内有界且原点梯度归一化为 $1$。系数和非齐次源项在缩放下消失，极限满足常系数方程；当 $n\\geq2$ 时指数变换得到全空间正调和函数，强制为常数；当 $n=1$ 时得到 $e^w$ 的分布意义凹性，同样与非零梯度矛盾。非齐次估计先用局部 $C^1$ 估计，再用 Morel--Oswald 下界控制 $u$ 的分母。",
+          "evidence": "第 5 节直接局部证明、公式（5.1），PDF 第 16--17 页；对数变换（5.2）、归一化量（5.3）--（5.8），PDF 第 17--18 页；缩放方程及系数消失（5.9）--（5.16），PDF 第 18--19 页；二维以上极限调和矛盾和一维凹性论证（5.17）--（5.19），PDF 第 19--20 页。"
+        },
+        {
+          "claim": "定理 2.2 的全局 Harnack 估计由边界和内部局部 Harnack 不等式沿受控 Harnack 链迭代得到。",
+          "route": "利用区域的 $C^{1,\\bar\\alpha}$ 几何，在边界点作坐标扁平化，在内部点作半径归一化，得到统一局部弱 Harnack 估计。命题 8.2 控制连接任意两覆盖球所需的链长度，沿链迭代局部估计并对覆盖球求和，得到带 geodesic diameter 和系数规模显式依赖的积分 Harnack 不等式；对满足零边界条件的解，再结合边界增长估计得到全局上界。",
+          "evidence": "第 2.2 节定理 2.2、公式（2.10）--（2.11），PDF 第 7--8 页；附录第 8 节命题 8.2 和证明，PDF 第 31--34 页；定理 2.2 证明中的链式迭代公式（8.28）--（8.31），PDF 第 34 页。"
+        },
+        {
+          "claim": "命题 1.2、命题 2.3 及第 6--7 节证明主要常数和若干范数依赖的尖锐性或失败性。",
+          "route": "通过缩放保持估计形式不变，再在单位球中构造径向函数 $u=e^{\\lambda\\phi}-1+K\\phi$，选择势项或漂移项与 $\\lambda$ 匹配，比较边界法向导数和加权源项积分，得到指数系数不能改善。第 7 节进一步构造集中源项，说明某些更强的 $L^p_d$ 替换会破坏非齐次梯度估计；第 6 节展示边界或主系数仅连续时 Hopf--Oleinik 型结论可能失效。",
+          "evidence": "命题 1.2 及公式（1.9），PDF 第 3--4 页；命题 2.3 及公式（2.12）--（2.14），PDF 第 8 页；第 6 节命题 1.2 的构造和公式（6.1）--（6.2），PDF 第 20--21 页；备注 6.1--6.2，PDF 第 21--22 页；第 7 节命题 7.1--7.3，PDF 第 22--29 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "未发现作者明确披露使用 AI、LLM 或相关工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+    "aiEvidenceSource": "已核查 PDF 摘要、正文全部章节、Acknowledgements、Conflict of interest、Data availability、References 前后的文末区域以及全文相关关键词。正文未设置 AI 使用声明；文末仅有参考文献与常规数学致谢或声明内容，未披露 AI、LLM 或相关工具用途。",
+    "priorityScore": 89,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“定量强最大原理与微分 Harnack 不等式”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 89/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12967:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12967",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Differential Harnack inequalities and maximum principles of Morel-Oswald type for elliptic PDE in divergence form",
+        "authors": [
+          "Philippe Souplet",
+          "Boyan Sirakov"
+        ],
+        "abstract": "This paper presents two types of novel, qualitative and quantitative, estimates for positive solutions of general uniformly elliptic PDEs in divergence form. First, we prove a Morel-Oswald type of extension of the Hopf-Oleinik lemma, in which in addition we specify the sharp dependence of the constant in the data of the operator and the size of the domain. Second, we establish a new differential Harnack (logarithmic gradient) estimate for non-homogeneous equations, as well as an optimal global differential Harnack estimate for homogeneous equations.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.12967",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12967",
+        "submittedAt": "2026-09-11T15:30:02Z",
+        "updatedAt": "2026-09-11T15:30:02Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "定量强最大原理与微分 Harnack 不等式",
+        "workSummary": "论文研究一般散度型一致椭圆方程正解和正超解的定量估计。作者证明带显式系数和区域尺度依赖的 Morel--Oswald 型边界增长估计，并建立齐次与非齐次方程的全局微分 Harnack 不等式，控制 $d(x)|\\nabla u(x)|/u(x)$。",
+        "techniques": [
+          "局部归一化与边界扁平化",
+          "小系数 Morel--Oswald 引理",
+          "受控半径球覆盖与 Harnack 链",
+          "对数变换 $v=\\log u$",
+          "doubling lemma 与反证缩放",
+          "标准梯度估计和 Harnack 不等式",
+          "对偶算子与障碍函数",
+          "径向构造验证常数尖锐性"
+        ],
+        "breakthrough": "定理 2.1 给出一般 $C^{1,\\bar\\alpha}$ 有界区域和散度型算子的统一结果：正超解满足 $u(x)/d(x)$ 的显式 Morel--Oswald 下界；齐次方程满足 $d(x)|\\nabla u(x)|/u(x)$ 的全局微分 Harnack 估计；非齐次方程在 $f\\geq0$ 时增加一个含 $\\|f\\|_{L^q}$ 与加权 $L^1_d$ 范数的定量项。定理 2.2 同时给出全局边界 Harnack 不等式。结果允许一阶漂移和势项仅具有 $L^q$ 正则性，并明确展示了系数规模与区域几何的依赖。",
+        "limitations": "主要结果要求 $q>n$、主系数 Hölder 连续且区域边界为 $C^{1,\\bar\\alpha}$；作者只讨论了向 Dini 正则性的可能推广，未写出相应显式常数。非齐次微分 Harnack 中加权 $L^1_d$ 分母在高维的最优性仍未完全确定，右侧第二项前的指数常数是否尖锐也未解决。若右端项不满足非负性，梯度比值可失控；当主系数或边界仅连续而非 Hölder 时，Morel--Oswald 估计可能失败。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "定理 2.1(i) 的 Morel--Oswald 估计由局部小系数引理和有限覆盖拼接得到。",
+              "route": "引理 4.1 在归一化内球或半球型区域中构造辅助 Dirichlet 解，借助对偶算子、全局弱 Harnack 不等式和最大值原理证明 $v/d$ 控制源项的加权积分。引理 4.2 通过半径 $r=\\delta r_0$ 的缩放把原算子变成小系数形式。再用命题 8.2 选取数量受控、每个球承载固定体积的内外球覆盖，从所有局部估计中选取一个承载足够 $\\int f d$ 的球，并与全局 Harnack 下界合并，得到全局指数常数。",
+              "evidence": "第 4 节引理 4.1、公式（4.1）--（4.11），PDF 第 11--14 页；引理 4.2、公式（4.12）--（4.14），PDF 第 14--15 页；定理 2.1(i) 证明、公式（4.15）--（4.19），PDF 第 15--16 页；覆盖命题 8.2，PDF 第 31--34 页。"
+            },
+            {
+              "claim": "定理 2.1(ii)--(iii) 的微分 Harnack 估计通过局部缩放与对数变换的 doubling 反证闭合。",
+              "route": "先以 $v=\\log u$ 将方程改写为含二次梯度项的方程（5.2），并假设归一化梯度比值在某点发散。doubling lemma 选出局部近最大点 $x_k$，以 $\\rho_k=|\\nabla v_k(x_k)|^{-1}$ 缩放，使梯度在每个固定球内有界且原点梯度归一化为 $1$。系数和非齐次源项在缩放下消失，极限满足常系数方程；当 $n\\geq2$ 时指数变换得到全空间正调和函数，强制为常数；当 $n=1$ 时得到 $e^w$ 的分布意义凹性，同样与非零梯度矛盾。非齐次估计先用局部 $C^1$ 估计，再用 Morel--Oswald 下界控制 $u$ 的分母。",
+              "evidence": "第 5 节直接局部证明、公式（5.1），PDF 第 16--17 页；对数变换（5.2）、归一化量（5.3）--（5.8），PDF 第 17--18 页；缩放方程及系数消失（5.9）--（5.16），PDF 第 18--19 页；二维以上极限调和矛盾和一维凹性论证（5.17）--（5.19），PDF 第 19--20 页。"
+            },
+            {
+              "claim": "定理 2.2 的全局 Harnack 估计由边界和内部局部 Harnack 不等式沿受控 Harnack 链迭代得到。",
+              "route": "利用区域的 $C^{1,\\bar\\alpha}$ 几何，在边界点作坐标扁平化，在内部点作半径归一化，得到统一局部弱 Harnack 估计。命题 8.2 控制连接任意两覆盖球所需的链长度，沿链迭代局部估计并对覆盖球求和，得到带 geodesic diameter 和系数规模显式依赖的积分 Harnack 不等式；对满足零边界条件的解，再结合边界增长估计得到全局上界。",
+              "evidence": "第 2.2 节定理 2.2、公式（2.10）--（2.11），PDF 第 7--8 页；附录第 8 节命题 8.2 和证明，PDF 第 31--34 页；定理 2.2 证明中的链式迭代公式（8.28）--（8.31），PDF 第 34 页。"
+            },
+            {
+              "claim": "命题 1.2、命题 2.3 及第 6--7 节证明主要常数和若干范数依赖的尖锐性或失败性。",
+              "route": "通过缩放保持估计形式不变，再在单位球中构造径向函数 $u=e^{\\lambda\\phi}-1+K\\phi$，选择势项或漂移项与 $\\lambda$ 匹配，比较边界法向导数和加权源项积分，得到指数系数不能改善。第 7 节进一步构造集中源项，说明某些更强的 $L^p_d$ 替换会破坏非齐次梯度估计；第 6 节展示边界或主系数仅连续时 Hopf--Oleinik 型结论可能失效。",
+              "evidence": "命题 1.2 及公式（1.9），PDF 第 3--4 页；命题 2.3 及公式（2.12）--（2.14），PDF 第 8 页；第 6 节命题 1.2 的构造和公式（6.1）--（6.2），PDF 第 20--21 页；备注 6.1--6.2，PDF 第 21--22 页；第 7 节命题 7.1--7.3，PDF 第 22--29 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "未发现作者明确披露使用 AI、LLM 或相关工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+        "aiEvidenceSource": "已核查 PDF 摘要、正文全部章节、Acknowledgements、Conflict of interest、Data availability、References 前后的文末区域以及全文相关关键词。正文未设置 AI 使用声明；文末仅有参考文献与常规数学致谢或声明内容，未披露 AI、LLM 或相关工具用途。",
+        "priorityScore": 89,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“定量强最大原理与微分 Harnack 不等式”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 89/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

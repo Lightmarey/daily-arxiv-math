@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07669",
+  "slug": "2609.07669",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07669:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07669",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Well-posedness and a sign-graph limit for an active Cahn--Hilliard equation on Riemannian manifolds",
+    "authors": [
+      "Darko Mitrovic",
+      "Andrej Novak",
+      "Ajla Sukurica"
+    ],
+    "abstract": "We establish a weak solution theory and a singular constitutive limit for a non variational Cahn Hilliard evolution on compact Riemannian manifolds, possibly with boundary. The model combines the classical double well chemical potential with an active correction concentrated in diffuse transition layers and sensitive to the sign of the Laplace Beltrami operator, together with a monotone anchoring mechanism toward a prescribed reference state. The active correction breaks the passive gradient flow structure and introduces a nonlinear dependence on second derivatives not identified by the natural weak compactness estimates. For square integrable initial data and sufficiently integrable reference data, we construct weak solutions in arbitrary dimension. A Galerkin level one sided comparison argument, using monotonicity of the classifier and anchoring law together with biharmonic coercivity, yields strong convergence of the approximate Laplacians and hence strong second order compactness. This identifies the nonlinear active term in an ordinary weak formulation, without a second derivative defect. In two dimensions we prove uniqueness and continuous dependence. The estimates depend only on the bound and monotonicity of the classifier, not on its slope, and are therefore uniform for increasingly steep arctangent classifiers. Their singular limit is governed by the maximal monotone sign graph acting on the Laplace Beltrami operator. In arbitrary dimension we obtain subsequential strong second order convergence to a weak solution of the resulting differential inclusion. In two dimensions the limiting state is unique, so the entire steep classifier family converges; uniqueness of the constitutive multiplier on the zero Laplacian set is not asserted. This is a constitutive steepness limit at fixed diffuse interface thickness, rather than a sharp interface limit.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07669",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07669",
+    "submittedAt": "2026-09-07T15:58:49Z",
+    "updatedAt": "2026-09-07T15:58:49Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "分析结果",
+    "workSummary": "本文在紧致带边界 Riemann 流形上研究含主动 constitutive 项 $a(\\Delta _g$ $u)|\\nabla _g$ u| 的非变分 Cahn–Hilliard 演化。作者先对 Galerkin 解建立能量、时间导数和双调和 coercivity 估计，关键地以 classifier 与 anchoring law 的单调性作单侧比较，获得 $\\Delta _g$ $u_m\\to \\Delta _g u$ 的强 L2 紧性，从而在普通弱形式中识别主动通量。二维时 Agmon 不等式使立方双稳势差可控，给出唯一性和稳定性；对 $a_N(r)=2\\pi ^{-1}arctan(Nr)$ 的陡峭化序列，则提取 $Sign(\\Delta _g$ u) 图的弱极限，在二维进一步由状态唯一性把子序列收敛提升为全序列收敛。",
+    "techniques": [
+      "Galerkin 逼近与双调和 coercivity",
+      "Aubin–Lions 紧性",
+      "单调性驱动的 Minty/一侧比较",
+      "二维 Agmon 不等式稳定性",
+      "最大单调 sign-graph 极限"
+    ],
+    "breakthrough": "关键突破是用 Galerkin 层面的单侧单调比较恢复二阶强紧性，避免主动项在仅有弱 $\\Delta _g u$ 紧性下产生缺陷；因此既能识别平滑 classifier 的普通弱解，也能在 classifier 斜率发散时得到 $Sign(\\Delta _g$ u) 微分包含，并区分二维状态唯一与乘子 $\\xi $ 可能非唯一。",
+    "limitations": "存在性允许任意维数但要求 q>6、紧致流形/边界条件和文中 b 的 coercive growth 假设；唯一性与连续依赖只在 $d=2。sign-graph$ 极限一般只有子序列和乘子弱收敛$，\\xi $ 在 ${\\Delta _g$ $u=0}$ 可非唯一；数值 flat-torus 实验不替代解析结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Galerkin 近似具有统一 $L2、H_D^2$ 和 Lq 界，并可提取普通弱解的强低阶收敛。",
+          "route": "测试有限维方程得到双调和项的正性、classifier 有界性和 anchoring coercivity 的能量界；时间导数落在对偶空间，Aubin–Lions 随后给出 $u_m$ 在 $H^1/L6$ 等空间的强收敛。",
+          "evidence": "第3节 Proposition 3.1–3.3（PDF 第26–32页）；Theorem 3.4 的初步紧性部分（PDF 第33–35页）。"
+        },
+        {
+          "claim": "通过单侧比较得到 $\\Delta _g$ $u_m\\to \\Delta _g u$ 强收敛，并识别主动产品 $a(\\Delta _g$ $u_m)|\\nabla u_m|$ 的极限。",
+          "route": "将 Galerkin 解与同时空正则化投影 $P_m$ $u^\\zeta $ 比较，以差值测试；classifier 单调性使 $(a(\\Delta u_m)-a(\\Delta P_m$ $u^\\zeta ))(\\Delta u_m-\\Delta P_m$ $u^\\zeta )|\\nabla u_m|\\ge 0$，双调和项吸收剩余，先取 $m\\to \\infty $ 再取 $\\zeta \\to 0$。",
+          "evidence": "第1.3节单侧比较机制（PDF 第6–7页）；Theorem 3.4、式(3.35)–(3.40)（PDF 第33–44页）。"
+        },
+        {
+          "claim": "在二维，平滑 classifier 问题的弱解唯一且连续依赖初值和参考态。",
+          "route": "对两个弱解作差并用差值测试；二维 Agmon 嵌入把 W′(u)−W′(v) 的立方项控制为 L2 差乘 $H_D^2$ 范数，主动项只需 a 的有界性，随后 Gronwall 关闭稳定性估计。",
+          "evidence": "第3.3节 Theorem 3.5（PDF 第45–47页）；式(3.73)–(3.75)（PDF 第45–46页）。"
+        },
+        {
+          "claim": "陡峭 classifier $a_N$ 收敛到 $Sign(\\Delta _g$ u) 图，且二维状态 u 的整个序列收敛。",
+          "route": "统一估计给出 subsequence 的强 $\\Delta _g$ 收敛和 $a_N(\\Delta u_N)$ 的弱星界；在 $\\Delta u>0/<0$ 集合上用点态饱和识别 $\\xi =\\pm 1$，在零集上保留 $|\\xi |\\le 1$，形成 $\\xi \\in Sign(\\Delta u)$。二维 Theorem 3.5 的状态唯一性再把子序列结论升级为全序列。",
+          "evidence": "第4节 Theorem 4.2（PDF 第51–58页）；Theorem 4.3、Corollary 4.4（PDF 第56–59页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–59页的正文、Theorem 3.4/3.5 和 4.2/4.3、数值实验、Conflict of interest、Data availability 与 References，并检索 AI/LLM 相关词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–59页全文检查，重点为第59页声明/参考文献区域及全文 AI/LLM 词项核查。",
+    "priorityScore": 69,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07669:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07669",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Well-posedness and a sign-graph limit for an active Cahn--Hilliard equation on Riemannian manifolds",
+        "authors": [
+          "Darko Mitrovic",
+          "Andrej Novak",
+          "Ajla Sukurica"
+        ],
+        "abstract": "We establish a weak solution theory and a singular constitutive limit for a non variational Cahn Hilliard evolution on compact Riemannian manifolds, possibly with boundary. The model combines the classical double well chemical potential with an active correction concentrated in diffuse transition layers and sensitive to the sign of the Laplace Beltrami operator, together with a monotone anchoring mechanism toward a prescribed reference state. The active correction breaks the passive gradient flow structure and introduces a nonlinear dependence on second derivatives not identified by the natural weak compactness estimates. For square integrable initial data and sufficiently integrable reference data, we construct weak solutions in arbitrary dimension. A Galerkin level one sided comparison argument, using monotonicity of the classifier and anchoring law together with biharmonic coercivity, yields strong convergence of the approximate Laplacians and hence strong second order compactness. This identifies the nonlinear active term in an ordinary weak formulation, without a second derivative defect. In two dimensions we prove uniqueness and continuous dependence. The estimates depend only on the bound and monotonicity of the classifier, not on its slope, and are therefore uniform for increasingly steep arctangent classifiers. Their singular limit is governed by the maximal monotone sign graph acting on the Laplace Beltrami operator. In arbitrary dimension we obtain subsequential strong second order convergence to a weak solution of the resulting differential inclusion. In two dimensions the limiting state is unique, so the entire steep classifier family converges; uniqueness of the constitutive multiplier on the zero Laplacian set is not asserted. This is a constitutive steepness limit at fixed diffuse interface thickness, rather than a sharp interface limit.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07669",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07669",
+        "submittedAt": "2026-09-07T15:58:49Z",
+        "updatedAt": "2026-09-07T15:58:49Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "分析结果",
+        "workSummary": "本文在紧致带边界 Riemann 流形上研究含主动 constitutive 项 $a(\\Delta _g$ $u)|\\nabla _g$ u| 的非变分 Cahn–Hilliard 演化。作者先对 Galerkin 解建立能量、时间导数和双调和 coercivity 估计，关键地以 classifier 与 anchoring law 的单调性作单侧比较，获得 $\\Delta _g$ $u_m\\to \\Delta _g u$ 的强 L2 紧性，从而在普通弱形式中识别主动通量。二维时 Agmon 不等式使立方双稳势差可控，给出唯一性和稳定性；对 $a_N(r)=2\\pi ^{-1}arctan(Nr)$ 的陡峭化序列，则提取 $Sign(\\Delta _g$ u) 图的弱极限，在二维进一步由状态唯一性把子序列收敛提升为全序列收敛。",
+        "techniques": [
+          "Galerkin 逼近与双调和 coercivity",
+          "Aubin–Lions 紧性",
+          "单调性驱动的 Minty/一侧比较",
+          "二维 Agmon 不等式稳定性",
+          "最大单调 sign-graph 极限"
+        ],
+        "breakthrough": "关键突破是用 Galerkin 层面的单侧单调比较恢复二阶强紧性，避免主动项在仅有弱 $\\Delta _g u$ 紧性下产生缺陷；因此既能识别平滑 classifier 的普通弱解，也能在 classifier 斜率发散时得到 $Sign(\\Delta _g$ u) 微分包含，并区分二维状态唯一与乘子 $\\xi $ 可能非唯一。",
+        "limitations": "存在性允许任意维数但要求 q>6、紧致流形/边界条件和文中 b 的 coercive growth 假设；唯一性与连续依赖只在 $d=2。sign-graph$ 极限一般只有子序列和乘子弱收敛$，\\xi $ 在 ${\\Delta _g$ $u=0}$ 可非唯一；数值 flat-torus 实验不替代解析结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Galerkin 近似具有统一 $L2、H_D^2$ 和 Lq 界，并可提取普通弱解的强低阶收敛。",
+              "route": "测试有限维方程得到双调和项的正性、classifier 有界性和 anchoring coercivity 的能量界；时间导数落在对偶空间，Aubin–Lions 随后给出 $u_m$ 在 $H^1/L6$ 等空间的强收敛。",
+              "evidence": "第3节 Proposition 3.1–3.3（PDF 第26–32页）；Theorem 3.4 的初步紧性部分（PDF 第33–35页）。"
+            },
+            {
+              "claim": "通过单侧比较得到 $\\Delta _g$ $u_m\\to \\Delta _g u$ 强收敛，并识别主动产品 $a(\\Delta _g$ $u_m)|\\nabla u_m|$ 的极限。",
+              "route": "将 Galerkin 解与同时空正则化投影 $P_m$ $u^\\zeta $ 比较，以差值测试；classifier 单调性使 $(a(\\Delta u_m)-a(\\Delta P_m$ $u^\\zeta ))(\\Delta u_m-\\Delta P_m$ $u^\\zeta )|\\nabla u_m|\\ge 0$，双调和项吸收剩余，先取 $m\\to \\infty $ 再取 $\\zeta \\to 0$。",
+              "evidence": "第1.3节单侧比较机制（PDF 第6–7页）；Theorem 3.4、式(3.35)–(3.40)（PDF 第33–44页）。"
+            },
+            {
+              "claim": "在二维，平滑 classifier 问题的弱解唯一且连续依赖初值和参考态。",
+              "route": "对两个弱解作差并用差值测试；二维 Agmon 嵌入把 W′(u)−W′(v) 的立方项控制为 L2 差乘 $H_D^2$ 范数，主动项只需 a 的有界性，随后 Gronwall 关闭稳定性估计。",
+              "evidence": "第3.3节 Theorem 3.5（PDF 第45–47页）；式(3.73)–(3.75)（PDF 第45–46页）。"
+            },
+            {
+              "claim": "陡峭 classifier $a_N$ 收敛到 $Sign(\\Delta _g$ u) 图，且二维状态 u 的整个序列收敛。",
+              "route": "统一估计给出 subsequence 的强 $\\Delta _g$ 收敛和 $a_N(\\Delta u_N)$ 的弱星界；在 $\\Delta u>0/<0$ 集合上用点态饱和识别 $\\xi =\\pm 1$，在零集上保留 $|\\xi |\\le 1$，形成 $\\xi \\in Sign(\\Delta u)$。二维 Theorem 3.5 的状态唯一性再把子序列结论升级为全序列。",
+              "evidence": "第4节 Theorem 4.2（PDF 第51–58页）；Theorem 4.3、Corollary 4.4（PDF 第56–59页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–59页的正文、Theorem 3.4/3.5 和 4.2/4.3、数值实验、Conflict of interest、Data availability 与 References，并检索 AI/LLM 相关词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–59页全文检查，重点为第59页声明/参考文献区域及全文 AI/LLM 词项核查。",
+        "priorityScore": 69,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

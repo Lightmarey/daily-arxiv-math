@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08845",
+  "slug": "2609.08845",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08845:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08845",
+    "version": 1,
+    "entryKind": "new",
+    "title": "On 2D Scattering for a Critical Nonlinear Schrödinger Flow",
+    "authors": [
+      "Vladimir Georgiev",
+      "Tohru Ozawa"
+    ],
+    "abstract": "We study modified scattering for the two-dimensional defocusing nonlinear Schrödinger equation (NLS) with the gauge-invariant, scattering-critical nonlinearity $|u|u$. We prove that the remodulated interaction representation has a local $L^2$ limit for general data in $Σ=H^1\\cap\\F^{-1}H^1$. For radial data, we prove convergence in $L^p(\\R^2)$ for every $2<p<\\infty$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08845",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08845",
+    "submittedAt": "2026-09-08T15:00:56Z",
+    "updatedAt": "2026-09-08T15:00:56Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "本文研究二维 defocusing、散射临界非线性 |u|u 的 NLS 在一般 $\\Sigma =H^1\\cap F^{-1}H^1$ 数据下的 modified scattering，并在径向数据下加强到所有 $2<p<\\infty $ 的 $L^p$ 收敛。作者先利用已有的 Fourier-side modified profile 极限，把自由演化 U(−t) 与非线性长程相位 $e^{i\\Phi _t(u)}$ 分离；通过 dyadic annulus 分解将 $F^{-1}(\\dot$ $B^{-1}_{2,\\infty })$ 收敛转换成局部 $L^2$ 和加权 $L^2$ 收敛。径向部分把修正 profile 分解成三个由 $(1-\\Delta )^{-1}$ 控制的项，利用径向性保持、二维散射估计和 Strauss–Lions 点态衰减得到远场 $L^p$ 收敛，再以局部 $L^\\infty $ 有界性与局部 $L^2$ 收敛插值处理原点。",
+    "techniques": [
+      "长程相位修正的 interaction representation",
+      "Fourier-side homogeneous Besov/dyadic 分解",
+      "$(1-\\Delta )^{-1}$ resolvent 三项分解",
+      "径向 spherical-harmonic 保持",
+      "Strauss–Lions 衰减与局部插值"
+    ],
+    "breakthrough": "论文把大数据二维临界 NLS 的 modified scattering 从局部/加权 $L^2$ 结论推进到径向数据的全局 $L^p$ 收敛：径向性使非线性相位导数项落入可控的 degree-one spherical-harmonic sector，配合 resolvent 分解提供远场衰减，而局部 $L^2$ 结论补足了原点区域。",
+    "limitations": "一般数据结论是局部 $L^2$ 与加权 $L^2$ 收敛，所有 $L^p（2<p<\\infty ）$的增强需要径向对称性和额外 $F^{-1}H^1$ 条件。结果针对二维 defocusing 的 |u|u 临界流及已知的全局解，不覆盖非径向大数据的全局 $L^p$ 收敛、聚焦情形或散射算子的逆构造。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "任意满足 $F^{-1}H^1$ 的全局解存在唯一修正散射态 $u_+$，并在局部 $L^2$ 与加权 $L^2$ 中收敛。",
+          "route": "调用 Fourier-side interaction representation 的 Besov 极限，令 $g_t=U(-t)e^{i\\Phi _t(u)}u(t)-u_+$；对空间 dyadic annulus $A_j$ 分别估计其 $L^{2}$ 质量。低频环的几何面积给局部半径因子，高频环乘 $⟨x⟩^{-s}$ 后形成可求和级数，于是 Besov 极限推出局部和加权 $L^{2}$ 收敛。",
+          "evidence": "PDF 第3–5页 Theorem 1.1、Theorem 2.1 及公式(2.1)–(2.2)。"
+        },
+        {
+          "claim": "径向解的修正 profile v(t) 可分成三个保持径向/角动量结构的 resolvent 项。",
+          "route": "由 $(1-\\Delta )^{-1}(1-\\Delta )=I$ 把 v 写成 $f_1+f_2+f_3$；相位和解的径向性使 $f_2、f_3$ 保持径向，而相位梯度乘 u 是 degree-one spherical-harmonic 向量场，Appendix C 的谱保持性质再使散度后的 $f_1$ 径向。",
+          "evidence": "PDF 第6–8页 Section 2.2–2.3、公式(2.3)、Lemma 2.1–2.2 及 Appendix C 的 Proposition C.1。"
+        },
+        {
+          "claim": "三个分量具有足够的 Sobolev/衰减控制以得到远场 $L^p$ 收敛。",
+          "route": "对 $f_1$ 使用二维 dispersive $estimate、(1-\\Delta )^{-1}\\nabla \\cdot $ 的 $L^q\\to W^{1,q}$ 有界性和相位梯度的 Hölder 分解，得到 $t^{-1/2+2/q}$ 衰减$；f_2、f_3$ 由酉性和 $H^1$ 守恒获得 $H^1、H^2$ 界。径向 Strauss–Lions 估计把 $W^{1,q}$ 界变成 $|x|^{-1/q}$ 点态衰减，进而控制 |x|>1 的加权 $L^p$ 差。",
+          "evidence": "PDF 第6–9页 Lemma 2.1 的公式(2.4)、Section 2.3 的径向 Strauss–Lions 估计及相应远场加权界。"
+        },
+        {
+          "claim": "径向 modified profile 在每个 $2<p<\\infty $ 中收敛到 $u_+$。",
+          "route": "远场部分由上一步的点态和加权 Hölder 插值趋于零；原点部分沿用 Theorem 1.1 的局部 $L^{2}$ 收敛，并用 $f_i$ 的局部 $W^{1,q}/L^\\infty $ 统一界做 $L^{2}–L^\\infty $ 插值。两区域合并得到全空间 $L^p$ 收敛，同时唯一性来自局部 $L^{2}$ 极限。",
+          "evidence": "PDF 第9–10页 Theorem 1.2 的证明、局部/远场分解和 $L^{2}–L^\\infty $ 插值结尾。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–21页摘要、主定理证明、Appendix A–C、Acknowledgements 和 References，并检索 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–21页全文核查，重点为第18–20页 Appendices、第20页 Acknowledgements 和末尾 References。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08845:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08845",
+        "version": 1,
+        "entryKind": "new",
+        "title": "On 2D Scattering for a Critical Nonlinear Schrödinger Flow",
+        "authors": [
+          "Vladimir Georgiev",
+          "Tohru Ozawa"
+        ],
+        "abstract": "We study modified scattering for the two-dimensional defocusing nonlinear Schrödinger equation (NLS) with the gauge-invariant, scattering-critical nonlinearity $|u|u$. We prove that the remodulated interaction representation has a local $L^2$ limit for general data in $Σ=H^1\\cap\\F^{-1}H^1$. For radial data, we prove convergence in $L^p(\\R^2)$ for every $2<p<\\infty$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08845",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08845",
+        "submittedAt": "2026-09-08T15:00:56Z",
+        "updatedAt": "2026-09-08T15:00:56Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "本文研究二维 defocusing、散射临界非线性 |u|u 的 NLS 在一般 $\\Sigma =H^1\\cap F^{-1}H^1$ 数据下的 modified scattering，并在径向数据下加强到所有 $2<p<\\infty $ 的 $L^p$ 收敛。作者先利用已有的 Fourier-side modified profile 极限，把自由演化 U(−t) 与非线性长程相位 $e^{i\\Phi _t(u)}$ 分离；通过 dyadic annulus 分解将 $F^{-1}(\\dot$ $B^{-1}_{2,\\infty })$ 收敛转换成局部 $L^2$ 和加权 $L^2$ 收敛。径向部分把修正 profile 分解成三个由 $(1-\\Delta )^{-1}$ 控制的项，利用径向性保持、二维散射估计和 Strauss–Lions 点态衰减得到远场 $L^p$ 收敛，再以局部 $L^\\infty $ 有界性与局部 $L^2$ 收敛插值处理原点。",
+        "techniques": [
+          "长程相位修正的 interaction representation",
+          "Fourier-side homogeneous Besov/dyadic 分解",
+          "$(1-\\Delta )^{-1}$ resolvent 三项分解",
+          "径向 spherical-harmonic 保持",
+          "Strauss–Lions 衰减与局部插值"
+        ],
+        "breakthrough": "论文把大数据二维临界 NLS 的 modified scattering 从局部/加权 $L^2$ 结论推进到径向数据的全局 $L^p$ 收敛：径向性使非线性相位导数项落入可控的 degree-one spherical-harmonic sector，配合 resolvent 分解提供远场衰减，而局部 $L^2$ 结论补足了原点区域。",
+        "limitations": "一般数据结论是局部 $L^2$ 与加权 $L^2$ 收敛，所有 $L^p（2<p<\\infty ）$的增强需要径向对称性和额外 $F^{-1}H^1$ 条件。结果针对二维 defocusing 的 |u|u 临界流及已知的全局解，不覆盖非径向大数据的全局 $L^p$ 收敛、聚焦情形或散射算子的逆构造。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "任意满足 $F^{-1}H^1$ 的全局解存在唯一修正散射态 $u_+$，并在局部 $L^2$ 与加权 $L^2$ 中收敛。",
+              "route": "调用 Fourier-side interaction representation 的 Besov 极限，令 $g_t=U(-t)e^{i\\Phi _t(u)}u(t)-u_+$；对空间 dyadic annulus $A_j$ 分别估计其 $L^{2}$ 质量。低频环的几何面积给局部半径因子，高频环乘 $⟨x⟩^{-s}$ 后形成可求和级数，于是 Besov 极限推出局部和加权 $L^{2}$ 收敛。",
+              "evidence": "PDF 第3–5页 Theorem 1.1、Theorem 2.1 及公式(2.1)–(2.2)。"
+            },
+            {
+              "claim": "径向解的修正 profile v(t) 可分成三个保持径向/角动量结构的 resolvent 项。",
+              "route": "由 $(1-\\Delta )^{-1}(1-\\Delta )=I$ 把 v 写成 $f_1+f_2+f_3$；相位和解的径向性使 $f_2、f_3$ 保持径向，而相位梯度乘 u 是 degree-one spherical-harmonic 向量场，Appendix C 的谱保持性质再使散度后的 $f_1$ 径向。",
+              "evidence": "PDF 第6–8页 Section 2.2–2.3、公式(2.3)、Lemma 2.1–2.2 及 Appendix C 的 Proposition C.1。"
+            },
+            {
+              "claim": "三个分量具有足够的 Sobolev/衰减控制以得到远场 $L^p$ 收敛。",
+              "route": "对 $f_1$ 使用二维 dispersive $estimate、(1-\\Delta )^{-1}\\nabla \\cdot $ 的 $L^q\\to W^{1,q}$ 有界性和相位梯度的 Hölder 分解，得到 $t^{-1/2+2/q}$ 衰减$；f_2、f_3$ 由酉性和 $H^1$ 守恒获得 $H^1、H^2$ 界。径向 Strauss–Lions 估计把 $W^{1,q}$ 界变成 $|x|^{-1/q}$ 点态衰减，进而控制 |x|>1 的加权 $L^p$ 差。",
+              "evidence": "PDF 第6–9页 Lemma 2.1 的公式(2.4)、Section 2.3 的径向 Strauss–Lions 估计及相应远场加权界。"
+            },
+            {
+              "claim": "径向 modified profile 在每个 $2<p<\\infty $ 中收敛到 $u_+$。",
+              "route": "远场部分由上一步的点态和加权 Hölder 插值趋于零；原点部分沿用 Theorem 1.1 的局部 $L^{2}$ 收敛，并用 $f_i$ 的局部 $W^{1,q}/L^\\infty $ 统一界做 $L^{2}–L^\\infty $ 插值。两区域合并得到全空间 $L^p$ 收敛，同时唯一性来自局部 $L^{2}$ 极限。",
+              "evidence": "PDF 第9–10页 Theorem 1.2 的证明、局部/远场分解和 $L^{2}–L^\\infty $ 插值结尾。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–21页摘要、主定理证明、Appendix A–C、Acknowledgements 和 References，并检索 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–21页全文核查，重点为第18–20页 Appendices、第20页 Acknowledgements 和末尾 References。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

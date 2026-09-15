@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28132",
+  "slug": "2608.28132",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28132:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28132",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Observability for Wave Equations with Critically Singular Potentials",
+    "authors": [
+      "Vaibhav Kumar Jena",
+      "Arick Shao"
+    ],
+    "abstract": "In this article, we prove boundary observability estimates for wave equations on bounded domains $Ω\\subseteq \\mathbb{R}^n$, with a critically singular potential that diverges as the inverse square distance to $\\partial Ω$. The result is applicable in all dimensions, and the key geometric assumption is a convexity condition on $Ω$. The main tool for our result is a global Carleman estimate that is carefully adapted to the critical singular nature of the potential.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28132",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28132",
+    "submittedAt": "2026-08-28T09:50:07Z",
+    "updatedAt": "2026-08-28T09:50:07Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "theoretical",
+    "workSummary": "论文为带临界逆平方边界势的有界域波方程建立边界观测性估计。由于解在边界同时具有加权 Dirichlet/Neumann 痕迹，作者先引入满足切向凸性的 convex boundary defining function，并用 Hardy 不等式处理 $d\\Gamma ^{-2}$ 权；核心是一个带双指数权的全局 Carleman 估计，权函数的 1+q 次方精确匹配奇异边界行为。为消除权在单个临界点附近的负零阶项，构造临界点不同的第二个边界定义函数并将两份估计相加，最后用时间截断和能量传播推出观测边界通量控制初始能量。",
+    "techniques": [
+      "临界逆平方势的加权 Dirichlet/Neumann 痕迹",
+      "convex boundary defining function 与 Hardy 不等式",
+      "双指数 Carleman 权和共轭算子",
+      "两套不同临界点权函数的负项吸收",
+      "时间截断、能量估计与边界观测性"
+    ],
+    "breakthrough": "正文构造了只要求边界定义函数切向凸性的双指数 Carleman 权，并通过第二个临界点不同的权吸收第一个权在零阶项上的负贡献；这使临界奇异势下的全局 Carleman 估计能够控制加权 Neumann 边界迹，并转化为长时间边界可观测性。",
+    "limitations": "观测结论要求域满足 convex boundary defining function 条件、解满足边界 admissibility 和有限扭曲 H2 能量、观测时间足够大且势/漂移系数满足假设。作者未宣称短时间、非凸域或不具备这些加权边界正则性的弱解也有同样估计。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "奇异波算子的边界项可由加权 Hardy 和 admissibility 条件解释。",
+          "route": "将普通边界痕迹替换为 $D_q、N_q$ 的 $d\\Gamma $ 幂次极限，利用 $y=d\\Gamma $ 近边界和 Hardy 不等式把 $y^{-2}u^2$ 控制到梯度能量；这保证后续分部积分的边界极限存在。",
+          "evidence": "PDF 第6页定义1.9–1.10和命题1.11给出痕迹/可容许条件；PDF 第12页命题2.9–引理2.10给出 Hardy 与点态加权估计。"
+        },
+        {
+          "claim": "单个 boundary defining function 产生带 Neumann 通量的局部 Carleman 正性。",
+          "route": "以 $f=a-exp(h)$ 共轭 $□\\sigma $，使用主部为 $\\nabla f$ 的乘子并分部积分；h 中 $y^{1+q}$ 的幂与边界 admissibility 精确配对，切向凸性把一阶导数项变成正量，边界极限留下 $N_q u$。",
+          "evidence": "PDF 第8页式(1.8)–(1.9)说明权、乘子和正性来源；PDF 第13–22页定理3.1的逐项分部积分证明得到局部 Carleman 边界项。"
+        },
+        {
+          "claim": "两套临界点不同的权函数可吸收各自临界点附近的负零阶项。",
+          "route": "对 y1 和扰动得到的 y2 分别应用局部估计；y1 的负项只集中在 x1,* 附近，而 y2 在该处正、反之亦然，通过匹配 $\\beta _{1}、\\beta _{2}$ 的指数权把两类负项转移到对方正项。",
+          "evidence": "PDF 第9页说明两个临界点的吸收机制；PDF 第11–12页引理2.8构造不同临界点的 boundary defining pair，PDF 第23–25页引理3.2合并两份估计。"
+        },
+        {
+          "claim": "获得全局 Carleman 估计，控制内部能量和加权 Neumann 观测。",
+          "route": "在时间端点附近引入只依赖 t 的 cutoff $\\psi $，使主区间 $\\psi =1$、端点区 $\\psi =0$；将 $P\\sigma ,y(\\psi u)$ 展开成原方程、cutoff 导数和势项，端点误差用能量界控制，再取 $\\lambda $ 足够大吸收到左侧。",
+          "evidence": "PDF 第25–27页定理3.3证明及式(3.48)–(3.55)，逐项估计散度恒等式的边界与体项并完成全局 Carleman 不等式。"
+        },
+        {
+          "claim": "全局 Carleman 估计推出 Theorem 1.13 的边界可观测性。",
+          "route": "把定理3.3应用于 $\\psi u$，在核心时间区保留 $\\nabla x$ $u、\\partial t u$ 和 $y^{-2}u^2$；用能量传播比较 $t=0$ 与核心区能量，再吸收端点时间层误差，得到观测 $N_q u$ 的积分下界控制初始能量。",
+          "evidence": "PDF 第27–30页“Proof of Theorem 1.13”，式(4.1)–(4.6)明确完成 cutoff、能量传播和观测边界项吸收。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文核查引言、定理、Carleman 证明、观测性证明、致谢、正文末尾和参考文献，并搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly。PDF 第9页仅为作者致谢，未见作者明确声明将 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第1–32页逐页全文核查，重点复核 PDF 第9页致谢、PDF 第30–32页证明末尾/作者信息和声明区域；未见 AI 使用披露。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28132:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28132",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Observability for Wave Equations with Critically Singular Potentials",
+        "authors": [
+          "Vaibhav Kumar Jena",
+          "Arick Shao"
+        ],
+        "abstract": "In this article, we prove boundary observability estimates for wave equations on bounded domains $Ω\\subseteq \\mathbb{R}^n$, with a critically singular potential that diverges as the inverse square distance to $\\partial Ω$. The result is applicable in all dimensions, and the key geometric assumption is a convexity condition on $Ω$. The main tool for our result is a global Carleman estimate that is carefully adapted to the critical singular nature of the potential.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28132",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28132",
+        "submittedAt": "2026-08-28T09:50:07Z",
+        "updatedAt": "2026-08-28T09:50:07Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "theoretical",
+        "workSummary": "论文为带临界逆平方边界势的有界域波方程建立边界观测性估计。由于解在边界同时具有加权 Dirichlet/Neumann 痕迹，作者先引入满足切向凸性的 convex boundary defining function，并用 Hardy 不等式处理 $d\\Gamma ^{-2}$ 权；核心是一个带双指数权的全局 Carleman 估计，权函数的 1+q 次方精确匹配奇异边界行为。为消除权在单个临界点附近的负零阶项，构造临界点不同的第二个边界定义函数并将两份估计相加，最后用时间截断和能量传播推出观测边界通量控制初始能量。",
+        "techniques": [
+          "临界逆平方势的加权 Dirichlet/Neumann 痕迹",
+          "convex boundary defining function 与 Hardy 不等式",
+          "双指数 Carleman 权和共轭算子",
+          "两套不同临界点权函数的负项吸收",
+          "时间截断、能量估计与边界观测性"
+        ],
+        "breakthrough": "正文构造了只要求边界定义函数切向凸性的双指数 Carleman 权，并通过第二个临界点不同的权吸收第一个权在零阶项上的负贡献；这使临界奇异势下的全局 Carleman 估计能够控制加权 Neumann 边界迹，并转化为长时间边界可观测性。",
+        "limitations": "观测结论要求域满足 convex boundary defining function 条件、解满足边界 admissibility 和有限扭曲 H2 能量、观测时间足够大且势/漂移系数满足假设。作者未宣称短时间、非凸域或不具备这些加权边界正则性的弱解也有同样估计。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "奇异波算子的边界项可由加权 Hardy 和 admissibility 条件解释。",
+              "route": "将普通边界痕迹替换为 $D_q、N_q$ 的 $d\\Gamma $ 幂次极限，利用 $y=d\\Gamma $ 近边界和 Hardy 不等式把 $y^{-2}u^2$ 控制到梯度能量；这保证后续分部积分的边界极限存在。",
+              "evidence": "PDF 第6页定义1.9–1.10和命题1.11给出痕迹/可容许条件；PDF 第12页命题2.9–引理2.10给出 Hardy 与点态加权估计。"
+            },
+            {
+              "claim": "单个 boundary defining function 产生带 Neumann 通量的局部 Carleman 正性。",
+              "route": "以 $f=a-exp(h)$ 共轭 $□\\sigma $，使用主部为 $\\nabla f$ 的乘子并分部积分；h 中 $y^{1+q}$ 的幂与边界 admissibility 精确配对，切向凸性把一阶导数项变成正量，边界极限留下 $N_q u$。",
+              "evidence": "PDF 第8页式(1.8)–(1.9)说明权、乘子和正性来源；PDF 第13–22页定理3.1的逐项分部积分证明得到局部 Carleman 边界项。"
+            },
+            {
+              "claim": "两套临界点不同的权函数可吸收各自临界点附近的负零阶项。",
+              "route": "对 y1 和扰动得到的 y2 分别应用局部估计；y1 的负项只集中在 x1,* 附近，而 y2 在该处正、反之亦然，通过匹配 $\\beta _{1}、\\beta _{2}$ 的指数权把两类负项转移到对方正项。",
+              "evidence": "PDF 第9页说明两个临界点的吸收机制；PDF 第11–12页引理2.8构造不同临界点的 boundary defining pair，PDF 第23–25页引理3.2合并两份估计。"
+            },
+            {
+              "claim": "获得全局 Carleman 估计，控制内部能量和加权 Neumann 观测。",
+              "route": "在时间端点附近引入只依赖 t 的 cutoff $\\psi $，使主区间 $\\psi =1$、端点区 $\\psi =0$；将 $P\\sigma ,y(\\psi u)$ 展开成原方程、cutoff 导数和势项，端点误差用能量界控制，再取 $\\lambda $ 足够大吸收到左侧。",
+              "evidence": "PDF 第25–27页定理3.3证明及式(3.48)–(3.55)，逐项估计散度恒等式的边界与体项并完成全局 Carleman 不等式。"
+            },
+            {
+              "claim": "全局 Carleman 估计推出 Theorem 1.13 的边界可观测性。",
+              "route": "把定理3.3应用于 $\\psi u$，在核心时间区保留 $\\nabla x$ $u、\\partial t u$ 和 $y^{-2}u^2$；用能量传播比较 $t=0$ 与核心区能量，再吸收端点时间层误差，得到观测 $N_q u$ 的积分下界控制初始能量。",
+              "evidence": "PDF 第27–30页“Proof of Theorem 1.13”，式(4.1)–(4.6)明确完成 cutoff、能量传播和观测边界项吸收。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文核查引言、定理、Carleman 证明、观测性证明、致谢、正文末尾和参考文献，并搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly。PDF 第9页仅为作者致谢，未见作者明确声明将 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第1–32页逐页全文核查，重点复核 PDF 第9页致谢、PDF 第30–32页证明末尾/作者信息和声明区域；未见 AI 使用披露。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

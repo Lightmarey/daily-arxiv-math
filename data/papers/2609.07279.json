@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07279",
+  "slug": "2609.07279",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07279:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07279",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Generalized functions in a Non-Archimedean field",
+    "authors": [
+      "Vieri Benci"
+    ],
+    "abstract": "Ultrafunctions are generalized functions defined on a non-Archimedean field extending R. They provide a framework for treating problems that fall outside the classical theory of distributions. In this paper we introduce an improved notion of ultrafunctions which refines the previous constructions. This new approach allows a more flexible functional framework than the one used in other papers and yields a more flexible functional setting. In particular, this approach allows us to prove the existence of ultrafunction solutions for several classes of ill-posed evolution problems arising in partial differential equations.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07279",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07279",
+    "submittedAt": "2026-09-07T09:39:40Z",
+    "updatedAt": "2026-09-07T09:39:40Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文提出在扩张实数的非阿基米德域上构造改进 ultrafunction 的统一框架。作者先建立有序非阿基米德场、Lambda-limit 和 Euclidean numbers，再以 hyperfinite 函数空间定义点值积分、广义导数、正则/光滑子空间及反导数；多变量部分证明积分、Poincare 不等式、Gauss 散度定理和与 Schwartz 分布的对应。应用章节把该框架用于边值问题、变分最小化和 ill-posed 演化方程，最后给出 hyperfinite grid 模型与逼近引理。",
+    "techniques": [
+      "Lambda-limit 与非阿基米德场",
+      "hyperfinite 网格和内部函数空间",
+      "点值积分与广义导数",
+      "分布嵌入及 Gauss 散度定理",
+      "超函数 Galerkin 型演化构造"
+    ],
+    "breakthrough": "通过新的内部函数空间和 step derivative 设计，作者在同一超函数框架内同时保留点值代数、分布对应和时间依赖演化，并将其用于经典分布理论无法直接处理的 ill-posed PDE。",
+    "limitations": "理论依赖选定的非阿基米德扩域、Lambda-limit 和超函数模型，若干模型选择会影响表示；应用中的解是 ultrafunction 意义下的广义解，不能自动等同于经典或 Schwartz 分布解。部分结构性结果在特定基函数/网格假设下成立，稳定性和唯一性需逐个方程验证。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lambda-limit 和 Euclidean number 结构为超有限函数空间提供闭合的内部运算和标准部分。",
+          "route": "从有序非阿基米德域的有限元与无穷小元出发，定义有限维函数族的 Lambda-limit；对有限数取 standard part，并用有限子集过滤保持线性、乘法和积分极限规则。",
+          "evidence": "PDF 第 4-12 页 Sections 2.1-2.4、Theorem 2.5、Proposition 2.12、Proposition 2.13。"
+        },
+        {
+          "claim": "一维 ultrafunction 空间存在点值积分、广义导数和反导数，且满足分部积分等基本微积分关系。",
+          "route": "在 hyperfinite 网格上选择 delta 基并由对偶配对定义 pointwise integral；投影经典导数得到 generalized derivative，利用内部基的有限维线性代数建立 integration-by-parts 和 antiderivative 表示。",
+          "evidence": "PDF 第 13-28 页 Sections 3.1-3.7、Proposition 3.3、Theorems 3.4、3.6、3.10、3.15。"
+        },
+        {
+          "claim": "多变量超函数满足 Poincare 不等式、广义 Gauss 散度公式，并能嵌入分布导数。",
+          "route": "把一维积分和导数按坐标张量化，借连通性与内部网格路径构造 Poincare 控制；边界附近的 vicinity 分解给出散度边界项，定义 distribution-like ultrafunction 映射后验证导数交换关系。",
+          "evidence": "PDF 第 29-46 页 Sections 4.1-4.10、Theorem 4.9、Theorems 4.13-4.15、Propositions 4.17-4.21。"
+        },
+        {
+          "claim": "在超函数空间中，边值、变分和演化 PDE 可获得内部解，而经典解存在时该解与其自然嵌入相容。",
+          "route": "将 PDE 算子限制到 hyperfinite/ultrafunction 子空间，用有限维方程或 coercive 能量最小化得到解；时间依赖时用局部 Lipschitz 的内部 ODE 逐步延拓，分布嵌入和标准部分把经典解相容性连接回去。",
+          "evidence": "PDF 第 47-60 页 Sections 5.1-5.6、Theorems 5.1、5.3、5.5-5.9；第 61-70 页 Section 6、Theorem 6.4、Lemma 6.2。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、非阿基米德基础、超函数构造、PDE 应用、附录和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未发现作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-74 页全文检索及第 71-74 页 Appendix、References。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07279:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07279",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Generalized functions in a Non-Archimedean field",
+        "authors": [
+          "Vieri Benci"
+        ],
+        "abstract": "Ultrafunctions are generalized functions defined on a non-Archimedean field extending R. They provide a framework for treating problems that fall outside the classical theory of distributions. In this paper we introduce an improved notion of ultrafunctions which refines the previous constructions. This new approach allows a more flexible functional framework than the one used in other papers and yields a more flexible functional setting. In particular, this approach allows us to prove the existence of ultrafunction solutions for several classes of ill-posed evolution problems arising in partial differential equations.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07279",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07279",
+        "submittedAt": "2026-09-07T09:39:40Z",
+        "updatedAt": "2026-09-07T09:39:40Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文提出在扩张实数的非阿基米德域上构造改进 ultrafunction 的统一框架。作者先建立有序非阿基米德场、Lambda-limit 和 Euclidean numbers，再以 hyperfinite 函数空间定义点值积分、广义导数、正则/光滑子空间及反导数；多变量部分证明积分、Poincare 不等式、Gauss 散度定理和与 Schwartz 分布的对应。应用章节把该框架用于边值问题、变分最小化和 ill-posed 演化方程，最后给出 hyperfinite grid 模型与逼近引理。",
+        "techniques": [
+          "Lambda-limit 与非阿基米德场",
+          "hyperfinite 网格和内部函数空间",
+          "点值积分与广义导数",
+          "分布嵌入及 Gauss 散度定理",
+          "超函数 Galerkin 型演化构造"
+        ],
+        "breakthrough": "通过新的内部函数空间和 step derivative 设计，作者在同一超函数框架内同时保留点值代数、分布对应和时间依赖演化，并将其用于经典分布理论无法直接处理的 ill-posed PDE。",
+        "limitations": "理论依赖选定的非阿基米德扩域、Lambda-limit 和超函数模型，若干模型选择会影响表示；应用中的解是 ultrafunction 意义下的广义解，不能自动等同于经典或 Schwartz 分布解。部分结构性结果在特定基函数/网格假设下成立，稳定性和唯一性需逐个方程验证。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lambda-limit 和 Euclidean number 结构为超有限函数空间提供闭合的内部运算和标准部分。",
+              "route": "从有序非阿基米德域的有限元与无穷小元出发，定义有限维函数族的 Lambda-limit；对有限数取 standard part，并用有限子集过滤保持线性、乘法和积分极限规则。",
+              "evidence": "PDF 第 4-12 页 Sections 2.1-2.4、Theorem 2.5、Proposition 2.12、Proposition 2.13。"
+            },
+            {
+              "claim": "一维 ultrafunction 空间存在点值积分、广义导数和反导数，且满足分部积分等基本微积分关系。",
+              "route": "在 hyperfinite 网格上选择 delta 基并由对偶配对定义 pointwise integral；投影经典导数得到 generalized derivative，利用内部基的有限维线性代数建立 integration-by-parts 和 antiderivative 表示。",
+              "evidence": "PDF 第 13-28 页 Sections 3.1-3.7、Proposition 3.3、Theorems 3.4、3.6、3.10、3.15。"
+            },
+            {
+              "claim": "多变量超函数满足 Poincare 不等式、广义 Gauss 散度公式，并能嵌入分布导数。",
+              "route": "把一维积分和导数按坐标张量化，借连通性与内部网格路径构造 Poincare 控制；边界附近的 vicinity 分解给出散度边界项，定义 distribution-like ultrafunction 映射后验证导数交换关系。",
+              "evidence": "PDF 第 29-46 页 Sections 4.1-4.10、Theorem 4.9、Theorems 4.13-4.15、Propositions 4.17-4.21。"
+            },
+            {
+              "claim": "在超函数空间中，边值、变分和演化 PDE 可获得内部解，而经典解存在时该解与其自然嵌入相容。",
+              "route": "将 PDE 算子限制到 hyperfinite/ultrafunction 子空间，用有限维方程或 coercive 能量最小化得到解；时间依赖时用局部 Lipschitz 的内部 ODE 逐步延拓，分布嵌入和标准部分把经典解相容性连接回去。",
+              "evidence": "PDF 第 47-60 页 Sections 5.1-5.6、Theorems 5.1、5.3、5.5-5.9；第 61-70 页 Section 6、Theorem 6.4、Lemma 6.2。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、非阿基米德基础、超函数构造、PDE 应用、附录和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未发现作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-74 页全文检索及第 71-74 页 Appendix、References。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

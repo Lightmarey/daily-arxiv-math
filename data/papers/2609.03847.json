@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03847",
+  "slug": "2609.03847",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03847:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03847",
+    "version": 1,
+    "entryKind": "new",
+    "title": "A counterexample to McKean's conjecture for the Landau-Coulomb equation",
+    "authors": [
+      "Jonathan Junné",
+      "Raphael Winter",
+      "Havva Yoldaş"
+    ],
+    "abstract": "We disprove McKean's conjecture, which asserts that the entropy dissipation is monotone nonincreasing along solutions, or equivalently that the entropy is convex in time, for the spatially homogeneous Landau-Coulomb equation. We provide an explicit counterexample which consists of a Maxwellian equilibrium under radially symmetric, smooth perturbation on an annulus of scale $R\\gg 1$. Developing the derivative of the entropy dissipation in powers of $R$ reveals that the leading order terms can be positive for a suitably chosen perturbation. Remarkably, the counterexamples are close to equilibrium in relative entropy and standard Sobolev norms. Since the Landau equation arises from the Boltzmann equation in the grazing collisions limit, our counterexample also shows that McKean's conjecture is not true in general for the Boltzmann equation.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03847",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03847",
+    "submittedAt": "2026-09-03T13:40:38Z",
+    "updatedAt": "2026-09-03T13:40:38Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "反例",
+    "workSummary": "构造 Landau--Coulomb 方程中 McKean 熵凸性猜想的反例：以大尺度环带上的径向 Maxwellian 扰动为试探族，分区估计熵耗散导数的内、中、外贡献，证明首项可为正。",
+    "techniques": [
+      "Landau 碰撞算子展开",
+      "径向 Maxwellian 扰动",
+      "大尺度渐近",
+      "区域分解",
+      "熵耗散导数"
+    ],
+    "breakthrough": "给出接近平衡态且标准熵/Sobolev 范数很小的显式反例，证明熵耗散不必单调下降，并通过 grazing-collision 极限传递到 Boltzmann 情形。",
+    "limitations": "反例依赖特定径向环带扰动和 R 足够大；它否定普遍猜想，但不描述所有初值的熵耗散符号。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "选定扰动族保持 Maxwellian 主体并使相对熵小。",
+          "route": "把径向 cutoff 放在尺度 R 的环带上，调节扰动振幅和形状，使质量/能量约束与靠近平衡同时成立。",
+          "evidence": "第 1 节 Theorem 1.1 的构造说明（PDF 第 1--4 页）。"
+        },
+        {
+          "claim": "熵耗散导数可表示为碰撞矩阵和扰动导数的区域积分。",
+          "route": "对 Landau 方程的熵耗散泛函求时间导数，将卷积碰撞矩阵展开并按速度区域分成 inner、middle、outer 三项。",
+          "evidence": "第 2 节 Proposition 2.1 及式 (2.1)--(2.6)（PDF 第 4--6 页）。"
+        },
+        {
+          "claim": "内外区域贡献具有可控阶，而中间区域产生可为正的主项。",
+          "route": "分别用 Maxwellian 高斯衰减、环带尺度和碰撞核的径向展开估计三块积分；在特定扰动参数下比较 R 的幂次，保留中区正的 leading term。",
+          "evidence": "第 2 节 Propositions 2.2--2.6（PDF 第 5--12 页）。"
+        },
+        {
+          "claim": "合并渐近展开得到熵耗散导数为负，从而否定 McKean 猜想。",
+          "route": "将三块误差按 R 的阶数相加，选择扰动符号使正主项压过余项；由 DH 的导数符号转换为熵耗散非单调，并引用 grazing limit 得到 Boltzmann 推论。",
+          "evidence": "第 1 节 Theorem 1.1 与第 2.4 节 proof（PDF 第 2--4、12--13 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--14 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 78,
+    "priorityTier": "high",
+    "priorityReason": "直接检验动力学方程中的熵结构并以近平衡反例修正普遍猜想，对长期行为和耗散机制判断具有警示意义。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03847:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03847",
+        "version": 1,
+        "entryKind": "new",
+        "title": "A counterexample to McKean's conjecture for the Landau-Coulomb equation",
+        "authors": [
+          "Jonathan Junné",
+          "Raphael Winter",
+          "Havva Yoldaş"
+        ],
+        "abstract": "We disprove McKean's conjecture, which asserts that the entropy dissipation is monotone nonincreasing along solutions, or equivalently that the entropy is convex in time, for the spatially homogeneous Landau-Coulomb equation. We provide an explicit counterexample which consists of a Maxwellian equilibrium under radially symmetric, smooth perturbation on an annulus of scale $R\\gg 1$. Developing the derivative of the entropy dissipation in powers of $R$ reveals that the leading order terms can be positive for a suitably chosen perturbation. Remarkably, the counterexamples are close to equilibrium in relative entropy and standard Sobolev norms. Since the Landau equation arises from the Boltzmann equation in the grazing collisions limit, our counterexample also shows that McKean's conjecture is not true in general for the Boltzmann equation.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03847",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03847",
+        "submittedAt": "2026-09-03T13:40:38Z",
+        "updatedAt": "2026-09-03T13:40:38Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "反例",
+        "workSummary": "构造 Landau--Coulomb 方程中 McKean 熵凸性猜想的反例：以大尺度环带上的径向 Maxwellian 扰动为试探族，分区估计熵耗散导数的内、中、外贡献，证明首项可为正。",
+        "techniques": [
+          "Landau 碰撞算子展开",
+          "径向 Maxwellian 扰动",
+          "大尺度渐近",
+          "区域分解",
+          "熵耗散导数"
+        ],
+        "breakthrough": "给出接近平衡态且标准熵/Sobolev 范数很小的显式反例，证明熵耗散不必单调下降，并通过 grazing-collision 极限传递到 Boltzmann 情形。",
+        "limitations": "反例依赖特定径向环带扰动和 R 足够大；它否定普遍猜想，但不描述所有初值的熵耗散符号。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "选定扰动族保持 Maxwellian 主体并使相对熵小。",
+              "route": "把径向 cutoff 放在尺度 R 的环带上，调节扰动振幅和形状，使质量/能量约束与靠近平衡同时成立。",
+              "evidence": "第 1 节 Theorem 1.1 的构造说明（PDF 第 1--4 页）。"
+            },
+            {
+              "claim": "熵耗散导数可表示为碰撞矩阵和扰动导数的区域积分。",
+              "route": "对 Landau 方程的熵耗散泛函求时间导数，将卷积碰撞矩阵展开并按速度区域分成 inner、middle、outer 三项。",
+              "evidence": "第 2 节 Proposition 2.1 及式 (2.1)--(2.6)（PDF 第 4--6 页）。"
+            },
+            {
+              "claim": "内外区域贡献具有可控阶，而中间区域产生可为正的主项。",
+              "route": "分别用 Maxwellian 高斯衰减、环带尺度和碰撞核的径向展开估计三块积分；在特定扰动参数下比较 R 的幂次，保留中区正的 leading term。",
+              "evidence": "第 2 节 Propositions 2.2--2.6（PDF 第 5--12 页）。"
+            },
+            {
+              "claim": "合并渐近展开得到熵耗散导数为负，从而否定 McKean 猜想。",
+              "route": "将三块误差按 R 的阶数相加，选择扰动符号使正主项压过余项；由 DH 的导数符号转换为熵耗散非单调，并引用 grazing limit 得到 Boltzmann 推论。",
+              "evidence": "第 1 节 Theorem 1.1 与第 2.4 节 proof（PDF 第 2--4、12--13 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--14 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 78,
+        "priorityTier": "high",
+        "priorityReason": "直接检验动力学方程中的熵结构并以近平衡反例修正普遍猜想，对长期行为和耗散机制判断具有警示意义。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -3,91 +3,147 @@
   "arxivId": "2609.07458",
   "slug": "2609.07458",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.07458:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.07458",
-    "metadata": {
-      "title": "Geometric regularity for semi-convex viscosity solutions to the special Lagrangian equation",
-      "authors": [
-        "Zhenyu Fan"
-      ],
-      "abstract": "We prove that the gradient graph of any $W^{2,1}$ semi-convex viscosity solution to the three-dimensional subcritical special Lagrangian equation is area-minimizing and smooth. Furthermore, we prove the smoothness of $W^{2,1}\\cap C^{1,1/3+}$ semi-convex viscosity solutions. This yields progress on the conjecture proposed by Wang--Yuan [WY13]. The corresponding results in higher dimensions are also established.",
-      "categories": [
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "math.AP",
-      "version": 1,
-      "submittedAt": "2026-09-07T13:08:17Z",
-      "updatedAt": "2026-09-07T13:08:17Z"
+    "version": 1,
+    "entryKind": "new",
+    "title": "Geometric regularity for semi-convex viscosity solutions to the special Lagrangian equation",
+    "authors": [
+      "Zhenyu Fan"
+    ],
+    "abstract": "We prove that the gradient graph of any $W^{2,1}$ semi-convex viscosity solution to the three-dimensional subcritical special Lagrangian equation is area-minimizing and smooth. Furthermore, we prove the smoothness of $W^{2,1}\\cap C^{1,1/3+}$ semi-convex viscosity solutions. This yields progress on the conjecture proposed by Wang--Yuan [WY13]. The corresponding results in higher dimensions are also established.",
+    "categories": [
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07458",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07458",
+    "submittedAt": "2026-09-07T13:08:17Z",
+    "updatedAt": "2026-09-07T13:08:17Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文研究三维及高维次临界 special Lagrangian 方程的半凸粘性解。作者用 Lewy–Yuan 旋转和 Legendre 变换把半凸梯度图转换到具有有界 Hessian 的旋转势函数，再借助 Hessian measure 的弱连续性和对偶公式控制原势函数 Hessian 的退化集合。由此证明 $W^{2,1}$ 情形下梯度图面积极小；半凸性和相位区间排除多个最大 Hessian 特征值的正测度集合。正则性部分对旋转势做 blow-up、均匀椭圆估计和极小图锥刚性，得到旋转势光滑，再用 $\\alpha >1/3$ 的 Legendre 反演非退化引理把光滑性传回原解。",
+    "techniques": [
+      "Lewy–Yuan 梯度图旋转",
+      "Legendre 变换与 Hessian measure 对偶性",
+      "退化集合上的秩和面积公式",
+      "极小 Lagrangian 图的 calibration",
+      "blow-up、均匀椭圆估计与反演正则性"
+    ],
+    "breakthrough": "论文把低正则度 $W^{2,1}$ 与半凸粘性结构结合起来：Hessian measure 对偶性把旋转坐标中退化 Hessian 的秩限制转化为原坐标中的不可行情形，从而先得到面积极小性，再在三维和相应高维相位区间内获得光滑性。这推进了 Wang–Yuan 猜想中半凸解的正则性范围。",
+    "limitations": "三维主结论需要次临界相位、半凸性和 $W^{2,1}$；高维结果要求 $W^{2,k}$ 及更强的相位相关半凸性，且一般维度的 Hessian 有界条件只在 Theorem 1.6 中显式给出$。\\alpha >1/3$ 是 Legendre 反演步骤的阈值，论文不声称覆盖任意半凸粘性解或临界/超临界相位。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lewy–Yuan 旋转后的势函数具有可用的凸性、相位和 Hessian measure 对偶结构。",
+          "route": "把半凸势加上二次项变为凸函数，再按固定角度旋转梯度图；在新坐标中用 Legendre 变换交换原变量和梯度变量。Hessian measure 的 Steiner 公式和弱连续性把 $W^{2,k}$ 的信息传递到旋转势的 $\\sigma _k(D^{2}u)$ 测度。",
+          "evidence": "PDF 第5–9页 Section 2.1–2.2、Proposition 2.1–2.2 及公式(2.1)–(2.2)。"
+        },
+        {
+          "claim": "三维 $W^{2,1}$ 半凸粘性解的梯度图是面积极小的 Lagrangian 子流形。",
+          "route": "假设旋转势的 Hessian 在正测度集合上出现允许的退化；Hessian measure 对偶公式先迫使相应秩层集合像集测度为零，再由粘性方程的相位不等式得到至少两个最大特征值与次临界相位矛盾。退化集合因而为零，旋转解成为 $C^{1,1}$ 强解，最后用 special Lagrangian calibration 得到面积极小性。",
+          "evidence": "PDF 第9–11页 Section 3、Lemma 3.2、Theorem 1.4 的证明及公式(3.1)–(3.2)。"
+        },
+        {
+          "claim": "在相应维数和 Hessian 有界条件下，旋转后的 $C^{1,1}$ 粘性解是光滑的。",
+          "route": "以任意点为中心做二次尺度 blow-up，利用 $C^{1,1}$ 界取得局部收敛；均匀椭圆 $W^{2,\\delta }$ 估计把 Hessian 差收敛提升到任意有限 $L^p$。极小图的单调性公式使极限梯度图成为锥，而三、四维的刚性（或高维给定 Hessian 界）将该锥化为二次多项式，反向推出原势的光滑性。",
+          "evidence": "PDF 第11–12页 Section 4.1、Proposition 4.1 的 blow-up 证明及其 $W^{2,\\delta }$ 估计。"
+        },
+        {
+          "claim": "若原势属于 $C^{1,\\alpha }$ 且 $\\alpha >1/3$，旋转势的光滑性可通过 Legendre 变换传回原势。",
+          "route": "假设旋转势 Hessian 在一点退化，则沿零特征方向其梯度增量由 Taylor 展开为 $O(t^{3})$；原梯度的 $C^\\alpha $ 逆映射又给出 $|t|\\le C|t|^{3\\alpha }$，当 $3\\alpha >1$ 时矛盾。因此 Hessian 非退化，逆函数定理使梯度映射局部光滑，原势随之光滑。",
+          "evidence": "PDF 第12–13页 Section 4.2、Lemma 4.2 及“Proof of the remaining part of Theorem 1.4 and Theorem 1.6”。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "推广/加强",
-      "workSummary": "证明三维次临界特殊 Lagrangian 方程半凸 W2,1 黏性解的梯度图光滑且面积极小，并给出附加正则下解光滑。",
-      "techniques": [
-        "半凸黏性解",
-        "梯度图",
-        "几何正则性"
-      ],
-      "breakthrough": "推进 Wang–Yuan 正则性问题。",
-      "limitations": "图光滑与原函数光滑不同，后者有额外 Hölder 条件。 已补读所列正文片段；这不是逐行独立证明审查。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "正文披露 GPT 协助证明严谨化、定位 Colesanti 等参考文献及语言润色。",
-      "aiEvidenceSource": "https://arxiv.org/html/2609.07458v1（AI 声明/致谢；涉及摘要者同时核对元数据）",
-      "priorityScore": 85,
-      "priorityReason": "非线性几何 PDE 正则性核心方向。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We prove that the gradient graph of any $W^{2,1}$ semi-convex viscosity solution to the three-dimensional subcritical special Lagrangian equation is area-minimizing and smooth. Furthermore, we prove the smoothness of $W^{2,1}\\cap C^{1,1/3+}$ semi-convex viscosity solutions. This yields progress on the conjecture proposed by Wang--Yuan [WY13]. The corresponding results in higher dimensions are also established.",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在末尾明确披露使用 ChatGPT 5.6 Sol 帮助使部分证明更严谨，并指出 ChatGPT 推荐了此前未知的 Colesanti 等人的 Hessian measure 文献；作者说明问题和总体证明策略由本人提出，ChatGPT 还用于语言润色，所有数学陈述均由作者核验。",
+    "aiEvidenceSource": "PDF 第13页“Declaration on the use of AI”段落；并检查 PDF 第1–14页正文、Proof、Acknowledgments 和 References。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07458:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.07458",
-        "metadata": {
-          "title": "Geometric regularity for semi-convex viscosity solutions to the special Lagrangian equation",
-          "authors": [
-            "Zhenyu Fan"
-          ],
-          "abstract": "We prove that the gradient graph of any $W^{2,1}$ semi-convex viscosity solution to the three-dimensional subcritical special Lagrangian equation is area-minimizing and smooth. Furthermore, we prove the smoothness of $W^{2,1}\\cap C^{1,1/3+}$ semi-convex viscosity solutions. This yields progress on the conjecture proposed by Wang--Yuan [WY13]. The corresponding results in higher dimensions are also established.",
-          "categories": [
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "math.AP",
-          "version": 1,
-          "submittedAt": "2026-09-07T13:08:17Z",
-          "updatedAt": "2026-09-07T13:08:17Z"
+        "version": 1,
+        "entryKind": "new",
+        "title": "Geometric regularity for semi-convex viscosity solutions to the special Lagrangian equation",
+        "authors": [
+          "Zhenyu Fan"
+        ],
+        "abstract": "We prove that the gradient graph of any $W^{2,1}$ semi-convex viscosity solution to the three-dimensional subcritical special Lagrangian equation is area-minimizing and smooth. Furthermore, we prove the smoothness of $W^{2,1}\\cap C^{1,1/3+}$ semi-convex viscosity solutions. This yields progress on the conjecture proposed by Wang--Yuan [WY13]. The corresponding results in higher dimensions are also established.",
+        "categories": [
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07458",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07458",
+        "submittedAt": "2026-09-07T13:08:17Z",
+        "updatedAt": "2026-09-07T13:08:17Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文研究三维及高维次临界 special Lagrangian 方程的半凸粘性解。作者用 Lewy–Yuan 旋转和 Legendre 变换把半凸梯度图转换到具有有界 Hessian 的旋转势函数，再借助 Hessian measure 的弱连续性和对偶公式控制原势函数 Hessian 的退化集合。由此证明 $W^{2,1}$ 情形下梯度图面积极小；半凸性和相位区间排除多个最大 Hessian 特征值的正测度集合。正则性部分对旋转势做 blow-up、均匀椭圆估计和极小图锥刚性，得到旋转势光滑，再用 $\\alpha >1/3$ 的 Legendre 反演非退化引理把光滑性传回原解。",
+        "techniques": [
+          "Lewy–Yuan 梯度图旋转",
+          "Legendre 变换与 Hessian measure 对偶性",
+          "退化集合上的秩和面积公式",
+          "极小 Lagrangian 图的 calibration",
+          "blow-up、均匀椭圆估计与反演正则性"
+        ],
+        "breakthrough": "论文把低正则度 $W^{2,1}$ 与半凸粘性结构结合起来：Hessian measure 对偶性把旋转坐标中退化 Hessian 的秩限制转化为原坐标中的不可行情形，从而先得到面积极小性，再在三维和相应高维相位区间内获得光滑性。这推进了 Wang–Yuan 猜想中半凸解的正则性范围。",
+        "limitations": "三维主结论需要次临界相位、半凸性和 $W^{2,1}$；高维结果要求 $W^{2,k}$ 及更强的相位相关半凸性，且一般维度的 Hessian 有界条件只在 Theorem 1.6 中显式给出$。\\alpha >1/3$ 是 Legendre 反演步骤的阈值，论文不声称覆盖任意半凸粘性解或临界/超临界相位。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lewy–Yuan 旋转后的势函数具有可用的凸性、相位和 Hessian measure 对偶结构。",
+              "route": "把半凸势加上二次项变为凸函数，再按固定角度旋转梯度图；在新坐标中用 Legendre 变换交换原变量和梯度变量。Hessian measure 的 Steiner 公式和弱连续性把 $W^{2,k}$ 的信息传递到旋转势的 $\\sigma _k(D^{2}u)$ 测度。",
+              "evidence": "PDF 第5–9页 Section 2.1–2.2、Proposition 2.1–2.2 及公式(2.1)–(2.2)。"
+            },
+            {
+              "claim": "三维 $W^{2,1}$ 半凸粘性解的梯度图是面积极小的 Lagrangian 子流形。",
+              "route": "假设旋转势的 Hessian 在正测度集合上出现允许的退化；Hessian measure 对偶公式先迫使相应秩层集合像集测度为零，再由粘性方程的相位不等式得到至少两个最大特征值与次临界相位矛盾。退化集合因而为零，旋转解成为 $C^{1,1}$ 强解，最后用 special Lagrangian calibration 得到面积极小性。",
+              "evidence": "PDF 第9–11页 Section 3、Lemma 3.2、Theorem 1.4 的证明及公式(3.1)–(3.2)。"
+            },
+            {
+              "claim": "在相应维数和 Hessian 有界条件下，旋转后的 $C^{1,1}$ 粘性解是光滑的。",
+              "route": "以任意点为中心做二次尺度 blow-up，利用 $C^{1,1}$ 界取得局部收敛；均匀椭圆 $W^{2,\\delta }$ 估计把 Hessian 差收敛提升到任意有限 $L^p$。极小图的单调性公式使极限梯度图成为锥，而三、四维的刚性（或高维给定 Hessian 界）将该锥化为二次多项式，反向推出原势的光滑性。",
+              "evidence": "PDF 第11–12页 Section 4.1、Proposition 4.1 的 blow-up 证明及其 $W^{2,\\delta }$ 估计。"
+            },
+            {
+              "claim": "若原势属于 $C^{1,\\alpha }$ 且 $\\alpha >1/3$，旋转势的光滑性可通过 Legendre 变换传回原势。",
+              "route": "假设旋转势 Hessian 在一点退化，则沿零特征方向其梯度增量由 Taylor 展开为 $O(t^{3})$；原梯度的 $C^\\alpha $ 逆映射又给出 $|t|\\le C|t|^{3\\alpha }$，当 $3\\alpha >1$ 时矛盾。因此 Hessian 非退化，逆函数定理使梯度映射局部光滑，原势随之光滑。",
+              "evidence": "PDF 第12–13页 Section 4.2、Lemma 4.2 及“Proof of the remaining part of Theorem 1.4 and Theorem 1.6”。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "推广/加强",
-          "workSummary": "证明三维次临界特殊 Lagrangian 方程半凸 W2,1 黏性解的梯度图光滑且面积极小，并给出附加正则下解光滑。",
-          "techniques": [
-            "半凸黏性解",
-            "梯度图",
-            "几何正则性"
-          ],
-          "breakthrough": "推进 Wang–Yuan 正则性问题。",
-          "limitations": "图光滑与原函数光滑不同，后者有额外 Hölder 条件。 已补读所列正文片段；这不是逐行独立证明审查。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "正文披露 GPT 协助证明严谨化、定位 Colesanti 等参考文献及语言润色。",
-          "aiEvidenceSource": "https://arxiv.org/html/2609.07458v1（AI 声明/致谢；涉及摘要者同时核对元数据）",
-          "priorityScore": 85,
-          "priorityReason": "非线性几何 PDE 正则性核心方向。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We prove that the gradient graph of any $W^{2,1}$ semi-convex viscosity solution to the three-dimensional subcritical special Lagrangian equation is area-minimizing and smooth. Furthermore, we prove the smoothness of $W^{2,1}\\cap C^{1,1/3+}$ semi-convex viscosity solutions. This yields progress on the conjecture proposed by Wang--Yuan [WY13]. The corresponding results in higher dimensions are also established.",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在末尾明确披露使用 ChatGPT 5.6 Sol 帮助使部分证明更严谨，并指出 ChatGPT 推荐了此前未知的 Colesanti 等人的 Hessian measure 文献；作者说明问题和总体证明策略由本人提出，ChatGPT 还用于语言润色，所有数学陈述均由作者核验。",
+        "aiEvidenceSource": "PDF 第13页“Declaration on the use of AI”段落；并检查 PDF 第1–14页正文、Proof、Acknowledgments 和 References。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

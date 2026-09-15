@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02727",
+  "slug": "2609.02727",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02727:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02727",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Neural operators approximate strongly continuous convex monotone semigroups",
+    "authors": [
+      "Jonas Blessing",
+      "Philipp Schmocker",
+      "Alessandro Sgarabottolo"
+    ],
+    "abstract": "We approximate strongly continuous convex monotone semigroups by learning their Chernoff-type one-step operators with neural operators. First, we introduce the general class of so-called Chernoff-neural operators and show in a universal approximation theorem that they can approximate the Chernoff one-step operators arbitrarily well. By using stability estimates between weighted Hölder spaces, the one-step approximation error can be propagated through the iterations which yields universal approximation of the corresponding semigroup. Second, we introduce the more specialized class of envelope-neural operators for envelope semigroups which allows us to derive quantitative approximation rates. Finally, we illustrate the effectiveness of these neural operators in several numerical examples arising from non-linear partial differential equations, stochastic optimal control and stochastic processes under model uncertainty.",
+    "categories": [
+      "math.NA",
+      "cs.LG",
+      "math.AP",
+      "math.PR",
+      "stat.ML"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2609.02727",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02727",
+    "submittedAt": "2026-09-02T15:38:52Z",
+    "updatedAt": "2026-09-02T15:38:52Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "研究用神经算子逼近强连续凸单调半群。论文先构造 Chernoff-neural 一步算子并证明任意逼近，再用加权 Hölder 稳定性传播迭代误差；对 envelope semigroup 进一步给出定量速率，并展示非线性 PDE 与随机控制数值例子。",
+    "techniques": [
+      "Chernoff 一步算子",
+      "加权 Hölder 稳定性",
+      "Banach 尺度 Stone--Weierstrass",
+      "envelope 神经算子",
+      "迭代误差传播"
+    ],
+    "breakthrough": "把单步神经算子通用逼近与半群稳定性结合，给出从一步误差到任意有限时间半群误差的统一构造，并在 envelope 结构下恢复可计算速率。",
+    "limitations": "定量速率依赖 envelope 结构和加权 Hölder 假设；数值实验不替代理论收敛证明。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "定义的 Chernoff-neural 一步算子可在加权 Hölder 空间中任意逼近目标 Chernoff 算子。",
+          "route": "把神经网络的有限和表示嵌入加权函数类，应用加权 Stone--Weierstrass 定理在 Banach 尺度上同时逼近函数和参数依赖项，再控制权函数尾部。",
+          "evidence": "第 3.1 节 universal approximation、Propositions 3.1--3.4（PDF 第 7--10 页）。"
+        },
+        {
+          "claim": "单步近似误差在迭代后不会失控，因而得到半群的定性逼近。",
+          "route": "对两个一步算子使用稳定性估计，利用凸性和单调性控制每次迭代的 Lipschitz 常数；离散迭代误差按 telescoping 和 Chernoff 收敛估计累加，随后令步长趋零。",
+          "evidence": "第 3.2 节 Propositions 3.5--3.9、semigroup approximation proof（PDF 第 10--12 页）。"
+        },
+        {
+          "claim": "envelope-neural 算子在 envelope semigroup 上给出显式的全局逼近误差速率。",
+          "route": "利用 envelope 表示把非线性一步映射分解为参数族上确界，再对参数网络和状态网络分别逼近；加权 Hölder 稳定性把两种误差线性传到时间迭代，求和得到速率。",
+          "evidence": "第 4.1--4.2 节 Propositions 4.10、4.11 及 quantitative semigroup theorem（PDF 第 12--18 页）。"
+        },
+        {
+          "claim": "理论构造适用于半线性 PDE、随机最优控制和模型不确定随机过程的半群近似。",
+          "route": "将各模型的时间步算子写成 Chernoff 或 envelope 形式，验证相应增长、单调和凸性条件，再把理论误差界与数值时间迭代结合。",
+          "evidence": "第 5 节数值实例（PDF 第 18--24 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgments/References；未见作者明确 AI 使用声明。",
+    "aiEvidenceSource": "PDF 第 1--39 页全文关键词检索；第 36--39 页 Acknowledgments/References。",
+    "priorityScore": 59,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02727:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02727",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Neural operators approximate strongly continuous convex monotone semigroups",
+        "authors": [
+          "Jonas Blessing",
+          "Philipp Schmocker",
+          "Alessandro Sgarabottolo"
+        ],
+        "abstract": "We approximate strongly continuous convex monotone semigroups by learning their Chernoff-type one-step operators with neural operators. First, we introduce the general class of so-called Chernoff-neural operators and show in a universal approximation theorem that they can approximate the Chernoff one-step operators arbitrarily well. By using stability estimates between weighted Hölder spaces, the one-step approximation error can be propagated through the iterations which yields universal approximation of the corresponding semigroup. Second, we introduce the more specialized class of envelope-neural operators for envelope semigroups which allows us to derive quantitative approximation rates. Finally, we illustrate the effectiveness of these neural operators in several numerical examples arising from non-linear partial differential equations, stochastic optimal control and stochastic processes under model uncertainty.",
+        "categories": [
+          "math.NA",
+          "cs.LG",
+          "math.AP",
+          "math.PR",
+          "stat.ML"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2609.02727",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02727",
+        "submittedAt": "2026-09-02T15:38:52Z",
+        "updatedAt": "2026-09-02T15:38:52Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "研究用神经算子逼近强连续凸单调半群。论文先构造 Chernoff-neural 一步算子并证明任意逼近，再用加权 Hölder 稳定性传播迭代误差；对 envelope semigroup 进一步给出定量速率，并展示非线性 PDE 与随机控制数值例子。",
+        "techniques": [
+          "Chernoff 一步算子",
+          "加权 Hölder 稳定性",
+          "Banach 尺度 Stone--Weierstrass",
+          "envelope 神经算子",
+          "迭代误差传播"
+        ],
+        "breakthrough": "把单步神经算子通用逼近与半群稳定性结合，给出从一步误差到任意有限时间半群误差的统一构造，并在 envelope 结构下恢复可计算速率。",
+        "limitations": "定量速率依赖 envelope 结构和加权 Hölder 假设；数值实验不替代理论收敛证明。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "定义的 Chernoff-neural 一步算子可在加权 Hölder 空间中任意逼近目标 Chernoff 算子。",
+              "route": "把神经网络的有限和表示嵌入加权函数类，应用加权 Stone--Weierstrass 定理在 Banach 尺度上同时逼近函数和参数依赖项，再控制权函数尾部。",
+              "evidence": "第 3.1 节 universal approximation、Propositions 3.1--3.4（PDF 第 7--10 页）。"
+            },
+            {
+              "claim": "单步近似误差在迭代后不会失控，因而得到半群的定性逼近。",
+              "route": "对两个一步算子使用稳定性估计，利用凸性和单调性控制每次迭代的 Lipschitz 常数；离散迭代误差按 telescoping 和 Chernoff 收敛估计累加，随后令步长趋零。",
+              "evidence": "第 3.2 节 Propositions 3.5--3.9、semigroup approximation proof（PDF 第 10--12 页）。"
+            },
+            {
+              "claim": "envelope-neural 算子在 envelope semigroup 上给出显式的全局逼近误差速率。",
+              "route": "利用 envelope 表示把非线性一步映射分解为参数族上确界，再对参数网络和状态网络分别逼近；加权 Hölder 稳定性把两种误差线性传到时间迭代，求和得到速率。",
+              "evidence": "第 4.1--4.2 节 Propositions 4.10、4.11 及 quantitative semigroup theorem（PDF 第 12--18 页）。"
+            },
+            {
+              "claim": "理论构造适用于半线性 PDE、随机最优控制和模型不确定随机过程的半群近似。",
+              "route": "将各模型的时间步算子写成 Chernoff 或 envelope 形式，验证相应增长、单调和凸性条件，再把理论误差界与数值时间迭代结合。",
+              "evidence": "第 5 节数值实例（PDF 第 18--24 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgments/References；未见作者明确 AI 使用声明。",
+        "aiEvidenceSource": "PDF 第 1--39 页全文关键词检索；第 36--39 页 Acknowledgments/References。",
+        "priorityScore": 59,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

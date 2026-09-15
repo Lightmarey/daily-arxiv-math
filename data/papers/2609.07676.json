@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07676",
+  "slug": "2609.07676",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07676:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07676",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Chain rule symmetry for singular SPDEs from multi-indices to decorated trees",
+    "authors": [
+      "Yvain Bruned"
+    ],
+    "abstract": "In these lecture notes, we review the recent results around the chain rule for the generalised KPZ equation and the geometric KPZ equation. We introduce the main ideas of Regularity Structures via a B-series type expansion and the two main combinatorial sets for encoding this expansion: decorated trees and multi-indices. Then, we explain how the chain rule was first understood via integration by parts and diagrammatic computations. For the generalised KPZ equation, a scalar-valued equation, we use multi-indices to derive a characterisation in terms of iterations of covariant derivatives. The same characterisation for decorated trees is more involved and requires the use of operadic and homological tools. We summarise the main arguments of this proof.",
+    "categories": [
+      "math.PR",
+      "math.AP",
+      "math.RA"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.07676",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07676",
+    "submittedAt": "2026-09-07T16:03:25Z",
+    "updatedAt": "2026-09-07T16:03:25Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "这份讲义整理奇异 SPDE 中从多重指标到装饰树的 chain rule symmetry。作者先用正规性结构和 B-series 展开编码广义 KPZ 的重整化项，再用积分分部和 elementary differentials 建立多重指标的链式法则；随后定义由微分同胚作用不变的几何子空间，证明它是组合映射 $phi_hat_geo$ 的核。最后以组合协变导数生成该核，并通过带微分的 operad 同调把它识别为 Lie-admissible operad，从而解释几何 KPZ 反项的局部性。",
+    "techniques": [
+      "正规性结构与 B-series 展开",
+      "装饰树和多重指标编码",
+      "elementary differential 单射",
+      "协变导数与 Lie bracket",
+      "operad 同调与 Lie-admissible 结构"
+    ],
+    "breakthrough": "讲义把解析的链式法则对称性压缩成可计算的核条件 $phi_hat_geo=0$，并证明该核恰由迭代协变导数生成、同调上等同于 LieAdm；这给出从重整化反项到几何不变量的统一组合判据。",
+    "limitations": "本文是结果综述与讲义，若干正规性结构背景定理和 Proposition 4.7 的完整维数证明引用前作；结论集中于广义 KPZ、几何 KPZ 的特定装饰树/多指标系统，不直接覆盖任意奇异 SPDE 或任意噪声维数。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "多重指标和装饰树的 elementary differential 能区分所需的重整化组合，从而可表达链式法则。",
+          "route": "先以树或多重指标递归编码积分核、噪声和导数，再把每个组合映射到 f、g 及其导数构成的 elementary differential；Theorem 2.4 的单射性使组合恒等式可由对所有测试函数的解析恒等式反推。",
+          "evidence": "PDF 第 3-11 页 Section 2、Lemma 2.2、Lemma 2.3、Theorem 2.4。"
+        },
+        {
+          "claim": "重整化方程的 chain rule symmetry 恰等于组合空间中 $phi_hat_geo$ 的核。",
+          "route": "对任意同伦于恒等的微分同胚族求一阶变分，函数复合贡献 Lie bracket，二阶链式项贡献 $phi_geo$；将两者相减得到 $phi_hat_geo$，并利用 elementary differential 的单射性把解析不变性等价化为核条件。",
+          "evidence": "PDF 第 18-21 页 Definition 4.1、Definition 4.2、Theorem 4.3 及 equations (4.2)。"
+        },
+        {
+          "claim": "协变导数保持几何对称空间，迭代协变导数生成的集合包含在 $V_geo$。",
+          "route": "定义组合协变导数为 v1 Dv2 加上 $z_(f,0)$ v1 v2 的修正项，使其在 elementary differential 下正好对应解析协变导数；对 $phi_hat_geo$ 使用 Leibniz 规则和 bracket 恒等式，证明闭包命题 Proposition 4.5。",
+          "evidence": "PDF 第 21-23 页 Proposition 4.4、Proposition 4.5、equations (4.3)-(4.4)。"
+        },
+        {
+          "claim": "N 阶几何对称空间由迭代协变导数生成，且其维数等于相应多重指标空间。",
+          "route": "先用投影 pi 把带导数变量消去，借助树的 grafting 递归说明协变导数张成全部无厚边树；再对 $phi_hat_geo$ 的方程建立按变量数的三角系统，分别给出上下维数界，得到 Propositions 4.6-4.7 和 Theorem 4.8。",
+          "evidence": "PDF 第 23-25 页 Propositions 4.6-4.7、Theorem 4.8；第 29-31 页 Theorems 4.11-4.12。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查讲义摘要、正规性结构背景、广义 KPZ 与几何 KPZ 章节、全部证明说明、结尾和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-34 页全文检索及第 31-34 页结尾、References。",
+    "priorityScore": 59,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07676:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07676",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Chain rule symmetry for singular SPDEs from multi-indices to decorated trees",
+        "authors": [
+          "Yvain Bruned"
+        ],
+        "abstract": "In these lecture notes, we review the recent results around the chain rule for the generalised KPZ equation and the geometric KPZ equation. We introduce the main ideas of Regularity Structures via a B-series type expansion and the two main combinatorial sets for encoding this expansion: decorated trees and multi-indices. Then, we explain how the chain rule was first understood via integration by parts and diagrammatic computations. For the generalised KPZ equation, a scalar-valued equation, we use multi-indices to derive a characterisation in terms of iterations of covariant derivatives. The same characterisation for decorated trees is more involved and requires the use of operadic and homological tools. We summarise the main arguments of this proof.",
+        "categories": [
+          "math.PR",
+          "math.AP",
+          "math.RA"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.07676",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07676",
+        "submittedAt": "2026-09-07T16:03:25Z",
+        "updatedAt": "2026-09-07T16:03:25Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "这份讲义整理奇异 SPDE 中从多重指标到装饰树的 chain rule symmetry。作者先用正规性结构和 B-series 展开编码广义 KPZ 的重整化项，再用积分分部和 elementary differentials 建立多重指标的链式法则；随后定义由微分同胚作用不变的几何子空间，证明它是组合映射 $phi_hat_geo$ 的核。最后以组合协变导数生成该核，并通过带微分的 operad 同调把它识别为 Lie-admissible operad，从而解释几何 KPZ 反项的局部性。",
+        "techniques": [
+          "正规性结构与 B-series 展开",
+          "装饰树和多重指标编码",
+          "elementary differential 单射",
+          "协变导数与 Lie bracket",
+          "operad 同调与 Lie-admissible 结构"
+        ],
+        "breakthrough": "讲义把解析的链式法则对称性压缩成可计算的核条件 $phi_hat_geo=0$，并证明该核恰由迭代协变导数生成、同调上等同于 LieAdm；这给出从重整化反项到几何不变量的统一组合判据。",
+        "limitations": "本文是结果综述与讲义，若干正规性结构背景定理和 Proposition 4.7 的完整维数证明引用前作；结论集中于广义 KPZ、几何 KPZ 的特定装饰树/多指标系统，不直接覆盖任意奇异 SPDE 或任意噪声维数。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "多重指标和装饰树的 elementary differential 能区分所需的重整化组合，从而可表达链式法则。",
+              "route": "先以树或多重指标递归编码积分核、噪声和导数，再把每个组合映射到 f、g 及其导数构成的 elementary differential；Theorem 2.4 的单射性使组合恒等式可由对所有测试函数的解析恒等式反推。",
+              "evidence": "PDF 第 3-11 页 Section 2、Lemma 2.2、Lemma 2.3、Theorem 2.4。"
+            },
+            {
+              "claim": "重整化方程的 chain rule symmetry 恰等于组合空间中 $phi_hat_geo$ 的核。",
+              "route": "对任意同伦于恒等的微分同胚族求一阶变分，函数复合贡献 Lie bracket，二阶链式项贡献 $phi_geo$；将两者相减得到 $phi_hat_geo$，并利用 elementary differential 的单射性把解析不变性等价化为核条件。",
+              "evidence": "PDF 第 18-21 页 Definition 4.1、Definition 4.2、Theorem 4.3 及 equations (4.2)。"
+            },
+            {
+              "claim": "协变导数保持几何对称空间，迭代协变导数生成的集合包含在 $V_geo$。",
+              "route": "定义组合协变导数为 v1 Dv2 加上 $z_(f,0)$ v1 v2 的修正项，使其在 elementary differential 下正好对应解析协变导数；对 $phi_hat_geo$ 使用 Leibniz 规则和 bracket 恒等式，证明闭包命题 Proposition 4.5。",
+              "evidence": "PDF 第 21-23 页 Proposition 4.4、Proposition 4.5、equations (4.3)-(4.4)。"
+            },
+            {
+              "claim": "N 阶几何对称空间由迭代协变导数生成，且其维数等于相应多重指标空间。",
+              "route": "先用投影 pi 把带导数变量消去，借助树的 grafting 递归说明协变导数张成全部无厚边树；再对 $phi_hat_geo$ 的方程建立按变量数的三角系统，分别给出上下维数界，得到 Propositions 4.6-4.7 和 Theorem 4.8。",
+              "evidence": "PDF 第 23-25 页 Propositions 4.6-4.7、Theorem 4.8；第 29-31 页 Theorems 4.11-4.12。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查讲义摘要、正规性结构背景、广义 KPZ 与几何 KPZ 章节、全部证明说明、结尾和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-34 页全文检索及第 31-34 页结尾、References。",
+        "priorityScore": 59,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

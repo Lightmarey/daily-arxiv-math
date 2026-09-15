@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05062",
+  "slug": "2609.05062",
+  "latest": {
+    "id": "math.AP:2026-09-07:2609.05062:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-07",
+    "arxivId": "2609.05062",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "From plans to maps: Nonlocal regularization of optimal transport",
+    "authors": [
+      "Marcello Carioni",
+      "Leonardo Del Grande",
+      "José A. Iglesias",
+      "Hidde Schönberger"
+    ],
+    "abstract": "We introduce a nonlocal regularization of optimal transport that bridges Kantorovich and Monge formulations. The regularization penalizes oscillations through an interaction kernel singular near the diagonal. We show that, for sufficiently strong singularities, every finite-energy transport plan is induced by a map, yielding equivalence between the regularized Kantorovich and Monge problems. For fractional kernels, the regularizer reduces to a fractional Sobolev seminorm that can allow jump discontinuities, leading to existence results for broad classes of source and target measures. We derive first-order optimality conditions and analyze the vanishing-regularization limit. The regularized functionals $Γ$-converge to the classical Kantorovich problem, while the first-order $Γ$-limit selects, whenever they exist, finite-energy Monge minimizers with minimal nonlocal energy. When no such minimizer exists, we identify a different asymptotic regime and establish a sharp scaling law in a prototypical mass-splitting example. Finally, after lifting the problem to the product of transport plans, we derive a dual formulation using the cone of copositive functions and propose a fixed-point numerical scheme illustrating the regularization.",
+    "categories": [
+      "math.OC",
+      "math.AP",
+      "math.FA"
+    ],
+    "primaryCategory": "math.OC",
+    "arxivUrl": "https://arxiv.org/abs/2609.05062",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05062",
+    "submittedAt": "2026-09-04T12:25:04Z",
+    "updatedAt": "2026-09-04T12:25:04Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "变分方法",
+    "workSummary": "构造从 Kantorovich 计划到 Monge 映射的非局部最优输运正则化：先证明有限能量计划必须由映射诱导，再给出最优性条件和 $\\Gamma $ 极限，最后讨论一阶 $\\Gamma $ 极限及凸松弛。",
+    "techniques": [
+      "非局部相互作用能",
+      "Kantorovich--Monge 等价",
+      "$\\Gamma $ 收敛",
+      "最优性条件",
+      "凸对偶"
+    ],
+    "breakthrough": "证明足够强的对角奇异正则项会排除真正的非映射输运计划，从而把正则化 Kantorovich 问题推回 Monge 结构，并刻画其局部 $\\Gamma $ 极限。",
+    "limitations": "核的奇异性、测度维数和正则性需满足文中条件$；\\Gamma $ 极限描述的是 $\\epsilon \\to 0$ 的变分收敛，不直接给出每个 $\\epsilon $ 的经典映射正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "有限非局部能量迫使输运计划由映射诱导。",
+          "route": "对计划的 disintegration 分析对角核附近的双点质量；若条件分布非原子，奇异核能量发散，因此有限能量迫使条件分布为 Dirac。",
+          "evidence": "第 2 节 Proposition 2.1、Proposition 2.3（PDF 第 2--5 页）。"
+        },
+        {
+          "claim": "正则化最优映射满足含非局部势的 Euler--Lagrange 条件。",
+          "route": "对映射作 measure-preserving 变分，计算运输成本与 interaction energy 的一阶导数；用 Kantorovich 势和核梯度得到强/弱最优性方程。",
+          "evidence": "第 3 节 Theorems 3.1、3.4（PDF 第 18--25 页）。"
+        },
+        {
+          "claim": "在强奇异核和几何条件下，正则化泛函 $\\Gamma $ 收敛到局部极限。",
+          "route": "将核在对角附近分层，利用 transport map 的局部差分估计得到 liminf；构造平滑恢复序列并控制远离对角的尾项，完成 $\\Gamma -limsup$。",
+          "evidence": "第 4 节 Proposition 4.1、Corollary 4.3、Proposition 4.4（PDF 第 27--33 页）。"
+        },
+        {
+          "claim": "一阶 $\\Gamma $ 极限和凸松弛给出更细的结构描述。",
+          "route": "对主阶局部项作次阶展开，识别梯度/振荡惩罚；再把映射约束写成有限维核上的 moment cone，应用 copositive duality 进行凸松弛。",
+          "evidence": "第 4--5 节 Proposition 4.4、Propositions 5.1、5.3、Theorem 5.5（PDF 第 32--37 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--37 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 75,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦变分方法，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-07",
+      "report": {
+        "id": "math.AP:2026-09-07:2609.05062:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-07",
+        "arxivId": "2609.05062",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "From plans to maps: Nonlocal regularization of optimal transport",
+        "authors": [
+          "Marcello Carioni",
+          "Leonardo Del Grande",
+          "José A. Iglesias",
+          "Hidde Schönberger"
+        ],
+        "abstract": "We introduce a nonlocal regularization of optimal transport that bridges Kantorovich and Monge formulations. The regularization penalizes oscillations through an interaction kernel singular near the diagonal. We show that, for sufficiently strong singularities, every finite-energy transport plan is induced by a map, yielding equivalence between the regularized Kantorovich and Monge problems. For fractional kernels, the regularizer reduces to a fractional Sobolev seminorm that can allow jump discontinuities, leading to existence results for broad classes of source and target measures. We derive first-order optimality conditions and analyze the vanishing-regularization limit. The regularized functionals $Γ$-converge to the classical Kantorovich problem, while the first-order $Γ$-limit selects, whenever they exist, finite-energy Monge minimizers with minimal nonlocal energy. When no such minimizer exists, we identify a different asymptotic regime and establish a sharp scaling law in a prototypical mass-splitting example. Finally, after lifting the problem to the product of transport plans, we derive a dual formulation using the cone of copositive functions and propose a fixed-point numerical scheme illustrating the regularization.",
+        "categories": [
+          "math.OC",
+          "math.AP",
+          "math.FA"
+        ],
+        "primaryCategory": "math.OC",
+        "arxivUrl": "https://arxiv.org/abs/2609.05062",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05062",
+        "submittedAt": "2026-09-04T12:25:04Z",
+        "updatedAt": "2026-09-04T12:25:04Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "变分方法",
+        "workSummary": "构造从 Kantorovich 计划到 Monge 映射的非局部最优输运正则化：先证明有限能量计划必须由映射诱导，再给出最优性条件和 $\\Gamma $ 极限，最后讨论一阶 $\\Gamma $ 极限及凸松弛。",
+        "techniques": [
+          "非局部相互作用能",
+          "Kantorovich--Monge 等价",
+          "$\\Gamma $ 收敛",
+          "最优性条件",
+          "凸对偶"
+        ],
+        "breakthrough": "证明足够强的对角奇异正则项会排除真正的非映射输运计划，从而把正则化 Kantorovich 问题推回 Monge 结构，并刻画其局部 $\\Gamma $ 极限。",
+        "limitations": "核的奇异性、测度维数和正则性需满足文中条件$；\\Gamma $ 极限描述的是 $\\epsilon \\to 0$ 的变分收敛，不直接给出每个 $\\epsilon $ 的经典映射正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "有限非局部能量迫使输运计划由映射诱导。",
+              "route": "对计划的 disintegration 分析对角核附近的双点质量；若条件分布非原子，奇异核能量发散，因此有限能量迫使条件分布为 Dirac。",
+              "evidence": "第 2 节 Proposition 2.1、Proposition 2.3（PDF 第 2--5 页）。"
+            },
+            {
+              "claim": "正则化最优映射满足含非局部势的 Euler--Lagrange 条件。",
+              "route": "对映射作 measure-preserving 变分，计算运输成本与 interaction energy 的一阶导数；用 Kantorovich 势和核梯度得到强/弱最优性方程。",
+              "evidence": "第 3 节 Theorems 3.1、3.4（PDF 第 18--25 页）。"
+            },
+            {
+              "claim": "在强奇异核和几何条件下，正则化泛函 $\\Gamma $ 收敛到局部极限。",
+              "route": "将核在对角附近分层，利用 transport map 的局部差分估计得到 liminf；构造平滑恢复序列并控制远离对角的尾项，完成 $\\Gamma -limsup$。",
+              "evidence": "第 4 节 Proposition 4.1、Corollary 4.3、Proposition 4.4（PDF 第 27--33 页）。"
+            },
+            {
+              "claim": "一阶 $\\Gamma $ 极限和凸松弛给出更细的结构描述。",
+              "route": "对主阶局部项作次阶展开，识别梯度/振荡惩罚；再把映射约束写成有限维核上的 moment cone，应用 copositive duality 进行凸松弛。",
+              "evidence": "第 4--5 节 Proposition 4.4、Propositions 5.1、5.3、Theorem 5.5（PDF 第 32--37 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--37 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 75,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦变分方法，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

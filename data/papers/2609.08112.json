@@ -3,95 +3,151 @@
   "arxivId": "2609.08112",
   "slug": "2609.08112",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.08112:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.08112",
-    "metadata": {
-      "title": "Formation and structural stability of nondegenerate neckpinches",
-      "authors": [
-        "Kyeongsu Choi",
-        "Panagiota Daskalopoulos",
-        "Natasa Sesum"
-      ],
-      "abstract": "In this paper, we study the formation, precise asymptotics, and structural stability of neckpinch singularities in mean curvature flow. Motivated by the static rigidity of cylindrical self-shrinkers established by Colding, Ilmanen and Minicozzi, we first prove a dynamical rigidity result: mean curvature flow of hypersurfaces that are initially graphically close to a generalized cylinder on a sufficiently large scale, subject to a localized quadratic upward bending, inevitably develop a neckpinch singularity in finite time. We also establish sharp asymptotic expansions for the profile functions of these locally evolving graphs. We show that the rescaled graphical radius converges to a specific polynomial profile with quadratic bending, proving that the resulting singularities are nondegenerate. Finally, we establish an openness theorem showing that nondegenerate neckpinches are structurally stable under C^2 perturbations of the initial data. Combined with recent density theorems for the 3-dimensional mean curvature flow by Szekelyhidi, our results confirm that nondegenerate neckpinches constitute a generic and stable phenomenon in 3-dimensional mean curvature flow.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-08T01:38:08Z",
-      "updatedAt": "2026-09-08T01:38:08Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Formation and structural stability of nondegenerate neckpinches",
+    "authors": [
+      "Kyeongsu Choi",
+      "Panagiota Daskalopoulos",
+      "Natasa Sesum"
+    ],
+    "abstract": "In this paper, we study the formation, precise asymptotics, and structural stability of neckpinch singularities in mean curvature flow. Motivated by the static rigidity of cylindrical self-shrinkers established by Colding, Ilmanen and Minicozzi, we first prove a dynamical rigidity result: mean curvature flow of hypersurfaces that are initially graphically close to a generalized cylinder on a sufficiently large scale, subject to a localized quadratic upward bending, inevitably develop a neckpinch singularity in finite time. We also establish sharp asymptotic expansions for the profile functions of these locally evolving graphs. We show that the rescaled graphical radius converges to a specific polynomial profile with quadratic bending, proving that the resulting singularities are nondegenerate. Finally, we establish an openness theorem showing that nondegenerate neckpinches are structurally stable under C^2 perturbations of the initial data. Combined with recent density theorems for the 3-dimensional mean curvature flow by Szekelyhidi, our results confirm that nondegenerate neckpinches constitute a generic and stable phenomenon in 3-dimensional mean curvature flow.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.08112",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08112",
+    "submittedAt": "2026-09-08T01:38:08Z",
+    "updatedAt": "2026-09-08T01:38:08Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究平均曲率流中非退化 neckpinch 的形成、渐近和结构稳定性。初始超曲面在大尺度上是带局部二次向上弯曲的圆柱图；作者先用伪局部性和重标度图估计保持圆柱接近，再以 L2 模态分解、屏障和角向旋转选择控制误差。funnel 中的正负不稳定模态由退出引理和度数非零的 shooting 选择被消除，中心模态留下精确的二次渐近；最后将已有非退化颈缩流在 C2 初值扰动下重新缩放，证明其严格稳定。",
+    "techniques": [
+      "平均曲率流抛物重标度",
+      "伪局部性与图估计",
+      "圆柱线性化模态分解",
+      "上下屏障与加权 L2 能量",
+      "拓扑度 shooting 与稳定性连续性"
+    ],
+    "breakthrough": "证明局部二次向上弯曲会动态选出完整轴向非退化模式，形成渐近 profile $(|y|^2-2k)/(4$ tau)，并用参数度数方法选择正确奇点时间、中心和旋转；由此把非退化 neckpinch 提升为 C2 扰动下的开放稳定现象。",
+    "limitations": "形成定理要求有界 entropy、在大球上高阶图形接近 $R^k x$ $S^{n-k}$ 且初始数据小；稳定性是局部 C2 扰动且依赖圆柱切向模型和既有唯一性结果，不覆盖退化颈缩、任意全局拓扑或大扰动。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "初始带局部二次弯曲的圆柱图在长重标度时间内保持图形性和定量圆柱接近。",
+          "route": "围绕候选点做抛物重标度，利用 Section 2 的伪局部性延续图形区域；Section 3 将截断误差投影到常数与正交模态，ODE 估计把初始二次项的大小推进到更长时间并提升 C0 到 C4 控制。",
+          "evidence": "PDF 第 6-18 页 Sections 2-3、Theorem 3.1、Lemmas 3.3-3.6。"
+        },
+        {
+          "claim": "在适当调整奇点时间和中心后，流在有限区域首次产生圆柱型 neckpinch，且切流唯一为广义圆柱。",
+          "route": "Section 4 通过位置依赖的时间修正和最大值原理把局部估计延伸到奇异时刻；上下屏障夹住图形半径，曲率缩放估计排除其它首个奇异模型，于是得到 Theorem 1.1。",
+          "evidence": "PDF 第 20-29 页 Section 4、Lemma 4.2、Corollary 4.3；第 3-4 页 Theorem 1.1。"
+        },
+        {
+          "claim": "存在旋转使角向模态衰减，并且 funnel 内的中心模态满足二次非退化渐近。",
+          "route": "Section 5 选择最优旋转消除角向一阶模态，Section 6 的 subsolution/supersolution 给出径向误差夹逼；Section 7 建立 funnel 内的加权 L2 bootstrap，控制正负模态和高阶余项。",
+          "evidence": "PDF 第 29-39 页 Sections 5-6；第 40-60 页 Section 7、Proposition 7.3、Proposition 7.7、Lemma 7.11。"
+        },
+        {
+          "claim": "可选择参数使重标度流永远留在 funnel，并得到非退化 profile；非退化 neckpinch 对 C2 初值扰动保持。",
+          "route": "Exit lemma 给出离开 funnel 时正不稳定模态的横截增长，degree-theoretic shooting lemma 用边界非零度排除所有参数都离开的可能性；Merle-Zaag ODE 分支分析后得到中心模态主导的 profile。最后将已有流在较晚时刻重标度，借连续依赖把扰动初值送入 Theorem 1.1 的二次弯曲类。",
+          "evidence": "PDF 第 62-64 页 Lemmas 8.3-8.4、Theorem 1.2 proof；第 64-68 页 Section 9、equations (9.1)-(9.12)、Theorem 1.5。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新定理/分类",
-      "workSummary": "证明局部接近圆柱且有二次上弯的平均曲率流必形成非退化颈缩，给出锐渐近及 C2 扰动稳定性。",
-      "techniques": [
-        "动态圆柱刚性",
-        "局部图演化",
-        "重标定渐近"
-      ],
-      "breakthrough": "把静态自收缩刚性推进到奇点形成与开放性。",
-      "limitations": "一般性陈述依赖维数和既有稠密性定理，需区分局部假设。 已补读所列正文片段；这不是逐行独立证明审查。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 94,
-      "priorityReason": "几何流奇点结构与稳定性核心进展。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "In this paper, we study the formation, precise asymptotics, and structural stability of neckpinch singularities in mean curvature flow. Motivated by the static rigidity of cylindrical self-shrinkers established by Colding, Ilmanen and Minicozzi, we first prove a dynamical rigidity result: mean curvature flow of hypersurfaces that are initially graphically close to a generalized cylinder on a sufficiently large scale, subject to a localized quadratic upward bending, inevitably develop a neckpinch singularity in finite time. We also establish sharp asymptotic expansions for the profile functions of these locally evolving graphs. We show that the rescaled graphical radius converges to a specific polynomial profile with quadratic bending, proving that the resulting singularities are nondegenerate. Finally, we establish an openness theorem showing that nondegenerate neckpinches are structurally stable under C^2 perturbations of the initial data. Combined with recent density theorems for the 3-dimensional mean curvature flow by Szekelyhidi, our results confirm that nondegenerate neckpinches constitute a generic and stable phenomenon in 3-dimensional mean curvature flow.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、平均曲率流证明、应用稳定性章节、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未发现作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-68 页全文检索及第 64-68 页 Section 9、Appendix、References。",
+    "priorityScore": 58,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08112:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.08112",
-        "metadata": {
-          "title": "Formation and structural stability of nondegenerate neckpinches",
-          "authors": [
-            "Kyeongsu Choi",
-            "Panagiota Daskalopoulos",
-            "Natasa Sesum"
-          ],
-          "abstract": "In this paper, we study the formation, precise asymptotics, and structural stability of neckpinch singularities in mean curvature flow. Motivated by the static rigidity of cylindrical self-shrinkers established by Colding, Ilmanen and Minicozzi, we first prove a dynamical rigidity result: mean curvature flow of hypersurfaces that are initially graphically close to a generalized cylinder on a sufficiently large scale, subject to a localized quadratic upward bending, inevitably develop a neckpinch singularity in finite time. We also establish sharp asymptotic expansions for the profile functions of these locally evolving graphs. We show that the rescaled graphical radius converges to a specific polynomial profile with quadratic bending, proving that the resulting singularities are nondegenerate. Finally, we establish an openness theorem showing that nondegenerate neckpinches are structurally stable under C^2 perturbations of the initial data. Combined with recent density theorems for the 3-dimensional mean curvature flow by Szekelyhidi, our results confirm that nondegenerate neckpinches constitute a generic and stable phenomenon in 3-dimensional mean curvature flow.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-08T01:38:08Z",
-          "updatedAt": "2026-09-08T01:38:08Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Formation and structural stability of nondegenerate neckpinches",
+        "authors": [
+          "Kyeongsu Choi",
+          "Panagiota Daskalopoulos",
+          "Natasa Sesum"
+        ],
+        "abstract": "In this paper, we study the formation, precise asymptotics, and structural stability of neckpinch singularities in mean curvature flow. Motivated by the static rigidity of cylindrical self-shrinkers established by Colding, Ilmanen and Minicozzi, we first prove a dynamical rigidity result: mean curvature flow of hypersurfaces that are initially graphically close to a generalized cylinder on a sufficiently large scale, subject to a localized quadratic upward bending, inevitably develop a neckpinch singularity in finite time. We also establish sharp asymptotic expansions for the profile functions of these locally evolving graphs. We show that the rescaled graphical radius converges to a specific polynomial profile with quadratic bending, proving that the resulting singularities are nondegenerate. Finally, we establish an openness theorem showing that nondegenerate neckpinches are structurally stable under C^2 perturbations of the initial data. Combined with recent density theorems for the 3-dimensional mean curvature flow by Szekelyhidi, our results confirm that nondegenerate neckpinches constitute a generic and stable phenomenon in 3-dimensional mean curvature flow.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.08112",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08112",
+        "submittedAt": "2026-09-08T01:38:08Z",
+        "updatedAt": "2026-09-08T01:38:08Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究平均曲率流中非退化 neckpinch 的形成、渐近和结构稳定性。初始超曲面在大尺度上是带局部二次向上弯曲的圆柱图；作者先用伪局部性和重标度图估计保持圆柱接近，再以 L2 模态分解、屏障和角向旋转选择控制误差。funnel 中的正负不稳定模态由退出引理和度数非零的 shooting 选择被消除，中心模态留下精确的二次渐近；最后将已有非退化颈缩流在 C2 初值扰动下重新缩放，证明其严格稳定。",
+        "techniques": [
+          "平均曲率流抛物重标度",
+          "伪局部性与图估计",
+          "圆柱线性化模态分解",
+          "上下屏障与加权 L2 能量",
+          "拓扑度 shooting 与稳定性连续性"
+        ],
+        "breakthrough": "证明局部二次向上弯曲会动态选出完整轴向非退化模式，形成渐近 profile $(|y|^2-2k)/(4$ tau)，并用参数度数方法选择正确奇点时间、中心和旋转；由此把非退化 neckpinch 提升为 C2 扰动下的开放稳定现象。",
+        "limitations": "形成定理要求有界 entropy、在大球上高阶图形接近 $R^k x$ $S^{n-k}$ 且初始数据小；稳定性是局部 C2 扰动且依赖圆柱切向模型和既有唯一性结果，不覆盖退化颈缩、任意全局拓扑或大扰动。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "初始带局部二次弯曲的圆柱图在长重标度时间内保持图形性和定量圆柱接近。",
+              "route": "围绕候选点做抛物重标度，利用 Section 2 的伪局部性延续图形区域；Section 3 将截断误差投影到常数与正交模态，ODE 估计把初始二次项的大小推进到更长时间并提升 C0 到 C4 控制。",
+              "evidence": "PDF 第 6-18 页 Sections 2-3、Theorem 3.1、Lemmas 3.3-3.6。"
+            },
+            {
+              "claim": "在适当调整奇点时间和中心后，流在有限区域首次产生圆柱型 neckpinch，且切流唯一为广义圆柱。",
+              "route": "Section 4 通过位置依赖的时间修正和最大值原理把局部估计延伸到奇异时刻；上下屏障夹住图形半径，曲率缩放估计排除其它首个奇异模型，于是得到 Theorem 1.1。",
+              "evidence": "PDF 第 20-29 页 Section 4、Lemma 4.2、Corollary 4.3；第 3-4 页 Theorem 1.1。"
+            },
+            {
+              "claim": "存在旋转使角向模态衰减，并且 funnel 内的中心模态满足二次非退化渐近。",
+              "route": "Section 5 选择最优旋转消除角向一阶模态，Section 6 的 subsolution/supersolution 给出径向误差夹逼；Section 7 建立 funnel 内的加权 L2 bootstrap，控制正负模态和高阶余项。",
+              "evidence": "PDF 第 29-39 页 Sections 5-6；第 40-60 页 Section 7、Proposition 7.3、Proposition 7.7、Lemma 7.11。"
+            },
+            {
+              "claim": "可选择参数使重标度流永远留在 funnel，并得到非退化 profile；非退化 neckpinch 对 C2 初值扰动保持。",
+              "route": "Exit lemma 给出离开 funnel 时正不稳定模态的横截增长，degree-theoretic shooting lemma 用边界非零度排除所有参数都离开的可能性；Merle-Zaag ODE 分支分析后得到中心模态主导的 profile。最后将已有流在较晚时刻重标度，借连续依赖把扰动初值送入 Theorem 1.1 的二次弯曲类。",
+              "evidence": "PDF 第 62-64 页 Lemmas 8.3-8.4、Theorem 1.2 proof；第 64-68 页 Section 9、equations (9.1)-(9.12)、Theorem 1.5。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新定理/分类",
-          "workSummary": "证明局部接近圆柱且有二次上弯的平均曲率流必形成非退化颈缩，给出锐渐近及 C2 扰动稳定性。",
-          "techniques": [
-            "动态圆柱刚性",
-            "局部图演化",
-            "重标定渐近"
-          ],
-          "breakthrough": "把静态自收缩刚性推进到奇点形成与开放性。",
-          "limitations": "一般性陈述依赖维数和既有稠密性定理，需区分局部假设。 已补读所列正文片段；这不是逐行独立证明审查。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 94,
-          "priorityReason": "几何流奇点结构与稳定性核心进展。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "In this paper, we study the formation, precise asymptotics, and structural stability of neckpinch singularities in mean curvature flow. Motivated by the static rigidity of cylindrical self-shrinkers established by Colding, Ilmanen and Minicozzi, we first prove a dynamical rigidity result: mean curvature flow of hypersurfaces that are initially graphically close to a generalized cylinder on a sufficiently large scale, subject to a localized quadratic upward bending, inevitably develop a neckpinch singularity in finite time. We also establish sharp asymptotic expansions for the profile functions of these locally evolving graphs. We show that the rescaled graphical radius converges to a specific polynomial profile with quadratic bending, proving that the resulting singularities are nondegenerate. Finally, we establish an openness theorem showing that nondegenerate neckpinches are structurally stable under C^2 perturbations of the initial data. Combined with recent density theorems for the 3-dimensional mean curvature flow by Szekelyhidi, our results confirm that nondegenerate neckpinches constitute a generic and stable phenomenon in 3-dimensional mean curvature flow.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、平均曲率流证明、应用稳定性章节、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未发现作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-68 页全文检索及第 64-68 页 Section 9、Appendix、References。",
+        "priorityScore": 58,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

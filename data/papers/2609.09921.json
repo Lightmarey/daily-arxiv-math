@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09921",
+  "slug": "2609.09921",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09921:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09921",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Superlinear nonlocal diffusion systems for multispecies populations: well-posedness and discrete chain rules",
+    "authors": [
+      "Peter Hirvonen",
+      "Ansgar Jüngel",
+      "Annamaria Pollino"
+    ],
+    "abstract": "A nonlocal diffusion system describing the dynamics of multi-species populations and approximating the Shigesada-Kawasaki-Teramoto (SKT) model is analyzed in a bounded domain. The model consists of a system of integro-differential equations of Andreu-Mazón-Rossi-Toledo type, in which a nonlocal cross-diffusion operator acts on nonlinear diffusion potentials. We establish the global existence and uniqueness of strong solutions. The existence proof relies on suitable a priori estimates derived from an entropy inequality, whose proof requires the development of novel discrete chain-rule inequalities. As a by-product, these inequalities provide the basis for the construction of structure-preserving finite-volume schemes for the corresponding local SKT system. Uniqueness of solutions is established by means of a duality argument. Finally, one-dimensional numerical simulations illustrate the nonlocal-to-local limit and the qualitative behavior of solutions for superlinear and sublinear diffusion potentials.",
+    "categories": [
+      "math.AP",
+      "math.NA"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09921",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09921",
+    "submittedAt": "2026-09-09T09:13:54Z",
+    "updatedAt": "2026-09-09T09:13:54Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文分析有界域中多物种人口的超线性非局部交叉扩散系统。非局部算子作用于非线性扩散势，模型逼近局部 SKT 系统。作者先在隐式时间离散空间上构造近似解，用两种离散 chain-rule 不等式把 entropy 结构传递到近似熵不等式；由此获得统一 $L1、Ls、L\\infty $ 和离散时间梯度估计，紧性工具把离散解送到强解。唯一性不靠逐项能量差，而是对差方程用 duality/对偶抛物问题吸收交叉项；最后的一维计算展示非局部到局部极限。",
+    "techniques": [
+      "nonlocal cross-diffusion",
+      "implicit time discretization",
+      "discrete chain rules",
+      "entropy estimates and compactness",
+      "duality uniqueness argument"
+    ],
+    "breakthrough": "为超线性多物种非局部 SKT 型系统建立强解全局存在与唯一性，并把离散 chain-rule 同时用于熵估计和结构保持有限体积离散的构造基础。",
+    "limitations": "存在性依赖 Assumptions (A1)–(A5a/b)、有界域和特定非局部核/势函数，唯一性在 strong-solution 类内；数值实验只是一维示例，未证明一般维度的非局部到局部误差率或弱解唯一性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "时间离散的隐式问题在每个时间步有解，并满足适合极限的非负性和质量结构。",
+          "route": "把上一时间层固定后写成 Vk 上的单调非局部椭圆方程，截断/正则化处理超线性势；有限维 Galerkin 或 Brouwer 论证给近似解，并把离散质量守恒嵌入测试函数 1。",
+          "evidence": "PDF 第 7-13 页 Section 3 Lemmas 3–5，equations (3.1)–(3.18)。"
+        },
+        {
+          "claim": "两个离散 chain-rule 不等式将扩散项转成熵耗散，并给出统一 $L1、Ls、L\\infty $ 估计。",
+          "route": "用非局部差分的凸性把 $(u_i^\\beta -u_j^\\beta )(log$ $u_i-log$ $u_j)$ 等交叉项逐对控制，代入时间差分方程后求和；熵势的增长吸收超线性项，随后迭代 Lemmas 8–10 得到独立于步长的范数界。",
+          "evidence": "PDF 第 13-24 页 Sections 4–5 Lemmas 6–10、Proposition 12，equations (4.1)–(5.28)。"
+        },
+        {
+          "claim": "离散解的统一估计和时间平移控制产生强收敛，从而得到全局强解。",
+          "route": "把非局部扩散的空间能量与时间离散差分估计组合，应用 Aubin–Lions 型紧性得到子列强收敛；单调性和非局部算子连续性把极限带回方程，熵不等式闭合并允许任意 T 的逐步延拓。",
+          "evidence": "PDF 第 24-31 页 Sections 6–8 Lemmas 11–16、Theorem 1 proof，equations (6.1)–(8.19)。"
+        },
+        {
+          "claim": "任意两强解相同，且离散 chain-rule 支持结构保持的有限体积离散。",
+          "route": "对两个解取差，解一个反向对偶抛物问题把差方程中的交叉扩散写成对偶梯度配对；选择对偶终值并积分，所有系数项由强解界吸收，得到差的 L2/L1 为零。离散 chain-rule 的同一逐对代数结构可直接转成非负、熵耗散的有限体积通量。",
+          "evidence": "PDF 第 31-34 页 Sections 8–9 Theorem 2、duality proof 与 one-dimensional numerical section，equations (8.20)–(9.16)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 2–9、熵/唯一性证明、数值部分、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-27 页全文。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09921:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09921",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Superlinear nonlocal diffusion systems for multispecies populations: well-posedness and discrete chain rules",
+        "authors": [
+          "Peter Hirvonen",
+          "Ansgar Jüngel",
+          "Annamaria Pollino"
+        ],
+        "abstract": "A nonlocal diffusion system describing the dynamics of multi-species populations and approximating the Shigesada-Kawasaki-Teramoto (SKT) model is analyzed in a bounded domain. The model consists of a system of integro-differential equations of Andreu-Mazón-Rossi-Toledo type, in which a nonlocal cross-diffusion operator acts on nonlinear diffusion potentials. We establish the global existence and uniqueness of strong solutions. The existence proof relies on suitable a priori estimates derived from an entropy inequality, whose proof requires the development of novel discrete chain-rule inequalities. As a by-product, these inequalities provide the basis for the construction of structure-preserving finite-volume schemes for the corresponding local SKT system. Uniqueness of solutions is established by means of a duality argument. Finally, one-dimensional numerical simulations illustrate the nonlocal-to-local limit and the qualitative behavior of solutions for superlinear and sublinear diffusion potentials.",
+        "categories": [
+          "math.AP",
+          "math.NA"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09921",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09921",
+        "submittedAt": "2026-09-09T09:13:54Z",
+        "updatedAt": "2026-09-09T09:13:54Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文分析有界域中多物种人口的超线性非局部交叉扩散系统。非局部算子作用于非线性扩散势，模型逼近局部 SKT 系统。作者先在隐式时间离散空间上构造近似解，用两种离散 chain-rule 不等式把 entropy 结构传递到近似熵不等式；由此获得统一 $L1、Ls、L\\infty $ 和离散时间梯度估计，紧性工具把离散解送到强解。唯一性不靠逐项能量差，而是对差方程用 duality/对偶抛物问题吸收交叉项；最后的一维计算展示非局部到局部极限。",
+        "techniques": [
+          "nonlocal cross-diffusion",
+          "implicit time discretization",
+          "discrete chain rules",
+          "entropy estimates and compactness",
+          "duality uniqueness argument"
+        ],
+        "breakthrough": "为超线性多物种非局部 SKT 型系统建立强解全局存在与唯一性，并把离散 chain-rule 同时用于熵估计和结构保持有限体积离散的构造基础。",
+        "limitations": "存在性依赖 Assumptions (A1)–(A5a/b)、有界域和特定非局部核/势函数，唯一性在 strong-solution 类内；数值实验只是一维示例，未证明一般维度的非局部到局部误差率或弱解唯一性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "时间离散的隐式问题在每个时间步有解，并满足适合极限的非负性和质量结构。",
+              "route": "把上一时间层固定后写成 Vk 上的单调非局部椭圆方程，截断/正则化处理超线性势；有限维 Galerkin 或 Brouwer 论证给近似解，并把离散质量守恒嵌入测试函数 1。",
+              "evidence": "PDF 第 7-13 页 Section 3 Lemmas 3–5，equations (3.1)–(3.18)。"
+            },
+            {
+              "claim": "两个离散 chain-rule 不等式将扩散项转成熵耗散，并给出统一 $L1、Ls、L\\infty $ 估计。",
+              "route": "用非局部差分的凸性把 $(u_i^\\beta -u_j^\\beta )(log$ $u_i-log$ $u_j)$ 等交叉项逐对控制，代入时间差分方程后求和；熵势的增长吸收超线性项，随后迭代 Lemmas 8–10 得到独立于步长的范数界。",
+              "evidence": "PDF 第 13-24 页 Sections 4–5 Lemmas 6–10、Proposition 12，equations (4.1)–(5.28)。"
+            },
+            {
+              "claim": "离散解的统一估计和时间平移控制产生强收敛，从而得到全局强解。",
+              "route": "把非局部扩散的空间能量与时间离散差分估计组合，应用 Aubin–Lions 型紧性得到子列强收敛；单调性和非局部算子连续性把极限带回方程，熵不等式闭合并允许任意 T 的逐步延拓。",
+              "evidence": "PDF 第 24-31 页 Sections 6–8 Lemmas 11–16、Theorem 1 proof，equations (6.1)–(8.19)。"
+            },
+            {
+              "claim": "任意两强解相同，且离散 chain-rule 支持结构保持的有限体积离散。",
+              "route": "对两个解取差，解一个反向对偶抛物问题把差方程中的交叉扩散写成对偶梯度配对；选择对偶终值并积分，所有系数项由强解界吸收，得到差的 L2/L1 为零。离散 chain-rule 的同一逐对代数结构可直接转成非负、熵耗散的有限体积通量。",
+              "evidence": "PDF 第 31-34 页 Sections 8–9 Theorem 2、duality proof 与 one-dimensional numerical section，equations (8.20)–(9.16)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 2–9、熵/唯一性证明、数值部分、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-27 页全文。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

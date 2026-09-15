@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08645",
+  "slug": "2609.08645",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08645:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08645",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Polynomial mixing for the 3D damped cubic nonlinear Schrödinger equation with degenerate noise",
+    "authors": [
+      "Rongchang Liu",
+      "Kening Lu",
+      "Lin Shi"
+    ],
+    "abstract": "We prove polynomial mixing for the defocusing damped cubic stochastic nonlinear Schrödinger equation on the three-dimensional torus under saturating smooth finite rank Brownian forcing. The mixing rate is measured in the $p$-Wasserstein metric induced by the $H^1$ distance for every $1\\le p<\\infty$. We also obtain sharp geometric characterizations of saturation. The proof is based on a polynomial mixing criterion built on a stable--compact decomposition of the exact solution differences with polynomial moment control of the logarithmic path amplification. Dense Malliavin range allows the compact defect to be compensated by finite-dimensional Cameron--Martin shifts, producing a block multiplier with negative mean logarithm. A logarithmic transportation gauge, combined with a renewal--reset coupling scheme, then yields mixing at every prescribed polynomial order in the weaker $L^2$ distance. A stationary regularity gain to $H^{2-}$ then enables us to upgrade the convergence to $H^1$.",
+    "categories": [
+      "math.PR",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.08645",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08645",
+    "submittedAt": "2026-09-08T12:13:57Z",
+    "updatedAt": "2026-09-08T12:13:57Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "论文研究三维环面上的 defocusing damped cubic stochastic NLS，在噪声仅作用于有限个光滑空间剖面的退化情形下建立任意阶多项式混合。作者先对精确解差构造 Bogoliubov 型 stable–compact 分解，将不可收缩部分压缩为紧缺陷；再用终点 Malliavin 导数的稠密值域以有限维 Cameron–Martin 位移补偿该缺陷，得到平均对数收缩。统一不可约性提供重置，抽象判据把局部负对数漂移转为任意多项式速度；最后用平稳四波恒等式得到 $H^{2-}$ 正则性，把 $L^{2}$ 耦合提升到 $H^{1}$ Wasserstein。",
+    "techniques": [
+      "Bogoliubov 精确差方程的稳定–紧分解",
+      "有限维 Malliavin 范围补偿与 Cameron–Martin 平移",
+      "负对数距离乘子的耦合块",
+      "Lyapunov 返回与 renewal–reset 耦合",
+      "平稳四波恒等式和 Strichartz 正则增益"
+    ],
+    "breakthrough": "把仅有对数矩控制的退化有限秩噪声纳入稳定–紧混合框架：cubic saturation 只需产生稠密 Malliavin 方向，即可在任意阻尼强度下得到所有多项式阶的 $H^{1}$ Wasserstein 混合，并给出三剖面的饱和构造与几何刻画。",
+    "limitations": "结论要求噪声剖面光滑且 cubic saturating，混合估计依赖能量初值的多项式矩；证明先在 $L^{2}$ 耦合拓扑中工作，再借助平稳 $H^{2-}$ 尾部提升到 $H^{1}$。论文没有给出指数混合，且非饱和噪声只覆盖相应不变 Fourier sector。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "抽象稳定–紧假设、Lyapunov 矩估计、稠密 Malliavin 范围和统一不可约性推出任意阶多项式混合。",
+          "route": "在紧 Lyapunov 子水平上用有限秩 Malliavin 方向逼近紧端点缺陷，修复平移后的边缘分布后得到负平均对数乘子；对偶对数运输规范把该负漂移累积成耦合成功，返回时刻的指数矩和重置概率再通过 renewal 估计产生任意多项式尾界。",
+          "evidence": "PDF 第6–7页 Assumptions 3.1–3.4 与 Theorem 3.6；PDF 第10页 Proposition 3.8；第13页 Lemma 3.9。"
+        },
+        {
+          "claim": "cubic SNLS 的精确解差满足稳定项加紧缺陷的分解，且路径放大因子有对数矩。",
+          "route": "保留差方程中的对角实势并把共轭交互写成 Bogoliubov 线性系统；Sylvester 型可逆演化将该共轭项表示为紧算子，阻尼给出稳定项 $e^{-\\gamma T}$。能量–Strichartz 估计对路径增长泛函提供任意有限次对数矩。",
+          "evidence": "PDF 第24页 Section 4.1 Proposition 4.3 的 exact difference formula；PDF 第22页 Appendix A.7 的 Proposition A.7 path amplification；其在主定理拼接中的使用见 PDF 第49页 Proof of Theorem 2.3。"
+        },
+        {
+          "claim": "cubic saturation 使终点 Malliavin 导数值域稠密，并可用三条光滑复噪声剖面实现饱和。",
+          "route": "对切向流作因子化后计算二阶协变与冻结短时展开，得到由 $JD^{3}N$ 递归生成的 cubic descendants；Theorem 4.12 将这些矩阵词与剖面 Gram 几何的嵌入条件等价，具体剖面 $b1=1、b2=(R+r cos$ $x3)e^{ix1}、b3=(R+r sin$ $x3)e^{ix2}$ 由嵌入推出稠密性。",
+          "evidence": "PDF 第4页公式(2.4)–(2.5)；PDF 第38页 Proposition 4.13 公式(4.36)；PDF 第38页 Theorem 4.12。"
+        },
+        {
+          "claim": "由上述耦合得到唯一不变测度，且它支撑 $H^{1}$、集中于 $H^{2-}$，并在 $H^{1}$ Wasserstein 中任意阶多项式收敛。",
+          "route": "Theorem 3.6 先给 $L^{2}$ 距离的多项式耦合；Theorem 4.19 用平稳 Strichartz 矩和四波恒等式迭代控制非线性 Sobolev 通量至每个指数小于2；最后用能量恒等式、质量平衡和 Fourier 高频截断，把 $L^{2}$ 收敛与 $H^{1}$ 尾部合并成 $H^{1}$ Wasserstein 估计。",
+          "evidence": "PDF 第40页 Theorem 4.19；PDF 第49–50页 Proof of Theorem 2.3，尤其公式(4.65)–(4.69)；主结论 PDF 第5页 Theorem 2.3。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查摘要、引言、正文、Appendix、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、Claude；命中均为数学符号或普通英文片段，未见作者明确披露 AI 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–50页正文及第51–67页附录/参考文献全文。",
+    "priorityScore": 63,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08645:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08645",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Polynomial mixing for the 3D damped cubic nonlinear Schrödinger equation with degenerate noise",
+        "authors": [
+          "Rongchang Liu",
+          "Kening Lu",
+          "Lin Shi"
+        ],
+        "abstract": "We prove polynomial mixing for the defocusing damped cubic stochastic nonlinear Schrödinger equation on the three-dimensional torus under saturating smooth finite rank Brownian forcing. The mixing rate is measured in the $p$-Wasserstein metric induced by the $H^1$ distance for every $1\\le p<\\infty$. We also obtain sharp geometric characterizations of saturation. The proof is based on a polynomial mixing criterion built on a stable--compact decomposition of the exact solution differences with polynomial moment control of the logarithmic path amplification. Dense Malliavin range allows the compact defect to be compensated by finite-dimensional Cameron--Martin shifts, producing a block multiplier with negative mean logarithm. A logarithmic transportation gauge, combined with a renewal--reset coupling scheme, then yields mixing at every prescribed polynomial order in the weaker $L^2$ distance. A stationary regularity gain to $H^{2-}$ then enables us to upgrade the convergence to $H^1$.",
+        "categories": [
+          "math.PR",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.08645",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08645",
+        "submittedAt": "2026-09-08T12:13:57Z",
+        "updatedAt": "2026-09-08T12:13:57Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "论文研究三维环面上的 defocusing damped cubic stochastic NLS，在噪声仅作用于有限个光滑空间剖面的退化情形下建立任意阶多项式混合。作者先对精确解差构造 Bogoliubov 型 stable–compact 分解，将不可收缩部分压缩为紧缺陷；再用终点 Malliavin 导数的稠密值域以有限维 Cameron–Martin 位移补偿该缺陷，得到平均对数收缩。统一不可约性提供重置，抽象判据把局部负对数漂移转为任意多项式速度；最后用平稳四波恒等式得到 $H^{2-}$ 正则性，把 $L^{2}$ 耦合提升到 $H^{1}$ Wasserstein。",
+        "techniques": [
+          "Bogoliubov 精确差方程的稳定–紧分解",
+          "有限维 Malliavin 范围补偿与 Cameron–Martin 平移",
+          "负对数距离乘子的耦合块",
+          "Lyapunov 返回与 renewal–reset 耦合",
+          "平稳四波恒等式和 Strichartz 正则增益"
+        ],
+        "breakthrough": "把仅有对数矩控制的退化有限秩噪声纳入稳定–紧混合框架：cubic saturation 只需产生稠密 Malliavin 方向，即可在任意阻尼强度下得到所有多项式阶的 $H^{1}$ Wasserstein 混合，并给出三剖面的饱和构造与几何刻画。",
+        "limitations": "结论要求噪声剖面光滑且 cubic saturating，混合估计依赖能量初值的多项式矩；证明先在 $L^{2}$ 耦合拓扑中工作，再借助平稳 $H^{2-}$ 尾部提升到 $H^{1}$。论文没有给出指数混合，且非饱和噪声只覆盖相应不变 Fourier sector。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "抽象稳定–紧假设、Lyapunov 矩估计、稠密 Malliavin 范围和统一不可约性推出任意阶多项式混合。",
+              "route": "在紧 Lyapunov 子水平上用有限秩 Malliavin 方向逼近紧端点缺陷，修复平移后的边缘分布后得到负平均对数乘子；对偶对数运输规范把该负漂移累积成耦合成功，返回时刻的指数矩和重置概率再通过 renewal 估计产生任意多项式尾界。",
+              "evidence": "PDF 第6–7页 Assumptions 3.1–3.4 与 Theorem 3.6；PDF 第10页 Proposition 3.8；第13页 Lemma 3.9。"
+            },
+            {
+              "claim": "cubic SNLS 的精确解差满足稳定项加紧缺陷的分解，且路径放大因子有对数矩。",
+              "route": "保留差方程中的对角实势并把共轭交互写成 Bogoliubov 线性系统；Sylvester 型可逆演化将该共轭项表示为紧算子，阻尼给出稳定项 $e^{-\\gamma T}$。能量–Strichartz 估计对路径增长泛函提供任意有限次对数矩。",
+              "evidence": "PDF 第24页 Section 4.1 Proposition 4.3 的 exact difference formula；PDF 第22页 Appendix A.7 的 Proposition A.7 path amplification；其在主定理拼接中的使用见 PDF 第49页 Proof of Theorem 2.3。"
+            },
+            {
+              "claim": "cubic saturation 使终点 Malliavin 导数值域稠密，并可用三条光滑复噪声剖面实现饱和。",
+              "route": "对切向流作因子化后计算二阶协变与冻结短时展开，得到由 $JD^{3}N$ 递归生成的 cubic descendants；Theorem 4.12 将这些矩阵词与剖面 Gram 几何的嵌入条件等价，具体剖面 $b1=1、b2=(R+r cos$ $x3)e^{ix1}、b3=(R+r sin$ $x3)e^{ix2}$ 由嵌入推出稠密性。",
+              "evidence": "PDF 第4页公式(2.4)–(2.5)；PDF 第38页 Proposition 4.13 公式(4.36)；PDF 第38页 Theorem 4.12。"
+            },
+            {
+              "claim": "由上述耦合得到唯一不变测度，且它支撑 $H^{1}$、集中于 $H^{2-}$，并在 $H^{1}$ Wasserstein 中任意阶多项式收敛。",
+              "route": "Theorem 3.6 先给 $L^{2}$ 距离的多项式耦合；Theorem 4.19 用平稳 Strichartz 矩和四波恒等式迭代控制非线性 Sobolev 通量至每个指数小于2；最后用能量恒等式、质量平衡和 Fourier 高频截断，把 $L^{2}$ 收敛与 $H^{1}$ 尾部合并成 $H^{1}$ Wasserstein 估计。",
+              "evidence": "PDF 第40页 Theorem 4.19；PDF 第49–50页 Proof of Theorem 2.3，尤其公式(4.65)–(4.69)；主结论 PDF 第5页 Theorem 2.3。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查摘要、引言、正文、Appendix、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、Claude；命中均为数学符号或普通英文片段，未见作者明确披露 AI 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–50页正文及第51–67页附录/参考文献全文。",
+        "priorityScore": 63,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

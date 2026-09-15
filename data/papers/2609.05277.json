@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05277",
+  "slug": "2609.05277",
+  "latest": {
+    "id": "math.AP:2026-09-07:2609.05277:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-07",
+    "arxivId": "2609.05277",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Asymptotics for the $k$-Hessian Eigenvalue on the Unit Ball",
+    "authors": [
+      "Nicholas McCleerey",
+      "Abhinav Pande",
+      "Thidas Wanasinghe"
+    ],
+    "abstract": "We compute the limit of the eigenvalue of the $k$-Hessian operator on the unit ball in $\\mathbb{R}^n$ when $k\\rightarrow \\infty$, assuming that the ratio $\\frac{n}{k}$ remains fixed. When $n< 2ke$, we moreover identify the limit of the corresponding eigenfunctions. We also derive monotonicity results and consider when the ratio varies in $n$.",
+    "categories": [
+      "math.AP",
+      "math.CA"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05277",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05277",
+    "submittedAt": "2026-09-04T15:31:48Z",
+    "updatedAt": "2026-09-04T15:31:48Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "渐近分析",
+    "workSummary": "计算单位球上 k-Hessian 第一特征值在 k/n 比例极限下的渐近：先利用径向化将 PDE 化为一维 ODE，再构造极限函数和上下界，最后处理 $\\alpha $ 区间及 k<ℓ 的单调性。",
+    "techniques": [
+      "k-Hessian 径向化",
+      "一维 ODE",
+      "上下解比较",
+      "参数渐近",
+      "特征值单调性"
+    ],
+    "breakthrough": "给出 $k/n\\to \\alpha $ 时特征值和特征函数的明确极限，并区分 $\\alpha <2e$ 与一般比例，揭示高阶 Hessian 特征值的非线性相变。",
+    "limitations": "结论限于单位球、第一特征值和给定边界条件；AI 仅用于 Proposition 2.6 证明辅助、作图与校对，不能替代其余数学证明。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "球上第一特征函数可取旋转对称形式。",
+          "route": "用旋转对称性和最大值/比较原理选取径向解，计算径向 Hessian 的特征值乘积，将 PDE 边值问题化为 ODE。",
+          "evidence": "第 2 节 Proposition 2.1、Proposition 2.4（PDF 第 4--7 页）。"
+        },
+        {
+          "claim": "比例参数 $\\alpha =n/k$ 下的 ODE 解收敛到显式极限 profile。",
+          "route": "把组合系数和 k,n 同步缩放，建立积分表示与 equicontinuity；对上下积分界取极限，得到 $v\\alpha $ 及 $uk,\\alpha k$ 的局部一致收敛。",
+          "evidence": "第 3 节 Lemmas 3.2--3.3、Proposition 3.1（PDF 第 8--13 页）。"
+        },
+        {
+          "claim": "特征值的上下界由径向 profile 和边界归一化确定。",
+          "route": "将候选径向 profile 代入 k-Hessian 算子，利用比较原理给出 $\\lambda k,n$ 的上下界；对 $\\alpha <2e$ 的区域加强误差控制。",
+          "evidence": "第 4 节 Proposition 4.1、Proposition 4.2（PDF 第 14--18 页）。"
+        },
+        {
+          "claim": "极限公式和 k 的单调性推出主定理。",
+          "route": "合并序列极限和上下界得到 Theorems 1.1--1.2，并比较不同阶 k<ℓ 的径向特征值，证明 Theorem 1.3 和 Corollary 1.4。",
+          "evidence": "第 1 节 Theorems 1.1--1.3（PDF 第 2--4 页）及第 5 节（PDF 第 19--27 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明生成式 AI 用于证明 Proposition 2.6、生成 Section 7 图形以及校对论文，并明确说明未用于其他结果证明、写作或数值求解。",
+    "aiEvidenceSource": "PDF 第 4 页 Statement on AI Usage（文本行约 219--223）。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-07",
+      "report": {
+        "id": "math.AP:2026-09-07:2609.05277:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-07",
+        "arxivId": "2609.05277",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Asymptotics for the $k$-Hessian Eigenvalue on the Unit Ball",
+        "authors": [
+          "Nicholas McCleerey",
+          "Abhinav Pande",
+          "Thidas Wanasinghe"
+        ],
+        "abstract": "We compute the limit of the eigenvalue of the $k$-Hessian operator on the unit ball in $\\mathbb{R}^n$ when $k\\rightarrow \\infty$, assuming that the ratio $\\frac{n}{k}$ remains fixed. When $n< 2ke$, we moreover identify the limit of the corresponding eigenfunctions. We also derive monotonicity results and consider when the ratio varies in $n$.",
+        "categories": [
+          "math.AP",
+          "math.CA"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05277",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05277",
+        "submittedAt": "2026-09-04T15:31:48Z",
+        "updatedAt": "2026-09-04T15:31:48Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "渐近分析",
+        "workSummary": "计算单位球上 k-Hessian 第一特征值在 k/n 比例极限下的渐近：先利用径向化将 PDE 化为一维 ODE，再构造极限函数和上下界，最后处理 $\\alpha $ 区间及 k<ℓ 的单调性。",
+        "techniques": [
+          "k-Hessian 径向化",
+          "一维 ODE",
+          "上下解比较",
+          "参数渐近",
+          "特征值单调性"
+        ],
+        "breakthrough": "给出 $k/n\\to \\alpha $ 时特征值和特征函数的明确极限，并区分 $\\alpha <2e$ 与一般比例，揭示高阶 Hessian 特征值的非线性相变。",
+        "limitations": "结论限于单位球、第一特征值和给定边界条件；AI 仅用于 Proposition 2.6 证明辅助、作图与校对，不能替代其余数学证明。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "球上第一特征函数可取旋转对称形式。",
+              "route": "用旋转对称性和最大值/比较原理选取径向解，计算径向 Hessian 的特征值乘积，将 PDE 边值问题化为 ODE。",
+              "evidence": "第 2 节 Proposition 2.1、Proposition 2.4（PDF 第 4--7 页）。"
+            },
+            {
+              "claim": "比例参数 $\\alpha =n/k$ 下的 ODE 解收敛到显式极限 profile。",
+              "route": "把组合系数和 k,n 同步缩放，建立积分表示与 equicontinuity；对上下积分界取极限，得到 $v\\alpha $ 及 $uk,\\alpha k$ 的局部一致收敛。",
+              "evidence": "第 3 节 Lemmas 3.2--3.3、Proposition 3.1（PDF 第 8--13 页）。"
+            },
+            {
+              "claim": "特征值的上下界由径向 profile 和边界归一化确定。",
+              "route": "将候选径向 profile 代入 k-Hessian 算子，利用比较原理给出 $\\lambda k,n$ 的上下界；对 $\\alpha <2e$ 的区域加强误差控制。",
+              "evidence": "第 4 节 Proposition 4.1、Proposition 4.2（PDF 第 14--18 页）。"
+            },
+            {
+              "claim": "极限公式和 k 的单调性推出主定理。",
+              "route": "合并序列极限和上下界得到 Theorems 1.1--1.2，并比较不同阶 k<ℓ 的径向特征值，证明 Theorem 1.3 和 Corollary 1.4。",
+              "evidence": "第 1 节 Theorems 1.1--1.3（PDF 第 2--4 页）及第 5 节（PDF 第 19--27 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明生成式 AI 用于证明 Proposition 2.6、生成 Section 7 图形以及校对论文，并明确说明未用于其他结果证明、写作或数值求解。",
+        "aiEvidenceSource": "PDF 第 4 页 Statement on AI Usage（文本行约 219--223）。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

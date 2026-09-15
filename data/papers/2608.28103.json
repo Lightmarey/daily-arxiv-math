@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28103",
+  "slug": "2608.28103",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28103:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28103",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Inverse Source Problem for a Time-Fractional Diffusion-Wave Equation with a Singular Inverse-Square Potential",
+    "authors": [
+      "Zewen Wang",
+      "Bin Wu",
+      "Yikan Liu",
+      "Liangwei Jin",
+      "Shufang Qiu"
+    ],
+    "abstract": "This paper investigates an inverse source problem for a time-fractional diffusion-wave equation with a singular inverse-square potential. The source term is assumed to consist of a known temporal factor and an unknown spatial component, which is to be recovered from terminal-state measurements. The well-posedness and regularity of the forward problem are established within an appropriate energy framework by exploiting Hardy-type inequalities and the spectral properties of the associated singular elliptic operator. The terminal observation operator is then shown to be compact, and uniqueness of the spatial source is established under a suitable nondegeneracy condition on the temporal factor. To stabilize the resulting ill-posed inverse problem, a Tikhonov regularization approach is introduced. The gradient of the regularized functional is derived through an adjoint problem involving a right-sided fractional derivative, leading to an adjoint-based conjugate gradient method with an exact line search for the numerical reconstruction of the unknown source. Numerical experiments are conducted on both one-and two-dimensional spatial domains, using both exact and noisy terminal data, to demonstrate the effectiveness and stability of the proposed source reconstruction method.",
+    "categories": [
+      "math.NA",
+      "math.AP"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2608.28103",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28103",
+    "submittedAt": "2026-08-28T09:10:28Z",
+    "updatedAt": "2026-08-28T09:10:28Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "带逆平方奇异势时间分数阶扩散波方程的逆源",
+    "workSummary": "正文研究一维时间分数阶扩散波方程，其中空间算子含次临界 Hardy 逆平方势；未知源为 p(x)q(t)，观测是终端状态。作者在 Hardy 能量空间中建立谱分解和 Mittag–Leffler 表示，得到正问题适定性；再把源到终端算子对角化为模态乘子 $K_n(q)$，在每个模态非退化时证明源唯一。由于该算子从 $L^{2}$ 紧映到 $H^{1}$ 再嵌入 $L^{2}$，终端噪声下反演不稳定，文章因此给出 Tikhonov 正则化、右侧分数阶伴随和共轭梯度重构。",
+    "techniques": [
+      "次临界 Hardy 不等式与 Friedrichs 自伴算子",
+      "Mittag–Leffler 谱表示和模态正问题估计",
+      "终端观测源到状态算子的模态乘子分析",
+      "右侧 Riemann–Liouville 分数阶积分分部",
+      "Tikhonov 泛函与伴随梯度共轭梯度算法"
+    ],
+    "breakthrough": "Theorem 2 将扩散波区间 $1<\\alpha <2$ 的逆源唯一性精确归结为 $K_n(q)\\ne 0；Corollary$ 1 对 q≡1 把坏观测时间限制为至多可数集。Theorem 3 又把分数阶终端迹正确地带入梯度公式，避免把伴随终端条件误写成经典 Cauchy 条件。",
+    "limitations": "唯一性是条件性的：每个模态乘子 $K_n(q)$ 必须非零，且逆问题在终端数据扰动下因源到终端算子紧而不稳定。模型是一维区间、次临界 $\\mu <1/4$ 和可分离源，正文数值实验展示重构但没有给出一般噪声下的最优收敛率。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1 建立带奇异势正问题的唯一弱解和正则性。",
+          "route": "Hardy 阈值 $\\mu <1/4$ 使双线性型 coercive，Friedrichs 算子具有紧 resolvent；按特征函数展开后每个系数满足标量 Caputo 方程，Mittag–Leffler 估计控制初位移、初速度和卷积源项，最后以模态完备性证明唯一性。",
+          "evidence": "PDF 第3–11页，Section 2.2–3.2 的公式 (2.8)–(2.9)、(3.4)–(3.6) 和 Theorem 1。"
+        },
+        {
+          "claim": "公式 (4.4)–(4.5) 将终端算子对角化为 $K_n(q)$ 乘子。",
+          "route": "把源项贡献与零源解相减，谱表示中每个空间模态只剩时间卷积；在 $t=T$ 取值后得到 $Ap=\\Sigma K_n(q)p_n\\phi _n$，从而把空间源的可辨识性转化成逐模态标量条件。",
+          "evidence": "PDF 第11–12页，Section 4 的公式 (4.4)–(4.5)。"
+        },
+        {
+          "claim": "Theorem 2 由模态非退化条件证明源唯一性，Corollary 1 刻画 q≡1 的坏时间。",
+          "route": "若两个源给出相同终端状态，则 $A(p1-p2)=0$；对正交基逐项取系数得到 $K_n(q)p_n=0$，非退化迫使所有 $p_n=0。q≡1$ 时用 Mittag–Leffler 导数恒等式把 $K_n(1)$写成 $[1-E_{\\alpha ,1}(-\\lambda _nT^\\alpha )]/\\lambda _n$，解析函数零点至多可数。",
+          "evidence": "PDF 第12–13页，Section 4 的 Theorem 2、Corollary 1 及公式 (4.6)。"
+        },
+        {
+          "claim": "源到终端算子的紧性解释了噪声反演不稳定并产生唯一 Tikhonov 极小元。",
+          "route": "Mittag–Leffler 核估计把 A 从 $L^{2}$ 有界映到 $H^{1}，Rellich$ 紧嵌入再给 $A:L^{2}\\to L^{2}$ 紧；因此直接逆不连续。加入 $\\lambda ||p||^{2}$ 后泛函强制、严格凸，从而存在唯一正则化解。",
+          "evidence": "PDF 第14–15页，Section 5.1–5.2 的公式 (5.2)–(5.3)。"
+        },
+        {
+          "claim": "Theorem 3 给出右侧分数阶伴随梯度并确定共轭梯度更新。",
+          "route": "对灵敏度方程应用分数阶积分分部，选择满足右侧 Riemann–Liouville 方程及两个分数阶终端迹的伴随，使时空项和终端速度项消失；得到梯度 $∫q\\psi dt+\\lambda p$，再用灵敏度方向求精确线搜索和 Fletcher–Reeves 更新。",
+          "evidence": "PDF 第17–19页，Section 5.5–5.6 的公式 (5.10)–(5.23) 和 Theorem 3。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查全文正文、引言、结论、Acknowledgments 和参考文献，并全文搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；致谢和结论未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "本地缓存 PDF 全文第1–26页，含第26页致谢/参考文献末端和关键词检索。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28103:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28103",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Inverse Source Problem for a Time-Fractional Diffusion-Wave Equation with a Singular Inverse-Square Potential",
+        "authors": [
+          "Zewen Wang",
+          "Bin Wu",
+          "Yikan Liu",
+          "Liangwei Jin",
+          "Shufang Qiu"
+        ],
+        "abstract": "This paper investigates an inverse source problem for a time-fractional diffusion-wave equation with a singular inverse-square potential. The source term is assumed to consist of a known temporal factor and an unknown spatial component, which is to be recovered from terminal-state measurements. The well-posedness and regularity of the forward problem are established within an appropriate energy framework by exploiting Hardy-type inequalities and the spectral properties of the associated singular elliptic operator. The terminal observation operator is then shown to be compact, and uniqueness of the spatial source is established under a suitable nondegeneracy condition on the temporal factor. To stabilize the resulting ill-posed inverse problem, a Tikhonov regularization approach is introduced. The gradient of the regularized functional is derived through an adjoint problem involving a right-sided fractional derivative, leading to an adjoint-based conjugate gradient method with an exact line search for the numerical reconstruction of the unknown source. Numerical experiments are conducted on both one-and two-dimensional spatial domains, using both exact and noisy terminal data, to demonstrate the effectiveness and stability of the proposed source reconstruction method.",
+        "categories": [
+          "math.NA",
+          "math.AP"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2608.28103",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28103",
+        "submittedAt": "2026-08-28T09:10:28Z",
+        "updatedAt": "2026-08-28T09:10:28Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "带逆平方奇异势时间分数阶扩散波方程的逆源",
+        "workSummary": "正文研究一维时间分数阶扩散波方程，其中空间算子含次临界 Hardy 逆平方势；未知源为 p(x)q(t)，观测是终端状态。作者在 Hardy 能量空间中建立谱分解和 Mittag–Leffler 表示，得到正问题适定性；再把源到终端算子对角化为模态乘子 $K_n(q)$，在每个模态非退化时证明源唯一。由于该算子从 $L^{2}$ 紧映到 $H^{1}$ 再嵌入 $L^{2}$，终端噪声下反演不稳定，文章因此给出 Tikhonov 正则化、右侧分数阶伴随和共轭梯度重构。",
+        "techniques": [
+          "次临界 Hardy 不等式与 Friedrichs 自伴算子",
+          "Mittag–Leffler 谱表示和模态正问题估计",
+          "终端观测源到状态算子的模态乘子分析",
+          "右侧 Riemann–Liouville 分数阶积分分部",
+          "Tikhonov 泛函与伴随梯度共轭梯度算法"
+        ],
+        "breakthrough": "Theorem 2 将扩散波区间 $1<\\alpha <2$ 的逆源唯一性精确归结为 $K_n(q)\\ne 0；Corollary$ 1 对 q≡1 把坏观测时间限制为至多可数集。Theorem 3 又把分数阶终端迹正确地带入梯度公式，避免把伴随终端条件误写成经典 Cauchy 条件。",
+        "limitations": "唯一性是条件性的：每个模态乘子 $K_n(q)$ 必须非零，且逆问题在终端数据扰动下因源到终端算子紧而不稳定。模型是一维区间、次临界 $\\mu <1/4$ 和可分离源，正文数值实验展示重构但没有给出一般噪声下的最优收敛率。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1 建立带奇异势正问题的唯一弱解和正则性。",
+              "route": "Hardy 阈值 $\\mu <1/4$ 使双线性型 coercive，Friedrichs 算子具有紧 resolvent；按特征函数展开后每个系数满足标量 Caputo 方程，Mittag–Leffler 估计控制初位移、初速度和卷积源项，最后以模态完备性证明唯一性。",
+              "evidence": "PDF 第3–11页，Section 2.2–3.2 的公式 (2.8)–(2.9)、(3.4)–(3.6) 和 Theorem 1。"
+            },
+            {
+              "claim": "公式 (4.4)–(4.5) 将终端算子对角化为 $K_n(q)$ 乘子。",
+              "route": "把源项贡献与零源解相减，谱表示中每个空间模态只剩时间卷积；在 $t=T$ 取值后得到 $Ap=\\Sigma K_n(q)p_n\\phi _n$，从而把空间源的可辨识性转化成逐模态标量条件。",
+              "evidence": "PDF 第11–12页，Section 4 的公式 (4.4)–(4.5)。"
+            },
+            {
+              "claim": "Theorem 2 由模态非退化条件证明源唯一性，Corollary 1 刻画 q≡1 的坏时间。",
+              "route": "若两个源给出相同终端状态，则 $A(p1-p2)=0$；对正交基逐项取系数得到 $K_n(q)p_n=0$，非退化迫使所有 $p_n=0。q≡1$ 时用 Mittag–Leffler 导数恒等式把 $K_n(1)$写成 $[1-E_{\\alpha ,1}(-\\lambda _nT^\\alpha )]/\\lambda _n$，解析函数零点至多可数。",
+              "evidence": "PDF 第12–13页，Section 4 的 Theorem 2、Corollary 1 及公式 (4.6)。"
+            },
+            {
+              "claim": "源到终端算子的紧性解释了噪声反演不稳定并产生唯一 Tikhonov 极小元。",
+              "route": "Mittag–Leffler 核估计把 A 从 $L^{2}$ 有界映到 $H^{1}，Rellich$ 紧嵌入再给 $A:L^{2}\\to L^{2}$ 紧；因此直接逆不连续。加入 $\\lambda ||p||^{2}$ 后泛函强制、严格凸，从而存在唯一正则化解。",
+              "evidence": "PDF 第14–15页，Section 5.1–5.2 的公式 (5.2)–(5.3)。"
+            },
+            {
+              "claim": "Theorem 3 给出右侧分数阶伴随梯度并确定共轭梯度更新。",
+              "route": "对灵敏度方程应用分数阶积分分部，选择满足右侧 Riemann–Liouville 方程及两个分数阶终端迹的伴随，使时空项和终端速度项消失；得到梯度 $∫q\\psi dt+\\lambda p$，再用灵敏度方向求精确线搜索和 Fletcher–Reeves 更新。",
+              "evidence": "PDF 第17–19页，Section 5.5–5.6 的公式 (5.10)–(5.23) 和 Theorem 3。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查全文正文、引言、结论、Acknowledgments 和参考文献，并全文搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；致谢和结论未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "本地缓存 PDF 全文第1–26页，含第26页致谢/参考文献末端和关键词检索。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

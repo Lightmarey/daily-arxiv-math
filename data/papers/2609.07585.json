@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07585",
+  "slug": "2609.07585",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07585:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07585",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Strong and Weak-Type Dispersive Estimates for the Energy-Critical Nonlinear Schrödinger Equation with an Inverse-Square Potential",
+    "authors": [
+      "Tiesong Jiang",
+      "Kexue Li"
+    ],
+    "abstract": "We prove dispersive estimates for the three-dimensional defocusing energy-critical nonlinear Schrödinger equation associated with $\\mathcal L_a=-Δ+a|x|^{-2}$. For nonnegative potentials, we extend the known finite-$p$ theory to the endpoint $L^1\\to L^\\infty$. For negative potentials in the global well-posedness range, set $σ=\\frac12-\\sqrt{\\frac14+a}$. We obtain the free strong decay rate for $2<p<3/σ$ and the limiting Lorentz estimate from $L^{(3/σ)',1}$ to $L^{3/σ,\\infty}$. The restriction $p<3/σ$ is sharp for strong Lebesgue decay. The proof combines a finite-interval bootstrap, nonlinear real interpolation on bounded energy sets, and endpoint Sobolev--Lorentz estimates adapted to $\\mathcal L_a$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07585",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07585",
+    "submittedAt": "2026-09-07T14:59:51Z",
+    "updatedAt": "2026-09-07T14:59:51Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "$theorem_proof_reviewed$",
+    "workSummary": "论文研究三维带逆平方势 $L_a=-\\Delta +a|x|^{-2}$ 的 defocusing 能量临界 NLS，重点是传播子的强/弱型色散端点及其对非线性解衰减的影响。正文第 1 节按 $a\\ge 0$ 与 −1/4<a<0 分出范围，第 2 节用径向 Bessel 表示、角向投影和 adapted Sobolev/Strichartz 估计建立线性工具，第 3 节在有界能量球上做非线性差值和 real interpolation，第 4 节用 Duhamel 分段 bootstrap 推到强 Lebesgue 范围、吸引势的弱 Lorentz 端点及非负势的 $L\\infty $ 端点。",
+    "techniques": [
+      "逆平方势谱分解与 Bessel 核",
+      "Lorentz 强/弱型色散估计",
+      "适配 Sobolev 与 Strichartz",
+      "非线性 real interpolation",
+      "Duhamel 时间分段 bootstrap"
+    ],
+    "breakthrough": "论文把逆平方势的角向零模与高角模态分开处理：非负势获得 $L1\\to L\\infty $ 端点，吸引势在 $p<3/\\sigma '$ 的强衰减和 $p=3/\\sigma $ 的 Lorentz 弱端点闭合，并用显式奇异谐振函数证明强范围的 $p=3/\\sigma $ 阈值不可提高。",
+    "limitations": "吸引势只在 −1/4<a<0 且处于全局适定范围内讨论，端点目标必须使用 Lorentz 空间；负势的强 Lebesgue 衰减在 $p\\ge 3/\\sigma $ 被明确反例阻断，非负势的 $L\\infty $ 结论则需要适配 Sobolev 空间和相应额外可积初值。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "传播子 $U_a(t)$ 在吸引势的临界指数 $p*=3/\\sigma $ 处满足从 $L^{p*',1}$ 到 $L^{p*,\\infty }$ 的弱型衰减，且高角模态可由 $L1\\to L\\infty $ 与 L2 酉性插值得到。",
+          "route": "对球面平均 P0 用径向 Bessel 核 $j_{-\\sigma }$ 的小/大参数界，得到 $|x|^{-\\sigma }|y|^{-\\sigma }$ 的 Lorentz 控制；对 $Q=I-P0$ 使用高角核的 $L1\\to L\\infty $ 界和 L2 酉性，实插值后合并两部分。",
+          "evidence": "Section 2.1 Lemma 2.1 proof（PDF 第 6–8 页）；Bessel 核与 P0/Q 分解（PDF 第 6–7 页）。"
+        },
+        {
+          "claim": "能量类解在有限时间区间拥有适配的全局时空范数，非线性 Duhamel 项可放入对应 Lorentz 源空间。",
+          "route": "利用 Hardy 不等式处理 $|x|^{-2}$，以 Strichartz 和 adapted Sobolev 估计控制 $L_a^{1/2}u；Lemma$ 2.4 给出 $a\\ge 0$ 的全局空间时间界，a<0 时给出非端点 Lorentz 界，保证 $|u|^4u$ 的时间可积性。",
+          "evidence": "Section 2.2 Lemmas 2.3–2.4（PDF 第 8–9 页）；能量 Duhamel 表示(3.1)（PDF 第 10 页）。"
+        },
+        {
+          "claim": "在 −1/4<a<0 的强范围内，非线性解满足 $p<3/\\sigma $ 的自由型强衰减，临界 $p*=3/\\sigma $ 仅能得到 Lorentz 弱衰减。",
+          "route": "对 p<7/2 先用解流的 L2 与 $L^{7/2}$ 差值估计做 nonlinear K-functional $interpolation；6\\le p<p*$ 时将 $L_a^{s_p/2}$ 穿过 Duhamel，利用 Lemmas 3.4、3.6 的分数阶乘积及时间分段吸收，临界点用 Lemma 3.9 的弱端点积分。",
+          "evidence": "Section 3 Lemmas 3.1–3.9（PDF 第 10–18 页）；Proposition 3.1（PDF 第 18 页）给出 $p\\ge p*$ 的强范围反例。"
+        },
+        {
+          "claim": "对 $a\\ge 0$，适配 Sobolev–Lorentz 端点把能量类非线性源提升为 $L\\infty $，从而得到 $t^{-3/2}$ 型衰减。",
+          "route": "先由 Lemma 3.10 将 $U_a(t)$ 从 $Ẇ_a^{1,(3/2,1)}$ 映到 $L\\infty $，再用链式法则估计 $L_a^{1/2}(|u|^4u)$；把早期 Duhamel 积分用 $L1\\to L\\infty $ 界控制，晚期积分按 $||L_a^{1/2}u||_{L^{12/5,4}}$ 的小时间片分割并吸收，完成非负势端点 bootstrap。",
+          "evidence": "Section 3.2 Lemma 3.10（PDF 第 19 页）；Section 4.2 的 Duhamel 估计(4.1)及 X(T) 闭合（PDF 第 23 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查正文引言、证明章节、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文逐页核查，包含主证明章节、末页致谢/声明和 References。",
+    "priorityScore": 75,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦色散方程，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07585:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07585",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Strong and Weak-Type Dispersive Estimates for the Energy-Critical Nonlinear Schrödinger Equation with an Inverse-Square Potential",
+        "authors": [
+          "Tiesong Jiang",
+          "Kexue Li"
+        ],
+        "abstract": "We prove dispersive estimates for the three-dimensional defocusing energy-critical nonlinear Schrödinger equation associated with $\\mathcal L_a=-Δ+a|x|^{-2}$. For nonnegative potentials, we extend the known finite-$p$ theory to the endpoint $L^1\\to L^\\infty$. For negative potentials in the global well-posedness range, set $σ=\\frac12-\\sqrt{\\frac14+a}$. We obtain the free strong decay rate for $2<p<3/σ$ and the limiting Lorentz estimate from $L^{(3/σ)',1}$ to $L^{3/σ,\\infty}$. The restriction $p<3/σ$ is sharp for strong Lebesgue decay. The proof combines a finite-interval bootstrap, nonlinear real interpolation on bounded energy sets, and endpoint Sobolev--Lorentz estimates adapted to $\\mathcal L_a$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07585",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07585",
+        "submittedAt": "2026-09-07T14:59:51Z",
+        "updatedAt": "2026-09-07T14:59:51Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "$theorem_proof_reviewed$",
+        "workSummary": "论文研究三维带逆平方势 $L_a=-\\Delta +a|x|^{-2}$ 的 defocusing 能量临界 NLS，重点是传播子的强/弱型色散端点及其对非线性解衰减的影响。正文第 1 节按 $a\\ge 0$ 与 −1/4<a<0 分出范围，第 2 节用径向 Bessel 表示、角向投影和 adapted Sobolev/Strichartz 估计建立线性工具，第 3 节在有界能量球上做非线性差值和 real interpolation，第 4 节用 Duhamel 分段 bootstrap 推到强 Lebesgue 范围、吸引势的弱 Lorentz 端点及非负势的 $L\\infty $ 端点。",
+        "techniques": [
+          "逆平方势谱分解与 Bessel 核",
+          "Lorentz 强/弱型色散估计",
+          "适配 Sobolev 与 Strichartz",
+          "非线性 real interpolation",
+          "Duhamel 时间分段 bootstrap"
+        ],
+        "breakthrough": "论文把逆平方势的角向零模与高角模态分开处理：非负势获得 $L1\\to L\\infty $ 端点，吸引势在 $p<3/\\sigma '$ 的强衰减和 $p=3/\\sigma $ 的 Lorentz 弱端点闭合，并用显式奇异谐振函数证明强范围的 $p=3/\\sigma $ 阈值不可提高。",
+        "limitations": "吸引势只在 −1/4<a<0 且处于全局适定范围内讨论，端点目标必须使用 Lorentz 空间；负势的强 Lebesgue 衰减在 $p\\ge 3/\\sigma $ 被明确反例阻断，非负势的 $L\\infty $ 结论则需要适配 Sobolev 空间和相应额外可积初值。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "传播子 $U_a(t)$ 在吸引势的临界指数 $p*=3/\\sigma $ 处满足从 $L^{p*',1}$ 到 $L^{p*,\\infty }$ 的弱型衰减，且高角模态可由 $L1\\to L\\infty $ 与 L2 酉性插值得到。",
+              "route": "对球面平均 P0 用径向 Bessel 核 $j_{-\\sigma }$ 的小/大参数界，得到 $|x|^{-\\sigma }|y|^{-\\sigma }$ 的 Lorentz 控制；对 $Q=I-P0$ 使用高角核的 $L1\\to L\\infty $ 界和 L2 酉性，实插值后合并两部分。",
+              "evidence": "Section 2.1 Lemma 2.1 proof（PDF 第 6–8 页）；Bessel 核与 P0/Q 分解（PDF 第 6–7 页）。"
+            },
+            {
+              "claim": "能量类解在有限时间区间拥有适配的全局时空范数，非线性 Duhamel 项可放入对应 Lorentz 源空间。",
+              "route": "利用 Hardy 不等式处理 $|x|^{-2}$，以 Strichartz 和 adapted Sobolev 估计控制 $L_a^{1/2}u；Lemma$ 2.4 给出 $a\\ge 0$ 的全局空间时间界，a<0 时给出非端点 Lorentz 界，保证 $|u|^4u$ 的时间可积性。",
+              "evidence": "Section 2.2 Lemmas 2.3–2.4（PDF 第 8–9 页）；能量 Duhamel 表示(3.1)（PDF 第 10 页）。"
+            },
+            {
+              "claim": "在 −1/4<a<0 的强范围内，非线性解满足 $p<3/\\sigma $ 的自由型强衰减，临界 $p*=3/\\sigma $ 仅能得到 Lorentz 弱衰减。",
+              "route": "对 p<7/2 先用解流的 L2 与 $L^{7/2}$ 差值估计做 nonlinear K-functional $interpolation；6\\le p<p*$ 时将 $L_a^{s_p/2}$ 穿过 Duhamel，利用 Lemmas 3.4、3.6 的分数阶乘积及时间分段吸收，临界点用 Lemma 3.9 的弱端点积分。",
+              "evidence": "Section 3 Lemmas 3.1–3.9（PDF 第 10–18 页）；Proposition 3.1（PDF 第 18 页）给出 $p\\ge p*$ 的强范围反例。"
+            },
+            {
+              "claim": "对 $a\\ge 0$，适配 Sobolev–Lorentz 端点把能量类非线性源提升为 $L\\infty $，从而得到 $t^{-3/2}$ 型衰减。",
+              "route": "先由 Lemma 3.10 将 $U_a(t)$ 从 $Ẇ_a^{1,(3/2,1)}$ 映到 $L\\infty $，再用链式法则估计 $L_a^{1/2}(|u|^4u)$；把早期 Duhamel 积分用 $L1\\to L\\infty $ 界控制，晚期积分按 $||L_a^{1/2}u||_{L^{12/5,4}}$ 的小时间片分割并吸收，完成非负势端点 bootstrap。",
+              "evidence": "Section 3.2 Lemma 3.10（PDF 第 19 页）；Section 4.2 的 Duhamel 估计(4.1)及 X(T) 闭合（PDF 第 23 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查正文引言、证明章节、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文逐页核查，包含主证明章节、末页致谢/声明和 References。",
+        "priorityScore": 75,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦色散方程，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

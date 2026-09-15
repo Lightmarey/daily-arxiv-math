@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03962",
+  "slug": "2609.03962",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03962:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03962",
+    "version": 1,
+    "entryKind": "new",
+    "title": "$L^p$ isomorphisms for the fractional Laplacian on $\\mathbb{R}^n$ and their application",
+    "authors": [
+      "Congming Li",
+      "Yugao Ouyang",
+      "Zixuan Wang"
+    ],
+    "abstract": "A classical theory of Amrouche, Girault and Giroire (1994) resolves the Laplace equation on $\\mathbb{R}^n$ through an isomorphism between weighted Sobolev spaces. Inspired by their framework, we develop the corresponding $L^p$ theory for the fractional Laplacian: we introduce weighted fractional Sobolev spaces $Λ^{s,p}(\\mathbb{R}^n)$, gauged at top order by $\\|(-\\triangle)^{\\frac{s}{2}}u\\|_{L^p}$, and prove that $(-\\triangle)^{\\frac{s}{2}}:Λ^{s,p}(\\mathbb{R}^n)/\\mathcal P_{[s-n/p]}\\to L^p(\\mathbb{R}^n)$ is an isomorphism for all $s\\in(0,2)$ and $p\\in(1,\\infty)$; thus $(-\\triangle)^{\\frac{s}{2}}u=f$ is solvable for every $f\\in L^p(\\mathbb{R}^n)$, uniquely modulo an explicit finite-dimensional space of polynomials. More generally, extending the scale by duality to negative orders, the fractional Laplacians of the appropriate orders map its spaces isomorphically onto one another and compose exactly. A key ingredient is a family of weighted Hardy and Poincaré inequalities adapted to $\\|(-\\triangle)^{\\frac{s}{2}}u\\|_{L^p}$, established here for $1\\le s<2$ by a reduction to the gradient. Since these inequalities hold a priori only on a dense class, while the density of $C_{\\mathrm{c}}^\\infty(\\mathbb{R}^n)$ in $Λ^{s,p}(\\mathbb{R}^n)$ is itself nontrivial, we first prove the isomorphism on the closure of the Schwartz class, which coincides with $Λ^{s,p}(\\mathbb{R}^n)$ since the difference of two solutions is an entire $s$-harmonic function, hence a polynomial; the density follows as a by-product. As an application, we obtain existence and uniqueness, with explicit kernels and compatibility conditions, for the fractional Stokes system in $\\mathbb{R}^n$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03962",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03962",
+    "submittedAt": "2026-09-03T14:57:18Z",
+    "updatedAt": "2026-09-03T14:57:18Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "正则性",
+    "workSummary": "建立全空间分数阶 Laplacian 在齐次 Hölder/Besov 型商空间上的 Lp 同构：先用差分和 Fourier 乘子刻画空间，再处理多项式核与对偶，最后把标量同构推广到向量散度方程。",
+    "techniques": [
+      "Fourier 乘子",
+      "齐次 Hölder 空间",
+      "多项式商空间",
+      "分数阶势与对偶",
+      "散度交换恒等式"
+    ],
+    "breakthrough": "在分数阶阶数跨越整数和临界嵌入线时，统一处理多项式核、点值函子和密度问题，得到 fractional Laplacian 的 Lp 双射及其向量值应用。",
+    "limitations": "参数范围限制在 $0<s<2、1<p<\\infty $ 及文中商空间定义；全空间结构不能直接替代带边界分数阶算子的边界正则性理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "分数阶 Laplacian 可由差分积分和 Fourier 乘子在目标空间上定义。",
+          "route": "用 Schwartz 函数上的 Fourier 符号和二阶差分表示分数阶算子，结合 Hardy/Poincare 型估计控制低频多项式核，得到算子从测试函数到齐次空间的连续性。",
+          "evidence": "第 2--3 节 Lemmas 2.1、3.2--3.4、Theorem 3.2（PDF 第 6--12 页）。"
+        },
+        {
+          "claim": "齐次空间的核恰好是规定次数的多项式，并且测试函数在商空间中稠密。",
+          "route": "用点值泛函和 Liouville 型结论识别 s-n/p 的整数部分，再通过截断/卷积逼近消除多项式自由度，获得 $Cc\\infty $ 的密度和商空间表示。",
+          "evidence": "第 3 节 Proposition 3.5、Theorem 3.3（PDF 第 13--17 页）。"
+        },
+        {
+          "claim": "分数阶 Laplacian 在多项式商空间上具有双向逆。",
+          "route": "先建立梯度映射与分数阶势的兼容性，再用 Schwartz 密度和 Fourier 乘法器证明 injectivity/surjectivity；对偶化得到 Dual isomorphism。",
+          "evidence": "第 3 节 Theorem 3.4、Propositions 3.9--3.13（PDF 第 17--22 页）。"
+        },
+        {
+          "claim": "标量同构可传递给带散度数据的向量方程。",
+          "route": "证明分数阶算子与 divergence 的交换公式，把向量数据分解为梯度/无散部分，并用标量逆算子逐项构造解及 Lp 控制。",
+          "evidence": "第 4 节 Lemmas 4.2--4.5、Theorems 4.1--4.2（PDF 第 24--31 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--32 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 88,
+    "priorityTier": "high",
+    "priorityReason": "提供可复用的非局部椭圆算子函数空间与可解性基础，兼顾估计、稠密性和 Stokes 应用，适合作为后续分数阶 PDE 的底层接口。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03962:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03962",
+        "version": 1,
+        "entryKind": "new",
+        "title": "$L^p$ isomorphisms for the fractional Laplacian on $\\mathbb{R}^n$ and their application",
+        "authors": [
+          "Congming Li",
+          "Yugao Ouyang",
+          "Zixuan Wang"
+        ],
+        "abstract": "A classical theory of Amrouche, Girault and Giroire (1994) resolves the Laplace equation on $\\mathbb{R}^n$ through an isomorphism between weighted Sobolev spaces. Inspired by their framework, we develop the corresponding $L^p$ theory for the fractional Laplacian: we introduce weighted fractional Sobolev spaces $Λ^{s,p}(\\mathbb{R}^n)$, gauged at top order by $\\|(-\\triangle)^{\\frac{s}{2}}u\\|_{L^p}$, and prove that $(-\\triangle)^{\\frac{s}{2}}:Λ^{s,p}(\\mathbb{R}^n)/\\mathcal P_{[s-n/p]}\\to L^p(\\mathbb{R}^n)$ is an isomorphism for all $s\\in(0,2)$ and $p\\in(1,\\infty)$; thus $(-\\triangle)^{\\frac{s}{2}}u=f$ is solvable for every $f\\in L^p(\\mathbb{R}^n)$, uniquely modulo an explicit finite-dimensional space of polynomials. More generally, extending the scale by duality to negative orders, the fractional Laplacians of the appropriate orders map its spaces isomorphically onto one another and compose exactly. A key ingredient is a family of weighted Hardy and Poincaré inequalities adapted to $\\|(-\\triangle)^{\\frac{s}{2}}u\\|_{L^p}$, established here for $1\\le s<2$ by a reduction to the gradient. Since these inequalities hold a priori only on a dense class, while the density of $C_{\\mathrm{c}}^\\infty(\\mathbb{R}^n)$ in $Λ^{s,p}(\\mathbb{R}^n)$ is itself nontrivial, we first prove the isomorphism on the closure of the Schwartz class, which coincides with $Λ^{s,p}(\\mathbb{R}^n)$ since the difference of two solutions is an entire $s$-harmonic function, hence a polynomial; the density follows as a by-product. As an application, we obtain existence and uniqueness, with explicit kernels and compatibility conditions, for the fractional Stokes system in $\\mathbb{R}^n$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03962",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03962",
+        "submittedAt": "2026-09-03T14:57:18Z",
+        "updatedAt": "2026-09-03T14:57:18Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "正则性",
+        "workSummary": "建立全空间分数阶 Laplacian 在齐次 Hölder/Besov 型商空间上的 Lp 同构：先用差分和 Fourier 乘子刻画空间，再处理多项式核与对偶，最后把标量同构推广到向量散度方程。",
+        "techniques": [
+          "Fourier 乘子",
+          "齐次 Hölder 空间",
+          "多项式商空间",
+          "分数阶势与对偶",
+          "散度交换恒等式"
+        ],
+        "breakthrough": "在分数阶阶数跨越整数和临界嵌入线时，统一处理多项式核、点值函子和密度问题，得到 fractional Laplacian 的 Lp 双射及其向量值应用。",
+        "limitations": "参数范围限制在 $0<s<2、1<p<\\infty $ 及文中商空间定义；全空间结构不能直接替代带边界分数阶算子的边界正则性理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "分数阶 Laplacian 可由差分积分和 Fourier 乘子在目标空间上定义。",
+              "route": "用 Schwartz 函数上的 Fourier 符号和二阶差分表示分数阶算子，结合 Hardy/Poincare 型估计控制低频多项式核，得到算子从测试函数到齐次空间的连续性。",
+              "evidence": "第 2--3 节 Lemmas 2.1、3.2--3.4、Theorem 3.2（PDF 第 6--12 页）。"
+            },
+            {
+              "claim": "齐次空间的核恰好是规定次数的多项式，并且测试函数在商空间中稠密。",
+              "route": "用点值泛函和 Liouville 型结论识别 s-n/p 的整数部分，再通过截断/卷积逼近消除多项式自由度，获得 $Cc\\infty $ 的密度和商空间表示。",
+              "evidence": "第 3 节 Proposition 3.5、Theorem 3.3（PDF 第 13--17 页）。"
+            },
+            {
+              "claim": "分数阶 Laplacian 在多项式商空间上具有双向逆。",
+              "route": "先建立梯度映射与分数阶势的兼容性，再用 Schwartz 密度和 Fourier 乘法器证明 injectivity/surjectivity；对偶化得到 Dual isomorphism。",
+              "evidence": "第 3 节 Theorem 3.4、Propositions 3.9--3.13（PDF 第 17--22 页）。"
+            },
+            {
+              "claim": "标量同构可传递给带散度数据的向量方程。",
+              "route": "证明分数阶算子与 divergence 的交换公式，把向量数据分解为梯度/无散部分，并用标量逆算子逐项构造解及 Lp 控制。",
+              "evidence": "第 4 节 Lemmas 4.2--4.5、Theorems 4.1--4.2（PDF 第 24--31 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--32 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 88,
+        "priorityTier": "high",
+        "priorityReason": "提供可复用的非局部椭圆算子函数空间与可解性基础，兼顾估计、稠密性和 Stokes 应用，适合作为后续分数阶 PDE 的底层接口。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

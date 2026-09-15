@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.27801",
+  "slug": "2608.27801",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.27801:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.27801",
+    "version": 1,
+    "entryKind": "new",
+    "title": "A center manifold reduction approach to the Darcy-Bénard convection problem with non-zero Prandtl number",
+    "authors": [
+      "Liang Li",
+      "Quan Wang"
+    ],
+    "abstract": "We study the bifurcation of two-dimensional Darcy-Bénard convection (DBC) in a rectangular domain, a canonical model for thermal convection in porous media with applications in geophysics and engineering. The momentum equation lacks advection and viscous dissipation, being regularized solely by a linear Darcy damping term. As a result, the linearized operator generates a semigroup that is neither analytic nor compact and the nonlinear term fails to be Lipschitz. The system is thus placed outside the scope of the standard center-manifold theorem. To overcome these obstructions, we develop a center-manifold reduction adapted to DBC system. Our main result is a constructive proof of the existence of the center manifold function h and local attractivity of the center manifold-the exponential convergence of small solutions toward it-without relying on analyticity of the full linear semigroup and Lipschitz nonlinearity. We circumvent these difficulties by exploiting the partially dissipative structure: the temperature equation is governed by the Laplacian, which generates an analytic semigroup and provides the smoothing needed to compensate for the lack of regularity in the velocity and the absence of global Lipschitz bounds. Through carefully designed inequalities, we establish both the construction of the center manifold function h and the exponential convergence of nearby solutions. Explicit approximations for the center manifold are derived in two scenarios-one simple eigenvalue and two distinct eigenvalues-yielding reduced systems of ordinary differential equations whose analysis determines the bifurcation type. Numerical simulations are presented to corroborate the theoretical results.",
+    "categories": [
+      "math.AP",
+      "math.DS",
+      "math.FA"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.27801",
+    "pdfUrl": "https://arxiv.org/pdf/2608.27801",
+    "submittedAt": "2026-08-28T00:32:38Z",
+    "updatedAt": "2026-08-28T00:32:38Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "Darcy–Bénard 对流的中心流形约化",
+    "workSummary": "正文处理非零 Prandtl 数 Darcy–Bénard 对流在临界 Rayleigh 参数附近的动力学。作者针对温度半群才有解析平滑、速度变量缺少同等紧性这一困难，在临界/稳定谱分解后利用温度的半阶正则化估计建立局部不变中心流形；再以稳定余项估计证明指数吸引，并把流形上的动力学约化为有限维多项式系统，分别分析简单和双重临界特征值下的分岔。",
+    "techniques": [
+      "临界模态与稳定模态的谱分解",
+      "弱解能量估计和半群表示",
+      "温度方程提供的半阶解析平滑与 contraction mapping",
+      "中心流形不变性和稳定余项的 Volterra/Gronwall 估计",
+      "约化多项式系统、Jacobian 符号和拓扑 degree 分析分岔"
+    ],
+    "breakthrough": "论文在速度半群不具备完整解析性、非线性映射非标准 Lipschitz 的情形下仍构造出 Theorem 1.1 的局部中心流形和吸引性；随后 Theorems 5.2–5.3 把简单/双重特征值分岔明确化为约化有限维系统的代数与拓扑问题。",
+    "limitations": "中心流形结论局部依赖临界参数、小数据和本文的谱/正则性假设；分岔分类围绕简单或双重临界特征值及特定 Darcy–Bénard 模式展开，未给出更高重数、强非线性远离临界区或一般边界条件下的全局动力学分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemmas 2.1–2.2 给出临界模态、稳定模态及临界 Rayleigh 参数附近的谱符号。",
+          "route": "作者用算子特征向量构成基底，再比较临界参数两侧特征值的符号，把线性空间拆成有限维临界部分和具有衰减半群的稳定部分；这一步确定了中心流形需要保留的坐标。",
+          "evidence": "PDF 第9–10页，Section 2 的 Lemmas 2.1–2.2。"
+        },
+        {
+          "claim": "Lemma 3.2 与公式 (3.5) 建立唯一弱解和可用的半群表示。",
+          "route": "对两个弱解作差并进行能量估计与 Gronwall 控制得到唯一性；随后把线性生成元的谱半群写成 mild formula，使非线性项能进入后续固定点方程。",
+          "evidence": "PDF 第12–13页，Section 3 的 Lemma 3.2 和公式 (3.5)。"
+        },
+        {
+          "claim": "Theorem 4.1 构造局部不变中心流形。",
+          "route": "温度半群的估计 (1.5) 将 $\\theta $ 从 $H^\\alpha $ 提升到 $H^{\\alpha +1/2}$，弥补速度变量缺少解析性的损失；在临界/稳定分解上用该平滑估计和 Lemma 4.4 的 Lipschitz 界构造 contraction mapping，得到 $\\xi +h(\\xi )$ 的不变图。",
+          "evidence": "PDF 第5–6页的估计 (1.5)，以及第19–24页 Section 4 的 Theorem 4.1、Lemma 4.4。"
+        },
+        {
+          "claim": "Theorem 4.2 证明中心流形对邻近轨道的指数吸引。",
+          "route": "稳定余项满足由非线性差值驱动的积分方程；Lemma 4.5–4.6 控制该差值和稳定半群卷积，随后使用 Volterra 型估计/Gronwall 得到稳定分量的指数衰减。",
+          "evidence": "PDF 第23–26页，Section 4 的 Lemmas 4.5–4.6 及 Theorem 4.2 的证明。"
+        },
+        {
+          "claim": "Theorems 5.2–5.3 完成简单与双重特征值的分岔分类。",
+          "route": "把中心流形方程代回得到有限维约化多项式系统；简单特征值情形由系数符号直接决定分支，双重情形再用 Jacobian 非退化性和拓扑 degree 保证解支存在与数量。",
+          "evidence": "PDF 第33页 Theorem 5.2，以及第35–38页 Theorem 5.3 及其证明。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查全文正文、引言、结论、参考文献和文末致谢，并搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未见作者关于研究、证明、写作、代码或编辑使用 AI 的明确披露。",
+    "aiEvidenceSource": "本地缓存 PDF 全文第1–47页及文末致谢，结合关键词全文检索。",
+    "priorityScore": 66,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.27801:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.27801",
+        "version": 1,
+        "entryKind": "new",
+        "title": "A center manifold reduction approach to the Darcy-Bénard convection problem with non-zero Prandtl number",
+        "authors": [
+          "Liang Li",
+          "Quan Wang"
+        ],
+        "abstract": "We study the bifurcation of two-dimensional Darcy-Bénard convection (DBC) in a rectangular domain, a canonical model for thermal convection in porous media with applications in geophysics and engineering. The momentum equation lacks advection and viscous dissipation, being regularized solely by a linear Darcy damping term. As a result, the linearized operator generates a semigroup that is neither analytic nor compact and the nonlinear term fails to be Lipschitz. The system is thus placed outside the scope of the standard center-manifold theorem. To overcome these obstructions, we develop a center-manifold reduction adapted to DBC system. Our main result is a constructive proof of the existence of the center manifold function h and local attractivity of the center manifold-the exponential convergence of small solutions toward it-without relying on analyticity of the full linear semigroup and Lipschitz nonlinearity. We circumvent these difficulties by exploiting the partially dissipative structure: the temperature equation is governed by the Laplacian, which generates an analytic semigroup and provides the smoothing needed to compensate for the lack of regularity in the velocity and the absence of global Lipschitz bounds. Through carefully designed inequalities, we establish both the construction of the center manifold function h and the exponential convergence of nearby solutions. Explicit approximations for the center manifold are derived in two scenarios-one simple eigenvalue and two distinct eigenvalues-yielding reduced systems of ordinary differential equations whose analysis determines the bifurcation type. Numerical simulations are presented to corroborate the theoretical results.",
+        "categories": [
+          "math.AP",
+          "math.DS",
+          "math.FA"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.27801",
+        "pdfUrl": "https://arxiv.org/pdf/2608.27801",
+        "submittedAt": "2026-08-28T00:32:38Z",
+        "updatedAt": "2026-08-28T00:32:38Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "Darcy–Bénard 对流的中心流形约化",
+        "workSummary": "正文处理非零 Prandtl 数 Darcy–Bénard 对流在临界 Rayleigh 参数附近的动力学。作者针对温度半群才有解析平滑、速度变量缺少同等紧性这一困难，在临界/稳定谱分解后利用温度的半阶正则化估计建立局部不变中心流形；再以稳定余项估计证明指数吸引，并把流形上的动力学约化为有限维多项式系统，分别分析简单和双重临界特征值下的分岔。",
+        "techniques": [
+          "临界模态与稳定模态的谱分解",
+          "弱解能量估计和半群表示",
+          "温度方程提供的半阶解析平滑与 contraction mapping",
+          "中心流形不变性和稳定余项的 Volterra/Gronwall 估计",
+          "约化多项式系统、Jacobian 符号和拓扑 degree 分析分岔"
+        ],
+        "breakthrough": "论文在速度半群不具备完整解析性、非线性映射非标准 Lipschitz 的情形下仍构造出 Theorem 1.1 的局部中心流形和吸引性；随后 Theorems 5.2–5.3 把简单/双重特征值分岔明确化为约化有限维系统的代数与拓扑问题。",
+        "limitations": "中心流形结论局部依赖临界参数、小数据和本文的谱/正则性假设；分岔分类围绕简单或双重临界特征值及特定 Darcy–Bénard 模式展开，未给出更高重数、强非线性远离临界区或一般边界条件下的全局动力学分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemmas 2.1–2.2 给出临界模态、稳定模态及临界 Rayleigh 参数附近的谱符号。",
+              "route": "作者用算子特征向量构成基底，再比较临界参数两侧特征值的符号，把线性空间拆成有限维临界部分和具有衰减半群的稳定部分；这一步确定了中心流形需要保留的坐标。",
+              "evidence": "PDF 第9–10页，Section 2 的 Lemmas 2.1–2.2。"
+            },
+            {
+              "claim": "Lemma 3.2 与公式 (3.5) 建立唯一弱解和可用的半群表示。",
+              "route": "对两个弱解作差并进行能量估计与 Gronwall 控制得到唯一性；随后把线性生成元的谱半群写成 mild formula，使非线性项能进入后续固定点方程。",
+              "evidence": "PDF 第12–13页，Section 3 的 Lemma 3.2 和公式 (3.5)。"
+            },
+            {
+              "claim": "Theorem 4.1 构造局部不变中心流形。",
+              "route": "温度半群的估计 (1.5) 将 $\\theta $ 从 $H^\\alpha $ 提升到 $H^{\\alpha +1/2}$，弥补速度变量缺少解析性的损失；在临界/稳定分解上用该平滑估计和 Lemma 4.4 的 Lipschitz 界构造 contraction mapping，得到 $\\xi +h(\\xi )$ 的不变图。",
+              "evidence": "PDF 第5–6页的估计 (1.5)，以及第19–24页 Section 4 的 Theorem 4.1、Lemma 4.4。"
+            },
+            {
+              "claim": "Theorem 4.2 证明中心流形对邻近轨道的指数吸引。",
+              "route": "稳定余项满足由非线性差值驱动的积分方程；Lemma 4.5–4.6 控制该差值和稳定半群卷积，随后使用 Volterra 型估计/Gronwall 得到稳定分量的指数衰减。",
+              "evidence": "PDF 第23–26页，Section 4 的 Lemmas 4.5–4.6 及 Theorem 4.2 的证明。"
+            },
+            {
+              "claim": "Theorems 5.2–5.3 完成简单与双重特征值的分岔分类。",
+              "route": "把中心流形方程代回得到有限维约化多项式系统；简单特征值情形由系数符号直接决定分支，双重情形再用 Jacobian 非退化性和拓扑 degree 保证解支存在与数量。",
+              "evidence": "PDF 第33页 Theorem 5.2，以及第35–38页 Theorem 5.3 及其证明。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查全文正文、引言、结论、参考文献和文末致谢，并搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未见作者关于研究、证明、写作、代码或编辑使用 AI 的明确披露。",
+        "aiEvidenceSource": "本地缓存 PDF 全文第1–47页及文末致谢，结合关键词全文检索。",
+        "priorityScore": 66,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

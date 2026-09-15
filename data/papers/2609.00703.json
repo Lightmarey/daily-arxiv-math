@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00703",
+  "slug": "2609.00703",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00703:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00703",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Ellipsoidal Positivity Sets for Fractional Obstacle Problems with Quadratic Forcing",
+    "authors": [
+      "Shuhei Kitano"
+    ],
+    "abstract": "Let \\(n\\ge1\\), \\(0<s<1\\), \\(c>0\\), and let \\(A\\) be a positive definite symmetric matrix. We prove that the unique decaying viscosity solution of \\[ \\min\\{u,\\,(-Δ)^s u-(c-\\langle Ax,x\\rangle)\\}=0 \\qquad\\text{in }\\mathbb R^n \\] has the form \\[ u(x)=K\\max\\{1-\\langle Bx,x\\rangle,0\\}^{1+s} \\] for some \\(K>0\\) and some positive definite symmetric matrix \\(B\\). In particular, its positivity set is an ellipsoid. For \\(s=1/2\\) and \\(n\\ge2\\), this result, combined with the classification of Fernández-Real and Yu, implies that cubic global thin obstacle solutions with nonempty bounded positivity set have ellipsoidal positivity sets. This proves the conjecture of Fernández-Real and Yu in the nonempty bounded-positivity case.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00703",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00703",
+    "submittedAt": "2026-09-01T04:30:42Z",
+    "updatedAt": "2026-09-01T04:30:42Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "二次强迫分数阶障碍问题的椭球正值集",
+    "workSummary": "论文求解全空间中带正定二次强迫的分数阶障碍问题。作者先使用椭球上的分数 Laplacian 显式公式，把候选函数参数化为 $K(1-⟨Bx,x⟩)_{+}^{1+s}$；再将矩阵 B 的系数条件写成有限维映射，利用连续性和 Poincaré–Miranda 找到正定解，并以比较原理证明衰减粘性解唯一。最后把 $s=1/2$ 的结果接到 cubic global thin obstacle 的分类。",
+    "techniques": [
+      "椭球上的分数 Laplacian 显式公式",
+      "有限维系数映射",
+      "Poincaré–Miranda 定理",
+      "粘性比较与延拓"
+    ],
+    "breakthrough": "论文把非局部障碍问题的自由边界形状从未知函数的全空间行为降维为正定矩阵 B 的可解系数方程，因而证明所有非空有界正值集必为椭球，并解决了对应 cubic thin-obstacle 分类中的椭球猜想。",
+    "limitations": "结果依赖强迫项为正定二次型、解在无穷远衰减及正值集非空有界；薄障碍推论只覆盖 $s=1/2$ 和 $n\\ge 2$ 的 cubic 情形，不涉及更一般多项式强迫或自由边界正则性分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Proposition 2.2 将候选椭球剖面 $\\psi B(x)=(1-⟨Bx,x⟩)_{+}^{1+s}$ 的分数 Laplacian 表示为椭球内部的显式二次型。",
+          "route": "先对 B 对角化并把积分按椭球坐标变换，使用 Abatangelo–Jarohs–Saldaña 的椭球核公式逐坐标计算；得到系数由 B 的特征值积分给出，从而可把匹配二次强迫的任务转成系数方程。",
+          "evidence": "PDF 第4–5页 Section 2 Proposition 2.2；式(2.1)–(2.2)及其后的对角矩阵计算。"
+        },
+        {
+          "claim": "Lemmas 3.1 和 3.3 证明系数映射连续且满射到正定矩阵空间，因此存在正定 B 和常数 K 使候选函数满足方程。",
+          "route": "用支配收敛控制系数积分随 B 的连续变化，再在对角正定锥的有界盒上比较各坐标面符号；Poincaré–Miranda 给出零点，随后正交共轭把对角解推广到一般 A，并用缩放确定 K。",
+          "evidence": "PDF 第7–10页 Section 3 Lemma 3.1、Proposition 3.2、Lemma 3.3；式(3.1)–(3.6)和满射证明。"
+        },
+        {
+          "claim": "Lemma 4.1 证明衰减粘性解唯一，从而候选椭球函数就是 Theorem 1.1 所要求的唯一解。",
+          "route": "在大球截断域上对任意两个解加入小的严格障碍，利用粘性比较原理得到 $u\\le v+\\epsilon $；令球半径趋于无穷并再令 $\\epsilon $趋于零，交换 u、v 即得全空间唯一性。",
+          "evidence": "PDF 第10–11页 Section 4 Lemma 4.1；比较原理构造和其后 Proof of Theorem 1.1 中候选函数的粘性验证。"
+        },
+        {
+          "claim": "Theorem 1.2 将 $s=1/2$ 的椭球障碍解嵌入 cubic global thin-obstacle 问题，得到所有非空有界正值集的椭球结论。",
+          "route": "先用 Lemma 5.1 把 cubic 数据在薄变量方向化为正定二次型，再用 Proposition 5.2 将偶延拓的 thin-obstacle 解限制为衰减半 Laplacian 障碍解；调用 Theorem 1.1 后恢复原变量并读出椭球正值集。",
+          "evidence": "PDF 第13–14页 Section 5 Lemma 5.1、Proposition 5.2 和 Proof of Theorem 1.2；式(5.1)–(5.4)及椭球结论。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确说明使用 ChatGPT (OpenAI) 协助语言编辑、组织、文献搜索以及数学表述和参考文献的一致性检查，并说明独立核验了数学论证、计算、引用和最终文本。工具为 ChatGPT (OpenAI)，位置在致谢。",
+    "aiEvidenceSource": "PDF 第15页 Acknowledgements；缓存全文 2609.00703.txt，另检查标题页、正文和 References。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00703:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00703",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Ellipsoidal Positivity Sets for Fractional Obstacle Problems with Quadratic Forcing",
+        "authors": [
+          "Shuhei Kitano"
+        ],
+        "abstract": "Let \\(n\\ge1\\), \\(0<s<1\\), \\(c>0\\), and let \\(A\\) be a positive definite symmetric matrix. We prove that the unique decaying viscosity solution of \\[ \\min\\{u,\\,(-Δ)^s u-(c-\\langle Ax,x\\rangle)\\}=0 \\qquad\\text{in }\\mathbb R^n \\] has the form \\[ u(x)=K\\max\\{1-\\langle Bx,x\\rangle,0\\}^{1+s} \\] for some \\(K>0\\) and some positive definite symmetric matrix \\(B\\). In particular, its positivity set is an ellipsoid. For \\(s=1/2\\) and \\(n\\ge2\\), this result, combined with the classification of Fernández-Real and Yu, implies that cubic global thin obstacle solutions with nonempty bounded positivity set have ellipsoidal positivity sets. This proves the conjecture of Fernández-Real and Yu in the nonempty bounded-positivity case.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00703",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00703",
+        "submittedAt": "2026-09-01T04:30:42Z",
+        "updatedAt": "2026-09-01T04:30:42Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "二次强迫分数阶障碍问题的椭球正值集",
+        "workSummary": "论文求解全空间中带正定二次强迫的分数阶障碍问题。作者先使用椭球上的分数 Laplacian 显式公式，把候选函数参数化为 $K(1-⟨Bx,x⟩)_{+}^{1+s}$；再将矩阵 B 的系数条件写成有限维映射，利用连续性和 Poincaré–Miranda 找到正定解，并以比较原理证明衰减粘性解唯一。最后把 $s=1/2$ 的结果接到 cubic global thin obstacle 的分类。",
+        "techniques": [
+          "椭球上的分数 Laplacian 显式公式",
+          "有限维系数映射",
+          "Poincaré–Miranda 定理",
+          "粘性比较与延拓"
+        ],
+        "breakthrough": "论文把非局部障碍问题的自由边界形状从未知函数的全空间行为降维为正定矩阵 B 的可解系数方程，因而证明所有非空有界正值集必为椭球，并解决了对应 cubic thin-obstacle 分类中的椭球猜想。",
+        "limitations": "结果依赖强迫项为正定二次型、解在无穷远衰减及正值集非空有界；薄障碍推论只覆盖 $s=1/2$ 和 $n\\ge 2$ 的 cubic 情形，不涉及更一般多项式强迫或自由边界正则性分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Proposition 2.2 将候选椭球剖面 $\\psi B(x)=(1-⟨Bx,x⟩)_{+}^{1+s}$ 的分数 Laplacian 表示为椭球内部的显式二次型。",
+              "route": "先对 B 对角化并把积分按椭球坐标变换，使用 Abatangelo–Jarohs–Saldaña 的椭球核公式逐坐标计算；得到系数由 B 的特征值积分给出，从而可把匹配二次强迫的任务转成系数方程。",
+              "evidence": "PDF 第4–5页 Section 2 Proposition 2.2；式(2.1)–(2.2)及其后的对角矩阵计算。"
+            },
+            {
+              "claim": "Lemmas 3.1 和 3.3 证明系数映射连续且满射到正定矩阵空间，因此存在正定 B 和常数 K 使候选函数满足方程。",
+              "route": "用支配收敛控制系数积分随 B 的连续变化，再在对角正定锥的有界盒上比较各坐标面符号；Poincaré–Miranda 给出零点，随后正交共轭把对角解推广到一般 A，并用缩放确定 K。",
+              "evidence": "PDF 第7–10页 Section 3 Lemma 3.1、Proposition 3.2、Lemma 3.3；式(3.1)–(3.6)和满射证明。"
+            },
+            {
+              "claim": "Lemma 4.1 证明衰减粘性解唯一，从而候选椭球函数就是 Theorem 1.1 所要求的唯一解。",
+              "route": "在大球截断域上对任意两个解加入小的严格障碍，利用粘性比较原理得到 $u\\le v+\\epsilon $；令球半径趋于无穷并再令 $\\epsilon $趋于零，交换 u、v 即得全空间唯一性。",
+              "evidence": "PDF 第10–11页 Section 4 Lemma 4.1；比较原理构造和其后 Proof of Theorem 1.1 中候选函数的粘性验证。"
+            },
+            {
+              "claim": "Theorem 1.2 将 $s=1/2$ 的椭球障碍解嵌入 cubic global thin-obstacle 问题，得到所有非空有界正值集的椭球结论。",
+              "route": "先用 Lemma 5.1 把 cubic 数据在薄变量方向化为正定二次型，再用 Proposition 5.2 将偶延拓的 thin-obstacle 解限制为衰减半 Laplacian 障碍解；调用 Theorem 1.1 后恢复原变量并读出椭球正值集。",
+              "evidence": "PDF 第13–14页 Section 5 Lemma 5.1、Proposition 5.2 和 Proof of Theorem 1.2；式(5.1)–(5.4)及椭球结论。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确说明使用 ChatGPT (OpenAI) 协助语言编辑、组织、文献搜索以及数学表述和参考文献的一致性检查，并说明独立核验了数学论证、计算、引用和最终文本。工具为 ChatGPT (OpenAI)，位置在致谢。",
+        "aiEvidenceSource": "PDF 第15页 Acknowledgements；缓存全文 2609.00703.txt，另检查标题页、正文和 References。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

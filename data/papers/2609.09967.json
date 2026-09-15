@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09967",
+  "slug": "2609.09967",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09967:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09967",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Classification of multi-solitons in one sense of time for the 5D energy-critical wave equation",
+    "authors": [
+      "Yvan Martel",
+      "Frank Merle"
+    ],
+    "abstract": "We classify the multi-solitons, in the positive sense of time, of the focusing energy-critical wave equation in space dimension $5$, more precisely the solutions $u(t,x)$ of the equation \\[ \\partial_t^2 u - Δu - |u|^{\\frac 4{3}} u = 0, \\quad (t,x)\\in [T_0,\\infty)\\times {\\mathbb R}^5, \\] which satisfy the estimate \\[ \\left\\|\\nabla_{t,x} \\left(u(t) - \\sum_{k} W_k(t) \\right) \\right\\|_{L^2} \\lesssim t^{-\\frac12^+} \\quad \\hbox{for all $t\\gg 1$}. \\] Here, $\\{W_k\\}_k$ is any given finite family of traveling waves, based on the explicit ground state solution \\[ W(x) = \\left(1+ \\frac{|x|^2}{15}\\right)^{-\\frac32} \\] with collinear two-by-two different velocities.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09967",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09967",
+    "submittedAt": "2026-09-09T09:54:38Z",
+    "updatedAt": "2026-09-09T09:54:38Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "论文分类五维能量临界聚焦波方程在正时间方向的 multi-soliton：若解以比 $t^{-1/2}$ 更快的速率接近给定速度共线的 traveling-wave 和，则它必须是由有限个指数稳定参数生成的强 multi-soliton。证明先利用既有构造把参考解展开到 $t^{-2}$ 精度，再以尺度/平移正交条件分解扰动；谱 coercivity 将扰动能量控制在核方向和有限个不稳定方向之外。随后对这些模态建立带弱耦合尾项的微分不等式，积分向后消除不允许的增长模态，最后通过能量展开和迭代提升误差，使所有调制参数稳定到某个 A，得到精确的 $S^A$。",
+    "techniques": [
+      "soliton modulation",
+      "谱 coercivity",
+      "核方向正交分解",
+      "不稳定模态 ODE",
+      "能量 bootstrap 与 backward integration"
+    ],
+    "breakthrough": "在五维能量临界波方程中完成给定共线速度族的正时间分类：超出 $t^{-1/2}$ 的近似衰减不再允许额外自由扰动，所有 multi-soliton 都落入有限维强构造族。",
+    "limitations": "分类假设速度两两不同且共线、解在正时间端具有额外 $t^{-1/2-\\delta }$ 逼近率，并依赖参考强 multi-soliton 的既有构造；论文没有处理非共线速度、临界 $t^{-1/2}$ 速率或负时间散射分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "参考 multi-soliton 可在 $t^{-2}$ 级别写成调制 traveling waves 之和，并具有所需的线性化谱结构。",
+          "route": "把既有强构造 S 与显式 $W_k$ 的叠加比较，利用速度分离控制交互尾部；线性化算子 $L=-\\Delta -f'(W)$ 的负、零、正谱分解提供后续调制坐标和 coercive 二次型。",
+          "evidence": "PDF 第 9-16 页 Sections 2–3 Proposition 3.1、Lemmas 2.1–2.4、3.1–3.4，equations (3.1)–(3.25)。"
+        },
+        {
+          "claim": "任一满足更快逼近率的解可唯一分解为调制主项与正交扰动，并得到核方向和参数导数的微分控制。",
+          "route": "对每个 soliton 的尺度和平移参数施加与 $\\Lambda W、\\partial jW$ 的正交条件；对正交关系求导，代入线性化方程和参考解残差，得到 Lemma 4.1 的核模态微分不等式，避免调制参数把误差隐藏起来。",
+          "evidence": "PDF 第 24-30 页 Section 4.3 Lemma 4.1、Lemma 4.2，equations (4.6)、(4.13)、(4.20)–(4.25)。"
+        },
+        {
+          "claim": "谱 coercivity 和局部化能量把连续扰动与有限个不稳定模态分离，并控制其增长系数。",
+          "route": "用 localized quadratic form 对远离 soliton 核的部分给正下界，再用投影系数 $\\alpha _k^\\pm $ 记录负方向；修正二阶调制项抵消 $q^2$ 临界误差，能量导数中的交互项由 $t^{-2}$ 尾项和小扰动吸收，形成可积分的 ODE 系统。",
+          "evidence": "PDF 第 28-36 页 Section 4.4–4.5，equations (4.19)、(4.28)–(4.36)，尤其 Lemma 4.2。"
+        },
+        {
+          "claim": "向后积分与 bootstrap 消除增长模态并识别唯一 A，使解等于强 multi-soliton $S^A$。",
+          "route": "先在有限终端时间选取稳定模态参数 A，再用 $\\alpha _k^\\pm $ 的指数权重向 $t=\\infty $ 反向积分；分类前命题把任意更快衰减解提升到任意 $\\delta $ 的误差，Section 5 构造的 $S^A$ 提供同一参数族，最终能量守恒和差分估计迫使剩余扰动为零。",
+          "evidence": "PDF 第 47-61 页 Section 5 Proposition 5.1、Section 6 proof of Theorem 3，equations (5.1)–(5.24) and (6.1)–(6.15)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 2–6、所有证明、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-61 页全文。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09967:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09967",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Classification of multi-solitons in one sense of time for the 5D energy-critical wave equation",
+        "authors": [
+          "Yvan Martel",
+          "Frank Merle"
+        ],
+        "abstract": "We classify the multi-solitons, in the positive sense of time, of the focusing energy-critical wave equation in space dimension $5$, more precisely the solutions $u(t,x)$ of the equation \\[ \\partial_t^2 u - Δu - |u|^{\\frac 4{3}} u = 0, \\quad (t,x)\\in [T_0,\\infty)\\times {\\mathbb R}^5, \\] which satisfy the estimate \\[ \\left\\|\\nabla_{t,x} \\left(u(t) - \\sum_{k} W_k(t) \\right) \\right\\|_{L^2} \\lesssim t^{-\\frac12^+} \\quad \\hbox{for all $t\\gg 1$}. \\] Here, $\\{W_k\\}_k$ is any given finite family of traveling waves, based on the explicit ground state solution \\[ W(x) = \\left(1+ \\frac{|x|^2}{15}\\right)^{-\\frac32} \\] with collinear two-by-two different velocities.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09967",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09967",
+        "submittedAt": "2026-09-09T09:54:38Z",
+        "updatedAt": "2026-09-09T09:54:38Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "论文分类五维能量临界聚焦波方程在正时间方向的 multi-soliton：若解以比 $t^{-1/2}$ 更快的速率接近给定速度共线的 traveling-wave 和，则它必须是由有限个指数稳定参数生成的强 multi-soliton。证明先利用既有构造把参考解展开到 $t^{-2}$ 精度，再以尺度/平移正交条件分解扰动；谱 coercivity 将扰动能量控制在核方向和有限个不稳定方向之外。随后对这些模态建立带弱耦合尾项的微分不等式，积分向后消除不允许的增长模态，最后通过能量展开和迭代提升误差，使所有调制参数稳定到某个 A，得到精确的 $S^A$。",
+        "techniques": [
+          "soliton modulation",
+          "谱 coercivity",
+          "核方向正交分解",
+          "不稳定模态 ODE",
+          "能量 bootstrap 与 backward integration"
+        ],
+        "breakthrough": "在五维能量临界波方程中完成给定共线速度族的正时间分类：超出 $t^{-1/2}$ 的近似衰减不再允许额外自由扰动，所有 multi-soliton 都落入有限维强构造族。",
+        "limitations": "分类假设速度两两不同且共线、解在正时间端具有额外 $t^{-1/2-\\delta }$ 逼近率，并依赖参考强 multi-soliton 的既有构造；论文没有处理非共线速度、临界 $t^{-1/2}$ 速率或负时间散射分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "参考 multi-soliton 可在 $t^{-2}$ 级别写成调制 traveling waves 之和，并具有所需的线性化谱结构。",
+              "route": "把既有强构造 S 与显式 $W_k$ 的叠加比较，利用速度分离控制交互尾部；线性化算子 $L=-\\Delta -f'(W)$ 的负、零、正谱分解提供后续调制坐标和 coercive 二次型。",
+              "evidence": "PDF 第 9-16 页 Sections 2–3 Proposition 3.1、Lemmas 2.1–2.4、3.1–3.4，equations (3.1)–(3.25)。"
+            },
+            {
+              "claim": "任一满足更快逼近率的解可唯一分解为调制主项与正交扰动，并得到核方向和参数导数的微分控制。",
+              "route": "对每个 soliton 的尺度和平移参数施加与 $\\Lambda W、\\partial jW$ 的正交条件；对正交关系求导，代入线性化方程和参考解残差，得到 Lemma 4.1 的核模态微分不等式，避免调制参数把误差隐藏起来。",
+              "evidence": "PDF 第 24-30 页 Section 4.3 Lemma 4.1、Lemma 4.2，equations (4.6)、(4.13)、(4.20)–(4.25)。"
+            },
+            {
+              "claim": "谱 coercivity 和局部化能量把连续扰动与有限个不稳定模态分离，并控制其增长系数。",
+              "route": "用 localized quadratic form 对远离 soliton 核的部分给正下界，再用投影系数 $\\alpha _k^\\pm $ 记录负方向；修正二阶调制项抵消 $q^2$ 临界误差，能量导数中的交互项由 $t^{-2}$ 尾项和小扰动吸收，形成可积分的 ODE 系统。",
+              "evidence": "PDF 第 28-36 页 Section 4.4–4.5，equations (4.19)、(4.28)–(4.36)，尤其 Lemma 4.2。"
+            },
+            {
+              "claim": "向后积分与 bootstrap 消除增长模态并识别唯一 A，使解等于强 multi-soliton $S^A$。",
+              "route": "先在有限终端时间选取稳定模态参数 A，再用 $\\alpha _k^\\pm $ 的指数权重向 $t=\\infty $ 反向积分；分类前命题把任意更快衰减解提升到任意 $\\delta $ 的误差，Section 5 构造的 $S^A$ 提供同一参数族，最终能量守恒和差分估计迫使剩余扰动为零。",
+              "evidence": "PDF 第 47-61 页 Section 5 Proposition 5.1、Section 6 proof of Theorem 3，equations (5.1)–(5.24) and (6.1)–(6.15)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 2–6、所有证明、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-61 页全文。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

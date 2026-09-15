@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00743",
+  "slug": "2609.00743",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00743:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00743",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Lp Brunn-Minkowski inequality for the eigenvalue of generalized Monge-Ampère equation",
+    "authors": [
+      "Yuxiao Yan",
+      "Feida Jiang"
+    ],
+    "abstract": "We investigate the eigenvalue of a generalized Monge-Ampère equation. We proved that the eigenvalue of the equation on the Lp Minkowksi addition of two convex bodies satisfies the Lp Brunn-Minkowski inequality.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00743",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00743",
+    "submittedAt": "2026-09-01T05:23:56Z",
+    "updatedAt": "2026-09-01T05:23:56Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "广义 Monge–Ampère 特征值的 Lp Brunn–Minkowski 不等式",
+    "workSummary": "论文研究广义 Monge–Ampère 方程特征值在 Lp Minkowski 加法下的 Brunn–Minkowski 不等式。作者通过 Legendre 变换把广义 Monge–Ampère 能量重写为全空间凸函数积分，构造由两个特征函数诱导的插值函数，再用 Lp Prékopa–Leindler 不等式估计积分商；最后借特征值的齐次性把归一化插值还原为目标域不等式。",
+    "techniques": [
+      "Legendre 变换",
+      "凸函数与次梯度唯一性",
+      "Lp Prékopa–Leindler",
+      "特征值商和尺度归一化"
+    ],
+    "breakthrough": "论文把广义 Monge–Ampère 特征值的非线性 Hessian 结构转成适合积分不等式的 Legendre 对偶形式，从而沿 Lp Minkowski 插值获得特征值的 Brunn–Minkowski 凹性。",
+    "limitations": "定理在严格凸有界域、原点内点及 $k\\ge 0$ 的广义方程框架下成立，使用足够正则的特征函数和紧凸体；不讨论非凸域、k<0 或等号情形之外的稳定性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemmas 2.1–2.4 建立 Legendre 变换的闭凸性、严格凸性和次梯度单值性，使广义特征函数的对偶表示可在全空间使用。",
+          "route": "对闭凸函数应用 Fenchel 对偶和次梯度互反关系；严格凸性保证对偶梯度唯一，进而把原域梯度变量与对偶域位置变量互换，处理边界零值延拓。",
+          "evidence": "PDF 第4–7页 Section 2 Lemmas 2.1–2.4；对偶定义、次梯度唯一性和 Proposition 2.1 的特征函数正则性。"
+        },
+        {
+          "claim": "Theorem 3.1 证明由两个特征函数构造的 Lp 插值函数仍对应插值域，并得到其 Monge–Ampère 能量的积分不等式。",
+          "route": "对偶函数取加权 p-幂和，使用 Lemmas 3.1–3.3 保证其凸性、定义域和梯度映射；将 Hessian 行列式与 Legendre Jacobian 配对后，应用 Lp Prékopa–Leindler 控制插值函数的能量积分。",
+          "evidence": "PDF 第8–11页 Section 3 Lemmas 3.1–3.4、Theorem 3.1；式(3.1)–(3.8)及 $\\Phi j$ 的对偶积分表示。"
+        },
+        {
+          "claim": "Lemma 4.1–4.2 将 Theorem 3.1 的函数积分界转为特征值的凸性/Brunn–Minkowski 关系。",
+          "route": "用特征值的变分商表示把分子和分母分别代入插值不等式，再将 Lp 权重重新组合；Lemma 4.2 将得到的能量估计整理为 $\\lambda (\\Omega \\alpha )$ 的 −1/(2n) 次幂不等式。",
+          "evidence": "PDF 第12–13页 Section 4 Lemmas 4.1–4.2；式(4.1)–(4.4)和对特征值商的代入。"
+        },
+        {
+          "claim": "Theorem 1.1 通过尺度齐次性完成归一化，得到任意两个凸域的 Lp Brunn–Minkowski 特征值不等式。",
+          "route": "按 $\\lambda (\\Omega j)^{1/(2n)}$ 缩放两个域使端点特征值一致，应用 Lemma 4.2 到归一化插值；再用 Lemma 4.3 的 $\\lambda (t\\Omega )=t-2n\\lambda (\\Omega )$ 恢复原尺度并整理权重。",
+          "evidence": "PDF 第3页 Theorem 1.1；PDF 第13–15页 Proof of Theorem 1.1、Lemma 4.3 和式(4.5)–(4.8)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–15页（含 Acknowledgment 与 References）；缓存全文 2609.00743.txt。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00743:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00743",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Lp Brunn-Minkowski inequality for the eigenvalue of generalized Monge-Ampère equation",
+        "authors": [
+          "Yuxiao Yan",
+          "Feida Jiang"
+        ],
+        "abstract": "We investigate the eigenvalue of a generalized Monge-Ampère equation. We proved that the eigenvalue of the equation on the Lp Minkowksi addition of two convex bodies satisfies the Lp Brunn-Minkowski inequality.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00743",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00743",
+        "submittedAt": "2026-09-01T05:23:56Z",
+        "updatedAt": "2026-09-01T05:23:56Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "广义 Monge–Ampère 特征值的 Lp Brunn–Minkowski 不等式",
+        "workSummary": "论文研究广义 Monge–Ampère 方程特征值在 Lp Minkowski 加法下的 Brunn–Minkowski 不等式。作者通过 Legendre 变换把广义 Monge–Ampère 能量重写为全空间凸函数积分，构造由两个特征函数诱导的插值函数，再用 Lp Prékopa–Leindler 不等式估计积分商；最后借特征值的齐次性把归一化插值还原为目标域不等式。",
+        "techniques": [
+          "Legendre 变换",
+          "凸函数与次梯度唯一性",
+          "Lp Prékopa–Leindler",
+          "特征值商和尺度归一化"
+        ],
+        "breakthrough": "论文把广义 Monge–Ampère 特征值的非线性 Hessian 结构转成适合积分不等式的 Legendre 对偶形式，从而沿 Lp Minkowski 插值获得特征值的 Brunn–Minkowski 凹性。",
+        "limitations": "定理在严格凸有界域、原点内点及 $k\\ge 0$ 的广义方程框架下成立，使用足够正则的特征函数和紧凸体；不讨论非凸域、k<0 或等号情形之外的稳定性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemmas 2.1–2.4 建立 Legendre 变换的闭凸性、严格凸性和次梯度单值性，使广义特征函数的对偶表示可在全空间使用。",
+              "route": "对闭凸函数应用 Fenchel 对偶和次梯度互反关系；严格凸性保证对偶梯度唯一，进而把原域梯度变量与对偶域位置变量互换，处理边界零值延拓。",
+              "evidence": "PDF 第4–7页 Section 2 Lemmas 2.1–2.4；对偶定义、次梯度唯一性和 Proposition 2.1 的特征函数正则性。"
+            },
+            {
+              "claim": "Theorem 3.1 证明由两个特征函数构造的 Lp 插值函数仍对应插值域，并得到其 Monge–Ampère 能量的积分不等式。",
+              "route": "对偶函数取加权 p-幂和，使用 Lemmas 3.1–3.3 保证其凸性、定义域和梯度映射；将 Hessian 行列式与 Legendre Jacobian 配对后，应用 Lp Prékopa–Leindler 控制插值函数的能量积分。",
+              "evidence": "PDF 第8–11页 Section 3 Lemmas 3.1–3.4、Theorem 3.1；式(3.1)–(3.8)及 $\\Phi j$ 的对偶积分表示。"
+            },
+            {
+              "claim": "Lemma 4.1–4.2 将 Theorem 3.1 的函数积分界转为特征值的凸性/Brunn–Minkowski 关系。",
+              "route": "用特征值的变分商表示把分子和分母分别代入插值不等式，再将 Lp 权重重新组合；Lemma 4.2 将得到的能量估计整理为 $\\lambda (\\Omega \\alpha )$ 的 −1/(2n) 次幂不等式。",
+              "evidence": "PDF 第12–13页 Section 4 Lemmas 4.1–4.2；式(4.1)–(4.4)和对特征值商的代入。"
+            },
+            {
+              "claim": "Theorem 1.1 通过尺度齐次性完成归一化，得到任意两个凸域的 Lp Brunn–Minkowski 特征值不等式。",
+              "route": "按 $\\lambda (\\Omega j)^{1/(2n)}$ 缩放两个域使端点特征值一致，应用 Lemma 4.2 到归一化插值；再用 Lemma 4.3 的 $\\lambda (t\\Omega )=t-2n\\lambda (\\Omega )$ 恢复原尺度并整理权重。",
+              "evidence": "PDF 第3页 Theorem 1.1；PDF 第13–15页 Proof of Theorem 1.1、Lemma 4.3 和式(4.5)–(4.8)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–15页（含 Acknowledgment 与 References）；缓存全文 2609.00743.txt。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

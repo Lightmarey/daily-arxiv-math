@@ -3,95 +3,151 @@
   "arxivId": "2609.11421",
   "slug": "2609.11421",
   "latest": {
+    "id": "math.AP:2026-09-11:2609.11421:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
     "arxivId": "2609.11421",
-    "metadata": {
-      "title": "Optimal geometric inequalities and fully nonlinear conformal flows",
-      "authors": [
-        "Yuxin Ge",
-        "Guofang Wang",
-        "Wei Wei"
-      ],
-      "abstract": "We establish sharp Sobolev-type geometric inequalities on $\\mathbb{S}^n$ involving the total $σ_k$-curvatures $\\int_{\\mathbb{S}^n}σ_k(g)\\,dv_g$. These results extend the optimal inequalities of Guan--Wang~\\cite{GWDuke} from the cone $\\mathcal{C}_k$ to the strictly larger cone $\\mathcal{C}_{k-1}$, thereby enlarging the range of admissible conformal metrics. Our approach is variational and is implemented through a fully nonlinear conformal flow. Working in $\\mathcal{C}_{k-1}$ introduces substantial analytic difficulties; in particular, one must obtain $C^2$ a priori estimates while simultaneously verifying that the flow remains parabolic. We resolve these issues via a carefully designed test function and by applying the maximum principle to the maximal eigenvalue of the Hessian matrix. As applications, we solve two open problems in dimensions 3 and 4. Finally, we give examples to show that these inequalities cannot be extended to $\\mathcal{C}_{k-2}$.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-10T11:50:46Z",
-      "updatedAt": "2026-09-10T11:50:46Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Optimal geometric inequalities and fully nonlinear conformal flows",
+    "authors": [
+      "Yuxin Ge",
+      "Guofang Wang",
+      "Wei Wei"
+    ],
+    "abstract": "We establish sharp Sobolev-type geometric inequalities on $\\mathbb{S}^n$ involving the total $\\sigma_k$-curvatures $\\int_{\\mathbb{S}^n}\\sigma_k(g)\\,dv_g$. These results extend the optimal inequalities of Guan--Wang~\\cite{GWDuke} from the cone $\\mathcal{C}_k$ to the strictly larger cone $\\mathcal{C}_{k-1}$, thereby enlarging the range of admissible conformal metrics. Our approach is variational and is implemented through a fully nonlinear conformal flow. Working in $\\mathcal{C}_{k-1}$ introduces substantial analytic difficulties; in particular, one must obtain $C^2$ a priori estimates while simultaneously verifying that the flow remains parabolic. We resolve these issues via a carefully designed test function and by applying the maximum principle to the maximal eigenvalue of the Hessian matrix. As applications, we solve two open problems in dimensions 3 and 4. Finally, we give examples to show that these inequalities cannot be extended to $\\mathcal{C}_{k-2}$.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.11421",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11421",
+    "submittedAt": "2026-09-10T11:50:46Z",
+    "updatedAt": "2026-09-10T11:50:46Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "正文分析",
+    "workSummary": "论文在球面及局部共形平坦背景上研究总 $\\sigma k$ 曲率的尖锐几何不等式。主要结果把 Guan–Wang 的 admissible cone 从 Ck 扩展到更大的 Ck−1，并覆盖 Sobolev、临界 Moser–Trudinger 和反向不等式。技术核心是扰动的 fully nonlinear conformal flow、最大 Hessian 特征值的最大值原理和 $C^{2}$ 先验估计；流的单调性、抛物性保持与极限收敛随后给出等号刻画及三、四维应用。",
+    "techniques": [
+      "Gårding 锥与 Newton 张量",
+      "扰动共形流",
+      "最大 Hessian 特征值最大值原理",
+      "$C^{2}$ 先验估计与抛物性保持",
+      "单调泛函和流极限"
+    ],
+    "breakthrough": "论文在较弱的 Ck−1 锥内仍建立尖锐 $\\sigma k/\\sigma l$ 几何不等式，关键不是形式上的流延拓，而是对最大 Hessian 特征值构造能吸收不利项的测试函数，从而同时维持二阶估计和严格抛物性。",
+    "limitations": "结论依赖共形类、锥条件和球面/局部共形平坦几何；Ck−2 的扩展由显式反例否定，临界维数还需分别使用 Moser–Trudinger 型泛函。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "扰动共形流保持 $\\sigma k-1$ 正性并具有所需的单调量。",
+          "route": "用 Newton 张量和 Gårding 锥恒等式验证流方程的椭圆性，沿流微分 $J\\epsilon k$ 或相应商泛函；Lemma 2.4 将 $\\sigma k-1$ 的正性和能量单调性锁定在 Ck−1 内。",
+          "evidence": "第 2.2 节 Lemma 2.4 及流 (2.10)–(2.12)（PDF 第 8–10 页）。"
+        },
+        {
+          "claim": "流解满足全局 $C^{2}$ 估计，且抛物性不会在有限时间丢失。",
+          "route": "在 Hessian 最大特征值处对方程二阶微分，使用 $\\lambda max$ 的二阶导数额外正项控制 uiFi；把依赖 $\\epsilon $ 的项整理为非负量，得到 Theorem 3.1 的 Hessian 上界和后续梯度/函数值控制。",
+          "evidence": "第 3 节 Theorem 3.1 与 Lemmas 2.5、3.1（PDF 第 10–17 页）。"
+        },
+        {
+          "claim": "带 $C^{2}$ 控制的流在 Ck−1 中收敛到常 $\\sigma k/\\sigma l$ 曲率极限。",
+          "route": "由 $C^{0}$、梯度和 Hessian 界获取长期紧性，结合流单调量的积分耗散选取时间序列；极限方程、强最大值原理和归一化条件排除退化，得到 Theorem 4.1、4.4 的收敛结论。",
+          "evidence": "第 4.1–4.3 节 Theorem 4.1、Lemma 4.3、Theorem 4.4（PDF 第 17–22 页）。"
+        },
+        {
+          "claim": "球面上的 Sobolev、Moser–Trudinger 和反向不等式及等号条件成立。",
+          "route": "在球面初始度量运行流并用极限常曲率度量比较归一化泛函；Theorem 4.4 给出的收敛和 Lemma 2.4 的单调性将初值泛函夹在标准球值与极限值之间，等号时由刚性得到常截面曲率。",
+          "evidence": "Theorem 1.1、Corollaries 1.2–1.3 的证明（PDF 第 2–3、22–24 页）。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "推广/加强",
-      "workSummary": "把球面总 σₖ 曲率的锐 Sobolev 型不等式从 Cₖ 推进到更大的 Cₖ₋₁ 共形锥。",
-      "techniques": [
-        "全非线性共形流",
-        "Hessian 最大特征值",
-        "C² 先验估计"
-      ],
-      "breakthrough": "在较弱容许条件下维持抛物性，并给出无法推进到 Cₖ₋₂ 的例子。",
-      "limitations": "需核查 k 与维数范围及流存在条件，不能声称所有共形度量均满足。 已补读引言或主结果片段，尚未逐行验证完整证明。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 93,
-      "priorityReason": "几何 PDE 的关键估计与锐范围突破均与主线密切相关。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We establish sharp Sobolev-type geometric inequalities on $\\mathbb{S}^n$ involving the total $σ_k$-curvatures $\\int_{\\mathbb{S}^n}σ_k(g)\\,dv_g$. These results extend the optimal inequalities of Guan--Wang~\\cite{GWDuke} from the cone $\\mathcal{C}_k$ to the strictly larger cone $\\mathcal{C}_{k-1}$, thereby enlarging the range of admissible conformal metrics. Our approach is variational and is implemented through a fully nonlinear conformal flow. Working in $\\mathcal{C}_{k-1}$ introduces substantial analytic difficulties; in particular, one must obtain $C^2$ a priori estimates while simultaneously verifying that the flow remains parabolic. We resolve these issues via a carefully designed test function and by applying the maximum principle to the maximal eigenvalue of the Hessian matrix. As applications, we solve two open problems in dimensions 3 and 4. Finally, we give examples to show that these inequalities cannot be extended to $\\mathcal{C}_{k-2}$.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+    "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+    "priorityScore": 94,
+    "priorityTier": "high",
+    "priorityReason": "在严格扩大 admissible cone 的同时保住尖锐常数、等号刚性和流的二阶先验控制，直接解决三、四维的开放问题。",
+    "lowPriorityReason": "Ck−2 反例表明锥条件不能任意削弱；证明严重依赖共形几何和 $\\sigma k$ Newton 张量结构，尚非一般 fully nonlinear 流。",
+    "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
   },
   "history": [
     {
-      "date": "2026-09-11",
-      "entry": {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11421:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
         "arxivId": "2609.11421",
-        "metadata": {
-          "title": "Optimal geometric inequalities and fully nonlinear conformal flows",
-          "authors": [
-            "Yuxin Ge",
-            "Guofang Wang",
-            "Wei Wei"
-          ],
-          "abstract": "We establish sharp Sobolev-type geometric inequalities on $\\mathbb{S}^n$ involving the total $σ_k$-curvatures $\\int_{\\mathbb{S}^n}σ_k(g)\\,dv_g$. These results extend the optimal inequalities of Guan--Wang~\\cite{GWDuke} from the cone $\\mathcal{C}_k$ to the strictly larger cone $\\mathcal{C}_{k-1}$, thereby enlarging the range of admissible conformal metrics. Our approach is variational and is implemented through a fully nonlinear conformal flow. Working in $\\mathcal{C}_{k-1}$ introduces substantial analytic difficulties; in particular, one must obtain $C^2$ a priori estimates while simultaneously verifying that the flow remains parabolic. We resolve these issues via a carefully designed test function and by applying the maximum principle to the maximal eigenvalue of the Hessian matrix. As applications, we solve two open problems in dimensions 3 and 4. Finally, we give examples to show that these inequalities cannot be extended to $\\mathcal{C}_{k-2}$.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-10T11:50:46Z",
-          "updatedAt": "2026-09-10T11:50:46Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Optimal geometric inequalities and fully nonlinear conformal flows",
+        "authors": [
+          "Yuxin Ge",
+          "Guofang Wang",
+          "Wei Wei"
+        ],
+        "abstract": "We establish sharp Sobolev-type geometric inequalities on $\\mathbb{S}^n$ involving the total $\\sigma_k$-curvatures $\\int_{\\mathbb{S}^n}\\sigma_k(g)\\,dv_g$. These results extend the optimal inequalities of Guan--Wang~\\cite{GWDuke} from the cone $\\mathcal{C}_k$ to the strictly larger cone $\\mathcal{C}_{k-1}$, thereby enlarging the range of admissible conformal metrics. Our approach is variational and is implemented through a fully nonlinear conformal flow. Working in $\\mathcal{C}_{k-1}$ introduces substantial analytic difficulties; in particular, one must obtain $C^2$ a priori estimates while simultaneously verifying that the flow remains parabolic. We resolve these issues via a carefully designed test function and by applying the maximum principle to the maximal eigenvalue of the Hessian matrix. As applications, we solve two open problems in dimensions 3 and 4. Finally, we give examples to show that these inequalities cannot be extended to $\\mathcal{C}_{k-2}$.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.11421",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11421",
+        "submittedAt": "2026-09-10T11:50:46Z",
+        "updatedAt": "2026-09-10T11:50:46Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "正文分析",
+        "workSummary": "论文在球面及局部共形平坦背景上研究总 $\\sigma k$ 曲率的尖锐几何不等式。主要结果把 Guan–Wang 的 admissible cone 从 Ck 扩展到更大的 Ck−1，并覆盖 Sobolev、临界 Moser–Trudinger 和反向不等式。技术核心是扰动的 fully nonlinear conformal flow、最大 Hessian 特征值的最大值原理和 $C^{2}$ 先验估计；流的单调性、抛物性保持与极限收敛随后给出等号刻画及三、四维应用。",
+        "techniques": [
+          "Gårding 锥与 Newton 张量",
+          "扰动共形流",
+          "最大 Hessian 特征值最大值原理",
+          "$C^{2}$ 先验估计与抛物性保持",
+          "单调泛函和流极限"
+        ],
+        "breakthrough": "论文在较弱的 Ck−1 锥内仍建立尖锐 $\\sigma k/\\sigma l$ 几何不等式，关键不是形式上的流延拓，而是对最大 Hessian 特征值构造能吸收不利项的测试函数，从而同时维持二阶估计和严格抛物性。",
+        "limitations": "结论依赖共形类、锥条件和球面/局部共形平坦几何；Ck−2 的扩展由显式反例否定，临界维数还需分别使用 Moser–Trudinger 型泛函。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "扰动共形流保持 $\\sigma k-1$ 正性并具有所需的单调量。",
+              "route": "用 Newton 张量和 Gårding 锥恒等式验证流方程的椭圆性，沿流微分 $J\\epsilon k$ 或相应商泛函；Lemma 2.4 将 $\\sigma k-1$ 的正性和能量单调性锁定在 Ck−1 内。",
+              "evidence": "第 2.2 节 Lemma 2.4 及流 (2.10)–(2.12)（PDF 第 8–10 页）。"
+            },
+            {
+              "claim": "流解满足全局 $C^{2}$ 估计，且抛物性不会在有限时间丢失。",
+              "route": "在 Hessian 最大特征值处对方程二阶微分，使用 $\\lambda max$ 的二阶导数额外正项控制 uiFi；把依赖 $\\epsilon $ 的项整理为非负量，得到 Theorem 3.1 的 Hessian 上界和后续梯度/函数值控制。",
+              "evidence": "第 3 节 Theorem 3.1 与 Lemmas 2.5、3.1（PDF 第 10–17 页）。"
+            },
+            {
+              "claim": "带 $C^{2}$ 控制的流在 Ck−1 中收敛到常 $\\sigma k/\\sigma l$ 曲率极限。",
+              "route": "由 $C^{0}$、梯度和 Hessian 界获取长期紧性，结合流单调量的积分耗散选取时间序列；极限方程、强最大值原理和归一化条件排除退化，得到 Theorem 4.1、4.4 的收敛结论。",
+              "evidence": "第 4.1–4.3 节 Theorem 4.1、Lemma 4.3、Theorem 4.4（PDF 第 17–22 页）。"
+            },
+            {
+              "claim": "球面上的 Sobolev、Moser–Trudinger 和反向不等式及等号条件成立。",
+              "route": "在球面初始度量运行流并用极限常曲率度量比较归一化泛函；Theorem 4.4 给出的收敛和 Lemma 2.4 的单调性将初值泛函夹在标准球值与极限值之间，等号时由刚性得到常截面曲率。",
+              "evidence": "Theorem 1.1、Corollaries 1.2–1.3 的证明（PDF 第 2–3、22–24 页）。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "推广/加强",
-          "workSummary": "把球面总 σₖ 曲率的锐 Sobolev 型不等式从 Cₖ 推进到更大的 Cₖ₋₁ 共形锥。",
-          "techniques": [
-            "全非线性共形流",
-            "Hessian 最大特征值",
-            "C² 先验估计"
-          ],
-          "breakthrough": "在较弱容许条件下维持抛物性，并给出无法推进到 Cₖ₋₂ 的例子。",
-          "limitations": "需核查 k 与维数范围及流存在条件，不能声称所有共形度量均满足。 已补读引言或主结果片段，尚未逐行验证完整证明。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 93,
-          "priorityReason": "几何 PDE 的关键估计与锐范围突破均与主线密切相关。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We establish sharp Sobolev-type geometric inequalities on $\\mathbb{S}^n$ involving the total $σ_k$-curvatures $\\int_{\\mathbb{S}^n}σ_k(g)\\,dv_g$. These results extend the optimal inequalities of Guan--Wang~\\cite{GWDuke} from the cone $\\mathcal{C}_k$ to the strictly larger cone $\\mathcal{C}_{k-1}$, thereby enlarging the range of admissible conformal metrics. Our approach is variational and is implemented through a fully nonlinear conformal flow. Working in $\\mathcal{C}_{k-1}$ introduces substantial analytic difficulties; in particular, one must obtain $C^2$ a priori estimates while simultaneously verifying that the flow remains parabolic. We resolve these issues via a carefully designed test function and by applying the maximum principle to the maximal eigenvalue of the Hessian matrix. As applications, we solve two open problems in dimensions 3 and 4. Finally, we give examples to show that these inequalities cannot be extended to $\\mathcal{C}_{k-2}$.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+        "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+        "priorityScore": 94,
+        "priorityTier": "high",
+        "priorityReason": "在严格扩大 admissible cone 的同时保住尖锐常数、等号刚性和流的二阶先验控制，直接解决三、四维的开放问题。",
+        "lowPriorityReason": "Ck−2 反例表明锥条件不能任意削弱；证明严重依赖共形几何和 $\\sigma k$ Newton 张量结构，尚非一般 fully nonlinear 流。",
+        "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
       }
     }
   ]

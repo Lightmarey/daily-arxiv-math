@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11658",
+  "slug": "2609.11658",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11658:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11658",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The Schr\\\"odinger-Klein-Gordon System Revisited",
+    "authors": [
+      "Christophe Cheverry",
+      "Zied Ammari"
+    ],
+    "abstract": "We introduce a microlocal formulation of the Schr{\\\"o}dinger-Klein-Gordon system describing the interaction between a non-relativistic quantum particle and a Klein-Gordon field through Yukawa coupling. Instead of working directly with the Schr{\\\"o}dinger wave function, we represent the quantum component by its Fourier-Wigner transform, and we rewrite the Klein-Gordon equation in terms of a complex Fourier variable. Eliminating the field variable yields a closed nonlinear Fourier-Moyal equation on phase space whose unknown is the Fourier-Wigner distribution associated with the quantum component. The resulting formulation provides a refined description of the particle-field interaction at the microlocal level. In particular, the original cubic coupling is transformed into a quadratic self-interaction governed by an explicit bilinear operator. This new representation permits the use of techniques from time-frequency analysis. Building on this, we develop a well-posedness theory for the Fourier-Moyal equation in anisotropic spaces involving Wiener-type norms and prescribed moduli of continuity. Local existence and uniqueness are established under general assumptions on the ultraviolet cutoff, together with propagation of microlocal regularity. We then introduce a new construction of weak L 2 -solutions by exploiting compactness properties of Fourier-Wigner transforms and obtain global existence for prepared data. The aim is to provide an alternative analytical framework for the study of Yukawa-type interactions and to establish a bridge between nonlinear dispersive equations and phase-space methods.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11658",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11658",
+    "submittedAt": "2026-09-10T15:02:09Z",
+    "updatedAt": "2026-09-10T15:02:09Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "正文分析",
+    "workSummary": "论文把 Yukawa 耦合的 Schrödinger–Klein–Gordon 系统改写为相空间上的 Fourier–Moyal 方程。作者先用 Fourier–Wigner 变换表示量子分量，再把 Klein–Gordon 场编码为复变量 $\\alpha $，并消去场变量得到带显式 Yukawa 双线性算子的闭方程；随后在各向异性 Wiener 型空间建立局部适定性、模连续性传播，并在强截止条件下通过 Fourier–Wigner 紧性构造全局弱 $L^{2}$ 解。",
+    "techniques": [
+      "Fourier–Wigner 变换",
+      "Moyal 相空间输运",
+      "Yukawa 双线性算子与 Young 卷积估计",
+      "各向异性 Wiener 型范数",
+      "弱紧性与 Fourier–Wigner 迹识别"
+    ],
+    "breakthrough": "核心进展是把原系统的三次粒子—场耦合变成相空间中带 $\\eta =0$ 迹的显式二次自相互作用，使局部适定性和弱解构造都能直接在微局部变量上闭合。",
+    "limitations": "全局强结论要求修正截止 $\\chi $ 满足较强的加权可积性；较弱的 $\\chi $ 条件只能给 Fourier–Moyal 方程的弱 $L^{2}$ 解。弱紧性极限中 $\\eta =0$ 迹并不会自动连续，论文必须额外用截断与强收敛识别非线性项。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "光滑快速衰减的 SKG 数据与 Fourier–Moyal 数据给出等价的耦合系统。",
+          "route": "先将 $\\alpha $ 分解成自由 Klein–Gordon 演化和 Duhamel 项，再由 (3.12)–(3.16) 重建 $A、\\partial tA$；利用 Fourier–Wigner 反演式恢复 uū，从而把相空间方程还原为原始 Schrödinger 方程。",
+          "evidence": "第 3.2.2–3.2.4 节，公式 (3.12)–(3.25)，Lemma 4 与 Proposition 5（PDF 第 12–14 页）。"
+        },
+        {
+          "claim": "Yukawa 双线性映射在带 $\\eta $ 连续性的各向异性空间中满足可用的双线性界。",
+          "route": "对第一输入在 $\\eta =0$ 的轨迹作点值控制，把第二输入的 $\\eta $ 范数保留在卷积中；对 k 变量应用 Young 不等式，得到 (3.21)，这正是非线性项能够进入输运方程固定点估计的原因。",
+          "evidence": "Lemma 3 及其证明，公式 (3.18)–(3.22)（PDF 第 12–13 页）。"
+        },
+        {
+          "claim": "Theorem 13 给出 Fourier–Moyal 方程在参数区域 $L0\\cup B\\cup L1\\cup Q$ 中的局部适定性。",
+          "route": "以沿输运特征的 Duhamel 表示分离线性输运，再用 (3.21) 的双线性控制选择时间小区间，使非线性映射在相应各向异性 Banach 空间收缩；唯一性和模连续性随同一估计传播。",
+          "evidence": "第 4.2 节 Theorem 13（PDF 第 22–24 页），以及第 4 节对各参数区域的固定点估计。"
+        },
+        {
+          "claim": "在 $\\chi ̃\\in L^{2}、\\alpha ̃0\\in L\\infty 1/2$ 且 $u0\\in L^{2}\\cap L^{4}$ 时，截断近似产生全局弱 Fourier–Moyal 解。",
+          "route": "先用 $\\chi ̃n$ 截断得到统一 $L^{2}/L\\infty $ 界，Banach–Alaoglu 提取 wn、un 的弱极限；对测试函数形成的 hn 用 Sobolev 紧性和 Arzelà–Ascoli 得到局部强 $L^{2}$ 收敛，再用 $\\chi ̃$ 的 $L^{2}$ 尾部压制 $|k̃|\\to \\infty $，识别极限双线性项。",
+          "evidence": "Theorem 22 及证明中公式 (5.23)–(5.31)（PDF 第 33–36 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+    "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+    "priorityScore": 92,
+    "priorityTier": "high",
+    "priorityReason": "同时完成相空间重构、各向异性适定性和全局弱解构造，给出可迁移到其他粒子—场系统的微局部框架。",
+    "lowPriorityReason": "证明依赖截止函数的加权可积性，且弱极限的迹识别只覆盖文中指定的 $L^{2}\\cap L^{4}$ 数据类。",
+    "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11658:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11658",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The Schr\\\"odinger-Klein-Gordon System Revisited",
+        "authors": [
+          "Christophe Cheverry",
+          "Zied Ammari"
+        ],
+        "abstract": "We introduce a microlocal formulation of the Schr{\\\"o}dinger-Klein-Gordon system describing the interaction between a non-relativistic quantum particle and a Klein-Gordon field through Yukawa coupling. Instead of working directly with the Schr{\\\"o}dinger wave function, we represent the quantum component by its Fourier-Wigner transform, and we rewrite the Klein-Gordon equation in terms of a complex Fourier variable. Eliminating the field variable yields a closed nonlinear Fourier-Moyal equation on phase space whose unknown is the Fourier-Wigner distribution associated with the quantum component. The resulting formulation provides a refined description of the particle-field interaction at the microlocal level. In particular, the original cubic coupling is transformed into a quadratic self-interaction governed by an explicit bilinear operator. This new representation permits the use of techniques from time-frequency analysis. Building on this, we develop a well-posedness theory for the Fourier-Moyal equation in anisotropic spaces involving Wiener-type norms and prescribed moduli of continuity. Local existence and uniqueness are established under general assumptions on the ultraviolet cutoff, together with propagation of microlocal regularity. We then introduce a new construction of weak L 2 -solutions by exploiting compactness properties of Fourier-Wigner transforms and obtain global existence for prepared data. The aim is to provide an alternative analytical framework for the study of Yukawa-type interactions and to establish a bridge between nonlinear dispersive equations and phase-space methods.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11658",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11658",
+        "submittedAt": "2026-09-10T15:02:09Z",
+        "updatedAt": "2026-09-10T15:02:09Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "正文分析",
+        "workSummary": "论文把 Yukawa 耦合的 Schrödinger–Klein–Gordon 系统改写为相空间上的 Fourier–Moyal 方程。作者先用 Fourier–Wigner 变换表示量子分量，再把 Klein–Gordon 场编码为复变量 $\\alpha $，并消去场变量得到带显式 Yukawa 双线性算子的闭方程；随后在各向异性 Wiener 型空间建立局部适定性、模连续性传播，并在强截止条件下通过 Fourier–Wigner 紧性构造全局弱 $L^{2}$ 解。",
+        "techniques": [
+          "Fourier–Wigner 变换",
+          "Moyal 相空间输运",
+          "Yukawa 双线性算子与 Young 卷积估计",
+          "各向异性 Wiener 型范数",
+          "弱紧性与 Fourier–Wigner 迹识别"
+        ],
+        "breakthrough": "核心进展是把原系统的三次粒子—场耦合变成相空间中带 $\\eta =0$ 迹的显式二次自相互作用，使局部适定性和弱解构造都能直接在微局部变量上闭合。",
+        "limitations": "全局强结论要求修正截止 $\\chi $ 满足较强的加权可积性；较弱的 $\\chi $ 条件只能给 Fourier–Moyal 方程的弱 $L^{2}$ 解。弱紧性极限中 $\\eta =0$ 迹并不会自动连续，论文必须额外用截断与强收敛识别非线性项。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "光滑快速衰减的 SKG 数据与 Fourier–Moyal 数据给出等价的耦合系统。",
+              "route": "先将 $\\alpha $ 分解成自由 Klein–Gordon 演化和 Duhamel 项，再由 (3.12)–(3.16) 重建 $A、\\partial tA$；利用 Fourier–Wigner 反演式恢复 uū，从而把相空间方程还原为原始 Schrödinger 方程。",
+              "evidence": "第 3.2.2–3.2.4 节，公式 (3.12)–(3.25)，Lemma 4 与 Proposition 5（PDF 第 12–14 页）。"
+            },
+            {
+              "claim": "Yukawa 双线性映射在带 $\\eta $ 连续性的各向异性空间中满足可用的双线性界。",
+              "route": "对第一输入在 $\\eta =0$ 的轨迹作点值控制，把第二输入的 $\\eta $ 范数保留在卷积中；对 k 变量应用 Young 不等式，得到 (3.21)，这正是非线性项能够进入输运方程固定点估计的原因。",
+              "evidence": "Lemma 3 及其证明，公式 (3.18)–(3.22)（PDF 第 12–13 页）。"
+            },
+            {
+              "claim": "Theorem 13 给出 Fourier–Moyal 方程在参数区域 $L0\\cup B\\cup L1\\cup Q$ 中的局部适定性。",
+              "route": "以沿输运特征的 Duhamel 表示分离线性输运，再用 (3.21) 的双线性控制选择时间小区间，使非线性映射在相应各向异性 Banach 空间收缩；唯一性和模连续性随同一估计传播。",
+              "evidence": "第 4.2 节 Theorem 13（PDF 第 22–24 页），以及第 4 节对各参数区域的固定点估计。"
+            },
+            {
+              "claim": "在 $\\chi ̃\\in L^{2}、\\alpha ̃0\\in L\\infty 1/2$ 且 $u0\\in L^{2}\\cap L^{4}$ 时，截断近似产生全局弱 Fourier–Moyal 解。",
+              "route": "先用 $\\chi ̃n$ 截断得到统一 $L^{2}/L\\infty $ 界，Banach–Alaoglu 提取 wn、un 的弱极限；对测试函数形成的 hn 用 Sobolev 紧性和 Arzelà–Ascoli 得到局部强 $L^{2}$ 收敛，再用 $\\chi ̃$ 的 $L^{2}$ 尾部压制 $|k̃|\\to \\infty $，识别极限双线性项。",
+              "evidence": "Theorem 22 及证明中公式 (5.23)–(5.31)（PDF 第 33–36 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+        "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+        "priorityScore": 92,
+        "priorityTier": "high",
+        "priorityReason": "同时完成相空间重构、各向异性适定性和全局弱解构造，给出可迁移到其他粒子—场系统的微局部框架。",
+        "lowPriorityReason": "证明依赖截止函数的加权可积性，且弱极限的迹识别只覆盖文中指定的 $L^{2}\\cap L^{4}$ 数据类。",
+        "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+      }
+    }
+  ]
+}

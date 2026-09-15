@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06482",
+  "slug": "2609.06482",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06482:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06482",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Fluctuating Kinetic Theory: A Poissonian Stochastic Boltzmann Equation",
+    "authors": [
+      "Zhengyan Wu"
+    ],
+    "abstract": "We introduce a nonlinear Poissonian fluctuating Boltzmann equation whose noise encodes both the fluctuations and the path large-deviation rate function of the underlying hard-sphere gas. Unlike the Gaussian-noise equations commonly studied in fluctuating hydrodynamics, the present equation raises a new difficulty: a Poisson random measure produces jumps that may destroy the nonnegativity of the solution. To address this problem, we construct a finite-dimensional coarse-grained jump process and prove its well-posedness and nonnegativity. For each fixed mesh, this process satisfies a good path large-deviation principle. We then fix a regularized velocity cutoff and study the asymptotic behavior of the discrete rate functions as the mesh is refined. On a class of biased regular paths, their limit is the corresponding cutoff Boltzmann large-deviation rate function associated with the hard-sphere gas. This establishes the consistency of the coarse-grained fluctuating Boltzmann model with the underlying particle system at the level of path large deviations.",
+    "categories": [
+      "math.PR",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.06482",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06482",
+    "submittedAt": "2026-09-06T08:58:08Z",
+    "updatedAt": "2026-09-06T08:58:08Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "分析结果",
+    "workSummary": "论文构造带 Poisson 碰撞噪声的随机 Boltzmann 模型。作者先把速度空间截断并划分有限网格，用守恒的输运通道和碰撞通道定义有限维跳跃过程；再证明非负性、质量守恒、非爆炸和路径唯一性。固定网格时，Poisson 变分表示把跳跃过程的概率代价写成受控骨架方程上的相对熵积分，从而得到良好路径大偏差原理。随后在固定速度截断下，将网格密度和控制插值到连续碰撞空间，证明离散速率函数在 biased regular paths 上具有下极限和恢复序列，收敛到截断 Boltzmann 大偏差作用。",
+    "techniques": [
+      "非负性保持的有限网格 Poisson 跳跃过程",
+      "Poisson 控制变分表示与相对熵代价",
+      "有限维路径大偏差与收缩原理",
+      "碰撞通道的上风输运离散化",
+      "固定截断下的 $\\Gamma -liminf$ 与恢复序列"
+    ],
+    "breakthrough": "把硬球碰撞的离散 Poisson 噪声、非负性约束和路径大偏差统一到同一个可验证的粗粒化过程，并证明其速率函数在固定速度截断和规则偏置路径上确实趋于连续 Boltzmann 碰撞作用。",
+    "limitations": "非负性和良定性依赖特定的有限网格通道及有限质量层；连续极限固定了速度截断，并且只对有界、正且 Lipschitz 的 biased regular paths 给出收敛。论文没有移除高能尾部截断，也没有因此得到未截断模型的全路径大偏差原理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "有限网格过程存在路径唯一的非爆炸强 càdlàg 解，并保持非负性和总质量。",
+          "route": "先在每个固定质量层上界定所有输运与碰撞通道的总强度，排除有限时间内无限跳；再利用只有入射单元含有足够质量时通道才有正强度，逐次跳跃不会越过非负边界且增减量相互抵消，最后用有限状态层的图形构造得到唯一过程。",
+          "evidence": "PDF 第 21-23 页 Section 2.2 的 Theorem 2.2 与 Section 3 的 Lemmas 3.1–3.2、Theorem 3.3；质量与跳跃强度见 equations (2.13)、(3.1)–(3.2)。"
+        },
+        {
+          "claim": "固定网格上的密度路径满足具有良好速率函数的路径大偏差原理。",
+          "route": "把每个 Poisson 通道的强度乘子记为 q，并将跳跃动力学改写成带 q 的骨架方程；Poisson 变分表示把每个通道的代价变成 beta times l(q)，通道求和后以紧性和下半连续性获得良好速率，再对密度重构使用连续映射收缩。",
+          "evidence": "PDF 第 21-22 页 Theorem 2.3、equations (2.22)–(2.24)；第 35-42 页 Section 4 的 Theorem 4.5 与 Poisson control proof。"
+        },
+        {
+          "claim": "规则受控对的离散碰撞代价收敛到固定截断的连续 Boltzmann 碰撞作用。",
+          "route": "将连续密度和控制按单元平均与测试函数投影到网格，利用规则性保证输运差分、碰撞系数和指数增量在网格细化时一致逼近；对控制 $q=e^(Delta$ p) 的情形，凸对偶把离散熵代价与连续 Hamiltonian 中的碰撞项逐点匹配。",
+          "evidence": "PDF 第 50-51 页 Proposition 5.3、Definition 5.2 与 equations (5.3)、(5.6)–(5.7)；第 61 页 Theorem 5.6 的 Hamiltonian comparison。"
+        },
+        {
+          "claim": "Theorem 2.4 的固定截断速率函数同时满足下极限不等式和恢复序列结论。",
+          "route": "对任意收敛的离散路径把测试函数投影回网格，输运和碰撞 Hamiltonian 的误差由重构的 L-infinity 差控制，产生 liminf；对给定连续规则路径用单元积分和同一控制构造离散路径，误差趋零并给出 limsup，二者合成 $\\Gamma $ 型收敛。",
+          "evidence": "PDF 第 22-23 页 Theorem 2.4 与 equations (2.28)–(2.29)；第 61-62 页 Theorem 5.6 proof，尤其 equations (5.23)–(5.25)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、模型定义、四个主结果、有限网格大偏差证明、连续碰撞极限、附录和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-69 页全文；重点核查第 1-12 页引言、第 21-23 页主定理、第 35-62 页证明与第 63-69 页附录/References。",
+    "priorityScore": 56,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06482:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06482",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Fluctuating Kinetic Theory: A Poissonian Stochastic Boltzmann Equation",
+        "authors": [
+          "Zhengyan Wu"
+        ],
+        "abstract": "We introduce a nonlinear Poissonian fluctuating Boltzmann equation whose noise encodes both the fluctuations and the path large-deviation rate function of the underlying hard-sphere gas. Unlike the Gaussian-noise equations commonly studied in fluctuating hydrodynamics, the present equation raises a new difficulty: a Poisson random measure produces jumps that may destroy the nonnegativity of the solution. To address this problem, we construct a finite-dimensional coarse-grained jump process and prove its well-posedness and nonnegativity. For each fixed mesh, this process satisfies a good path large-deviation principle. We then fix a regularized velocity cutoff and study the asymptotic behavior of the discrete rate functions as the mesh is refined. On a class of biased regular paths, their limit is the corresponding cutoff Boltzmann large-deviation rate function associated with the hard-sphere gas. This establishes the consistency of the coarse-grained fluctuating Boltzmann model with the underlying particle system at the level of path large deviations.",
+        "categories": [
+          "math.PR",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.06482",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06482",
+        "submittedAt": "2026-09-06T08:58:08Z",
+        "updatedAt": "2026-09-06T08:58:08Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "分析结果",
+        "workSummary": "论文构造带 Poisson 碰撞噪声的随机 Boltzmann 模型。作者先把速度空间截断并划分有限网格，用守恒的输运通道和碰撞通道定义有限维跳跃过程；再证明非负性、质量守恒、非爆炸和路径唯一性。固定网格时，Poisson 变分表示把跳跃过程的概率代价写成受控骨架方程上的相对熵积分，从而得到良好路径大偏差原理。随后在固定速度截断下，将网格密度和控制插值到连续碰撞空间，证明离散速率函数在 biased regular paths 上具有下极限和恢复序列，收敛到截断 Boltzmann 大偏差作用。",
+        "techniques": [
+          "非负性保持的有限网格 Poisson 跳跃过程",
+          "Poisson 控制变分表示与相对熵代价",
+          "有限维路径大偏差与收缩原理",
+          "碰撞通道的上风输运离散化",
+          "固定截断下的 $\\Gamma -liminf$ 与恢复序列"
+        ],
+        "breakthrough": "把硬球碰撞的离散 Poisson 噪声、非负性约束和路径大偏差统一到同一个可验证的粗粒化过程，并证明其速率函数在固定速度截断和规则偏置路径上确实趋于连续 Boltzmann 碰撞作用。",
+        "limitations": "非负性和良定性依赖特定的有限网格通道及有限质量层；连续极限固定了速度截断，并且只对有界、正且 Lipschitz 的 biased regular paths 给出收敛。论文没有移除高能尾部截断，也没有因此得到未截断模型的全路径大偏差原理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "有限网格过程存在路径唯一的非爆炸强 càdlàg 解，并保持非负性和总质量。",
+              "route": "先在每个固定质量层上界定所有输运与碰撞通道的总强度，排除有限时间内无限跳；再利用只有入射单元含有足够质量时通道才有正强度，逐次跳跃不会越过非负边界且增减量相互抵消，最后用有限状态层的图形构造得到唯一过程。",
+              "evidence": "PDF 第 21-23 页 Section 2.2 的 Theorem 2.2 与 Section 3 的 Lemmas 3.1–3.2、Theorem 3.3；质量与跳跃强度见 equations (2.13)、(3.1)–(3.2)。"
+            },
+            {
+              "claim": "固定网格上的密度路径满足具有良好速率函数的路径大偏差原理。",
+              "route": "把每个 Poisson 通道的强度乘子记为 q，并将跳跃动力学改写成带 q 的骨架方程；Poisson 变分表示把每个通道的代价变成 beta times l(q)，通道求和后以紧性和下半连续性获得良好速率，再对密度重构使用连续映射收缩。",
+              "evidence": "PDF 第 21-22 页 Theorem 2.3、equations (2.22)–(2.24)；第 35-42 页 Section 4 的 Theorem 4.5 与 Poisson control proof。"
+            },
+            {
+              "claim": "规则受控对的离散碰撞代价收敛到固定截断的连续 Boltzmann 碰撞作用。",
+              "route": "将连续密度和控制按单元平均与测试函数投影到网格，利用规则性保证输运差分、碰撞系数和指数增量在网格细化时一致逼近；对控制 $q=e^(Delta$ p) 的情形，凸对偶把离散熵代价与连续 Hamiltonian 中的碰撞项逐点匹配。",
+              "evidence": "PDF 第 50-51 页 Proposition 5.3、Definition 5.2 与 equations (5.3)、(5.6)–(5.7)；第 61 页 Theorem 5.6 的 Hamiltonian comparison。"
+            },
+            {
+              "claim": "Theorem 2.4 的固定截断速率函数同时满足下极限不等式和恢复序列结论。",
+              "route": "对任意收敛的离散路径把测试函数投影回网格，输运和碰撞 Hamiltonian 的误差由重构的 L-infinity 差控制，产生 liminf；对给定连续规则路径用单元积分和同一控制构造离散路径，误差趋零并给出 limsup，二者合成 $\\Gamma $ 型收敛。",
+              "evidence": "PDF 第 22-23 页 Theorem 2.4 与 equations (2.28)–(2.29)；第 61-62 页 Theorem 5.6 proof，尤其 equations (5.23)–(5.25)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、模型定义、四个主结果、有限网格大偏差证明、连续碰撞极限、附录和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-69 页全文；重点核查第 1-12 页引言、第 21-23 页主定理、第 35-62 页证明与第 63-69 页附录/References。",
+        "priorityScore": 56,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03980",
+  "slug": "2609.03980",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03980:v2",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03980",
+    "version": 2,
+    "entryKind": "new",
+    "title": "Decay Rates and Domain Dependence of a Coupled Wave-Heat System with Spatially Dependent Heat Coefficients",
+    "authors": [
+      "Pascal Heymoß"
+    ],
+    "abstract": "We study of the long-term behavior of a coupled wave-heat system. The system consists of a wave equation and a heat equation on two adjacent Lipschitz domains coupled by a common interface, with the heat equation being allowed to incorporate spatially dependent coefficients. We first establish strong asymptotic stability independent of the domains and coefficients. To this end, we employ the framework of closure relations, which reduces the spectral analysis of the coupled system to that of a wave equation. Secondly, we analyze non-uniform decay rates for classical solutions to the coupled system. Using methods from the theory of $C_0$-semigroups and a non-orthogonal decomposition of the state space, we reduce the problem to a residual estimate which is independent of the heat domain and heat coefficients, instead depending monotonically on the wave domain and the interface. With this, we are able to extend the known non-uniform decay rates to spatially dependent heat coefficients, yielding logarithmic decay under no assumptions, as well as polynomial decay in one dimensions or under the Geometric Control Condition.",
+    "categories": [
+      "math.AP",
+      "math.SP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03980",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03980",
+    "submittedAt": "2026-09-03T15:13:47Z",
+    "updatedAt": "2026-09-07T13:54:47Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "稳定性",
+    "workSummary": "分析具有空间变热系数的耦合 wave--heat 系统：先把耦合算子写成耗散生成元并分离零模，再以 resolvent 估计得到半群衰减，最后比较域和系数变化对衰减率的影响。",
+    "techniques": [
+      "耗散算子与半群",
+      "谱 resolvent 估计",
+      "Poincare 型不等式",
+      "波-热耦合",
+      "域依赖稳定性"
+    ],
+    "breakthrough": "把非均匀热系数和接口几何纳入同一 resolvent 框架，给出从对数衰减到多项式衰减的定量速率，并证明速率对 admissible 域扰动具有可控依赖。",
+    "limitations": "系统需满足 accretive 热系数、Lipschitz 接口和几何 admissibility；衰减率依赖低频 resolvent 行为，不能直接推广到缺少热耦合的封闭波系统。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "耦合 wave--heat 算子生成收缩半群。",
+          "route": "将波场和热场的能量空间写成接口传输条件，验证算子闭性、耗散性和满射性；对扩展算子先证明 skew-adjoint，再加 accretive 热部分。",
+          "evidence": "第 1--3 节 Theorem 1.1、Lemma 3.1、Proposition 3.2（PDF 第 3--10 页）。"
+        },
+        {
+          "claim": "去除核空间后，resolvent 可由 Poincare 型界控制。",
+          "route": "分解出静态 kernel，针对正交补的椭圆/热方程建立接口 trace 和 Poincare 估计，将 resolvent 方程的低频项压到能量范数。",
+          "evidence": "第 4 节 Lemmas 4.2--4.5（PDF 第 12--17 页）。"
+        },
+        {
+          "claim": "resolvent 增长率决定半群的对数或多项式衰减。",
+          "route": "沿虚轴解 resolvent 系统，先用波区和热区的频率分解得到高频有界性与低频增长，再调用半群 Tauberian/频域定理将增长换成时间衰减。",
+          "evidence": "第 4--5 节 Theorem 4.1、Theorem 5.1、Corollary 5.4（PDF 第 18--25 页）。"
+        },
+        {
+          "claim": "域和热系数扰动下衰减率保持可比较。",
+          "route": "用相似域变换和界面 trace 估计比较两个 resolvent，控制几何尺度和系数差异导致的误差，从而把基准系统的衰减率传给扰动系统。",
+          "evidence": "第 4 节 Theorem 4.8 及其证明（PDF 第 22--27 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确说明准备论文期间使用 Perplexity、ChatGPT 和 Google Gemini 进行文献检索与讨论，并明确声明本文的新结果未由生成式 AI 发现、发展或撰写。",
+    "aiEvidenceSource": "PDF 第 35 页末、References 前的 AI 使用声明（文本行约 2243--2245）。",
+    "priorityScore": 83,
+    "priorityTier": "high",
+    "priorityReason": "针对耦合双曲–抛物系统的长时间行为，清晰分离波区、热区和界面的作用，半群与几何控制框架具有迁移价值。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03980:v2",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03980",
+        "version": 2,
+        "entryKind": "new",
+        "title": "Decay Rates and Domain Dependence of a Coupled Wave-Heat System with Spatially Dependent Heat Coefficients",
+        "authors": [
+          "Pascal Heymoß"
+        ],
+        "abstract": "We study of the long-term behavior of a coupled wave-heat system. The system consists of a wave equation and a heat equation on two adjacent Lipschitz domains coupled by a common interface, with the heat equation being allowed to incorporate spatially dependent coefficients. We first establish strong asymptotic stability independent of the domains and coefficients. To this end, we employ the framework of closure relations, which reduces the spectral analysis of the coupled system to that of a wave equation. Secondly, we analyze non-uniform decay rates for classical solutions to the coupled system. Using methods from the theory of $C_0$-semigroups and a non-orthogonal decomposition of the state space, we reduce the problem to a residual estimate which is independent of the heat domain and heat coefficients, instead depending monotonically on the wave domain and the interface. With this, we are able to extend the known non-uniform decay rates to spatially dependent heat coefficients, yielding logarithmic decay under no assumptions, as well as polynomial decay in one dimensions or under the Geometric Control Condition.",
+        "categories": [
+          "math.AP",
+          "math.SP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03980",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03980",
+        "submittedAt": "2026-09-03T15:13:47Z",
+        "updatedAt": "2026-09-07T13:54:47Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "稳定性",
+        "workSummary": "分析具有空间变热系数的耦合 wave--heat 系统：先把耦合算子写成耗散生成元并分离零模，再以 resolvent 估计得到半群衰减，最后比较域和系数变化对衰减率的影响。",
+        "techniques": [
+          "耗散算子与半群",
+          "谱 resolvent 估计",
+          "Poincare 型不等式",
+          "波-热耦合",
+          "域依赖稳定性"
+        ],
+        "breakthrough": "把非均匀热系数和接口几何纳入同一 resolvent 框架，给出从对数衰减到多项式衰减的定量速率，并证明速率对 admissible 域扰动具有可控依赖。",
+        "limitations": "系统需满足 accretive 热系数、Lipschitz 接口和几何 admissibility；衰减率依赖低频 resolvent 行为，不能直接推广到缺少热耦合的封闭波系统。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "耦合 wave--heat 算子生成收缩半群。",
+              "route": "将波场和热场的能量空间写成接口传输条件，验证算子闭性、耗散性和满射性；对扩展算子先证明 skew-adjoint，再加 accretive 热部分。",
+              "evidence": "第 1--3 节 Theorem 1.1、Lemma 3.1、Proposition 3.2（PDF 第 3--10 页）。"
+            },
+            {
+              "claim": "去除核空间后，resolvent 可由 Poincare 型界控制。",
+              "route": "分解出静态 kernel，针对正交补的椭圆/热方程建立接口 trace 和 Poincare 估计，将 resolvent 方程的低频项压到能量范数。",
+              "evidence": "第 4 节 Lemmas 4.2--4.5（PDF 第 12--17 页）。"
+            },
+            {
+              "claim": "resolvent 增长率决定半群的对数或多项式衰减。",
+              "route": "沿虚轴解 resolvent 系统，先用波区和热区的频率分解得到高频有界性与低频增长，再调用半群 Tauberian/频域定理将增长换成时间衰减。",
+              "evidence": "第 4--5 节 Theorem 4.1、Theorem 5.1、Corollary 5.4（PDF 第 18--25 页）。"
+            },
+            {
+              "claim": "域和热系数扰动下衰减率保持可比较。",
+              "route": "用相似域变换和界面 trace 估计比较两个 resolvent，控制几何尺度和系数差异导致的误差，从而把基准系统的衰减率传给扰动系统。",
+              "evidence": "第 4 节 Theorem 4.8 及其证明（PDF 第 22--27 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确说明准备论文期间使用 Perplexity、ChatGPT 和 Google Gemini 进行文献检索与讨论，并明确声明本文的新结果未由生成式 AI 发现、发展或撰写。",
+        "aiEvidenceSource": "PDF 第 35 页末、References 前的 AI 使用声明（文本行约 2243--2245）。",
+        "priorityScore": 83,
+        "priorityTier": "high",
+        "priorityReason": "针对耦合双曲–抛物系统的长时间行为，清晰分离波区、热区和界面的作用，半群与几何控制框架具有迁移价值。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

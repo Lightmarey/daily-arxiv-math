@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06609",
+  "slug": "2609.06609",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06609:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06609",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Semilinear wave equations on the Witten bubble spacetime",
+    "authors": [
+      "Onyx Gautam"
+    ],
+    "abstract": "We initiate the study of nonlinear wave equations on the Witten bubble spacetime (also known as the \"bubble of nothing\"), which is an $\\mathrm{SO}(3,1)\\times \\mathrm{U}(1)$-symmetric solution to the Einstein vacuum equations in $(4 + 1)$ dimensions. This spacetime was introduced by Witten to model the semiclassical instability of the Kaluza--Klein spacetime $\\mathbf{R}^{3+1}\\times S^1$ (which is classically stable by work of Huneau--Stingo--Wyatt (arXiv:2307.15267)). We prove a small-data global existence result without symmetry assumptions and an improved decay result for $\\mathrm{U}(1)$-symmetric solutions to a class of semilinear equations satisfying a version of the null condition. Key to the proof are novel estimates for the linear wave equation, which has been studied in the physics literature by Bhawal and Viveshwara and in the mathematics literature by Bachelot (arXiv:1601.03682).",
+    "categories": [
+      "gr-qc",
+      "math.AP"
+    ],
+    "primaryCategory": "gr-qc",
+    "arxivUrl": "https://arxiv.org/abs/2609.06609",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06609",
+    "submittedAt": "2026-09-06T13:51:55Z",
+    "updatedAt": "2026-09-06T13:51:55Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "论文在 Witten bubble 时空上研究线性及满足 null condition 的半线性波方程。作者先把几何写成适合 constant-tau 与 hyperboloidal foliation 的坐标和能量，利用 twisted current 得到基本 $\\partial tau$ 能量估计；在 U(1) 对称部分进一步建立 rp 型加权估计，处理 bubble 附近的零模和边界通量，导出能量与点态衰减。随后以 U(1) 对称/非对称分解和 bootstrap 控制半线性源项：小初值在非对称情形全局存在但允许多项式时间增长，在 U(1) 对称情形获得全局存在、无穷远极限及改进衰减。",
+    "techniques": [
+      "Witten bubble 双重坐标与面积半径重标度",
+      "twisted current 的 $\\partial tau$ 能量估计",
+      "U(1) 对称分解与 rp 型加权能量",
+      "双曲/constant-tau foliation 的点态估计",
+      "null condition bootstrap 与近 bubble 局部控制"
+    ],
+    "breakthrough": "建立了适配 Witten bubble 几何的 rp 型能量层级和点态衰减机制，并据此把 null condition 小数据全局存在推进到半线性方程：非对称解得到可控的多项式增长，对称解则保留无穷远极限并获得更快时间衰减。",
+    "limitations": "结果针对固定 Witten bubble 背景、充分光滑衰减的小初值和满足特定 null condition 的二次导数非线性；非 U(1) 对称部分只得到多项式时间增长，改进衰减需要对称性。论文没有处理大数据、背景几何扰动、任意二次非线性或由此产生的散射完备性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "线性波的重标度场 $psi=r$ phi 具有可控的 $\\partial tau$ 能量。",
+          "route": "将波方程改写为 psi 的坐标方程，用乘子 $\\partial tau$ 和带权空间函数积分分部；bubble 边界通量取极限时具有良好符号，得到 foliation 间的能量和角向体积分控制。",
+          "evidence": "PDF 第 19-20 页 Section 4.1 Proposition 4.1，equations (4.1)–(4.6)；几何与 psi 定义见第 4-5 页 Theorem 1.1。"
+        },
+        {
+          "claim": "U(1) 对称线性解满足 rp 型能量衰减，而非对称分量获得空间点态衰减。",
+          "route": "在对称分量上使用含 sinh(x) 和 $r^p$ 权重的乘子吸收远区误差，结合 bubble 附近的零模控制建立时间能量层级；再在 hyperboloidal 与 constant-tau 叶层上用 Sobolev/角向分解把能量转成点态界。",
+          "evidence": "PDF 第 21-22 页 Proposition 4.4，equations (4.7)–(4.10)；第 26-30 页 Propositions 5.1、5.2、5.6、5.9。"
+        },
+        {
+          "claim": "满足 null condition 的半线性方程在非对称小数据下全局存在。",
+          "route": "把 psi 分成 U(1) 平均和高模，利用 Theorem 1.1 的空间/时间衰减估计逐项控制二次源；在 bootstrap 区间中，null structure 让最慢的导数耦合带有可积权，Proposition 7.11 由改进后的能量界收缩 bootstrap 上界并延长解。",
+          "evidence": "PDF 第 5 页 Theorem 1.2(i)；第 41-47 页 Section 7 的 Proposition 7.11 及其 proof，源项分解见 equations (1.40)–(1.47)。"
+        },
+        {
+          "claim": "在 U(1) 对称初值下可获得全局存在、无穷远有限极限和改进衰减。",
+          "route": "对称性使完整解可以使用 rp 型能量而不只使用平均分量，因而允许更快的时间权重；把 hyperboloidal 能量、近 bubble 估计和 null-infinity 通量串联到 bootstrap，最终得到 Proposition 7.15 的全局界与衰减。",
+          "evidence": "PDF 第 5 页 Theorem 1.2(ii)；第 48-53 页 Proposition 7.15；线性对称衰减机制见第 21-30 页 Section 4.2–5。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露 figures 1 and 2 的 diagrams 在 ChatGPT 5.6 协助下创建；同时明确说明 AI 系统未用于本文数学内容或写作。该披露属于论文插图制作用途，因此按当前规则计为 explicit。",
+    "aiEvidenceSource": "PDF 第 12 页 AI usage statement。",
+    "priorityScore": 56,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06609:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06609",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Semilinear wave equations on the Witten bubble spacetime",
+        "authors": [
+          "Onyx Gautam"
+        ],
+        "abstract": "We initiate the study of nonlinear wave equations on the Witten bubble spacetime (also known as the \"bubble of nothing\"), which is an $\\mathrm{SO}(3,1)\\times \\mathrm{U}(1)$-symmetric solution to the Einstein vacuum equations in $(4 + 1)$ dimensions. This spacetime was introduced by Witten to model the semiclassical instability of the Kaluza--Klein spacetime $\\mathbf{R}^{3+1}\\times S^1$ (which is classically stable by work of Huneau--Stingo--Wyatt (arXiv:2307.15267)). We prove a small-data global existence result without symmetry assumptions and an improved decay result for $\\mathrm{U}(1)$-symmetric solutions to a class of semilinear equations satisfying a version of the null condition. Key to the proof are novel estimates for the linear wave equation, which has been studied in the physics literature by Bhawal and Viveshwara and in the mathematics literature by Bachelot (arXiv:1601.03682).",
+        "categories": [
+          "gr-qc",
+          "math.AP"
+        ],
+        "primaryCategory": "gr-qc",
+        "arxivUrl": "https://arxiv.org/abs/2609.06609",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06609",
+        "submittedAt": "2026-09-06T13:51:55Z",
+        "updatedAt": "2026-09-06T13:51:55Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "论文在 Witten bubble 时空上研究线性及满足 null condition 的半线性波方程。作者先把几何写成适合 constant-tau 与 hyperboloidal foliation 的坐标和能量，利用 twisted current 得到基本 $\\partial tau$ 能量估计；在 U(1) 对称部分进一步建立 rp 型加权估计，处理 bubble 附近的零模和边界通量，导出能量与点态衰减。随后以 U(1) 对称/非对称分解和 bootstrap 控制半线性源项：小初值在非对称情形全局存在但允许多项式时间增长，在 U(1) 对称情形获得全局存在、无穷远极限及改进衰减。",
+        "techniques": [
+          "Witten bubble 双重坐标与面积半径重标度",
+          "twisted current 的 $\\partial tau$ 能量估计",
+          "U(1) 对称分解与 rp 型加权能量",
+          "双曲/constant-tau foliation 的点态估计",
+          "null condition bootstrap 与近 bubble 局部控制"
+        ],
+        "breakthrough": "建立了适配 Witten bubble 几何的 rp 型能量层级和点态衰减机制，并据此把 null condition 小数据全局存在推进到半线性方程：非对称解得到可控的多项式增长，对称解则保留无穷远极限并获得更快时间衰减。",
+        "limitations": "结果针对固定 Witten bubble 背景、充分光滑衰减的小初值和满足特定 null condition 的二次导数非线性；非 U(1) 对称部分只得到多项式时间增长，改进衰减需要对称性。论文没有处理大数据、背景几何扰动、任意二次非线性或由此产生的散射完备性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "线性波的重标度场 $psi=r$ phi 具有可控的 $\\partial tau$ 能量。",
+              "route": "将波方程改写为 psi 的坐标方程，用乘子 $\\partial tau$ 和带权空间函数积分分部；bubble 边界通量取极限时具有良好符号，得到 foliation 间的能量和角向体积分控制。",
+              "evidence": "PDF 第 19-20 页 Section 4.1 Proposition 4.1，equations (4.1)–(4.6)；几何与 psi 定义见第 4-5 页 Theorem 1.1。"
+            },
+            {
+              "claim": "U(1) 对称线性解满足 rp 型能量衰减，而非对称分量获得空间点态衰减。",
+              "route": "在对称分量上使用含 sinh(x) 和 $r^p$ 权重的乘子吸收远区误差，结合 bubble 附近的零模控制建立时间能量层级；再在 hyperboloidal 与 constant-tau 叶层上用 Sobolev/角向分解把能量转成点态界。",
+              "evidence": "PDF 第 21-22 页 Proposition 4.4，equations (4.7)–(4.10)；第 26-30 页 Propositions 5.1、5.2、5.6、5.9。"
+            },
+            {
+              "claim": "满足 null condition 的半线性方程在非对称小数据下全局存在。",
+              "route": "把 psi 分成 U(1) 平均和高模，利用 Theorem 1.1 的空间/时间衰减估计逐项控制二次源；在 bootstrap 区间中，null structure 让最慢的导数耦合带有可积权，Proposition 7.11 由改进后的能量界收缩 bootstrap 上界并延长解。",
+              "evidence": "PDF 第 5 页 Theorem 1.2(i)；第 41-47 页 Section 7 的 Proposition 7.11 及其 proof，源项分解见 equations (1.40)–(1.47)。"
+            },
+            {
+              "claim": "在 U(1) 对称初值下可获得全局存在、无穷远有限极限和改进衰减。",
+              "route": "对称性使完整解可以使用 rp 型能量而不只使用平均分量，因而允许更快的时间权重；把 hyperboloidal 能量、近 bubble 估计和 null-infinity 通量串联到 bootstrap，最终得到 Proposition 7.15 的全局界与衰减。",
+              "evidence": "PDF 第 5 页 Theorem 1.2(ii)；第 48-53 页 Proposition 7.15；线性对称衰减机制见第 21-30 页 Section 4.2–5。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露 figures 1 and 2 的 diagrams 在 ChatGPT 5.6 协助下创建；同时明确说明 AI 系统未用于本文数学内容或写作。该披露属于论文插图制作用途，因此按当前规则计为 explicit。",
+        "aiEvidenceSource": "PDF 第 12 页 AI usage statement。",
+        "priorityScore": 56,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

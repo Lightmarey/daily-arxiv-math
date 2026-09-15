@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11909",
+  "slug": "2609.11909",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11909:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11909",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global $W^{2,p}$ and $C^{2,\\alpha}$ regularity for the sigma-$2$ equation",
+    "authors": [
+      "Yasheng Lyu"
+    ],
+    "abstract": "In this paper, we prove that continuous $2$-convex solutions of the $\\sigma_{2}$ equation with positive continuous density on bounded strictly mean-convex $C^{3}$ domains with $C^{3}$ boundary values belong to $W^{2,p}$ for every $1<p<\\infty$ in every dimension. If, in addition, the density is $C^{\\alpha}$, $0<\\alpha<1$, the solutions belong to $C^{2,\\alpha}$. Moreover, two counterexamples show that neither the $C^{3}$ assumption on the domain nor that on the boundary values can in general be weakened to $C^{2,1}$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11909",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11909",
+    "submittedAt": "2026-09-10T17:56:31Z",
+    "updatedAt": "2026-09-10T17:56:31Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "正文分析",
+    "workSummary": "论文处理有界严格平均凸 $C^{3}$ 域上 $\\sigma _{2}(D^{2}u)=f$ 的连续 2-凸 Hessian-measure 解。作者先用定义函数和边界比较控制解与梯度，再用切向迹下界、加权二次比较恒等式和 trace-tail 迭代获得全局 $W^{2,p}$；当 $f\\in C^\\alpha $ 时，将方程统一椭圆化并使用凹方程的全局 Schauder 理论得到 $C^{2,\\alpha }$。两个 $C^{2,1}$ 反例说明域或边界值的 $C^{3}$ 条件不能普遍降低。",
+    "techniques": [
+      "Hessian-measure 与 2-凸性",
+      "定义函数 barrier",
+      "Newton 张量加权比较恒等式",
+      "trace-tail 迭代",
+      "凹完全非线性方程的全局 Schauder 估计"
+    ],
+    "breakthrough": "文章把边界切向迹的正下界、加权比较和尾部积分迭代组合成任意维度的全局 $W^{2,p}$ 理论，并在密度 Hölder 时升级到 $C^{2,\\alpha }$；其反例精确指出 $C^{2,1}$ 边界数据的失效位置。",
+    "limitations": "要求域和边界值 $C^{3}$、严格正平均曲率及正连续密度$；C^{2,1}$ 情形只能展示反例，不能保证所有有限 p 的 $W^{2,p}$ 正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "定义函数与上下 barrier 给出 $|u-\\Phi |\\le A0d$ 及边界梯度界。",
+          "route": "构造满足 $D^{2}\\rho -\\theta I\\in \\Gamma _{2}$ 的 $C^{3}$ 定义函数 $\\rho $，利用 $\\sigma _{2}$ 的凹性和齐次性得到 $Ld\\le -\\theta tr a$；与 $\\Phi \\pm A0\\rho $ 比较后获得 (2.3) 的高度与边界梯度控制。",
+          "evidence": "公式 (2.1)–(2.3)（PDF 第 3–4 页）。"
+        },
+        {
+          "claim": "严格平均凸边界使切向 Hessian trace 有统一正下界。",
+          "route": "在边界局部坐标中展开 $\\beta 、\\phi $ 的二次和三次项，构造 d0、w0 与 $V=w0+B0d0^{2}/2+\\eta _{0}(C0|x'|^{2}-xn)$，用线性化最大值原理排除内点触碰，得到 $tr(D^{2}v|T\\partial \\Omega)\\ge c0$。",
+          "evidence": "Proposition 2.1 的构造和证明，公式 (2.4)–(2.7)（PDF 第 4–6 页）。"
+        },
+        {
+          "claim": "加权二次比较把 Hessian-measure 差异控制成边界切向梯度和。",
+          "route": "对 $W=u-v$ 使用 Newton 张量无散性质和 $\\psi =(d+\\epsilon )^{1/2}-\\epsilon ^{1/2}$ 分部积分，得到 (2.9)；舍去非负项后留下 $\\zeta |\\Pi DW|^{2}/r^{2}$，形成 (2.10) 的加权控制。",
+          "evidence": "公式 (2.8)–(2.10)（PDF 第 6–7 页）。"
+        },
+        {
+          "claim": "trace-tail 迭代将加权尾部界提升为全局 $W^{2,p}$，再由统一椭圆化得到 $C^{2,\\alpha }$。",
+          "route": "以辅助解 v 定义 $Y=max(\\Delta u,Zu)$，由 (2.10) 估计 {Y>P} 的测度，再乘 $P^{q-2}$ 积分并用 Tonelli 吸收右端得到 $Y\\in L^{2p}$；对 $C^\\alpha $ 密度构造凹统一椭圆扩展并调用全局 $C^{2,\\beta }$ 估计。",
+          "evidence": "Theorem 1.1–1.2；公式 (2.18)–(2.19) 与 Theorem 1.1 证明（PDF 第 10–12 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "PDF 第 26 页 Acknowledgements 明确说 AI tools 用于 preliminary mathematical exploration 和 refining the exposition；作者同时声明全部数学论证由本人独立核验并对手稿负责。用途限于前期探索和文字润色，未披露 AI 负责证明。",
+    "aiEvidenceSource": "官方 PDF 第 26 页 Acknowledgements。",
+    "priorityScore": 91,
+    "priorityTier": "high",
+    "priorityReason": "在不要求凸性、仅假设严格平均凸的条件下给出全局 $\\sigma _{2}$ 正则性，并把边界 $C^{3}$ 的必要性用明确反例钉住。",
+    "lowPriorityReason": "对连续密度的 $W^{2,p}$ 界依赖其模连续性$；C^{2,\\alpha }$ 结论还需 $f\\in C^\\alpha $ 和更强边界数据，论文未降低这些边界正则假设。",
+    "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11909:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11909",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global $W^{2,p}$ and $C^{2,\\alpha}$ regularity for the sigma-$2$ equation",
+        "authors": [
+          "Yasheng Lyu"
+        ],
+        "abstract": "In this paper, we prove that continuous $2$-convex solutions of the $\\sigma_{2}$ equation with positive continuous density on bounded strictly mean-convex $C^{3}$ domains with $C^{3}$ boundary values belong to $W^{2,p}$ for every $1<p<\\infty$ in every dimension. If, in addition, the density is $C^{\\alpha}$, $0<\\alpha<1$, the solutions belong to $C^{2,\\alpha}$. Moreover, two counterexamples show that neither the $C^{3}$ assumption on the domain nor that on the boundary values can in general be weakened to $C^{2,1}$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11909",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11909",
+        "submittedAt": "2026-09-10T17:56:31Z",
+        "updatedAt": "2026-09-10T17:56:31Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "正文分析",
+        "workSummary": "论文处理有界严格平均凸 $C^{3}$ 域上 $\\sigma _{2}(D^{2}u)=f$ 的连续 2-凸 Hessian-measure 解。作者先用定义函数和边界比较控制解与梯度，再用切向迹下界、加权二次比较恒等式和 trace-tail 迭代获得全局 $W^{2,p}$；当 $f\\in C^\\alpha $ 时，将方程统一椭圆化并使用凹方程的全局 Schauder 理论得到 $C^{2,\\alpha }$。两个 $C^{2,1}$ 反例说明域或边界值的 $C^{3}$ 条件不能普遍降低。",
+        "techniques": [
+          "Hessian-measure 与 2-凸性",
+          "定义函数 barrier",
+          "Newton 张量加权比较恒等式",
+          "trace-tail 迭代",
+          "凹完全非线性方程的全局 Schauder 估计"
+        ],
+        "breakthrough": "文章把边界切向迹的正下界、加权比较和尾部积分迭代组合成任意维度的全局 $W^{2,p}$ 理论，并在密度 Hölder 时升级到 $C^{2,\\alpha }$；其反例精确指出 $C^{2,1}$ 边界数据的失效位置。",
+        "limitations": "要求域和边界值 $C^{3}$、严格正平均曲率及正连续密度$；C^{2,1}$ 情形只能展示反例，不能保证所有有限 p 的 $W^{2,p}$ 正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "定义函数与上下 barrier 给出 $|u-\\Phi |\\le A0d$ 及边界梯度界。",
+              "route": "构造满足 $D^{2}\\rho -\\theta I\\in \\Gamma _{2}$ 的 $C^{3}$ 定义函数 $\\rho $，利用 $\\sigma _{2}$ 的凹性和齐次性得到 $Ld\\le -\\theta tr a$；与 $\\Phi \\pm A0\\rho $ 比较后获得 (2.3) 的高度与边界梯度控制。",
+              "evidence": "公式 (2.1)–(2.3)（PDF 第 3–4 页）。"
+            },
+            {
+              "claim": "严格平均凸边界使切向 Hessian trace 有统一正下界。",
+              "route": "在边界局部坐标中展开 $\\beta 、\\phi $ 的二次和三次项，构造 d0、w0 与 $V=w0+B0d0^{2}/2+\\eta _{0}(C0|x'|^{2}-xn)$，用线性化最大值原理排除内点触碰，得到 $tr(D^{2}v|T\\partial \\Omega)\\ge c0$。",
+              "evidence": "Proposition 2.1 的构造和证明，公式 (2.4)–(2.7)（PDF 第 4–6 页）。"
+            },
+            {
+              "claim": "加权二次比较把 Hessian-measure 差异控制成边界切向梯度和。",
+              "route": "对 $W=u-v$ 使用 Newton 张量无散性质和 $\\psi =(d+\\epsilon )^{1/2}-\\epsilon ^{1/2}$ 分部积分，得到 (2.9)；舍去非负项后留下 $\\zeta |\\Pi DW|^{2}/r^{2}$，形成 (2.10) 的加权控制。",
+              "evidence": "公式 (2.8)–(2.10)（PDF 第 6–7 页）。"
+            },
+            {
+              "claim": "trace-tail 迭代将加权尾部界提升为全局 $W^{2,p}$，再由统一椭圆化得到 $C^{2,\\alpha }$。",
+              "route": "以辅助解 v 定义 $Y=max(\\Delta u,Zu)$，由 (2.10) 估计 {Y>P} 的测度，再乘 $P^{q-2}$ 积分并用 Tonelli 吸收右端得到 $Y\\in L^{2p}$；对 $C^\\alpha $ 密度构造凹统一椭圆扩展并调用全局 $C^{2,\\beta }$ 估计。",
+              "evidence": "Theorem 1.1–1.2；公式 (2.18)–(2.19) 与 Theorem 1.1 证明（PDF 第 10–12 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "PDF 第 26 页 Acknowledgements 明确说 AI tools 用于 preliminary mathematical exploration 和 refining the exposition；作者同时声明全部数学论证由本人独立核验并对手稿负责。用途限于前期探索和文字润色，未披露 AI 负责证明。",
+        "aiEvidenceSource": "官方 PDF 第 26 页 Acknowledgements。",
+        "priorityScore": 91,
+        "priorityTier": "high",
+        "priorityReason": "在不要求凸性、仅假设严格平均凸的条件下给出全局 $\\sigma _{2}$ 正则性，并把边界 $C^{3}$ 的必要性用明确反例钉住。",
+        "lowPriorityReason": "对连续密度的 $W^{2,p}$ 界依赖其模连续性$；C^{2,\\alpha }$ 结论还需 $f\\in C^\\alpha $ 和更强边界数据，论文未降低这些边界正则假设。",
+        "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+      }
+    }
+  ]
+}

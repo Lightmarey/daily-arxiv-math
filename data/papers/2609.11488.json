@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11488",
+  "slug": "2609.11488",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11488:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11488",
+    "version": 1,
+    "entryKind": "new",
+    "title": "An Anisotropic Onsager Criterion for the Two-Dimensional Navier--Stokes Equations with Horizontal Viscosity",
+    "authors": [
+      "Siyu Liang"
+    ],
+    "abstract": "We consider distributional weak solutions $u\\in L^\\infty_tL^2_x$ of the two-dimensional Navier--Stokes equations with horizontal viscosity on $\\mathbb T^2$ or $\\mathbb R^2$, without assuming $\\partial_1u\\in L^2_tL^2_x$. We show that the Lions integrability condition $u\\in L^4_tL^4_x$ together with Onsager-critical regularity in the nondissipative direction, $u\\in L^3_tB^{1/3,v}_{3,\\infty}$ with the Besov regularity imposed only in the vertical direction, implies $\\partial_1u\\in L^2_tL^2_x$, with a quantitative bound on the horizontal dissipation. Thus the dissipative regularity is a consequence of the equation and need not be part of the definition of the solution. If moreover $u\\in L^3_tB^{1/3,v}_{3,c_0}$, then $u$ belongs to the isotropic critical Onsager space $L^3_tB^{1/3}_{3,c_0}$, satisfies the energy equality, and is continuous in $L^2$. Here $c_0$ indicates that the corresponding dyadic Besov sequence tends to zero at high frequencies. The proof combines absorption of the horizontal energy flux into the dissipation with a one-dimensional commutator estimate for the vertical energy flux.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11488",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11488",
+    "submittedAt": "2026-09-10T12:56:53Z",
+    "updatedAt": "2026-09-10T12:56:53Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "能量守恒",
+    "workSummary": "论文研究仅在水平变量耗散的二维 Navier–Stokes 弱解，证明 $u\\in L^4_tL^4_x$ 与垂直方向临界 Besov 正则性会反推出水平耗散 $\\partial _1u\\in L^2_{t,x}$；若垂直 Besov 序列属于 $c_0$，还可得到各向同性临界能量等式。",
+    "techniques": [
+      "Littlewood–Paley 分解",
+      "各向异性 Besov",
+      "交换子估计",
+      "水平耗散吸收",
+      "能量通量"
+    ],
+    "breakthrough": "给出只要求非耗散方向 1/3 阶 Besov 正则性的 Onsager 判据，并证明耗散正则性是方程推论而非定义假设。",
+    "limitations": "结论限于二维、水平黏性和分布解；低于临界正则性、三维或非局部边界情形未处理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 3.3–3.10 将垂直增量和各向异性 Besov 范数转成三次能量通量界。",
+          "route": "对垂直变量作 dyadic increment，利用一维 Besov 嵌入得到 $L^3$ 控制；Littlewood–Paley 截断把非线性通量拆成低–高频三项，各项分别由 $u\\in L^4L^4$ 和垂直 1/3 正则性估计。",
+          "evidence": "PDF 第 8–12 页，Lemmas 3.3–3.10。"
+        },
+        {
+          "claim": "Lemma 4.1 的一维交换子估计控制垂直能量通量的临界极限。",
+          "route": "将垂直平移差商与 mollifier 的卷积交换，先把通量写成差分三重积，再用 Hölder 和 $B^{1/3}_{3,\\infty }$ 半范数取得尺度无关界$；c_0$ 条件使高频尾趋零。",
+          "evidence": "PDF 第 13 页，Lemma 4.1。"
+        },
+        {
+          "claim": "Propositions 4.2–4.3 将水平通量吸收到黏性耗散并推出能量等式。",
+          "route": "对截断方程测试 u，水平高频通量由 Young 不等式分出 $\\nu ||\\partial _1u||^{2}$ 的一半，剩余项由 Lemma 4.1 控制；截断尺度趋零后得到 $\\partial _1u\\in L^{2}，c_0$ 情形进一步使全部通量消失。",
+          "evidence": "PDF 第 13–16 页，Propositions 4.2–4.3。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 86,
+    "priorityTier": "high",
+    "priorityReason": "各向异性 Onsager 临界正则性直接针对水平黏性 Navier–Stokes 的能量等式。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11488:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11488",
+        "version": 1,
+        "entryKind": "new",
+        "title": "An Anisotropic Onsager Criterion for the Two-Dimensional Navier--Stokes Equations with Horizontal Viscosity",
+        "authors": [
+          "Siyu Liang"
+        ],
+        "abstract": "We consider distributional weak solutions $u\\in L^\\infty_tL^2_x$ of the two-dimensional Navier--Stokes equations with horizontal viscosity on $\\mathbb T^2$ or $\\mathbb R^2$, without assuming $\\partial_1u\\in L^2_tL^2_x$. We show that the Lions integrability condition $u\\in L^4_tL^4_x$ together with Onsager-critical regularity in the nondissipative direction, $u\\in L^3_tB^{1/3,v}_{3,\\infty}$ with the Besov regularity imposed only in the vertical direction, implies $\\partial_1u\\in L^2_tL^2_x$, with a quantitative bound on the horizontal dissipation. Thus the dissipative regularity is a consequence of the equation and need not be part of the definition of the solution. If moreover $u\\in L^3_tB^{1/3,v}_{3,c_0}$, then $u$ belongs to the isotropic critical Onsager space $L^3_tB^{1/3}_{3,c_0}$, satisfies the energy equality, and is continuous in $L^2$. Here $c_0$ indicates that the corresponding dyadic Besov sequence tends to zero at high frequencies. The proof combines absorption of the horizontal energy flux into the dissipation with a one-dimensional commutator estimate for the vertical energy flux.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11488",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11488",
+        "submittedAt": "2026-09-10T12:56:53Z",
+        "updatedAt": "2026-09-10T12:56:53Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "能量守恒",
+        "workSummary": "论文研究仅在水平变量耗散的二维 Navier–Stokes 弱解，证明 $u\\in L^4_tL^4_x$ 与垂直方向临界 Besov 正则性会反推出水平耗散 $\\partial _1u\\in L^2_{t,x}$；若垂直 Besov 序列属于 $c_0$，还可得到各向同性临界能量等式。",
+        "techniques": [
+          "Littlewood–Paley 分解",
+          "各向异性 Besov",
+          "交换子估计",
+          "水平耗散吸收",
+          "能量通量"
+        ],
+        "breakthrough": "给出只要求非耗散方向 1/3 阶 Besov 正则性的 Onsager 判据，并证明耗散正则性是方程推论而非定义假设。",
+        "limitations": "结论限于二维、水平黏性和分布解；低于临界正则性、三维或非局部边界情形未处理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 3.3–3.10 将垂直增量和各向异性 Besov 范数转成三次能量通量界。",
+              "route": "对垂直变量作 dyadic increment，利用一维 Besov 嵌入得到 $L^3$ 控制；Littlewood–Paley 截断把非线性通量拆成低–高频三项，各项分别由 $u\\in L^4L^4$ 和垂直 1/3 正则性估计。",
+              "evidence": "PDF 第 8–12 页，Lemmas 3.3–3.10。"
+            },
+            {
+              "claim": "Lemma 4.1 的一维交换子估计控制垂直能量通量的临界极限。",
+              "route": "将垂直平移差商与 mollifier 的卷积交换，先把通量写成差分三重积，再用 Hölder 和 $B^{1/3}_{3,\\infty }$ 半范数取得尺度无关界$；c_0$ 条件使高频尾趋零。",
+              "evidence": "PDF 第 13 页，Lemma 4.1。"
+            },
+            {
+              "claim": "Propositions 4.2–4.3 将水平通量吸收到黏性耗散并推出能量等式。",
+              "route": "对截断方程测试 u，水平高频通量由 Young 不等式分出 $\\nu ||\\partial _1u||^{2}$ 的一半，剩余项由 Lemma 4.1 控制；截断尺度趋零后得到 $\\partial _1u\\in L^{2}，c_0$ 情形进一步使全部通量消失。",
+              "evidence": "PDF 第 13–16 页，Propositions 4.2–4.3。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 86,
+        "priorityTier": "high",
+        "priorityReason": "各向异性 Onsager 临界正则性直接针对水平黏性 Navier–Stokes 的能量等式。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

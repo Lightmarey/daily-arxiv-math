@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09724",
+  "slug": "2609.09724",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09724:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09724",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Radial solutions of quasilinear Hardy--Emden--Fowler equations: exact decay rates, Delaunay solutions, and nonexistence",
+    "authors": [
+      "Phuong Le"
+    ],
+    "abstract": "Let $N>p>1$, $s>-p$, $0<μ<\\barμ:=\\big(\\frac{N-p}{p}\\big)^{p}$ and $q>p-1$. We determine the behaviour at infinity of \\emph{every} positive solution of the quasilinear Hardy--Emden--Fowler equation \\[ -\\big(r^{N-1}|v'|^{p-2}v'\\big)'=μ\\,r^{N-1-p}v^{p-1}+r^{N-1+s}v^{q}, \\qquad r>R_{0}. \\] Three rates compete: the self-similar rate $r^{-γ_{*}}$ with $γ_{*}=\\frac{p+s}{q-p+1}$, and the two Hardy rates $r^{-ν_{\\pm}}$, where $ν_{\\pm}$ are the roots of $h(ν):=ν^{p-1}(N-p-(p-1)ν)=μ$. Writing $p^{*}_{s}=\\frac{p(N+s)}{N-p}$ and $q_{S}=p-1+\\frac{p+s}{ν_{+}}$ for the Hardy--Sobolev and Serrin exponents, we obtain a complete picture in four regimes. If $q>p^{*}_{s}-1$, every solution realises exactly one of the three rates, with a logarithmic correction in the borderline case $h(γ_{*})=μ$, and we compute the leading constants. If $q=p^{*}_{s}-1$ the system becomes integrable: besides the singular self-similar solution and a heteroclinic ``bubble'' there is a one-parameter family of Fowler--Delaunay solutions, for which $r^{γ_{*}}v(r)$ is a non-constant periodic function of $\\ln r$. If $q_{S}<q<p^{*}_{s}-1$ only two orbits survive, and if $q\\le q_{S}$ there is no positive solution at all in an exterior domain. This is the quasilinear, weighted counterpart of the picture obtained by Franca and Sfecci for $p=2$. We work with the slope variables $x=-rv'/v$, $Y=r^{p+s}v^{q-p+1}$, in which the equation becomes a planar system that is real-analytic on the half-plane $\\{x>0\\}$ for every $1<p<N$, so that no restriction of the type $p\\le2$ is needed; the analysis then rests on a universal barrier $x<ν_{+}$, on an explicit Dulac function which degenerates into a first integral exactly at $q=p^{*}_{s}-1$, and on an explicit Lyapunov function.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09724",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09724",
+    "submittedAt": "2026-09-09T05:06:30Z",
+    "updatedAt": "2026-09-09T05:06:30Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文完整分类径向正解在外半径区间上的 quasilinear Hardy–Emden–Fowler 方程渐近。把径向方程按 Emden–Fowler 变换化为二维自治系统后，三个候选衰减率对应平衡点 P−、P+ 与自相似率。作者先用单调性和能量函数排除周期轨道/分离环，再按 q 处于超临界、临界、次临界及 Serrin 以下分区，分析轨道的 $\\omega -limit$ 集和稳定/不稳定流形。由此得到每个正解的精确 Hardy 或自相似衰减、临界时的对数修正、Delaunay 型周期解存在范围，以及 Serrin 指数以下的非存在。",
+    "techniques": [
+      "Emden–Fowler phase-plane transform",
+      "Hardy rate balance",
+      "Lyapunov/energy function",
+      "heteroclinic orbit analysis",
+      "stable-manifold asymptotics"
+    ],
+    "breakthrough": "把 Hardy 项、自相似项和两个 Hardy 根之间的竞争统一到相平面，给出四个指数区间内所有正径向解的精确衰减与 Delaunay/非存在分类。",
+    "limitations": "结果只针对径向正解、外部区间和参数 $0<\\mu <\\mu ̄、q>p-1$；相平面排除周期轨道依赖径向自治结构，不涵盖非径向解、符号变号解或临界参数外的边界行为。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "径向方程经过 Emden–Fowler 变换成为具有三个特征率的自治轨道系统。",
+          "route": "令 $r=e^t$ 并以 $r^{\\gamma *}v(r)$ 归一化，Hardy 项转成 $h(\\nu )=\\mu $ 的根，非线性项的幂次决定自相似平衡；正解的径向导数符号把轨道限制在 x>0 的相平面区域。",
+          "evidence": "PDF 第 4-10 页 Sections 1–2 equations (1.1)–(1.17)，Theorem 1.1。"
+        },
+        {
+          "claim": "当 $q\\ne p_s^*-1$ 时，正轨道不含周期轨道或分离环，因此只能趋向候选平衡/无穷。",
+          "route": "构造随 t 单调变化的 Pohozaev 型能量，沿轨道求导后符号由 q−临界指数决定；若存在周期环，能量一周后必须回到原值而严格单调，矛盾。紧性与径向单调性进一步排除逃逸到 $x=0$ 的非法极限。",
+          "evidence": "PDF 第 13-18 页 Section 4 Proposition 4.2、Theorem 1.1 proof，equations (4.1)–(4.18)。"
+        },
+        {
+          "claim": "超临界、临界与次临界区间分别实现自相似/Hardy 衰减及临界对数修正。",
+          "route": "沿轨道线性化平衡点，稳定特征值给出指数 $r^{-\\nu \\pm }$，非双曲共振时中心方向产生 t 或 log r 修正；异宿轨道 $\\Gamma _{0}$ 连接 P−、P+，其两端展开分别转回 v 的三种主导率。",
+          "evidence": "PDF 第 18-29 页 Sections 5–6 Theorems 1.3、1.5–1.6、Lemmas 6.1–6.2，equations (5.1)–(6.26)。"
+        },
+        {
+          "claim": "Serrin 指数以下不存在外部正解，临界范围可构造 Delaunay 型正解。",
+          "route": "在 $q\\le qS$ 时，所有允许入口轨道都被能量/稳定流形方向推向违反正性或有限性的位置，故不能延伸到无穷；在临界相平面，中心流形上的闭合轨道或异宿族给出周期 Emden–Fowler 解，再变回径向 Delaunay 族。",
+          "evidence": "PDF 第 29-36 页 Section 7 Theorem 1.7、Theorem 1.10、Lemmas 7.1–7.4。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、Sections 1–7、相平面/渐近证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-24 页全文。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09724:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09724",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Radial solutions of quasilinear Hardy--Emden--Fowler equations: exact decay rates, Delaunay solutions, and nonexistence",
+        "authors": [
+          "Phuong Le"
+        ],
+        "abstract": "Let $N>p>1$, $s>-p$, $0<μ<\\barμ:=\\big(\\frac{N-p}{p}\\big)^{p}$ and $q>p-1$. We determine the behaviour at infinity of \\emph{every} positive solution of the quasilinear Hardy--Emden--Fowler equation \\[ -\\big(r^{N-1}|v'|^{p-2}v'\\big)'=μ\\,r^{N-1-p}v^{p-1}+r^{N-1+s}v^{q}, \\qquad r>R_{0}. \\] Three rates compete: the self-similar rate $r^{-γ_{*}}$ with $γ_{*}=\\frac{p+s}{q-p+1}$, and the two Hardy rates $r^{-ν_{\\pm}}$, where $ν_{\\pm}$ are the roots of $h(ν):=ν^{p-1}(N-p-(p-1)ν)=μ$. Writing $p^{*}_{s}=\\frac{p(N+s)}{N-p}$ and $q_{S}=p-1+\\frac{p+s}{ν_{+}}$ for the Hardy--Sobolev and Serrin exponents, we obtain a complete picture in four regimes. If $q>p^{*}_{s}-1$, every solution realises exactly one of the three rates, with a logarithmic correction in the borderline case $h(γ_{*})=μ$, and we compute the leading constants. If $q=p^{*}_{s}-1$ the system becomes integrable: besides the singular self-similar solution and a heteroclinic ``bubble'' there is a one-parameter family of Fowler--Delaunay solutions, for which $r^{γ_{*}}v(r)$ is a non-constant periodic function of $\\ln r$. If $q_{S}<q<p^{*}_{s}-1$ only two orbits survive, and if $q\\le q_{S}$ there is no positive solution at all in an exterior domain. This is the quasilinear, weighted counterpart of the picture obtained by Franca and Sfecci for $p=2$. We work with the slope variables $x=-rv'/v$, $Y=r^{p+s}v^{q-p+1}$, in which the equation becomes a planar system that is real-analytic on the half-plane $\\{x>0\\}$ for every $1<p<N$, so that no restriction of the type $p\\le2$ is needed; the analysis then rests on a universal barrier $x<ν_{+}$, on an explicit Dulac function which degenerates into a first integral exactly at $q=p^{*}_{s}-1$, and on an explicit Lyapunov function.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09724",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09724",
+        "submittedAt": "2026-09-09T05:06:30Z",
+        "updatedAt": "2026-09-09T05:06:30Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文完整分类径向正解在外半径区间上的 quasilinear Hardy–Emden–Fowler 方程渐近。把径向方程按 Emden–Fowler 变换化为二维自治系统后，三个候选衰减率对应平衡点 P−、P+ 与自相似率。作者先用单调性和能量函数排除周期轨道/分离环，再按 q 处于超临界、临界、次临界及 Serrin 以下分区，分析轨道的 $\\omega -limit$ 集和稳定/不稳定流形。由此得到每个正解的精确 Hardy 或自相似衰减、临界时的对数修正、Delaunay 型周期解存在范围，以及 Serrin 指数以下的非存在。",
+        "techniques": [
+          "Emden–Fowler phase-plane transform",
+          "Hardy rate balance",
+          "Lyapunov/energy function",
+          "heteroclinic orbit analysis",
+          "stable-manifold asymptotics"
+        ],
+        "breakthrough": "把 Hardy 项、自相似项和两个 Hardy 根之间的竞争统一到相平面，给出四个指数区间内所有正径向解的精确衰减与 Delaunay/非存在分类。",
+        "limitations": "结果只针对径向正解、外部区间和参数 $0<\\mu <\\mu ̄、q>p-1$；相平面排除周期轨道依赖径向自治结构，不涵盖非径向解、符号变号解或临界参数外的边界行为。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "径向方程经过 Emden–Fowler 变换成为具有三个特征率的自治轨道系统。",
+              "route": "令 $r=e^t$ 并以 $r^{\\gamma *}v(r)$ 归一化，Hardy 项转成 $h(\\nu )=\\mu $ 的根，非线性项的幂次决定自相似平衡；正解的径向导数符号把轨道限制在 x>0 的相平面区域。",
+              "evidence": "PDF 第 4-10 页 Sections 1–2 equations (1.1)–(1.17)，Theorem 1.1。"
+            },
+            {
+              "claim": "当 $q\\ne p_s^*-1$ 时，正轨道不含周期轨道或分离环，因此只能趋向候选平衡/无穷。",
+              "route": "构造随 t 单调变化的 Pohozaev 型能量，沿轨道求导后符号由 q−临界指数决定；若存在周期环，能量一周后必须回到原值而严格单调，矛盾。紧性与径向单调性进一步排除逃逸到 $x=0$ 的非法极限。",
+              "evidence": "PDF 第 13-18 页 Section 4 Proposition 4.2、Theorem 1.1 proof，equations (4.1)–(4.18)。"
+            },
+            {
+              "claim": "超临界、临界与次临界区间分别实现自相似/Hardy 衰减及临界对数修正。",
+              "route": "沿轨道线性化平衡点，稳定特征值给出指数 $r^{-\\nu \\pm }$，非双曲共振时中心方向产生 t 或 log r 修正；异宿轨道 $\\Gamma _{0}$ 连接 P−、P+，其两端展开分别转回 v 的三种主导率。",
+              "evidence": "PDF 第 18-29 页 Sections 5–6 Theorems 1.3、1.5–1.6、Lemmas 6.1–6.2，equations (5.1)–(6.26)。"
+            },
+            {
+              "claim": "Serrin 指数以下不存在外部正解，临界范围可构造 Delaunay 型正解。",
+              "route": "在 $q\\le qS$ 时，所有允许入口轨道都被能量/稳定流形方向推向违反正性或有限性的位置，故不能延伸到无穷；在临界相平面，中心流形上的闭合轨道或异宿族给出周期 Emden–Fowler 解，再变回径向 Delaunay 族。",
+              "evidence": "PDF 第 29-36 页 Section 7 Theorem 1.7、Theorem 1.10、Lemmas 7.1–7.4。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、Sections 1–7、相平面/渐近证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-24 页全文。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

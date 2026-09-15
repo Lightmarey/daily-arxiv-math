@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28528",
+  "slug": "2608.28528",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28528:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28528",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Strong solutions of SDEs with critical discontinuities in diffusion coefficients",
+    "authors": [
+      "S. E. Boutiah",
+      "D. Kinzebulatov"
+    ],
+    "abstract": "We prove strong existence for Itô SDEs with diffusion coefficients that can introduce strong attraction to a submanifold. We extend and strengthen the Röckner-Zhao approach, which uses Malliavin calculus to establish compactness of the approximating solutions in Wiener-Sobolev space. At least when the diffusion coefficients are sufficiently regular in time, this provides an alternative to Krylov's recent proof of strong existence via analysis of the Itô-Duhamel series.",
+    "categories": [
+      "math.PR",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2608.28528",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28528",
+    "submittedAt": "2026-08-28T17:07:01Z",
+    "updatedAt": "2026-08-28T17:07:01Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "临界不连续扩散系数下 SDE 的强解存在性",
+    "workSummary": "论文研究扩散矩阵可以在临界集合处不连续、甚至把扩散过程吸引到子流形的 Itô SDE。作者假设扩散有界且一致椭圆，空间导数属于小 form-bounded 类，并用光滑扩散矩阵逼近原系数。证明链先建立 Kolmogorov 方程的梯度与 simplex 估计，再对近似解的空间导数和 Malliavin 导数展开成时间单纯形上的迭代积分；这些统一估计给出 Wiener–Sobolev 紧性，Röckner–Zhao 型紧性定理提取连续随机场极限，从而得到同一 Brownian 空间上的强解。对 Feller propagator 则通过差分方程、Moser 迭代和加权尾部控制证明近似半群收敛。",
+    "techniques": [
+      "小 form-bound 下 Kolmogorov 方程的梯度估计",
+      "Kovalenko–Semënov 型测试函数和 simplex 迭代估计",
+      "空间导数与 Malliavin 导数的时间单纯形展开",
+      "Wiener–Sobolev 紧性和 occupation-time 估计",
+      "Moser 迭代与加权 $L^2_\\rho $ 尾部截断",
+      "Feller propagator 的近似系数收敛"
+    ],
+    "breakthrough": "Theorem 1 在临界不连续扩散系数下给出强解存在，并同时得到由近似解收敛产生的连续随机场和 Feller propagator。相较仅有 VMO 的弱理论，正文的小 form-bound 导数条件允许包含吸引型和快速振荡型扩散矩阵；作者还说明四维 Krylov–Zvonkin 例子把 form-bound 的小性限制在不可忽略的阈值。",
+    "limitations": "强解结论依赖 $d\\ge 3$、一致椭圆、有界扩散系数、(1.6) 的 form-bound 足够小以及时间方向的加权 Hölder 条件 (H)；Feller propagator 的附加收敛还要求 $\\nabla a_n\\to \\nabla a$。论文没有覆盖 form-bound 过大、退化椭圆、无时间正则性或同时含一般奇异漂移的完整理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1 将强解和 Feller propagator 的结论归约到小 form-bound 的扩散近似。",
+          "route": "先用空间平滑 $\\sigma _n$ 保留椭圆性、form-bound 和时间条件，再在固定 Brownian 空间上研究经典强解；目标是建立与 n 无关的导数/Malliavin 控制并从中提取极限。",
+          "evidence": "PDF 第6–7页，Theorem 1 及其假设 (1.6)、(H)。"
+        },
+        {
+          "claim": "Proposition 1、Proposition 2 和 Proposition 3 建立 Kolmogorov 方程的梯度与多重时间积分界。",
+          "route": "用 form-bounded 导数吸收梯度能量项，Kovalenko–Semënov 测试函数把二阶导数和漂移项整理成可控的 simplex 递推；小 form-bound 使递推常数 K<1，从而得到任意阶时间单纯形积分的衰减。",
+          "evidence": "PDF 第15–18页，Section 4 的 Propositions 1–3 及 Corollary 1。"
+        },
+        {
+          "claim": "Proposition 4 通过空间导数和 Malliavin 导数的迭代展开获得近似解的统一估计。",
+          "route": "把 $\\nabla X_t^x-I$ 写成 $\\nabla b$ 沿路径的时间单纯形级数，对每一项应用 Proposition 3′ 的积分估计；Malliavin 导数满足同型方程，因此得到对时间、空间和 Malliavin 参数的 Hölder 控制，并可套用 Wiener–Sobolev 紧性。",
+          "evidence": "PDF 第25–35页，Section 5 的 Proposition 4 及 Claims 1–3。"
+        },
+        {
+          "claim": "Lemma 5.1 将 form-bound 系数差异沿扩散路径的积分控制为加权 $L^2_\\rho $ 差异。",
+          "route": "先对 occupation measure 使用局部加权能量估计，再以紧集/开集逼近把零测集控制推广到一般可测系数；这让 $\\sigma _m-\\sigma _k$ 在系数空间中的收敛传递到 $X^{m}-X^{k}$ 的路径积分。",
+          "evidence": "PDF 第36–37页，Section 5 的 Lemma 5.1。"
+        },
+        {
+          "claim": "Theorem 1(ii) 由 Moser 迭代和尾部截断推出 Feller propagator 收敛。",
+          "route": "对两个近似 Kolmogorov 解之差建立 Lemma 7.1 的 $L^r$ 迭代不等式，Proposition 2 提供统一梯度因子；再在加权 $L^2_\\rho $ 中控制系数差异并用紧支撑初值切掉空间尾部，得到近似半群的局部一致收敛并延拓到整个时间三角域。",
+          "evidence": "PDF 第43–45页，Section 7 的 Lemmas 7.1–7.2 及 Proof of Theorem 1(ii)。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "正文末尾单独的 “AI usage disclosure” 明确声明作者使用 OpenAI ChatGPT 5.6 进行与 Proposition 4 证明有关的数学讨论，并使用 ChatGPT 进行编辑辅助；同时明确说文章正文（包括破折号）由作者全文撰写。该声明直接涉及证明讨论和编辑，符合扩展披露规则。",
+    "aiEvidenceSource": "本地缓存 PDF 第58页的 AI usage disclosure；全文核查第1–60页、致谢/参考文献末尾和关键词 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly。",
+    "priorityScore": 54,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28528:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28528",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Strong solutions of SDEs with critical discontinuities in diffusion coefficients",
+        "authors": [
+          "S. E. Boutiah",
+          "D. Kinzebulatov"
+        ],
+        "abstract": "We prove strong existence for Itô SDEs with diffusion coefficients that can introduce strong attraction to a submanifold. We extend and strengthen the Röckner-Zhao approach, which uses Malliavin calculus to establish compactness of the approximating solutions in Wiener-Sobolev space. At least when the diffusion coefficients are sufficiently regular in time, this provides an alternative to Krylov's recent proof of strong existence via analysis of the Itô-Duhamel series.",
+        "categories": [
+          "math.PR",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2608.28528",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28528",
+        "submittedAt": "2026-08-28T17:07:01Z",
+        "updatedAt": "2026-08-28T17:07:01Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "临界不连续扩散系数下 SDE 的强解存在性",
+        "workSummary": "论文研究扩散矩阵可以在临界集合处不连续、甚至把扩散过程吸引到子流形的 Itô SDE。作者假设扩散有界且一致椭圆，空间导数属于小 form-bounded 类，并用光滑扩散矩阵逼近原系数。证明链先建立 Kolmogorov 方程的梯度与 simplex 估计，再对近似解的空间导数和 Malliavin 导数展开成时间单纯形上的迭代积分；这些统一估计给出 Wiener–Sobolev 紧性，Röckner–Zhao 型紧性定理提取连续随机场极限，从而得到同一 Brownian 空间上的强解。对 Feller propagator 则通过差分方程、Moser 迭代和加权尾部控制证明近似半群收敛。",
+        "techniques": [
+          "小 form-bound 下 Kolmogorov 方程的梯度估计",
+          "Kovalenko–Semënov 型测试函数和 simplex 迭代估计",
+          "空间导数与 Malliavin 导数的时间单纯形展开",
+          "Wiener–Sobolev 紧性和 occupation-time 估计",
+          "Moser 迭代与加权 $L^2_\\rho $ 尾部截断",
+          "Feller propagator 的近似系数收敛"
+        ],
+        "breakthrough": "Theorem 1 在临界不连续扩散系数下给出强解存在，并同时得到由近似解收敛产生的连续随机场和 Feller propagator。相较仅有 VMO 的弱理论，正文的小 form-bound 导数条件允许包含吸引型和快速振荡型扩散矩阵；作者还说明四维 Krylov–Zvonkin 例子把 form-bound 的小性限制在不可忽略的阈值。",
+        "limitations": "强解结论依赖 $d\\ge 3$、一致椭圆、有界扩散系数、(1.6) 的 form-bound 足够小以及时间方向的加权 Hölder 条件 (H)；Feller propagator 的附加收敛还要求 $\\nabla a_n\\to \\nabla a$。论文没有覆盖 form-bound 过大、退化椭圆、无时间正则性或同时含一般奇异漂移的完整理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1 将强解和 Feller propagator 的结论归约到小 form-bound 的扩散近似。",
+              "route": "先用空间平滑 $\\sigma _n$ 保留椭圆性、form-bound 和时间条件，再在固定 Brownian 空间上研究经典强解；目标是建立与 n 无关的导数/Malliavin 控制并从中提取极限。",
+              "evidence": "PDF 第6–7页，Theorem 1 及其假设 (1.6)、(H)。"
+            },
+            {
+              "claim": "Proposition 1、Proposition 2 和 Proposition 3 建立 Kolmogorov 方程的梯度与多重时间积分界。",
+              "route": "用 form-bounded 导数吸收梯度能量项，Kovalenko–Semënov 测试函数把二阶导数和漂移项整理成可控的 simplex 递推；小 form-bound 使递推常数 K<1，从而得到任意阶时间单纯形积分的衰减。",
+              "evidence": "PDF 第15–18页，Section 4 的 Propositions 1–3 及 Corollary 1。"
+            },
+            {
+              "claim": "Proposition 4 通过空间导数和 Malliavin 导数的迭代展开获得近似解的统一估计。",
+              "route": "把 $\\nabla X_t^x-I$ 写成 $\\nabla b$ 沿路径的时间单纯形级数，对每一项应用 Proposition 3′ 的积分估计；Malliavin 导数满足同型方程，因此得到对时间、空间和 Malliavin 参数的 Hölder 控制，并可套用 Wiener–Sobolev 紧性。",
+              "evidence": "PDF 第25–35页，Section 5 的 Proposition 4 及 Claims 1–3。"
+            },
+            {
+              "claim": "Lemma 5.1 将 form-bound 系数差异沿扩散路径的积分控制为加权 $L^2_\\rho $ 差异。",
+              "route": "先对 occupation measure 使用局部加权能量估计，再以紧集/开集逼近把零测集控制推广到一般可测系数；这让 $\\sigma _m-\\sigma _k$ 在系数空间中的收敛传递到 $X^{m}-X^{k}$ 的路径积分。",
+              "evidence": "PDF 第36–37页，Section 5 的 Lemma 5.1。"
+            },
+            {
+              "claim": "Theorem 1(ii) 由 Moser 迭代和尾部截断推出 Feller propagator 收敛。",
+              "route": "对两个近似 Kolmogorov 解之差建立 Lemma 7.1 的 $L^r$ 迭代不等式，Proposition 2 提供统一梯度因子；再在加权 $L^2_\\rho $ 中控制系数差异并用紧支撑初值切掉空间尾部，得到近似半群的局部一致收敛并延拓到整个时间三角域。",
+              "evidence": "PDF 第43–45页，Section 7 的 Lemmas 7.1–7.2 及 Proof of Theorem 1(ii)。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "正文末尾单独的 “AI usage disclosure” 明确声明作者使用 OpenAI ChatGPT 5.6 进行与 Proposition 4 证明有关的数学讨论，并使用 ChatGPT 进行编辑辅助；同时明确说文章正文（包括破折号）由作者全文撰写。该声明直接涉及证明讨论和编辑，符合扩展披露规则。",
+        "aiEvidenceSource": "本地缓存 PDF 第58页的 AI usage disclosure；全文核查第1–60页、致谢/参考文献末尾和关键词 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly。",
+        "priorityScore": 54,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

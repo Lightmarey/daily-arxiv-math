@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07812",
+  "slug": "2609.07812",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07812:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07812",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "The Fenchel Game of Underdamped Langevin Dynamics: Insights into Accelerated Convergence",
+    "authors": [
+      "Alexandra Borkowski",
+      "Nikolas Nüsken"
+    ],
+    "abstract": "For $(Q_t,P_t)$ governed by suitably damped underdamped Langevin dynamics, we quantify the convergence in KL divergence of the positional marginal to a $σ$-strongly log-concave target $π(dq) = \\frac{1}{Z}e^{-V(q)}dq$ as \\begin{align*} \\operatorname{KL}(\\operatorname{Law}(Q_t) \\| π) \\leq e^{-\\sqrtσ t}\\operatorname{KL}(\\operatorname{Law}(Q_{0}, P_{0})\\, \\|\\, Π_0), \\end{align*} where $Π_0$ denotes an appropriately selected reference measure. When $π$ is merely log-concave, the estimate \\begin{align*} \\operatorname{KL}(\\operatorname{Law}(Q_t) \\| π) \\leq \\frac{τ^2}{t^2}\\operatorname{KL}(\\operatorname{Law}(Q_τ, P_τ)\\, \\|\\, Π_τ) \\end{align*} is derived, where $Π_τ$ denotes another correspondingly chosen reference measure at time $τ> 0$. Both rates match precisely the canonical rates of the corresponding accelerated gradient flows in $\\mathbb{R}^d$. They are achieved by the novel interpretation of the underdamped Langevin dynamics as a combination of strategies in an online sampling game and by estimating the KL divergence using a cost function informed by fictitious competitors.",
+    "categories": [
+      "math.PR",
+      "math.AP",
+      "math.OC"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.07812",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07812",
+    "submittedAt": "2026-09-07T17:50:04Z",
+    "updatedAt": "2026-09-07T17:50:04Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "分析结果",
+    "workSummary": "论文把欠阻尼 Langevin 动力学解释为一个连续时间 Fenchel 在线博弈，并由此证明对数凹目标的加速 KL 收敛。凸情形中，Y 玩家采用跟随领导者的梯度策略而零 regret，X 玩家以最优传输映射和条件高斯参考测度构造 KL 能量；熵-输运 Cramer-Rao 不等式使该能量单调。选择 Nesterov 权重后博弈变量变回物理 Langevin 方程。强凸情形加入二次项和 Polyak 权重，所有时间误差项消失，得到指数速率。",
+    "techniques": [
+      "Fenchel 对偶与在线 regret",
+      "最优传输 Brenier 映射",
+      "条件 KL 能量函数",
+      "熵-输运 Cramer-Rao 不等式",
+      "Nesterov/Polyak 权重变换"
+    ],
+    "breakthrough": "把加速采样速率写成两个虚拟玩家 regret 的和，并用条件高斯 KL 能量同时追踪位置分布和动量随机性；该结构在凸情形给出 $t^{-2}$，在强凸情形给出 exp(-sqrt(sigma)t) 的位置边缘 KL 率。",
+    "limitations": "假设目标势为 C1 且满足文中的正则性、有限矩和正密度条件；凸情形从正时间 tau>0 开始以避开权重奇点，强凸率依赖精确常数阻尼和特殊初始参考测度。结果是位置边缘的 KL 控制，不直接给出任意初始动量的最优常数或非凸势收敛。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "凸情形的两个玩家 regret 之和控制位置边缘的自由能差，也就是 $KL(Law(Xbar_t)||pi)$。",
+          "route": "把 Y 竞争者取为终点历史最优的固定 Fenchel 对偶变量，把 X 竞争者取为服从 pi 的最优输运耦合；Fenchel-Young 不等式将两个累计损失重写成自由能差，得到 Proposition 3.4 的 regret-to-suboptimality 关系。",
+          "evidence": "PDF 第 10-11 页 Definition 3.1、Proposition 3.4、equations (57)-(58)。"
+        },
+        {
+          "claim": "Y 玩家采取 $Y_s=grad$ $V(Xbar_s)$ 时 regret 为零，且 X 玩家有条件 KL 的可控上界。",
+          "route": "Fenchel 等式使跟随领导者策略逐时达到对偶损失下确界，因此 Proposition 3.5 给出零 regret；对 X 的随机更新计算条件高斯 KL 能量，Lemma 3.9 控制输运距离变化，Lemma 3.11 用 Fisher 信息和协方差吸收熵项，得到 Proposition 3.7。",
+          "evidence": "PDF 第 12-15 页 Propositions 3.5、3.7、Lemmas 3.9、3.11、equations (69)-(75)。"
+        },
+        {
+          "claim": "Nesterov 权重把耦合博弈动力学变换为 $gamma_t=3/t$ 的欠阻尼 Langevin 系统，并得到 $t^{-2}$ KL 率。",
+          "route": "令 $Q_t=Xbar_t、P_t=(alpha_t/A_t)(X_t-Xbar_t)，Itô$ 公式把 X 玩家 SDE 的漂移和噪声变成物理方程；选择 $A_t=t^2/4、alpha_t=t/2$ 后，Proposition 3.13 的自由能界化为 Theorem 1.2。",
+          "evidence": "PDF 第 11 页 equations (59)-(63)；第 15-16 页 Theorem 3.13、proof of Theorem 1.2、Theorem 1.2。"
+        },
+        {
+          "claim": "强凸情形的 Polyak 权重使所有额外时间积分误差消失，并得到 exp(-sqrt(sigma)t) 的 KL 衰减。",
+          "route": "将 V 分解为 $sigma|x|^2/2$ 与凸余项，重新定义 regret；Proposition 4.6 给出含 $beta_t$ 的条件 KL 能量上界。取 $beta_t=1/sqrt(sigma)$ 使权重导数和方差修正项精确抵消，再用 Proposition 4.4、4.5 和链式 KL 公式得到 Theorem 4.8 及 Theorem 1.1。",
+          "evidence": "PDF 第 17-21 页 Proposition 4.4、Propositions 4.5-4.6、Theorem 4.8、proof of Theorem 1.1。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、动力学、Fenchel 游戏、regret 证明、附录、结论和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；仅发现普通 machine learning 参考文献，没有作者 AI 使用披露。",
+    "aiEvidenceSource": "PDF 第 1-36 页全文检索；第 24-36 页附录与 References 中的普通机器学习文献不作为 AI 披露。",
+    "priorityScore": 59,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07812:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07812",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "The Fenchel Game of Underdamped Langevin Dynamics: Insights into Accelerated Convergence",
+        "authors": [
+          "Alexandra Borkowski",
+          "Nikolas Nüsken"
+        ],
+        "abstract": "For $(Q_t,P_t)$ governed by suitably damped underdamped Langevin dynamics, we quantify the convergence in KL divergence of the positional marginal to a $σ$-strongly log-concave target $π(dq) = \\frac{1}{Z}e^{-V(q)}dq$ as \\begin{align*} \\operatorname{KL}(\\operatorname{Law}(Q_t) \\| π) \\leq e^{-\\sqrtσ t}\\operatorname{KL}(\\operatorname{Law}(Q_{0}, P_{0})\\, \\|\\, Π_0), \\end{align*} where $Π_0$ denotes an appropriately selected reference measure. When $π$ is merely log-concave, the estimate \\begin{align*} \\operatorname{KL}(\\operatorname{Law}(Q_t) \\| π) \\leq \\frac{τ^2}{t^2}\\operatorname{KL}(\\operatorname{Law}(Q_τ, P_τ)\\, \\|\\, Π_τ) \\end{align*} is derived, where $Π_τ$ denotes another correspondingly chosen reference measure at time $τ> 0$. Both rates match precisely the canonical rates of the corresponding accelerated gradient flows in $\\mathbb{R}^d$. They are achieved by the novel interpretation of the underdamped Langevin dynamics as a combination of strategies in an online sampling game and by estimating the KL divergence using a cost function informed by fictitious competitors.",
+        "categories": [
+          "math.PR",
+          "math.AP",
+          "math.OC"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.07812",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07812",
+        "submittedAt": "2026-09-07T17:50:04Z",
+        "updatedAt": "2026-09-07T17:50:04Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "分析结果",
+        "workSummary": "论文把欠阻尼 Langevin 动力学解释为一个连续时间 Fenchel 在线博弈，并由此证明对数凹目标的加速 KL 收敛。凸情形中，Y 玩家采用跟随领导者的梯度策略而零 regret，X 玩家以最优传输映射和条件高斯参考测度构造 KL 能量；熵-输运 Cramer-Rao 不等式使该能量单调。选择 Nesterov 权重后博弈变量变回物理 Langevin 方程。强凸情形加入二次项和 Polyak 权重，所有时间误差项消失，得到指数速率。",
+        "techniques": [
+          "Fenchel 对偶与在线 regret",
+          "最优传输 Brenier 映射",
+          "条件 KL 能量函数",
+          "熵-输运 Cramer-Rao 不等式",
+          "Nesterov/Polyak 权重变换"
+        ],
+        "breakthrough": "把加速采样速率写成两个虚拟玩家 regret 的和，并用条件高斯 KL 能量同时追踪位置分布和动量随机性；该结构在凸情形给出 $t^{-2}$，在强凸情形给出 exp(-sqrt(sigma)t) 的位置边缘 KL 率。",
+        "limitations": "假设目标势为 C1 且满足文中的正则性、有限矩和正密度条件；凸情形从正时间 tau>0 开始以避开权重奇点，强凸率依赖精确常数阻尼和特殊初始参考测度。结果是位置边缘的 KL 控制，不直接给出任意初始动量的最优常数或非凸势收敛。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "凸情形的两个玩家 regret 之和控制位置边缘的自由能差，也就是 $KL(Law(Xbar_t)||pi)$。",
+              "route": "把 Y 竞争者取为终点历史最优的固定 Fenchel 对偶变量，把 X 竞争者取为服从 pi 的最优输运耦合；Fenchel-Young 不等式将两个累计损失重写成自由能差，得到 Proposition 3.4 的 regret-to-suboptimality 关系。",
+              "evidence": "PDF 第 10-11 页 Definition 3.1、Proposition 3.4、equations (57)-(58)。"
+            },
+            {
+              "claim": "Y 玩家采取 $Y_s=grad$ $V(Xbar_s)$ 时 regret 为零，且 X 玩家有条件 KL 的可控上界。",
+              "route": "Fenchel 等式使跟随领导者策略逐时达到对偶损失下确界，因此 Proposition 3.5 给出零 regret；对 X 的随机更新计算条件高斯 KL 能量，Lemma 3.9 控制输运距离变化，Lemma 3.11 用 Fisher 信息和协方差吸收熵项，得到 Proposition 3.7。",
+              "evidence": "PDF 第 12-15 页 Propositions 3.5、3.7、Lemmas 3.9、3.11、equations (69)-(75)。"
+            },
+            {
+              "claim": "Nesterov 权重把耦合博弈动力学变换为 $gamma_t=3/t$ 的欠阻尼 Langevin 系统，并得到 $t^{-2}$ KL 率。",
+              "route": "令 $Q_t=Xbar_t、P_t=(alpha_t/A_t)(X_t-Xbar_t)，Itô$ 公式把 X 玩家 SDE 的漂移和噪声变成物理方程；选择 $A_t=t^2/4、alpha_t=t/2$ 后，Proposition 3.13 的自由能界化为 Theorem 1.2。",
+              "evidence": "PDF 第 11 页 equations (59)-(63)；第 15-16 页 Theorem 3.13、proof of Theorem 1.2、Theorem 1.2。"
+            },
+            {
+              "claim": "强凸情形的 Polyak 权重使所有额外时间积分误差消失，并得到 exp(-sqrt(sigma)t) 的 KL 衰减。",
+              "route": "将 V 分解为 $sigma|x|^2/2$ 与凸余项，重新定义 regret；Proposition 4.6 给出含 $beta_t$ 的条件 KL 能量上界。取 $beta_t=1/sqrt(sigma)$ 使权重导数和方差修正项精确抵消，再用 Proposition 4.4、4.5 和链式 KL 公式得到 Theorem 4.8 及 Theorem 1.1。",
+              "evidence": "PDF 第 17-21 页 Proposition 4.4、Propositions 4.5-4.6、Theorem 4.8、proof of Theorem 1.1。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、动力学、Fenchel 游戏、regret 证明、附录、结论和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；仅发现普通 machine learning 参考文献，没有作者 AI 使用披露。",
+        "aiEvidenceSource": "PDF 第 1-36 页全文检索；第 24-36 页附录与 References 中的普通机器学习文献不作为 AI 披露。",
+        "priorityScore": 59,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

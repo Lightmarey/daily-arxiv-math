@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.30443",
+  "slug": "2608.30443",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.30443:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.30443",
+    "version": 1,
+    "entryKind": "new",
+    "title": "On smooth self similar solution to compressible Euler equation with physical vacuum",
+    "authors": [
+      "Jihoi Kim"
+    ],
+    "abstract": "We consider the barotropic Euler equations in dimension $d > 1$ with decaying density at spatial infinity. The phase portrait of the nonlinear ODE governing the equation for spherically symmetric self-similar solutions has been introduced in the pioneering work of Guderley. The existence of smooth decaying solutions through the sonic line has been obtained in the work (F. Merle et al., 2022) in a suitable range of parameters. We work in this paper in a different range of parameters and show the existence of holosphere like solutions which are smooth through the sonic line, but display vanishing density at a sphere.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.30443",
+    "pdfUrl": "https://arxiv.org/pdf/2608.30443",
+    "submittedAt": "2026-08-31T08:33:57Z",
+    "updatedAt": "2026-08-31T08:33:57Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "自相似 Euler 光滑轨道",
+    "workSummary": "论文在一组接近临界参数的范围内研究球对称可压缩 Euler–Poisson 型自相似常微分系统，证明从真空点 P1 出发、穿过声速点 P3 并趋于无穷远点 P4 的 holosphere 轨道可在 P3 处达到 $C\\infty $ 正则。核心是相图根分支的几何退化、P3 附近的半经典重标度、临界频率 Taylor 系数的非线性递推，以及利用参数连续性完成轨道匹配。",
+    "techniques": [
+      "声速根分支与相图几何",
+      "P3 附近对角化及半经典重标度",
+      "Maillet 型非线性级数控制",
+      "参数连续性和轨道唯一性"
+    ],
+    "breakthrough": "论文把 P3 附近的无限正则性条件压缩为显式级数系数 $S\\infty (d,\\ell)$ 的非退化条件，并用两侧轨道的出口方向改变证明一列参数 rn↑r+ 上存在从真空 P1 到衰减 P4 的 $C\\infty $ holosphere 轨道。",
+    "limitations": "定理要求 d−1<ℓ<d、r 接近 r+(d,ℓ) 且 $S\\infty (d,\\ell)\\ne 0$；非零性在文中通过可收敛级数的数值研究给出特定参数证据，作者也把从光滑局部数据产生该自相似 blow-up 的动力学问题列为开放问题。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Section 2 的根分支引理和 Lemma 3.4 确定参数区间内 P1、P2、P3、P4 的相对位置及从 P1/P3 出发轨道的几何可行性。",
+          "route": "直接分析 $\\Delta 、\\Delta _{1}、\\Delta _{2}$ 的根式和斜率符号，证明绿色/红色根分支的交汇顺序；随后在 P1、P2、P3 处线性化相图并用特征方向选出唯一的入射或出射轨道，为后续匹配固定轨道端点。",
+          "evidence": "PDF 第5–15页，第2节 Lemmas 2.1–2.7、第3节 Lemmas 3.1–3.8；Lemma 3.4 给出一般球对称自相似解的相图结构。"
+        },
+        {
+          "claim": "Lemmas 4.2–4.3 把 P3 附近的退化轨道方程重写为含小参数 b 的拟线性问题，并显式产生二次抵消。",
+          "route": "利用 r↑r+ 时 P2、P3 的距离和两个斜率同时趋同，作对角变量变换及 $W̃、\\Sigma ̃$ 的 b 重标度；退化项的抵消把轨道方程化为 $u(1-u)\\Theta '-[\\gamma -2+(\\nu b+3)u]\\Theta =-G/b$ 的正则奇点问题。",
+          "evidence": "PDF 第16–20页，第4节 Strategy of the proof、Lemma 4.2、Lemma 4.3，式(4.1)–(4.16)。"
+        },
+        {
+          "claim": "Sections 5–7 控制临界频率展开并证明在 $S\\infty \\ne 0$ 时 $C\\infty $ 轨道会从 P3 两侧离开到指定根分支。",
+          "route": "先在 $b=0$ 极限问题中用非线性 Maillet 级数估计得到有界系数，再把 b 依赖问题共轭为线性主部加受控非线性余项；截断展开的主项 $\\Theta main$ 在左右边界层取得指定大符号，Lemma 7.7/7.8 排除振荡并保证轨道穿越 $\\Delta _{1}$ 或 $\\Delta _{2}$。",
+          "evidence": "PDF 第20–44页，第5–7节 Proposition 5.1、Lemmas 5.2–5.4、Proposition 6.4、Lemmas 7.1–7.8，尤其式(4.5)–(4.10)和第7节出口估计。"
+        },
+        {
+          "claim": "Proof of Theorem 1.1 通过改变连续参数 $\\alpha \\gamma $ 使 P1–P3 轨道与唯一 $C\\infty $ P3 轨道相交，从而得到通向 P4 的 holosphere 序列。",
+          "route": "在 $\\alpha \\gamma $ 的两个边界层取样，比较函数 $F(\\alpha \\gamma )$ 的符号相反；ODE 对参数连续依赖和介值定理给出 $F=0$ 的 $\\alpha \\gamma *$，轨道唯一性使其与 P1–P3 轨道重合，另一侧出口再由根分支顺序延伸到 P4，并令 b→0 得 rn→r+。",
+          "evidence": "PDF 第46–49页，第7.9节 Proof of Theorem 1.1，式(7.67)–(7.70)及结尾的 rn 构造；Theorem 1.1 陈述见 PDF 第4页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、致谢、基金说明和参考文献前后的全文，并检索 AI、LLM、ChatGPT、Claude、Gemini、language model 等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–50页；缓存全文 2608.30443.txt。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.30443:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.30443",
+        "version": 1,
+        "entryKind": "new",
+        "title": "On smooth self similar solution to compressible Euler equation with physical vacuum",
+        "authors": [
+          "Jihoi Kim"
+        ],
+        "abstract": "We consider the barotropic Euler equations in dimension $d > 1$ with decaying density at spatial infinity. The phase portrait of the nonlinear ODE governing the equation for spherically symmetric self-similar solutions has been introduced in the pioneering work of Guderley. The existence of smooth decaying solutions through the sonic line has been obtained in the work (F. Merle et al., 2022) in a suitable range of parameters. We work in this paper in a different range of parameters and show the existence of holosphere like solutions which are smooth through the sonic line, but display vanishing density at a sphere.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.30443",
+        "pdfUrl": "https://arxiv.org/pdf/2608.30443",
+        "submittedAt": "2026-08-31T08:33:57Z",
+        "updatedAt": "2026-08-31T08:33:57Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "自相似 Euler 光滑轨道",
+        "workSummary": "论文在一组接近临界参数的范围内研究球对称可压缩 Euler–Poisson 型自相似常微分系统，证明从真空点 P1 出发、穿过声速点 P3 并趋于无穷远点 P4 的 holosphere 轨道可在 P3 处达到 $C\\infty $ 正则。核心是相图根分支的几何退化、P3 附近的半经典重标度、临界频率 Taylor 系数的非线性递推，以及利用参数连续性完成轨道匹配。",
+        "techniques": [
+          "声速根分支与相图几何",
+          "P3 附近对角化及半经典重标度",
+          "Maillet 型非线性级数控制",
+          "参数连续性和轨道唯一性"
+        ],
+        "breakthrough": "论文把 P3 附近的无限正则性条件压缩为显式级数系数 $S\\infty (d,\\ell)$ 的非退化条件，并用两侧轨道的出口方向改变证明一列参数 rn↑r+ 上存在从真空 P1 到衰减 P4 的 $C\\infty $ holosphere 轨道。",
+        "limitations": "定理要求 d−1<ℓ<d、r 接近 r+(d,ℓ) 且 $S\\infty (d,\\ell)\\ne 0$；非零性在文中通过可收敛级数的数值研究给出特定参数证据，作者也把从光滑局部数据产生该自相似 blow-up 的动力学问题列为开放问题。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Section 2 的根分支引理和 Lemma 3.4 确定参数区间内 P1、P2、P3、P4 的相对位置及从 P1/P3 出发轨道的几何可行性。",
+              "route": "直接分析 $\\Delta 、\\Delta _{1}、\\Delta _{2}$ 的根式和斜率符号，证明绿色/红色根分支的交汇顺序；随后在 P1、P2、P3 处线性化相图并用特征方向选出唯一的入射或出射轨道，为后续匹配固定轨道端点。",
+              "evidence": "PDF 第5–15页，第2节 Lemmas 2.1–2.7、第3节 Lemmas 3.1–3.8；Lemma 3.4 给出一般球对称自相似解的相图结构。"
+            },
+            {
+              "claim": "Lemmas 4.2–4.3 把 P3 附近的退化轨道方程重写为含小参数 b 的拟线性问题，并显式产生二次抵消。",
+              "route": "利用 r↑r+ 时 P2、P3 的距离和两个斜率同时趋同，作对角变量变换及 $W̃、\\Sigma ̃$ 的 b 重标度；退化项的抵消把轨道方程化为 $u(1-u)\\Theta '-[\\gamma -2+(\\nu b+3)u]\\Theta =-G/b$ 的正则奇点问题。",
+              "evidence": "PDF 第16–20页，第4节 Strategy of the proof、Lemma 4.2、Lemma 4.3，式(4.1)–(4.16)。"
+            },
+            {
+              "claim": "Sections 5–7 控制临界频率展开并证明在 $S\\infty \\ne 0$ 时 $C\\infty $ 轨道会从 P3 两侧离开到指定根分支。",
+              "route": "先在 $b=0$ 极限问题中用非线性 Maillet 级数估计得到有界系数，再把 b 依赖问题共轭为线性主部加受控非线性余项；截断展开的主项 $\\Theta main$ 在左右边界层取得指定大符号，Lemma 7.7/7.8 排除振荡并保证轨道穿越 $\\Delta _{1}$ 或 $\\Delta _{2}$。",
+              "evidence": "PDF 第20–44页，第5–7节 Proposition 5.1、Lemmas 5.2–5.4、Proposition 6.4、Lemmas 7.1–7.8，尤其式(4.5)–(4.10)和第7节出口估计。"
+            },
+            {
+              "claim": "Proof of Theorem 1.1 通过改变连续参数 $\\alpha \\gamma $ 使 P1–P3 轨道与唯一 $C\\infty $ P3 轨道相交，从而得到通向 P4 的 holosphere 序列。",
+              "route": "在 $\\alpha \\gamma $ 的两个边界层取样，比较函数 $F(\\alpha \\gamma )$ 的符号相反；ODE 对参数连续依赖和介值定理给出 $F=0$ 的 $\\alpha \\gamma *$，轨道唯一性使其与 P1–P3 轨道重合，另一侧出口再由根分支顺序延伸到 P4，并令 b→0 得 rn→r+。",
+              "evidence": "PDF 第46–49页，第7.9节 Proof of Theorem 1.1，式(7.67)–(7.70)及结尾的 rn 构造；Theorem 1.1 陈述见 PDF 第4页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、致谢、基金说明和参考文献前后的全文，并检索 AI、LLM、ChatGPT、Claude、Gemini、language model 等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–50页；缓存全文 2608.30443.txt。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

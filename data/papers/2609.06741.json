@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06741",
+  "slug": "2609.06741",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06741:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06741",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Uniform bounds for a thermo-diffusive system beyond exponential growth",
+    "authors": [
+      "Weinan Wang"
+    ],
+    "abstract": "In this paper, we prove a global-in-time uniform bound for solutions to a thermo-diffusive system in the whole space with bounded nonnegative initial data. The result allows exponential reaction rates and a range of superexponential rates determined by the diffusivities. This extends the recent results of La, Roquejoffre, and Ryzhik \\cite{LRR24} and of Leontev and Ryzhik \\cite{LR26} beyond their strictly subexponential range.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06741",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06741",
+    "submittedAt": "2026-09-06T17:33:22Z",
+    "updatedAt": "2026-09-06T17:33:22Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究全空间 thermo-diffusive 系统 $u_t=nu$ Delta u-u $g(v)、v_t=kappa$ Delta v+u g(v) 在温度扩散快于燃料扩散时的长期有界性。作者将反应源的两个热势写成 $F=G_nu*q$ 和 $H=G_kappa*q$，沿抛物锥把 H 分成近锥有界部分和远锥小 BMO 部分；John-Nirenberg 指数积分把 BMO 控制提升为温度分布尾界，增长指数由两种高斯衰减平衡给出 $rho*=kappa/(kappa-nu)$。最后结合 hot-cold 迭代、Martin-Pierre 平滑估计和局部抛物正则性完成全局温度界。",
+    "techniques": [
+      "热核势分解",
+      "抛物 BMO 与 Calderon-Zygmund 消去",
+      "John-Nirenberg 指数积分",
+      "hot-cold 燃料损失迭代",
+      "Duhamel 与局部抛物估计"
+    ],
+    "breakthrough": "将超指数反应增长允许范围推进到 $rho<rho*=kappa/(kappa-nu)$，包含纯指数律，并通过可调抛物锥与远场小 BMO 处理以往固定指数 lifting 在 $rho=1$ 处失效的问题。",
+    "limitations": "要求 0<nu<kappa、全空间有界非负初值、g 非负且在高温段有正下界，并严格满足 rho<rho*；临界 $rho=rho*$ 未覆盖。温度界依赖 hot-cold 迭代和既有燃料损失估计，非局部边界域或反应符号改变时结论不直接适用。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "局部 mild 解存在唯一，燃料始终满足 $0<=u<=K$，有限时间失控只能来自温度 v 的 L-infinity 爆发。",
+          "route": "在 L-infinity 时间柱上对 Duhamel 映射做局部压缩，热半群保持正性；把燃料方程视为带非负势的线性方程得到最大值界，再用抛物正则性和 continuation criterion。",
+          "evidence": "PDF 第 4-5 页 Lemma 1.2、equations (1.14)-(1.16)。"
+        },
+        {
+          "claim": "热势 H 可分成近锥 $B_{m,delta}$ 与远锥 $R_{m,delta}$，前者有界而后者具有指数小的抛物 BMO 半范数。",
+          "route": "按 $|x|^2/t$ 的 cutoff 分解 kappa 热核；近锥上比较 $G_kappa/G_nu$ 得到 $D_{m,delta}K$，远锥对截断核施加 $(partial_t-nu$ Delta) 后利用零质量和零一阶矩做 Calderon-Zygmund 主值抵消，产生 $e^{-m^2/(4kappa)}$。",
+          "evidence": "PDF 第 6-9 页 Section 2、Proposition 2.1、equations (2.2)-(2.9)。"
+        },
+        {
+          "claim": "当 rho<rho* 时，温度在每个抛物柱上的高温分布具有足够快的尾界并有任意有限指数矩。",
+          "route": "John-Nirenberg 控制远锥振荡，近锥的指数成本与远锥的 Gaussian gain 平衡出 $beta_delta=1+nu/((1+delta)(kappa-nu))$；选择 delta 使 $rho<beta_delta$，得到 (1.14) 的尾估计和 (1.15) 的指数矩，再由局部估计提升点值。",
+          "evidence": "PDF 第 3-5 页 equations (1.10)-(1.15)；第 9-12 页 Section 3、Corollary 3.3。"
+        },
+        {
+          "claim": "通过 hot-cold 迭代，单位柱平均温度一致有界，从而 v 全局一致有界并延拓到所有时间。",
+          "route": "cold 柱直接使用局部 lifting，hot 柱应用 Lemma 4.2 的燃料损失收缩；Smoothed Martin-Pierre estimate 把热源时间片压回较早燃料，离散算子展开后冷项望远镜消去、热项几何收缩，得到 (4.28)-(4.29) 的平均界，最后用 Corollary 3.3 和 continuation criterion。",
+          "evidence": "PDF 第 12-18 页 Lemmas 4.1-4.2、equations (4.18)-(4.29)、proof of Theorem 1.1；第 3 页 Theorem 1.1。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在致谢前明确声明使用 AI 进行 literature search、proof refinement 和 copyediting；这属于研究辅助、证明润色与编辑披露。",
+    "aiEvidenceSource": "PDF 第 18 页 Acknowledgment，正文明确的 AI disclosure。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06741:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06741",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Uniform bounds for a thermo-diffusive system beyond exponential growth",
+        "authors": [
+          "Weinan Wang"
+        ],
+        "abstract": "In this paper, we prove a global-in-time uniform bound for solutions to a thermo-diffusive system in the whole space with bounded nonnegative initial data. The result allows exponential reaction rates and a range of superexponential rates determined by the diffusivities. This extends the recent results of La, Roquejoffre, and Ryzhik \\cite{LRR24} and of Leontev and Ryzhik \\cite{LR26} beyond their strictly subexponential range.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06741",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06741",
+        "submittedAt": "2026-09-06T17:33:22Z",
+        "updatedAt": "2026-09-06T17:33:22Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究全空间 thermo-diffusive 系统 $u_t=nu$ Delta u-u $g(v)、v_t=kappa$ Delta v+u g(v) 在温度扩散快于燃料扩散时的长期有界性。作者将反应源的两个热势写成 $F=G_nu*q$ 和 $H=G_kappa*q$，沿抛物锥把 H 分成近锥有界部分和远锥小 BMO 部分；John-Nirenberg 指数积分把 BMO 控制提升为温度分布尾界，增长指数由两种高斯衰减平衡给出 $rho*=kappa/(kappa-nu)$。最后结合 hot-cold 迭代、Martin-Pierre 平滑估计和局部抛物正则性完成全局温度界。",
+        "techniques": [
+          "热核势分解",
+          "抛物 BMO 与 Calderon-Zygmund 消去",
+          "John-Nirenberg 指数积分",
+          "hot-cold 燃料损失迭代",
+          "Duhamel 与局部抛物估计"
+        ],
+        "breakthrough": "将超指数反应增长允许范围推进到 $rho<rho*=kappa/(kappa-nu)$，包含纯指数律，并通过可调抛物锥与远场小 BMO 处理以往固定指数 lifting 在 $rho=1$ 处失效的问题。",
+        "limitations": "要求 0<nu<kappa、全空间有界非负初值、g 非负且在高温段有正下界，并严格满足 rho<rho*；临界 $rho=rho*$ 未覆盖。温度界依赖 hot-cold 迭代和既有燃料损失估计，非局部边界域或反应符号改变时结论不直接适用。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "局部 mild 解存在唯一，燃料始终满足 $0<=u<=K$，有限时间失控只能来自温度 v 的 L-infinity 爆发。",
+              "route": "在 L-infinity 时间柱上对 Duhamel 映射做局部压缩，热半群保持正性；把燃料方程视为带非负势的线性方程得到最大值界，再用抛物正则性和 continuation criterion。",
+              "evidence": "PDF 第 4-5 页 Lemma 1.2、equations (1.14)-(1.16)。"
+            },
+            {
+              "claim": "热势 H 可分成近锥 $B_{m,delta}$ 与远锥 $R_{m,delta}$，前者有界而后者具有指数小的抛物 BMO 半范数。",
+              "route": "按 $|x|^2/t$ 的 cutoff 分解 kappa 热核；近锥上比较 $G_kappa/G_nu$ 得到 $D_{m,delta}K$，远锥对截断核施加 $(partial_t-nu$ Delta) 后利用零质量和零一阶矩做 Calderon-Zygmund 主值抵消，产生 $e^{-m^2/(4kappa)}$。",
+              "evidence": "PDF 第 6-9 页 Section 2、Proposition 2.1、equations (2.2)-(2.9)。"
+            },
+            {
+              "claim": "当 rho<rho* 时，温度在每个抛物柱上的高温分布具有足够快的尾界并有任意有限指数矩。",
+              "route": "John-Nirenberg 控制远锥振荡，近锥的指数成本与远锥的 Gaussian gain 平衡出 $beta_delta=1+nu/((1+delta)(kappa-nu))$；选择 delta 使 $rho<beta_delta$，得到 (1.14) 的尾估计和 (1.15) 的指数矩，再由局部估计提升点值。",
+              "evidence": "PDF 第 3-5 页 equations (1.10)-(1.15)；第 9-12 页 Section 3、Corollary 3.3。"
+            },
+            {
+              "claim": "通过 hot-cold 迭代，单位柱平均温度一致有界，从而 v 全局一致有界并延拓到所有时间。",
+              "route": "cold 柱直接使用局部 lifting，hot 柱应用 Lemma 4.2 的燃料损失收缩；Smoothed Martin-Pierre estimate 把热源时间片压回较早燃料，离散算子展开后冷项望远镜消去、热项几何收缩，得到 (4.28)-(4.29) 的平均界，最后用 Corollary 3.3 和 continuation criterion。",
+              "evidence": "PDF 第 12-18 页 Lemmas 4.1-4.2、equations (4.18)-(4.29)、proof of Theorem 1.1；第 3 页 Theorem 1.1。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在致谢前明确声明使用 AI 进行 literature search、proof refinement 和 copyediting；这属于研究辅助、证明润色与编辑披露。",
+        "aiEvidenceSource": "PDF 第 18 页 Acknowledgment，正文明确的 AI disclosure。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

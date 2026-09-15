@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11626",
+  "slug": "2609.11626",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11626:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11626",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Solvability of the \\(\\mathrm L^2\\) Dirichlet problem for parabolic operators with spatially periodic coefficients",
+    "authors": [
+      "Kaj Nyström"
+    ],
+    "abstract": "We prove global reverse H\\\"older estimates in \\(\\mathrm L^2\\) for the Poisson kernel of scalar divergence-form parabolic operators in the upper half-space. The coefficient matrix is real, symmetric, and periodic in every spatial variable \\(X=(\\lambda,x)\\), while no periodicity in time is assumed. If its boundary trace \\(A^0=A^0(x,t)\\) has a quantitative uniform modulus of continuity in time and its convergence to \\(A^0\\) in the transverse variable is controlled by a square-Dini modulus, then the Poisson kernel satisfies a uniform \\(\\mathrm{RH}_2\\) estimate at scales below the period. Full spatial periodicity is then used to propagate this estimate to every scale. The main new ingredient in the large-scale argument is a positive adjoint height coordinate \\(\\Phi^*=\\lambda+O(1)\\). Boundary comparison with \\(\\Phi^*\\) yields the required large-scale decay of the Green function and hence the global \\(\\mathrm{RH}_2\\) estimate. Consequently, the \\(\\mathrm L^2\\) Dirichlet problem is uniquely solvable among weak solutions \\(u\\) satisfying \\(N_\\ast u\\in\\mathrm L^2\\). We also establish, for fully spatially periodic coefficients, a nonsymmetric \\(A_\\infty\\) theorem under square-Dini convergence to a transverse-independent boundary trace, with no temporal regularity beyond measurability. We explain how the results transfer to time-independent Lipschitz graph domains under the stated coefficient and periodicity-compatibility hypotheses, and we derive scale-uniform boundary estimates for the periodic homogenization families considered below. The condition \\(D_t^{1/2}A^0\\in\\mathrm L^\\infty_x(\\mathrm{BMO}_t)\\) provides a natural sufficient criterion for the temporal continuity required in the symmetric theorem.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11626",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11626",
+    "submittedAt": "2026-09-10T14:39:18Z",
+    "updatedAt": "2026-09-10T14:39:18Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "可解性",
+    "workSummary": "论文对空间周期、时间可测的标量抛物散度算子建立 Poisson 核全局 RH2。小于周期尺度时用边界迹时间连续性和 square-Dini 横向收敛得到局部 RH2，大尺度则构造正伴随高度坐标 $\\Phi *=\\lambda +O(1)$，以边界比较传递 Green 函数衰减并获得全局 $L^{2}$ Dirichlet 可解性。",
+    "techniques": [
+      "反向 Hölder",
+      "伴随高度函数",
+      "边界比较",
+      "周期提升",
+      "Poisson 核与 $A\\infty $"
+    ],
+    "breakthrough": "在不要求时间周期性的情况下，把局部 RH2 通过空间周期传播到所有尺度，并推出 N* $u\\in L^{2}$ 类弱解唯一可解。",
+    "limitations": "对称主定理需要时间模连续和 square-Dini 横向收敛；非对称 $A\\infty $ 结论有额外边界迹假设，域推广限于兼容的 Lipschitz 图域。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorems 1.4–1.7 将局部 RH2、Poisson 核和 $L^{2}$ Dirichlet 可解性互相等价。",
+          "route": "先用正解的边界 Harnack、doubling 和 Green 函数估计建立 RH2；再把 Poisson 核的 RH2 转成非切向最大函数控制，最后用层势表示得到边值数据的 $L^{2}$ 解及唯一性。",
+          "evidence": "PDF 第 5–7 页，Theorems 1.4–1.7。"
+        },
+        {
+          "claim": "Lemmas 2.18、2.23、2.31 在小于周期尺度建立边界比较和反向 Hölder。",
+          "route": "用时间定向的抛物立方体和正解 Harnack 链比较 Green 函数，Lemma 2.31 把 RH2 与 Dirichlet 可解性转换；系数的横向 square-Dini 模保证尺度迭代中的误差可求和。",
+          "evidence": "PDF 第 11–16 页，Lemmas 2.18、2.23、2.31。"
+        },
+        {
+          "claim": "大尺度伴随高度坐标 $\\Phi *=\\lambda +O(1)$ 传递 Green 函数衰减。",
+          "route": "构造 $H*\\Phi *=0$ 的正伴随函数并用周期性归一化其线性增长，边界比较把 Green 函数与 $\\Phi *$ 的比值夹住；周期平移后迭代该比较，获得任意大尺度的 doubling 和 RH2。",
+          "evidence": "PDF 第 30–43 页，Section 5 的 adjoint height coordinate 与大尺度比较。"
+        },
+        {
+          "claim": "Theorem 1.6 将全局 RH2 变成 $L^{2}$ Dirichlet 问题的存在唯一性。",
+          "route": "全尺度 Poisson 核估计给出 N* u 的 $L^{2}$ 界，截断边界数据的解由弱紧性收敛；若边界数据为零，能量和非切向控制使解为零，完成唯一性。",
+          "evidence": "PDF 第 5–7 页，Theorem 1.6。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 90,
+    "priorityTier": "high",
+    "priorityReason": "周期系数抛物 Dirichlet 问题的全尺度 RH2 与可解性是高阶边界正则性结果。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11626:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11626",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Solvability of the \\(\\mathrm L^2\\) Dirichlet problem for parabolic operators with spatially periodic coefficients",
+        "authors": [
+          "Kaj Nyström"
+        ],
+        "abstract": "We prove global reverse H\\\"older estimates in \\(\\mathrm L^2\\) for the Poisson kernel of scalar divergence-form parabolic operators in the upper half-space. The coefficient matrix is real, symmetric, and periodic in every spatial variable \\(X=(\\lambda,x)\\), while no periodicity in time is assumed. If its boundary trace \\(A^0=A^0(x,t)\\) has a quantitative uniform modulus of continuity in time and its convergence to \\(A^0\\) in the transverse variable is controlled by a square-Dini modulus, then the Poisson kernel satisfies a uniform \\(\\mathrm{RH}_2\\) estimate at scales below the period. Full spatial periodicity is then used to propagate this estimate to every scale. The main new ingredient in the large-scale argument is a positive adjoint height coordinate \\(\\Phi^*=\\lambda+O(1)\\). Boundary comparison with \\(\\Phi^*\\) yields the required large-scale decay of the Green function and hence the global \\(\\mathrm{RH}_2\\) estimate. Consequently, the \\(\\mathrm L^2\\) Dirichlet problem is uniquely solvable among weak solutions \\(u\\) satisfying \\(N_\\ast u\\in\\mathrm L^2\\). We also establish, for fully spatially periodic coefficients, a nonsymmetric \\(A_\\infty\\) theorem under square-Dini convergence to a transverse-independent boundary trace, with no temporal regularity beyond measurability. We explain how the results transfer to time-independent Lipschitz graph domains under the stated coefficient and periodicity-compatibility hypotheses, and we derive scale-uniform boundary estimates for the periodic homogenization families considered below. The condition \\(D_t^{1/2}A^0\\in\\mathrm L^\\infty_x(\\mathrm{BMO}_t)\\) provides a natural sufficient criterion for the temporal continuity required in the symmetric theorem.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11626",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11626",
+        "submittedAt": "2026-09-10T14:39:18Z",
+        "updatedAt": "2026-09-10T14:39:18Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "可解性",
+        "workSummary": "论文对空间周期、时间可测的标量抛物散度算子建立 Poisson 核全局 RH2。小于周期尺度时用边界迹时间连续性和 square-Dini 横向收敛得到局部 RH2，大尺度则构造正伴随高度坐标 $\\Phi *=\\lambda +O(1)$，以边界比较传递 Green 函数衰减并获得全局 $L^{2}$ Dirichlet 可解性。",
+        "techniques": [
+          "反向 Hölder",
+          "伴随高度函数",
+          "边界比较",
+          "周期提升",
+          "Poisson 核与 $A\\infty $"
+        ],
+        "breakthrough": "在不要求时间周期性的情况下，把局部 RH2 通过空间周期传播到所有尺度，并推出 N* $u\\in L^{2}$ 类弱解唯一可解。",
+        "limitations": "对称主定理需要时间模连续和 square-Dini 横向收敛；非对称 $A\\infty $ 结论有额外边界迹假设，域推广限于兼容的 Lipschitz 图域。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorems 1.4–1.7 将局部 RH2、Poisson 核和 $L^{2}$ Dirichlet 可解性互相等价。",
+              "route": "先用正解的边界 Harnack、doubling 和 Green 函数估计建立 RH2；再把 Poisson 核的 RH2 转成非切向最大函数控制，最后用层势表示得到边值数据的 $L^{2}$ 解及唯一性。",
+              "evidence": "PDF 第 5–7 页，Theorems 1.4–1.7。"
+            },
+            {
+              "claim": "Lemmas 2.18、2.23、2.31 在小于周期尺度建立边界比较和反向 Hölder。",
+              "route": "用时间定向的抛物立方体和正解 Harnack 链比较 Green 函数，Lemma 2.31 把 RH2 与 Dirichlet 可解性转换；系数的横向 square-Dini 模保证尺度迭代中的误差可求和。",
+              "evidence": "PDF 第 11–16 页，Lemmas 2.18、2.23、2.31。"
+            },
+            {
+              "claim": "大尺度伴随高度坐标 $\\Phi *=\\lambda +O(1)$ 传递 Green 函数衰减。",
+              "route": "构造 $H*\\Phi *=0$ 的正伴随函数并用周期性归一化其线性增长，边界比较把 Green 函数与 $\\Phi *$ 的比值夹住；周期平移后迭代该比较，获得任意大尺度的 doubling 和 RH2。",
+              "evidence": "PDF 第 30–43 页，Section 5 的 adjoint height coordinate 与大尺度比较。"
+            },
+            {
+              "claim": "Theorem 1.6 将全局 RH2 变成 $L^{2}$ Dirichlet 问题的存在唯一性。",
+              "route": "全尺度 Poisson 核估计给出 N* u 的 $L^{2}$ 界，截断边界数据的解由弱紧性收敛；若边界数据为零，能量和非切向控制使解为零，完成唯一性。",
+              "evidence": "PDF 第 5–7 页，Theorem 1.6。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 90,
+        "priorityTier": "high",
+        "priorityReason": "周期系数抛物 Dirichlet 问题的全尺度 RH2 与可解性是高阶边界正则性结果。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

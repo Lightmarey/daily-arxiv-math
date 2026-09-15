@@ -3,97 +3,151 @@
   "arxivId": "2609.03287",
   "slug": "2609.03287",
   "latest": {
+    "id": "math.AP:2026-09-04:2609.03287:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
     "arxivId": "2609.03287",
-    "metadata": {
-      "title": "Spectral Improvements of Geometric Inequalities on Closed Kähler Manifolds",
-      "authors": [
-        "Sayantan Chakraborty",
-        "Xiaodong Wang",
-        "Tian Wu"
-      ],
-      "abstract": "Let $(M,g,J)$ be a closed Kähler manifold satisfying $\\operatorname{Ric}\\geqslant g$. We establish improved Liouville theorems for the Euler--Lagrange equations associated with the Beckner--Sobolev inequalities by incorporating the first positive eigenvalue of the $\\bar\\partial$-Laplacian into a differential-identity argument. As a consequence, we obtain improved Sobolev and Beckner inequalities that refine the known Riemannian and Kähler estimates when the first eigenvalue is sufficiently large. We also derive new upper bounds for the diameter of $(M,g)$.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-03T02:30:53Z",
-      "updatedAt": "2026-09-03T02:30:53Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Spectral Improvements of Geometric Inequalities on Closed Kähler Manifolds",
+    "authors": [
+      "Sayantan Chakraborty",
+      "Xiaodong Wang",
+      "Tian Wu"
+    ],
+    "abstract": "Let $(M,g,J)$ be a closed Kähler manifold satisfying $\\operatorname{Ric}\\geqslant g$. We establish improved Liouville theorems for the Euler--Lagrange equations associated with the Beckner--Sobolev inequalities by incorporating the first positive eigenvalue of the $\\bar\\partial$-Laplacian into a differential-identity argument. As a consequence, we obtain improved Sobolev and Beckner inequalities that refine the known Riemannian and Kähler estimates when the first eigenvalue is sufficiently large. We also derive new upper bounds for the diameter of $(M,g)$.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.03287",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03287",
+    "submittedAt": "2026-09-03T02:30:53Z",
+    "updatedAt": "2026-09-03T02:30:53Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "稳定性",
+    "workSummary": "研究闭 Kähler 流形上几何不等式的谱改进：从 Bochner/微分恒等式出发，将一阶特征值和 Ricci 下界插入非线性积分估计，再分析等号条件得到正解刚性与改进常数。",
+    "techniques": [
+      "Kähler $\\partial -Laplace$",
+      "Bochner 恒等式",
+      "谱间隙",
+      "非线性积分不等式",
+      "等号刚性"
+    ],
+    "breakthrough": "把 Kähler 结构中的复 Hessian 分解与第一特征值结合，改善正解方程和 Sobolev/Beckner 型不等式的常数，并刻画达到等号的几何情形。",
+    "limitations": "流形需闭、Kähler 且满足正 Ricci 下界；谱改进的参数区间按维数和非线性指数分段，不能直接延伸到边界或非 Kähler 情形。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "正解方程可通过 Kähler Bochner 恒等式产生梯度和 Hessian 的积分关系。",
+          "route": "对非线性椭圆方程乘以适当幂次的解，应用 $\\partial -Laplacian$ 分部积分和 Ricci 曲率项，整理出包含 $|\\partial f|$、二阶项及 $\\lambda $ 的微分恒等式。",
+          "evidence": "引言 Theorems 1.1--1.3 的输入与正文第 2 节微分恒等式（PDF 第 2--7 页）。"
+        },
+        {
+          "claim": "第一特征值可替换部分 Ricci coercivity，从而提高不等式常数。",
+          "route": "将梯度项分解为均值与零均值部分，对零均值部分应用 Poincare 谱隙 $\\Lambda $；按参数 $\\theta $ 混合 Ricci 下界和 $\\Lambda $，完成积分吸收。",
+          "evidence": "引言 Theorem 1.4、Theorem 1.5（PDF 第 5--6 页）及第 3 节估计（PDF 第 8--11 页）。"
+        },
+        {
+          "claim": "改进常数下的正解只能是常数，等号情形给出刚性。",
+          "route": "令积分不等式达到等号，追踪 Bochner、Poincare 和 Young 不等式的等号条件，使梯度消失或 Hessian 满足平行性；闭性与 Kähler 结构将局部条件提升为全局常数/模型几何。",
+          "evidence": "Theorems 1.4--1.5 的证明（PDF 第 5--6 页）及等号讨论（PDF 第 11--14 页）。"
+        },
+        {
+          "claim": "谱改进统一为闭 Kähler 流形上的几何不等式结论。",
+          "route": "把不同指数的非线性方程变分化，使用上述微分恒等式和特征值下界得到对应 Sobolev/Beckner 常数，分别在临界参数和严格区间取极限。",
+          "evidence": "第 1 节 Theorem 1.4、Theorem 1.5 与 Corollaries 1.1--1.2（PDF 第 5--7 页）。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "曲率与比较几何",
-      "progressType": "推广/加强",
-      "workSummary": "在闭 Kähler 流形 Ricci 下界条件下，把 ∂̄-Laplacian 第一正特征值纳入微分恒等式，得到改进的 Liouville、Sobolev/Beckner 不等式以及直径上界。",
-      "techniques": [
-        "Bochner 型微分恒等式",
-        "∂̄-Laplacian 谱隙",
-        "Euler–Lagrange 方程",
-        "Bakry–Ledoux 直径推论"
-      ],
-      "breakthrough": "给出随复几何谱信息增强的常数，在第一特征值足够大时严格优于纯黎曼及既有 Kähler 估计，并同步改进直径控制。",
-      "limitations": "尖锐 Kähler Beckner–Sobolev 常数仍以猜想形式存在；改进幅度依赖额外谱隙条件。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 84,
-      "priorityReason": "把曲率下界、谱信息和几何不等式有效耦合，方法可迁移到其他刚性与直径问题。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "Let $(M,g,J)$ be a closed Kähler manifold satisfying $\\operatorname{Ric}\\geqslant g$. We establish improved Liouville theorems for the Euler--Lagrange equations associated with the Beckner--Sobolev inequalities by incorporating the first positive eigenvalue of the $\\bar\\partial$-Laplacian into a differential-identity argument. As a consequence, we obtain improved Sobolev and Beckner inequalities that refine the known Riemannian and Kähler estimates when the first eigenvalue is sufficiently large. We also derive new upper bounds for the diameter of $(M,g)$.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文仅有明确的“Use of Large Language Models, AI and Machine Learning Tools: None declared”声明，未见作者说明使用 AI/LLM。",
+    "aiEvidenceSource": "PDF 第 2 页 AI 使用声明（文本行约 703）；已检查全文其他 AI/LLM 关键词。",
+    "priorityScore": 79,
+    "priorityTier": "high",
+    "priorityReason": "谱信息进入非线性椭圆恒等式的方式可能用于相关刚性与尖锐估计问题。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-04",
-      "entry": {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03287:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
         "arxivId": "2609.03287",
-        "metadata": {
-          "title": "Spectral Improvements of Geometric Inequalities on Closed Kähler Manifolds",
-          "authors": [
-            "Sayantan Chakraborty",
-            "Xiaodong Wang",
-            "Tian Wu"
-          ],
-          "abstract": "Let $(M,g,J)$ be a closed Kähler manifold satisfying $\\operatorname{Ric}\\geqslant g$. We establish improved Liouville theorems for the Euler--Lagrange equations associated with the Beckner--Sobolev inequalities by incorporating the first positive eigenvalue of the $\\bar\\partial$-Laplacian into a differential-identity argument. As a consequence, we obtain improved Sobolev and Beckner inequalities that refine the known Riemannian and Kähler estimates when the first eigenvalue is sufficiently large. We also derive new upper bounds for the diameter of $(M,g)$.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-03T02:30:53Z",
-          "updatedAt": "2026-09-03T02:30:53Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Spectral Improvements of Geometric Inequalities on Closed Kähler Manifolds",
+        "authors": [
+          "Sayantan Chakraborty",
+          "Xiaodong Wang",
+          "Tian Wu"
+        ],
+        "abstract": "Let $(M,g,J)$ be a closed Kähler manifold satisfying $\\operatorname{Ric}\\geqslant g$. We establish improved Liouville theorems for the Euler--Lagrange equations associated with the Beckner--Sobolev inequalities by incorporating the first positive eigenvalue of the $\\bar\\partial$-Laplacian into a differential-identity argument. As a consequence, we obtain improved Sobolev and Beckner inequalities that refine the known Riemannian and Kähler estimates when the first eigenvalue is sufficiently large. We also derive new upper bounds for the diameter of $(M,g)$.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.03287",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03287",
+        "submittedAt": "2026-09-03T02:30:53Z",
+        "updatedAt": "2026-09-03T02:30:53Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "稳定性",
+        "workSummary": "研究闭 Kähler 流形上几何不等式的谱改进：从 Bochner/微分恒等式出发，将一阶特征值和 Ricci 下界插入非线性积分估计，再分析等号条件得到正解刚性与改进常数。",
+        "techniques": [
+          "Kähler $\\partial -Laplace$",
+          "Bochner 恒等式",
+          "谱间隙",
+          "非线性积分不等式",
+          "等号刚性"
+        ],
+        "breakthrough": "把 Kähler 结构中的复 Hessian 分解与第一特征值结合，改善正解方程和 Sobolev/Beckner 型不等式的常数，并刻画达到等号的几何情形。",
+        "limitations": "流形需闭、Kähler 且满足正 Ricci 下界；谱改进的参数区间按维数和非线性指数分段，不能直接延伸到边界或非 Kähler 情形。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "正解方程可通过 Kähler Bochner 恒等式产生梯度和 Hessian 的积分关系。",
+              "route": "对非线性椭圆方程乘以适当幂次的解，应用 $\\partial -Laplacian$ 分部积分和 Ricci 曲率项，整理出包含 $|\\partial f|$、二阶项及 $\\lambda $ 的微分恒等式。",
+              "evidence": "引言 Theorems 1.1--1.3 的输入与正文第 2 节微分恒等式（PDF 第 2--7 页）。"
+            },
+            {
+              "claim": "第一特征值可替换部分 Ricci coercivity，从而提高不等式常数。",
+              "route": "将梯度项分解为均值与零均值部分，对零均值部分应用 Poincare 谱隙 $\\Lambda $；按参数 $\\theta $ 混合 Ricci 下界和 $\\Lambda $，完成积分吸收。",
+              "evidence": "引言 Theorem 1.4、Theorem 1.5（PDF 第 5--6 页）及第 3 节估计（PDF 第 8--11 页）。"
+            },
+            {
+              "claim": "改进常数下的正解只能是常数，等号情形给出刚性。",
+              "route": "令积分不等式达到等号，追踪 Bochner、Poincare 和 Young 不等式的等号条件，使梯度消失或 Hessian 满足平行性；闭性与 Kähler 结构将局部条件提升为全局常数/模型几何。",
+              "evidence": "Theorems 1.4--1.5 的证明（PDF 第 5--6 页）及等号讨论（PDF 第 11--14 页）。"
+            },
+            {
+              "claim": "谱改进统一为闭 Kähler 流形上的几何不等式结论。",
+              "route": "把不同指数的非线性方程变分化，使用上述微分恒等式和特征值下界得到对应 Sobolev/Beckner 常数，分别在临界参数和严格区间取极限。",
+              "evidence": "第 1 节 Theorem 1.4、Theorem 1.5 与 Corollaries 1.1--1.2（PDF 第 5--7 页）。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "曲率与比较几何",
-          "progressType": "推广/加强",
-          "workSummary": "在闭 Kähler 流形 Ricci 下界条件下，把 ∂̄-Laplacian 第一正特征值纳入微分恒等式，得到改进的 Liouville、Sobolev/Beckner 不等式以及直径上界。",
-          "techniques": [
-            "Bochner 型微分恒等式",
-            "∂̄-Laplacian 谱隙",
-            "Euler–Lagrange 方程",
-            "Bakry–Ledoux 直径推论"
-          ],
-          "breakthrough": "给出随复几何谱信息增强的常数，在第一特征值足够大时严格优于纯黎曼及既有 Kähler 估计，并同步改进直径控制。",
-          "limitations": "尖锐 Kähler Beckner–Sobolev 常数仍以猜想形式存在；改进幅度依赖额外谱隙条件。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 84,
-          "priorityReason": "把曲率下界、谱信息和几何不等式有效耦合，方法可迁移到其他刚性与直径问题。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "Let $(M,g,J)$ be a closed Kähler manifold satisfying $\\operatorname{Ric}\\geqslant g$. We establish improved Liouville theorems for the Euler--Lagrange equations associated with the Beckner--Sobolev inequalities by incorporating the first positive eigenvalue of the $\\bar\\partial$-Laplacian into a differential-identity argument. As a consequence, we obtain improved Sobolev and Beckner inequalities that refine the known Riemannian and Kähler estimates when the first eigenvalue is sufficiently large. We also derive new upper bounds for the diameter of $(M,g)$.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文仅有明确的“Use of Large Language Models, AI and Machine Learning Tools: None declared”声明，未见作者说明使用 AI/LLM。",
+        "aiEvidenceSource": "PDF 第 2 页 AI 使用声明（文本行约 703）；已检查全文其他 AI/LLM 关键词。",
+        "priorityScore": 79,
+        "priorityTier": "high",
+        "priorityReason": "谱信息进入非线性椭圆恒等式的方式可能用于相关刚性与尖锐估计问题。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10959",
+  "slug": "2609.10959",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.10959:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.10959",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global existence and time decay for a bipolar Euler-Poisson system with one pressureless and undamped fluid",
+    "authors": [
+      "Young-Pil Choi",
+      "Houzhi Tang",
+      "Weiyuan Zou"
+    ],
+    "abstract": "We study the Cauchy problem for a three-dimensional bipolar Euler--Poisson system in which one fluid is pressureless and undamped, while the other is subject to momentum relaxation. For sufficiently small smooth perturbations of a constant equilibrium, we prove the global existence and uniqueness of smooth solutions under an irrotationality assumption on the initial velocity of the pressureless fluid, together with algebraic time-decay estimates. The main difficulty is that the velocity of the pressureless fluid is dissipated only indirectly through the Poisson coupling, and this mechanism degenerates strongly at high frequencies, leading to a regularity-loss structure. We overcome this difficulty by combining refined Green-function estimates, a low--middle--high frequency decomposition, and high-order nonlinear energy estimates adapted to the asymmetric regularity hierarchy. The result establishes a global small-data theory for this asymmetric regime, in which pressure and damping are simultaneously absent from the same fluid.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10959",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10959",
+    "submittedAt": "2026-09-10T01:29:17Z",
+    "updatedAt": "2026-09-10T01:29:17Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "正文级严格核查",
+    "workSummary": "论文研究一类三维双极 Euler--Poisson 系统，其中一个压强为零且无阻尼，另一个流体有动量松弛。作者在无旋初速度和小扰动条件下建立全局光滑解与代数衰减：先由局部理论延拓，再用高阶能量处理耦合，最后通过 Fourier 低频根、高频谱耗散和 Green 函数得到两种速度的时间衰减。",
+    "techniques": [
+      "双极 Euler--Poisson 变量变换",
+      "高阶交换子能量",
+      "Fourier 特征根分区",
+      "Green 函数低高频估计",
+      "延拓准则"
+    ],
+    "breakthrough": "Theorem 1.1 证明无旋小扰动的全局存在、唯一性和代数衰减，特别处理无压强无阻尼分量缺少直接耗散的问题；谱分析显示低频声学耦合、高频阻尼和 Poisson 约束共同恢复衰减。",
+    "limitations": "小数据和 curl $u10=0$ 是关键条件，衰减是代数的；论文不处理有旋大数据、非小扰动或两种流体都无阻尼的情形。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "局部解可在高阶 Sobolev 空间中延拓。",
+          "route": "把方程改写为扰动变量，在正密度条件下用对称化能量和交换子估计控制 $H^N$ 范数；Theorem 3.1 给出 continuation 所需的密度下界。",
+          "evidence": "PDF 第 9 页 Theorem 3.1；第 11--16 页局部理论和正密度估计。"
+        },
+        {
+          "claim": "高阶能量产生耦合流体的统一耗散。",
+          "route": "Proposition 3.2 对动量松弛分量直接耗散，并通过 Poisson 场和密度耦合把耗散传给压力less 分量；低阶交叉项以小数据吸收。",
+          "evidence": "PDF 第 16--18 页 Proposition 3.2 及式 (3.13)--(3.18)。"
+        },
+        {
+          "claim": "线性化系统的频率分解给出衰减核。",
+          "route": "第 4 节 Fourier 变换后研究四个特征根：Lemma 4.1 控制低频根，Lemma 4.2 控制中频，Lemma 4.3 控制高频；逐区间估计 Green 矩阵。",
+          "evidence": "PDF 第 27--31 页第 4 节 Lemma 4.1、Lemma 4.2、Lemma 4.3。"
+        },
+        {
+          "claim": "非线性项由线性衰减和 bootstrap 小量吸收。",
+          "route": "将 Duhamel 公式与频率 Green 界结合，用卷积时间积分控制非线性源；小初值保证 bootstrap 常数闭合并延拓到任意时间。",
+          "evidence": "PDF 第 20--26 页 Theorem 1.1 证明及第 31 页后的衰减估计。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检查摘要、各节证明、Acknowledgments、作者声明和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "PDF 第 1--32 页全文，重点核查第 27 页 Acknowledgments 以及末尾作者信息和全文 AI 关键词上下文。",
+    "priorityScore": 87,
+    "priorityTier": "high",
+    "priorityReason": "处理无压强无阻尼流体的双极 Euler--Poisson 全局存在与衰减。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.10959:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.10959",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global existence and time decay for a bipolar Euler-Poisson system with one pressureless and undamped fluid",
+        "authors": [
+          "Young-Pil Choi",
+          "Houzhi Tang",
+          "Weiyuan Zou"
+        ],
+        "abstract": "We study the Cauchy problem for a three-dimensional bipolar Euler--Poisson system in which one fluid is pressureless and undamped, while the other is subject to momentum relaxation. For sufficiently small smooth perturbations of a constant equilibrium, we prove the global existence and uniqueness of smooth solutions under an irrotationality assumption on the initial velocity of the pressureless fluid, together with algebraic time-decay estimates. The main difficulty is that the velocity of the pressureless fluid is dissipated only indirectly through the Poisson coupling, and this mechanism degenerates strongly at high frequencies, leading to a regularity-loss structure. We overcome this difficulty by combining refined Green-function estimates, a low--middle--high frequency decomposition, and high-order nonlinear energy estimates adapted to the asymmetric regularity hierarchy. The result establishes a global small-data theory for this asymmetric regime, in which pressure and damping are simultaneously absent from the same fluid.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10959",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10959",
+        "submittedAt": "2026-09-10T01:29:17Z",
+        "updatedAt": "2026-09-10T01:29:17Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "正文级严格核查",
+        "workSummary": "论文研究一类三维双极 Euler--Poisson 系统，其中一个压强为零且无阻尼，另一个流体有动量松弛。作者在无旋初速度和小扰动条件下建立全局光滑解与代数衰减：先由局部理论延拓，再用高阶能量处理耦合，最后通过 Fourier 低频根、高频谱耗散和 Green 函数得到两种速度的时间衰减。",
+        "techniques": [
+          "双极 Euler--Poisson 变量变换",
+          "高阶交换子能量",
+          "Fourier 特征根分区",
+          "Green 函数低高频估计",
+          "延拓准则"
+        ],
+        "breakthrough": "Theorem 1.1 证明无旋小扰动的全局存在、唯一性和代数衰减，特别处理无压强无阻尼分量缺少直接耗散的问题；谱分析显示低频声学耦合、高频阻尼和 Poisson 约束共同恢复衰减。",
+        "limitations": "小数据和 curl $u10=0$ 是关键条件，衰减是代数的；论文不处理有旋大数据、非小扰动或两种流体都无阻尼的情形。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "局部解可在高阶 Sobolev 空间中延拓。",
+              "route": "把方程改写为扰动变量，在正密度条件下用对称化能量和交换子估计控制 $H^N$ 范数；Theorem 3.1 给出 continuation 所需的密度下界。",
+              "evidence": "PDF 第 9 页 Theorem 3.1；第 11--16 页局部理论和正密度估计。"
+            },
+            {
+              "claim": "高阶能量产生耦合流体的统一耗散。",
+              "route": "Proposition 3.2 对动量松弛分量直接耗散，并通过 Poisson 场和密度耦合把耗散传给压力less 分量；低阶交叉项以小数据吸收。",
+              "evidence": "PDF 第 16--18 页 Proposition 3.2 及式 (3.13)--(3.18)。"
+            },
+            {
+              "claim": "线性化系统的频率分解给出衰减核。",
+              "route": "第 4 节 Fourier 变换后研究四个特征根：Lemma 4.1 控制低频根，Lemma 4.2 控制中频，Lemma 4.3 控制高频；逐区间估计 Green 矩阵。",
+              "evidence": "PDF 第 27--31 页第 4 节 Lemma 4.1、Lemma 4.2、Lemma 4.3。"
+            },
+            {
+              "claim": "非线性项由线性衰减和 bootstrap 小量吸收。",
+              "route": "将 Duhamel 公式与频率 Green 界结合，用卷积时间积分控制非线性源；小初值保证 bootstrap 常数闭合并延拓到任意时间。",
+              "evidence": "PDF 第 20--26 页 Theorem 1.1 证明及第 31 页后的衰减估计。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检查摘要、各节证明、Acknowledgments、作者声明和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "PDF 第 1--32 页全文，重点核查第 27 页 Acknowledgments 以及末尾作者信息和全文 AI 关键词上下文。",
+        "priorityScore": 87,
+        "priorityTier": "high",
+        "priorityReason": "处理无压强无阻尼流体的双极 Euler--Poisson 全局存在与衰减。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

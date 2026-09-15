@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12703",
+  "slug": "2609.12703",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12703:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12703",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Fractional very fast diffusion equations in Lebesgue spaces: uniqueness and smoothing effects",
+    "authors": [
+      "Mohammed-El-Mahdi Boudaoud",
+      "Arturo de Pablo",
+      "Fernando Quirós"
+    ],
+    "abstract": "We investigate forward and backward smoothing effects in Lebesgue spaces $L^p$ and $\\mathcal{M}^p:=L^{p,\\infty}$ for the Cauchy problem associated to the nonlinear and nonlocal fractional diffusion equation $\\partial_t u+(-\\Delta)^{\\frac\\sigma2}|u|^{m-1}u=0$ in $\\mathbb{R}^N$, $0<\\sigma<2$, in the very fast range $0<m\\le m_c:=\\frac{N-\\sigma}{N}$. We prove that very weak solutions have an $\\mathcal{M}^p$--$L^\\infty$ smoothing effect if $p>p^*:=\\frac{N}{\\sigma}(1-m)$, and we construct counterexamples showing the failure of any $L^p$--$\\mathcal{M}^q$ forward ($q>p$) smoothing effect if $1< p< p^*$, $m<m_c$ or $L^1$--$\\mathcal{M}^q$ ($q>1$) if $m=m_c$. We also prove a backward $\\mathcal{M}^p$--$L^1$ smoothing effect whenever $1\\le p<p^*$, $m<m_c$, and we construct counterexamples showing that there is no $L^p$--$\\mathcal{M}^q$ backward ($q<p$) smoothing effect if $p> p^*$. Regarding the threshold value $p=p^*$, we prove that all solutions starting in $\\mathcal{M}^{p^*}$ become extinct in finite time, and show the failure of any $\\mathcal{M}^{p^*}$--$\\mathcal{M}^q$ smoothing before extinction for any $q\\neq p^*$. The construction of counterexamples is based on new uniqueness and comparison results for very weak solutions, combined with the existence of self-similar solutions with suitable properties. The same approach yields new counterexamples for both forward and backward smoothing effects also in the local case $\\sigma=2$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.12703",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12703",
+    "submittedAt": "2026-09-11T10:53:56Z",
+    "updatedAt": "2026-09-11T10:53:56Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "唯一性与平滑效应",
+    "workSummary": "论文研究分数阶极快扩散方程 $\\partial_tu+(-\\Delta)^{\\sigma/2}u^m=0$ 在 $m\\in(0,m_c]$ 中的唯一性与平滑效应，其中 $m_c=(N-\\sigma)/N$、$p_*=N/[\\sigma(1-m)]$。作者建立加权很弱解的唯一性和比较原理，进而得到 $L^p$ 与 Marcinkiewicz 空间 $M_p$ 中的适定性、前向和后向平滑、临界有限时间消灭，并构造所有失效区间的反例。",
+    "techniques": [
+      "用加权很弱解、权函数 $v\\in\\Theta$ 及加权收缩估计处理无穷空间上的低可积性初值。",
+      "对两个解作差，定义时间积分 $w=\\int_0^t|u^m-\\widehat u^m|\\,ds$，结合 Kato 不等式、分数阶次调和函数刻画和 Silvestre 估计证明唯一性。",
+      "利用球对称递减重排、质量集中序关系和最集中幂函数初值，建立对一般 $M_p$ 数据有效的浓度比较。",
+      "借助自相似解、分数阶齐次性、Riesz 势估计和 $M_p$ 范数控制，推导前向 $M_p\\text{--}L^\\infty$ 与后向 $M_p\\text{--}L^1$ 平滑阈值。",
+      "用临界显式消灭解、自相似幂函数和缩放紧支撑脉冲构造平滑效应失效反例，并在附录以截断尾部估计证明 $p>p_*$ 时的 $L^p$ 时间连续性。"
+    ],
+    "breakthrough": "核心贡献是在极快区间 $m\\le m_c$ 将加权很弱解的唯一性从已知范围推进到完整的 $m\\in(0,1)$，从而排除大解分支并把已有最小解平滑结果提升为所有解的结论。论文给出由临界指数 $p_*$ 分隔的完整图景：$p>p_*$ 时有前向 $M_p\\text{--}L^\\infty$ 平滑，$1<p<p_*$ 时有后向 $M_p\\text{--}L^1$ 平滑，$M_{p_*}$ 是有限时间消灭类，而其余前向或后向区间均有明确反例。",
+    "limitations": "结论限于非负解、分数阶阶数 $\\sigma\\in(0,2)$ 且 $N>\\sigma$ 的全空间问题，并依赖加权很弱解框架。临界指数 $p=p_*$ 下从 $L^{p_*}$ 初值出发的前向和后向平滑仍未解决；$L^p$ 在 $p\\le p_*$ 时以及 $M_p$ 在一般 $p$ 下的时间连续性也保持开放。部分反例只属于很弱解而非弱能量解，不能直接转化为更强能量解类别中的失效结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "通过分数阶次调和性建立加权很弱解的唯一性。",
+          "route": "对两个同初值解相减并乘以 $\\operatorname{sign}(u-\\widehat u)$，先在光滑情形用 Kato 不等式得到 $\\partial_t|u-\\widehat u|\\le-(-\\Delta)^{\\sigma/2}|u^m-\\widehat u^m|$。对一般加权解以光滑近似和截断测试函数传递该不等式，令 $w(x,t)=\\int_0^t|u^m-\\widehat u^m|(x,s)\\,ds$，证明 $w$ 在很弱意义下为 $\\sigma/2$-次调和。再用 Silvestre 的平均值估计和权函数尾部衰减令半径 $R\\to\\infty$，得到 $w=0$，从而 $u=\\widehat u$。",
+          "evidence": "第 3 节 Proposition 3.1 的式 $(3.1)$--$(3.10)$，PDF 第 8--10 页；Theorem 3.3 及其证明，PDF 第 11 页。"
+        },
+        {
+          "claim": "唯一性与比较原理结合已有加权存在性，闭合 $L^p$ 和 $M_p$ 解的适定性。",
+          "route": "先将 $L^p$ 或 $M_p$ 初值嵌入某个可容许加权空间 $L^1_v$，由加权很弱解存在性和 Theorem 3.3 的唯一性得到唯一解。对 $L^p$ 数据用近似弱解及 $L^p$ 范数收缩证明范数随时间不增；对 $M_p$ 数据以最集中幂函数 $U_0(x)=A|x|^{-N/p}$ 作浓度比较，利用重排保持和质量集中序将其范数控制传递给一般数据。",
+          "evidence": "第 2 节定义 2.1--2.3 及式 $(2.5)$，PDF 第 4--7 页；第 3 节 Theorem 3.4、Proposition 3.5，PDF 第 11--12 页；第 4 节 Theorems 4.1、4.5，PDF 第 12、15--16 页。"
+        },
+        {
+          "claim": "自相似最坏情形解给出前向平滑、有限时间消灭和临界阈值。",
+          "route": "对幂函数初值利用方程缩放和唯一性得到自相似表示；临界 $p=p_*$ 时改用分离变量构造显式有限时间消灭解。对 $p<p_*$，由比较原理和 Theorem 4.3 的 Riesz 势尾部估计控制空间无穷远；对 $p>p_*$，自相似轮廓在正时间变得有界。将这些最集中解与一般 $M_p$ 数据作浓度比较，得到 $p>p_*$ 时 $M_p\\text{--}L^\\infty$ 平滑，并由临界显式解推出 $M_{p_*}$ 的有限时间消灭。",
+          "evidence": "第 4 节 Theorem 4.2 的式 $(4.1)$--$(4.2)$，PDF 第 13 页；Theorem 4.3 的式 $(4.3)$--$(4.5)$，PDF 第 14--15 页；Theorems 4.6--4.7，PDF 第 16 页。"
+        },
+        {
+          "claim": "在 $1<p<p_*$ 时通过迭代 Marcinkiewicz 指数得到后向 $M_p\\text{--}L^1$ 平滑。",
+          "route": "先对最集中自相似解使用 Theorem 4.3 的点态衰减。令 $p_m=N/(mN+\\sigma)$：当 $p<p_m$ 时尾部直接可积，当 $p=p_m$ 时先得到任意较高指数的局部 $M_q$ 控制。对 $p\\in(p_m,p_*)$，定义递推 $q_{k+1}=mNq_k/(N+\\sigma q_k)$；由点态估计证明 $M_p$ 解进入 $M_{q_k}$，有限次迭代降至 $M_{p_m}$，再用临界步骤获得 $L^1$。浓度比较把该结论推广到任意 $M_p$ 初值。",
+          "evidence": "第 5 节 Theorem 5.1 及其证明，式 $(5.1)$ 与递推 $q_{k+1}=mNq_k/(N+\\sigma q_k)$，PDF 第 16--17 页。"
+        },
+        {
+          "claim": "通过自相似平移解和缩放脉冲构造所有失效平滑区间的反例。",
+          "route": "当 $p<p_*$ 时取指数 $r\\in(p,\\min\\{p_*,q\\})$ 的自相似解，其正时间原点奇性保持为 $|x|^{-N/r}$，所以不属于目标 $M_q$ 或 $L^\\infty$，但由后向平滑的时间平移可使初值进入 $L^p$。当 $p>p_*$ 时在无穷远使用相同构造，反向得到后向平滑失效。临界 $m=m_c$ 时将紧支撑脉冲按尺度缩放并叠加，使初值仍在 $L^1$ 而任意正时刻的 $L^\\infty$ 范数无界。",
+          "evidence": "第 6 节 Theorem 6.1 及其证明，式 $(6.1)$ 附近的自相似构造和缩放序列，PDF 第 17--18 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": null,
+    "aiEvidenceSource": "已核查 PDF 第 1--22 页全文，包括引言、Sections 2--6、Appendix A、Acknowledgements、References 及正文末尾；未发现作者明确披露 AI、LLM、软件或工具用于研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。Acknowledgements（PDF 第 21 页）仅说明资助来源并感谢 Jorge Ruiz-Cases 的学术讨论。",
+    "priorityScore": 88,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“唯一性与平滑效应”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 88/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12703:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12703",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Fractional very fast diffusion equations in Lebesgue spaces: uniqueness and smoothing effects",
+        "authors": [
+          "Mohammed-El-Mahdi Boudaoud",
+          "Arturo de Pablo",
+          "Fernando Quirós"
+        ],
+        "abstract": "We investigate forward and backward smoothing effects in Lebesgue spaces $L^p$ and $\\mathcal{M}^p:=L^{p,\\infty}$ for the Cauchy problem associated to the nonlinear and nonlocal fractional diffusion equation $\\partial_t u+(-\\Delta)^{\\frac\\sigma2}|u|^{m-1}u=0$ in $\\mathbb{R}^N$, $0<\\sigma<2$, in the very fast range $0<m\\le m_c:=\\frac{N-\\sigma}{N}$. We prove that very weak solutions have an $\\mathcal{M}^p$--$L^\\infty$ smoothing effect if $p>p^*:=\\frac{N}{\\sigma}(1-m)$, and we construct counterexamples showing the failure of any $L^p$--$\\mathcal{M}^q$ forward ($q>p$) smoothing effect if $1< p< p^*$, $m<m_c$ or $L^1$--$\\mathcal{M}^q$ ($q>1$) if $m=m_c$. We also prove a backward $\\mathcal{M}^p$--$L^1$ smoothing effect whenever $1\\le p<p^*$, $m<m_c$, and we construct counterexamples showing that there is no $L^p$--$\\mathcal{M}^q$ backward ($q<p$) smoothing effect if $p> p^*$. Regarding the threshold value $p=p^*$, we prove that all solutions starting in $\\mathcal{M}^{p^*}$ become extinct in finite time, and show the failure of any $\\mathcal{M}^{p^*}$--$\\mathcal{M}^q$ smoothing before extinction for any $q\\neq p^*$. The construction of counterexamples is based on new uniqueness and comparison results for very weak solutions, combined with the existence of self-similar solutions with suitable properties. The same approach yields new counterexamples for both forward and backward smoothing effects also in the local case $\\sigma=2$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.12703",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12703",
+        "submittedAt": "2026-09-11T10:53:56Z",
+        "updatedAt": "2026-09-11T10:53:56Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "唯一性与平滑效应",
+        "workSummary": "论文研究分数阶极快扩散方程 $\\partial_tu+(-\\Delta)^{\\sigma/2}u^m=0$ 在 $m\\in(0,m_c]$ 中的唯一性与平滑效应，其中 $m_c=(N-\\sigma)/N$、$p_*=N/[\\sigma(1-m)]$。作者建立加权很弱解的唯一性和比较原理，进而得到 $L^p$ 与 Marcinkiewicz 空间 $M_p$ 中的适定性、前向和后向平滑、临界有限时间消灭，并构造所有失效区间的反例。",
+        "techniques": [
+          "用加权很弱解、权函数 $v\\in\\Theta$ 及加权收缩估计处理无穷空间上的低可积性初值。",
+          "对两个解作差，定义时间积分 $w=\\int_0^t|u^m-\\widehat u^m|\\,ds$，结合 Kato 不等式、分数阶次调和函数刻画和 Silvestre 估计证明唯一性。",
+          "利用球对称递减重排、质量集中序关系和最集中幂函数初值，建立对一般 $M_p$ 数据有效的浓度比较。",
+          "借助自相似解、分数阶齐次性、Riesz 势估计和 $M_p$ 范数控制，推导前向 $M_p\\text{--}L^\\infty$ 与后向 $M_p\\text{--}L^1$ 平滑阈值。",
+          "用临界显式消灭解、自相似幂函数和缩放紧支撑脉冲构造平滑效应失效反例，并在附录以截断尾部估计证明 $p>p_*$ 时的 $L^p$ 时间连续性。"
+        ],
+        "breakthrough": "核心贡献是在极快区间 $m\\le m_c$ 将加权很弱解的唯一性从已知范围推进到完整的 $m\\in(0,1)$，从而排除大解分支并把已有最小解平滑结果提升为所有解的结论。论文给出由临界指数 $p_*$ 分隔的完整图景：$p>p_*$ 时有前向 $M_p\\text{--}L^\\infty$ 平滑，$1<p<p_*$ 时有后向 $M_p\\text{--}L^1$ 平滑，$M_{p_*}$ 是有限时间消灭类，而其余前向或后向区间均有明确反例。",
+        "limitations": "结论限于非负解、分数阶阶数 $\\sigma\\in(0,2)$ 且 $N>\\sigma$ 的全空间问题，并依赖加权很弱解框架。临界指数 $p=p_*$ 下从 $L^{p_*}$ 初值出发的前向和后向平滑仍未解决；$L^p$ 在 $p\\le p_*$ 时以及 $M_p$ 在一般 $p$ 下的时间连续性也保持开放。部分反例只属于很弱解而非弱能量解，不能直接转化为更强能量解类别中的失效结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "通过分数阶次调和性建立加权很弱解的唯一性。",
+              "route": "对两个同初值解相减并乘以 $\\operatorname{sign}(u-\\widehat u)$，先在光滑情形用 Kato 不等式得到 $\\partial_t|u-\\widehat u|\\le-(-\\Delta)^{\\sigma/2}|u^m-\\widehat u^m|$。对一般加权解以光滑近似和截断测试函数传递该不等式，令 $w(x,t)=\\int_0^t|u^m-\\widehat u^m|(x,s)\\,ds$，证明 $w$ 在很弱意义下为 $\\sigma/2$-次调和。再用 Silvestre 的平均值估计和权函数尾部衰减令半径 $R\\to\\infty$，得到 $w=0$，从而 $u=\\widehat u$。",
+              "evidence": "第 3 节 Proposition 3.1 的式 $(3.1)$--$(3.10)$，PDF 第 8--10 页；Theorem 3.3 及其证明，PDF 第 11 页。"
+            },
+            {
+              "claim": "唯一性与比较原理结合已有加权存在性，闭合 $L^p$ 和 $M_p$ 解的适定性。",
+              "route": "先将 $L^p$ 或 $M_p$ 初值嵌入某个可容许加权空间 $L^1_v$，由加权很弱解存在性和 Theorem 3.3 的唯一性得到唯一解。对 $L^p$ 数据用近似弱解及 $L^p$ 范数收缩证明范数随时间不增；对 $M_p$ 数据以最集中幂函数 $U_0(x)=A|x|^{-N/p}$ 作浓度比较，利用重排保持和质量集中序将其范数控制传递给一般数据。",
+              "evidence": "第 2 节定义 2.1--2.3 及式 $(2.5)$，PDF 第 4--7 页；第 3 节 Theorem 3.4、Proposition 3.5，PDF 第 11--12 页；第 4 节 Theorems 4.1、4.5，PDF 第 12、15--16 页。"
+            },
+            {
+              "claim": "自相似最坏情形解给出前向平滑、有限时间消灭和临界阈值。",
+              "route": "对幂函数初值利用方程缩放和唯一性得到自相似表示；临界 $p=p_*$ 时改用分离变量构造显式有限时间消灭解。对 $p<p_*$，由比较原理和 Theorem 4.3 的 Riesz 势尾部估计控制空间无穷远；对 $p>p_*$，自相似轮廓在正时间变得有界。将这些最集中解与一般 $M_p$ 数据作浓度比较，得到 $p>p_*$ 时 $M_p\\text{--}L^\\infty$ 平滑，并由临界显式解推出 $M_{p_*}$ 的有限时间消灭。",
+              "evidence": "第 4 节 Theorem 4.2 的式 $(4.1)$--$(4.2)$，PDF 第 13 页；Theorem 4.3 的式 $(4.3)$--$(4.5)$，PDF 第 14--15 页；Theorems 4.6--4.7，PDF 第 16 页。"
+            },
+            {
+              "claim": "在 $1<p<p_*$ 时通过迭代 Marcinkiewicz 指数得到后向 $M_p\\text{--}L^1$ 平滑。",
+              "route": "先对最集中自相似解使用 Theorem 4.3 的点态衰减。令 $p_m=N/(mN+\\sigma)$：当 $p<p_m$ 时尾部直接可积，当 $p=p_m$ 时先得到任意较高指数的局部 $M_q$ 控制。对 $p\\in(p_m,p_*)$，定义递推 $q_{k+1}=mNq_k/(N+\\sigma q_k)$；由点态估计证明 $M_p$ 解进入 $M_{q_k}$，有限次迭代降至 $M_{p_m}$，再用临界步骤获得 $L^1$。浓度比较把该结论推广到任意 $M_p$ 初值。",
+              "evidence": "第 5 节 Theorem 5.1 及其证明，式 $(5.1)$ 与递推 $q_{k+1}=mNq_k/(N+\\sigma q_k)$，PDF 第 16--17 页。"
+            },
+            {
+              "claim": "通过自相似平移解和缩放脉冲构造所有失效平滑区间的反例。",
+              "route": "当 $p<p_*$ 时取指数 $r\\in(p,\\min\\{p_*,q\\})$ 的自相似解，其正时间原点奇性保持为 $|x|^{-N/r}$，所以不属于目标 $M_q$ 或 $L^\\infty$，但由后向平滑的时间平移可使初值进入 $L^p$。当 $p>p_*$ 时在无穷远使用相同构造，反向得到后向平滑失效。临界 $m=m_c$ 时将紧支撑脉冲按尺度缩放并叠加，使初值仍在 $L^1$ 而任意正时刻的 $L^\\infty$ 范数无界。",
+              "evidence": "第 6 节 Theorem 6.1 及其证明，式 $(6.1)$ 附近的自相似构造和缩放序列，PDF 第 17--18 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": null,
+        "aiEvidenceSource": "已核查 PDF 第 1--22 页全文，包括引言、Sections 2--6、Appendix A、Acknowledgements、References 及正文末尾；未发现作者明确披露 AI、LLM、软件或工具用于研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。Acknowledgements（PDF 第 21 页）仅说明资助来源并感谢 Jorge Ruiz-Cases 的学术讨论。",
+        "priorityScore": 88,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“唯一性与平滑效应”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 88/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

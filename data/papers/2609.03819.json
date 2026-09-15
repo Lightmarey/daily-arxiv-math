@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03819",
+  "slug": "2609.03819",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03819:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03819",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Stochastic damped wave and Euler-Bernoulli equations with singular locally Hölder continuous drift",
+    "authors": [
+      "Davide Addona",
+      "Davide Augusto Bignamini"
+    ],
+    "abstract": "Let $U$ and $H$ be two separable Hilbert spaces and $T>0$. We consider a stochastic differential equation which evolves in the Hilbert space $H$ of the form \\begin{align} \\label{SDEa} dX(t)=AX(t)dt+B(t,X(t))dt+GdW(t), \\quad t\\in[0,T], \\quad X(0)=x \\in H, \\end{align} where $A:D(A)\\subseteq H\\to H$ is the infinitesimal generator of a strongly continuous semigroup $(e^{tA})_{t\\geq0}$, $W=(W(t))_{t\\geq0}$ is a $U$-cylindrical Wiener process defined on a normal filtered probability space $(Ω,\\mathcal{F},\\{\\mathcal{F}_t\\}_{t\\in [0,T]},\\mathbb{P})$, $G:U\\to H$ is a linear bounded operator and $B:[0,T]\\times H\\to H_β$ is a locally $θ$-Hölder continuous function with respect to the second variable, uniformly with respect to the first one, for some suitable $θ\\in(0,1)$. Here, $H_β$ is a Hilbert space which contains $H$ with continuous embedding, so that the drift term is singular: it is not well-defined from the ambient space $H$ into itself. The coefficient $β\\geq0$ measures the order of such a singularity and the case $β=0$ corresponds to a drift term with values in $H$. We prove that, under suitable assumptions on the coefficients, weak and pathwise uniqueness hold true for equation \\eqref{SDEa}. In particular, the conditions assumed on the coefficients cover the stochastic damped wave equation in dimension $1$ and the stochastic damped Euler--Bernoulli beam equation up to dimension $3$, even in the hyperbolic case.",
+    "categories": [
+      "math.PR",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.03819",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03819",
+    "submittedAt": "2026-09-03T13:20:02Z",
+    "updatedAt": "2026-09-03T13:20:02Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "存在性",
+    "workSummary": "研究带奇异局部 Hölder 漂移的随机阻尼波和 Euler--Bernoulli 方程：先证明有限维近似与正则化方程的强解估计，再建立 Malliavin 方向的弱/路径唯一性，最后用紧性和 Gyöngy--Krylov 型论证得到弱解与条件下的唯一性。",
+    "techniques": [
+      "Galerkin 逼近",
+      "单调性与能量估计",
+      "Malliavin 可微性",
+      "紧性方法",
+      "路径/弱唯一性"
+    ],
+    "breakthrough": "在漂移仅局部 Hölder 且奇异的条件下，同时处理随机阻尼波和四阶梁方程，通过有限维逼近和随机正则性建立局部时间适定性。",
+    "limitations": "漂移假设、噪声非退化性和增长条件严格依赖文中 Hypotheses；唯一性结论按参数分区间给出，不是所有局部 Hölder 漂移下的强唯一性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "正则化有限维系统具有统一能量和矩估计。",
+          "route": "对漂移截断并做 Galerkin 投影，使用阻尼项和算子 coercivity 对位置/速度能量配对；局部 Hölder 漂移由增长界和截断误差控制。",
+          "evidence": "第 3 节 Lemmas 3.4--3.6、Proposition 3.5（PDF 第 10--16 页）。"
+        },
+        {
+          "claim": "近似解的 Malliavin 导数满足线性化方程并具有一致界。",
+          "route": "对有限维 SDE 方向微分，得到含漂移差分商和噪声系数的变分方程；局部 Hölder 模估计与阻尼能量吸收给出导数矩界。",
+          "evidence": "第 4 节 Propositions 4.2--4.6（PDF 第 17--24 页）。"
+        },
+        {
+          "claim": "紧性和极限识别产生原随机 PDE 的弱解。",
+          "route": "用 Kolmogorov 时间正则性、空间能量界和 Aubin--Lions 型紧性提取 Galerkin 子列；将漂移、线性算子和噪声积分逐项传到极限。",
+          "evidence": "第 4 节 Theorems 4.7、4.9、4.11（PDF 第 25--30 页）。"
+        },
+        {
+          "claim": "弱唯一性与路径唯一性在文中条件下合并为局部 well-posedness。",
+          "route": "对两个解的差使用局部 Hölder 漂移的 Osgood/截断估计，结合 Malliavin 正则性和 Yamada--Watanabe 型论证；再按漂移参数范围得到 Theorems 5.2、5.3、5.8。",
+          "evidence": "第 5 节 Theorems 5.2--5.3、Corollaries 5.4、5.9（PDF 第 31--39 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明使用生成式 AI 助手检查英文语法、发现印刷错误以及核对符号和文章结构，并说明作者审阅编辑输出且对内容负责。",
+    "aiEvidenceSource": "PDF 第 38 页 Declaration of generative AI use（文本行约 3284--3287）。",
+    "priorityScore": 82,
+    "priorityTier": "high",
+    "priorityReason": "低正则漂移下的唯一性机制与双曲问题密切相关，值得核对参数范围和证明工具。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03819:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03819",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Stochastic damped wave and Euler-Bernoulli equations with singular locally Hölder continuous drift",
+        "authors": [
+          "Davide Addona",
+          "Davide Augusto Bignamini"
+        ],
+        "abstract": "Let $U$ and $H$ be two separable Hilbert spaces and $T>0$. We consider a stochastic differential equation which evolves in the Hilbert space $H$ of the form \\begin{align} \\label{SDEa} dX(t)=AX(t)dt+B(t,X(t))dt+GdW(t), \\quad t\\in[0,T], \\quad X(0)=x \\in H, \\end{align} where $A:D(A)\\subseteq H\\to H$ is the infinitesimal generator of a strongly continuous semigroup $(e^{tA})_{t\\geq0}$, $W=(W(t))_{t\\geq0}$ is a $U$-cylindrical Wiener process defined on a normal filtered probability space $(Ω,\\mathcal{F},\\{\\mathcal{F}_t\\}_{t\\in [0,T]},\\mathbb{P})$, $G:U\\to H$ is a linear bounded operator and $B:[0,T]\\times H\\to H_β$ is a locally $θ$-Hölder continuous function with respect to the second variable, uniformly with respect to the first one, for some suitable $θ\\in(0,1)$. Here, $H_β$ is a Hilbert space which contains $H$ with continuous embedding, so that the drift term is singular: it is not well-defined from the ambient space $H$ into itself. The coefficient $β\\geq0$ measures the order of such a singularity and the case $β=0$ corresponds to a drift term with values in $H$. We prove that, under suitable assumptions on the coefficients, weak and pathwise uniqueness hold true for equation \\eqref{SDEa}. In particular, the conditions assumed on the coefficients cover the stochastic damped wave equation in dimension $1$ and the stochastic damped Euler--Bernoulli beam equation up to dimension $3$, even in the hyperbolic case.",
+        "categories": [
+          "math.PR",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.03819",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03819",
+        "submittedAt": "2026-09-03T13:20:02Z",
+        "updatedAt": "2026-09-03T13:20:02Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "存在性",
+        "workSummary": "研究带奇异局部 Hölder 漂移的随机阻尼波和 Euler--Bernoulli 方程：先证明有限维近似与正则化方程的强解估计，再建立 Malliavin 方向的弱/路径唯一性，最后用紧性和 Gyöngy--Krylov 型论证得到弱解与条件下的唯一性。",
+        "techniques": [
+          "Galerkin 逼近",
+          "单调性与能量估计",
+          "Malliavin 可微性",
+          "紧性方法",
+          "路径/弱唯一性"
+        ],
+        "breakthrough": "在漂移仅局部 Hölder 且奇异的条件下，同时处理随机阻尼波和四阶梁方程，通过有限维逼近和随机正则性建立局部时间适定性。",
+        "limitations": "漂移假设、噪声非退化性和增长条件严格依赖文中 Hypotheses；唯一性结论按参数分区间给出，不是所有局部 Hölder 漂移下的强唯一性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "正则化有限维系统具有统一能量和矩估计。",
+              "route": "对漂移截断并做 Galerkin 投影，使用阻尼项和算子 coercivity 对位置/速度能量配对；局部 Hölder 漂移由增长界和截断误差控制。",
+              "evidence": "第 3 节 Lemmas 3.4--3.6、Proposition 3.5（PDF 第 10--16 页）。"
+            },
+            {
+              "claim": "近似解的 Malliavin 导数满足线性化方程并具有一致界。",
+              "route": "对有限维 SDE 方向微分，得到含漂移差分商和噪声系数的变分方程；局部 Hölder 模估计与阻尼能量吸收给出导数矩界。",
+              "evidence": "第 4 节 Propositions 4.2--4.6（PDF 第 17--24 页）。"
+            },
+            {
+              "claim": "紧性和极限识别产生原随机 PDE 的弱解。",
+              "route": "用 Kolmogorov 时间正则性、空间能量界和 Aubin--Lions 型紧性提取 Galerkin 子列；将漂移、线性算子和噪声积分逐项传到极限。",
+              "evidence": "第 4 节 Theorems 4.7、4.9、4.11（PDF 第 25--30 页）。"
+            },
+            {
+              "claim": "弱唯一性与路径唯一性在文中条件下合并为局部 well-posedness。",
+              "route": "对两个解的差使用局部 Hölder 漂移的 Osgood/截断估计，结合 Malliavin 正则性和 Yamada--Watanabe 型论证；再按漂移参数范围得到 Theorems 5.2、5.3、5.8。",
+              "evidence": "第 5 节 Theorems 5.2--5.3、Corollaries 5.4、5.9（PDF 第 31--39 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明使用生成式 AI 助手检查英文语法、发现印刷错误以及核对符号和文章结构，并说明作者审阅编辑输出且对内容负责。",
+        "aiEvidenceSource": "PDF 第 38 页 Declaration of generative AI use（文本行约 3284--3287）。",
+        "priorityScore": 82,
+        "priorityTier": "high",
+        "priorityReason": "低正则漂移下的唯一性机制与双曲问题密切相关，值得核对参数范围和证明工具。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

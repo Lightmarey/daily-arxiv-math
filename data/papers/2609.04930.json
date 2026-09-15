@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.04930",
+  "slug": "2609.04930",
+  "latest": {
+    "id": "math.AP:2026-09-07:2609.04930:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-07",
+    "arxivId": "2609.04930",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Frequency-explicit convergence analysis of a multiscale finite element method for highly heterogeneous scattering problems",
+    "authors": [
+      "T. Chaumont-Frelet",
+      "Z. Kassali"
+    ],
+    "abstract": "We analyze the numerical approximation of time-harmonic scattering by highly heterogeneous penetrable obstacles. These problems are especially challenging in the high-frequency regime, where the size of the scatterer $L$ is much larger than the wavelength, i.e., the wavenumber $k$ is such that $kL \\gg 1$. Here, we further consider the situation where the scatterer contains different materials, with a characteristic size $\\varepsilon$ such that $k\\varepsilon \\ll 1$. We propose a high-order multiscale finite element method, and provide an error analysis that is explicit in both $k$ and $\\varepsilon$. Crucially, our error estimates suggest that using a high-order method should reduce the computational cost for large frequencies, which is corroborated by numerical examples.",
+    "categories": [
+      "math.NA",
+      "math.AP"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2609.04930",
+    "pdfUrl": "https://arxiv.org/pdf/2609.04930",
+    "submittedAt": "2026-09-04T09:29:48Z",
+    "updatedAt": "2026-09-04T09:29:48Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "近似与数值分析",
+    "workSummary": "分析高频强异质散射问题的 multiscale finite element 方法：先建立异质 Helmholtz 与均质化问题的频率显式稳定性，再构造局部多尺度基函数，最后证明准最优性和频率显式误差估计。",
+    "techniques": [
+      "频率显式均质化",
+      "局部多尺度基函数",
+      "Helmholtz 稳定性",
+      "Petrov--Galerkin 近似",
+      "准最优误差估计"
+    ],
+    "breakthrough": "在散射体尺寸远大于波长的高频情形保留显式 $k、\\epsilon $ 和异质尺度依赖，证明 multiscale method 逼近均质化解并给出可操作的分辨率条件。",
+    "limitations": "依赖系数椭圆性、局部问题稳定常数和 mesh 条件 $kHmax\\le \\tau $；误差结论针对本文离散空间和时间谐波散射设置。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "微观异质问题与均质问题均适定且频率稳定。",
+          "route": "对局部和全局 Helmholtz 问题使用 Fredholm/阻尼稳定性，建立 k 和 $\\epsilon $ 的 resolvent 界；均质系数由 cell problem/平均通量确定。",
+          "evidence": "第 2--4 节 Propositions 2.2、2.4、Theorem 3.3、Theorem 4.1（PDF 第 4--10 页）。"
+        },
+        {
+          "claim": "局部多尺度问题定义稳定的基函数和离散空间。",
+          "route": "在每个 coarse patch 上解带异质系数的局部 Helmholtz 问题，利用 Proposition 5.3 的 $\\tau $ 条件保证唯一性；拼接局部基函数形成 MHM 空间。",
+          "evidence": "第 5 节 Proposition 5.3（PDF 第 12--14 页）。"
+        },
+        {
+          "claim": "MHM 空间对均质化解具有近似能力和准最优投影。",
+          "route": "用局部 corrector 的正交性和 Céa/Strang 型分解，把总误差分成均质化误差、局部逼近误差和 resonance 项；高频常数显式进入估计。",
+          "evidence": "第 6 节 Propositions 6.1--6.3（PDF 第 13--18 页）。"
+        },
+        {
+          "claim": "离散解满足频率显式的总误差界。",
+          "route": "将准最优性与 Theorem 4.1 的 homogenization error 合并，在 $kHmax\\le \\tau $ 下控制两层误差，得到 Theorem 6.5 和 Corollary 6.6。",
+          "evidence": "第 6 节 Theorem 6.5、Corollary 6.6（PDF 第 19--24 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--27 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 51,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-07",
+      "report": {
+        "id": "math.AP:2026-09-07:2609.04930:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-07",
+        "arxivId": "2609.04930",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Frequency-explicit convergence analysis of a multiscale finite element method for highly heterogeneous scattering problems",
+        "authors": [
+          "T. Chaumont-Frelet",
+          "Z. Kassali"
+        ],
+        "abstract": "We analyze the numerical approximation of time-harmonic scattering by highly heterogeneous penetrable obstacles. These problems are especially challenging in the high-frequency regime, where the size of the scatterer $L$ is much larger than the wavelength, i.e., the wavenumber $k$ is such that $kL \\gg 1$. Here, we further consider the situation where the scatterer contains different materials, with a characteristic size $\\varepsilon$ such that $k\\varepsilon \\ll 1$. We propose a high-order multiscale finite element method, and provide an error analysis that is explicit in both $k$ and $\\varepsilon$. Crucially, our error estimates suggest that using a high-order method should reduce the computational cost for large frequencies, which is corroborated by numerical examples.",
+        "categories": [
+          "math.NA",
+          "math.AP"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2609.04930",
+        "pdfUrl": "https://arxiv.org/pdf/2609.04930",
+        "submittedAt": "2026-09-04T09:29:48Z",
+        "updatedAt": "2026-09-04T09:29:48Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "近似与数值分析",
+        "workSummary": "分析高频强异质散射问题的 multiscale finite element 方法：先建立异质 Helmholtz 与均质化问题的频率显式稳定性，再构造局部多尺度基函数，最后证明准最优性和频率显式误差估计。",
+        "techniques": [
+          "频率显式均质化",
+          "局部多尺度基函数",
+          "Helmholtz 稳定性",
+          "Petrov--Galerkin 近似",
+          "准最优误差估计"
+        ],
+        "breakthrough": "在散射体尺寸远大于波长的高频情形保留显式 $k、\\epsilon $ 和异质尺度依赖，证明 multiscale method 逼近均质化解并给出可操作的分辨率条件。",
+        "limitations": "依赖系数椭圆性、局部问题稳定常数和 mesh 条件 $kHmax\\le \\tau $；误差结论针对本文离散空间和时间谐波散射设置。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "微观异质问题与均质问题均适定且频率稳定。",
+              "route": "对局部和全局 Helmholtz 问题使用 Fredholm/阻尼稳定性，建立 k 和 $\\epsilon $ 的 resolvent 界；均质系数由 cell problem/平均通量确定。",
+              "evidence": "第 2--4 节 Propositions 2.2、2.4、Theorem 3.3、Theorem 4.1（PDF 第 4--10 页）。"
+            },
+            {
+              "claim": "局部多尺度问题定义稳定的基函数和离散空间。",
+              "route": "在每个 coarse patch 上解带异质系数的局部 Helmholtz 问题，利用 Proposition 5.3 的 $\\tau $ 条件保证唯一性；拼接局部基函数形成 MHM 空间。",
+              "evidence": "第 5 节 Proposition 5.3（PDF 第 12--14 页）。"
+            },
+            {
+              "claim": "MHM 空间对均质化解具有近似能力和准最优投影。",
+              "route": "用局部 corrector 的正交性和 Céa/Strang 型分解，把总误差分成均质化误差、局部逼近误差和 resonance 项；高频常数显式进入估计。",
+              "evidence": "第 6 节 Propositions 6.1--6.3（PDF 第 13--18 页）。"
+            },
+            {
+              "claim": "离散解满足频率显式的总误差界。",
+              "route": "将准最优性与 Theorem 4.1 的 homogenization error 合并，在 $kHmax\\le \\tau $ 下控制两层误差，得到 Theorem 6.5 和 Corollary 6.6。",
+              "evidence": "第 6 节 Theorem 6.5、Corollary 6.6（PDF 第 19--24 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--27 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 51,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

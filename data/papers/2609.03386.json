@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03386",
+  "slug": "2609.03386",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03386:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03386",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Twisted Gradient Flow Approach to Vegetation-Rainfall-Bushfire Interactions Model",
+    "authors": [
+      "Tahir Boudjeriou",
+      "Akio Ito"
+    ],
+    "abstract": "We consider a vegetation-rainfall-bushfire interaction model consisting of two partial differential equations describing the evolutions of bushfire intensity and water availability, together with an ordinary differential equation governing the vegetation density. The main feature of the model is that the ODE contains a nonlocal coefficient multiplying the vegetation density, which makes the mathematical analysis highly nontrivial. In this paper, we regard this nonlocal coefficient as the generator of a deformation of the metric structure of the underlying real Hilbert space. This interpretation enables us to formulate the ODE as a twisted gradient flow on state-dependent Hilbert spaces and to establish the existence of strong solutions to the associated initial-boundary value problem.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03386",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03386",
+    "submittedAt": "2026-09-03T05:39:34Z",
+    "updatedAt": "2026-09-03T05:39:34Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "存在性",
+    "workSummary": "将植被-降雨-灌木火灾模型中的非局部植被系数解释为状态依赖 Hilbert 度量的扭曲，从而把 ODE 分量写成 twisted gradient flow；通过正则化近似、统一估计和极限识别证明初边值问题存在强解。",
+    "techniques": [
+      "扭曲 Hilbert 空间",
+      "梯度流结构",
+      "Galerkin/参数正则化",
+      "统一先验估计",
+      "弱紧性与极限识别"
+    ],
+    "breakthrough": "把非局部系数引起的状态依赖度量显式纳入梯度流结构，使扩散-ODE 耦合系统可以沿同一能量框架完成强解构造。",
+    "limitations": "假设空间维数不超过三、核和初值满足文中正则性/非负性条件；证明是有限时间逐段构造后延拓，不给出任意粗糙数据的强解。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "非局部系数可定义正定的状态依赖内积和扭曲梯度。",
+          "route": "对固定 vegetation 状态构造乘法算子 $M\\delta ,z̄$ 和双线性型，验证其有界性、正定性及时间可微依赖；ODE 分量因此成为相应度量下的梯度方向。",
+          "evidence": "第 2 节 Lemmas 2.1--2.4、Proposition 1（PDF 第 5--13 页）。"
+        },
+        {
+          "claim": "正则化近似系统在固定时间区间存在解并具有统一估计。",
+          "route": "依次正则化非局部系数、ODE 乘积和扩散项，使用 Galerkin/抛物理论构造 AP 系列；Lemmas 2.5--2.13 和第 3 节估计控制各变量的能量与时间导数。",
+          "evidence": "第 2--3 节 Lemmas 2.5--2.13、Propositions 3--7（PDF 第 13--52 页）。"
+        },
+        {
+          "claim": "近似解序列在极限中保持方程的耦合结构。",
+          "route": "利用统一 L2/H1/时间导数界提取弱收敛子列，结合 Aubin--Lions 型紧性和核算子的连续性，将非局部项、ODE 项及初边值条件逐项传到极限。",
+          "evidence": "第 4 节 Lemmas 4.1--4.8（PDF 第 57--68 页）。"
+        },
+        {
+          "claim": "极限解具有强正则性并满足原初边值问题。",
+          "route": "先用极限方程的抛物正则性提升 u,w，再利用扭曲梯度恒等式提升 v 的时间/空间正则性；由 extensibility 和逐段延拓得到 Theorem 1。",
+          "evidence": "第 1 节 Theorem 1（PDF 第 4--5 页）及第 4 节极限识别（PDF 第 57--75 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--75 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 58,
+    "priorityTier": "medium",
+    "priorityReason": "非局部 PDE-ODE 耦合的几何化处理有一定方法新意，但与当前偏微分方程估计主线的直接关联和可复用边界仍需全文判断。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03386:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03386",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Twisted Gradient Flow Approach to Vegetation-Rainfall-Bushfire Interactions Model",
+        "authors": [
+          "Tahir Boudjeriou",
+          "Akio Ito"
+        ],
+        "abstract": "We consider a vegetation-rainfall-bushfire interaction model consisting of two partial differential equations describing the evolutions of bushfire intensity and water availability, together with an ordinary differential equation governing the vegetation density. The main feature of the model is that the ODE contains a nonlocal coefficient multiplying the vegetation density, which makes the mathematical analysis highly nontrivial. In this paper, we regard this nonlocal coefficient as the generator of a deformation of the metric structure of the underlying real Hilbert space. This interpretation enables us to formulate the ODE as a twisted gradient flow on state-dependent Hilbert spaces and to establish the existence of strong solutions to the associated initial-boundary value problem.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03386",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03386",
+        "submittedAt": "2026-09-03T05:39:34Z",
+        "updatedAt": "2026-09-03T05:39:34Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "存在性",
+        "workSummary": "将植被-降雨-灌木火灾模型中的非局部植被系数解释为状态依赖 Hilbert 度量的扭曲，从而把 ODE 分量写成 twisted gradient flow；通过正则化近似、统一估计和极限识别证明初边值问题存在强解。",
+        "techniques": [
+          "扭曲 Hilbert 空间",
+          "梯度流结构",
+          "Galerkin/参数正则化",
+          "统一先验估计",
+          "弱紧性与极限识别"
+        ],
+        "breakthrough": "把非局部系数引起的状态依赖度量显式纳入梯度流结构，使扩散-ODE 耦合系统可以沿同一能量框架完成强解构造。",
+        "limitations": "假设空间维数不超过三、核和初值满足文中正则性/非负性条件；证明是有限时间逐段构造后延拓，不给出任意粗糙数据的强解。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "非局部系数可定义正定的状态依赖内积和扭曲梯度。",
+              "route": "对固定 vegetation 状态构造乘法算子 $M\\delta ,z̄$ 和双线性型，验证其有界性、正定性及时间可微依赖；ODE 分量因此成为相应度量下的梯度方向。",
+              "evidence": "第 2 节 Lemmas 2.1--2.4、Proposition 1（PDF 第 5--13 页）。"
+            },
+            {
+              "claim": "正则化近似系统在固定时间区间存在解并具有统一估计。",
+              "route": "依次正则化非局部系数、ODE 乘积和扩散项，使用 Galerkin/抛物理论构造 AP 系列；Lemmas 2.5--2.13 和第 3 节估计控制各变量的能量与时间导数。",
+              "evidence": "第 2--3 节 Lemmas 2.5--2.13、Propositions 3--7（PDF 第 13--52 页）。"
+            },
+            {
+              "claim": "近似解序列在极限中保持方程的耦合结构。",
+              "route": "利用统一 L2/H1/时间导数界提取弱收敛子列，结合 Aubin--Lions 型紧性和核算子的连续性，将非局部项、ODE 项及初边值条件逐项传到极限。",
+              "evidence": "第 4 节 Lemmas 4.1--4.8（PDF 第 57--68 页）。"
+            },
+            {
+              "claim": "极限解具有强正则性并满足原初边值问题。",
+              "route": "先用极限方程的抛物正则性提升 u,w，再利用扭曲梯度恒等式提升 v 的时间/空间正则性；由 extensibility 和逐段延拓得到 Theorem 1。",
+              "evidence": "第 1 节 Theorem 1（PDF 第 4--5 页）及第 4 节极限识别（PDF 第 57--75 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--75 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 58,
+        "priorityTier": "medium",
+        "priorityReason": "非局部 PDE-ODE 耦合的几何化处理有一定方法新意，但与当前偏微分方程估计主线的直接关联和可复用边界仍需全文判断。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.27935",
+  "slug": "2608.27935",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.27935:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.27935",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global Weighted Gradient Estimates for Double Obstacle Problems with Orlicz Growth",
+    "authors": [
+      "Qi Xiong",
+      "Xing Fu"
+    ],
+    "abstract": "We study an irregular double obstacle problem with Orlicz growth on a bounded nonsmooth domain. The nonlinear operator is assumed to satisfy standard monotonicity and growth conditions, together with a small bounded mean oscillation condition in the spatial variable, while the domain is Reifenberg flat. We establish a global weighted Orlicz estimate for the gradient of the weak solution in terms of the nonhomogeneous datum, the gradients of the two obstacles, and the boundary datum.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.27935",
+    "pdfUrl": "https://arxiv.org/pdf/2608.27935",
+    "submittedAt": "2026-08-28T05:25:51Z",
+    "updatedAt": "2026-08-28T05:25:51Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "Reifenberg 平坦域双障碍问题的全局加权 Orlicz 梯度估计",
+    "workSummary": "正文研究 Reifenberg 平坦有界非光滑域上的双障碍变分不等式，算子具有一般 Orlicz 增长、空间变量小 BMO 振荡，数据包括非齐次项、两个障碍和非零边界值。目标是把解梯度的加权 Orlicz 积分控制在数据梯度的同类积分之下。作者先通过一串比较问题把非零边界和双障碍逐步替换成零边界参考方程，再在内部/边界球上建立 maximal-function 的 $good-\\lambda $ 局部衰减，最后用 Reifenberg 覆盖和加权 Orlicz 超水平集刻画闭合全局估计。",
+    "techniques": [
+      "一般 Orlicz 空间中的单调性与 V 变换",
+      "双障碍到单障碍再到零边界的比较估计",
+      "Reifenberg 平坦边界的局部缩放",
+      "Hardy–Littlewood maximal operator 与 $good-\\lambda $",
+      "Vitali 覆盖及加权 Orlicz 超水平集级数"
+    ],
+    "breakthrough": "Theorem 1.3 给出非零 Dirichlet 边界、双障碍和加权 Orlicz 增长同时存在时的全局 Calderón–Zygmund 型梯度估计。论文的实质是把比较链与 Reifenberg 局部几何$、A_\\Phi $ 权重和 Vitali 迭代接合，允许域非光滑且系数仅小 BMO。",
+    "limitations": "估计要求 N-function 的 $\\Delta _{2}/\\nabla _{2}$、权重 $A_\\Phi 、Reifenberg$ 小平坦常数、算子单调性/增长与小振荡；常数依赖这些结构，结论是先验积分估计而非对障碍接触集的精细正则性。正文没有覆盖临界 Orlicz 增长、大 BMO 振荡或非 Reifenberg 边界。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemmas 3.1–3.5 把原双障碍问题比较到局部零边界参考方程。",
+          "route": "先以 u−h 为可行比较函数控制 w1，再依次放松上障碍得到 w2、去除障碍得到 w3，最后在内部/边界球解冻结系数的 w4；单调性通过 V(Du)−V(Dwi) 的平方差把每一步误差压到 $\\epsilon $。",
+          "evidence": "PDF 第8–12页，Section 3 的 Lemmas 3.1–3.5。"
+        },
+        {
+          "claim": "Lemma 4.1 建立 maximal-function 的局部 $good-\\lambda $ 衰减。",
+          "route": "若一个球内存在一点同时控制 G(|Du|)、数据和障碍 maximal averages，就把比较估计缩放到单位球；参考解的梯度有 $L\\infty $ 界，V 差的 $L^{2}$ 小，于是弱 (1,1) maximal 估计给出高水平集测度小于 $\\epsilon $。",
+          "evidence": "PDF 第13–15页，Section 4 的 Lemma 4.1，式 (4.1)–(4.8)。"
+        },
+        {
+          "claim": "Lemma 2.10–2.13 提供权重与覆盖迭代所需的测度工具。",
+          "route": "$A_q/A_\\Phi $ 权重的自改善把 Lebesgue 球比例转成加权比例；Lemma 2.12 把加权 Orlicz 可积性等价为超水平集级数，Lemma 2.13 对 Reifenberg 球覆盖执行 $good-\\lambda $ 测度传递。",
+          "evidence": "PDF 第6–8页，Section 2 的 Lemmas 2.10–2.13。"
+        },
+        {
+          "claim": "Theorem 1.3 的全局估计由 $good-\\lambda $ 级数闭合。",
+          "route": "把 Lemma 4.1 在一族内部/边界球上迭代，坏集测度按几何级数衰减；用 Lemma 2.12 将超水平集级数转换为 $∫(\\Phi ∘G)(|Du|)\\omega $，再将 $F、D\\psi _{1}、D\\psi _{2}、Dh$ 的项分别保留下来，得到式 (1.7)。",
+          "evidence": "PDF 第4页 Theorem 1.3；第13–24页 Section 4 的覆盖与证明。"
+        },
+        {
+          "claim": "比较误差可在加权 Orlicz 尺度中吸收而不破坏常数。",
+          "route": "Young 共轭不等式把 b(x,F) 与每层比较梯度分开$，\\Delta _{2}/\\nabla _{2}$ 控制缩放后的 G；选择 $\\epsilon $ 后再选 $\\delta $，使所有 V 差和数据项分别小于目标的一半，完成从局部到全局的吸收。",
+          "evidence": "PDF 第8–12页 Lemmas 3.1–3.3 的证明及第13–15页 Lemma 4.1。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查正文、引言、结论、Acknowledgments 和参考文献，并检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "本地缓存 PDF 全文第1–24页，含正文末尾致谢区域及关键词检索。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.27935:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.27935",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global Weighted Gradient Estimates for Double Obstacle Problems with Orlicz Growth",
+        "authors": [
+          "Qi Xiong",
+          "Xing Fu"
+        ],
+        "abstract": "We study an irregular double obstacle problem with Orlicz growth on a bounded nonsmooth domain. The nonlinear operator is assumed to satisfy standard monotonicity and growth conditions, together with a small bounded mean oscillation condition in the spatial variable, while the domain is Reifenberg flat. We establish a global weighted Orlicz estimate for the gradient of the weak solution in terms of the nonhomogeneous datum, the gradients of the two obstacles, and the boundary datum.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.27935",
+        "pdfUrl": "https://arxiv.org/pdf/2608.27935",
+        "submittedAt": "2026-08-28T05:25:51Z",
+        "updatedAt": "2026-08-28T05:25:51Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "Reifenberg 平坦域双障碍问题的全局加权 Orlicz 梯度估计",
+        "workSummary": "正文研究 Reifenberg 平坦有界非光滑域上的双障碍变分不等式，算子具有一般 Orlicz 增长、空间变量小 BMO 振荡，数据包括非齐次项、两个障碍和非零边界值。目标是把解梯度的加权 Orlicz 积分控制在数据梯度的同类积分之下。作者先通过一串比较问题把非零边界和双障碍逐步替换成零边界参考方程，再在内部/边界球上建立 maximal-function 的 $good-\\lambda $ 局部衰减，最后用 Reifenberg 覆盖和加权 Orlicz 超水平集刻画闭合全局估计。",
+        "techniques": [
+          "一般 Orlicz 空间中的单调性与 V 变换",
+          "双障碍到单障碍再到零边界的比较估计",
+          "Reifenberg 平坦边界的局部缩放",
+          "Hardy–Littlewood maximal operator 与 $good-\\lambda $",
+          "Vitali 覆盖及加权 Orlicz 超水平集级数"
+        ],
+        "breakthrough": "Theorem 1.3 给出非零 Dirichlet 边界、双障碍和加权 Orlicz 增长同时存在时的全局 Calderón–Zygmund 型梯度估计。论文的实质是把比较链与 Reifenberg 局部几何$、A_\\Phi $ 权重和 Vitali 迭代接合，允许域非光滑且系数仅小 BMO。",
+        "limitations": "估计要求 N-function 的 $\\Delta _{2}/\\nabla _{2}$、权重 $A_\\Phi 、Reifenberg$ 小平坦常数、算子单调性/增长与小振荡；常数依赖这些结构，结论是先验积分估计而非对障碍接触集的精细正则性。正文没有覆盖临界 Orlicz 增长、大 BMO 振荡或非 Reifenberg 边界。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemmas 3.1–3.5 把原双障碍问题比较到局部零边界参考方程。",
+              "route": "先以 u−h 为可行比较函数控制 w1，再依次放松上障碍得到 w2、去除障碍得到 w3，最后在内部/边界球解冻结系数的 w4；单调性通过 V(Du)−V(Dwi) 的平方差把每一步误差压到 $\\epsilon $。",
+              "evidence": "PDF 第8–12页，Section 3 的 Lemmas 3.1–3.5。"
+            },
+            {
+              "claim": "Lemma 4.1 建立 maximal-function 的局部 $good-\\lambda $ 衰减。",
+              "route": "若一个球内存在一点同时控制 G(|Du|)、数据和障碍 maximal averages，就把比较估计缩放到单位球；参考解的梯度有 $L\\infty $ 界，V 差的 $L^{2}$ 小，于是弱 (1,1) maximal 估计给出高水平集测度小于 $\\epsilon $。",
+              "evidence": "PDF 第13–15页，Section 4 的 Lemma 4.1，式 (4.1)–(4.8)。"
+            },
+            {
+              "claim": "Lemma 2.10–2.13 提供权重与覆盖迭代所需的测度工具。",
+              "route": "$A_q/A_\\Phi $ 权重的自改善把 Lebesgue 球比例转成加权比例；Lemma 2.12 把加权 Orlicz 可积性等价为超水平集级数，Lemma 2.13 对 Reifenberg 球覆盖执行 $good-\\lambda $ 测度传递。",
+              "evidence": "PDF 第6–8页，Section 2 的 Lemmas 2.10–2.13。"
+            },
+            {
+              "claim": "Theorem 1.3 的全局估计由 $good-\\lambda $ 级数闭合。",
+              "route": "把 Lemma 4.1 在一族内部/边界球上迭代，坏集测度按几何级数衰减；用 Lemma 2.12 将超水平集级数转换为 $∫(\\Phi ∘G)(|Du|)\\omega $，再将 $F、D\\psi _{1}、D\\psi _{2}、Dh$ 的项分别保留下来，得到式 (1.7)。",
+              "evidence": "PDF 第4页 Theorem 1.3；第13–24页 Section 4 的覆盖与证明。"
+            },
+            {
+              "claim": "比较误差可在加权 Orlicz 尺度中吸收而不破坏常数。",
+              "route": "Young 共轭不等式把 b(x,F) 与每层比较梯度分开$，\\Delta _{2}/\\nabla _{2}$ 控制缩放后的 G；选择 $\\epsilon $ 后再选 $\\delta $，使所有 V 差和数据项分别小于目标的一半，完成从局部到全局的吸收。",
+              "evidence": "PDF 第8–12页 Lemmas 3.1–3.3 的证明及第13–15页 Lemma 4.1。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查正文、引言、结论、Acknowledgments 和参考文献，并检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "本地缓存 PDF 全文第1–24页，含正文末尾致谢区域及关键词检索。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

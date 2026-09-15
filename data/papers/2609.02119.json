@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02119",
+  "slug": "2609.02119",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02119:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02119",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Time-asymptotic stability of generic Riemann solutions for the system of heat-conductive ideal gas without viscosity",
+    "authors": [
+      "Yilin Guo",
+      "Lin-An Li",
+      "Jiahong Wu",
+      "Xiaojing Xu"
+    ],
+    "abstract": "This paper is concerned with the time-asymptotic stability of the generic Riemann solution for the one-dimensional system of heat-conductive ideal gas without viscosity, where the generic Riemann solution consists of a shock, a contact discontinuity, and a rarefaction wave. We prove that, as time tends to infinity, the solution of the non-viscous and heat-conductive ideal gas system converges uniformly to a composite wave composed of rarefaction wave, viscous contact wave, and viscous shock wave with a time-dependent shift. Motivated by the recent work of Kang-Vasseur-Wang [Arch. Ration. Mech. Anal. 249: 42 (2025)], we overcome the difficulties arising from the concurrence of shock and rarefaction waves for the partially dissipative hyperbolic-parabolic system with dissipation acting only on a single variable. More notably, the absence of velocity dissipation gives rise to new and intrinsic difficulties when handling the terms associated with the density and velocity. To resolve this, we exploit the precise structure of the governing equations and the additional properties of shock waves. Furthermore, we utilize the wave structure of the system without viscosity and perform separate space-time estimates for the density and velocity.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02119",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02119",
+    "submittedAt": "2026-09-02T05:18:40Z",
+    "updatedAt": "2026-09-02T05:18:40Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "稳定性与长时间行为",
+    "workSummary": "论文研究一维无粘性导热理想气体系统中由稀疏波、接触间断和冲击波组成的泛黎曼解。作者构造带时间位移的稀疏波–粘性接触波–粘性冲击波复合剖面，使用相对熵和加权能量估计处理没有速度耗散的困难，并以分裂的时空估计和 Kawashima–Shizuta 型结构闭合高阶能量，最终得到全局解及均匀时间渐近稳定性。",
+    "techniques": [
+      "带位移的复合波与 a-contraction",
+      "相对熵、Poincaré 不等式和激波结构估计",
+      "Kawashima–Shizuta 交叉导数能量法",
+      "Bootstrap 延拓与 Sobolev 长时间衰减"
+    ],
+    "breakthrough": "在动量方程没有黏性耗散的部分耗散系统中，论文仍证明小波强度、小初始扰动下的全局强解收敛到带时间位移的复合波，并恢复密度和速度的高阶控制。",
+    "limitations": "结论针对文中一维无粘性导热理想气体系统、给定三类波的连接关系、小波强度和 $H^1/H^2$ 小初值条件；稳定性通过特定的绝对连续位移函数表达，不能脱离这些结构条件直接推广。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.1 的目标复合波由稀疏波、粘性接触波和带位移 X(t) 的粘性冲击波组成，并满足局部强解的初始框架。",
+          "route": "在 $\\xi =x-\\sigma t$ 坐标中叠加三种波，定义只作用于冲击波的位移并计算残差 $Q_1、Q_2；Proposition$ 3.1 用局部 $H^2$ 理论和正性下界给出该复合背景附近的短时唯一强解。",
+          "evidence": "PDF 第7–8页，第1节 Theorem 1.1 与复合波说明；PDF 第14–16页，第3.1节式(3.1)–(3.11)和 Proposition 3.1。"
+        },
+        {
+          "claim": "Proposition 3.2 和 Proposition 3.3 给出扰动的全局统一能量界，尤其控制了无速度黏性时的低阶相对熵。",
+          "route": "用冲击波权函数和 X(t) 的 a-contraction 组织相对熵；由激波结构恒等式(2.9)把可用的温度耗散转成 Poincaré 不等式所需的好项，再分别估计稀疏波、接触波和冲击波交互残差，得到式(3.17)的可积耗散。",
+          "evidence": "PDF 第10–13页，第2节 Lemma 2.2–2.3及式(2.7)–(2.15)；PDF 第17–18页，第3.3–3.4节 Proposition 3.2–3.3及式(3.17)–(3.20)。"
+        },
+        {
+          "claim": "Sections 4–5 的 Lemmas 4.1、5.1–5.4 闭合密度、速度和温度的高阶估计，从而排除有限时间延拓失效。",
+          "route": "在扰动方程中利用温度方程的耗散和 Poincaré 型界控制低阶项；对质量和动量方程交叉微分，得到耦合波型耗散以补回速度导数，再对一阶时空导数和二阶空间导数分层估计，在小 $\\epsilon _1、\\delta _1$ 下闭合 bootstrap。",
+          "evidence": "PDF 第18–38页，第4节 Lemmas 4.1–4.7 的分解与估计；PDF 第38–52页，第5节 Lemmas 5.1–5.4、Proposition 3.3 的 bootstrap 闭合。"
+        },
+        {
+          "claim": "Theorem 1.1 的全局解满足复合波的均匀时间渐近收敛，并且位移速度趋于零。",
+          "route": "由 Proposition 3.2 的时间可积导数耗散得到扰动导数的 $L^2$ 范数趋于零，再用 Sobolev 不等式取得 $L^\\infty $ 收敛；位移方程的可积控制给出 |Ẋ(t)|→0，因而冲击剖面保留原旅行波形状。",
+          "evidence": "PDF 第7页，第1节 Theorem 1.1 中式(1.17)–(1.20)；PDF 第17–18页，式(3.17)–(3.19)及其关于 Sobolev 不等式的推论。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、References 及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–52页（含 Acknowledgment 与 References）；缓存全文 2609.02119.txt。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02119:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02119",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Time-asymptotic stability of generic Riemann solutions for the system of heat-conductive ideal gas without viscosity",
+        "authors": [
+          "Yilin Guo",
+          "Lin-An Li",
+          "Jiahong Wu",
+          "Xiaojing Xu"
+        ],
+        "abstract": "This paper is concerned with the time-asymptotic stability of the generic Riemann solution for the one-dimensional system of heat-conductive ideal gas without viscosity, where the generic Riemann solution consists of a shock, a contact discontinuity, and a rarefaction wave. We prove that, as time tends to infinity, the solution of the non-viscous and heat-conductive ideal gas system converges uniformly to a composite wave composed of rarefaction wave, viscous contact wave, and viscous shock wave with a time-dependent shift. Motivated by the recent work of Kang-Vasseur-Wang [Arch. Ration. Mech. Anal. 249: 42 (2025)], we overcome the difficulties arising from the concurrence of shock and rarefaction waves for the partially dissipative hyperbolic-parabolic system with dissipation acting only on a single variable. More notably, the absence of velocity dissipation gives rise to new and intrinsic difficulties when handling the terms associated with the density and velocity. To resolve this, we exploit the precise structure of the governing equations and the additional properties of shock waves. Furthermore, we utilize the wave structure of the system without viscosity and perform separate space-time estimates for the density and velocity.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02119",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02119",
+        "submittedAt": "2026-09-02T05:18:40Z",
+        "updatedAt": "2026-09-02T05:18:40Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "稳定性与长时间行为",
+        "workSummary": "论文研究一维无粘性导热理想气体系统中由稀疏波、接触间断和冲击波组成的泛黎曼解。作者构造带时间位移的稀疏波–粘性接触波–粘性冲击波复合剖面，使用相对熵和加权能量估计处理没有速度耗散的困难，并以分裂的时空估计和 Kawashima–Shizuta 型结构闭合高阶能量，最终得到全局解及均匀时间渐近稳定性。",
+        "techniques": [
+          "带位移的复合波与 a-contraction",
+          "相对熵、Poincaré 不等式和激波结构估计",
+          "Kawashima–Shizuta 交叉导数能量法",
+          "Bootstrap 延拓与 Sobolev 长时间衰减"
+        ],
+        "breakthrough": "在动量方程没有黏性耗散的部分耗散系统中，论文仍证明小波强度、小初始扰动下的全局强解收敛到带时间位移的复合波，并恢复密度和速度的高阶控制。",
+        "limitations": "结论针对文中一维无粘性导热理想气体系统、给定三类波的连接关系、小波强度和 $H^1/H^2$ 小初值条件；稳定性通过特定的绝对连续位移函数表达，不能脱离这些结构条件直接推广。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.1 的目标复合波由稀疏波、粘性接触波和带位移 X(t) 的粘性冲击波组成，并满足局部强解的初始框架。",
+              "route": "在 $\\xi =x-\\sigma t$ 坐标中叠加三种波，定义只作用于冲击波的位移并计算残差 $Q_1、Q_2；Proposition$ 3.1 用局部 $H^2$ 理论和正性下界给出该复合背景附近的短时唯一强解。",
+              "evidence": "PDF 第7–8页，第1节 Theorem 1.1 与复合波说明；PDF 第14–16页，第3.1节式(3.1)–(3.11)和 Proposition 3.1。"
+            },
+            {
+              "claim": "Proposition 3.2 和 Proposition 3.3 给出扰动的全局统一能量界，尤其控制了无速度黏性时的低阶相对熵。",
+              "route": "用冲击波权函数和 X(t) 的 a-contraction 组织相对熵；由激波结构恒等式(2.9)把可用的温度耗散转成 Poincaré 不等式所需的好项，再分别估计稀疏波、接触波和冲击波交互残差，得到式(3.17)的可积耗散。",
+              "evidence": "PDF 第10–13页，第2节 Lemma 2.2–2.3及式(2.7)–(2.15)；PDF 第17–18页，第3.3–3.4节 Proposition 3.2–3.3及式(3.17)–(3.20)。"
+            },
+            {
+              "claim": "Sections 4–5 的 Lemmas 4.1、5.1–5.4 闭合密度、速度和温度的高阶估计，从而排除有限时间延拓失效。",
+              "route": "在扰动方程中利用温度方程的耗散和 Poincaré 型界控制低阶项；对质量和动量方程交叉微分，得到耦合波型耗散以补回速度导数，再对一阶时空导数和二阶空间导数分层估计，在小 $\\epsilon _1、\\delta _1$ 下闭合 bootstrap。",
+              "evidence": "PDF 第18–38页，第4节 Lemmas 4.1–4.7 的分解与估计；PDF 第38–52页，第5节 Lemmas 5.1–5.4、Proposition 3.3 的 bootstrap 闭合。"
+            },
+            {
+              "claim": "Theorem 1.1 的全局解满足复合波的均匀时间渐近收敛，并且位移速度趋于零。",
+              "route": "由 Proposition 3.2 的时间可积导数耗散得到扰动导数的 $L^2$ 范数趋于零，再用 Sobolev 不等式取得 $L^\\infty $ 收敛；位移方程的可积控制给出 |Ẋ(t)|→0，因而冲击剖面保留原旅行波形状。",
+              "evidence": "PDF 第7页，第1节 Theorem 1.1 中式(1.17)–(1.20)；PDF 第17–18页，式(3.17)–(3.19)及其关于 Sobolev 不等式的推论。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgment、References 及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–52页（含 Acknowledgment 与 References）；缓存全文 2609.02119.txt。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

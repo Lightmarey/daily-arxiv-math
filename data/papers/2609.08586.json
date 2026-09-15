@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08586",
+  "slug": "2609.08586",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08586:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08586",
+    "version": 1,
+    "entryKind": "new",
+    "title": "On the Invertibility of the Potential-Density Mapping for the Vlasov-Poisson System in Analytic Spaces",
+    "authors": [
+      "Simon Le Bouëdec"
+    ],
+    "abstract": "We develop the mathematical analysis of the Time-Dependent Density Functional Theory introduced by Manfredi [J. Plasma Phys., 86.2 (2020), 825860201] in the setting of Vlasov equations with a time-dependent exterior potential. In this context, we establish the invertibility of the potential-density mapping for the Vlasov-Poisson system on $\\mathbb{T}^d \\times \\mathbb{R}^d$ when the exterior potential is (real-)analytic in the space variable. We also recover a Runge-Gross type Theorem for the Vlasov-Poisson equation for smooth (real-)analytic in time exterior potential. The surjectivity of the potential-density mapping is an inverse problem for the Vlasov-Poisson equation: we find the electric field that generates a given density profile on a given time interval.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08586",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08586",
+    "submittedAt": "2026-09-08T11:22:36Z",
+    "updatedAt": "2026-09-08T11:22:36Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究环面乘速度空间上的 Vlasov-Poisson 势-密度映射。空间变量解析的情形下，作者用质量守恒和动量守恒导出外势差满足带密度权的椭圆方程，再对两条相同密度解的差在解析范数中做时间依赖半径的 Gronwall 估计，证明映射单射；时间解析情形通过逐阶 Taylor 系数恢复 Runge-Gross 型结论。对给定目标密度，作者反向耦合 Vlasov 方程和椭圆外势方程，以 Cauchy-Kowalevski 型迭代构造势，证明局部满射，并给出有限正则性逆映射非 Hölder 的障碍。",
+    "techniques": [
+      "Vlasov 守恒律与椭圆耦合",
+      "时间依赖解析范数",
+      "解析半径吸收导数损失",
+      "Gronwall 唯一性估计",
+      "Cauchy-Kowalevski 型迭代"
+    ],
+    "breakthrough": "在空间解析外势下同时建立势-密度映射的单射和局部满射，并将解析半径的损失吸收机制明确化；同时证明有限 Sobolev 正则性下逆映射甚至不具 Hölder 连续性。",
+    "limitations": "单射定理要求解析空间速度正则性和密度正下界，满射要求目标密度满足兼容条件、解析界及正下界，只在短时间区间构造外势。有限正则性结果反而显示逆问题不适定，不能推广为一般 Sobolev 框架下的稳定反演。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "相同初值和相同密度的两条 Vlasov-Poisson 解，其外势梯度相同。",
+          "route": "对解差 g 积分速度变量，连续性方程给出零散度电流；再次对时间求导得到动量方程，结合密度加权椭圆关系将外势差梯度表示为 K[g] 的二阶导数。",
+          "evidence": "PDF 第 8 页 sketch；第 11-13 页 equation (12)、system (13) 与 Theorem 2 proof。"
+        },
+        {
+          "claim": "解析范数中解差 g 必须恒为零，从而证明 Theorem 2 的单射性。",
+          "route": "对 system (13) 的 Fourier 表达计算解析范数能量导数；椭圆关系带来的一个导数损失由线性递减的解析半径 lambda(t) 提供的半范数吸收，其余卷积项用 Lemmas 11-13 控制，Gronwall 从零初值推出 $g=0$。",
+          "evidence": "PDF 第 9-11 页 Lemmas 11-13、Proposition 14；第 11-14 页 equation (13) 的 analytic estimate 与 Theorem 2 proof。"
+        },
+        {
+          "claim": "时间光滑且密度相同的两外势之差在时间上只能是空间常数。",
+          "route": "在 $t=0$ 处反复对 Vlasov 方程和密度守恒关系求时间导数，动量矩条件保证每阶项有意义；递归得到外势差各阶空间梯度为零，若时间解析则 Taylor 系数拼成只依赖时间的 C(t)。",
+          "evidence": "PDF 第 6 页 Theorem 4；第 9 页 Section 2.3 proof sketch；第 14-16 页 Section 5。"
+        },
+        {
+          "claim": "满足兼容条件的正解析目标密度可由某个外势生成，势-密度映射局部满射。",
+          "route": "将未知外势写入耦合系统 (5)，以目标密度构成的椭圆方程求每一步势；解析 Cauchy-Kowalevski 迭代同时控制 Vlasov 解与椭圆正则性，逐步缩小解析半径并得到短时间存在。",
+          "evidence": "PDF 第 6-7 页 Theorem 7；第 9-10 页 Proposition 14；第 16-18 页 Section 6.1 proof of Theorem 7。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、主定理、解析估计、构造、结论、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-19 页全文检索及第 18-19 页结尾、References。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08586:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08586",
+        "version": 1,
+        "entryKind": "new",
+        "title": "On the Invertibility of the Potential-Density Mapping for the Vlasov-Poisson System in Analytic Spaces",
+        "authors": [
+          "Simon Le Bouëdec"
+        ],
+        "abstract": "We develop the mathematical analysis of the Time-Dependent Density Functional Theory introduced by Manfredi [J. Plasma Phys., 86.2 (2020), 825860201] in the setting of Vlasov equations with a time-dependent exterior potential. In this context, we establish the invertibility of the potential-density mapping for the Vlasov-Poisson system on $\\mathbb{T}^d \\times \\mathbb{R}^d$ when the exterior potential is (real-)analytic in the space variable. We also recover a Runge-Gross type Theorem for the Vlasov-Poisson equation for smooth (real-)analytic in time exterior potential. The surjectivity of the potential-density mapping is an inverse problem for the Vlasov-Poisson equation: we find the electric field that generates a given density profile on a given time interval.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08586",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08586",
+        "submittedAt": "2026-09-08T11:22:36Z",
+        "updatedAt": "2026-09-08T11:22:36Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究环面乘速度空间上的 Vlasov-Poisson 势-密度映射。空间变量解析的情形下，作者用质量守恒和动量守恒导出外势差满足带密度权的椭圆方程，再对两条相同密度解的差在解析范数中做时间依赖半径的 Gronwall 估计，证明映射单射；时间解析情形通过逐阶 Taylor 系数恢复 Runge-Gross 型结论。对给定目标密度，作者反向耦合 Vlasov 方程和椭圆外势方程，以 Cauchy-Kowalevski 型迭代构造势，证明局部满射，并给出有限正则性逆映射非 Hölder 的障碍。",
+        "techniques": [
+          "Vlasov 守恒律与椭圆耦合",
+          "时间依赖解析范数",
+          "解析半径吸收导数损失",
+          "Gronwall 唯一性估计",
+          "Cauchy-Kowalevski 型迭代"
+        ],
+        "breakthrough": "在空间解析外势下同时建立势-密度映射的单射和局部满射，并将解析半径的损失吸收机制明确化；同时证明有限 Sobolev 正则性下逆映射甚至不具 Hölder 连续性。",
+        "limitations": "单射定理要求解析空间速度正则性和密度正下界，满射要求目标密度满足兼容条件、解析界及正下界，只在短时间区间构造外势。有限正则性结果反而显示逆问题不适定，不能推广为一般 Sobolev 框架下的稳定反演。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "相同初值和相同密度的两条 Vlasov-Poisson 解，其外势梯度相同。",
+              "route": "对解差 g 积分速度变量，连续性方程给出零散度电流；再次对时间求导得到动量方程，结合密度加权椭圆关系将外势差梯度表示为 K[g] 的二阶导数。",
+              "evidence": "PDF 第 8 页 sketch；第 11-13 页 equation (12)、system (13) 与 Theorem 2 proof。"
+            },
+            {
+              "claim": "解析范数中解差 g 必须恒为零，从而证明 Theorem 2 的单射性。",
+              "route": "对 system (13) 的 Fourier 表达计算解析范数能量导数；椭圆关系带来的一个导数损失由线性递减的解析半径 lambda(t) 提供的半范数吸收，其余卷积项用 Lemmas 11-13 控制，Gronwall 从零初值推出 $g=0$。",
+              "evidence": "PDF 第 9-11 页 Lemmas 11-13、Proposition 14；第 11-14 页 equation (13) 的 analytic estimate 与 Theorem 2 proof。"
+            },
+            {
+              "claim": "时间光滑且密度相同的两外势之差在时间上只能是空间常数。",
+              "route": "在 $t=0$ 处反复对 Vlasov 方程和密度守恒关系求时间导数，动量矩条件保证每阶项有意义；递归得到外势差各阶空间梯度为零，若时间解析则 Taylor 系数拼成只依赖时间的 C(t)。",
+              "evidence": "PDF 第 6 页 Theorem 4；第 9 页 Section 2.3 proof sketch；第 14-16 页 Section 5。"
+            },
+            {
+              "claim": "满足兼容条件的正解析目标密度可由某个外势生成，势-密度映射局部满射。",
+              "route": "将未知外势写入耦合系统 (5)，以目标密度构成的椭圆方程求每一步势；解析 Cauchy-Kowalevski 迭代同时控制 Vlasov 解与椭圆正则性，逐步缩小解析半径并得到短时间存在。",
+              "evidence": "PDF 第 6-7 页 Theorem 7；第 9-10 页 Proposition 14；第 16-18 页 Section 6.1 proof of Theorem 7。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、主定理、解析估计、构造、结论、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-19 页全文检索及第 18-19 页结尾、References。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

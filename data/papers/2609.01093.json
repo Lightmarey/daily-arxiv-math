@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.01093",
+  "slug": "2609.01093",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.01093:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.01093",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Ideal MHD below the classical well-posedness threshold",
+    "authors": [
+      "Matteo Giardi"
+    ],
+    "abstract": "We establish local existence and uniqueness of solutions for the ideal incompressible magnetohydrodynamics system posed on $[0,T]\\times\\mathbb{R}^n$, $n\\ge2$, with a nonzero constant initial magnetic field $\\mathbf{B}_0$ and arbitrary divergence-free velocity data $v_0\\in H^s$, in the range $(n+1)/2<s\\le n/2+1$. The proof uses a Lagrangian wave--Hodge reformulation and exploits an Alfvén null--structure hidden in the pressure forcing. In particular, the constructed Eulerian solutions are induced by a bi-Lipschitz measure-preserving flow map. Zhang first identified this null-structure in \\cite{Zhang2024}; the present work provides a self-contained bridge from that Lagrangian theory to the Eulerian Cauchy problem.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.01093",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01093",
+    "submittedAt": "2026-09-01T11:33:20Z",
+    "updatedAt": "2026-09-01T11:33:20Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "低于经典阈值的理想 MHD 局部适定性",
+    "workSummary": "论文在非零常磁场背景下研究理想不可压 MHD 的低正则局部 Cauchy 问题。作者用拉格朗日流把系统改写成 wave–Hodge 方程，借助 Alfvén null 结构、各向异性波空间和 Hodge 椭圆估计建立辅助系统的压缩映射；随后恢复行列式约束、回到 Euler 变量并用压力表示和差分方程证明唯一性，达到 s>(n+1)/2 的正则阈值。",
+    "techniques": [
+      "拉格朗日 wave–Hodge 重写",
+      "Alfvén null 结构和双曲估计",
+      "各向异性 Sobolev 空间",
+      "Hodge 椭圆估计与压缩映射"
+    ],
+    "breakthrough": "论文把常磁场诱导的 Alfvén 传播结构嵌入低正则拉格朗日框架，使速度初值只需处在 s>(n+1)/2 的范围仍能闭合局部存在和唯一性；关键是通过 Hodge 约束控制压力而不额外消耗经典阈值以上的导数。",
+    "limitations": "结果是小时间局部理论，要求磁场背景为非零常向量、速度初值散度自由，并依赖所选各向异性波空间和 bi-Lipschitz 流映射；没有给出全局存在、零背景磁场或更低正则范围的结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 3.2–3.4 将拉格朗日坐标中的压力梯度唯一表示为 metric Hodge 系统的解，并把理想 MHD 化为 $□w=-F[dw]$ 的 wave–Hodge 辅助系统。",
+          "route": "对 bi-Lipschitz 流的度量 Hodge 方程使用共轭 Riesz 势和 Hardy–Littlewood–Sobolev 得到唯一 L4 向量场；再利用 frozen-in 磁场恒等式和 Elsasser 场，把 MHD 的非线性压力项收集为 Q[dw]，得到波方程与 Hodge 约束。",
+          "evidence": "PDF 第15–18页 Section 3 Lemmas 3.2–3.4；式(3.8)–(3.15)给出 Hodge 求解、弱拉回演算、null 压力项和辅助系统。"
+        },
+        {
+          "claim": "Proposition 5.8 及相关 Lemmas 5.1–5.7 为双线性 null 形式提供低正则的波空间估计，获得比直接乘积更高的 Alfvén 共振增益。",
+          "route": "先在时空 Fourier 变量中分解常磁场波算子，再用共振恒等式识别 Q0 的符号因子；按因子频率切分并把 null 权重分配到各向异性时间空间，最后以局部振子估计和 Schur 型求和闭合核心双线性界。",
+          "evidence": "PDF 第22–26页 Section 5 Lemmas 5.1–5.7、Proposition 5.8；式(5.1)–(5.8)及其证明展示 Fourier 表示、共振恒等式与核心估计。"
+        },
+        {
+          "claim": "Lemmas 6.2–6.4 建立度量系数和 Hodge 向量场的非线性椭圆估计，使辅助系统的 forcing 在选定各向异性空间中满足 Lipschitz 控制。",
+          "route": "先用矩阵 Neumann 展开控制 $K=(Id+U)^{-1}$ 和 Jacobian，再通过 Hodge 系统的共轭弱形式、乘积代数和 null-form 右端的导数分配，得到 F[U] 及其一阶导数估计；这些估计把几何系数依赖封装成局部小范数映射。",
+          "evidence": "PDF 第27–31页 Section 6 Lemmas 6.1–6.4；式(6.5)–(6.11)及 Lemma 6.4 的三项结论给出系数、一般右端和 null 右端估计。"
+        },
+        {
+          "claim": "Lemmas 7.1–7.2 与 Theorem 7.3 通过自映射和压缩映射得到辅助系统解，Proposition 8.1 恢复 det $dX=1，Proposition$ 8.5 完成 Euler MHD 的弱强唯一性。",
+          "route": "在由线性解和初值范数确定的小球上，用 Lemma 6.4 控制映射值并估计两次迭代差，Banach 不动点给出唯一 U；精确性和 Jacobi 恒等式传播体积约束，最后将解拉回 Euler 变量、用压力的 Riesz 表示和差分 wave–Hodge 方程消除两解差异。",
+          "evidence": "PDF 第32–38页 Section 7 Lemmas 7.1–7.2、Theorem 7.3；PDF 第38–49页 Section 8 Proposition 8.1、Lemma 8.4、Proposition 8.5 及 Theorem 1.1 的回代证明。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–51页（含作者致谢和 References）；缓存全文 2609.01093.txt。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01093:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.01093",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Ideal MHD below the classical well-posedness threshold",
+        "authors": [
+          "Matteo Giardi"
+        ],
+        "abstract": "We establish local existence and uniqueness of solutions for the ideal incompressible magnetohydrodynamics system posed on $[0,T]\\times\\mathbb{R}^n$, $n\\ge2$, with a nonzero constant initial magnetic field $\\mathbf{B}_0$ and arbitrary divergence-free velocity data $v_0\\in H^s$, in the range $(n+1)/2<s\\le n/2+1$. The proof uses a Lagrangian wave--Hodge reformulation and exploits an Alfvén null--structure hidden in the pressure forcing. In particular, the constructed Eulerian solutions are induced by a bi-Lipschitz measure-preserving flow map. Zhang first identified this null-structure in \\cite{Zhang2024}; the present work provides a self-contained bridge from that Lagrangian theory to the Eulerian Cauchy problem.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.01093",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01093",
+        "submittedAt": "2026-09-01T11:33:20Z",
+        "updatedAt": "2026-09-01T11:33:20Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "低于经典阈值的理想 MHD 局部适定性",
+        "workSummary": "论文在非零常磁场背景下研究理想不可压 MHD 的低正则局部 Cauchy 问题。作者用拉格朗日流把系统改写成 wave–Hodge 方程，借助 Alfvén null 结构、各向异性波空间和 Hodge 椭圆估计建立辅助系统的压缩映射；随后恢复行列式约束、回到 Euler 变量并用压力表示和差分方程证明唯一性，达到 s>(n+1)/2 的正则阈值。",
+        "techniques": [
+          "拉格朗日 wave–Hodge 重写",
+          "Alfvén null 结构和双曲估计",
+          "各向异性 Sobolev 空间",
+          "Hodge 椭圆估计与压缩映射"
+        ],
+        "breakthrough": "论文把常磁场诱导的 Alfvén 传播结构嵌入低正则拉格朗日框架，使速度初值只需处在 s>(n+1)/2 的范围仍能闭合局部存在和唯一性；关键是通过 Hodge 约束控制压力而不额外消耗经典阈值以上的导数。",
+        "limitations": "结果是小时间局部理论，要求磁场背景为非零常向量、速度初值散度自由，并依赖所选各向异性波空间和 bi-Lipschitz 流映射；没有给出全局存在、零背景磁场或更低正则范围的结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 3.2–3.4 将拉格朗日坐标中的压力梯度唯一表示为 metric Hodge 系统的解，并把理想 MHD 化为 $□w=-F[dw]$ 的 wave–Hodge 辅助系统。",
+              "route": "对 bi-Lipschitz 流的度量 Hodge 方程使用共轭 Riesz 势和 Hardy–Littlewood–Sobolev 得到唯一 L4 向量场；再利用 frozen-in 磁场恒等式和 Elsasser 场，把 MHD 的非线性压力项收集为 Q[dw]，得到波方程与 Hodge 约束。",
+              "evidence": "PDF 第15–18页 Section 3 Lemmas 3.2–3.4；式(3.8)–(3.15)给出 Hodge 求解、弱拉回演算、null 压力项和辅助系统。"
+            },
+            {
+              "claim": "Proposition 5.8 及相关 Lemmas 5.1–5.7 为双线性 null 形式提供低正则的波空间估计，获得比直接乘积更高的 Alfvén 共振增益。",
+              "route": "先在时空 Fourier 变量中分解常磁场波算子，再用共振恒等式识别 Q0 的符号因子；按因子频率切分并把 null 权重分配到各向异性时间空间，最后以局部振子估计和 Schur 型求和闭合核心双线性界。",
+              "evidence": "PDF 第22–26页 Section 5 Lemmas 5.1–5.7、Proposition 5.8；式(5.1)–(5.8)及其证明展示 Fourier 表示、共振恒等式与核心估计。"
+            },
+            {
+              "claim": "Lemmas 6.2–6.4 建立度量系数和 Hodge 向量场的非线性椭圆估计，使辅助系统的 forcing 在选定各向异性空间中满足 Lipschitz 控制。",
+              "route": "先用矩阵 Neumann 展开控制 $K=(Id+U)^{-1}$ 和 Jacobian，再通过 Hodge 系统的共轭弱形式、乘积代数和 null-form 右端的导数分配，得到 F[U] 及其一阶导数估计；这些估计把几何系数依赖封装成局部小范数映射。",
+              "evidence": "PDF 第27–31页 Section 6 Lemmas 6.1–6.4；式(6.5)–(6.11)及 Lemma 6.4 的三项结论给出系数、一般右端和 null 右端估计。"
+            },
+            {
+              "claim": "Lemmas 7.1–7.2 与 Theorem 7.3 通过自映射和压缩映射得到辅助系统解，Proposition 8.1 恢复 det $dX=1，Proposition$ 8.5 完成 Euler MHD 的弱强唯一性。",
+              "route": "在由线性解和初值范数确定的小球上，用 Lemma 6.4 控制映射值并估计两次迭代差，Banach 不动点给出唯一 U；精确性和 Jacobi 恒等式传播体积约束，最后将解拉回 Euler 变量、用压力的 Riesz 表示和差分 wave–Hodge 方程消除两解差异。",
+              "evidence": "PDF 第32–38页 Section 7 Lemmas 7.1–7.2、Theorem 7.3；PDF 第38–49页 Section 8 Proposition 8.1、Lemma 8.4、Proposition 8.5 及 Theorem 1.1 的回代证明。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–51页（含作者致谢和 References）；缓存全文 2609.01093.txt。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

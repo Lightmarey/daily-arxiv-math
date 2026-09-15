@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28459",
+  "slug": "2608.28459",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28459:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28459",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Spectral gap for the three-dimensional damped cubic wave equation with degenerate noise",
+    "authors": [
+      "Rongchang Liu",
+      "Kening Lu"
+    ],
+    "abstract": "We establish a weighted Wasserstein spectral gap for the three-dimensional damped cubic wave equation with genuinely finite rank Brownian forcing. Under a saturation condition, the gap holds with respect to the negative phase topology $\\mathcal E_s=H^{-s}\\times H^{-1-s}$ for every $0<s<1/2$, from which we deduce unique ergodicity and exponential mixing in the energy topology. Sharp geometric characterizations of the saturation condition are also obtained. The method we develop is a stable--compact asymptotic coupling mechanism for hypoelliptic dissipative SPDEs beyond the parabolic setting. Instead of relying on positive time smoothing or asymptotic gradient estimates, it reduces the infinite-dimensional obstruction to contraction to a compact defect in a weaker coupling topology. Dense Malliavin range then permits this defect to be compensated by a finite dimensional Cameron--Martin shift, producing a finite distance contraction on bounded Lyapunov cores. Together with a separate high energy contraction from dissipation, this yields a global weighted Wasserstein spectral gap.",
+    "categories": [
+      "math.AP",
+      "math.PR"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28459",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28459",
+    "submittedAt": "2026-08-28T15:49:00Z",
+    "updatedAt": "2026-08-28T15:49:00Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "theoretical",
+    "workSummary": "论文研究三维环面上有限秩布朗强迫的阻尼立方波方程，目标是在负相位空间拓扑的加权 Wasserstein 距离中证明谱隙与指数混合。正文把耦合拆成稳定线性半群和紧性缺陷，利用饱和条件产生有限维 Cameron–Martin 补偿，并在高能量区建立收缩；随后通过伴随方程的精确零传播证明 Malliavin 导数满稠密值域，最后用可控性与弱 Harris 论证把这些机制合并成唯一不变测度和谱隙。",
+    "techniques": [
+      "负 Sobolev 相位空间与加权 Wasserstein 距离",
+      "稳定–紧性渐近耦合",
+      "Malliavin 导数稠密值域与伴随零传播",
+      "Fourier 饱和递归和 Agrachev–Sarychev 型短时缩放",
+      "弱 Harris 定理与能量 Lyapunov 权重"
+    ],
+    "breakthrough": "在三维立方非线性和有限秩噪声下，正文证明只要强迫剖面的饱和闭包满足密度条件，即使噪声不是逐点非退化，也能用紧性缺陷补偿加稠密 Malliavin 范围获得加权 Wasserstein 谱隙；同时给出 Fourier 强迫的饱和几何刻画。",
+    "limitations": "结论依赖阻尼系数的正下界、立方波能量框架、0<s<1/2 的负相位拓扑以及饱和条件。噪声秩必须通过乘积递归生成稠密剖面；正文没有把谱隙结论扩展到无阻尼、临界 Sobolev 指数或不满足该密度条件的强迫。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "抽象马尔可夫链满足加权 Wasserstein 谱隙。",
+          "route": "先把端点导数分解为指数衰减的稳定部分和可由有限维 Cameron–Martin 位移补偿的紧性部分，再在低能量紧核上用弱 Harris 可达性、在高能量区用 Lyapunov 收缩拼接。",
+          "evidence": "PDF 第8页定理3.6给出稳定–紧性谱隙准则；PDF 第14–15页证明中完成紧核耦合、能量收缩和加权弱 Harris 合并。"
+        },
+        {
+          "claim": "波方程存在不变测度并具备所需能量矩。",
+          "route": "利用阻尼半群的指数稳定性控制线性尾部，用条件块矩估计吸收随机卷积，再以渐近紧性和时间平均的紧性提取不变测度。",
+          "evidence": "PDF 第16页引理4.1和命题4.2建立半群衰减及块矩界；PDF 第17–19页引理4.3、命题4.4–4.5完成渐近紧性、不变测度和驻态 Sobolev 正则性。"
+        },
+        {
+          "claim": "非线性流的端点差满足稳定–紧性分解。",
+          "route": "对两条解写精确差分方程，把线性阻尼波传播器作为稳定项；在有限时间区间用 Sobolev 乘积估计控制立方差，把含解的积分项通过 Rellich 紧嵌入转成紧算子。",
+          "evidence": "PDF 第20页给出差分方程和端点传播器；PDF 第20–21页命题4.6证明分解，并明确使用分数 Leibniz 估计与 Rellich 紧性。"
+        },
+        {
+          "claim": "Malliavin 导数的端点值域在负相位空间中稠密。",
+          "route": "把值域的正交元转成伴随方程末端数据；噪声方向为零时，引理4.8逐次微分把零性沿饱和递归传播到所有生成剖面，密度再迫使末端伴随变量为零。",
+          "evidence": "PDF 第22–23页引理4.7–4.8给出正则性和精确零传播；PDF 第23页定理4.9用伴随对偶性、饱和递归和生成剖面密度证明(4.25)。"
+        },
+        {
+          "claim": "饱和强迫产生任意相空间平移并推出不可约性。",
+          "route": "短时控制先生成速度平移，再以两个缩放极限把速度平移变成位移平移，并用立方极化恒等式生成新的乘积剖面；有限复合逼近任意平移后得到开集正概率。",
+          "evidence": "PDF 第24–27页引理4.10–4.13给出半群短时估计和两种缩放极限；PDF 第27–29页命题4.14及定理4.15–4.16完成平移逼近、拓扑不可约和有界能量集上的一致可达。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在正文末尾“Statements and declarations”明确写明使用 OpenAI ChatGPT 协助 proof auditing 和 manuscript preparation，并声明作者对数学内容负责；这属于与证明核查和论文制作直接相关的披露。全文同时核查了摘要、正文、致谢/声明、参考文献及末页，未把研究主题中的普通“AI”词形或参考文献当作披露。",
+    "aiEvidenceSource": "PDF 第51页末尾“Statements and declarations / Use of generative artificial intelligence”；全文缓存逐页检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly，并人工判读命中上下文。",
+    "priorityScore": 77,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28459:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28459",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Spectral gap for the three-dimensional damped cubic wave equation with degenerate noise",
+        "authors": [
+          "Rongchang Liu",
+          "Kening Lu"
+        ],
+        "abstract": "We establish a weighted Wasserstein spectral gap for the three-dimensional damped cubic wave equation with genuinely finite rank Brownian forcing. Under a saturation condition, the gap holds with respect to the negative phase topology $\\mathcal E_s=H^{-s}\\times H^{-1-s}$ for every $0<s<1/2$, from which we deduce unique ergodicity and exponential mixing in the energy topology. Sharp geometric characterizations of the saturation condition are also obtained. The method we develop is a stable--compact asymptotic coupling mechanism for hypoelliptic dissipative SPDEs beyond the parabolic setting. Instead of relying on positive time smoothing or asymptotic gradient estimates, it reduces the infinite-dimensional obstruction to contraction to a compact defect in a weaker coupling topology. Dense Malliavin range then permits this defect to be compensated by a finite dimensional Cameron--Martin shift, producing a finite distance contraction on bounded Lyapunov cores. Together with a separate high energy contraction from dissipation, this yields a global weighted Wasserstein spectral gap.",
+        "categories": [
+          "math.AP",
+          "math.PR"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28459",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28459",
+        "submittedAt": "2026-08-28T15:49:00Z",
+        "updatedAt": "2026-08-28T15:49:00Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "theoretical",
+        "workSummary": "论文研究三维环面上有限秩布朗强迫的阻尼立方波方程，目标是在负相位空间拓扑的加权 Wasserstein 距离中证明谱隙与指数混合。正文把耦合拆成稳定线性半群和紧性缺陷，利用饱和条件产生有限维 Cameron–Martin 补偿，并在高能量区建立收缩；随后通过伴随方程的精确零传播证明 Malliavin 导数满稠密值域，最后用可控性与弱 Harris 论证把这些机制合并成唯一不变测度和谱隙。",
+        "techniques": [
+          "负 Sobolev 相位空间与加权 Wasserstein 距离",
+          "稳定–紧性渐近耦合",
+          "Malliavin 导数稠密值域与伴随零传播",
+          "Fourier 饱和递归和 Agrachev–Sarychev 型短时缩放",
+          "弱 Harris 定理与能量 Lyapunov 权重"
+        ],
+        "breakthrough": "在三维立方非线性和有限秩噪声下，正文证明只要强迫剖面的饱和闭包满足密度条件，即使噪声不是逐点非退化，也能用紧性缺陷补偿加稠密 Malliavin 范围获得加权 Wasserstein 谱隙；同时给出 Fourier 强迫的饱和几何刻画。",
+        "limitations": "结论依赖阻尼系数的正下界、立方波能量框架、0<s<1/2 的负相位拓扑以及饱和条件。噪声秩必须通过乘积递归生成稠密剖面；正文没有把谱隙结论扩展到无阻尼、临界 Sobolev 指数或不满足该密度条件的强迫。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "抽象马尔可夫链满足加权 Wasserstein 谱隙。",
+              "route": "先把端点导数分解为指数衰减的稳定部分和可由有限维 Cameron–Martin 位移补偿的紧性部分，再在低能量紧核上用弱 Harris 可达性、在高能量区用 Lyapunov 收缩拼接。",
+              "evidence": "PDF 第8页定理3.6给出稳定–紧性谱隙准则；PDF 第14–15页证明中完成紧核耦合、能量收缩和加权弱 Harris 合并。"
+            },
+            {
+              "claim": "波方程存在不变测度并具备所需能量矩。",
+              "route": "利用阻尼半群的指数稳定性控制线性尾部，用条件块矩估计吸收随机卷积，再以渐近紧性和时间平均的紧性提取不变测度。",
+              "evidence": "PDF 第16页引理4.1和命题4.2建立半群衰减及块矩界；PDF 第17–19页引理4.3、命题4.4–4.5完成渐近紧性、不变测度和驻态 Sobolev 正则性。"
+            },
+            {
+              "claim": "非线性流的端点差满足稳定–紧性分解。",
+              "route": "对两条解写精确差分方程，把线性阻尼波传播器作为稳定项；在有限时间区间用 Sobolev 乘积估计控制立方差，把含解的积分项通过 Rellich 紧嵌入转成紧算子。",
+              "evidence": "PDF 第20页给出差分方程和端点传播器；PDF 第20–21页命题4.6证明分解，并明确使用分数 Leibniz 估计与 Rellich 紧性。"
+            },
+            {
+              "claim": "Malliavin 导数的端点值域在负相位空间中稠密。",
+              "route": "把值域的正交元转成伴随方程末端数据；噪声方向为零时，引理4.8逐次微分把零性沿饱和递归传播到所有生成剖面，密度再迫使末端伴随变量为零。",
+              "evidence": "PDF 第22–23页引理4.7–4.8给出正则性和精确零传播；PDF 第23页定理4.9用伴随对偶性、饱和递归和生成剖面密度证明(4.25)。"
+            },
+            {
+              "claim": "饱和强迫产生任意相空间平移并推出不可约性。",
+              "route": "短时控制先生成速度平移，再以两个缩放极限把速度平移变成位移平移，并用立方极化恒等式生成新的乘积剖面；有限复合逼近任意平移后得到开集正概率。",
+              "evidence": "PDF 第24–27页引理4.10–4.13给出半群短时估计和两种缩放极限；PDF 第27–29页命题4.14及定理4.15–4.16完成平移逼近、拓扑不可约和有界能量集上的一致可达。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在正文末尾“Statements and declarations”明确写明使用 OpenAI ChatGPT 协助 proof auditing 和 manuscript preparation，并声明作者对数学内容负责；这属于与证明核查和论文制作直接相关的披露。全文同时核查了摘要、正文、致谢/声明、参考文献及末页，未把研究主题中的普通“AI”词形或参考文献当作披露。",
+        "aiEvidenceSource": "PDF 第51页末尾“Statements and declarations / Use of generative artificial intelligence”；全文缓存逐页检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly，并人工判读命中上下文。",
+        "priorityScore": 77,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

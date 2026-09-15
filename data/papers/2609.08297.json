@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08297",
+  "slug": "2609.08297",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08297:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08297",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Interior $W^{2,p}$ regularity for the sigma-$2$ equation",
+    "authors": [
+      "Yasheng Lyu"
+    ],
+    "abstract": "We prove that continuous $2$-convex solutions of the $σ_{2}$ equation with a density bounded above and below by positive constants belong to $W^{2,1}_{\\mathrm{loc}}$ in every dimension. If, in addition, the density is continuous, the solutions belong to $W^{2,p}_{\\mathrm{loc}}$ for every $1<p<\\infty$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08297",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08297",
+    "submittedAt": "2026-09-08T06:10:20Z",
+    "updatedAt": "2026-09-08T06:10:20Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文证明 $\\sigma _{2}$ Hessian 方程的连续 2-凸解具有内部二阶 Sobolev 正则性。对 Hessian 测度满足 $\\lambda \\le f\\le \\Lambda $ 的解，作者先用 2-凸性和 Hessian 测度弱连续性得到分布 Hessian 的局部 $W^{1,1}$ 控制，并将方程写成凹算子 $G(D^{2}u)=\\sqrt \\sigma _{2}(D^{2}u)$。随后在球内构造带截断的光滑近似方程，使密度从粗糙数据逐步逼近目标；对线性化方程使用 trace-dependent quotient 计算、最大值原理与局部边界 Hessian 估计，获得 $D(H^{p/2}(Du))$ 的统一局部界。紧性和弱极限把该估计传回原连续解，给出任意有界正密度下 $W^{2,1}_loc$，以及连续密度下所有有限 p 的 $W^{2,p}_loc$。",
+    "techniques": [
+      "Hessian 测度与 2-凸弱连续性",
+      "凹算子 $G=\\sqrt \\sigma _{2}$ 的线性化结构",
+      "密度平滑与截断正则化方程",
+      "局部差商/最大值原理估计",
+      "$H^{p/2}(Du)$ 的紧性与极限传递"
+    ],
+    "breakthrough": "论文把 $\\sigma _{2}$ 方程从光滑/严格椭圆框架推进到连续 2-凸解：密度仅上下有界时得到 $W^{2,1}_loc$，密度连续时升级为任意有限 p 的 $W^{2,p}_loc$，并允许不依赖先验严格凸性的测度解。",
+    "limitations": "结论是内部正则性，要求 u 连续且 2-凸、密度正且有界$；W^{2,p}$ 版本还要求 f 连续并依赖其局部模连续性。证明在球内进行，不给出边界正则性、全局估计、密度仅可测时的 p>1 提升，也不处理 $\\sigma k(k\\ne 2)$ 的同样结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "2-凸测度解的分布 Hessian 属于局部有限测度并具有 $W^{1,1}$ 基础控制，且其绝对连续部分落在 $\\Gamma _{2}$。",
+          "route": "对 u 做局部卷积，使用 2-凸性保持与 $|D^{2}u\\epsilon |\\le \\Delta u\\epsilon $；令 $\\epsilon \\to 0$ 后得到 Hessian 测度总变差控制和 $W^{1,1}_loc$。方程的弱连续性及 $\\sigma _{2}$ 的凹性再把绝对连续 Hessian A 的线性化不等式传下来，得到 $G(A)\\ge m$。",
+          "evidence": "第2节 Lemma 2.1、式(2.4)–(2.6)（PDF 第5页）。"
+        },
+        {
+          "claim": "平滑且密度有界的近似方程可在固定球内构造 admissible 光滑解，并保持统一振幅与 Laplacian 控制。",
+          "route": "先以 Lemma 2.2 逼近 Hessian 测度对应的密度，再用 Proposition 2.3 的 logarithmic cutoff 在方程中插入密度差项；球上的经典 Dirichlet 解、最大值原理和截断函数给出 v 的存在唯一性$、L\\infty $ 振幅界及 $\\Delta v$ 的上界，且常数不依赖密度导数。",
+          "evidence": "第2节 Lemma 2.2（PDF 第5页）；Proposition 2.3、式(2.14)–(2.15)（PDF 第8页）。"
+        },
+        {
+          "claim": "对近似解$，H^{p/2}(Dv)$ 的局部差商满足可独立于正则化参数的高阶估计。",
+          "route": "把线性化算子写成 $DG(D^{2}v)$，对差商方程使用 trace-dependent quotient 计算；截断区域内最大值原理控制 trace，边界 Hessian 恒等式把法向二阶导数转成切向项，局部 cutoff 和加权 Hölder/Sobolev 估计吸收误差，形成 $D(H^{p/2}(Dv))$ 的 Caccioppoli 型界。",
+          "evidence": "第2节 trace quotient 条件(2.9)及第3节 Proposition 3.1–3.4 的差商估计（PDF 第9–18页）。"
+        },
+        {
+          "claim": "统一估计经紧性极限传递，得到 Theorem 1.1–1.2 的 $W^{2,1}$ 和 $W^{2,p}$ 内部正则性。",
+          "route": "对正则化解在较小球上使用前一步的统一 $W^{1,s}$ 控制和局部振幅界，提取 $H^{p/2}(Dv)$ 的弱极限；先固定 p 和正则化参数，再令平滑密度趋近 f，弱连续性识别极限为原测度解$。f\\in L\\infty $ 时取端点 $p=1，f$ 连续时利用局部模连续性对任意有限 p 重复估计。",
+          "evidence": "第4节正则化逼近与 Theorem 1.1–1.2 结论（PDF 第19–24页）；全文主定理（PDF 第2页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在致谢前明确说明：“AI tools were used as an aid in preliminary mathematical exploration and in refining the exposition”；同时声明所有数学论证由作者独立核验并承担责任。该披露涉及研究前期探索和写作表达编辑。",
+    "aiEvidenceSource": "PDF 第26页 AI tools 披露段落。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08297:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08297",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Interior $W^{2,p}$ regularity for the sigma-$2$ equation",
+        "authors": [
+          "Yasheng Lyu"
+        ],
+        "abstract": "We prove that continuous $2$-convex solutions of the $σ_{2}$ equation with a density bounded above and below by positive constants belong to $W^{2,1}_{\\mathrm{loc}}$ in every dimension. If, in addition, the density is continuous, the solutions belong to $W^{2,p}_{\\mathrm{loc}}$ for every $1<p<\\infty$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08297",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08297",
+        "submittedAt": "2026-09-08T06:10:20Z",
+        "updatedAt": "2026-09-08T06:10:20Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文证明 $\\sigma _{2}$ Hessian 方程的连续 2-凸解具有内部二阶 Sobolev 正则性。对 Hessian 测度满足 $\\lambda \\le f\\le \\Lambda $ 的解，作者先用 2-凸性和 Hessian 测度弱连续性得到分布 Hessian 的局部 $W^{1,1}$ 控制，并将方程写成凹算子 $G(D^{2}u)=\\sqrt \\sigma _{2}(D^{2}u)$。随后在球内构造带截断的光滑近似方程，使密度从粗糙数据逐步逼近目标；对线性化方程使用 trace-dependent quotient 计算、最大值原理与局部边界 Hessian 估计，获得 $D(H^{p/2}(Du))$ 的统一局部界。紧性和弱极限把该估计传回原连续解，给出任意有界正密度下 $W^{2,1}_loc$，以及连续密度下所有有限 p 的 $W^{2,p}_loc$。",
+        "techniques": [
+          "Hessian 测度与 2-凸弱连续性",
+          "凹算子 $G=\\sqrt \\sigma _{2}$ 的线性化结构",
+          "密度平滑与截断正则化方程",
+          "局部差商/最大值原理估计",
+          "$H^{p/2}(Du)$ 的紧性与极限传递"
+        ],
+        "breakthrough": "论文把 $\\sigma _{2}$ 方程从光滑/严格椭圆框架推进到连续 2-凸解：密度仅上下有界时得到 $W^{2,1}_loc$，密度连续时升级为任意有限 p 的 $W^{2,p}_loc$，并允许不依赖先验严格凸性的测度解。",
+        "limitations": "结论是内部正则性，要求 u 连续且 2-凸、密度正且有界$；W^{2,p}$ 版本还要求 f 连续并依赖其局部模连续性。证明在球内进行，不给出边界正则性、全局估计、密度仅可测时的 p>1 提升，也不处理 $\\sigma k(k\\ne 2)$ 的同样结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "2-凸测度解的分布 Hessian 属于局部有限测度并具有 $W^{1,1}$ 基础控制，且其绝对连续部分落在 $\\Gamma _{2}$。",
+              "route": "对 u 做局部卷积，使用 2-凸性保持与 $|D^{2}u\\epsilon |\\le \\Delta u\\epsilon $；令 $\\epsilon \\to 0$ 后得到 Hessian 测度总变差控制和 $W^{1,1}_loc$。方程的弱连续性及 $\\sigma _{2}$ 的凹性再把绝对连续 Hessian A 的线性化不等式传下来，得到 $G(A)\\ge m$。",
+              "evidence": "第2节 Lemma 2.1、式(2.4)–(2.6)（PDF 第5页）。"
+            },
+            {
+              "claim": "平滑且密度有界的近似方程可在固定球内构造 admissible 光滑解，并保持统一振幅与 Laplacian 控制。",
+              "route": "先以 Lemma 2.2 逼近 Hessian 测度对应的密度，再用 Proposition 2.3 的 logarithmic cutoff 在方程中插入密度差项；球上的经典 Dirichlet 解、最大值原理和截断函数给出 v 的存在唯一性$、L\\infty $ 振幅界及 $\\Delta v$ 的上界，且常数不依赖密度导数。",
+              "evidence": "第2节 Lemma 2.2（PDF 第5页）；Proposition 2.3、式(2.14)–(2.15)（PDF 第8页）。"
+            },
+            {
+              "claim": "对近似解$，H^{p/2}(Dv)$ 的局部差商满足可独立于正则化参数的高阶估计。",
+              "route": "把线性化算子写成 $DG(D^{2}v)$，对差商方程使用 trace-dependent quotient 计算；截断区域内最大值原理控制 trace，边界 Hessian 恒等式把法向二阶导数转成切向项，局部 cutoff 和加权 Hölder/Sobolev 估计吸收误差，形成 $D(H^{p/2}(Dv))$ 的 Caccioppoli 型界。",
+              "evidence": "第2节 trace quotient 条件(2.9)及第3节 Proposition 3.1–3.4 的差商估计（PDF 第9–18页）。"
+            },
+            {
+              "claim": "统一估计经紧性极限传递，得到 Theorem 1.1–1.2 的 $W^{2,1}$ 和 $W^{2,p}$ 内部正则性。",
+              "route": "对正则化解在较小球上使用前一步的统一 $W^{1,s}$ 控制和局部振幅界，提取 $H^{p/2}(Dv)$ 的弱极限；先固定 p 和正则化参数，再令平滑密度趋近 f，弱连续性识别极限为原测度解$。f\\in L\\infty $ 时取端点 $p=1，f$ 连续时利用局部模连续性对任意有限 p 重复估计。",
+              "evidence": "第4节正则化逼近与 Theorem 1.1–1.2 结论（PDF 第19–24页）；全文主定理（PDF 第2页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在致谢前明确说明：“AI tools were used as an aid in preliminary mathematical exploration and in refining the exposition”；同时声明所有数学论证由作者独立核验并承担责任。该披露涉及研究前期探索和写作表达编辑。",
+        "aiEvidenceSource": "PDF 第26页 AI tools 披露段落。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09522",
+  "slug": "2609.09522",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09522:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09522",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Three-dimensional steady transonic shocks for the relativistic Euler equations",
+    "authors": [
+      "Shangkun Weng",
+      "Yan Zhou"
+    ],
+    "abstract": "We investigates the transonic shock problem for steady relativistic Euler equations in hemispherical shells. We show the existence and uniqueness of spherically symmetric transonic shock solutions via the shooting method and the monotonicity between the exit pressure and shock position. Furthermore, without any restrictions on background transonic shocks, we prove the existence and stability of transonic shocks under three dimensional perturbations of the exit pressure. The key techniques involve the decoupling the hyperbolic and elliptic components in steady relativistic Euler equations using the deformation tensor and vorticity. To address the coordinate singularities, the ``spherical projection coordinates\" combining the spherical coordinates and the stereographic projection is employed. Subsequently, the Rankine-Hugoniot conditions are appropriately reformulated to determine the shock front and derive the boundary conditions on the shock front for a first-order nonlocal deformation-curl system.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09522",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09522",
+    "submittedAt": "2026-09-08T23:08:40Z",
+    "updatedAt": "2026-09-08T23:08:40Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "分析结果",
+    "workSummary": "论文研究半球壳中稳态相对论 Euler 方程的三维扰动跨声速激波。作者先在球对称情形用 shooting 方法把激波位置与出口压力联系起来，并由单调性得到唯一背景激波；对一般三维小出口压力扰动，采用 spherical projection coordinates 消除极坐标奇异性，再以 deformation tensor 与 vorticity 解耦双曲和椭圆部分。Rankine–Hugoniot 条件被改写成激波面上的一阶非局部 deformation-curl 边值系统，最后用背景解附近的加权 Schauder/压缩估计同时求出激波面和流场，并证明稳定依赖。",
+    "techniques": [
+      "shooting and exit-pressure monotonicity",
+      "spherical projection coordinates",
+      "deformation–vorticity decoupling",
+      "Rankine–Hugoniot reformulation",
+      "nonlocal Schauder fixed point"
+    ],
+    "breakthrough": "在不要求背景跨声速激波具有额外特殊形状的情况下，建立三维出口压力扰动下激波前沿与流场的存在、唯一和稳定性理论。",
+    "limitations": "结论限于半球壳、稳态相对论 Euler、给定超声速入口和足够小的出口压力扰动；坐标、椭圆性和加权估计依赖背景激波的非退化与相容条件，不涵盖大扰动、非稳态或一般入口扰动。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "球对称跨声速激波的出口压力随激波半径单调，从而存在唯一背景激波。",
+          "route": "沿球对称常微分流线积分质量、能量和熵关系，把超声速到亚声速的跳跃条件写成 shock radius 的标量 shooting 方程；对该方程微分并利用声速符号变化证明出口压力单调，故给定出口压力至多一个 shock position。",
+          "evidence": "PDF 第 3-8 页 Section 1 Proposition 1.2 与 background construction，equations (1.1)–(1.18)。"
+        },
+        {
+          "claim": "变形张量和涡量变量把三维扰动系统化为一阶非局部 deformation-curl 系统。",
+          "route": "在 spherical projection coordinates 中把速度梯度分解为对称 deformation 和反对称 curl，椭圆约束恢复剩余速度分量；相对论状态方程把 hyperbolic transport 与 elliptic constraint 分开，避免球坐标轴上的奇异系数。",
+          "evidence": "PDF 第 9-17 页 Section 2 Lemmas 2.1–2.2、Theorem 2.3，equations (2.1)–(2.35)。"
+        },
+        {
+          "claim": "激波面上的 Rankine–Hugoniot 条件可转成适合迭代的 oblique/nonlocal 边界条件。",
+          "route": "将两侧守恒通量的跳跃按背景激波线性化，法向速度和压力给出 shock graph 的 oblique 条件，切向分量与 deformation-curl 约束闭合其余边界数据；兼容条件消除零阶自由常数。",
+          "evidence": "PDF 第 17-26 页 Section 3 Lemma 3.1、Proposition 3.2，equations (3.1)–(3.24)。"
+        },
+        {
+          "claim": "小出口压力扰动下存在唯一三维跨声速激波解，并且解对扰动稳定。",
+          "route": "在背景解周围的加权 Hölder 球中定义由椭圆解算子、双曲沿流传播和 shock graph 更新组成的映射；Theorem 2.3 的线性估计给出映射收缩，入口/出口兼容性保持球内，Banach 固定点得到唯一解及其范数估计。",
+          "evidence": "PDF 第 26-38 页 Section 4 Theorem 1.4、Theorem 2.3 的 fixed-point proof，equations (4.1)–(4.32)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 1–4、激波条件、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-38 页全文。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09522:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09522",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Three-dimensional steady transonic shocks for the relativistic Euler equations",
+        "authors": [
+          "Shangkun Weng",
+          "Yan Zhou"
+        ],
+        "abstract": "We investigates the transonic shock problem for steady relativistic Euler equations in hemispherical shells. We show the existence and uniqueness of spherically symmetric transonic shock solutions via the shooting method and the monotonicity between the exit pressure and shock position. Furthermore, without any restrictions on background transonic shocks, we prove the existence and stability of transonic shocks under three dimensional perturbations of the exit pressure. The key techniques involve the decoupling the hyperbolic and elliptic components in steady relativistic Euler equations using the deformation tensor and vorticity. To address the coordinate singularities, the ``spherical projection coordinates\" combining the spherical coordinates and the stereographic projection is employed. Subsequently, the Rankine-Hugoniot conditions are appropriately reformulated to determine the shock front and derive the boundary conditions on the shock front for a first-order nonlocal deformation-curl system.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09522",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09522",
+        "submittedAt": "2026-09-08T23:08:40Z",
+        "updatedAt": "2026-09-08T23:08:40Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "分析结果",
+        "workSummary": "论文研究半球壳中稳态相对论 Euler 方程的三维扰动跨声速激波。作者先在球对称情形用 shooting 方法把激波位置与出口压力联系起来，并由单调性得到唯一背景激波；对一般三维小出口压力扰动，采用 spherical projection coordinates 消除极坐标奇异性，再以 deformation tensor 与 vorticity 解耦双曲和椭圆部分。Rankine–Hugoniot 条件被改写成激波面上的一阶非局部 deformation-curl 边值系统，最后用背景解附近的加权 Schauder/压缩估计同时求出激波面和流场，并证明稳定依赖。",
+        "techniques": [
+          "shooting and exit-pressure monotonicity",
+          "spherical projection coordinates",
+          "deformation–vorticity decoupling",
+          "Rankine–Hugoniot reformulation",
+          "nonlocal Schauder fixed point"
+        ],
+        "breakthrough": "在不要求背景跨声速激波具有额外特殊形状的情况下，建立三维出口压力扰动下激波前沿与流场的存在、唯一和稳定性理论。",
+        "limitations": "结论限于半球壳、稳态相对论 Euler、给定超声速入口和足够小的出口压力扰动；坐标、椭圆性和加权估计依赖背景激波的非退化与相容条件，不涵盖大扰动、非稳态或一般入口扰动。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "球对称跨声速激波的出口压力随激波半径单调，从而存在唯一背景激波。",
+              "route": "沿球对称常微分流线积分质量、能量和熵关系，把超声速到亚声速的跳跃条件写成 shock radius 的标量 shooting 方程；对该方程微分并利用声速符号变化证明出口压力单调，故给定出口压力至多一个 shock position。",
+              "evidence": "PDF 第 3-8 页 Section 1 Proposition 1.2 与 background construction，equations (1.1)–(1.18)。"
+            },
+            {
+              "claim": "变形张量和涡量变量把三维扰动系统化为一阶非局部 deformation-curl 系统。",
+              "route": "在 spherical projection coordinates 中把速度梯度分解为对称 deformation 和反对称 curl，椭圆约束恢复剩余速度分量；相对论状态方程把 hyperbolic transport 与 elliptic constraint 分开，避免球坐标轴上的奇异系数。",
+              "evidence": "PDF 第 9-17 页 Section 2 Lemmas 2.1–2.2、Theorem 2.3，equations (2.1)–(2.35)。"
+            },
+            {
+              "claim": "激波面上的 Rankine–Hugoniot 条件可转成适合迭代的 oblique/nonlocal 边界条件。",
+              "route": "将两侧守恒通量的跳跃按背景激波线性化，法向速度和压力给出 shock graph 的 oblique 条件，切向分量与 deformation-curl 约束闭合其余边界数据；兼容条件消除零阶自由常数。",
+              "evidence": "PDF 第 17-26 页 Section 3 Lemma 3.1、Proposition 3.2，equations (3.1)–(3.24)。"
+            },
+            {
+              "claim": "小出口压力扰动下存在唯一三维跨声速激波解，并且解对扰动稳定。",
+              "route": "在背景解周围的加权 Hölder 球中定义由椭圆解算子、双曲沿流传播和 shock graph 更新组成的映射；Theorem 2.3 的线性估计给出映射收缩，入口/出口兼容性保持球内，Banach 固定点得到唯一解及其范数估计。",
+              "evidence": "PDF 第 26-38 页 Section 4 Theorem 1.4、Theorem 2.3 的 fixed-point proof，equations (4.1)–(4.32)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 1–4、激波条件、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-38 页全文。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

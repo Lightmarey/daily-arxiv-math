@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07642",
+  "slug": "2609.07642",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07642:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07642",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Solutions of Duhamel's formula with a sum of mappings",
+    "authors": [
+      "Radosław Czaja",
+      "Maria Kania"
+    ],
+    "abstract": "Semilinear evolution equations are solved by means of the variation of constants formula under the action of smoothing linear operators and a finite number of nonlinearities operating between chosen Banach spaces of a given family. Admissible spaces of initial conditions are determined for the existence and uniqueness of a suitable notion of solution. Its maximal time of existence, short time and blow up time profiles, global extendibility and regularity are analyzed. For extrapolated fractional power scale of Banach spaces the fulfillment of the corresponding Cauchy problem is shown. Chosen applications to the modified viscous Cahn-Hilliard equation in R^N, the evolution of cell population of varying genotype and the semilinear Schrödinger equation are presented.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07642",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07642",
+    "submittedAt": "2026-09-07T15:33:29Z",
+    "updatedAt": "2026-09-07T15:33:29Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文建立带有限个非线性映射之和的 Duhamel 公式抽象理论。在线性解析半群生成的外推分数幂 Banach 标度 $E\\sigma $ 中，作者允许每个 Fi 作用于不同的相空间 $E^{\\alpha i}$ 并落在 $E^{\\beta i}$，用奇异卷积指数 d(·,·) 描述半群平滑和非线性增长的匹配。正文先估计 Duhamel 映射的积分项和时间连续性，再在带 $t^{d(\\gamma ,\\alpha i)}$ 权的 Banach 球上做压缩映射，得到局部唯一 $\\gamma -solution$；通过时间平移、Volterra 型差分估计和有限时刻范数控制，延拓为最大解并给出有限爆破时范数发散。外推分数幂尺度中还证明该积分解具有时间导数，随后应用于高阶 Cahn–Hilliard、细胞群体和 Schrödinger 模型。",
+    "techniques": [
+      "解析半群平滑估计与外推分数幂标度",
+      "带时间权的 Duhamel 卷积估计",
+      "Banach 不动点压缩映射",
+      "时间平移与 Volterra 唯一性传播",
+      "最大存在时间延拓和爆破范数判据"
+    ],
+    "breakthrough": "论文把多个具有不同正则性损失和增长幂次的非线性项统一到同一个 $\\gamma -solution$ 框架，给出显式的指数兼容条件；结果同时覆盖局部存在、唯一延拓、有限时间范数爆破判据和外推分数幂空间中的微分方程恢复。",
+    "limitations": "抽象定理要求 C0 解析半群、各 Fi 的幂型局部 Lipschitz/增长条件及严格的指数兼容关系(1.8)、(1.11)、(1.12)/(1.16)。所得解是相对于 $E\\gamma $ 与时间权定义的 $\\gamma -solution$，最大时间可能有限；具体 PDE 应用还需逐项验证半群估计，不能自动涵盖非解析半群、临界兼容指数或任意非局部非线性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Duhamel 非线性积分项在带时间权的标度空间中良定义并连续。",
+          "route": "对 S(t−s)Fi(u(s)) 使用解析半群的 $E^{\\beta i}\\to E^{\\alpha j}$ 平滑界，把时间奇性写成 $(t-s)^{-d(\\beta i,\\alpha j)}$；条件 $d(\\beta i,\\alpha j)<1$ 使积分可积，幂次增长与时间权再给出 t→0 的连续性。",
+          "evidence": "第1节式(1.3)、(1.6)、(1.8)–(1.11)（PDF 第2–4页）；第2节 Lemma 2.1–2.4（PDF 第6–11页）。"
+        },
+        {
+          "claim": "在满足次临界指数条件时，Duhamel 映射在 $K(\\tau ,\\mu )$ 上是自映射且为严格压缩。",
+          "route": "固定初值球和半径 $\\mu $，先用 Lemma 2.3 控制映射的每个 $E^{\\alpha j}$ 分量；选 $\\tau $ 使幂次 $\\tau ^{\\omega i}$ 足够小，便得到不变性。对两个函数作差，使用同一卷积估计得到式(3.13)的压缩常数 $\\kappa <1，Banach$ 不动点给出唯一局部 $\\gamma -solution$。",
+          "evidence": "第3节 Theorem 3.1 及证明中的 $K(\\tau ,\\mu )$、式(3.10)–(3.13)（PDF 第12–14页）。"
+        },
+        {
+          "claim": "局部解在时间区间上唯一，并可唯一延拓到最大存在时间；若最大时间有限则 $E\\gamma $ 范数发散。",
+          "route": "对两个已重合到 $\\tau ̄$ 的解做时间平移，把后段差值写成从零初值的 Volterra 方程；指数条件使 Volterra 迭代因子在短区间内小于一，从而把唯一性逐段传播。Corollary 1.5 再用每个正时间的局部存在时间拼接最大解，若 $\\tau u0<\\infty $，反证有限范数会允许继续启动局部理论，因此只能有范数趋于无穷。",
+          "evidence": "第3节 Theorem 3.2、Corollary 3.5 及 Corollary 1.5 的延拓结论（PDF 第14–18页、第4页）。"
+        },
+        {
+          "claim": "在外推分数幂标度中$，\\gamma -solution$ 具有额外时间正则性并满足抽象微分方程。",
+          "route": "将半群差商 $e^{-A\\sigma h}-I$ 写成 $-∫A\\sigma e^{-A\\sigma s}ds$，并把 Duhamel 积分分为靠近零的奇异段和远离零的连续段；时间权与卷积可积性允许 h→0，得到 $u\\in C(E^{\\beta +1})、u̇\\in C(E^\\xi )$，并把积分式微分为 $u̇+A\\beta u=\\Sigma Fi(u)$。",
+          "evidence": "第5节 Assumption 5.1 与 Theorem 5.2、式(5.4)及证明（PDF 第23–25页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–35页的摘要、引言、全部定理证明、应用、Acknowledgments 和 References，并检索 AI/LLM/ChatGPT 等词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–35页全文检查，重点核对文末作者信息、致谢和 References，并复核全文 AI/LLM 相关词项上下文。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07642:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07642",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Solutions of Duhamel's formula with a sum of mappings",
+        "authors": [
+          "Radosław Czaja",
+          "Maria Kania"
+        ],
+        "abstract": "Semilinear evolution equations are solved by means of the variation of constants formula under the action of smoothing linear operators and a finite number of nonlinearities operating between chosen Banach spaces of a given family. Admissible spaces of initial conditions are determined for the existence and uniqueness of a suitable notion of solution. Its maximal time of existence, short time and blow up time profiles, global extendibility and regularity are analyzed. For extrapolated fractional power scale of Banach spaces the fulfillment of the corresponding Cauchy problem is shown. Chosen applications to the modified viscous Cahn-Hilliard equation in R^N, the evolution of cell population of varying genotype and the semilinear Schrödinger equation are presented.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07642",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07642",
+        "submittedAt": "2026-09-07T15:33:29Z",
+        "updatedAt": "2026-09-07T15:33:29Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文建立带有限个非线性映射之和的 Duhamel 公式抽象理论。在线性解析半群生成的外推分数幂 Banach 标度 $E\\sigma $ 中，作者允许每个 Fi 作用于不同的相空间 $E^{\\alpha i}$ 并落在 $E^{\\beta i}$，用奇异卷积指数 d(·,·) 描述半群平滑和非线性增长的匹配。正文先估计 Duhamel 映射的积分项和时间连续性，再在带 $t^{d(\\gamma ,\\alpha i)}$ 权的 Banach 球上做压缩映射，得到局部唯一 $\\gamma -solution$；通过时间平移、Volterra 型差分估计和有限时刻范数控制，延拓为最大解并给出有限爆破时范数发散。外推分数幂尺度中还证明该积分解具有时间导数，随后应用于高阶 Cahn–Hilliard、细胞群体和 Schrödinger 模型。",
+        "techniques": [
+          "解析半群平滑估计与外推分数幂标度",
+          "带时间权的 Duhamel 卷积估计",
+          "Banach 不动点压缩映射",
+          "时间平移与 Volterra 唯一性传播",
+          "最大存在时间延拓和爆破范数判据"
+        ],
+        "breakthrough": "论文把多个具有不同正则性损失和增长幂次的非线性项统一到同一个 $\\gamma -solution$ 框架，给出显式的指数兼容条件；结果同时覆盖局部存在、唯一延拓、有限时间范数爆破判据和外推分数幂空间中的微分方程恢复。",
+        "limitations": "抽象定理要求 C0 解析半群、各 Fi 的幂型局部 Lipschitz/增长条件及严格的指数兼容关系(1.8)、(1.11)、(1.12)/(1.16)。所得解是相对于 $E\\gamma $ 与时间权定义的 $\\gamma -solution$，最大时间可能有限；具体 PDE 应用还需逐项验证半群估计，不能自动涵盖非解析半群、临界兼容指数或任意非局部非线性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Duhamel 非线性积分项在带时间权的标度空间中良定义并连续。",
+              "route": "对 S(t−s)Fi(u(s)) 使用解析半群的 $E^{\\beta i}\\to E^{\\alpha j}$ 平滑界，把时间奇性写成 $(t-s)^{-d(\\beta i,\\alpha j)}$；条件 $d(\\beta i,\\alpha j)<1$ 使积分可积，幂次增长与时间权再给出 t→0 的连续性。",
+              "evidence": "第1节式(1.3)、(1.6)、(1.8)–(1.11)（PDF 第2–4页）；第2节 Lemma 2.1–2.4（PDF 第6–11页）。"
+            },
+            {
+              "claim": "在满足次临界指数条件时，Duhamel 映射在 $K(\\tau ,\\mu )$ 上是自映射且为严格压缩。",
+              "route": "固定初值球和半径 $\\mu $，先用 Lemma 2.3 控制映射的每个 $E^{\\alpha j}$ 分量；选 $\\tau $ 使幂次 $\\tau ^{\\omega i}$ 足够小，便得到不变性。对两个函数作差，使用同一卷积估计得到式(3.13)的压缩常数 $\\kappa <1，Banach$ 不动点给出唯一局部 $\\gamma -solution$。",
+              "evidence": "第3节 Theorem 3.1 及证明中的 $K(\\tau ,\\mu )$、式(3.10)–(3.13)（PDF 第12–14页）。"
+            },
+            {
+              "claim": "局部解在时间区间上唯一，并可唯一延拓到最大存在时间；若最大时间有限则 $E\\gamma $ 范数发散。",
+              "route": "对两个已重合到 $\\tau ̄$ 的解做时间平移，把后段差值写成从零初值的 Volterra 方程；指数条件使 Volterra 迭代因子在短区间内小于一，从而把唯一性逐段传播。Corollary 1.5 再用每个正时间的局部存在时间拼接最大解，若 $\\tau u0<\\infty $，反证有限范数会允许继续启动局部理论，因此只能有范数趋于无穷。",
+              "evidence": "第3节 Theorem 3.2、Corollary 3.5 及 Corollary 1.5 的延拓结论（PDF 第14–18页、第4页）。"
+            },
+            {
+              "claim": "在外推分数幂标度中$，\\gamma -solution$ 具有额外时间正则性并满足抽象微分方程。",
+              "route": "将半群差商 $e^{-A\\sigma h}-I$ 写成 $-∫A\\sigma e^{-A\\sigma s}ds$，并把 Duhamel 积分分为靠近零的奇异段和远离零的连续段；时间权与卷积可积性允许 h→0，得到 $u\\in C(E^{\\beta +1})、u̇\\in C(E^\\xi )$，并把积分式微分为 $u̇+A\\beta u=\\Sigma Fi(u)$。",
+              "evidence": "第5节 Assumption 5.1 与 Theorem 5.2、式(5.4)及证明（PDF 第23–25页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–35页的摘要、引言、全部定理证明、应用、Acknowledgments 和 References，并检索 AI/LLM/ChatGPT 等词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–35页全文检查，重点核对文末作者信息、致谢和 References，并复核全文 AI/LLM 相关词项上下文。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

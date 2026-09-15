@@ -3,91 +3,147 @@
   "arxivId": "2609.07256",
   "slug": "2609.07256",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.07256:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.07256",
-    "metadata": {
-      "title": "Liouville Theorem for the Constant $Q/R$-Curvature Equation",
-      "authors": [
-        "Han Lu"
-      ],
-      "abstract": "We study positive entire solutions of the flat constant $Q/R$-curvature equation in dimension $n\\geq5$. We prove that the weak superharmonicity condition $-Δu\\geq0$ already forces every nonconstant solution to be admissible. With this automatic admissibility, we classify all such solutions as positive constants or standard bubbles. We also show that the weak superharmonicity condition is structurally necessary. Once it is removed, there is a one-parameter family of positive radial entire solutions near every positive constant. These solutions converge to a positive constant at infinity, while both $-Δu$ and $-Δ(u^{(n-2)/(n-4)})$ change sign infinitely many times.",
-      "categories": [
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "math.AP",
-      "version": 1,
-      "submittedAt": "2026-09-07T09:12:23Z",
-      "updatedAt": "2026-09-07T09:12:23Z"
+    "version": 1,
+    "entryKind": "new",
+    "title": "Liouville Theorem for the Constant $Q/R$-Curvature Equation",
+    "authors": [
+      "Han Lu"
+    ],
+    "abstract": "We study positive entire solutions of the flat constant $Q/R$-curvature equation in dimension $n\\geq5$. We prove that the weak superharmonicity condition $-Δu\\geq0$ already forces every nonconstant solution to be admissible. With this automatic admissibility, we classify all such solutions as positive constants or standard bubbles. We also show that the weak superharmonicity condition is structurally necessary. Once it is removed, there is a one-parameter family of positive radial entire solutions near every positive constant. These solutions converge to a positive constant at infinity, while both $-Δu$ and $-Δ(u^{(n-2)/(n-4)})$ change sign infinitely many times.",
+    "categories": [
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07256",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07256",
+    "submittedAt": "2026-09-07T09:12:23Z",
+    "updatedAt": "2026-09-07T09:12:23Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究 $n>=5$ 维平坦常数 Q/R-曲率方程的正整解。作者先在弱超调和条件 -Delta $u>=0$ 下将方程改写成协作椭圆系统，利用势表示、Kelvin 变换和移动平面得到可去奇点与球对称刚性；随后以 P-function 升级重新获得 admissibility，最终分类为正常数或标准 bubble。作者还精确构造去掉符号条件后靠近常数的一参数径向散射族，说明弱超调和性是结构性必要条件。",
+    "techniques": [
+      "双调和方程的势表示",
+      "Kelvin 变换与移动平面",
+      "协作椭圆系统比较",
+      "P-function 超调和性升级",
+      "径向 Helmholtz 振子与散射渐近"
+    ],
+    "breakthrough": "证明弱超调和性本身足以自动恢复严格 admissibility，从而把所有正非恒定整解分类为标准 bubble；同时构造失去该符号条件后的径向反例族，展示分类假设的精确边界。",
+    "limitations": "分类要求 $n>=5、C4$ 正解和全空间平坦方程，bubble 结论依赖 -Delta $u>=0$ 或 $w=-Delta(u^p)>=0$；无符号条件时只构造了靠近常数的径向族，未分类所有非 admissible 解。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "在 $w=-Delta(u^p)>=0$ 的 admissible 情形，正解可被写成具有正核的协作椭圆系统并获得衰减。",
+          "route": "令 $z=-Delta$ $u、w=-Delta(u^p)$，用 Newton 势表示双调和方程；正性和 Riesz 势给出 $U=u$ 与 $V=w$ 的系统，Kelvin 变换把无穷远转成可分析的 puncture，并用势估计排除非可积尾部。",
+          "evidence": "PDF 第 3-4 页 proof outline；第 6-9 页 Lemmas 3.1、4.1-4.4 及 system (4.4)。"
+        },
+        {
+          "claim": "admissible 正解只能是常数或标准 bubble。",
+          "route": "对 Kelvin 变换后的协作系统用 moving planes 比较两中心，先获得对称性和单调性；若奇点可去则几何刚性给出 bubble，若两个 puncture 都不可去则 Proposition 5.3 的积分矛盾排除该分支。",
+          "evidence": "PDF 第 9-13 页 Proposition 5.3、Proposition 6.1、proof of Theorem 1.2；第 2-3 页 Theorem 1.2。"
+        },
+        {
+          "claim": "仅假设 -Delta $u>=0$ 也会强迫每个非恒定正解满足严格 admissibility 的点态下界。",
+          "route": "对 $z=-Delta$ $u>=0$ 的非恒定解先用局部 Ls 估计控制 u 的次调和幂；Proposition 7.3 的 P-function 连续性法把梯度平方项逐步加入，得到 -Delta $u>=K$ $u^q+(p-1)|grad$ $u|^2/u$，进而 w>0。",
+          "evidence": "PDF 第 14-16 页 Lemmas 7.1-7.2、Proposition 7.3；第 2 页 Theorem 1.1、equation (1.4)。"
+        },
+        {
+          "claim": "去掉弱超调和条件后，在每个正常数附近存在趋于该常数的正径向整解族，且两个曲率量反复变号。",
+          "route": "将径向方程化为以对数半径为时间的 Helmholtz 型振子，分离常数背景与小扰动；Lemma 8.2 的变分常数估计控制振荡尾部，Proposition 8.3 给出全局正性和散射，最后由尺度变换生成 Theorem 1.3 的一参数族。",
+          "evidence": "PDF 第 2-3 页 Theorem 1.3；第 18-20 页 Lemmas 8.1-8.2、Proposition 8.3、proof of Theorem 1.3。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新定理/分类",
-      "workSummary": "在 n≥5 的常 Q/R 曲率方程中证明弱超调和性自动给出容许性，并分类为常数或标准泡。",
-      "techniques": [
-        "自动容许性",
-        "Liouville 分类",
-        "径向反例"
-      ],
-      "breakthrough": "展示弱超调和条件的结构必要性。",
-      "limitations": "去掉该条件有振荡径向解，不能无条件声称全解分类。 已补读所列正文片段；这不是逐行独立证明审查。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "AI 声明披露 ChatGPT 辅助语言、论述以及计算和逻辑一致性检查。",
-      "aiEvidenceSource": "https://arxiv.org/html/2609.07256v1（AI 声明/致谢；涉及摘要者同时核对元数据）",
-      "priorityScore": 84,
-      "priorityReason": "高阶共形方程的分类机制重要。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We study positive entire solutions of the flat constant $Q/R$-curvature equation in dimension $n\\geq5$. We prove that the weak superharmonicity condition $-Δu\\geq0$ already forces every nonconstant solution to be admissible. With this automatic admissibility, we classify all such solutions as positive constants or standard bubbles. We also show that the weak superharmonicity condition is structurally necessary. Once it is removed, there is a one-parameter family of positive radial entire solutions near every positive constant. These solutions converge to a positive constant at infinity, while both $-Δu$ and $-Δ(u^{(n-2)/(n-4)})$ change sign infinitely many times.",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在正文末尾声明：中心思想由作者提出，OpenAI ChatGPT 用于 language editing、exposition 和 checking calculations；这是对写作、表达和计算检查用途的明确披露。",
+    "aiEvidenceSource": "PDF 第 20 页“Declaration of AI-assisted technologies”。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07256:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.07256",
-        "metadata": {
-          "title": "Liouville Theorem for the Constant $Q/R$-Curvature Equation",
-          "authors": [
-            "Han Lu"
-          ],
-          "abstract": "We study positive entire solutions of the flat constant $Q/R$-curvature equation in dimension $n\\geq5$. We prove that the weak superharmonicity condition $-Δu\\geq0$ already forces every nonconstant solution to be admissible. With this automatic admissibility, we classify all such solutions as positive constants or standard bubbles. We also show that the weak superharmonicity condition is structurally necessary. Once it is removed, there is a one-parameter family of positive radial entire solutions near every positive constant. These solutions converge to a positive constant at infinity, while both $-Δu$ and $-Δ(u^{(n-2)/(n-4)})$ change sign infinitely many times.",
-          "categories": [
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "math.AP",
-          "version": 1,
-          "submittedAt": "2026-09-07T09:12:23Z",
-          "updatedAt": "2026-09-07T09:12:23Z"
+        "version": 1,
+        "entryKind": "new",
+        "title": "Liouville Theorem for the Constant $Q/R$-Curvature Equation",
+        "authors": [
+          "Han Lu"
+        ],
+        "abstract": "We study positive entire solutions of the flat constant $Q/R$-curvature equation in dimension $n\\geq5$. We prove that the weak superharmonicity condition $-Δu\\geq0$ already forces every nonconstant solution to be admissible. With this automatic admissibility, we classify all such solutions as positive constants or standard bubbles. We also show that the weak superharmonicity condition is structurally necessary. Once it is removed, there is a one-parameter family of positive radial entire solutions near every positive constant. These solutions converge to a positive constant at infinity, while both $-Δu$ and $-Δ(u^{(n-2)/(n-4)})$ change sign infinitely many times.",
+        "categories": [
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07256",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07256",
+        "submittedAt": "2026-09-07T09:12:23Z",
+        "updatedAt": "2026-09-07T09:12:23Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究 $n>=5$ 维平坦常数 Q/R-曲率方程的正整解。作者先在弱超调和条件 -Delta $u>=0$ 下将方程改写成协作椭圆系统，利用势表示、Kelvin 变换和移动平面得到可去奇点与球对称刚性；随后以 P-function 升级重新获得 admissibility，最终分类为正常数或标准 bubble。作者还精确构造去掉符号条件后靠近常数的一参数径向散射族，说明弱超调和性是结构性必要条件。",
+        "techniques": [
+          "双调和方程的势表示",
+          "Kelvin 变换与移动平面",
+          "协作椭圆系统比较",
+          "P-function 超调和性升级",
+          "径向 Helmholtz 振子与散射渐近"
+        ],
+        "breakthrough": "证明弱超调和性本身足以自动恢复严格 admissibility，从而把所有正非恒定整解分类为标准 bubble；同时构造失去该符号条件后的径向反例族，展示分类假设的精确边界。",
+        "limitations": "分类要求 $n>=5、C4$ 正解和全空间平坦方程，bubble 结论依赖 -Delta $u>=0$ 或 $w=-Delta(u^p)>=0$；无符号条件时只构造了靠近常数的径向族，未分类所有非 admissible 解。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "在 $w=-Delta(u^p)>=0$ 的 admissible 情形，正解可被写成具有正核的协作椭圆系统并获得衰减。",
+              "route": "令 $z=-Delta$ $u、w=-Delta(u^p)$，用 Newton 势表示双调和方程；正性和 Riesz 势给出 $U=u$ 与 $V=w$ 的系统，Kelvin 变换把无穷远转成可分析的 puncture，并用势估计排除非可积尾部。",
+              "evidence": "PDF 第 3-4 页 proof outline；第 6-9 页 Lemmas 3.1、4.1-4.4 及 system (4.4)。"
+            },
+            {
+              "claim": "admissible 正解只能是常数或标准 bubble。",
+              "route": "对 Kelvin 变换后的协作系统用 moving planes 比较两中心，先获得对称性和单调性；若奇点可去则几何刚性给出 bubble，若两个 puncture 都不可去则 Proposition 5.3 的积分矛盾排除该分支。",
+              "evidence": "PDF 第 9-13 页 Proposition 5.3、Proposition 6.1、proof of Theorem 1.2；第 2-3 页 Theorem 1.2。"
+            },
+            {
+              "claim": "仅假设 -Delta $u>=0$ 也会强迫每个非恒定正解满足严格 admissibility 的点态下界。",
+              "route": "对 $z=-Delta$ $u>=0$ 的非恒定解先用局部 Ls 估计控制 u 的次调和幂；Proposition 7.3 的 P-function 连续性法把梯度平方项逐步加入，得到 -Delta $u>=K$ $u^q+(p-1)|grad$ $u|^2/u$，进而 w>0。",
+              "evidence": "PDF 第 14-16 页 Lemmas 7.1-7.2、Proposition 7.3；第 2 页 Theorem 1.1、equation (1.4)。"
+            },
+            {
+              "claim": "去掉弱超调和条件后，在每个正常数附近存在趋于该常数的正径向整解族，且两个曲率量反复变号。",
+              "route": "将径向方程化为以对数半径为时间的 Helmholtz 型振子，分离常数背景与小扰动；Lemma 8.2 的变分常数估计控制振荡尾部，Proposition 8.3 给出全局正性和散射，最后由尺度变换生成 Theorem 1.3 的一参数族。",
+              "evidence": "PDF 第 2-3 页 Theorem 1.3；第 18-20 页 Lemmas 8.1-8.2、Proposition 8.3、proof of Theorem 1.3。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新定理/分类",
-          "workSummary": "在 n≥5 的常 Q/R 曲率方程中证明弱超调和性自动给出容许性，并分类为常数或标准泡。",
-          "techniques": [
-            "自动容许性",
-            "Liouville 分类",
-            "径向反例"
-          ],
-          "breakthrough": "展示弱超调和条件的结构必要性。",
-          "limitations": "去掉该条件有振荡径向解，不能无条件声称全解分类。 已补读所列正文片段；这不是逐行独立证明审查。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "AI 声明披露 ChatGPT 辅助语言、论述以及计算和逻辑一致性检查。",
-          "aiEvidenceSource": "https://arxiv.org/html/2609.07256v1（AI 声明/致谢；涉及摘要者同时核对元数据）",
-          "priorityScore": 84,
-          "priorityReason": "高阶共形方程的分类机制重要。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We study positive entire solutions of the flat constant $Q/R$-curvature equation in dimension $n\\geq5$. We prove that the weak superharmonicity condition $-Δu\\geq0$ already forces every nonconstant solution to be admissible. With this automatic admissibility, we classify all such solutions as positive constants or standard bubbles. We also show that the weak superharmonicity condition is structurally necessary. Once it is removed, there is a one-parameter family of positive radial entire solutions near every positive constant. These solutions converge to a positive constant at infinity, while both $-Δu$ and $-Δ(u^{(n-2)/(n-4)})$ change sign infinitely many times.",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在正文末尾声明：中心思想由作者提出，OpenAI ChatGPT 用于 language editing、exposition 和 checking calculations；这是对写作、表达和计算检查用途的明确披露。",
+        "aiEvidenceSource": "PDF 第 20 页“Declaration of AI-assisted technologies”。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

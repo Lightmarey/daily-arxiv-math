@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12925",
+  "slug": "2609.12925",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12925:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12925",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Weak Solutions for the Unregularised Hibler Momentum Equation with Degenerate Coefficients",
+    "authors": [
+      "Henrik Schneider"
+    ],
+    "abstract": "We study the momentum equation of the decoupled unregularised Hibler sea-ice model with non-negative ice mass and ice strength, both of which may vanish. The ocean drag provides coercivity, while the stress law and mixed boundary conditions are encoded by a convex dissipation functional. We prove existence, uniqueness and stability for the time-discrete problem and reconstruct an admissible stress. A Rothe approximation yields global weak variational solutions for time-dependent coefficients under a one-sided growth condition on the mass. Weak solutions are unique when the ice strength is independent of time. For spatially Lipschitz ice strength, finite dissipation also yields a local measure structure of the weighted deformation and a global bound on the negative part of the weighted divergence.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.12925",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12925",
+    "submittedAt": "2026-09-11T14:50:10Z",
+    "updatedAt": "2026-09-11T14:50:10Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "弱解存在性与时间独立强度下唯一性",
+    "workSummary": "论文研究未正则化 Hibler 海冰动量方程，其中冰质量和冰强度允许退化或消失。作者将应力律和混合边界条件编码为凸耗散泛函，证明时间离散问题的存在性、唯一性与稳定性，并通过 Rothe 逼近得到时间依赖系数下的全局弱变分解；当冰强度与时间无关时进一步证明弱解唯一。",
+    "techniques": [
+      "凸支撑函数与耗散泛函表示",
+      "Fenchel 对偶和次微分应力重构",
+      "单调算子变分不等式",
+      "海洋阻力提供的强制性估计",
+      "加权能量估计与离散求和",
+      "Rothe 时间离散、Minty 单调性识别",
+      "单侧指数时间卷积与恢复序列",
+      "切片法和法向迹理论"
+    ],
+    "breakthrough": "在不要求冰质量或冰强度正下界、允许空 Dirichlet 边界部分的条件下，定理 6.1 建立了时间离散变分不等式的唯一解和数据稳定性。定理 7.3 证明满足质量单侧增长条件的时间依赖问题存在全局弱变分解，并给出加权动能、海洋阻力耗散和塑性耗散的能量估计；当冰强度 $\\mathit{P}$ 与时间无关时，所有允许退化区域的弱解在速度意义下唯一。定理 4.5 还在空间 Lipschitz 冰强度下给出加权变形的局部测度结构。",
+    "limitations": "时间依赖冰强度下的弱解唯一性仍未解决，因为单侧时间卷积的耗散控制需要时间不变的 $P$。完整的时间演化应力与流动律表述、内部界面条件解释以及与冰厚度和浓度输运方程的耦合均未建立。一般连续时间依赖 $P$ 下没有声称时空测度结构；有限耗散只控制加权变形，不能直接提供耦合所需的速度正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "引理 4.3、引理 4.4 建立耗散泛函的凸性、边界表示和饱和应力重构。",
+          "route": "把耗散定义为 admissible stress 散度作用的支撑函数，利用弱连续线性泛函的上确界得到凸性和弱下半连续性。通过内部与边界的分离截断、平滑近似和切片法证明体积耗散加 Dirichlet 边界项的表示；再用 Fenchel 对偶刻画次微分，从而构造满足 $\\xi=-\\operatorname{div}\\sigma$ 和饱和等式的应力。",
+          "evidence": "第 4 节引理 4.3、公式（11），PDF 第 8--11 页；引理 4.4、公式（15），PDF 第 11 页；附录引理 9.2--9.3，公式（59）--（61），PDF 第 35--37 页。"
+        },
+        {
+          "claim": "定理 6.1 证明时间离散变分不等式存在唯一解并给出稳定性。",
+          "route": "将方程写成凸耗散项加非线性算子 $A$ 的第二类变分不等式。验证 $A$ 的有界性、半连续性、严格单调性和强制性，其中海洋阻力项提供 $L^3$ 控制，质量项和科氏项不需要正下界。对两个解作差并利用阻力的单调估计，得到关于外力和海洋速度的数据稳定性。",
+          "evidence": "第 6 节定理 6.1，PDF 第 15--17 页；稳定性公式（23）、（25）--（27），PDF 第 15 页；证明步骤 1--4，PDF 第 15--17 页。"
+        },
+        {
+          "claim": "定理 7.3(a) 通过 Rothe 离散证明时间依赖系数下弱变分解的存在性和能量估计。",
+          "route": "在分割时间区间上取离散质量、强度和指数权重，应用定理 6.1 得到逐步解。加权离散能量不等式利用质量增长条件产生望远镜求和，从而获得速度、加权质量动能和耗散的统一界。取弱收敛子列后，用 Minty 单调性把算子移到光滑测试函数，利用耗散泛函的弱下半连续性和系数一致逼近通过极限，得到定义 7.1 的弱变分不等式。",
+          "evidence": "第 7 节定义（29）--（40），PDF 第 18--22 页；定理 7.3(a) 及能量估计，PDF 第 23--24 页；证明步骤 1--5、公式（43）--（45），PDF 第 24--27 页。"
+        },
+        {
+          "claim": "定理 7.3(b) 在时间不变冰强度下证明弱解唯一性。",
+          "route": "先用 Fenchel--Moreau 和 Hahn--Banach 构造保持耗散收敛的光滑恢复序列，再以单侧指数时间卷积修正初值并控制时间项。引理 7.6 通过 Minty 扰动恢复在解处评价的单调算子。对两个解取平均值作为恢复目标，在两个变分不等式相加后利用耗散凸性和海洋阻力严格单调性，得到解差的 $L^3$ 范数为零。",
+          "evidence": "引理 7.4、公式（47），PDF 第 28--29 页；引理 7.5、公式（48）--（55），PDF 第 29--31 页；引理 7.6、公式（56）--（57），PDF 第 31--32 页；定理 7.3(b) 的比较证明，PDF 第 32--33 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "未发现作者明确披露使用 AI、LLM 或相关工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+    "aiEvidenceSource": "已核查 PDF 摘要、正文各节、开放问题、第 8 节末尾、附录、References 前后的文末区域以及全部可检索声明文本。正文末尾直接进入 References，未设 Acknowledgements、Data Availability 或 Declarations 专门段落；检索到的 artificial 仅指模型背景中的 artificial elastic component，不属于作者工具披露。",
+    "priorityScore": 84,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“弱解存在性与时间独立强度下唯一性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 84/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12925:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12925",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Weak Solutions for the Unregularised Hibler Momentum Equation with Degenerate Coefficients",
+        "authors": [
+          "Henrik Schneider"
+        ],
+        "abstract": "We study the momentum equation of the decoupled unregularised Hibler sea-ice model with non-negative ice mass and ice strength, both of which may vanish. The ocean drag provides coercivity, while the stress law and mixed boundary conditions are encoded by a convex dissipation functional. We prove existence, uniqueness and stability for the time-discrete problem and reconstruct an admissible stress. A Rothe approximation yields global weak variational solutions for time-dependent coefficients under a one-sided growth condition on the mass. Weak solutions are unique when the ice strength is independent of time. For spatially Lipschitz ice strength, finite dissipation also yields a local measure structure of the weighted deformation and a global bound on the negative part of the weighted divergence.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.12925",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12925",
+        "submittedAt": "2026-09-11T14:50:10Z",
+        "updatedAt": "2026-09-11T14:50:10Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "弱解存在性与时间独立强度下唯一性",
+        "workSummary": "论文研究未正则化 Hibler 海冰动量方程，其中冰质量和冰强度允许退化或消失。作者将应力律和混合边界条件编码为凸耗散泛函，证明时间离散问题的存在性、唯一性与稳定性，并通过 Rothe 逼近得到时间依赖系数下的全局弱变分解；当冰强度与时间无关时进一步证明弱解唯一。",
+        "techniques": [
+          "凸支撑函数与耗散泛函表示",
+          "Fenchel 对偶和次微分应力重构",
+          "单调算子变分不等式",
+          "海洋阻力提供的强制性估计",
+          "加权能量估计与离散求和",
+          "Rothe 时间离散、Minty 单调性识别",
+          "单侧指数时间卷积与恢复序列",
+          "切片法和法向迹理论"
+        ],
+        "breakthrough": "在不要求冰质量或冰强度正下界、允许空 Dirichlet 边界部分的条件下，定理 6.1 建立了时间离散变分不等式的唯一解和数据稳定性。定理 7.3 证明满足质量单侧增长条件的时间依赖问题存在全局弱变分解，并给出加权动能、海洋阻力耗散和塑性耗散的能量估计；当冰强度 $\\mathit{P}$ 与时间无关时，所有允许退化区域的弱解在速度意义下唯一。定理 4.5 还在空间 Lipschitz 冰强度下给出加权变形的局部测度结构。",
+        "limitations": "时间依赖冰强度下的弱解唯一性仍未解决，因为单侧时间卷积的耗散控制需要时间不变的 $P$。完整的时间演化应力与流动律表述、内部界面条件解释以及与冰厚度和浓度输运方程的耦合均未建立。一般连续时间依赖 $P$ 下没有声称时空测度结构；有限耗散只控制加权变形，不能直接提供耦合所需的速度正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "引理 4.3、引理 4.4 建立耗散泛函的凸性、边界表示和饱和应力重构。",
+              "route": "把耗散定义为 admissible stress 散度作用的支撑函数，利用弱连续线性泛函的上确界得到凸性和弱下半连续性。通过内部与边界的分离截断、平滑近似和切片法证明体积耗散加 Dirichlet 边界项的表示；再用 Fenchel 对偶刻画次微分，从而构造满足 $\\xi=-\\operatorname{div}\\sigma$ 和饱和等式的应力。",
+              "evidence": "第 4 节引理 4.3、公式（11），PDF 第 8--11 页；引理 4.4、公式（15），PDF 第 11 页；附录引理 9.2--9.3，公式（59）--（61），PDF 第 35--37 页。"
+            },
+            {
+              "claim": "定理 6.1 证明时间离散变分不等式存在唯一解并给出稳定性。",
+              "route": "将方程写成凸耗散项加非线性算子 $A$ 的第二类变分不等式。验证 $A$ 的有界性、半连续性、严格单调性和强制性，其中海洋阻力项提供 $L^3$ 控制，质量项和科氏项不需要正下界。对两个解作差并利用阻力的单调估计，得到关于外力和海洋速度的数据稳定性。",
+              "evidence": "第 6 节定理 6.1，PDF 第 15--17 页；稳定性公式（23）、（25）--（27），PDF 第 15 页；证明步骤 1--4，PDF 第 15--17 页。"
+            },
+            {
+              "claim": "定理 7.3(a) 通过 Rothe 离散证明时间依赖系数下弱变分解的存在性和能量估计。",
+              "route": "在分割时间区间上取离散质量、强度和指数权重，应用定理 6.1 得到逐步解。加权离散能量不等式利用质量增长条件产生望远镜求和，从而获得速度、加权质量动能和耗散的统一界。取弱收敛子列后，用 Minty 单调性把算子移到光滑测试函数，利用耗散泛函的弱下半连续性和系数一致逼近通过极限，得到定义 7.1 的弱变分不等式。",
+              "evidence": "第 7 节定义（29）--（40），PDF 第 18--22 页；定理 7.3(a) 及能量估计，PDF 第 23--24 页；证明步骤 1--5、公式（43）--（45），PDF 第 24--27 页。"
+            },
+            {
+              "claim": "定理 7.3(b) 在时间不变冰强度下证明弱解唯一性。",
+              "route": "先用 Fenchel--Moreau 和 Hahn--Banach 构造保持耗散收敛的光滑恢复序列，再以单侧指数时间卷积修正初值并控制时间项。引理 7.6 通过 Minty 扰动恢复在解处评价的单调算子。对两个解取平均值作为恢复目标，在两个变分不等式相加后利用耗散凸性和海洋阻力严格单调性，得到解差的 $L^3$ 范数为零。",
+              "evidence": "引理 7.4、公式（47），PDF 第 28--29 页；引理 7.5、公式（48）--（55），PDF 第 29--31 页；引理 7.6、公式（56）--（57），PDF 第 31--32 页；定理 7.3(b) 的比较证明，PDF 第 32--33 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "未发现作者明确披露使用 AI、LLM 或相关工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+        "aiEvidenceSource": "已核查 PDF 摘要、正文各节、开放问题、第 8 节末尾、附录、References 前后的文末区域以及全部可检索声明文本。正文末尾直接进入 References，未设 Acknowledgements、Data Availability 或 Declarations 专门段落；检索到的 artificial 仅指模型背景中的 artificial elastic component，不属于作者工具披露。",
+        "priorityScore": 84,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“弱解存在性与时间独立强度下唯一性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 84/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

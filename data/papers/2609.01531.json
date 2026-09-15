@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.01531",
+  "slug": "2609.01531",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.01531:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.01531",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Failure of Interior Hölder and Gradient Estimates for the Subcritical Special Lagrangian Equation",
+    "authors": [
+      "Zhenyu Fan",
+      "Caiyan Li",
+      "Zhehui Wang"
+    ],
+    "abstract": "For every $n\\ge3$, we show, by a family of explicit entire real-analytic solutions, that, for every subcritical phase and every $0<α\\le1$, oscillation-based interior $C^α$ estimates fail for the special Lagrangian equation in $\\mathbb{R}^n$. In fact, this family has no common interior modulus of continuity.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.01531",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01531",
+    "submittedAt": "2026-09-01T16:58:35Z",
+    "updatedAt": "2026-09-01T16:58:35Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "次临界特殊 Lagrangian 方程内部估计失效",
+    "workSummary": "论文为每个 $n\\ge 3$ 和次临界相位构造整个实解析特殊 Lagrangian 方程解族，证明任何固定球内的振荡仍一致有界，但所有固定 Hölder 或梯度半范数都发散。作者用三维显式块解叠加高频二次项，利用 arctan 特征值分解验证相位保持，并在原点归一化后直接得到无共同连续模的反例。",
+    "techniques": [
+      "Hessian 块对角构造",
+      "arctan 特征值相位计算",
+      "高频二次扰动",
+      "振荡与 Hölder 半范数分离"
+    ],
+    "breakthrough": "论文给出完全显式的实解析反例，说明次临界相位下仅靠局部振荡无法控制内部 Hölder 或梯度模数，从而精确划出临界/超临界估计方法失效的边界。",
+    "limitations": "反例针对次临界相位、全空间解和 $n\\ge 3$；它否定统一内部模数估计但不讨论附加凸性、单调性或边界条件能否恢复正则性，也不提供非次临界范围的完整理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemmas 2.1–2.2 计算三维特殊 Lagrangian 块的 Hessian 特征值和 arctan 相位关系，为显式解构造提供代数恒等式。",
+          "route": "对三维径向/双曲势函数直接求 Hessian，利用特征多项式把三个特征值组合成 arctan 和；参数 $\\theta $ 保证该块的相位恰为指定值，同时保留高频尺度可调。",
+          "evidence": "PDF 第3–5页 Section 2 Lemmas 2.1–2.2；显式特征值公式和相位恒等式。"
+        },
+        {
+          "claim": "Proposition 2.3 证明将三维块与其余坐标上的二次函数拼接后仍是相同次临界相位的 entire real-analytic 解。",
+          "route": "拼接后的 Hessian 是块对角矩阵，额外二次项只贡献常特征值；逐块相加 arctan 值得到总相位 $\\Theta $，实解析性来自各块显式解析表达。",
+          "evidence": "PDF 第6–7页 Proposition 2.3；Hessian block diagonal 和相位计算段落。"
+        },
+        {
+          "claim": "Proof of Theorem 1.1 通过频率参数 k 选择一族解，使 B1 振荡有界而 Br 内任意固定 $\\alpha $ 半范数趋于无穷。",
+          "route": "在不改变原点梯度的二次块上加入幅度按 k 调整的高频项，局部振荡只受统一二次增长控制；但在固定小球内选取相距 O(k−1) 的点，函数差/距离$\\alpha $ 或梯度差随 k 增长，因而半范数发散。",
+          "evidence": "PDF 第1–2页 Theorem 1.1；PDF 第7–8页 Proof of Theorem 1.1，式(2.22)及 oscillation/Hölder 估计。"
+        },
+        {
+          "claim": "反例族没有共同连续模，直接否定次临界相位下的内部 $C\\alpha $ 和梯度估计。",
+          "route": "若存在共同模数，则固定 Br 上的连续模会统一控制所有点对的差值，与上一阶段构造的发散 Hölder 半范数矛盾$；\\alpha =1$ 时同样由梯度上界矛盾，完成所有 $0<\\alpha \\le 1$ 的结论。",
+          "evidence": "PDF 第2页 Theorem 1.1 的最后陈述及第8页证明结尾；其对任意固定 $r、\\alpha $ 的半范数发散与 no common modulus 推论。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者披露使用 AI-assisted tools，主要是 ChatGPT，并明确说明作者撰写和核验所有定理陈述与证明、对内容负责。工具为 ChatGPT，位置在证明结尾的 AI assistance disclosure。",
+    "aiEvidenceSource": "PDF 第9页 Disclosure on AI assistance；缓存全文 2609.01531.txt。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01531:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.01531",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Failure of Interior Hölder and Gradient Estimates for the Subcritical Special Lagrangian Equation",
+        "authors": [
+          "Zhenyu Fan",
+          "Caiyan Li",
+          "Zhehui Wang"
+        ],
+        "abstract": "For every $n\\ge3$, we show, by a family of explicit entire real-analytic solutions, that, for every subcritical phase and every $0<α\\le1$, oscillation-based interior $C^α$ estimates fail for the special Lagrangian equation in $\\mathbb{R}^n$. In fact, this family has no common interior modulus of continuity.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.01531",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01531",
+        "submittedAt": "2026-09-01T16:58:35Z",
+        "updatedAt": "2026-09-01T16:58:35Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "次临界特殊 Lagrangian 方程内部估计失效",
+        "workSummary": "论文为每个 $n\\ge 3$ 和次临界相位构造整个实解析特殊 Lagrangian 方程解族，证明任何固定球内的振荡仍一致有界，但所有固定 Hölder 或梯度半范数都发散。作者用三维显式块解叠加高频二次项，利用 arctan 特征值分解验证相位保持，并在原点归一化后直接得到无共同连续模的反例。",
+        "techniques": [
+          "Hessian 块对角构造",
+          "arctan 特征值相位计算",
+          "高频二次扰动",
+          "振荡与 Hölder 半范数分离"
+        ],
+        "breakthrough": "论文给出完全显式的实解析反例，说明次临界相位下仅靠局部振荡无法控制内部 Hölder 或梯度模数，从而精确划出临界/超临界估计方法失效的边界。",
+        "limitations": "反例针对次临界相位、全空间解和 $n\\ge 3$；它否定统一内部模数估计但不讨论附加凸性、单调性或边界条件能否恢复正则性，也不提供非次临界范围的完整理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemmas 2.1–2.2 计算三维特殊 Lagrangian 块的 Hessian 特征值和 arctan 相位关系，为显式解构造提供代数恒等式。",
+              "route": "对三维径向/双曲势函数直接求 Hessian，利用特征多项式把三个特征值组合成 arctan 和；参数 $\\theta $ 保证该块的相位恰为指定值，同时保留高频尺度可调。",
+              "evidence": "PDF 第3–5页 Section 2 Lemmas 2.1–2.2；显式特征值公式和相位恒等式。"
+            },
+            {
+              "claim": "Proposition 2.3 证明将三维块与其余坐标上的二次函数拼接后仍是相同次临界相位的 entire real-analytic 解。",
+              "route": "拼接后的 Hessian 是块对角矩阵，额外二次项只贡献常特征值；逐块相加 arctan 值得到总相位 $\\Theta $，实解析性来自各块显式解析表达。",
+              "evidence": "PDF 第6–7页 Proposition 2.3；Hessian block diagonal 和相位计算段落。"
+            },
+            {
+              "claim": "Proof of Theorem 1.1 通过频率参数 k 选择一族解，使 B1 振荡有界而 Br 内任意固定 $\\alpha $ 半范数趋于无穷。",
+              "route": "在不改变原点梯度的二次块上加入幅度按 k 调整的高频项，局部振荡只受统一二次增长控制；但在固定小球内选取相距 O(k−1) 的点，函数差/距离$\\alpha $ 或梯度差随 k 增长，因而半范数发散。",
+              "evidence": "PDF 第1–2页 Theorem 1.1；PDF 第7–8页 Proof of Theorem 1.1，式(2.22)及 oscillation/Hölder 估计。"
+            },
+            {
+              "claim": "反例族没有共同连续模，直接否定次临界相位下的内部 $C\\alpha $ 和梯度估计。",
+              "route": "若存在共同模数，则固定 Br 上的连续模会统一控制所有点对的差值，与上一阶段构造的发散 Hölder 半范数矛盾$；\\alpha =1$ 时同样由梯度上界矛盾，完成所有 $0<\\alpha \\le 1$ 的结论。",
+              "evidence": "PDF 第2页 Theorem 1.1 的最后陈述及第8页证明结尾；其对任意固定 $r、\\alpha $ 的半范数发散与 no common modulus 推论。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者披露使用 AI-assisted tools，主要是 ChatGPT，并明确说明作者撰写和核验所有定理陈述与证明、对内容负责。工具为 ChatGPT，位置在证明结尾的 AI assistance disclosure。",
+        "aiEvidenceSource": "PDF 第9页 Disclosure on AI assistance；缓存全文 2609.01531.txt。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11707",
+  "slug": "2609.11707",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11707:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11707",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Limiting Pointwise Decay for the compressible isentropic Navier-Stokes equations",
+    "authors": [
+      "Rui Li",
+      "Xu Song",
+      "Guanghui Wang",
+      "Lingda Xu"
+    ],
+    "abstract": "We study the long-time pointwise behavior of small localized perturbations of a constant state for the one-dimensional compressible isentropic Navier-Stokes equations. After subtracting the two Burgers diffusion waves, the convergent sum of all higher-order diffusion waves, and the cross-family viscous corrections, we prove a cone-preserving pointwise estimate for the exact physical remainder and, in particular, \\[ |R_i(x,t)|\\leq C E_N\\log(2+t)\\Psi_i(x,t), \\qquad \\sup_{x\\in\\mathbb R}\\Psi_i(x,t)\\leq C(1+t)^{-1}. \\] Here \\(E_N\\) measures the size of the initial data and \\(\\Psi_i\\) is the cone-resolved weight; both are defined precisely in the main theorem below. Thus $\\|R_i(t)\\|_{L^\\infty}\\leq C E_N(1+t)^{-1}\\log(2+t)$. The key new idea is to apply a familywise Cole--Hopf transformation to the spatial antiderivative of the remainder, which exactly eliminates the critical same-family first-order feedback. We further construct an approximate Green function adapted to the two characteristic families and combine it with Gaussian-mode extraction and a Kawashima-type energy argument. This yields a cone-preserving estimate at the limiting decay rate, up to a logarithmic loss.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11707",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11707",
+    "submittedAt": "2026-09-10T15:27:19Z",
+    "updatedAt": "2026-09-10T15:27:19Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "正文分析",
+    "workSummary": "论文研究一维可压等熵 Navier–Stokes 方程小局部扰动的端点点态衰减。作者把两个特征族的 Burgers 扩散波、全部高阶扩散波级数和跨族黏性修正从物理解中剥离，定义零质量余项；再对其空间原函数施加逐族 Cole–Hopf 共轭，提取临界高斯模态，并用五区域卷积估计和 Kawashima 型能量估计闭合 bootstrap，得到带两特征锥几何的 $(1+t)^-1$ log(2+t) 余项界。",
+    "techniques": [
+      "Koike 高阶扩散波递归",
+      "逐族 Cole–Hopf 共轭",
+      "近似特征 Green 函数",
+      "五区域高斯—代数卷积估计",
+      "Kawashima 补偿能量与 bootstrap"
+    ],
+    "breakthrough": "论文把固定有限阶扩散波展开推进到收敛的无限阶层级，并通过 Cole–Hopf 精确消除不可积的同族一阶反馈；高斯模态提取又避免相反族反馈产生额外 $log^{2}$ 损失，最终达到端点全局 $L\\infty $ 衰减（保留一个对数因子）。",
+    "limitations": "需要 $p'(1)<0、p''(1)\\ne 0$、足够高的 $H^N$ 正则性、加权局部初值和小质量/小扰动；结果弱于文献中更强的完整端点点态猜想，并保留 log 损失。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "高阶扩散波级数 $\\Xi i$ 收敛且与跨族黏性导数修正一起定义零质量物理余项 Ri。",
+          "route": "以特征变量 ui 分解守恒律，Burgers 波 $\\theta i$ 承载族质量；按 Koike 递归定义 $\\xi i^(n)$，由其 Lq/点态衰减求和得到 $\\Xi i$，再加入 $\\gamma _{3}-i\\partial x(\\theta _{3}-i+\\Xi _{3}-i)$ 后令 $Ri=ui-uapp_i$。",
+          "evidence": "第 2 节公式 (2.1)–(2.14)（PDF 第 5–8 页）。"
+        },
+        {
+          "claim": "空间原函数经逐族 Cole–Hopf 因子 ϕi 变换后不再含临界 $\\theta i$ Wi,x 反馈。",
+          "route": "由零质量定义 $Wi=∫-\\infty ^xRi$，利用 Burgers 波的 Cole–Hopf 恒等式把 Wi 方程中的非可积同族漂移共轭掉，得到 $Zi=ϕiWi$ 的耦合抛物系统；这一步保留两族传播速度而不混合特征锥。",
+          "evidence": "第 3 节逐族变换及公式 (3.11)–(3.18)（PDF 第 3–4、约第 15–18 页）。"
+        },
+        {
+          "claim": "Duhamel 表示中的临界高斯输出可被单独抽取为 $ai(t)\\Gamma i$，而剩余项获得无对数的点态衰减。",
+          "route": "对共轭系统插入近似 Green 矩阵，按同族质量、相反族局部化源和零质量源定义 ai；Lemma 5.1 控制普通五区域卷积，Lemma 5.2 对 $b\\alpha (\\tau )\\Gamma \\alpha +\\partial yQ\\alpha $ 的响应扣除对应高斯项。",
+          "evidence": "第 4–5 节 Lemmas 5.1–5.3，公式 (5.7)–(5.11)（PDF 第 19–24、约第 28 页）。"
+        },
+        {
+          "claim": "高阶能量与连续性 bootstrap 推出 Theorem 2.2 的全局余项估计。",
+          "route": "在特征和差分变量上以 (6.6)–(6.13) 的耗散泛函控制系数、非线性源和背景残差；Proposition 6.3 积分近似剖面误差，Proposition 6.4 用 Gronwall 合并 Gaussian 加权项，(6.55)–(6.60) 排除续延障碍并恢复 Ri。",
+          "evidence": "第 6.2–6.5 节，Propositions 6.3–6.4 及公式 (6.47)–(6.60)（PDF 第 50–52 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+    "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+    "priorityScore": 95,
+    "priorityTier": "high",
+    "priorityReason": "把两族端点点态衰减、无限阶扩散波和结构性共轭结合起来，直接解决固定阶展开无法覆盖的端点问题。",
+    "lowPriorityReason": "只覆盖一维小局部扰动且存在单一对数损失；更强的逐区域最优权重尚未完全达到。",
+    "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11707:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11707",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Limiting Pointwise Decay for the compressible isentropic Navier-Stokes equations",
+        "authors": [
+          "Rui Li",
+          "Xu Song",
+          "Guanghui Wang",
+          "Lingda Xu"
+        ],
+        "abstract": "We study the long-time pointwise behavior of small localized perturbations of a constant state for the one-dimensional compressible isentropic Navier-Stokes equations. After subtracting the two Burgers diffusion waves, the convergent sum of all higher-order diffusion waves, and the cross-family viscous corrections, we prove a cone-preserving pointwise estimate for the exact physical remainder and, in particular, \\[ |R_i(x,t)|\\leq C E_N\\log(2+t)\\Psi_i(x,t), \\qquad \\sup_{x\\in\\mathbb R}\\Psi_i(x,t)\\leq C(1+t)^{-1}. \\] Here \\(E_N\\) measures the size of the initial data and \\(\\Psi_i\\) is the cone-resolved weight; both are defined precisely in the main theorem below. Thus $\\|R_i(t)\\|_{L^\\infty}\\leq C E_N(1+t)^{-1}\\log(2+t)$. The key new idea is to apply a familywise Cole--Hopf transformation to the spatial antiderivative of the remainder, which exactly eliminates the critical same-family first-order feedback. We further construct an approximate Green function adapted to the two characteristic families and combine it with Gaussian-mode extraction and a Kawashima-type energy argument. This yields a cone-preserving estimate at the limiting decay rate, up to a logarithmic loss.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11707",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11707",
+        "submittedAt": "2026-09-10T15:27:19Z",
+        "updatedAt": "2026-09-10T15:27:19Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "正文分析",
+        "workSummary": "论文研究一维可压等熵 Navier–Stokes 方程小局部扰动的端点点态衰减。作者把两个特征族的 Burgers 扩散波、全部高阶扩散波级数和跨族黏性修正从物理解中剥离，定义零质量余项；再对其空间原函数施加逐族 Cole–Hopf 共轭，提取临界高斯模态，并用五区域卷积估计和 Kawashima 型能量估计闭合 bootstrap，得到带两特征锥几何的 $(1+t)^-1$ log(2+t) 余项界。",
+        "techniques": [
+          "Koike 高阶扩散波递归",
+          "逐族 Cole–Hopf 共轭",
+          "近似特征 Green 函数",
+          "五区域高斯—代数卷积估计",
+          "Kawashima 补偿能量与 bootstrap"
+        ],
+        "breakthrough": "论文把固定有限阶扩散波展开推进到收敛的无限阶层级，并通过 Cole–Hopf 精确消除不可积的同族一阶反馈；高斯模态提取又避免相反族反馈产生额外 $log^{2}$ 损失，最终达到端点全局 $L\\infty $ 衰减（保留一个对数因子）。",
+        "limitations": "需要 $p'(1)<0、p''(1)\\ne 0$、足够高的 $H^N$ 正则性、加权局部初值和小质量/小扰动；结果弱于文献中更强的完整端点点态猜想，并保留 log 损失。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "高阶扩散波级数 $\\Xi i$ 收敛且与跨族黏性导数修正一起定义零质量物理余项 Ri。",
+              "route": "以特征变量 ui 分解守恒律，Burgers 波 $\\theta i$ 承载族质量；按 Koike 递归定义 $\\xi i^(n)$，由其 Lq/点态衰减求和得到 $\\Xi i$，再加入 $\\gamma _{3}-i\\partial x(\\theta _{3}-i+\\Xi _{3}-i)$ 后令 $Ri=ui-uapp_i$。",
+              "evidence": "第 2 节公式 (2.1)–(2.14)（PDF 第 5–8 页）。"
+            },
+            {
+              "claim": "空间原函数经逐族 Cole–Hopf 因子 ϕi 变换后不再含临界 $\\theta i$ Wi,x 反馈。",
+              "route": "由零质量定义 $Wi=∫-\\infty ^xRi$，利用 Burgers 波的 Cole–Hopf 恒等式把 Wi 方程中的非可积同族漂移共轭掉，得到 $Zi=ϕiWi$ 的耦合抛物系统；这一步保留两族传播速度而不混合特征锥。",
+              "evidence": "第 3 节逐族变换及公式 (3.11)–(3.18)（PDF 第 3–4、约第 15–18 页）。"
+            },
+            {
+              "claim": "Duhamel 表示中的临界高斯输出可被单独抽取为 $ai(t)\\Gamma i$，而剩余项获得无对数的点态衰减。",
+              "route": "对共轭系统插入近似 Green 矩阵，按同族质量、相反族局部化源和零质量源定义 ai；Lemma 5.1 控制普通五区域卷积，Lemma 5.2 对 $b\\alpha (\\tau )\\Gamma \\alpha +\\partial yQ\\alpha $ 的响应扣除对应高斯项。",
+              "evidence": "第 4–5 节 Lemmas 5.1–5.3，公式 (5.7)–(5.11)（PDF 第 19–24、约第 28 页）。"
+            },
+            {
+              "claim": "高阶能量与连续性 bootstrap 推出 Theorem 2.2 的全局余项估计。",
+              "route": "在特征和差分变量上以 (6.6)–(6.13) 的耗散泛函控制系数、非线性源和背景残差；Proposition 6.3 积分近似剖面误差，Proposition 6.4 用 Gronwall 合并 Gaussian 加权项，(6.55)–(6.60) 排除续延障碍并恢复 Ri。",
+              "evidence": "第 6.2–6.5 节，Propositions 6.3–6.4 及公式 (6.47)–(6.60)（PDF 第 50–52 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+        "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+        "priorityScore": 95,
+        "priorityTier": "high",
+        "priorityReason": "把两族端点点态衰减、无限阶扩散波和结构性共轭结合起来，直接解决固定阶展开无法覆盖的端点问题。",
+        "lowPriorityReason": "只覆盖一维小局部扰动且存在单一对数损失；更强的逐区域最优权重尚未完全达到。",
+        "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+      }
+    }
+  ]
+}

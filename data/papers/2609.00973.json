@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00973",
+  "slug": "2609.00973",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00973:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00973",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The Vlasov-Maxwell point charge system : study of the spherically symmetric case",
+    "authors": [
+      "Emile Breton"
+    ],
+    "abstract": "We consider the Vlasov-Maxwell system with a repulsive point charge. Under a spherical symmetry condition, this reduces to the relativistic Vlasov-Poisson system with a point charge. For this system, the linear characteristics solve the equations of motion for the relativistic Kepler problem. We define action-angle variables for the linearized equation, and then study the nonlinear system in these coordinates. Within this framework, we prove global existence of classical solutions for small initial data and establish their modified scattering behavior. The proof makes use of the ideas developed in the non-relativistic case.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00973",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00973",
+    "submittedAt": "2026-09-01T09:29:53Z",
+    "updatedAt": "2026-09-01T09:29:53Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "球对称相对论 Vlasov–Poisson 点电荷系统",
+    "workSummary": "论文在球对称条件下将带排斥点电荷的 Vlasov–Maxwell 系统化为相对论 Vlasov–Poisson 系统，并在 Kepler 线性特征的 action–angle 坐标中研究非线性演化。作者先精确构造作用量、角变量和线性流的导数估计，再对密度和场的矩建立 bootstrap 界，证明小数据全局经典解；最后得到带相位修正的 modified scattering，并转换回物理坐标。",
+    "techniques": [
+      "Kepler 作用量–角变量",
+      "线性特征和生成函数",
+      "矩传播与 bootstrap",
+      "modified scattering"
+    ],
+    "breakthrough": "论文利用点电荷 Kepler 动力学的可积结构，把球对称非线性系统中的长程相互作用吸收到 action–angle 相位修正中，从而同时获得小数据全局存在和修正散射，而无需在物理坐标中直接控制奇异轨道。",
+    "limitations": "结论依赖球对称、小初值和排斥点电荷，且只覆盖论文限定的 action–angle 指标子集；不处理非球对称扰动、多点电荷、吸引情形或大数据全局行为。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Propositions 2.3、2.5–2.7 构造线性相对论 Kepler 流的生成函数和 action–angle 坐标，并建立坐标变换及其导数估计。",
+          "route": "先对径向能量方程积分得到生成函数 Ga 和逆 Ha，再以作用量 A、角变量 $\\Theta $ 参数化半径和速度；显式微分公式给出坐标 Jacobian、周期平均和长时间导数的控制。",
+          "evidence": "PDF 第7–16页 Section 2.1–2.3 Propositions 2.3、2.5–2.7；式(2.4)–(2.15)和 action–angle 变换。"
+        },
+        {
+          "claim": "Lemmas 2.11–2.13 与 Propositions 2.16–2.17 控制线性流下密度及其一、二阶导数的时间衰减。",
+          "route": "将相空间积分按 bulk 与内外区域分解，利用 action–angle 相位的非退化性作振荡积分；生成函数的导数界和角变量周期性把每个区域的积分化为衰减权，随后传播到场的导数。",
+          "evidence": "PDF 第18–29页 Section 2.4–2.5 Lemma 2.11、Lemma 2.12、Lemma 2.13、Propositions 2.16–2.17。"
+        },
+        {
+          "claim": "Propositions 3.1–3.2 和 Corollary 3.3 在小数据 bootstrap 下闭合解、场及其导数的全局界。",
+          "route": "把非线性方程在 action–angle 坐标中写成线性输运加场扰动，利用前述衰减估计控制势场源项；对未知量和导数写出积分不等式，Grönwall 与 bootstrap 小常数改善所有范数，标准 breakdown criterion 遂排除有限时间失效。",
+          "evidence": "PDF 第30–32页 Section 3 Propositions 3.1–3.2、Corollary 3.3；式(3.1)–(3.12)和 bootstrap 闭合。"
+        },
+        {
+          "claim": "Theorem 4.3 和 Theorems 1.8、1.6 给出修正散射并把 action–angle 极限还原为原始 Vlasov–Maxwell 变量。",
+          "route": "从场的可积时间导数构造极限场 $E\\infty $，对角变量减去 log t 相位修正后证明收敛；再用 action–angle 到 (r,u,ℓ) 的坐标公式恢复分布函数和导数的物理渐近，得到原问题的全局解与 modified scattering。",
+          "evidence": "PDF 第33–37页 Section 4 Lemma 4.1、Proposition 4.2、Theorem 4.3；PDF 第4–6页 Theorems 1.6、1.8 及最终坐标回代。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–37页（含支持说明与 References）；缓存全文 2609.00973.txt。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00973:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00973",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The Vlasov-Maxwell point charge system : study of the spherically symmetric case",
+        "authors": [
+          "Emile Breton"
+        ],
+        "abstract": "We consider the Vlasov-Maxwell system with a repulsive point charge. Under a spherical symmetry condition, this reduces to the relativistic Vlasov-Poisson system with a point charge. For this system, the linear characteristics solve the equations of motion for the relativistic Kepler problem. We define action-angle variables for the linearized equation, and then study the nonlinear system in these coordinates. Within this framework, we prove global existence of classical solutions for small initial data and establish their modified scattering behavior. The proof makes use of the ideas developed in the non-relativistic case.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00973",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00973",
+        "submittedAt": "2026-09-01T09:29:53Z",
+        "updatedAt": "2026-09-01T09:29:53Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "球对称相对论 Vlasov–Poisson 点电荷系统",
+        "workSummary": "论文在球对称条件下将带排斥点电荷的 Vlasov–Maxwell 系统化为相对论 Vlasov–Poisson 系统，并在 Kepler 线性特征的 action–angle 坐标中研究非线性演化。作者先精确构造作用量、角变量和线性流的导数估计，再对密度和场的矩建立 bootstrap 界，证明小数据全局经典解；最后得到带相位修正的 modified scattering，并转换回物理坐标。",
+        "techniques": [
+          "Kepler 作用量–角变量",
+          "线性特征和生成函数",
+          "矩传播与 bootstrap",
+          "modified scattering"
+        ],
+        "breakthrough": "论文利用点电荷 Kepler 动力学的可积结构，把球对称非线性系统中的长程相互作用吸收到 action–angle 相位修正中，从而同时获得小数据全局存在和修正散射，而无需在物理坐标中直接控制奇异轨道。",
+        "limitations": "结论依赖球对称、小初值和排斥点电荷，且只覆盖论文限定的 action–angle 指标子集；不处理非球对称扰动、多点电荷、吸引情形或大数据全局行为。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Propositions 2.3、2.5–2.7 构造线性相对论 Kepler 流的生成函数和 action–angle 坐标，并建立坐标变换及其导数估计。",
+              "route": "先对径向能量方程积分得到生成函数 Ga 和逆 Ha，再以作用量 A、角变量 $\\Theta $ 参数化半径和速度；显式微分公式给出坐标 Jacobian、周期平均和长时间导数的控制。",
+              "evidence": "PDF 第7–16页 Section 2.1–2.3 Propositions 2.3、2.5–2.7；式(2.4)–(2.15)和 action–angle 变换。"
+            },
+            {
+              "claim": "Lemmas 2.11–2.13 与 Propositions 2.16–2.17 控制线性流下密度及其一、二阶导数的时间衰减。",
+              "route": "将相空间积分按 bulk 与内外区域分解，利用 action–angle 相位的非退化性作振荡积分；生成函数的导数界和角变量周期性把每个区域的积分化为衰减权，随后传播到场的导数。",
+              "evidence": "PDF 第18–29页 Section 2.4–2.5 Lemma 2.11、Lemma 2.12、Lemma 2.13、Propositions 2.16–2.17。"
+            },
+            {
+              "claim": "Propositions 3.1–3.2 和 Corollary 3.3 在小数据 bootstrap 下闭合解、场及其导数的全局界。",
+              "route": "把非线性方程在 action–angle 坐标中写成线性输运加场扰动，利用前述衰减估计控制势场源项；对未知量和导数写出积分不等式，Grönwall 与 bootstrap 小常数改善所有范数，标准 breakdown criterion 遂排除有限时间失效。",
+              "evidence": "PDF 第30–32页 Section 3 Propositions 3.1–3.2、Corollary 3.3；式(3.1)–(3.12)和 bootstrap 闭合。"
+            },
+            {
+              "claim": "Theorem 4.3 和 Theorems 1.8、1.6 给出修正散射并把 action–angle 极限还原为原始 Vlasov–Maxwell 变量。",
+              "route": "从场的可积时间导数构造极限场 $E\\infty $，对角变量减去 log t 相位修正后证明收敛；再用 action–angle 到 (r,u,ℓ) 的坐标公式恢复分布函数和导数的物理渐近，得到原问题的全局解与 modified scattering。",
+              "evidence": "PDF 第33–37页 Section 4 Lemma 4.1、Proposition 4.2、Theorem 4.3；PDF 第4–6页 Theorems 1.6、1.8 及最终坐标回代。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–37页（含支持说明与 References）；缓存全文 2609.00973.txt。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

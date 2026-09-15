@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03558",
+  "slug": "2609.03558",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03558:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03558",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Local well-posedness of the higher-order nonlinear Schrödinger equation on the half-line: the case of two boundary conditions",
+    "authors": [
+      "Aykut Alkın",
+      "Dionyssios Mantzavinos",
+      "Türker Özsarı"
+    ],
+    "abstract": "We prove the local Hadamard well-posedness of the higher-order nonlinear Schrödinger equation with negative dispersion coefficient on the half-line under nonzero Dirichlet and Neumann boundary data. The paper uncovers a striking feature of this model: unlike the positive-dispersion case studied in (Alkın, Mantzavinos, Ozsari, 2024), well-posedness requires two boundary conditions rather than one. This reflects a structural limitation in the underlying global relation, which allows elimination of at most one unknown boundary trace. Using the unified transform of Fokas, we derive an explicit solution formula for the associated forced linear problem and establish sharp Sobolev and Strichartz estimates on the half-line. These linear estimates, together with corresponding Cauchy problem bounds, yield local well-posedness in both high- and low-regularity Sobolev spaces, as well as local Lipschitz continuity of the solution map.",
+    "categories": [
+      "math.AP",
+      "math.FA"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03558",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03558",
+    "submittedAt": "2026-09-03T08:58:56Z",
+    "updatedAt": "2026-09-03T08:58:56Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "存在性",
+    "workSummary": "分析半线高阶非线性 Schrödinger 方程在两类边界条件下的局部适定性：先建立线性初值-边值问题的高阶 Sobolev/Strichartz 估计，再以 Duhamel 映射处理非线性，分别覆盖高正则与低正则数据。",
+    "techniques": [
+      "高阶 Schrödinger 色散估计",
+      "边界伴随/Duhamel 表示",
+      "Sobolev 估计",
+      "Strichartz 估计",
+      "局部压缩映射"
+    ],
+    "breakthrough": "在半线两边界约束同时存在时建立高阶色散方程的局部 well-posedness，并把线性边界估计推进到低正则临界范围。",
+    "limitations": "局部时间结论依赖参数范围、兼容性条件和文中两类边界算子；低正则结果的非线性指数范围受线性 Strichartz 可用区间限制。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "两类边界条件下的高阶线性问题具有 Sobolev 控制。",
+          "route": "将半线问题延拓为适合 Fourier/谱分析的线性系统，构造满足边界数据的基本解并对边界项积分；能量估计给出初值和边界源到解的有界映射。",
+          "evidence": "第 3 节 Theorem 3.1 与第 4 节 Theorem 4.1（PDF 第 5--9 页）。"
+        },
+        {
+          "claim": "线性解还满足高阶 Schrödinger 的 Strichartz 时空估计。",
+          "route": "在 Sobolev 解表示上使用高阶色散 admissibility 条件，结合边界 forcing 的分解和时间局部化，获得非线性项所需的时空可积性。",
+          "evidence": "第 4 节 Theorem 4.2、Theorem 4.4（PDF 第 9--12 页）。"
+        },
+        {
+          "claim": "高正则数据下的非线性 Duhamel 映射在短时间内闭合。",
+          "route": "把非线性幂项视为线性问题的源，利用 Sobolev 代数估计控制映射的自映射性质，用 Strichartz 范数的时间小因子控制 Lipschitz 常数。",
+          "evidence": "第 5 节 Theorem 5.1 及其应用（PDF 第 12--14 页）。"
+        },
+        {
+          "claim": "高正则和低正则局部解分别达到 Theorems 1.1--1.2。",
+          "route": "对高正则解用能量空间迭代，对低正则解改用 Strichartz 固定点并验证边界兼容性；唯一性由差值方程和相同线性估计给出。",
+          "evidence": "第 1 节 Theorems 1.1--1.2（PDF 第 2--4 页）及第 6 节低正则闭合（PDF 第 14--16 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--16 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 86,
+    "priorityTier": "high",
+    "priorityReason": "明确揭示色散符号、半直线边界迹和整体关系之间的结构约束，并同时覆盖高低正则性，方法复用性较强。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03558:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03558",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Local well-posedness of the higher-order nonlinear Schrödinger equation on the half-line: the case of two boundary conditions",
+        "authors": [
+          "Aykut Alkın",
+          "Dionyssios Mantzavinos",
+          "Türker Özsarı"
+        ],
+        "abstract": "We prove the local Hadamard well-posedness of the higher-order nonlinear Schrödinger equation with negative dispersion coefficient on the half-line under nonzero Dirichlet and Neumann boundary data. The paper uncovers a striking feature of this model: unlike the positive-dispersion case studied in (Alkın, Mantzavinos, Ozsari, 2024), well-posedness requires two boundary conditions rather than one. This reflects a structural limitation in the underlying global relation, which allows elimination of at most one unknown boundary trace. Using the unified transform of Fokas, we derive an explicit solution formula for the associated forced linear problem and establish sharp Sobolev and Strichartz estimates on the half-line. These linear estimates, together with corresponding Cauchy problem bounds, yield local well-posedness in both high- and low-regularity Sobolev spaces, as well as local Lipschitz continuity of the solution map.",
+        "categories": [
+          "math.AP",
+          "math.FA"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03558",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03558",
+        "submittedAt": "2026-09-03T08:58:56Z",
+        "updatedAt": "2026-09-03T08:58:56Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "存在性",
+        "workSummary": "分析半线高阶非线性 Schrödinger 方程在两类边界条件下的局部适定性：先建立线性初值-边值问题的高阶 Sobolev/Strichartz 估计，再以 Duhamel 映射处理非线性，分别覆盖高正则与低正则数据。",
+        "techniques": [
+          "高阶 Schrödinger 色散估计",
+          "边界伴随/Duhamel 表示",
+          "Sobolev 估计",
+          "Strichartz 估计",
+          "局部压缩映射"
+        ],
+        "breakthrough": "在半线两边界约束同时存在时建立高阶色散方程的局部 well-posedness，并把线性边界估计推进到低正则临界范围。",
+        "limitations": "局部时间结论依赖参数范围、兼容性条件和文中两类边界算子；低正则结果的非线性指数范围受线性 Strichartz 可用区间限制。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "两类边界条件下的高阶线性问题具有 Sobolev 控制。",
+              "route": "将半线问题延拓为适合 Fourier/谱分析的线性系统，构造满足边界数据的基本解并对边界项积分；能量估计给出初值和边界源到解的有界映射。",
+              "evidence": "第 3 节 Theorem 3.1 与第 4 节 Theorem 4.1（PDF 第 5--9 页）。"
+            },
+            {
+              "claim": "线性解还满足高阶 Schrödinger 的 Strichartz 时空估计。",
+              "route": "在 Sobolev 解表示上使用高阶色散 admissibility 条件，结合边界 forcing 的分解和时间局部化，获得非线性项所需的时空可积性。",
+              "evidence": "第 4 节 Theorem 4.2、Theorem 4.4（PDF 第 9--12 页）。"
+            },
+            {
+              "claim": "高正则数据下的非线性 Duhamel 映射在短时间内闭合。",
+              "route": "把非线性幂项视为线性问题的源，利用 Sobolev 代数估计控制映射的自映射性质，用 Strichartz 范数的时间小因子控制 Lipschitz 常数。",
+              "evidence": "第 5 节 Theorem 5.1 及其应用（PDF 第 12--14 页）。"
+            },
+            {
+              "claim": "高正则和低正则局部解分别达到 Theorems 1.1--1.2。",
+              "route": "对高正则解用能量空间迭代，对低正则解改用 Strichartz 固定点并验证边界兼容性；唯一性由差值方程和相同线性估计给出。",
+              "evidence": "第 1 节 Theorems 1.1--1.2（PDF 第 2--4 页）及第 6 节低正则闭合（PDF 第 14--16 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--16 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 86,
+        "priorityTier": "high",
+        "priorityReason": "明确揭示色散符号、半直线边界迹和整体关系之间的结构约束，并同时覆盖高低正则性，方法复用性较强。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

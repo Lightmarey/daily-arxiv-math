@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03958",
+  "slug": "2609.03958",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03958:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03958",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Interior Curvature Estimates of Semi-convex Solutions for the scalar curvature equation with Lipschitz Right-Hand Sides",
+    "authors": [
+      "Lichun Liang"
+    ],
+    "abstract": "In this paper, let $u\\in C^4(B_{10})$ with $D^2u\\geq -KI$ define a $2$-admissible graph $M=\\{(x,u(x)):x\\in B_{10}\\}\\subset\\R^{n+1}$ satisfying \\[ σ_2(κ[u])=f(x). \\] We prove an interior curvature estimate depending on the Lipschitz norm of the right-hand sides. The proof combines a shifted Jacobi inequality for \\(b=\\log(H+J_0)\\), a parallel hypersurface transformation that makes the Newton tensor uniformly elliptic and local boundedness estimate then reduces the pointwise bound to a weighted $L^1$ estimate, which is completed using the Jacobi energy inequality and integration by parts.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.03958",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03958",
+    "submittedAt": "2026-09-03T14:56:36Z",
+    "updatedAt": "2026-09-03T14:56:36Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "正则性",
+    "workSummary": "证明具有 Lipschitz 右端的半凸标量曲率方程内部曲率估计：先从 $\\Gamma _{2}$ 特征值的移位谱结构得到代数 gap，再建立 Jacobi 能量不等式，并通过图变换和一致椭圆性把能量控制转成 Hessian 界。",
+    "techniques": [
+      "$\\Gamma _{2}$ 特征值结构",
+      "移位谱 gap",
+      "Jacobi 能量",
+      "局部图变换",
+      "一致椭圆性"
+    ],
+    "breakthrough": "在右端仅 Lipschitz 的条件下保留半凸解的内部曲率控制，关键是把标量曲率方程的二阶项转化成带移位谱 gap 的局部 Jacobi 能量。",
+    "limitations": "估计是局部的，依赖半凸性$、\\Gamma _{2}$ 分支和 C2/C4 正则化框架；常数随右端 Lipschitz 界、半凸参数和球域尺度变化。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "$\\Gamma _{2}$ 约束和方程值给出 Hessian 特征值的移位谱结构。",
+          "route": "在按特征值排序的 $\\Gamma _{2}$ 锥上完成二次对称多项式的代数分解，证明大 trace 时存在统一 shifted gap 与二次型下界。",
+          "evidence": "第 2--3 节 Lemmas 2.1--2.3、Proposition 3.4（PDF 第 5--12 页）。"
+        },
+        {
+          "claim": "移位谱 gap 将线性化方程的二阶项转成强 Jacobi 能量。",
+          "route": "把测试方向代入线性化 Hessian，使用强/弱 shifted Jacobi inequality 控制梯度和零阶项；局部化后得到带 cutoff 的能量不等式。",
+          "evidence": "第 4 节 Propositions 4.2--4.4（PDF 第 14--19 页，Local Jacobi energy）。"
+        },
+        {
+          "claim": "半凸解的局部水平集可变成一致椭圆的图方程。",
+          "route": "用半凸性和局部图性质选择梯度方向作为坐标，写出曲率方程在图坐标下的变换规则；证明变换后的系数满足统一椭圆性。",
+          "evidence": "第 5 节 Lemmas 5.1--5.5（PDF 第 20--27 页）。"
+        },
+        {
+          "claim": "能量估计和 Lipschitz 右端共同给出 Theorem 1.1 的内部曲率界。",
+          "route": "对图方程应用局部椭圆估计与 cutoff 迭代，把 Jacobi 能量边界项吸收，并以右端 Lipschitz 控制系数振荡，回到原坐标得到 Hessian/曲率上界。",
+          "evidence": "第 1 节 Theorem 1.1（PDF 第 1--3 页）与第 6 节 proof（PDF 第 29--34 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--34 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 86,
+    "priorityTier": "high",
+    "priorityReason": "是完全非线性椭圆方程内部正则性与曲率估计的直接进展，方法链条对 Hessian/曲率型方程有明确迁移价值。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03958:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03958",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Interior Curvature Estimates of Semi-convex Solutions for the scalar curvature equation with Lipschitz Right-Hand Sides",
+        "authors": [
+          "Lichun Liang"
+        ],
+        "abstract": "In this paper, let $u\\in C^4(B_{10})$ with $D^2u\\geq -KI$ define a $2$-admissible graph $M=\\{(x,u(x)):x\\in B_{10}\\}\\subset\\R^{n+1}$ satisfying \\[ σ_2(κ[u])=f(x). \\] We prove an interior curvature estimate depending on the Lipschitz norm of the right-hand sides. The proof combines a shifted Jacobi inequality for \\(b=\\log(H+J_0)\\), a parallel hypersurface transformation that makes the Newton tensor uniformly elliptic and local boundedness estimate then reduces the pointwise bound to a weighted $L^1$ estimate, which is completed using the Jacobi energy inequality and integration by parts.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.03958",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03958",
+        "submittedAt": "2026-09-03T14:56:36Z",
+        "updatedAt": "2026-09-03T14:56:36Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "正则性",
+        "workSummary": "证明具有 Lipschitz 右端的半凸标量曲率方程内部曲率估计：先从 $\\Gamma _{2}$ 特征值的移位谱结构得到代数 gap，再建立 Jacobi 能量不等式，并通过图变换和一致椭圆性把能量控制转成 Hessian 界。",
+        "techniques": [
+          "$\\Gamma _{2}$ 特征值结构",
+          "移位谱 gap",
+          "Jacobi 能量",
+          "局部图变换",
+          "一致椭圆性"
+        ],
+        "breakthrough": "在右端仅 Lipschitz 的条件下保留半凸解的内部曲率控制，关键是把标量曲率方程的二阶项转化成带移位谱 gap 的局部 Jacobi 能量。",
+        "limitations": "估计是局部的，依赖半凸性$、\\Gamma _{2}$ 分支和 C2/C4 正则化框架；常数随右端 Lipschitz 界、半凸参数和球域尺度变化。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "$\\Gamma _{2}$ 约束和方程值给出 Hessian 特征值的移位谱结构。",
+              "route": "在按特征值排序的 $\\Gamma _{2}$ 锥上完成二次对称多项式的代数分解，证明大 trace 时存在统一 shifted gap 与二次型下界。",
+              "evidence": "第 2--3 节 Lemmas 2.1--2.3、Proposition 3.4（PDF 第 5--12 页）。"
+            },
+            {
+              "claim": "移位谱 gap 将线性化方程的二阶项转成强 Jacobi 能量。",
+              "route": "把测试方向代入线性化 Hessian，使用强/弱 shifted Jacobi inequality 控制梯度和零阶项；局部化后得到带 cutoff 的能量不等式。",
+              "evidence": "第 4 节 Propositions 4.2--4.4（PDF 第 14--19 页，Local Jacobi energy）。"
+            },
+            {
+              "claim": "半凸解的局部水平集可变成一致椭圆的图方程。",
+              "route": "用半凸性和局部图性质选择梯度方向作为坐标，写出曲率方程在图坐标下的变换规则；证明变换后的系数满足统一椭圆性。",
+              "evidence": "第 5 节 Lemmas 5.1--5.5（PDF 第 20--27 页）。"
+            },
+            {
+              "claim": "能量估计和 Lipschitz 右端共同给出 Theorem 1.1 的内部曲率界。",
+              "route": "对图方程应用局部椭圆估计与 cutoff 迭代，把 Jacobi 能量边界项吸收，并以右端 Lipschitz 控制系数振荡，回到原坐标得到 Hessian/曲率上界。",
+              "evidence": "第 1 节 Theorem 1.1（PDF 第 1--3 页）与第 6 节 proof（PDF 第 29--34 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--34 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 86,
+        "priorityTier": "high",
+        "priorityReason": "是完全非线性椭圆方程内部正则性与曲率估计的直接进展，方法链条对 Hessian/曲率型方程有明确迁移价值。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

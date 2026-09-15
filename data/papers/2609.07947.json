@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07947",
+  "slug": "2609.07947",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07947:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07947",
+    "version": 1,
+    "entryKind": "new",
+    "title": "A counterexample to Kenig's conjecture for the Laplace double-layer operator",
+    "authors": [
+      "Matthew J. Colbrook",
+      "Siavash Sadeghi"
+    ],
+    "abstract": "Layer potentials provide a classical approach to boundary value problems for Laplace's equation on Lipschitz domains. Kenig's 1994 spectral-radius conjecture for the double-layer operator would ensure operator-norm convergence of the associated Neumann series on mean-zero $L^2$ densities when the boundary is connected. We disprove this conjecture by constructing a bounded simply connected planar Lipschitz domain whose double-layer operator on arclength $L^2$ has essential spectral radius strictly greater than $1/2$. More precisely, for every $t>1/2$ sufficiently close to $1/2$, we obtain such a domain with $\\pm i t$ in its Fredholm essential spectrum. The construction starts from smooth graphs whose shapes repeat under translation. In the limit of separated scales, refinement makes solutions of adjoint resolvent equations grow with fixed forcing. The graph slopes remain uniformly bounded. A computer-assisted certificate proves this growth through an inequality for Hermitian $2\\times2$ matrices. Its strict margin at $- i/2$ persists at nearby spectral parameters. Normalisation and a Floquet transform then give compactly supported densities with small residuals on the full graphs. We insert rescaled segments of successive graphs into one bounded boundary, where these densities form a weakly null sequence of approximate eigenvectors. The same spectral conclusion holds on a single periodic Lipschitz graph. The certificate combines continuous estimates, exact rational arithmetic and rigorous interval enclosures.",
+    "categories": [
+      "math.AP",
+      "math-ph",
+      "math.NA",
+      "math.SP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07947",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07947",
+    "submittedAt": "2026-09-07T19:59:20Z",
+    "updatedAt": "2026-09-07T19:59:20Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "本文反驳 Kenig 关于平面 Lipschitz 域 Laplace 双层算子谱半径的猜想。作者先在周期光滑图上研究双层算子的 Floquet/周期分解，把自相似图形的 resolvent 问题转化为由局部周期算子组成的块算子。一个经过计算机辅助验证的 Hermitian $2\\times 2$ 矩阵不等式保证在 −i/2 附近存在固定强迫下增长的 adjoint resolvent；周期密度经 Floquet 变换得到小残差的近似本征向量。随后把不同尺度的图段按几何衰减插入一个有界单连通 Lipschitz 边界，使这些密度弱趋零而残差趋零，故 $\\pm it$ 属于 Fredholm essential spectrum，essential spectral radius 大于 1/2。",
+    "techniques": [
+      "周期图双层算子和 Floquet 变换",
+      "块 Toeplitz/直接积分算子极限",
+      "Hermitian $2\\times 2$ 矩阵计算机辅助证书",
+      "resolvent 增长与近似本征向量",
+      "多尺度图段嵌入 Lipschitz 边界"
+    ],
+    "breakthrough": "论文构造出保持统一 Lipschitz 斜率、却含无穷多分离细尺度的有界单连通域；这些尺度把周期图上的 resolvent 增长转化为边界双层算子在 $\\pm it（t>1/2）$处的 Fredholm essential spectrum，从而真正否定谱半径$\\le 1/2$ 的猜想。",
+    "limitations": "反例是二维平面上的特定 Lipschitz 域，结论依赖 arclength $L^{2}$ 双层算子及计算机辅助矩阵证书，不能推出一般光滑域或其他边界积分算子的谱性质。构造给出谱半径下界和非收敛性反例，不提供所有 Lipschitz 域的完整谱分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "周期光滑图上的双层算子可分解为适合 Floquet 分析的周期核/直接积分算子。",
+          "route": "对形如 $F(x)=mx+h(x)$ 的平移周期图，将跨周期核按整数平移求和并在 period-one 密度空间定义 $P_F；Floquet$ 变换把全图算子拆成准动量参数族，便于把局部图形改变写成算子块的强收敛极限。",
+          "evidence": "PDF 第4–7页 Section 2.1–2.3、周期图定义及 Proposition 2.1–2.3。"
+        },
+        {
+          "claim": "存在固定强迫使周期图 adjoint resolvent 在 −i/2 附近具有严格增长。",
+          "route": "把候选周期密度的 Fourier 模式代入 resolvent 方程，连续估计归结为一个 Hermitian $2\\times 2$ 矩阵的正定/负定不等式；计算机辅助区间证书给出严格余量，因此解的范数相对于固定右端可任意放大。严格余量对邻近谱参数保持，得到 t>1/2 的同样增长。",
+          "evidence": "PDF 第2–4页摘要和 Theorem 1.1 策略；PDF 第8–12页 Section 3、Proposition 3.1–3.3 及矩阵证书。"
+        },
+        {
+          "claim": "周期图上可构造归一化密度序列，其双层算子残差趋于零而密度弱趋零。",
+          "route": "将大尺度周期 resolvent 解截断并用 Floquet 变换恢复到物理图，归一化后残差由截断边界和周期近似误差组成并趋于零；平移不同周期段后，支撑逐渐分离，故在 $L^{2}$ 中弱收敛到零。",
+          "evidence": "PDF 第10–15页 Section 3–4、Floquet 变换、resolvent 归一化构造和 Theorem 1.1 的近似本征向量讨论。"
+        },
+        {
+          "claim": "把多尺度周期图段嵌入单一有界 Lipschitz 边界后$，\\pm it$ 属于 Fredholm essential spectrum。",
+          "route": "在 $x=0$ 附近插入按几何尺度缩放的周期图段，斜率统一有界且边界保持 Lipschitz；将每个周期近似本征密度搬到对应段，残差仍趋于零且序列弱零。Weyl/Fredholm 判据于是排除 $D_\\Gamma \\mp it I$ 的 Fredholm 性，得到 $\\pm it\\in \\sigma _ess$，并推出 $r_ess\\ge t$。",
+          "evidence": "PDF 第1–3页 Theorem 1.1；PDF 第12–16页多尺度边界构造、Theorem 1.1 证明及公式(1.3)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 全文（约18页）的摘要、算子构造、计算机辅助证书、证明、Acknowledgements 和 References，并核查 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文逐页检查，重点为第2–16页构造与证书、第16–18页结尾和 References。",
+    "priorityScore": 66,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07947:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07947",
+        "version": 1,
+        "entryKind": "new",
+        "title": "A counterexample to Kenig's conjecture for the Laplace double-layer operator",
+        "authors": [
+          "Matthew J. Colbrook",
+          "Siavash Sadeghi"
+        ],
+        "abstract": "Layer potentials provide a classical approach to boundary value problems for Laplace's equation on Lipschitz domains. Kenig's 1994 spectral-radius conjecture for the double-layer operator would ensure operator-norm convergence of the associated Neumann series on mean-zero $L^2$ densities when the boundary is connected. We disprove this conjecture by constructing a bounded simply connected planar Lipschitz domain whose double-layer operator on arclength $L^2$ has essential spectral radius strictly greater than $1/2$. More precisely, for every $t>1/2$ sufficiently close to $1/2$, we obtain such a domain with $\\pm i t$ in its Fredholm essential spectrum. The construction starts from smooth graphs whose shapes repeat under translation. In the limit of separated scales, refinement makes solutions of adjoint resolvent equations grow with fixed forcing. The graph slopes remain uniformly bounded. A computer-assisted certificate proves this growth through an inequality for Hermitian $2\\times2$ matrices. Its strict margin at $- i/2$ persists at nearby spectral parameters. Normalisation and a Floquet transform then give compactly supported densities with small residuals on the full graphs. We insert rescaled segments of successive graphs into one bounded boundary, where these densities form a weakly null sequence of approximate eigenvectors. The same spectral conclusion holds on a single periodic Lipschitz graph. The certificate combines continuous estimates, exact rational arithmetic and rigorous interval enclosures.",
+        "categories": [
+          "math.AP",
+          "math-ph",
+          "math.NA",
+          "math.SP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07947",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07947",
+        "submittedAt": "2026-09-07T19:59:20Z",
+        "updatedAt": "2026-09-07T19:59:20Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "本文反驳 Kenig 关于平面 Lipschitz 域 Laplace 双层算子谱半径的猜想。作者先在周期光滑图上研究双层算子的 Floquet/周期分解，把自相似图形的 resolvent 问题转化为由局部周期算子组成的块算子。一个经过计算机辅助验证的 Hermitian $2\\times 2$ 矩阵不等式保证在 −i/2 附近存在固定强迫下增长的 adjoint resolvent；周期密度经 Floquet 变换得到小残差的近似本征向量。随后把不同尺度的图段按几何衰减插入一个有界单连通 Lipschitz 边界，使这些密度弱趋零而残差趋零，故 $\\pm it$ 属于 Fredholm essential spectrum，essential spectral radius 大于 1/2。",
+        "techniques": [
+          "周期图双层算子和 Floquet 变换",
+          "块 Toeplitz/直接积分算子极限",
+          "Hermitian $2\\times 2$ 矩阵计算机辅助证书",
+          "resolvent 增长与近似本征向量",
+          "多尺度图段嵌入 Lipschitz 边界"
+        ],
+        "breakthrough": "论文构造出保持统一 Lipschitz 斜率、却含无穷多分离细尺度的有界单连通域；这些尺度把周期图上的 resolvent 增长转化为边界双层算子在 $\\pm it（t>1/2）$处的 Fredholm essential spectrum，从而真正否定谱半径$\\le 1/2$ 的猜想。",
+        "limitations": "反例是二维平面上的特定 Lipschitz 域，结论依赖 arclength $L^{2}$ 双层算子及计算机辅助矩阵证书，不能推出一般光滑域或其他边界积分算子的谱性质。构造给出谱半径下界和非收敛性反例，不提供所有 Lipschitz 域的完整谱分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "周期光滑图上的双层算子可分解为适合 Floquet 分析的周期核/直接积分算子。",
+              "route": "对形如 $F(x)=mx+h(x)$ 的平移周期图，将跨周期核按整数平移求和并在 period-one 密度空间定义 $P_F；Floquet$ 变换把全图算子拆成准动量参数族，便于把局部图形改变写成算子块的强收敛极限。",
+              "evidence": "PDF 第4–7页 Section 2.1–2.3、周期图定义及 Proposition 2.1–2.3。"
+            },
+            {
+              "claim": "存在固定强迫使周期图 adjoint resolvent 在 −i/2 附近具有严格增长。",
+              "route": "把候选周期密度的 Fourier 模式代入 resolvent 方程，连续估计归结为一个 Hermitian $2\\times 2$ 矩阵的正定/负定不等式；计算机辅助区间证书给出严格余量，因此解的范数相对于固定右端可任意放大。严格余量对邻近谱参数保持，得到 t>1/2 的同样增长。",
+              "evidence": "PDF 第2–4页摘要和 Theorem 1.1 策略；PDF 第8–12页 Section 3、Proposition 3.1–3.3 及矩阵证书。"
+            },
+            {
+              "claim": "周期图上可构造归一化密度序列，其双层算子残差趋于零而密度弱趋零。",
+              "route": "将大尺度周期 resolvent 解截断并用 Floquet 变换恢复到物理图，归一化后残差由截断边界和周期近似误差组成并趋于零；平移不同周期段后，支撑逐渐分离，故在 $L^{2}$ 中弱收敛到零。",
+              "evidence": "PDF 第10–15页 Section 3–4、Floquet 变换、resolvent 归一化构造和 Theorem 1.1 的近似本征向量讨论。"
+            },
+            {
+              "claim": "把多尺度周期图段嵌入单一有界 Lipschitz 边界后$，\\pm it$ 属于 Fredholm essential spectrum。",
+              "route": "在 $x=0$ 附近插入按几何尺度缩放的周期图段，斜率统一有界且边界保持 Lipschitz；将每个周期近似本征密度搬到对应段，残差仍趋于零且序列弱零。Weyl/Fredholm 判据于是排除 $D_\\Gamma \\mp it I$ 的 Fredholm 性，得到 $\\pm it\\in \\sigma _ess$，并推出 $r_ess\\ge t$。",
+              "evidence": "PDF 第1–3页 Theorem 1.1；PDF 第12–16页多尺度边界构造、Theorem 1.1 证明及公式(1.3)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 全文（约18页）的摘要、算子构造、计算机辅助证书、证明、Acknowledgements 和 References，并核查 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文逐页检查，重点为第2–16页构造与证书、第16–18页结尾和 References。",
+        "priorityScore": 66,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.30796",
+  "slug": "2608.30796",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.30796:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.30796",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Tumor boundary instability induced by pressure feedback",
+    "authors": [
+      "Yu Feng",
+      "Yeyu Zhang",
+      "Kewei Zhou"
+    ],
+    "abstract": "We consider a Hele--Shaw-type tumor growth model obtained from the incompressible limit of a porous-medium equation. The limiting model preserves the patch structure of the tumor density and therefore admits a single free-boundary formulation. We investigate how a pressure-feedback parameter associated with the homeostatic pressure affects boundary stability. Using asymptotic analysis, we study boundary perturbations of finite-radius tumors and planar traveling fronts and derive the corresponding stability criteria. For planar fronts, the stability thresholds are further shown to be bifurcation points from which nonsymmetric traveling waves emerge. Our results indicate that pressure feedback can induce boundary instability in parameter regimes where the model without pressure feedback remains stable.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.30796",
+    "pdfUrl": "https://arxiv.org/pdf/2608.30796",
+    "submittedAt": "2026-08-31T13:50:05Z",
+    "updatedAt": "2026-08-31T13:50:05Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "自由边界失稳与非线性分岔",
+    "workSummary": "论文分析压力反馈诱导的肿瘤自由边界失稳。作者先在有限半径球和无限平面前沿上求出营养/压力基态及 Fourier 模式增长率，证明临界反馈和波数的存在唯一性，再把线性临界模态嵌入自由边界非线性映射，通过 Crandall–Rabinowitz 定理构造局部非对称行波分支。",
+    "techniques": [
+      "径向 Bessel 解与 Fourier 模态分解",
+      "增长率零点和对数凹性",
+      "自由边界 Fréchet 线性化",
+      "Crandall–Rabinowitz 局部分岔"
+    ],
+    "breakthrough": "论文把有限球的模式增长、平面前沿的唯一临界反馈与非线性自由边界分岔连成一条可验证链条：线性算子的单模核和参数横截性直接满足 Crandall–Rabinowitz 条件，因此压力反馈确实产生局部非对称行波，而不只停留在线性失稳预测。",
+    "limitations": "分岔结论是临界参数附近的局部结果，模型采用径向/平面基态和给定自由边界条件；论文没有建立远离临界点的全局分支、非线性稳定性或一般几何下的完整失稳分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Proposition 3.1 确定有限半径球的径向基态、单模增长函数 $F_l$ 及其平移中性、高频稳定和至少一个临界阈值性质。",
+          "route": "先解径向营养与压力的 Bessel 边值问题，再将边界扰动展开为单个球谐/Fourier 模式；把界面条件代回得到 $F_l(R,\\gamma )$，考察 $l=1$ 平移模、高频极限和小大半径渐近，推出增长率的符号变化。",
+          "evidence": "PDF 第6–12页，第3.1节式(3.3)–(3.28)及 Proposition 3.1；包括 Bessel 基态、单模扰动和 $F_l$ 的定义。"
+        },
+        {
+          "claim": "Proposition 3.3 说明反馈趋零与半径趋无穷的极限不交换，从而区分有限球临界行为和平面前沿极限。",
+          "route": "把 Proposition 3.1 的增长表达式分别在 $\\gamma \\to 0$ 与 $R\\to \\infty $ 的顺序下展开，比较 Bessel 比值的尺度项；两种次序留下不同的主导项，因而得到非交换极限并为平面分析提供正确缩放。",
+          "evidence": "PDF 第13–14页，第3.1节 Proposition 3.3 及其证明；式(3.25)–(3.28)之后关于 $\\gamma \\to 0、R\\to \\infty $ 的两种极限计算。"
+        },
+        {
+          "claim": "Proposition 3.5 证明平面前沿的增长函数在波数和反馈参数上具有唯一临界零点，并满足横截性。",
+          "route": "先用指数解写出平面营养/压力剖面和模式增长 $E_l$，再将零点条件改写为 Bessel 比值的对数；Q(z) 的对数凹性给出波数零点唯一，随后对参数重参数化后的 H(u) 使用单调性得到唯一 $\\gamma _l^*$，并证明 $\\partial \\gamma E_l>0$。",
+          "evidence": "PDF 第15–20页，第3.2节式(3.40)–(3.69)及 Proposition 3.5；包含平面基态$、E_l、Q$ 的对数凹性和 $\\gamma _l^*$ 横截性。"
+        },
+        {
+          "claim": "Theorem 4.3 在 $\\gamma =\\gamma _l^*$ 附近构造具有 cos(ly) 主模态的局部非对称行波自由边界分支。",
+          "route": "把边界扰动参数化为 f，构造非线性映射 $F(f,\\gamma )$ 并计算其 Fréchet 导数；Fourier 对角化显示临界导数的核由 cos(ly) 一维生成，余维一值域和 $\\partial \\gamma E_l>0$ 给出横截性，故 Crandall–Rabinowitz 定理产生局部分支。",
+          "evidence": "PDF 第22–26页，第4节式(4.1)–(4.9)、Proposition 4.1、Theorem 4.2 和 Theorem 4.3；包括核、值域和参数横截性验证。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在论文第3–4页声明：所有数学计算和证明由作者完成；生成式人工智能工具仅用于语言编辑以及协助检查计算和证明，所有 AI 辅助建议均由作者独立审阅和核实，作者对最终结果负责。",
+    "aiEvidenceSource": "PDF 第3–4页的 AI 使用声明；缓存全文 2608.30796.txt。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.30796:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.30796",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Tumor boundary instability induced by pressure feedback",
+        "authors": [
+          "Yu Feng",
+          "Yeyu Zhang",
+          "Kewei Zhou"
+        ],
+        "abstract": "We consider a Hele--Shaw-type tumor growth model obtained from the incompressible limit of a porous-medium equation. The limiting model preserves the patch structure of the tumor density and therefore admits a single free-boundary formulation. We investigate how a pressure-feedback parameter associated with the homeostatic pressure affects boundary stability. Using asymptotic analysis, we study boundary perturbations of finite-radius tumors and planar traveling fronts and derive the corresponding stability criteria. For planar fronts, the stability thresholds are further shown to be bifurcation points from which nonsymmetric traveling waves emerge. Our results indicate that pressure feedback can induce boundary instability in parameter regimes where the model without pressure feedback remains stable.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.30796",
+        "pdfUrl": "https://arxiv.org/pdf/2608.30796",
+        "submittedAt": "2026-08-31T13:50:05Z",
+        "updatedAt": "2026-08-31T13:50:05Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "自由边界失稳与非线性分岔",
+        "workSummary": "论文分析压力反馈诱导的肿瘤自由边界失稳。作者先在有限半径球和无限平面前沿上求出营养/压力基态及 Fourier 模式增长率，证明临界反馈和波数的存在唯一性，再把线性临界模态嵌入自由边界非线性映射，通过 Crandall–Rabinowitz 定理构造局部非对称行波分支。",
+        "techniques": [
+          "径向 Bessel 解与 Fourier 模态分解",
+          "增长率零点和对数凹性",
+          "自由边界 Fréchet 线性化",
+          "Crandall–Rabinowitz 局部分岔"
+        ],
+        "breakthrough": "论文把有限球的模式增长、平面前沿的唯一临界反馈与非线性自由边界分岔连成一条可验证链条：线性算子的单模核和参数横截性直接满足 Crandall–Rabinowitz 条件，因此压力反馈确实产生局部非对称行波，而不只停留在线性失稳预测。",
+        "limitations": "分岔结论是临界参数附近的局部结果，模型采用径向/平面基态和给定自由边界条件；论文没有建立远离临界点的全局分支、非线性稳定性或一般几何下的完整失稳分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Proposition 3.1 确定有限半径球的径向基态、单模增长函数 $F_l$ 及其平移中性、高频稳定和至少一个临界阈值性质。",
+              "route": "先解径向营养与压力的 Bessel 边值问题，再将边界扰动展开为单个球谐/Fourier 模式；把界面条件代回得到 $F_l(R,\\gamma )$，考察 $l=1$ 平移模、高频极限和小大半径渐近，推出增长率的符号变化。",
+              "evidence": "PDF 第6–12页，第3.1节式(3.3)–(3.28)及 Proposition 3.1；包括 Bessel 基态、单模扰动和 $F_l$ 的定义。"
+            },
+            {
+              "claim": "Proposition 3.3 说明反馈趋零与半径趋无穷的极限不交换，从而区分有限球临界行为和平面前沿极限。",
+              "route": "把 Proposition 3.1 的增长表达式分别在 $\\gamma \\to 0$ 与 $R\\to \\infty $ 的顺序下展开，比较 Bessel 比值的尺度项；两种次序留下不同的主导项，因而得到非交换极限并为平面分析提供正确缩放。",
+              "evidence": "PDF 第13–14页，第3.1节 Proposition 3.3 及其证明；式(3.25)–(3.28)之后关于 $\\gamma \\to 0、R\\to \\infty $ 的两种极限计算。"
+            },
+            {
+              "claim": "Proposition 3.5 证明平面前沿的增长函数在波数和反馈参数上具有唯一临界零点，并满足横截性。",
+              "route": "先用指数解写出平面营养/压力剖面和模式增长 $E_l$，再将零点条件改写为 Bessel 比值的对数；Q(z) 的对数凹性给出波数零点唯一，随后对参数重参数化后的 H(u) 使用单调性得到唯一 $\\gamma _l^*$，并证明 $\\partial \\gamma E_l>0$。",
+              "evidence": "PDF 第15–20页，第3.2节式(3.40)–(3.69)及 Proposition 3.5；包含平面基态$、E_l、Q$ 的对数凹性和 $\\gamma _l^*$ 横截性。"
+            },
+            {
+              "claim": "Theorem 4.3 在 $\\gamma =\\gamma _l^*$ 附近构造具有 cos(ly) 主模态的局部非对称行波自由边界分支。",
+              "route": "把边界扰动参数化为 f，构造非线性映射 $F(f,\\gamma )$ 并计算其 Fréchet 导数；Fourier 对角化显示临界导数的核由 cos(ly) 一维生成，余维一值域和 $\\partial \\gamma E_l>0$ 给出横截性，故 Crandall–Rabinowitz 定理产生局部分支。",
+              "evidence": "PDF 第22–26页，第4节式(4.1)–(4.9)、Proposition 4.1、Theorem 4.2 和 Theorem 4.3；包括核、值域和参数横截性验证。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在论文第3–4页声明：所有数学计算和证明由作者完成；生成式人工智能工具仅用于语言编辑以及协助检查计算和证明，所有 AI 辅助建议均由作者独立审阅和核实，作者对最终结果负责。",
+        "aiEvidenceSource": "PDF 第3–4页的 AI 使用声明；缓存全文 2608.30796.txt。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

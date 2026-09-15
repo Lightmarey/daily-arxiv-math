@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.31071",
+  "slug": "2608.31071",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.31071:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.31071",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global smooth solutions to the inhomogeneous Landau-Fermi-Dirac equation",
+    "authors": [
+      "William Golding",
+      "Christopher Henderson"
+    ],
+    "abstract": "We consider the spatially inhomogeneous Landau-Fermi-Dirac equation with Coulomb potential, a quantum modification of the classical Landau equation for fermions. Mathematically, the Pauli exclusion principle manifests as an additional a priori $L^\\infty$-bound for solutions. Using this bound, we propagate polynomial decay in velocity, yielding unconditional upper bounds on the local mass and energy densities, thereby ruling out the possibility of implosions in the hydrodynamic quantities. Combining this estimate with a modified mass spreading method that yields desaturation, we deduce the existence of global-in-time classical solutions for rough initial data with polynomial decay in velocity. This result stands in stark contrast to the theory for the classical Landau and Boltzmann equations, for which no comparable nonperturbative global existence result is known despite sustained effort. Our treatment is almost entirely self-contained, using only robust, generic estimates for linear kinetic equations. In particular, our proof of local existence, in contrast to prior works, more closely mirrors the theory for parabolic equations using weak solutions and simpler function spaces. It may provide a concise roadmap to organizing, adapting, and applying the various linear and nonlinear estimates to obtain well-posedness for kinetic equations.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.31071",
+    "pdfUrl": "https://arxiv.org/pdf/2608.31071",
+    "submittedAt": "2026-08-31T16:46:43Z",
+    "updatedAt": "2026-08-31T16:46:43Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "动理学方程全局适定性",
+    "workSummary": "论文研究空间非齐次 Landau–Fermi–Dirac 方程，利用 Pauli 排斥约束建立速度衰减传播和质量扩散/去饱和估计，随后对加入 $\\kappa $ 速度黏性的方程进行局部构造、全局延拓和 $\\kappa \\to 0$ 紧性极限，得到大数据全局弱解，并通过线性动理学 De Giorgi 与 Schauder 估计 bootstrap 为正时间光滑性。",
+    "techniques": [
+      "非局部系数估计与接触点屏障",
+      "Pauli 粒子/空穴质量扩散",
+      "Schauder 固定点与人工黏性延拓",
+      "动理学 De Giorgi–Schauder bootstrap"
+    ],
+    "breakthrough": "在环面空间、无需小数据条件的设定下，论文把 Pauli 排斥给出的点态上界升级为速度尾部、局部质量能量和碰撞椭圆性的统一控制，并据此构造全局弱解及正时间光滑解；论文还明确保留了粗糙数据下未证明唯一性的边界。",
+    "limitations": "全局构造专门在 $\\Omega =T^3$ 且初值具有任意高速度衰减、某个相空间球上远离真空和饱和的条件下进行；Theorem 1.4 不声称粗糙数据唯一性，指数时间上界也不排除无限时间增长。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.1 建立经典解速度权 $L\\infty ^m$ 的传播界，从而控制局部质量和能量密度。",
+          "route": "在 f 与时间依赖屏障 b 的首次接触点使用 Pauli 上界和非局部算子非散度形式；Lemma 3.3 识别远场积分的有利符号，近场与二阶项由 Coulomb 核估计吸收到 Kb 中，再以最大值原理排除接触。",
+          "evidence": "PDF 第9–12页，第3节，Lemma 3.1、Lemma 3.3、Proof of Theorem 1.1，式(3.3)、(3.6)、(3.13)–(3.21)；定理陈述见 PDF 第3页。"
+        },
+        {
+          "claim": "Theorem 1.3 证明初始非真空球上的粒子和空穴正性在正时间传播，并给出碰撞矩阵的定量椭圆性。",
+          "route": "先在 Proposition 4.1 中加入人工黏性并维持原点附近的椭圆核心，再交替使用 Lemmas 4.2–4.3 的速度扩散和输运下界，沿四阶段路径把 f 与 $h=1-f$ 的下界推到任意目标相空间球；取 $\\kappa =0$ 后由 Lemma 2.2 转成 A[f(1−f)] 的方向性下界。",
+          "evidence": "PDF 第4–5页 Theorem 1.3 的陈述和四阶段路线；PDF 第12–17页，第4节 Proposition 4.1、Lemmas 4.2–4.3 及 Steps 1–4，式(4.1)、(4.16)–(4.29)。"
+        },
+        {
+          "claim": "Proposition 5.2 构造满足 Pauli 约束和上述先验估计的全局弱解。",
+          "route": "对截断初值和 $\\kappa >0$ 的半线性问题先用线性 $L^{2}$ 理论及 Schauder 固定点得到局部解，再用 Theorem 1.1/Proposition 4.1 排除加权范数延拓障碍；令截断半径趋于无穷$、\\kappa $趋于零，利用统一能量界、Aubin–Lions 型紧性和系数逐点收敛把极限识别为 LFD 弱解。",
+          "evidence": "PDF 第18页 Proposition 5.2；PDF 第20–24页，第5节 Steps 1–5，Lemma 5.3、Lemma 5.4、式(5.11)–(5.24)及 $\\kappa \\to 0、R\\to \\infty $ 的极限。"
+        },
+        {
+          "claim": "Proposition 6.1 将全局弱解提升为正时间经典/光滑解，从而完成 Theorem 1.4。",
+          "route": "先以 Theorems 1.1 和 1.3 得到系数的上下界，再在动理学坐标变换 $\\Phi _z0$ 下应用 Proposition 6.2 的 De Giorgi Hölder 估计；由 Lemma 2.3 把解的 Hölder 控制传给非局部系数，反复应用 Proposition 6.3 的 Schauder 估计并 bootstrap，得到任意阶正则性。",
+          "evidence": "PDF 第24–29页，第6节 Proposition 6.1 及 Steps 1–4；Propositions 6.2–6.3、Lemmas 6.4–6.7，尤其式(6.9)–(6.16)、(6.25)和(6.32)–(6.35)。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明 ChatGPT 用于论文准备的最后阶段进行 copyediting（文字编辑/校对）。该声明没有把 AI 用途扩展到研究构思或证明。",
+    "aiEvidenceSource": "PDF 第1页，AI Acknowledgments。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.31071:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.31071",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global smooth solutions to the inhomogeneous Landau-Fermi-Dirac equation",
+        "authors": [
+          "William Golding",
+          "Christopher Henderson"
+        ],
+        "abstract": "We consider the spatially inhomogeneous Landau-Fermi-Dirac equation with Coulomb potential, a quantum modification of the classical Landau equation for fermions. Mathematically, the Pauli exclusion principle manifests as an additional a priori $L^\\infty$-bound for solutions. Using this bound, we propagate polynomial decay in velocity, yielding unconditional upper bounds on the local mass and energy densities, thereby ruling out the possibility of implosions in the hydrodynamic quantities. Combining this estimate with a modified mass spreading method that yields desaturation, we deduce the existence of global-in-time classical solutions for rough initial data with polynomial decay in velocity. This result stands in stark contrast to the theory for the classical Landau and Boltzmann equations, for which no comparable nonperturbative global existence result is known despite sustained effort. Our treatment is almost entirely self-contained, using only robust, generic estimates for linear kinetic equations. In particular, our proof of local existence, in contrast to prior works, more closely mirrors the theory for parabolic equations using weak solutions and simpler function spaces. It may provide a concise roadmap to organizing, adapting, and applying the various linear and nonlinear estimates to obtain well-posedness for kinetic equations.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.31071",
+        "pdfUrl": "https://arxiv.org/pdf/2608.31071",
+        "submittedAt": "2026-08-31T16:46:43Z",
+        "updatedAt": "2026-08-31T16:46:43Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "动理学方程全局适定性",
+        "workSummary": "论文研究空间非齐次 Landau–Fermi–Dirac 方程，利用 Pauli 排斥约束建立速度衰减传播和质量扩散/去饱和估计，随后对加入 $\\kappa $ 速度黏性的方程进行局部构造、全局延拓和 $\\kappa \\to 0$ 紧性极限，得到大数据全局弱解，并通过线性动理学 De Giorgi 与 Schauder 估计 bootstrap 为正时间光滑性。",
+        "techniques": [
+          "非局部系数估计与接触点屏障",
+          "Pauli 粒子/空穴质量扩散",
+          "Schauder 固定点与人工黏性延拓",
+          "动理学 De Giorgi–Schauder bootstrap"
+        ],
+        "breakthrough": "在环面空间、无需小数据条件的设定下，论文把 Pauli 排斥给出的点态上界升级为速度尾部、局部质量能量和碰撞椭圆性的统一控制，并据此构造全局弱解及正时间光滑解；论文还明确保留了粗糙数据下未证明唯一性的边界。",
+        "limitations": "全局构造专门在 $\\Omega =T^3$ 且初值具有任意高速度衰减、某个相空间球上远离真空和饱和的条件下进行；Theorem 1.4 不声称粗糙数据唯一性，指数时间上界也不排除无限时间增长。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.1 建立经典解速度权 $L\\infty ^m$ 的传播界，从而控制局部质量和能量密度。",
+              "route": "在 f 与时间依赖屏障 b 的首次接触点使用 Pauli 上界和非局部算子非散度形式；Lemma 3.3 识别远场积分的有利符号，近场与二阶项由 Coulomb 核估计吸收到 Kb 中，再以最大值原理排除接触。",
+              "evidence": "PDF 第9–12页，第3节，Lemma 3.1、Lemma 3.3、Proof of Theorem 1.1，式(3.3)、(3.6)、(3.13)–(3.21)；定理陈述见 PDF 第3页。"
+            },
+            {
+              "claim": "Theorem 1.3 证明初始非真空球上的粒子和空穴正性在正时间传播，并给出碰撞矩阵的定量椭圆性。",
+              "route": "先在 Proposition 4.1 中加入人工黏性并维持原点附近的椭圆核心，再交替使用 Lemmas 4.2–4.3 的速度扩散和输运下界，沿四阶段路径把 f 与 $h=1-f$ 的下界推到任意目标相空间球；取 $\\kappa =0$ 后由 Lemma 2.2 转成 A[f(1−f)] 的方向性下界。",
+              "evidence": "PDF 第4–5页 Theorem 1.3 的陈述和四阶段路线；PDF 第12–17页，第4节 Proposition 4.1、Lemmas 4.2–4.3 及 Steps 1–4，式(4.1)、(4.16)–(4.29)。"
+            },
+            {
+              "claim": "Proposition 5.2 构造满足 Pauli 约束和上述先验估计的全局弱解。",
+              "route": "对截断初值和 $\\kappa >0$ 的半线性问题先用线性 $L^{2}$ 理论及 Schauder 固定点得到局部解，再用 Theorem 1.1/Proposition 4.1 排除加权范数延拓障碍；令截断半径趋于无穷$、\\kappa $趋于零，利用统一能量界、Aubin–Lions 型紧性和系数逐点收敛把极限识别为 LFD 弱解。",
+              "evidence": "PDF 第18页 Proposition 5.2；PDF 第20–24页，第5节 Steps 1–5，Lemma 5.3、Lemma 5.4、式(5.11)–(5.24)及 $\\kappa \\to 0、R\\to \\infty $ 的极限。"
+            },
+            {
+              "claim": "Proposition 6.1 将全局弱解提升为正时间经典/光滑解，从而完成 Theorem 1.4。",
+              "route": "先以 Theorems 1.1 和 1.3 得到系数的上下界，再在动理学坐标变换 $\\Phi _z0$ 下应用 Proposition 6.2 的 De Giorgi Hölder 估计；由 Lemma 2.3 把解的 Hölder 控制传给非局部系数，反复应用 Proposition 6.3 的 Schauder 估计并 bootstrap，得到任意阶正则性。",
+              "evidence": "PDF 第24–29页，第6节 Proposition 6.1 及 Steps 1–4；Propositions 6.2–6.3、Lemmas 6.4–6.7，尤其式(6.9)–(6.16)、(6.25)和(6.32)–(6.35)。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明 ChatGPT 用于论文准备的最后阶段进行 copyediting（文字编辑/校对）。该声明没有把 AI 用途扩展到研究构思或证明。",
+        "aiEvidenceSource": "PDF 第1页，AI Acknowledgments。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

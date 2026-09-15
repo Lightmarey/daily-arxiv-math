@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12847",
+  "slug": "2609.12847",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12847:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12847",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Classification of solutions to the Liouville equation with a nonlinear Robin boundary condition on the unit disk",
+    "authors": [
+      "Jingbo Dou",
+      "Yunyun Hu",
+      "Keqing Peng"
+    ],
+    "abstract": "In this paper, we study the nonlinear boundary value problem \\begin{equation*} \\begin{cases} -\\Delta u=e^{2u},& \\mbox{in } {\\mathbb{D}},\\\\ \\frac{\\partial u}{\\partial\\nu}+\\lambda=e^u ,& \\mbox{on } {\\mathbb{S}^{1}}, \\end{cases} \\end{equation*} where $\\mathbb D$ is the unit disk, $\\lambda$ is a constant and $\\nu$ denotes the outer unit normal on $\\mathbb S^1$. For $0<\\lambda\\le2$, we establish a complete classification of smooth solutions. For $2<\\lambda\\leq3$, we prove a dichotomy between radial solutions and nonradial solutions. We develop a Hardy-Wronskian boundary rigidity method that transforms the nonlinear boundary value problem into a spectral rigidity problem for normalized holomorphic frames. This method exploits the complex-analytic structure of the Liouville equation with a Robin boundary condition and provides a new rigidity framework for related two-dimensional elliptic boundary value problems.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.12847",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12847",
+    "submittedAt": "2026-09-11T13:39:23Z",
+    "updatedAt": "2026-09-11T13:39:23Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "复分析刚性与解分类",
+    "workSummary": "论文研究单位圆盘上的 Liouville 方程 $-\\Delta u=e^{2u}$ 及非线性 Robin 边界条件 $\\partial_\\nu u+\\lambda=e^u$。作者构造归一化全纯提升，将方程转化为 Hardy 空间中的矩阵与系数问题；在 $\\lambda\\le2$ 且 $\\lambda\\ne1$ 时证明解必为唯一径向显式解，在 $\\lambda=1$ 时给出由圆盘自同构生成的完整分类，并在 $2<\\lambda\\le3$ 时证明径向解与具有二阶投影障碍的非径向解二分。",
+    "techniques": [
+      "把 $p=e^{-u}$ 与 Schwarzian 型全纯系数联系起来，构造满足 $\\det(Y',Y)=1$ 和 $p=|Y|^2/2$ 的归一化全纯提升 $Y$。",
+      "将提升分解为标量外因子 $g$ 与边界模长为一的内因子 $X$，使用 Hardy 空间等距乘子、Beurling--Lax 型因子化和 Taylor 系数谱主化。",
+      "通过边界 Fourier 恒等式、第一与第二矩恒等式及 Parseval 等式控制低阶和高阶模态，建立全纯刚性。",
+      "在 $\\lambda=1$ 时把射影微分消去，构造球面值 Möbius developing map，并利用球面圆盘的测地曲率确定像域半径。",
+      "在 $\\lambda>2$ 时以第二矩估计控制三阶以上模态，将外因子系数障碍转化为 $q(0)=u_z(0)^2-u_{zz}(0)\\ne0$，再用径向对称性和二次方程分类径向解。"
+    ],
+    "breakthrough": "核心贡献是提出 Hardy--Wronskian 方法，绕开移动平面、变分法和标准 blow-up 工具，对含内部 Liouville 指数项和非线性 Robin 边界项的单位圆盘问题建立新的刚性机制。该方法在非共形范围 $\\lambda\\le2$ 给出完整分类，在共形值 $\\lambda=1$ 给出所有解的圆盘自同构表示，并在 $2<\\lambda\\le3$ 提取非径向解必有的二阶投影障碍。",
+    "limitations": "解分类建立在 $u\\in C^\\infty(D)$ 和单位圆盘几何上。$\\lambda>2$ 时论文只在 $2<\\lambda\\le3$ 给出径向或非径向二分及非径向障碍，并未分类所有非径向解；当 $\\lambda>3$ 没有相应完整结论。临界值 $\\lambda=1$ 的表示依赖 Möbius 共形不变性，不能直接用于 $\\lambda\\ne1$；径向分类不等于一般解的存在性分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Liouville 方程及 Robin 边界条件等价于归一化全纯提升的 Wronskian 系统。",
+          "route": "令 $p=e^{-u}$ 和 $\\varphi=u_{zz}-u_z^2$，由内部方程得到 $pp_{z\\bar z}-p_zp_{\\bar z}=1/4$ 及 $p_{zz}+\\varphi p=0$，并证明 $\\varphi$ 全纯。为线性方程 $y''+\\varphi y=0$ 取归一化基本解，利用正定 Hermitian 矩阵平方根构造 $Y$，得到 $\\det(Y',Y)=1$、$p=|Y|^2/2$；反向使用 Gram 恒等式恢复 $-\\Delta u=e^{2u}$ 和边界条件。",
+          "evidence": "第 2.1 节 Lemma 2.1、Proposition 2.2--2.3，式 $(2.1)$--$(2.14)$，PDF 第 6--10 页。"
+        },
+        {
+          "claim": "外因子分解与 Hardy 谱主化把边界条件转化为全纯刚性，迫使 $0<\\lambda\\le2$ 时提升为仿射函数。",
+          "route": "在边界设 $F=|Y|^2$，由 Robin 条件得到 $\\operatorname{Im}\\Phi=(1-\\lambda)\\dot F/(2F)$。对 $F$ 构造唯一无零标量外因子 $g=e^h$，比较虚部得到 $\\Phi=(\\lambda-1)Dh$，并推出非平凡外因子的首个系数消失。写成 $Y=gX$ 后，$X$ 在边界为单位模，乘法算子保持 Hardy 范数；Lemma 2.9 的加权 Taylor 系数不等式与 Proposition 2.10 的一、二阶矩恒等式合并，在 $a=\\lambda-1\\le1$ 时迫使 $g$ 为常数，从而由 $D(D-1)Y=\\Phi Y$ 得 $Y=A_0+A_1z$。",
+          "evidence": "第 2.2--2.3 节 Lemma 2.5--2.9、Proposition 2.10，式 $(2.17)$--$(2.36)$，PDF 第 11--16 页；Theorem 2.11 及证明，PDF 第 16--17 页。"
+        },
+        {
+          "claim": "非共形范围的解必为径向显式解，共形值的全部解由圆盘自同构生成。",
+          "route": "对 $\\lambda\\le0$，积分内部方程并代入边界条件得到正量等于非正量的矛盾。对 $0<\\lambda\\le2$ 且 $\\lambda\\ne1$，仿射提升的 Fourier 首模比较给出 $\\langle A_1,A_0\\rangle=0$；Wronskian 归一化后 $|A_1|^2=R$、$|A_0|^2=R^{-1}$，遂得到 $u=\\log(2R/(1+R^2|z|^2))$ 及 $(\\lambda-2)R^2-2R+\\lambda=0$。当 $\\lambda=1$，先由同一仿射提升构造全局 Möbius developing map，再把圆盘等距映到球面半径满足 $\\cot\\rho=1$ 的圆盘，故 $\\rho=\\pi/4$、$R=\\sqrt2-1$；球面等距变换和边界保持性给出 $u=\\log(2R|\\psi'|/(1+R^2|\\psi|^2))$，并证明 $\\psi$ 仅在旋转因子下唯一。",
+          "evidence": "第 2.4 节 Proof of Theorem 1.1，式 $(2.43)$--$(2.47)$，PDF 第 17--19 页；第 3 节 Proof of Theorem 1.3 的 Step 1--4，式 $(3.1)$--$(3.7)$，PDF 第 19--24 页。"
+        },
+        {
+          "claim": "在 $2<\\lambda\\le3$ 时，非径向性必产生二次投影障碍，而所有径向解由同一正根方程决定。",
+          "route": "令 $a=\\lambda-1\\in(1,2]$。第二矩谱估计给出三阶以上外因子系数的加权控制；若外因子非恒定，则证明其二次系数 $b_2\\ne0$，并由 $q(0)=2ab_2/b_0$ 得 $q(0)=u_z(0)^2-u_{zz}(0)\\ne0$。若解径向，则旋转协变性迫使全纯投影系数 $q$ 恒为零，于是 $p=e^{-u}$ 为 $\\alpha+\\beta|z|^2$，内部 Wronskian 条件给出 $\\alpha\\beta=1/4$，边界条件再次化为 $(\\lambda-2)R^2-2R+\\lambda=0$。判别式 $4[1+2\\lambda-\\lambda^2]$ 决定各参数区间的径向解个数及 $\\lambda>1+\\sqrt2$ 时的径向不可存在性。",
+          "evidence": "第 4.1 节 Theorem 4.1 及证明，式 $(4.1)$--$(4.3)$，PDF 第 24--27 页；第 4.2 节 Proposition 4.2，式 $(4.5)$，PDF 第 27--28 页；Proof of Theorem 1.5 与 Corollary 1.6，式 $(4.6)$--$(4.10)$，PDF 第 28--29 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": null,
+    "aiEvidenceSource": "已核查 PDF 第 1--31 页全文，包括引言、Sections 2--4 的全部定理与证明、Acknowledgements、References 及正文末尾；未发现作者明确披露 AI、LLM、软件或工具用于研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。Acknowledgements（PDF 第 29 页）仅列出国家自然科学基金、陕西高校青年创新团队及中央高校基本科研业务费资助。",
+    "priorityScore": 86,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“复分析刚性与解分类”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 86/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12847:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12847",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Classification of solutions to the Liouville equation with a nonlinear Robin boundary condition on the unit disk",
+        "authors": [
+          "Jingbo Dou",
+          "Yunyun Hu",
+          "Keqing Peng"
+        ],
+        "abstract": "In this paper, we study the nonlinear boundary value problem \\begin{equation*} \\begin{cases} -\\Delta u=e^{2u},& \\mbox{in } {\\mathbb{D}},\\\\ \\frac{\\partial u}{\\partial\\nu}+\\lambda=e^u ,& \\mbox{on } {\\mathbb{S}^{1}}, \\end{cases} \\end{equation*} where $\\mathbb D$ is the unit disk, $\\lambda$ is a constant and $\\nu$ denotes the outer unit normal on $\\mathbb S^1$. For $0<\\lambda\\le2$, we establish a complete classification of smooth solutions. For $2<\\lambda\\leq3$, we prove a dichotomy between radial solutions and nonradial solutions. We develop a Hardy-Wronskian boundary rigidity method that transforms the nonlinear boundary value problem into a spectral rigidity problem for normalized holomorphic frames. This method exploits the complex-analytic structure of the Liouville equation with a Robin boundary condition and provides a new rigidity framework for related two-dimensional elliptic boundary value problems.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.12847",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12847",
+        "submittedAt": "2026-09-11T13:39:23Z",
+        "updatedAt": "2026-09-11T13:39:23Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "复分析刚性与解分类",
+        "workSummary": "论文研究单位圆盘上的 Liouville 方程 $-\\Delta u=e^{2u}$ 及非线性 Robin 边界条件 $\\partial_\\nu u+\\lambda=e^u$。作者构造归一化全纯提升，将方程转化为 Hardy 空间中的矩阵与系数问题；在 $\\lambda\\le2$ 且 $\\lambda\\ne1$ 时证明解必为唯一径向显式解，在 $\\lambda=1$ 时给出由圆盘自同构生成的完整分类，并在 $2<\\lambda\\le3$ 时证明径向解与具有二阶投影障碍的非径向解二分。",
+        "techniques": [
+          "把 $p=e^{-u}$ 与 Schwarzian 型全纯系数联系起来，构造满足 $\\det(Y',Y)=1$ 和 $p=|Y|^2/2$ 的归一化全纯提升 $Y$。",
+          "将提升分解为标量外因子 $g$ 与边界模长为一的内因子 $X$，使用 Hardy 空间等距乘子、Beurling--Lax 型因子化和 Taylor 系数谱主化。",
+          "通过边界 Fourier 恒等式、第一与第二矩恒等式及 Parseval 等式控制低阶和高阶模态，建立全纯刚性。",
+          "在 $\\lambda=1$ 时把射影微分消去，构造球面值 Möbius developing map，并利用球面圆盘的测地曲率确定像域半径。",
+          "在 $\\lambda>2$ 时以第二矩估计控制三阶以上模态，将外因子系数障碍转化为 $q(0)=u_z(0)^2-u_{zz}(0)\\ne0$，再用径向对称性和二次方程分类径向解。"
+        ],
+        "breakthrough": "核心贡献是提出 Hardy--Wronskian 方法，绕开移动平面、变分法和标准 blow-up 工具，对含内部 Liouville 指数项和非线性 Robin 边界项的单位圆盘问题建立新的刚性机制。该方法在非共形范围 $\\lambda\\le2$ 给出完整分类，在共形值 $\\lambda=1$ 给出所有解的圆盘自同构表示，并在 $2<\\lambda\\le3$ 提取非径向解必有的二阶投影障碍。",
+        "limitations": "解分类建立在 $u\\in C^\\infty(D)$ 和单位圆盘几何上。$\\lambda>2$ 时论文只在 $2<\\lambda\\le3$ 给出径向或非径向二分及非径向障碍，并未分类所有非径向解；当 $\\lambda>3$ 没有相应完整结论。临界值 $\\lambda=1$ 的表示依赖 Möbius 共形不变性，不能直接用于 $\\lambda\\ne1$；径向分类不等于一般解的存在性分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Liouville 方程及 Robin 边界条件等价于归一化全纯提升的 Wronskian 系统。",
+              "route": "令 $p=e^{-u}$ 和 $\\varphi=u_{zz}-u_z^2$，由内部方程得到 $pp_{z\\bar z}-p_zp_{\\bar z}=1/4$ 及 $p_{zz}+\\varphi p=0$，并证明 $\\varphi$ 全纯。为线性方程 $y''+\\varphi y=0$ 取归一化基本解，利用正定 Hermitian 矩阵平方根构造 $Y$，得到 $\\det(Y',Y)=1$、$p=|Y|^2/2$；反向使用 Gram 恒等式恢复 $-\\Delta u=e^{2u}$ 和边界条件。",
+              "evidence": "第 2.1 节 Lemma 2.1、Proposition 2.2--2.3，式 $(2.1)$--$(2.14)$，PDF 第 6--10 页。"
+            },
+            {
+              "claim": "外因子分解与 Hardy 谱主化把边界条件转化为全纯刚性，迫使 $0<\\lambda\\le2$ 时提升为仿射函数。",
+              "route": "在边界设 $F=|Y|^2$，由 Robin 条件得到 $\\operatorname{Im}\\Phi=(1-\\lambda)\\dot F/(2F)$。对 $F$ 构造唯一无零标量外因子 $g=e^h$，比较虚部得到 $\\Phi=(\\lambda-1)Dh$，并推出非平凡外因子的首个系数消失。写成 $Y=gX$ 后，$X$ 在边界为单位模，乘法算子保持 Hardy 范数；Lemma 2.9 的加权 Taylor 系数不等式与 Proposition 2.10 的一、二阶矩恒等式合并，在 $a=\\lambda-1\\le1$ 时迫使 $g$ 为常数，从而由 $D(D-1)Y=\\Phi Y$ 得 $Y=A_0+A_1z$。",
+              "evidence": "第 2.2--2.3 节 Lemma 2.5--2.9、Proposition 2.10，式 $(2.17)$--$(2.36)$，PDF 第 11--16 页；Theorem 2.11 及证明，PDF 第 16--17 页。"
+            },
+            {
+              "claim": "非共形范围的解必为径向显式解，共形值的全部解由圆盘自同构生成。",
+              "route": "对 $\\lambda\\le0$，积分内部方程并代入边界条件得到正量等于非正量的矛盾。对 $0<\\lambda\\le2$ 且 $\\lambda\\ne1$，仿射提升的 Fourier 首模比较给出 $\\langle A_1,A_0\\rangle=0$；Wronskian 归一化后 $|A_1|^2=R$、$|A_0|^2=R^{-1}$，遂得到 $u=\\log(2R/(1+R^2|z|^2))$ 及 $(\\lambda-2)R^2-2R+\\lambda=0$。当 $\\lambda=1$，先由同一仿射提升构造全局 Möbius developing map，再把圆盘等距映到球面半径满足 $\\cot\\rho=1$ 的圆盘，故 $\\rho=\\pi/4$、$R=\\sqrt2-1$；球面等距变换和边界保持性给出 $u=\\log(2R|\\psi'|/(1+R^2|\\psi|^2))$，并证明 $\\psi$ 仅在旋转因子下唯一。",
+              "evidence": "第 2.4 节 Proof of Theorem 1.1，式 $(2.43)$--$(2.47)$，PDF 第 17--19 页；第 3 节 Proof of Theorem 1.3 的 Step 1--4，式 $(3.1)$--$(3.7)$，PDF 第 19--24 页。"
+            },
+            {
+              "claim": "在 $2<\\lambda\\le3$ 时，非径向性必产生二次投影障碍，而所有径向解由同一正根方程决定。",
+              "route": "令 $a=\\lambda-1\\in(1,2]$。第二矩谱估计给出三阶以上外因子系数的加权控制；若外因子非恒定，则证明其二次系数 $b_2\\ne0$，并由 $q(0)=2ab_2/b_0$ 得 $q(0)=u_z(0)^2-u_{zz}(0)\\ne0$。若解径向，则旋转协变性迫使全纯投影系数 $q$ 恒为零，于是 $p=e^{-u}$ 为 $\\alpha+\\beta|z|^2$，内部 Wronskian 条件给出 $\\alpha\\beta=1/4$，边界条件再次化为 $(\\lambda-2)R^2-2R+\\lambda=0$。判别式 $4[1+2\\lambda-\\lambda^2]$ 决定各参数区间的径向解个数及 $\\lambda>1+\\sqrt2$ 时的径向不可存在性。",
+              "evidence": "第 4.1 节 Theorem 4.1 及证明，式 $(4.1)$--$(4.3)$，PDF 第 24--27 页；第 4.2 节 Proposition 4.2，式 $(4.5)$，PDF 第 27--28 页；Proof of Theorem 1.5 与 Corollary 1.6，式 $(4.6)$--$(4.10)$，PDF 第 28--29 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": null,
+        "aiEvidenceSource": "已核查 PDF 第 1--31 页全文，包括引言、Sections 2--4 的全部定理与证明、Acknowledgements、References 及正文末尾；未发现作者明确披露 AI、LLM、软件或工具用于研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。Acknowledgements（PDF 第 29 页）仅列出国家自然科学基金、陕西高校青年创新团队及中央高校基本科研业务费资助。",
+        "priorityScore": 86,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“复分析刚性与解分类”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 86/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

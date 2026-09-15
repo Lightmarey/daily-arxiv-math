@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10269",
+  "slug": "2609.10269",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.10269:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.10269",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Singular Forces on the Whole Space: Sobolev Density Thresholds and Energy Approximation",
+    "authors": [
+      "Shaozhen Cao",
+      "Zhuoni Chi"
+    ],
+    "abstract": "We derive whole-space distribution results from the established compact, smoothly forced Navier--Stokes blowup construction of OpenAI. For every fixed positive viscosity and deadline, smooth forces causing classical breakdown from rest on $\\mathbb R^3$ are dense in the relative $L^1_tH^s_x$ topology exactly when $s<1/2$, and in the relative $L^2_tH^s_x$ topology exactly when $s<-1/2$. The positive results preserve every fixed initial velocity in $H^\\infty_σ(\\R^3)$. They follow from a compact divergence-free removal of a regular background, followed by exact insertion of a single whole-space singular packet. Separate critical estimates prove non-density; low spatial frequencies are controlled explicitly, without a periodic mean or a Poincaré inequality. The conclusions hold for spacetime-compact forces and for the rapidly decaying data class in the Clay formulation. We also obtain density in the usual completed energy-force spaces, strong energy-and-dissipation approximation of regular trajectories, and exact equality of cell observations on a prescribed finite family of whole-space grids. Initial-state spaces, forcing spaces and numerical error regularity are distinguished throughout. No claim of fixed-force instability, loss of weak existence or new formal verification is made.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10269",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10269",
+    "submittedAt": "2026-09-09T14:54:10Z",
+    "updatedAt": "2026-09-09T14:54:10Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "分析结果",
+    "workSummary": "论文把 OpenAI 已给出的紧支撑强迫 Navier–Stokes blowup packet 迁移到全空间，精确确定导致经典解破裂的光滑力在相对 $L1_t$ $H^s_x$ 与 $L2_t$ $H^s_x$ 拓扑中的稠密阈值：分别是 s<1/2 与 s<−1/2。核心构造先用局部散度自由截断从任意光滑背景中移除一个小球，再缩放并插入单个奇异 packet；能量、耗散和低频 Fourier 估计控制插入误差。临界正则性球则排除稠密性，最后扩展到完成的能量力空间、轨道逼近和有限网格 cell observations。",
+    "techniques": [
+      "全空间散度自由局部化",
+      "Navier–Stokes scaling",
+      "能量/耗散估计",
+      "低频 Fourier 分裂",
+      "相对拓扑稠密性"
+    ],
+    "breakthrough": "给出全空间强迫 Navier–Stokes 奇异力的精确 Sobolev 稠密阈值，并把局部 packet 的插入机制与保持初值、能量轨道和有限网格观测同时兼容起来。",
+    "limitations": "稠密性以 OpenAI 的紧支撑 blowup packet 及其 Lean 源码形式化为已建立输入，结论是存在性与相对拓扑结果而非新的固定力不稳定性；临界指数只给出非稠密边界，不能推出 Leray–Hopf 延拓失败、唯一奇异后延拓或 CFD 结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "从任意全空间光滑背景出发可以构造局部散度自由截断，并把 packet 缩放到任意小球而保持黏性和有限时间奇异。",
+          "route": "用紧支撑向量势校正普通截断的散度误差，得到支撑受控的 $w_\\epsilon $；按 Navier–Stokes 的时空缩放同时缩放 U、P、F，方程各项取得同一 $\\epsilon $ 幂次，故黏性 $\\nu $ 不变而 packet 支撑和初始扰动可任意小。",
+          "evidence": "PDF 第 6-9 页 Section 3 Theorem 3.1、Lemmas 3.2–3.4、Theorem 3.5，equations (11)–(22)。"
+        },
+        {
+          "claim": "插入解的力差在 $L^q_t$ $H^s_x$ 中按 $\\beta (q,s)=2/q-3/2-s$ 的缩放幂次衰减，从而得到 $s<1/2(q=1)$ 和 $s<-1/2(q=2)$ 的正稠密性。",
+          "route": "将力差分成缩放 packet、背景校正和交叉非线性三项；空间紧支撑给出高频 Sobolev 尺度，时间支撑长度给出 $L^q$ 因子，低频部分另用 Fourier 权重控制$。\\beta >0$ 时取 $\\epsilon \\to 0$ 即同时保持初值并让力距离趋零。",
+          "evidence": "PDF 第 7-12 页 Section 3 equations (13)、(22)、(24)–(27)，Theorem 1.1 proof in Section 4。"
+        },
+        {
+          "claim": "在临界及超临界正则性球内，局部小数据理论排除含经典 blowup 力的开邻域，从而证明非稠密。",
+          "route": "对足够小的 $H^s$ 力球建立 $H^{3/2}$ 或更高正则性的能量微分不等式；Sobolev 临界嵌入把非线性项吸收到耗散中，Grönwall 延拓整个 [0,T]，因此该球只含正则轨道，与奇异力集合分离。",
+          "evidence": "PDF 第 9-12 页 Section 4 Proposition 4.1、Lemma 2.1、Section 5 Proposition 5.1，equations (25)–(31)。"
+        },
+        {
+          "claim": "局部插入结论保留在源相容子类和完成能量空间中，并可使有限网格 cell averages 与背景完全相同。",
+          "route": "先用截断、卷积和低/高频分裂证明 $C_c^\\infty $ 在各力空间的稠密性，再把 packet 支撑放进每个网格共同包含的单个 cell；动量方程在该 cell 上积分，散度定理使速度平均差与力差的时间积分相消，逐 cell 得到观测相等。",
+          "evidence": "PDF 第 12-15 页 Section 6 Corollary 6.1、Proposition 6.2、Theorem 7.1，Appendix A Lemma A.1。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 1–7、Appendix A、Declaration/limitations 段和参考文献；文中提到 OpenAI 作为既有 blowup 构造的来源，但未披露作者使用 AI/LLM 进行本论文研究、证明或制作，且关键词、机构/来源名和引用不计为披露。",
+    "aiEvidenceSource": "PDF 第 1-18 页全文，重点检查第 1、6、15、18 页的 OpenAI/source 与声明相关段落。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10269:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.10269",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Singular Forces on the Whole Space: Sobolev Density Thresholds and Energy Approximation",
+        "authors": [
+          "Shaozhen Cao",
+          "Zhuoni Chi"
+        ],
+        "abstract": "We derive whole-space distribution results from the established compact, smoothly forced Navier--Stokes blowup construction of OpenAI. For every fixed positive viscosity and deadline, smooth forces causing classical breakdown from rest on $\\mathbb R^3$ are dense in the relative $L^1_tH^s_x$ topology exactly when $s<1/2$, and in the relative $L^2_tH^s_x$ topology exactly when $s<-1/2$. The positive results preserve every fixed initial velocity in $H^\\infty_σ(\\R^3)$. They follow from a compact divergence-free removal of a regular background, followed by exact insertion of a single whole-space singular packet. Separate critical estimates prove non-density; low spatial frequencies are controlled explicitly, without a periodic mean or a Poincaré inequality. The conclusions hold for spacetime-compact forces and for the rapidly decaying data class in the Clay formulation. We also obtain density in the usual completed energy-force spaces, strong energy-and-dissipation approximation of regular trajectories, and exact equality of cell observations on a prescribed finite family of whole-space grids. Initial-state spaces, forcing spaces and numerical error regularity are distinguished throughout. No claim of fixed-force instability, loss of weak existence or new formal verification is made.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10269",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10269",
+        "submittedAt": "2026-09-09T14:54:10Z",
+        "updatedAt": "2026-09-09T14:54:10Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "分析结果",
+        "workSummary": "论文把 OpenAI 已给出的紧支撑强迫 Navier–Stokes blowup packet 迁移到全空间，精确确定导致经典解破裂的光滑力在相对 $L1_t$ $H^s_x$ 与 $L2_t$ $H^s_x$ 拓扑中的稠密阈值：分别是 s<1/2 与 s<−1/2。核心构造先用局部散度自由截断从任意光滑背景中移除一个小球，再缩放并插入单个奇异 packet；能量、耗散和低频 Fourier 估计控制插入误差。临界正则性球则排除稠密性，最后扩展到完成的能量力空间、轨道逼近和有限网格 cell observations。",
+        "techniques": [
+          "全空间散度自由局部化",
+          "Navier–Stokes scaling",
+          "能量/耗散估计",
+          "低频 Fourier 分裂",
+          "相对拓扑稠密性"
+        ],
+        "breakthrough": "给出全空间强迫 Navier–Stokes 奇异力的精确 Sobolev 稠密阈值，并把局部 packet 的插入机制与保持初值、能量轨道和有限网格观测同时兼容起来。",
+        "limitations": "稠密性以 OpenAI 的紧支撑 blowup packet 及其 Lean 源码形式化为已建立输入，结论是存在性与相对拓扑结果而非新的固定力不稳定性；临界指数只给出非稠密边界，不能推出 Leray–Hopf 延拓失败、唯一奇异后延拓或 CFD 结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "从任意全空间光滑背景出发可以构造局部散度自由截断，并把 packet 缩放到任意小球而保持黏性和有限时间奇异。",
+              "route": "用紧支撑向量势校正普通截断的散度误差，得到支撑受控的 $w_\\epsilon $；按 Navier–Stokes 的时空缩放同时缩放 U、P、F，方程各项取得同一 $\\epsilon $ 幂次，故黏性 $\\nu $ 不变而 packet 支撑和初始扰动可任意小。",
+              "evidence": "PDF 第 6-9 页 Section 3 Theorem 3.1、Lemmas 3.2–3.4、Theorem 3.5，equations (11)–(22)。"
+            },
+            {
+              "claim": "插入解的力差在 $L^q_t$ $H^s_x$ 中按 $\\beta (q,s)=2/q-3/2-s$ 的缩放幂次衰减，从而得到 $s<1/2(q=1)$ 和 $s<-1/2(q=2)$ 的正稠密性。",
+              "route": "将力差分成缩放 packet、背景校正和交叉非线性三项；空间紧支撑给出高频 Sobolev 尺度，时间支撑长度给出 $L^q$ 因子，低频部分另用 Fourier 权重控制$。\\beta >0$ 时取 $\\epsilon \\to 0$ 即同时保持初值并让力距离趋零。",
+              "evidence": "PDF 第 7-12 页 Section 3 equations (13)、(22)、(24)–(27)，Theorem 1.1 proof in Section 4。"
+            },
+            {
+              "claim": "在临界及超临界正则性球内，局部小数据理论排除含经典 blowup 力的开邻域，从而证明非稠密。",
+              "route": "对足够小的 $H^s$ 力球建立 $H^{3/2}$ 或更高正则性的能量微分不等式；Sobolev 临界嵌入把非线性项吸收到耗散中，Grönwall 延拓整个 [0,T]，因此该球只含正则轨道，与奇异力集合分离。",
+              "evidence": "PDF 第 9-12 页 Section 4 Proposition 4.1、Lemma 2.1、Section 5 Proposition 5.1，equations (25)–(31)。"
+            },
+            {
+              "claim": "局部插入结论保留在源相容子类和完成能量空间中，并可使有限网格 cell averages 与背景完全相同。",
+              "route": "先用截断、卷积和低/高频分裂证明 $C_c^\\infty $ 在各力空间的稠密性，再把 packet 支撑放进每个网格共同包含的单个 cell；动量方程在该 cell 上积分，散度定理使速度平均差与力差的时间积分相消，逐 cell 得到观测相等。",
+              "evidence": "PDF 第 12-15 页 Section 6 Corollary 6.1、Proposition 6.2、Theorem 7.1，Appendix A Lemma A.1。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 1–7、Appendix A、Declaration/limitations 段和参考文献；文中提到 OpenAI 作为既有 blowup 构造的来源，但未披露作者使用 AI/LLM 进行本论文研究、证明或制作，且关键词、机构/来源名和引用不计为披露。",
+        "aiEvidenceSource": "PDF 第 1-18 页全文，重点检查第 1、6、15、18 页的 OpenAI/source 与声明相关段落。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

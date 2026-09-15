@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00719",
+  "slug": "2609.00719",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00719:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00719",
+    "version": 1,
+    "entryKind": "new",
+    "title": "On the Aleksandrov--Bakelman--Pucci estimates for the weighted $1$-Laplacian",
+    "authors": [
+      "Shuhei Kitano"
+    ],
+    "abstract": "We establish Aleksandrov--Bakelman--Pucci-type estimates for viscosity subsolutions of Poisson equations associated with the weighted $1$-Laplacian and, more generally, with fully nonlinear operators acting on the Hessian in directions orthogonal to the gradient. A key feature of the proof is that the quasiconcave envelope plays the role of the concave envelope in the classical ABP estimate.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00719",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00719",
+    "submittedAt": "2026-09-01T04:50:17Z",
+    "updatedAt": "2026-09-01T04:50:17Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "加权 1-Laplacian 的 ABP 型估计",
+    "workSummary": "论文建立加权 1-Laplacian 及更一般 Hessian 正交方向完全非线性算子的 Aleksandrov–Bakelman–Pucci 型估计。作者把通常的凹包替换成拟凹包，先对其平滑超水平集建立支撑球和 Gauss 映射几何，再以 coarea、面积公式和粘性半松弛极限控制接触集，最终把正部源项的 L1 范数转成解的上确界界。",
+    "techniques": [
+      "拟凹包和超水平集几何",
+      "支撑球与 Gauss 映射",
+      "coarea/面积公式",
+      "粘性正则化和半松弛极限"
+    ],
+    "breakthrough": "论文说明 ABP 的核心覆盖论证无需依赖经典凹性：拟凹包的超水平集同样提供可测 Gauss 映射，足以把加权 1-Laplacian 的退化方向曲率整合成源项质量估计。",
+    "limitations": "估计要求有界域、连续且一致椭圆的 Hessian 方向算子和适当粘性子解边界条件；它是上界估计而非正则性或唯一性定理，退化权重、无界域和不连续源项需要额外处理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Propositions 2.3 和 2.5 将非负紧支撑函数的拟凹包及其正则化超水平集转化为具有内外支撑球的几何对象。",
+          "route": "对 u 的超水平集取凸包并加入 $\\epsilon $ 球膨胀，利用 Hahn–Banach 选择唯一支撑法向；正则化后边界满足双侧球条件，因此获得 C1,1 性质和几乎处处可定义的 Gauss 映射。",
+          "evidence": "PDF 第4–7页 Section 2 Proposition 2.3、Proposition 2.5；正则化集合 $Ka\\epsilon $、支撑球和半松弛收敛性质。"
+        },
+        {
+          "claim": "Lemmas 3.1–3.3 与 Corollary 3.2 把支撑法向、第二基本形式和接触集 Jacobian 连接起来，并证明曲率矩阵在接触点非负。",
+          "route": "在每个超水平集边界用支撑球参数化法向，应用 Aleksandrov/Rademacher 可微性和面积公式计算 Gauss 映射 Jacobian；在上接触集处用粘性子解不等式替换 Hessian，得到方向椭圆性给出的行列式下界。",
+          "evidence": "PDF 第8–11页 Section 3 Lemmas 3.1–3.3、Corollary 3.2；相关接触集公式和 Gauss 映射面积计算。"
+        },
+        {
+          "claim": "Lemma 3.4–3.6 证明拟凹包在半松弛极限下保持接触集包含关系，并将正则化的积分估计传回原粘性子解。",
+          "route": "先对 u 做 sup-convolution 保持算子椭圆常数，再用接触点稳定性排除正则化误差；对每个高度参数应用 coarea，借反 Fatou 和固定紧支撑把 $\\epsilon \\to 0$ 的接触集积分下极限。",
+          "evidence": "PDF 第12–15页 Lemmas 3.4–3.6；尤其 Lemma 3.5 的稳定性、Lemma 3.6 的正则化 ABP 积分和 $\\epsilon \\to 0$ 段落。"
+        },
+        {
+          "claim": "Theorem 1.1 将上述 Jacobian 积分与边界数据结合，得到 $sup\\Omega $ $u\\le C$ $diam(\\Omega )‖f-‖L1$ 型 ABP 估计。",
+          "route": "按高度 a 对接触集积分，用 Lemma 3.3 的方向行列式下界和一致椭圆性控制 Jacobian，再用 coarea 把高度积分化为源项负部的 L1 质量；拟凹包的支撑覆盖给出最大值与域直径因子，最后取极限得到粘性版本。",
+          "evidence": "PDF 第3–4页 Theorem 1.1；PDF 第15–16页 Proof of Theorem 1.1，尤其 Lemma 3.6 后的 coarea、逆 Fatou 和最终上确界不等式。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确说明在准备手稿期间使用 ChatGPT (OpenAI) 协助语言编辑、组织、文献搜索以及数学表述和参考文献一致性检查，并独立核验论证和最终文本。工具为 ChatGPT (OpenAI)，位置在致谢。",
+    "aiEvidenceSource": "PDF 第16页 Acknowledgements；缓存全文 2609.00719.txt，另检查标题页、正文和 References。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00719:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00719",
+        "version": 1,
+        "entryKind": "new",
+        "title": "On the Aleksandrov--Bakelman--Pucci estimates for the weighted $1$-Laplacian",
+        "authors": [
+          "Shuhei Kitano"
+        ],
+        "abstract": "We establish Aleksandrov--Bakelman--Pucci-type estimates for viscosity subsolutions of Poisson equations associated with the weighted $1$-Laplacian and, more generally, with fully nonlinear operators acting on the Hessian in directions orthogonal to the gradient. A key feature of the proof is that the quasiconcave envelope plays the role of the concave envelope in the classical ABP estimate.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00719",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00719",
+        "submittedAt": "2026-09-01T04:50:17Z",
+        "updatedAt": "2026-09-01T04:50:17Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "加权 1-Laplacian 的 ABP 型估计",
+        "workSummary": "论文建立加权 1-Laplacian 及更一般 Hessian 正交方向完全非线性算子的 Aleksandrov–Bakelman–Pucci 型估计。作者把通常的凹包替换成拟凹包，先对其平滑超水平集建立支撑球和 Gauss 映射几何，再以 coarea、面积公式和粘性半松弛极限控制接触集，最终把正部源项的 L1 范数转成解的上确界界。",
+        "techniques": [
+          "拟凹包和超水平集几何",
+          "支撑球与 Gauss 映射",
+          "coarea/面积公式",
+          "粘性正则化和半松弛极限"
+        ],
+        "breakthrough": "论文说明 ABP 的核心覆盖论证无需依赖经典凹性：拟凹包的超水平集同样提供可测 Gauss 映射，足以把加权 1-Laplacian 的退化方向曲率整合成源项质量估计。",
+        "limitations": "估计要求有界域、连续且一致椭圆的 Hessian 方向算子和适当粘性子解边界条件；它是上界估计而非正则性或唯一性定理，退化权重、无界域和不连续源项需要额外处理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Propositions 2.3 和 2.5 将非负紧支撑函数的拟凹包及其正则化超水平集转化为具有内外支撑球的几何对象。",
+              "route": "对 u 的超水平集取凸包并加入 $\\epsilon $ 球膨胀，利用 Hahn–Banach 选择唯一支撑法向；正则化后边界满足双侧球条件，因此获得 C1,1 性质和几乎处处可定义的 Gauss 映射。",
+              "evidence": "PDF 第4–7页 Section 2 Proposition 2.3、Proposition 2.5；正则化集合 $Ka\\epsilon $、支撑球和半松弛收敛性质。"
+            },
+            {
+              "claim": "Lemmas 3.1–3.3 与 Corollary 3.2 把支撑法向、第二基本形式和接触集 Jacobian 连接起来，并证明曲率矩阵在接触点非负。",
+              "route": "在每个超水平集边界用支撑球参数化法向，应用 Aleksandrov/Rademacher 可微性和面积公式计算 Gauss 映射 Jacobian；在上接触集处用粘性子解不等式替换 Hessian，得到方向椭圆性给出的行列式下界。",
+              "evidence": "PDF 第8–11页 Section 3 Lemmas 3.1–3.3、Corollary 3.2；相关接触集公式和 Gauss 映射面积计算。"
+            },
+            {
+              "claim": "Lemma 3.4–3.6 证明拟凹包在半松弛极限下保持接触集包含关系，并将正则化的积分估计传回原粘性子解。",
+              "route": "先对 u 做 sup-convolution 保持算子椭圆常数，再用接触点稳定性排除正则化误差；对每个高度参数应用 coarea，借反 Fatou 和固定紧支撑把 $\\epsilon \\to 0$ 的接触集积分下极限。",
+              "evidence": "PDF 第12–15页 Lemmas 3.4–3.6；尤其 Lemma 3.5 的稳定性、Lemma 3.6 的正则化 ABP 积分和 $\\epsilon \\to 0$ 段落。"
+            },
+            {
+              "claim": "Theorem 1.1 将上述 Jacobian 积分与边界数据结合，得到 $sup\\Omega $ $u\\le C$ $diam(\\Omega )‖f-‖L1$ 型 ABP 估计。",
+              "route": "按高度 a 对接触集积分，用 Lemma 3.3 的方向行列式下界和一致椭圆性控制 Jacobian，再用 coarea 把高度积分化为源项负部的 L1 质量；拟凹包的支撑覆盖给出最大值与域直径因子，最后取极限得到粘性版本。",
+              "evidence": "PDF 第3–4页 Theorem 1.1；PDF 第15–16页 Proof of Theorem 1.1，尤其 Lemma 3.6 后的 coarea、逆 Fatou 和最终上确界不等式。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确说明在准备手稿期间使用 ChatGPT (OpenAI) 协助语言编辑、组织、文献搜索以及数学表述和参考文献一致性检查，并独立核验论证和最终文本。工具为 ChatGPT (OpenAI)，位置在致谢。",
+        "aiEvidenceSource": "PDF 第16页 Acknowledgements；缓存全文 2609.00719.txt，另检查标题页、正文和 References。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

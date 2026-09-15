@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12926",
+  "slug": "2609.12926",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12926:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12926",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Regularity of Structurally Stable Cusp Singularities for Two Families of Quasilinear Wave-type Equations",
+    "authors": [
+      "Samuel J. Armstrong",
+      "Geng Chen",
+      "Tao Huang",
+      "Yannan Shen"
+    ],
+    "abstract": "In this paper, we study two families of quasilinear equations: Hunter-Saxton type and Camassa-Hom type equations, with a paramerter $\\lambda\\in(0,1)$ whose solutions form cusp singularities. When $\\lambda=1$, the first system becomes the scalar conservation law. The main result of this paper is to give regularity of two types of structurally stable singularities: Type I on the singular curve, Type II at the point where cusp singularity forms, for some $\\lambda\\in(0,1)$. When $\\lambda\\rightarrow 1$, our result indicts the $C^{1/3}$ regularity at the point where singularity forms, which agrees with the regularity of the generic pre-shock solution.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.12926",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12926",
+    "submittedAt": "2026-09-11T14:50:21Z",
+    "updatedAt": "2026-09-11T14:50:21Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "结构稳定尖点的局部正则性",
+    "workSummary": "论文研究两类拟线性波型方程中结构稳定 cusp 奇点的正则性。作者将 Hunter--Saxton 型方程及含非局部源项的 Camassa--Holm 型方程变换为半线性系统，利用横截性扰动证明 generic 奇点只分为奇异曲线上的 Type I 和奇异形成点的 Type II，并通过分数幂坐标展开得到局部 Hölder 指数。",
+    "techniques": [
+      "特征线坐标与半线性系统变换",
+      "Thom 型横截性和有限参数扰动",
+      "隐函数定理刻画奇异曲线",
+      "分数幂变量变换",
+      "局部 Taylor 展开与高阶导数消失",
+      "坐标反演和主项匹配",
+      "非局部源项的 Lipschitz 正则性传递"
+    ],
+    "breakthrough": "定理 1.5 给出结构稳定奇点的精确局部展开：Type I 奇异曲线附近的主阶为 $1/(1+\\lambda)$，Type II 奇异形成点附近的主阶为 $(2-\\lambda)/(2+\\lambda)$。当 $\\lambda\\to 1$ 时，Type II 指数趋于 $1/3$，与标量守恒律 generic pre-shock 正则性一致。结果覆盖 $\\lambda=1/n$ 的 Hunter--Saxton 型情形以及 $\\lambda=1/(2a)$ 的 Camassa--Holm 和 Novikov 型情形。",
+    "limitations": "正文中的 generic 存在性定理主要限于 $\\lambda=1/n$ 或 $\\lambda=1/(2a)$ 的离散参数，并且含非零源项情形的定理 1.3 证明被简略为与无源情形相同。作者指出对一般 $\\lambda\\in(0,1)$，尤其无理数参数，分数幂变量在 $Y-Y_0<0$ 一侧的处理需要额外工作。论文只处理 Type I 和 Type II，没有展开更高阶退化或不同 cusp 家族交点的完整正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "定理 1.1 证明 generic 初值产生的解在有限条特征曲线外为 $C^2$，并且奇异集由有限条光滑曲线和有限个点组成。",
+          "route": "沿特征线引入 $(Y,\\tau)$ 坐标及变量 $(u,v,\\xi)$，把原方程化为半线性系统（2.4）。引理 2.2 通过三参数初值扰动使 $(v,v_Y,v_{YY})$ 或 $(v,v_Y,v_\\tau)$ 的参数导数满秩；引理 2.3 将避免联合退化值的解集证明为相对开且稠密。对 $v=\\pi$ 使用隐函数定理得到有限条 $C^2$ 奇异曲线，再由坐标映射的 Jacobian 非退化性将其送回 $(x,t)$ 平面。",
+          "evidence": "第 2.1--2.2 节坐标变换和半线性系统（2.2）--（2.10），PDF 第 5--7 页；引理 2.2，PDF 第 7--9 页；引理 2.3，PDF 第 9 页；定理 1.1 证明及有限曲线构造，PDF 第 9--11 页。"
+        },
+        {
+          "claim": "Type I 奇点满足定理 1.5(i) 的分数幂局部展开。",
+          "route": "在 $v(Y_0,\\tau_0)=\\pi$ 且 $v_Y(Y_0,\\tau_0)\\neq0$ 时，引入 $W=(Y-Y_0)^{1/\\lambda}$ 和 $Z=(Y-Y_0)^{(1+\\lambda)/\\lambda}$，使含 $\\sin(v/2)$ 和 $\\cos(v/2)$ 的奇异因子转化为可积幂次。对 $u$ 和 $x$ 分别积分得到主项及余项，再反解 $x-x_0-f'(u_0)(t-t_0)$ 与 $Y-Y_0$ 的关系，代回 $u$ 展开，闭合为指数 $1/(1+\\lambda)$ 的 cusp 形式。",
+          "evidence": "第 3.1 节变量变换（3.1）及导数估计，PDF 第 11--13 页；局部展开（3.2）--（3.11），PDF 第 13--15 页；反演和主定理 Type I 形式（1.8），PDF 第 15--17 页。"
+        },
+        {
+          "claim": "Type II 奇点满足定理 1.5(ii) 的更高阶 cusp 展开。",
+          "route": "在 $v=\\pi$、$v_Y=0$、$v_{YY}\\neq0$ 时，使用适配的分数幂变量并利用半线性系统计算导数。由于低阶 $Y$ 导数在奇点处连续消失，首个非零项由 $v_{YY}$ 控制；分别展开 $u$ 和 $x$，求解特征方向位移的主项，再代回得到指数 $(2-\\lambda)/(2+\\lambda)$，余项由剩余 Taylor 项和时间变量阶数控制。",
+          "evidence": "第 3.2 节 Type II 条件及命题 3.2，PDF 第 16--17 页；展开公式（3.14）--（3.20），PDF 第 17--18 页；定理 1.5(ii) 的对应形式（1.9），PDF 第 4 页。"
+        },
+        {
+          "claim": "含非零源项的 Camassa--Holm 型方程保持相同的奇点正则性，并在 Camassa--Holm 与 Novikov 情形给出具体指数。",
+          "route": "对含源项方程重新定义特征坐标，得到半线性系统（4.3）和坐标导数（4.5）。当非局部量 $P,Q$ 及其导数具有 Lipschitz 正则性时，Type I 和 Type II 的局部展开沿用无源情形。对 Camassa--Holm 方程计算混合导数并得到 Type II 指数 $3/5$；对 Novikov 方程继续计算高阶混合导数，首个非零项出现在更高阶，从而得到指数 $7/9$。",
+          "evidence": "第 4.1 节系统（4.2）--（4.5），PDF 第 18--20 页；Camassa--Holm 专节公式（4.6）及 Type II 展开，PDF 第 20--21 页；Novikov 专节公式（4.7）及高阶展开，PDF 第 21 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "未发现作者明确披露使用 AI、LLM 或相关工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+    "aiEvidenceSource": "已核查 PDF 摘要、正文第 1--4 节、文末 Conflict of interest statement、Data availability statement、Acknowledgments 和 References 前后的全部末尾区域。文末仅说明无利益冲突、未使用数据以及基金资助，未出现 AI、LLM 或相关工具声明。",
+    "priorityScore": 88,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“结构稳定尖点的局部正则性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 88/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12926:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12926",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Regularity of Structurally Stable Cusp Singularities for Two Families of Quasilinear Wave-type Equations",
+        "authors": [
+          "Samuel J. Armstrong",
+          "Geng Chen",
+          "Tao Huang",
+          "Yannan Shen"
+        ],
+        "abstract": "In this paper, we study two families of quasilinear equations: Hunter-Saxton type and Camassa-Hom type equations, with a paramerter $\\lambda\\in(0,1)$ whose solutions form cusp singularities. When $\\lambda=1$, the first system becomes the scalar conservation law. The main result of this paper is to give regularity of two types of structurally stable singularities: Type I on the singular curve, Type II at the point where cusp singularity forms, for some $\\lambda\\in(0,1)$. When $\\lambda\\rightarrow 1$, our result indicts the $C^{1/3}$ regularity at the point where singularity forms, which agrees with the regularity of the generic pre-shock solution.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.12926",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12926",
+        "submittedAt": "2026-09-11T14:50:21Z",
+        "updatedAt": "2026-09-11T14:50:21Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "结构稳定尖点的局部正则性",
+        "workSummary": "论文研究两类拟线性波型方程中结构稳定 cusp 奇点的正则性。作者将 Hunter--Saxton 型方程及含非局部源项的 Camassa--Holm 型方程变换为半线性系统，利用横截性扰动证明 generic 奇点只分为奇异曲线上的 Type I 和奇异形成点的 Type II，并通过分数幂坐标展开得到局部 Hölder 指数。",
+        "techniques": [
+          "特征线坐标与半线性系统变换",
+          "Thom 型横截性和有限参数扰动",
+          "隐函数定理刻画奇异曲线",
+          "分数幂变量变换",
+          "局部 Taylor 展开与高阶导数消失",
+          "坐标反演和主项匹配",
+          "非局部源项的 Lipschitz 正则性传递"
+        ],
+        "breakthrough": "定理 1.5 给出结构稳定奇点的精确局部展开：Type I 奇异曲线附近的主阶为 $1/(1+\\lambda)$，Type II 奇异形成点附近的主阶为 $(2-\\lambda)/(2+\\lambda)$。当 $\\lambda\\to 1$ 时，Type II 指数趋于 $1/3$，与标量守恒律 generic pre-shock 正则性一致。结果覆盖 $\\lambda=1/n$ 的 Hunter--Saxton 型情形以及 $\\lambda=1/(2a)$ 的 Camassa--Holm 和 Novikov 型情形。",
+        "limitations": "正文中的 generic 存在性定理主要限于 $\\lambda=1/n$ 或 $\\lambda=1/(2a)$ 的离散参数，并且含非零源项情形的定理 1.3 证明被简略为与无源情形相同。作者指出对一般 $\\lambda\\in(0,1)$，尤其无理数参数，分数幂变量在 $Y-Y_0<0$ 一侧的处理需要额外工作。论文只处理 Type I 和 Type II，没有展开更高阶退化或不同 cusp 家族交点的完整正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "定理 1.1 证明 generic 初值产生的解在有限条特征曲线外为 $C^2$，并且奇异集由有限条光滑曲线和有限个点组成。",
+              "route": "沿特征线引入 $(Y,\\tau)$ 坐标及变量 $(u,v,\\xi)$，把原方程化为半线性系统（2.4）。引理 2.2 通过三参数初值扰动使 $(v,v_Y,v_{YY})$ 或 $(v,v_Y,v_\\tau)$ 的参数导数满秩；引理 2.3 将避免联合退化值的解集证明为相对开且稠密。对 $v=\\pi$ 使用隐函数定理得到有限条 $C^2$ 奇异曲线，再由坐标映射的 Jacobian 非退化性将其送回 $(x,t)$ 平面。",
+              "evidence": "第 2.1--2.2 节坐标变换和半线性系统（2.2）--（2.10），PDF 第 5--7 页；引理 2.2，PDF 第 7--9 页；引理 2.3，PDF 第 9 页；定理 1.1 证明及有限曲线构造，PDF 第 9--11 页。"
+            },
+            {
+              "claim": "Type I 奇点满足定理 1.5(i) 的分数幂局部展开。",
+              "route": "在 $v(Y_0,\\tau_0)=\\pi$ 且 $v_Y(Y_0,\\tau_0)\\neq0$ 时，引入 $W=(Y-Y_0)^{1/\\lambda}$ 和 $Z=(Y-Y_0)^{(1+\\lambda)/\\lambda}$，使含 $\\sin(v/2)$ 和 $\\cos(v/2)$ 的奇异因子转化为可积幂次。对 $u$ 和 $x$ 分别积分得到主项及余项，再反解 $x-x_0-f'(u_0)(t-t_0)$ 与 $Y-Y_0$ 的关系，代回 $u$ 展开，闭合为指数 $1/(1+\\lambda)$ 的 cusp 形式。",
+              "evidence": "第 3.1 节变量变换（3.1）及导数估计，PDF 第 11--13 页；局部展开（3.2）--（3.11），PDF 第 13--15 页；反演和主定理 Type I 形式（1.8），PDF 第 15--17 页。"
+            },
+            {
+              "claim": "Type II 奇点满足定理 1.5(ii) 的更高阶 cusp 展开。",
+              "route": "在 $v=\\pi$、$v_Y=0$、$v_{YY}\\neq0$ 时，使用适配的分数幂变量并利用半线性系统计算导数。由于低阶 $Y$ 导数在奇点处连续消失，首个非零项由 $v_{YY}$ 控制；分别展开 $u$ 和 $x$，求解特征方向位移的主项，再代回得到指数 $(2-\\lambda)/(2+\\lambda)$，余项由剩余 Taylor 项和时间变量阶数控制。",
+              "evidence": "第 3.2 节 Type II 条件及命题 3.2，PDF 第 16--17 页；展开公式（3.14）--（3.20），PDF 第 17--18 页；定理 1.5(ii) 的对应形式（1.9），PDF 第 4 页。"
+            },
+            {
+              "claim": "含非零源项的 Camassa--Holm 型方程保持相同的奇点正则性，并在 Camassa--Holm 与 Novikov 情形给出具体指数。",
+              "route": "对含源项方程重新定义特征坐标，得到半线性系统（4.3）和坐标导数（4.5）。当非局部量 $P,Q$ 及其导数具有 Lipschitz 正则性时，Type I 和 Type II 的局部展开沿用无源情形。对 Camassa--Holm 方程计算混合导数并得到 Type II 指数 $3/5$；对 Novikov 方程继续计算高阶混合导数，首个非零项出现在更高阶，从而得到指数 $7/9$。",
+              "evidence": "第 4.1 节系统（4.2）--（4.5），PDF 第 18--20 页；Camassa--Holm 专节公式（4.6）及 Type II 展开，PDF 第 20--21 页；Novikov 专节公式（4.7）及高阶展开，PDF 第 21 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "未发现作者明确披露使用 AI、LLM 或相关工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+        "aiEvidenceSource": "已核查 PDF 摘要、正文第 1--4 节、文末 Conflict of interest statement、Data availability statement、Acknowledgments 和 References 前后的全部末尾区域。文末仅说明无利益冲突、未使用数据以及基金资助，未出现 AI、LLM 或相关工具声明。",
+        "priorityScore": 88,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“结构稳定尖点的局部正则性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 88/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

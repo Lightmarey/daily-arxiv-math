@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09175",
+  "slug": "2609.09175",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09175:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09175",
+    "version": 1,
+    "entryKind": "new",
+    "title": "A Brunn--Minkowski inequality and Convexity for the 2-Hessian eigenvalue in convex domains",
+    "authors": [
+      "Jiahuan Li",
+      "Xi-Nan Ma",
+      "Guohuan Qiu",
+      "Paolo Salani"
+    ],
+    "abstract": "We prove the strict log-concavity of the positive first eigenfunction \\(-u\\) of the \\(2\\)-Hessian equation and the strict $1/2$-convexity of the solution for the corresponding torsion problem in smooth bounded uniformly convex domains in $\\mathbb{R}^{n}$. As applications, we establish the associated Brunn--Minkowski inequalities. We also show that this transformed-convexity phenomenon fails for \\(3\\)-Hessian equations by constructing, in dimension four, a smooth uniformly convex domain whose admissible zero-boundary solution has a nonconvex sublevel set.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09175",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09175",
+    "submittedAt": "2026-08-11T05:43:49Z",
+    "updatedAt": "2026-08-11T05:43:49Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究凸域中 2-Hessian 特征值与 torsion 问题的变换凸性。对满足 $\\sigma _{2}(D2u)=\\lambda (K)(-u)^2$ 的负 admissible 第一特征函数，作者证明 $v=-log(-u)$ 严格凸，并据此得到特征值泛函 $\\lambda $ 的 Brunn–Minkowski 不等式、固定平均宽度下球的极值以及严格等号条件。证明核心是正定 Hessian 矩阵上的代数泛函凸性和一维积分比较：沿 Minkowski 和的 support-function 插值建立次解/超解，再用 admissible 比较原则传递到 Hessian PDE。类似变换给出 torsion 的严格 1/2-convexity；最后用四维构造展示 3-Hessian 的对应性质失败。",
+    "techniques": [
+      "2-Hessian admissibility",
+      "matrix convexity",
+      "Minkowski interpolation",
+      "comparison principle",
+      "Brunn–Minkowski variational argument"
+    ],
+    "breakthrough": "证明 2-Hessian 特征函数在任意 $n\\ge 4$ 光滑一致凸域中经对数变换严格凸，进而建立特征值和 torsion 的 sharp Brunn–Minkowski 结论，并明确展示 3-Hessian 的失效边界。",
+    "limitations": "主定理要求 $n\\ge 4$、光滑一致凸域和 admissible classical solution；严格等号、torsion 比较和 3-Hessian 反例依赖这些几何条件，不能直接推广到非凸域、低维或弱解。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "正定矩阵上的关键函数具有沿 2-Hessian 约束方向的凸性。",
+          "route": "把 $\\sigma _{2}$ 的 Newton 变换写成特征值对称函数，沿 rank-one/线段 Hessian 变化计算二阶导；矩阵代数给出正的切向二次型，这是后续 −log(−u) 凸性的代数核心。",
+          "evidence": "PDF 第 9-18 页 Section 2 Theorems 2.2、2.10、Section 3 Theorem 3.1、Propositions 3.2–3.3。"
+        },
+        {
+          "claim": "特征函数的对数变换 $v=-log(-u)$ 在域内满足严格正的 Hessian。",
+          "route": "把 PDE 写成 $D2v=(-u)^{-1}D2u+(-u)^{-2}Du⊗Du$，利用前一步矩阵凸性和 $\\sigma _{2}$ 方程的正右端；若某点存在零 Hessian 方向，沿该方向的强最大值/切线比较会违反 admissibility 和边界零值，故得到严格凸。",
+          "evidence": "PDF 第 2-4 页 Theorem 1.1；第 18-29 页 Section 3 Theorem 3.1、Lemmas 3.4–3.6。"
+        },
+        {
+          "claim": "Minkowski 插值下 $\\lambda ^{-1/4}$ 是凹的并满足 Brunn–Minkowski 不等式。",
+          "route": "对 $K_t=(1-t)K0+tK1$ 构造由 support function 插值的测试函数，使用严格凸变换把两端特征函数组合成 admissible 次解；比较原则给 $\\lambda (K_t)^{-1/4}$ 不低于端点线性组合，等号刚性迫使域同伦外伸缩。",
+          "evidence": "PDF 第 30-38 页 Section 4 Theorems 1.2、1.4、Propositions 4.1–4.5。"
+        },
+        {
+          "claim": "torsion 方程获得严格 1/2-convexity，且 3-Hessian 的相应变换凸性可失败。",
+          "route": "对 $\\sigma _{2}(D2u)=1$ 的 torsion 解使用同一矩阵函数，将 $v=-(-u)^{1/2}$ 的 Hessian 代数项与边界比较拼接，得到严格凸性和指数 sharpness；在 $n=4$ 构造均匀凸域与 3-Hessian admissible 解，使某个 sublevel set 非凸，说明机制是 2-Hessian 特有。",
+          "evidence": "PDF 第 2-4 页 Theorem 1.3、Corollary 1.7；第 39-49 页 Sections 5–6 Theorems 1.5–1.6。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 2–6、全部定理/引理证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-49 页全文。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09175:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09175",
+        "version": 1,
+        "entryKind": "new",
+        "title": "A Brunn--Minkowski inequality and Convexity for the 2-Hessian eigenvalue in convex domains",
+        "authors": [
+          "Jiahuan Li",
+          "Xi-Nan Ma",
+          "Guohuan Qiu",
+          "Paolo Salani"
+        ],
+        "abstract": "We prove the strict log-concavity of the positive first eigenfunction \\(-u\\) of the \\(2\\)-Hessian equation and the strict $1/2$-convexity of the solution for the corresponding torsion problem in smooth bounded uniformly convex domains in $\\mathbb{R}^{n}$. As applications, we establish the associated Brunn--Minkowski inequalities. We also show that this transformed-convexity phenomenon fails for \\(3\\)-Hessian equations by constructing, in dimension four, a smooth uniformly convex domain whose admissible zero-boundary solution has a nonconvex sublevel set.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09175",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09175",
+        "submittedAt": "2026-08-11T05:43:49Z",
+        "updatedAt": "2026-08-11T05:43:49Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究凸域中 2-Hessian 特征值与 torsion 问题的变换凸性。对满足 $\\sigma _{2}(D2u)=\\lambda (K)(-u)^2$ 的负 admissible 第一特征函数，作者证明 $v=-log(-u)$ 严格凸，并据此得到特征值泛函 $\\lambda $ 的 Brunn–Minkowski 不等式、固定平均宽度下球的极值以及严格等号条件。证明核心是正定 Hessian 矩阵上的代数泛函凸性和一维积分比较：沿 Minkowski 和的 support-function 插值建立次解/超解，再用 admissible 比较原则传递到 Hessian PDE。类似变换给出 torsion 的严格 1/2-convexity；最后用四维构造展示 3-Hessian 的对应性质失败。",
+        "techniques": [
+          "2-Hessian admissibility",
+          "matrix convexity",
+          "Minkowski interpolation",
+          "comparison principle",
+          "Brunn–Minkowski variational argument"
+        ],
+        "breakthrough": "证明 2-Hessian 特征函数在任意 $n\\ge 4$ 光滑一致凸域中经对数变换严格凸，进而建立特征值和 torsion 的 sharp Brunn–Minkowski 结论，并明确展示 3-Hessian 的失效边界。",
+        "limitations": "主定理要求 $n\\ge 4$、光滑一致凸域和 admissible classical solution；严格等号、torsion 比较和 3-Hessian 反例依赖这些几何条件，不能直接推广到非凸域、低维或弱解。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "正定矩阵上的关键函数具有沿 2-Hessian 约束方向的凸性。",
+              "route": "把 $\\sigma _{2}$ 的 Newton 变换写成特征值对称函数，沿 rank-one/线段 Hessian 变化计算二阶导；矩阵代数给出正的切向二次型，这是后续 −log(−u) 凸性的代数核心。",
+              "evidence": "PDF 第 9-18 页 Section 2 Theorems 2.2、2.10、Section 3 Theorem 3.1、Propositions 3.2–3.3。"
+            },
+            {
+              "claim": "特征函数的对数变换 $v=-log(-u)$ 在域内满足严格正的 Hessian。",
+              "route": "把 PDE 写成 $D2v=(-u)^{-1}D2u+(-u)^{-2}Du⊗Du$，利用前一步矩阵凸性和 $\\sigma _{2}$ 方程的正右端；若某点存在零 Hessian 方向，沿该方向的强最大值/切线比较会违反 admissibility 和边界零值，故得到严格凸。",
+              "evidence": "PDF 第 2-4 页 Theorem 1.1；第 18-29 页 Section 3 Theorem 3.1、Lemmas 3.4–3.6。"
+            },
+            {
+              "claim": "Minkowski 插值下 $\\lambda ^{-1/4}$ 是凹的并满足 Brunn–Minkowski 不等式。",
+              "route": "对 $K_t=(1-t)K0+tK1$ 构造由 support function 插值的测试函数，使用严格凸变换把两端特征函数组合成 admissible 次解；比较原则给 $\\lambda (K_t)^{-1/4}$ 不低于端点线性组合，等号刚性迫使域同伦外伸缩。",
+              "evidence": "PDF 第 30-38 页 Section 4 Theorems 1.2、1.4、Propositions 4.1–4.5。"
+            },
+            {
+              "claim": "torsion 方程获得严格 1/2-convexity，且 3-Hessian 的相应变换凸性可失败。",
+              "route": "对 $\\sigma _{2}(D2u)=1$ 的 torsion 解使用同一矩阵函数，将 $v=-(-u)^{1/2}$ 的 Hessian 代数项与边界比较拼接，得到严格凸性和指数 sharpness；在 $n=4$ 构造均匀凸域与 3-Hessian admissible 解，使某个 sublevel set 非凸，说明机制是 2-Hessian 特有。",
+              "evidence": "PDF 第 2-4 页 Theorem 1.3、Corollary 1.7；第 39-49 页 Sections 5–6 Theorems 1.5–1.6。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 2–6、全部定理/引理证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-49 页全文。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

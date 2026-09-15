@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.04153",
+  "slug": "2609.04153",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.04153:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.04153",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Smooth autonomous fast dynamo action on the three-torus",
+    "authors": [
+      "Michele Coti Zelati",
+      "Massimo Sorella",
+      "David Villringer"
+    ],
+    "abstract": "We construct a nonempty $C^k$-open family, for some $k\\in\\mathbb{N}$, of smooth, autonomous, divergence-free velocity fields on $\\mathbb{T}^3$ that generate fast dynamos. This resolves the Fast Dynamo Conjecture of Zeldovich and Sakharov, as recorded in Arnold's book of problems. We first construct a family of smooth, time-periodic fast dynamos via a stretch-fold-shear mechanism that applies to a large class of velocity fields. We then realize the associated period dynamics within a smooth autonomous flow using a global Poincaré section and a suitably prescribed return-time function. In both settings, the proof first isolates unstable distributional eigenmodes for the ideal induction operator on an anisotropic Banach space of distributions and then shows that this spectral instability persists under the singular perturbation $\\varepsilon Δ$. The resulting estimates are uniform as $\\varepsilon\\to0$ and stable under $C^k$ perturbations of the velocity field, yielding an open set of smooth fast dynamo vector fields.",
+    "categories": [
+      "math.AP",
+      "math.DS"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.04153",
+    "pdfUrl": "https://arxiv.org/pdf/2609.04153",
+    "submittedAt": "2026-09-03T17:45:10Z",
+    "updatedAt": "2026-09-03T17:45:10Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "存在性",
+    "workSummary": "分析光滑三维环面上的自治 fast dynamo：用时间周期剪切流的悬挂构造得到自治流，再在各向异性 Banach 空间中建立转移算子谱隙，处理电阻扩散扰动并证明存在正增长率的磁场模态。",
+    "techniques": [
+      "悬挂流构造",
+      "各向异性 Banach 空间",
+      "Keller--Liverani 谱扰动",
+      "伪微分边界演算",
+      "磁扩散椭圆估计"
+    ],
+    "breakthrough": "将已知时间周期 fast dynamo 的增长机制转化为光滑自治三维流，并在电阻趋零时保留统一谱数据，使正特征增长率不被扩散扰动消除。",
+    "limitations": "自治流的构造属于特定剪切/悬挂类；谱结论依赖小电阻和各向异性空间的参数选择，不能推出所有三维不可压缩流都是 fast dynamo。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "二维剪切时间周期系统可通过悬挂变成三维自治、体积保持流。",
+          "route": "把周期时间变量加入第三个环面坐标，验证悬挂流的散度为零并将一个周期的 Poincare 映射编码到自治流的 section-return map。",
+          "evidence": "第 2 节 Proposition 2.3、Proposition 2.4、Lemma 2.5（PDF 第 9--12 页）。"
+        },
+        {
+          "claim": "无电阻转移算子在各向异性空间上具有包含正实部谱的离散谱。",
+          "route": "利用流映射的横向平滑和纵向不变性定义各向异性范数，再用 Lasota--Yorke 型估计与紧嵌入获得谱分解；悬挂构造把二维剪切的增长传给三维转移算子。",
+          "evidence": "第 3--5 节 Proposition 3.3、Propositions 5.2、5.11（PDF 第 14--18、33--41 页）。"
+        },
+        {
+          "claim": "加入小电阻后，转移算子仍保留对应的正谱增长。",
+          "route": "把扩散方程分解为主转移算子加小参数伪微分扰动，用 Keller--Liverani 稳定性和边界演算控制扰动范数，继续解析延拓特征值。",
+          "evidence": "第 6 节 Lemmas 6.1--6.4、Propositions 6.5--6.8（PDF 第 41--47 页）。"
+        },
+        {
+          "claim": "由正实部特征值构造 fast dynamo 磁场并得到自治定理。",
+          "route": "将稳定的谱投影作用于散度自由初始磁场，迭代得到指数增长模态；选取相应光滑流场集合 D，验证其满足 Theorem 1.1 的正增长率定义。",
+          "evidence": "第 1 节 Theorem 1.1（PDF 第 2 页）及第 6 节 Proposition 6.8 的证明（PDF 第 46--47 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露使用 ChatGPT 5.5 Pro 和 5.6 Sol 参与论文发展与准备，并具体说明其对各向异性空间、悬挂构造、边界演算、section-return 计算和一致性检查的贡献；作者声明所有建议和计算均独立核验。",
+    "aiEvidenceSource": "PDF 第 67 页 Declaration of AI Use（PDF 文本第 4029--4053 行）。",
+    "priorityScore": 95,
+    "priorityTier": "high",
+    "priorityReason": "低扩散极限、谱不稳定性及开放集稳定性与流体长时间机制高度相关，优先阅读。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.04153:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.04153",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Smooth autonomous fast dynamo action on the three-torus",
+        "authors": [
+          "Michele Coti Zelati",
+          "Massimo Sorella",
+          "David Villringer"
+        ],
+        "abstract": "We construct a nonempty $C^k$-open family, for some $k\\in\\mathbb{N}$, of smooth, autonomous, divergence-free velocity fields on $\\mathbb{T}^3$ that generate fast dynamos. This resolves the Fast Dynamo Conjecture of Zeldovich and Sakharov, as recorded in Arnold's book of problems. We first construct a family of smooth, time-periodic fast dynamos via a stretch-fold-shear mechanism that applies to a large class of velocity fields. We then realize the associated period dynamics within a smooth autonomous flow using a global Poincaré section and a suitably prescribed return-time function. In both settings, the proof first isolates unstable distributional eigenmodes for the ideal induction operator on an anisotropic Banach space of distributions and then shows that this spectral instability persists under the singular perturbation $\\varepsilon Δ$. The resulting estimates are uniform as $\\varepsilon\\to0$ and stable under $C^k$ perturbations of the velocity field, yielding an open set of smooth fast dynamo vector fields.",
+        "categories": [
+          "math.AP",
+          "math.DS"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.04153",
+        "pdfUrl": "https://arxiv.org/pdf/2609.04153",
+        "submittedAt": "2026-09-03T17:45:10Z",
+        "updatedAt": "2026-09-03T17:45:10Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "存在性",
+        "workSummary": "分析光滑三维环面上的自治 fast dynamo：用时间周期剪切流的悬挂构造得到自治流，再在各向异性 Banach 空间中建立转移算子谱隙，处理电阻扩散扰动并证明存在正增长率的磁场模态。",
+        "techniques": [
+          "悬挂流构造",
+          "各向异性 Banach 空间",
+          "Keller--Liverani 谱扰动",
+          "伪微分边界演算",
+          "磁扩散椭圆估计"
+        ],
+        "breakthrough": "将已知时间周期 fast dynamo 的增长机制转化为光滑自治三维流，并在电阻趋零时保留统一谱数据，使正特征增长率不被扩散扰动消除。",
+        "limitations": "自治流的构造属于特定剪切/悬挂类；谱结论依赖小电阻和各向异性空间的参数选择，不能推出所有三维不可压缩流都是 fast dynamo。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "二维剪切时间周期系统可通过悬挂变成三维自治、体积保持流。",
+              "route": "把周期时间变量加入第三个环面坐标，验证悬挂流的散度为零并将一个周期的 Poincare 映射编码到自治流的 section-return map。",
+              "evidence": "第 2 节 Proposition 2.3、Proposition 2.4、Lemma 2.5（PDF 第 9--12 页）。"
+            },
+            {
+              "claim": "无电阻转移算子在各向异性空间上具有包含正实部谱的离散谱。",
+              "route": "利用流映射的横向平滑和纵向不变性定义各向异性范数，再用 Lasota--Yorke 型估计与紧嵌入获得谱分解；悬挂构造把二维剪切的增长传给三维转移算子。",
+              "evidence": "第 3--5 节 Proposition 3.3、Propositions 5.2、5.11（PDF 第 14--18、33--41 页）。"
+            },
+            {
+              "claim": "加入小电阻后，转移算子仍保留对应的正谱增长。",
+              "route": "把扩散方程分解为主转移算子加小参数伪微分扰动，用 Keller--Liverani 稳定性和边界演算控制扰动范数，继续解析延拓特征值。",
+              "evidence": "第 6 节 Lemmas 6.1--6.4、Propositions 6.5--6.8（PDF 第 41--47 页）。"
+            },
+            {
+              "claim": "由正实部特征值构造 fast dynamo 磁场并得到自治定理。",
+              "route": "将稳定的谱投影作用于散度自由初始磁场，迭代得到指数增长模态；选取相应光滑流场集合 D，验证其满足 Theorem 1.1 的正增长率定义。",
+              "evidence": "第 1 节 Theorem 1.1（PDF 第 2 页）及第 6 节 Proposition 6.8 的证明（PDF 第 46--47 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露使用 ChatGPT 5.5 Pro 和 5.6 Sol 参与论文发展与准备，并具体说明其对各向异性空间、悬挂构造、边界演算、section-return 计算和一致性检查的贡献；作者声明所有建议和计算均独立核验。",
+        "aiEvidenceSource": "PDF 第 67 页 Declaration of AI Use（PDF 文本第 4029--4053 行）。",
+        "priorityScore": 95,
+        "priorityTier": "high",
+        "priorityReason": "低扩散极限、谱不稳定性及开放集稳定性与流体长时间机制高度相关，优先阅读。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

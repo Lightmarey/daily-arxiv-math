@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11095",
+  "slug": "2609.11095",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11095:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11095",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Modified wave operators for nonlinear Schr\\\"odinger equations in the full subcritical long range regime",
+    "authors": [
+      "Jia Shen",
+      "Yifei Wu"
+    ],
+    "abstract": "We construct modified wave operators for the nonlinear Schr\\\"odinger equation $i\\partial_tu+\\frac12\\Delta u=|u|^pu$ in the full subcritical long-range case $0<p<2/d$, with small, nonvanishing, analytic final data $W(x)$ with bounded logarithmic gradients. Previous results established large-time asymptotics for selected classes of Cauchy data. Moreover, the exact asymptotic expansion for $p<1/d$ remained unknown. When $1/d<p<2/d$, our result gives the approximation $$\\frac{1}{(it)^{\\frac{d}{2}}} e^{\\frac{i|x|^2}{2t}} W\\left(\\frac{x}{t}\\right) \\exp\\left[ -i\\frac{t^{1-\\frac{dp}{2}}-1}{1-\\frac{dp}{2}} \\left|W\\left(\\frac{x}{t}\\right)\\right|^p \\right]$$ The wave operator is constructed by an iteration in the analytic spaces with decreasing radius. When $p\\le 1/d$, we construct the profile from a finite truncation of a Fuchsian equation coupled with a transport equation. This profile still leaves a long-range triangular coupling whose terminal integral does not preserve the required fast decay class. The construction yields quantitative $L^q$ asymptotics for $2\\le q\\le\\infty$ and uniqueness in the prescribed analytic asymptotic classes. The central new ingredients are a nonlinear final-state normal form that removes this long-range coupling and a mixed iteration in particular analytic spaces.",
+    "categories": [
+      "math.AP",
+      "math-ph"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11095",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11095",
+    "submittedAt": "2026-09-10T05:08:19Z",
+    "updatedAt": "2026-09-10T05:08:19Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "正文级严格核查",
+    "workSummary": "论文在全次临界长程区间 0<p<2/d 为非线性 Schrodinger 方程构造 modified wave operators。正文先由末态 W 建立解析 eikonal-amplitude profile，再用 real analytic implicit function lemma 解出修正相位，递归构造 Fuchsian profile 的截断级数，最后在解析函数空间中固定点求解并用 ray transform 恢复 u。",
+    "techniques": [
+      "解析末态与对数梯度空间",
+      "eikonal-amplitude 方程",
+      "Fuchsian 截断级数",
+      "实解析隐函数定理",
+      "解析空间固定点和 ray transform"
+    ],
+    "breakthrough": "Theorem 1.2 覆盖完整 subcritical long-range 区间，并给出非消失解析末态对应的 modified wave operator；在 1/d<p<2/d 时正文明确写出带下一阶相位修正的渐近式。",
+    "limitations": "构造要求末态非消失、解析性和有界对数梯度；结果是指定解类中的波算子，未处理任意 L2 末态或临界 $p=2/d$。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "末态数据产生可控的 eikonal-amplitude profile。",
+          "route": "第 3 节把振幅相位分解代入 NLS，提取 eikonal 方程和输运方程，以解析加权范数控制空间导数。",
+          "evidence": "PDF 第 12--20 页第 3 节 Theorem 3.2 及 profile 方程。"
+        },
+        {
+          "claim": "截断 Fuchsian 级数逐阶消去大时间残差。",
+          "route": "第 4 节递归选择 L 和 S 的系数，把幂和对数项代回 profile 方程，使剩余项获得额外衰减。",
+          "evidence": "PDF 第 46--75 页第 4 节 Proposition 4.7、Theorem 4.4 及其证明。"
+        },
+        {
+          "claim": "解析隐函数和固定点给出真实 profile。",
+          "route": "对截断非线性映射应用第 2.2 节 real analytic implicit function lemma，构造 Ze 固定点并令 $Z=Ze+iK$；小性条件闭合解析范数。",
+          "evidence": "PDF 第 9 页 Lemma 2.1；第 69--75 页 Proposition 4.17 和 Theorem 4.4 证明。"
+        },
+        {
+          "claim": "ray transform 将 profile 还原为 NLS 解并验证渐近。",
+          "route": "以 $a=exp(Phi+Z)$ 定义振幅，再通过 ray transform (1.4) 生成 u；L2 等距性和固定时间估计给出方程、唯一性及大时间渐近。",
+          "evidence": "PDF 第 75 页 Theorem 4.4 证明；第 4--6 页 Theorem 1.2。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检查摘要、正文证明、致谢、作者声明和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "PDF 第 1--91 页全文，重点核查第 88--91 页末尾和全文 AI 关键词上下文。",
+    "priorityScore": 89,
+    "priorityTier": "high",
+    "priorityReason": "覆盖完整次临界长程区间的 modified wave operator 构造。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11095:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11095",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Modified wave operators for nonlinear Schr\\\"odinger equations in the full subcritical long range regime",
+        "authors": [
+          "Jia Shen",
+          "Yifei Wu"
+        ],
+        "abstract": "We construct modified wave operators for the nonlinear Schr\\\"odinger equation $i\\partial_tu+\\frac12\\Delta u=|u|^pu$ in the full subcritical long-range case $0<p<2/d$, with small, nonvanishing, analytic final data $W(x)$ with bounded logarithmic gradients. Previous results established large-time asymptotics for selected classes of Cauchy data. Moreover, the exact asymptotic expansion for $p<1/d$ remained unknown. When $1/d<p<2/d$, our result gives the approximation $$\\frac{1}{(it)^{\\frac{d}{2}}} e^{\\frac{i|x|^2}{2t}} W\\left(\\frac{x}{t}\\right) \\exp\\left[ -i\\frac{t^{1-\\frac{dp}{2}}-1}{1-\\frac{dp}{2}} \\left|W\\left(\\frac{x}{t}\\right)\\right|^p \\right]$$ The wave operator is constructed by an iteration in the analytic spaces with decreasing radius. When $p\\le 1/d$, we construct the profile from a finite truncation of a Fuchsian equation coupled with a transport equation. This profile still leaves a long-range triangular coupling whose terminal integral does not preserve the required fast decay class. The construction yields quantitative $L^q$ asymptotics for $2\\le q\\le\\infty$ and uniqueness in the prescribed analytic asymptotic classes. The central new ingredients are a nonlinear final-state normal form that removes this long-range coupling and a mixed iteration in particular analytic spaces.",
+        "categories": [
+          "math.AP",
+          "math-ph"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11095",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11095",
+        "submittedAt": "2026-09-10T05:08:19Z",
+        "updatedAt": "2026-09-10T05:08:19Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "正文级严格核查",
+        "workSummary": "论文在全次临界长程区间 0<p<2/d 为非线性 Schrodinger 方程构造 modified wave operators。正文先由末态 W 建立解析 eikonal-amplitude profile，再用 real analytic implicit function lemma 解出修正相位，递归构造 Fuchsian profile 的截断级数，最后在解析函数空间中固定点求解并用 ray transform 恢复 u。",
+        "techniques": [
+          "解析末态与对数梯度空间",
+          "eikonal-amplitude 方程",
+          "Fuchsian 截断级数",
+          "实解析隐函数定理",
+          "解析空间固定点和 ray transform"
+        ],
+        "breakthrough": "Theorem 1.2 覆盖完整 subcritical long-range 区间，并给出非消失解析末态对应的 modified wave operator；在 1/d<p<2/d 时正文明确写出带下一阶相位修正的渐近式。",
+        "limitations": "构造要求末态非消失、解析性和有界对数梯度；结果是指定解类中的波算子，未处理任意 L2 末态或临界 $p=2/d$。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "末态数据产生可控的 eikonal-amplitude profile。",
+              "route": "第 3 节把振幅相位分解代入 NLS，提取 eikonal 方程和输运方程，以解析加权范数控制空间导数。",
+              "evidence": "PDF 第 12--20 页第 3 节 Theorem 3.2 及 profile 方程。"
+            },
+            {
+              "claim": "截断 Fuchsian 级数逐阶消去大时间残差。",
+              "route": "第 4 节递归选择 L 和 S 的系数，把幂和对数项代回 profile 方程，使剩余项获得额外衰减。",
+              "evidence": "PDF 第 46--75 页第 4 节 Proposition 4.7、Theorem 4.4 及其证明。"
+            },
+            {
+              "claim": "解析隐函数和固定点给出真实 profile。",
+              "route": "对截断非线性映射应用第 2.2 节 real analytic implicit function lemma，构造 Ze 固定点并令 $Z=Ze+iK$；小性条件闭合解析范数。",
+              "evidence": "PDF 第 9 页 Lemma 2.1；第 69--75 页 Proposition 4.17 和 Theorem 4.4 证明。"
+            },
+            {
+              "claim": "ray transform 将 profile 还原为 NLS 解并验证渐近。",
+              "route": "以 $a=exp(Phi+Z)$ 定义振幅，再通过 ray transform (1.4) 生成 u；L2 等距性和固定时间估计给出方程、唯一性及大时间渐近。",
+              "evidence": "PDF 第 75 页 Theorem 4.4 证明；第 4--6 页 Theorem 1.2。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检查摘要、正文证明、致谢、作者声明和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "PDF 第 1--91 页全文，重点核查第 88--91 页末尾和全文 AI 关键词上下文。",
+        "priorityScore": 89,
+        "priorityTier": "high",
+        "priorityReason": "覆盖完整次临界长程区间的 modified wave operator 构造。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

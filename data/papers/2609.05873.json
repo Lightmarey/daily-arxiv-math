@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05873",
+  "slug": "2609.05873",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.05873:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.05873",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Long-time asymptotics of nonlinear Fokker-Planck equations with inhomogeneous diffusion and natural boundary conditions",
+    "authors": [
+      "Kouta Araki",
+      "Masashi Mizuno"
+    ],
+    "abstract": "In this paper, we study the long-time asymptotics for nonlinear Fokker-Planck equations with spatial inhomogeneous diffusion, based on the law of energy dissipation. First, we derive a priori positive lower and upper bounds for solutions of the equations. Next, we give a sufficient condition for deriving the exponential decay of the dissipation function. Finally, we investigate whether the given sufficient condition is essential or not by numerical computation.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05873",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05873",
+    "submittedAt": "2026-09-05T04:30:10Z",
+    "updatedAt": "2026-09-05T04:30:10Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "本文研究带空间非齐次扩散和自然边界条件的非线性 Fokker–Planck 方程。作者先把速度场写成 $\\nabla \\rho =\\rho (D(\\rho )\\nabla log\\rho +\\nabla V)$ 的形式，引入势函数 $\\phi =D(\\rho )log\\rho +V$，将原方程改写为带齐次 Neumann 条件的拟线性抛物方程。最大原理给出密度的时间均匀正下界和上界；随后以自由能耗散 $D[\\phi ]=∫|\\nabla \\phi |^{2}\\rho $ 为核心，反复使用加权积分、扩散系数导数控制和高阶梯度估计，得到耗散满足含 $D^{3/2}、D^{2}$ 项的微分不等式。初始耗散足够小时，Gronwall 型引理推出指数衰减；一维有限差分实验考察扩散系数空间振荡与衰减率的关系。",
+    "techniques": [
+      "速度势变换与齐次 Neumann 形式",
+      "最大原理的正性和有界性估计",
+      "自由能/耗散律",
+      "加权梯度积分和高阶耗散不等式",
+      "Gronwall 衰减与一维数值检验"
+    ],
+    "breakthrough": "论文把空间非齐次扩散的影响显式纳入耗散律：通过势变量，扩散梯度、log $\\rho $ 梯度和外势项分别进入可估计的能量项，最终在小初始耗散条件下得到指数衰减判据，而不是只处理均匀扩散的 Boltzmann 情形。",
+    "limitations": "指数衰减需要文中关于扩散系数、外势、密度上下界和初始耗散的小量条件；数值部分是一维区间上的 forward Euler 实验，不能证明二维/高维衰减或说明振荡频率的普适最优效应。平衡态的显式形式在扩散系数常数时最简单，非齐次情形仍由归一化常数确定。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "经典解的密度保持严格正且具有与时间无关的上下界。",
+          "route": "令 $\\phi =D(\\rho )log\\rho +V$，把方程改写成 $\\phi _t+L[\\phi ]\\phi =|\\nabla \\phi |^{2}$ 且 $\\partial _n\\phi =0$；因 $D(\\rho )$在允许密度区间内正$，L[\\phi ]$是均匀抛物算子。对 $\\phi $ 的极值应用 Neumann 最大原理，再把 $\\phi $ 与 $\\rho $ 的关系反解，得到 $\\rho $ 的正下界和上界。",
+          "evidence": "PDF 第5–8页 Lemma 2.1–2.2、Theorem 1.1 及方程(2.1)–(2.3)。"
+        },
+        {
+          "claim": "耗散 $D[\\phi ](t)$ 满足带非线性高阶项的闭合微分不等式。",
+          "route": "对 $∫|\\nabla \\phi |^{2}\\rho $ 求时间导数，用方程和自然边界条件分部积分；含 Hessian 的主项给出负耗散，扩散非齐次产生的 $\\nabla logD、\\nabla ^{2}logD$ 项通过密度上下界和高阶梯度估计控制。Young 不等式把剩余项整理成 −cD+C $D^{3/2}+C$ $D^{2}$。",
+          "evidence": "PDF 第15–21页 Section 3、Proposition 3.10、公式(3.28)–(3.31)，以及对 (3.30) 的代入。"
+        },
+        {
+          "claim": "当初始耗散小于阈值时$，D[\\phi ](t)$ 按指数速率衰减。",
+          "route": "将上一不等式写成 $E'\\le -cE+C_2E^{3/2}+C_3E^{2}$；小初值保证非线性项在整个演化中被线性负项吸收。应用 Lemma 3.13 的 bootstrap/Gronwall 结论，得到 $E(t)\\le C$ $e^{-ct}$。",
+          "evidence": "PDF 第21–23页 Lemma 3.13 与 Theorem 1.2 的证明。"
+        },
+        {
+          "claim": "数值离散能够展示空间扩散振荡对耗散衰减的非单调影响。",
+          "route": "把势方程离散为区间上的有限差分 Neumann 问题，逐步推进密度并计算 $D[\\phi ]$；改变扩散系数的振荡幅度和频率后比较对数耗散曲线，从而检验解析判据所允许的不同衰减情形。",
+          "evidence": "PDF 第23–26页 Section 4、变换方程(4.1)、图4.1–4.2和 Section 5 结论。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 全文（约28页）的引言、能量证明、数值分析、Conclusion、Acknowledgments 和 References，并核查 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文逐页检查，重点为第20–26页耗散证明、数值分析、Conclusion 和 Acknowledgments/References。",
+    "priorityScore": 66,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.05873:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.05873",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Long-time asymptotics of nonlinear Fokker-Planck equations with inhomogeneous diffusion and natural boundary conditions",
+        "authors": [
+          "Kouta Araki",
+          "Masashi Mizuno"
+        ],
+        "abstract": "In this paper, we study the long-time asymptotics for nonlinear Fokker-Planck equations with spatial inhomogeneous diffusion, based on the law of energy dissipation. First, we derive a priori positive lower and upper bounds for solutions of the equations. Next, we give a sufficient condition for deriving the exponential decay of the dissipation function. Finally, we investigate whether the given sufficient condition is essential or not by numerical computation.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05873",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05873",
+        "submittedAt": "2026-09-05T04:30:10Z",
+        "updatedAt": "2026-09-05T04:30:10Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "本文研究带空间非齐次扩散和自然边界条件的非线性 Fokker–Planck 方程。作者先把速度场写成 $\\nabla \\rho =\\rho (D(\\rho )\\nabla log\\rho +\\nabla V)$ 的形式，引入势函数 $\\phi =D(\\rho )log\\rho +V$，将原方程改写为带齐次 Neumann 条件的拟线性抛物方程。最大原理给出密度的时间均匀正下界和上界；随后以自由能耗散 $D[\\phi ]=∫|\\nabla \\phi |^{2}\\rho $ 为核心，反复使用加权积分、扩散系数导数控制和高阶梯度估计，得到耗散满足含 $D^{3/2}、D^{2}$ 项的微分不等式。初始耗散足够小时，Gronwall 型引理推出指数衰减；一维有限差分实验考察扩散系数空间振荡与衰减率的关系。",
+        "techniques": [
+          "速度势变换与齐次 Neumann 形式",
+          "最大原理的正性和有界性估计",
+          "自由能/耗散律",
+          "加权梯度积分和高阶耗散不等式",
+          "Gronwall 衰减与一维数值检验"
+        ],
+        "breakthrough": "论文把空间非齐次扩散的影响显式纳入耗散律：通过势变量，扩散梯度、log $\\rho $ 梯度和外势项分别进入可估计的能量项，最终在小初始耗散条件下得到指数衰减判据，而不是只处理均匀扩散的 Boltzmann 情形。",
+        "limitations": "指数衰减需要文中关于扩散系数、外势、密度上下界和初始耗散的小量条件；数值部分是一维区间上的 forward Euler 实验，不能证明二维/高维衰减或说明振荡频率的普适最优效应。平衡态的显式形式在扩散系数常数时最简单，非齐次情形仍由归一化常数确定。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "经典解的密度保持严格正且具有与时间无关的上下界。",
+              "route": "令 $\\phi =D(\\rho )log\\rho +V$，把方程改写成 $\\phi _t+L[\\phi ]\\phi =|\\nabla \\phi |^{2}$ 且 $\\partial _n\\phi =0$；因 $D(\\rho )$在允许密度区间内正$，L[\\phi ]$是均匀抛物算子。对 $\\phi $ 的极值应用 Neumann 最大原理，再把 $\\phi $ 与 $\\rho $ 的关系反解，得到 $\\rho $ 的正下界和上界。",
+              "evidence": "PDF 第5–8页 Lemma 2.1–2.2、Theorem 1.1 及方程(2.1)–(2.3)。"
+            },
+            {
+              "claim": "耗散 $D[\\phi ](t)$ 满足带非线性高阶项的闭合微分不等式。",
+              "route": "对 $∫|\\nabla \\phi |^{2}\\rho $ 求时间导数，用方程和自然边界条件分部积分；含 Hessian 的主项给出负耗散，扩散非齐次产生的 $\\nabla logD、\\nabla ^{2}logD$ 项通过密度上下界和高阶梯度估计控制。Young 不等式把剩余项整理成 −cD+C $D^{3/2}+C$ $D^{2}$。",
+              "evidence": "PDF 第15–21页 Section 3、Proposition 3.10、公式(3.28)–(3.31)，以及对 (3.30) 的代入。"
+            },
+            {
+              "claim": "当初始耗散小于阈值时$，D[\\phi ](t)$ 按指数速率衰减。",
+              "route": "将上一不等式写成 $E'\\le -cE+C_2E^{3/2}+C_3E^{2}$；小初值保证非线性项在整个演化中被线性负项吸收。应用 Lemma 3.13 的 bootstrap/Gronwall 结论，得到 $E(t)\\le C$ $e^{-ct}$。",
+              "evidence": "PDF 第21–23页 Lemma 3.13 与 Theorem 1.2 的证明。"
+            },
+            {
+              "claim": "数值离散能够展示空间扩散振荡对耗散衰减的非单调影响。",
+              "route": "把势方程离散为区间上的有限差分 Neumann 问题，逐步推进密度并计算 $D[\\phi ]$；改变扩散系数的振荡幅度和频率后比较对数耗散曲线，从而检验解析判据所允许的不同衰减情形。",
+              "evidence": "PDF 第23–26页 Section 4、变换方程(4.1)、图4.1–4.2和 Section 5 结论。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 全文（约28页）的引言、能量证明、数值分析、Conclusion、Acknowledgments 和 References，并核查 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文逐页检查，重点为第20–26页耗散证明、数值分析、Conclusion 和 Acknowledgments/References。",
+        "priorityScore": 66,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

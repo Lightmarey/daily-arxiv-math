@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00324",
+  "slug": "2609.00324",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00324:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00324",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Quantitative Stability for Fractional Yamabe minimizers",
+    "authors": [
+      "A. Sophie Aiken",
+      "Benjamín Borquez"
+    ],
+    "abstract": "We study quantitative stability for the fractional Yamabe functional introduced by González and Qing. Its minimizers correspond to conformal metrics with constant fractional curvature. We prove that the deficit of the fractional Yamabe functional controls, with a suitable power, the distance to the set of minimizers. Our approach is based on a Lyapunov--Schmidt reduction for the nonlocal functional, together with the extension characterization of the fractional conformal Laplacian, which provides the regularity theory needed for the local analysis. As a consequence, we also obtain an analogous quantitative stability estimate for the associated extension functional.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00324",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00324",
+    "submittedAt": "2026-08-31T20:17:27Z",
+    "updatedAt": "2026-08-31T20:17:27Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "fractional Yamabe 量化稳定性",
+    "workSummary": "论文研究 fractional Yamabe 泛函最小化器附近的定量稳定性。作者在归一化约束流形上对泛函作 Lyapunov–Schmidt 约化，沿 Hessian 核消除退化方向并建立局部 deficit 控制；再用最小化序列紧性把局部估计推广到全局，同时通过扩展问题得到相应加权能量的稳定性。",
+    "techniques": [
+      "Lyapunov–Schmidt 约化",
+      "Hessian 核与可积性分析",
+      "最小化序列浓缩紧性",
+      "扩展问题的加权 Sobolev 稳定性"
+    ],
+    "breakthrough": "论文把 fractional Yamabe 泛函的 deficit 转化为到全体 minimizer 集的定量距离控制，即使 minimizer 存在退化核也能通过可积性和局部约化维持某个正幂稳定率，并将结论传递到非局部扩展泛函。",
+    "limitations": "稳定指数依赖 minimizer 集的局部谱/可积性结构，退化但不可积的情形不在定理范围；全局结论依赖最小化序列的紧性和闭流形设定，未覆盖一般非紧边界或临界浓缩失败情形。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 3.1 和 Lemma 3.2 将泛函在 minimizer 附近分解为 Hessian 正交补上的可解部分与核方向的有限维约化。",
+          "route": "先计算约束泛函的一阶变分和二阶 Hessian，将扰动分解为 $K⊕K^⊥$；在 $K^⊥$ 上用隐函数定理解出校正 F(v)，代回得到只依赖核坐标的解析 reduced functional，并以 integrability 条件控制其高阶余项。",
+          "evidence": "PDF 第12–16页，第3节 Lemma 3.1、Lemma 3.2、Lemma 3.4；Lyapunov–Schmidt 图和约化方程在第13–16页。"
+        },
+        {
+          "claim": "Proposition 4.1 建立 minimizer 邻域内 deficit 控制到距离的局部稳定性。",
+          "route": "在 $K^⊥$ 方向用 Hessian coercivity 吸收校正，在 K 方向用 reduced functional 的最低非零阶项控制 $|v|^{2+\\theta }$；若 minimizer 退化但可积，则泛函在核方向局部常数，距离只由正交补决定，合并两部分得到局部幂型估计。",
+          "evidence": "PDF 第15–17页，第4.1节 Proposition 4.1 及证明；式(4.1)–(4.4)附近给出约化 deficit 和距离比较。"
+        },
+        {
+          "claim": "Lemma 4.2 排除归一化最小化序列逃逸或浓缩，使局部稳定估计可以覆盖所有近极值函数。",
+          "route": "对 deficit 趋零的归一化序列使用 fractional Sobolev 临界紧性与浓缩紧性；标准化、平移/共形参数控制排除质量丢失，所得子列强收敛到 minimizer，从而最终落入某个 Proposition 4.1 的局部邻域。",
+          "evidence": "PDF 第17页 Lemma 4.2；PDF 第23–29页 Appendix B Lemma B.2–B.4 的浓缩紧性和最小化序列紧性证明。"
+        },
+        {
+          "claim": "Theorem 1.1、Corollary 1.2 和 Corollary 4.3 给出全局 fractional Yamabe 与扩展泛函的定量稳定性。",
+          "route": "固定任意 deficit 足够小的函数，Lemma 4.2 把它送入某个 minimizer 邻域并应用 Proposition 4.1；若 deficit 不小则用归一化后的正下界吸收距离，拼接两种情形得到全局常数和幂指数，再用扩展解的正交能量分解把边界估计传给加权扩展泛函。",
+          "evidence": "PDF 第5–7页 Theorem 1.1、Corollary 1.2；PDF 第17–19页 Proof of Theorem 1.1、Corollary 4.3，扩展稳定性见 Proposition 2.6 和第18–19页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、附录、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词；作者姓名中的字母组合不构成 AI 使用披露，未见作者明确说明使用 AI/LLM。",
+    "aiEvidenceSource": "PDF 全文第1–29页（含 Acknowledgments、Appendices 与 References）；缓存全文 2609.00324.txt。",
+    "priorityScore": 69,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00324:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00324",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Quantitative Stability for Fractional Yamabe minimizers",
+        "authors": [
+          "A. Sophie Aiken",
+          "Benjamín Borquez"
+        ],
+        "abstract": "We study quantitative stability for the fractional Yamabe functional introduced by González and Qing. Its minimizers correspond to conformal metrics with constant fractional curvature. We prove that the deficit of the fractional Yamabe functional controls, with a suitable power, the distance to the set of minimizers. Our approach is based on a Lyapunov--Schmidt reduction for the nonlocal functional, together with the extension characterization of the fractional conformal Laplacian, which provides the regularity theory needed for the local analysis. As a consequence, we also obtain an analogous quantitative stability estimate for the associated extension functional.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00324",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00324",
+        "submittedAt": "2026-08-31T20:17:27Z",
+        "updatedAt": "2026-08-31T20:17:27Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "fractional Yamabe 量化稳定性",
+        "workSummary": "论文研究 fractional Yamabe 泛函最小化器附近的定量稳定性。作者在归一化约束流形上对泛函作 Lyapunov–Schmidt 约化，沿 Hessian 核消除退化方向并建立局部 deficit 控制；再用最小化序列紧性把局部估计推广到全局，同时通过扩展问题得到相应加权能量的稳定性。",
+        "techniques": [
+          "Lyapunov–Schmidt 约化",
+          "Hessian 核与可积性分析",
+          "最小化序列浓缩紧性",
+          "扩展问题的加权 Sobolev 稳定性"
+        ],
+        "breakthrough": "论文把 fractional Yamabe 泛函的 deficit 转化为到全体 minimizer 集的定量距离控制，即使 minimizer 存在退化核也能通过可积性和局部约化维持某个正幂稳定率，并将结论传递到非局部扩展泛函。",
+        "limitations": "稳定指数依赖 minimizer 集的局部谱/可积性结构，退化但不可积的情形不在定理范围；全局结论依赖最小化序列的紧性和闭流形设定，未覆盖一般非紧边界或临界浓缩失败情形。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 3.1 和 Lemma 3.2 将泛函在 minimizer 附近分解为 Hessian 正交补上的可解部分与核方向的有限维约化。",
+              "route": "先计算约束泛函的一阶变分和二阶 Hessian，将扰动分解为 $K⊕K^⊥$；在 $K^⊥$ 上用隐函数定理解出校正 F(v)，代回得到只依赖核坐标的解析 reduced functional，并以 integrability 条件控制其高阶余项。",
+              "evidence": "PDF 第12–16页，第3节 Lemma 3.1、Lemma 3.2、Lemma 3.4；Lyapunov–Schmidt 图和约化方程在第13–16页。"
+            },
+            {
+              "claim": "Proposition 4.1 建立 minimizer 邻域内 deficit 控制到距离的局部稳定性。",
+              "route": "在 $K^⊥$ 方向用 Hessian coercivity 吸收校正，在 K 方向用 reduced functional 的最低非零阶项控制 $|v|^{2+\\theta }$；若 minimizer 退化但可积，则泛函在核方向局部常数，距离只由正交补决定，合并两部分得到局部幂型估计。",
+              "evidence": "PDF 第15–17页，第4.1节 Proposition 4.1 及证明；式(4.1)–(4.4)附近给出约化 deficit 和距离比较。"
+            },
+            {
+              "claim": "Lemma 4.2 排除归一化最小化序列逃逸或浓缩，使局部稳定估计可以覆盖所有近极值函数。",
+              "route": "对 deficit 趋零的归一化序列使用 fractional Sobolev 临界紧性与浓缩紧性；标准化、平移/共形参数控制排除质量丢失，所得子列强收敛到 minimizer，从而最终落入某个 Proposition 4.1 的局部邻域。",
+              "evidence": "PDF 第17页 Lemma 4.2；PDF 第23–29页 Appendix B Lemma B.2–B.4 的浓缩紧性和最小化序列紧性证明。"
+            },
+            {
+              "claim": "Theorem 1.1、Corollary 1.2 和 Corollary 4.3 给出全局 fractional Yamabe 与扩展泛函的定量稳定性。",
+              "route": "固定任意 deficit 足够小的函数，Lemma 4.2 把它送入某个 minimizer 邻域并应用 Proposition 4.1；若 deficit 不小则用归一化后的正下界吸收距离，拼接两种情形得到全局常数和幂指数，再用扩展解的正交能量分解把边界估计传给加权扩展泛函。",
+              "evidence": "PDF 第5–7页 Theorem 1.1、Corollary 1.2；PDF 第17–19页 Proof of Theorem 1.1、Corollary 4.3，扩展稳定性见 Proposition 2.6 和第18–19页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、附录、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词；作者姓名中的字母组合不构成 AI 使用披露，未见作者明确说明使用 AI/LLM。",
+        "aiEvidenceSource": "PDF 全文第1–29页（含 Acknowledgments、Appendices 与 References）；缓存全文 2609.00324.txt。",
+        "priorityScore": 69,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

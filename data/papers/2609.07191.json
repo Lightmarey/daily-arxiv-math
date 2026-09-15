@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07191",
+  "slug": "2609.07191",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07191:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07191",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Strong maximum principle for nonlocal diffusion in measure spaces: new characterization and population dynamics applications",
+    "authors": [
+      "Ana Casado-Sanchez",
+      "Monica Molina-Becerra",
+      "Antonio Suarez"
+    ],
+    "abstract": "We study the existence of nontrivial solutions to nonlocal semilinear diffusion equations of the form \\[ a_0(x)u(x)-\\int_Ωk(x,y)\\big(u(y)-u(x)\\big)\\,dμ(y)=F(x,u), \\quad u\\geq 0, \\] on a general measure space $(Ω,M,μ)$, where the kernel $k$ is nonnegative and symmetric. In this framework, a major challenge is establishing the strict positivity of solutions. To this end, we provide a novel complete characterization of the strong maximum principle in terms of a connectivity structure induced by the kernel, which leads to a decomposition of the domain into independent components. We also develop the method of sub- and supersolutions in this setting, obtaining existence, uniqueness, and nonexistence results, as well as a regularity result that ensures the continuity of solutions under suitable assumptions. The main interest of working within an abstract measure space lies in its rich applicability, as it unifies and extends a wide variety of frameworks, including discrete, continuous, and hybrid models, or systems interacting across different dimensions. Finally, numerical experiments are presented to illustrate the potential of our theoretical results.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07191",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07191",
+    "submittedAt": "2026-09-07T08:17:46Z",
+    "updatedAt": "2026-09-07T08:17:46Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文在一般测度空间上研究带对称非局部核的半线性扩散方程。作者先把核的正连接关系闭包成等价类，证明强最大值原理恰好由整个域只有一个等价类刻画；谱部分用自伴非局部算子的主谱值建立最大原理和分块可解性。随后在主谱值条件下构造上下解的单调迭代，获得半线性方程的最小、最大解及唯一性判据，并在连续核和局部紧空间假设下提升解的连续性。最后把框架应用到各等价类上的非局部 logistic 方程，展示不同类可同时存在零解和严格正解。",
+    "techniques": [
+      "测度空间上的非局部核连接关系与等价类",
+      "自伴积分算子的主谱值和 Fredholm 分析",
+      "强最大值原理与非局部正性传播",
+      "上下解单调迭代法",
+      "连续核下的解正则性与 logistic 应用"
+    ],
+    "breakthrough": "论文给出了强最大值原理的结构性充要条件：不是要求核处处正，而是要求由核的正支撑生成的等价类只有一个且没有残余区域。这个判据随后直接控制上下解迭代的正性，并解释了 logistic 解为何能在多个互不连通的类上独立选择零解或严格正解。",
+    "limitations": "抽象定理依赖有限测度、核的对称性/有界性及文中给定的主谱值和单调性条件；不覆盖非对称核或一般非有界反应项。连续性结论还要求局部紧 Hausdorff 空间、连续系数和连续核。数值例子用于展示等价类分解和迭代行为，不能扩大这些假设下的存在唯一性范围。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "强最大值原理成立当且仅当核正支撑生成的域只有一个等价类且不存在残余区域。",
+          "route": "把指标集合中存在正核连接的点对组成无向图，再取有限链生成的等价关系；在每个类内，非负超解若在一处为零，积分算子方程会沿每条正核边把零值传播到整类。若有两个类或残余集合，则在一个部分上取零、另一部分取正即可构造违反严格正性的函数，从而得到必要性。",
+          "evidence": "PDF 第8–13页，Section 4 的 Definition 4.2、Proposition 4.3、Definition 4.4 及 Corollary 4.9。"
+        },
+        {
+          "claim": "主谱值为正时，线性非局部算子满足最大原理并可在各等价类上独立求解。",
+          "route": "用二次型定义主谱值，将方程乘以负部或适当截断后的函数并积分；正谱隙迫使负部范数为零。等价类间核项不耦合，因此限制算子分别可逆，Fredholm alternative 再给出每个类上方程的唯一 $L^{2}$ 解。",
+          "evidence": "PDF 第4–8页 Theorem 4.1；PDF 第12–14页 Theorem 4.6 及公式(10)、(13)–(14)。"
+        },
+        {
+          "claim": "满足上下解、截断单调性和谱条件的半线性问题存在介于上下解之间的解，并具有最小解与最大解。",
+          "route": "先用谱平移把 $\\gamma $ 单调性吸收到算子中；从下解和上解开始，分别解线性化的两列方程。线性最大原理保持序关系，使下迭代单调上升、上迭代单调下降$；L^{2}$ 有界性和反应项的可积控制使极限通过积分方程，得到两个极限解夹住所有其他解。",
+          "evidence": "PDF 第13–17页，Theorem 4.15、公式(19)–(23)及其证明中的两列迭代。"
+        },
+        {
+          "claim": "在各等价类上，非局部 logistic 方程的严格正解存在唯一性由主谱值符号决定，并可在连续核条件下提升为连续解。",
+          "route": "将 logistic 反应项代入上下解定理，零点附近的线性斜率与无穷远的负增长分别提供下解和上界；若 $\\lambda _p(L-\\lambda I)<0$，正迭代不退化并给出严格正解，比较两个正解对应的线性化算子则排除差异。连续核使积分项在局部一致控制下连续，最后把 $L^{2}$ 解提升到 $C^{0}$。",
+          "evidence": "PDF 第18–21页 Theorem 5.1、5.3、5.4；PDF 第21–24页 Theorem 5.5–5.6 及 logistic 示例。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–34页摘要、正文各节、Proof、Acknowledgements、数值实验和 References，并核查 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–34页全文检查，重点为第21–31页数值应用、第32页 Acknowledgements 和末尾 References/声明区域。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07191:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07191",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Strong maximum principle for nonlocal diffusion in measure spaces: new characterization and population dynamics applications",
+        "authors": [
+          "Ana Casado-Sanchez",
+          "Monica Molina-Becerra",
+          "Antonio Suarez"
+        ],
+        "abstract": "We study the existence of nontrivial solutions to nonlocal semilinear diffusion equations of the form \\[ a_0(x)u(x)-\\int_Ωk(x,y)\\big(u(y)-u(x)\\big)\\,dμ(y)=F(x,u), \\quad u\\geq 0, \\] on a general measure space $(Ω,M,μ)$, where the kernel $k$ is nonnegative and symmetric. In this framework, a major challenge is establishing the strict positivity of solutions. To this end, we provide a novel complete characterization of the strong maximum principle in terms of a connectivity structure induced by the kernel, which leads to a decomposition of the domain into independent components. We also develop the method of sub- and supersolutions in this setting, obtaining existence, uniqueness, and nonexistence results, as well as a regularity result that ensures the continuity of solutions under suitable assumptions. The main interest of working within an abstract measure space lies in its rich applicability, as it unifies and extends a wide variety of frameworks, including discrete, continuous, and hybrid models, or systems interacting across different dimensions. Finally, numerical experiments are presented to illustrate the potential of our theoretical results.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07191",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07191",
+        "submittedAt": "2026-09-07T08:17:46Z",
+        "updatedAt": "2026-09-07T08:17:46Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文在一般测度空间上研究带对称非局部核的半线性扩散方程。作者先把核的正连接关系闭包成等价类，证明强最大值原理恰好由整个域只有一个等价类刻画；谱部分用自伴非局部算子的主谱值建立最大原理和分块可解性。随后在主谱值条件下构造上下解的单调迭代，获得半线性方程的最小、最大解及唯一性判据，并在连续核和局部紧空间假设下提升解的连续性。最后把框架应用到各等价类上的非局部 logistic 方程，展示不同类可同时存在零解和严格正解。",
+        "techniques": [
+          "测度空间上的非局部核连接关系与等价类",
+          "自伴积分算子的主谱值和 Fredholm 分析",
+          "强最大值原理与非局部正性传播",
+          "上下解单调迭代法",
+          "连续核下的解正则性与 logistic 应用"
+        ],
+        "breakthrough": "论文给出了强最大值原理的结构性充要条件：不是要求核处处正，而是要求由核的正支撑生成的等价类只有一个且没有残余区域。这个判据随后直接控制上下解迭代的正性，并解释了 logistic 解为何能在多个互不连通的类上独立选择零解或严格正解。",
+        "limitations": "抽象定理依赖有限测度、核的对称性/有界性及文中给定的主谱值和单调性条件；不覆盖非对称核或一般非有界反应项。连续性结论还要求局部紧 Hausdorff 空间、连续系数和连续核。数值例子用于展示等价类分解和迭代行为，不能扩大这些假设下的存在唯一性范围。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "强最大值原理成立当且仅当核正支撑生成的域只有一个等价类且不存在残余区域。",
+              "route": "把指标集合中存在正核连接的点对组成无向图，再取有限链生成的等价关系；在每个类内，非负超解若在一处为零，积分算子方程会沿每条正核边把零值传播到整类。若有两个类或残余集合，则在一个部分上取零、另一部分取正即可构造违反严格正性的函数，从而得到必要性。",
+              "evidence": "PDF 第8–13页，Section 4 的 Definition 4.2、Proposition 4.3、Definition 4.4 及 Corollary 4.9。"
+            },
+            {
+              "claim": "主谱值为正时，线性非局部算子满足最大原理并可在各等价类上独立求解。",
+              "route": "用二次型定义主谱值，将方程乘以负部或适当截断后的函数并积分；正谱隙迫使负部范数为零。等价类间核项不耦合，因此限制算子分别可逆，Fredholm alternative 再给出每个类上方程的唯一 $L^{2}$ 解。",
+              "evidence": "PDF 第4–8页 Theorem 4.1；PDF 第12–14页 Theorem 4.6 及公式(10)、(13)–(14)。"
+            },
+            {
+              "claim": "满足上下解、截断单调性和谱条件的半线性问题存在介于上下解之间的解，并具有最小解与最大解。",
+              "route": "先用谱平移把 $\\gamma $ 单调性吸收到算子中；从下解和上解开始，分别解线性化的两列方程。线性最大原理保持序关系，使下迭代单调上升、上迭代单调下降$；L^{2}$ 有界性和反应项的可积控制使极限通过积分方程，得到两个极限解夹住所有其他解。",
+              "evidence": "PDF 第13–17页，Theorem 4.15、公式(19)–(23)及其证明中的两列迭代。"
+            },
+            {
+              "claim": "在各等价类上，非局部 logistic 方程的严格正解存在唯一性由主谱值符号决定，并可在连续核条件下提升为连续解。",
+              "route": "将 logistic 反应项代入上下解定理，零点附近的线性斜率与无穷远的负增长分别提供下解和上界；若 $\\lambda _p(L-\\lambda I)<0$，正迭代不退化并给出严格正解，比较两个正解对应的线性化算子则排除差异。连续核使积分项在局部一致控制下连续，最后把 $L^{2}$ 解提升到 $C^{0}$。",
+              "evidence": "PDF 第18–21页 Theorem 5.1、5.3、5.4；PDF 第21–24页 Theorem 5.5–5.6 及 logistic 示例。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–34页摘要、正文各节、Proof、Acknowledgements、数值实验和 References，并核查 AI/LLM/ChatGPT/generative 等披露词；未见作者明确说明 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–34页全文检查，重点为第21–31页数值应用、第32页 Acknowledgements 和末尾 References/声明区域。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

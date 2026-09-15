@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08986",
+  "slug": "2609.08986",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08986:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08986",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Well-posedness and exponential stability for abstract evolution equations with delay in the nonlinear source: frictional and viscoelastic cases",
+    "authors": [
+      "Houria Chellaoua",
+      "Yamna Boukhatem",
+      "Cristina Pignotti"
+    ],
+    "abstract": "In this paper, we establish the well-posedness and exponential stability of a class of semilinear neutral abstract evolution equations with constant time delay. Two damping mechanisms are considered: frictional damping of the form $CC^*u_t$ and viscoelastic damping with memory. Under suitable assumptions, we prove global well-posedness and exponential decay of solutions for sufficiently small initial data. This result is of considerable importance, as it provides a unified framework for the analysis of a wide class of neutral systems arising in structural mechanics, seismic isolation, and control theory. The abstract results are illustrated by some concrete examples. The analysis relies on a combination of semigroup theory, energy estimates, Duhamel's formula, and Gronwall-type arguments.",
+    "categories": [
+      "math.AP",
+      "math.OC"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08986",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08986",
+    "submittedAt": "2026-09-08T16:28:21Z",
+    "updatedAt": "2026-09-08T16:28:21Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文建立带常时滞和非线性源的半线性中性抽象演化方程的局部适定性、全局小数据解和指数稳定性。摩擦阻尼与带记忆的黏弹阻尼分别由两个抽象模型表示；作者把方程改写到历史状态 Hilbert 空间，先用稳定半群和 Duhamel 公式得到局部解，再对含延迟源能量加入历史积分项，通过 Gronwall 和小数据 bootstrap 延拓并得到指数衰减。最后把抽象结果应用于 Duffing 梁、地震隔离黏弹波和板方程。",
+    "techniques": [
+      "历史状态空间半群",
+      "Duhamel 固定点构造",
+      "含延迟项的 Lyapunov 能量",
+      "Gronwall 估计与小数据 bootstrap",
+      "指数稳定性与具体模型验证"
+    ],
+    "breakthrough": "能量泛函显式加入延迟非线性源的历史积分后，作者把摩擦阻尼和黏弹阻尼放进同一抽象框架，并给出从局部 mild 解到全局指数稳定的统一小数据判据。",
+    "limitations": "指数衰减要求线性阻尼半群已有观测性和稳定性、延迟系数满足积分小性条件，非线性初值必须足够小；抽象算子自伴正性和局部 Lipschitz 假设限制了非线性及阻尼形式。实例不覆盖大数据、变时滞或一般非自治系数。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "延迟抽象系统在历史状态空间中存在唯一局部连续 mild 解。",
+          "route": "将二阶方程写成 $U=(sqrt(A)u,u_t)$ 的一阶系统，把时滞历史作为已知输入；稳定 C0 半群的变分公式配合局部 Lipschitz 非线性给出压缩延拓。",
+          "evidence": "PDF 第 4-5 页 equations (2.1)-(2.4)、Lemma 2.1。"
+        },
+        {
+          "claim": "在延迟反馈满足积分条件且解保持小球内时，解范数指数衰减。",
+          "route": "对 Duhamel 公式逐项估计延迟反馈和非线性源，使用局部 Lipschitz 常数小于半群衰减余量；加权 Gronwall 将历史输入吸收进指数核，得到 Theorem 2.2 的衰减率。",
+          "evidence": "PDF 第 5-7 页 assumption (2.5)、Theorem 2.2、equations (2.8)-(2.9)。"
+        },
+        {
+          "claim": "含延迟历史积分的能量满足可积增长界，并控制速度、算子位移和历史阻尼项。",
+          "route": "用 $u_t$ 乘方程并把 delayed source 与时间平移后的历史项配对，额外加入从 t-tau 到 t 的梯度源积分和延迟阻尼积分；应用 Cauchy-Schwarz 后得到能量导数受能量本身控制，再用 Gronwall。",
+          "evidence": "PDF 第 8-10 页 energy (2.12)、Proposition 2.4、equations (2.13)-(2.16)。"
+        },
+        {
+          "claim": "足够小的初始历史数据产生全局解并满足指数稳定性，黏弹模型亦有对应结论。",
+          "route": "Lemma 2.5 用能量正性保持非线性梯度小，Theorem 2.6 在首个时间块闭合 bootstrap 并以延迟长度为步长迭代；Theorem 2.7 得到指数稳定，Section 3 对记忆阻尼重复半群和能量论证。",
+          "evidence": "PDF 第 9-16 页 Lemma 2.5、Theorem 2.6、Theorem 2.7；第 25-32 页 Theorems 3.2、3.6、3.7。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、抽象模型、稳定性证明、应用例子、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-37 页全文检索及第 34-37 页应用结尾、Acknowledgments、References。",
+    "priorityScore": 59,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08986:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08986",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Well-posedness and exponential stability for abstract evolution equations with delay in the nonlinear source: frictional and viscoelastic cases",
+        "authors": [
+          "Houria Chellaoua",
+          "Yamna Boukhatem",
+          "Cristina Pignotti"
+        ],
+        "abstract": "In this paper, we establish the well-posedness and exponential stability of a class of semilinear neutral abstract evolution equations with constant time delay. Two damping mechanisms are considered: frictional damping of the form $CC^*u_t$ and viscoelastic damping with memory. Under suitable assumptions, we prove global well-posedness and exponential decay of solutions for sufficiently small initial data. This result is of considerable importance, as it provides a unified framework for the analysis of a wide class of neutral systems arising in structural mechanics, seismic isolation, and control theory. The abstract results are illustrated by some concrete examples. The analysis relies on a combination of semigroup theory, energy estimates, Duhamel's formula, and Gronwall-type arguments.",
+        "categories": [
+          "math.AP",
+          "math.OC"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08986",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08986",
+        "submittedAt": "2026-09-08T16:28:21Z",
+        "updatedAt": "2026-09-08T16:28:21Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文建立带常时滞和非线性源的半线性中性抽象演化方程的局部适定性、全局小数据解和指数稳定性。摩擦阻尼与带记忆的黏弹阻尼分别由两个抽象模型表示；作者把方程改写到历史状态 Hilbert 空间，先用稳定半群和 Duhamel 公式得到局部解，再对含延迟源能量加入历史积分项，通过 Gronwall 和小数据 bootstrap 延拓并得到指数衰减。最后把抽象结果应用于 Duffing 梁、地震隔离黏弹波和板方程。",
+        "techniques": [
+          "历史状态空间半群",
+          "Duhamel 固定点构造",
+          "含延迟项的 Lyapunov 能量",
+          "Gronwall 估计与小数据 bootstrap",
+          "指数稳定性与具体模型验证"
+        ],
+        "breakthrough": "能量泛函显式加入延迟非线性源的历史积分后，作者把摩擦阻尼和黏弹阻尼放进同一抽象框架，并给出从局部 mild 解到全局指数稳定的统一小数据判据。",
+        "limitations": "指数衰减要求线性阻尼半群已有观测性和稳定性、延迟系数满足积分小性条件，非线性初值必须足够小；抽象算子自伴正性和局部 Lipschitz 假设限制了非线性及阻尼形式。实例不覆盖大数据、变时滞或一般非自治系数。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "延迟抽象系统在历史状态空间中存在唯一局部连续 mild 解。",
+              "route": "将二阶方程写成 $U=(sqrt(A)u,u_t)$ 的一阶系统，把时滞历史作为已知输入；稳定 C0 半群的变分公式配合局部 Lipschitz 非线性给出压缩延拓。",
+              "evidence": "PDF 第 4-5 页 equations (2.1)-(2.4)、Lemma 2.1。"
+            },
+            {
+              "claim": "在延迟反馈满足积分条件且解保持小球内时，解范数指数衰减。",
+              "route": "对 Duhamel 公式逐项估计延迟反馈和非线性源，使用局部 Lipschitz 常数小于半群衰减余量；加权 Gronwall 将历史输入吸收进指数核，得到 Theorem 2.2 的衰减率。",
+              "evidence": "PDF 第 5-7 页 assumption (2.5)、Theorem 2.2、equations (2.8)-(2.9)。"
+            },
+            {
+              "claim": "含延迟历史积分的能量满足可积增长界，并控制速度、算子位移和历史阻尼项。",
+              "route": "用 $u_t$ 乘方程并把 delayed source 与时间平移后的历史项配对，额外加入从 t-tau 到 t 的梯度源积分和延迟阻尼积分；应用 Cauchy-Schwarz 后得到能量导数受能量本身控制，再用 Gronwall。",
+              "evidence": "PDF 第 8-10 页 energy (2.12)、Proposition 2.4、equations (2.13)-(2.16)。"
+            },
+            {
+              "claim": "足够小的初始历史数据产生全局解并满足指数稳定性，黏弹模型亦有对应结论。",
+              "route": "Lemma 2.5 用能量正性保持非线性梯度小，Theorem 2.6 在首个时间块闭合 bootstrap 并以延迟长度为步长迭代；Theorem 2.7 得到指数稳定，Section 3 对记忆阻尼重复半群和能量论证。",
+              "evidence": "PDF 第 9-16 页 Lemma 2.5、Theorem 2.6、Theorem 2.7；第 25-32 页 Theorems 3.2、3.6、3.7。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、抽象模型、稳定性证明、应用例子、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-37 页全文检索及第 34-37 页应用结尾、Acknowledgments、References。",
+        "priorityScore": 59,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

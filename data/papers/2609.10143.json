@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10143",
+  "slug": "2609.10143",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.10143:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.10143",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Bramson correction and convergence to the critical wave for Fisher-KPP equations on $\\mathbb Z^d$",
+    "authors": [
+      "Yuanyang Hu"
+    ],
+    "abstract": "We consider Fisher-KPP equations with nearest-neighbor diffusion on $\\mathbb Z^d$, $d\\geq2$, with nonzero finitely supported initial data. We prove a logarithmic delay of the front along each signed coordinate axis and show that the transition region has uniformly bounded width. On every fixed-width half-tube around an axis, the solution converges to translates of the minimal-speed lattice traveling wave, with a bounded phase. We also obtain an upper bound with a logarithmic correction in every direction. The proof uses weighted estimates, bounds for tilted random walks, and a product lower solution. Concavity of the reaction is not assumed.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10143",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10143",
+    "submittedAt": "2026-09-09T13:20:38Z",
+    "updatedAt": "2026-09-09T13:20:38Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文分析 Zd 上离散 Fisher–KPP 方程的 Bramson 前沿修正。对每个有符号坐标轴，作者先用 tilted random walk 的大偏差率函数确定最小速度 c* 与对数延迟 $m_d(t)$；上界由指数加权热核和 Legendre 变换控制，下界则构造带 log(t) 位移的乘积 subsolution。局部半管中，轴向因子收敛到最小速度晶格 traveling wave，横向因子由有限支持初值的质量估计夹住，从而得到有界 transition width；任意方向再用 support-function/质量上界给出带对数修正的前沿上界。",
+    "techniques": [
+      "tilted random-walk estimates",
+      "large-deviation Legendre transform",
+      "product subsolution",
+      "lattice traveling-wave comparison",
+      "weighted heat-kernel bounds"
+    ],
+    "breakthrough": "在不假设反应项凹性的情况下，证明离散 Zd Fisher–KPP 的轴向 Bramson 对数延迟、半管内波形收敛和任意方向上界。",
+    "limitations": "初值需非零且有限支撑，扩散是最近邻离散扩散，局部波形结论只在固定宽度半管中；任意方向目前只有上界，论文没有给出所有方向的精确相位或一般无限支撑数据结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "倾斜随机游走的对数矩生成函数决定最小速度与前沿位置 $m_d(t)$。",
+          "route": "对线性化方程取指数权重 $e^{p\\cdot x}$，晶格生成元的 Perron/Fourier 特征值给 H0(p)，Legendre 变换 I(x/t) 给大偏差率；在临界切线处二阶展开产生 −(d/2c*)log t 的 Bramson 修正。",
+          "evidence": "PDF 第 4-8 页 Sections 1–2 Lemmas 2.1–2.4，equations (1.8)–(1.16)。"
+        },
+        {
+          "claim": "指数加权热核给出每个坐标轴方向的上界，并把 transition region 限在 O(1) 宽度。",
+          "route": "将初值卷积核分解为轴向 tilted walk 与横向概率质量，Chernoff 界控制超过 $m_d(t)+C$ 的尾部；有限支持使横向和保持一致，比较原解的非线性项后得到 Theorem 1.1 的上界。",
+          "evidence": "PDF 第 14-25 页 Section 3 Lemmas 3.1–3.4、Theorem 1.1 proof，equations (3.1)–(3.28)。"
+        },
+        {
+          "claim": "带对数位移的乘积 subsolution 在临界 traveling wave 速度处提供下界。",
+          "route": "取最小速度一维晶格波 profile 与横向正因子相乘，再把位置设为 $c*t-\\beta log(t+T)+b$；选择 $\\beta $ 和 T 使离散 Laplacian 的横向误差被反应项余量吸收，Lemma 6.4 的不等式保证该函数为 subsolution。",
+          "evidence": "PDF 第 26-43 页 Sections 6–7 Lemmas 6.3–6.4、Theorem 7.4，equations (6.1)–(7.33)。"
+        },
+        {
+          "claim": "半管内解收敛到带有界相位的最小速度晶格 traveling wave，并得到全方向上界。",
+          "route": "上下界把每个轴向截面夹在同一 traveling-wave family 的有限平移内；强最大值和紧性排除相位漂移到无穷，沿半管序列抽取极限得 translate convergence。任意方向用加权质量和 Legendre 上界替换轴向几何，得到 Theorem 1.3。",
+          "evidence": "PDF 第 43-52 页 Sections 7–8 Theorems 1.1–1.5，equations (7.34)–(8.18)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 2–8、随机游走和 subsolution 证明、附录与参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-52 页全文。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10143:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.10143",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Bramson correction and convergence to the critical wave for Fisher-KPP equations on $\\mathbb Z^d$",
+        "authors": [
+          "Yuanyang Hu"
+        ],
+        "abstract": "We consider Fisher-KPP equations with nearest-neighbor diffusion on $\\mathbb Z^d$, $d\\geq2$, with nonzero finitely supported initial data. We prove a logarithmic delay of the front along each signed coordinate axis and show that the transition region has uniformly bounded width. On every fixed-width half-tube around an axis, the solution converges to translates of the minimal-speed lattice traveling wave, with a bounded phase. We also obtain an upper bound with a logarithmic correction in every direction. The proof uses weighted estimates, bounds for tilted random walks, and a product lower solution. Concavity of the reaction is not assumed.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10143",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10143",
+        "submittedAt": "2026-09-09T13:20:38Z",
+        "updatedAt": "2026-09-09T13:20:38Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文分析 Zd 上离散 Fisher–KPP 方程的 Bramson 前沿修正。对每个有符号坐标轴，作者先用 tilted random walk 的大偏差率函数确定最小速度 c* 与对数延迟 $m_d(t)$；上界由指数加权热核和 Legendre 变换控制，下界则构造带 log(t) 位移的乘积 subsolution。局部半管中，轴向因子收敛到最小速度晶格 traveling wave，横向因子由有限支持初值的质量估计夹住，从而得到有界 transition width；任意方向再用 support-function/质量上界给出带对数修正的前沿上界。",
+        "techniques": [
+          "tilted random-walk estimates",
+          "large-deviation Legendre transform",
+          "product subsolution",
+          "lattice traveling-wave comparison",
+          "weighted heat-kernel bounds"
+        ],
+        "breakthrough": "在不假设反应项凹性的情况下，证明离散 Zd Fisher–KPP 的轴向 Bramson 对数延迟、半管内波形收敛和任意方向上界。",
+        "limitations": "初值需非零且有限支撑，扩散是最近邻离散扩散，局部波形结论只在固定宽度半管中；任意方向目前只有上界，论文没有给出所有方向的精确相位或一般无限支撑数据结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "倾斜随机游走的对数矩生成函数决定最小速度与前沿位置 $m_d(t)$。",
+              "route": "对线性化方程取指数权重 $e^{p\\cdot x}$，晶格生成元的 Perron/Fourier 特征值给 H0(p)，Legendre 变换 I(x/t) 给大偏差率；在临界切线处二阶展开产生 −(d/2c*)log t 的 Bramson 修正。",
+              "evidence": "PDF 第 4-8 页 Sections 1–2 Lemmas 2.1–2.4，equations (1.8)–(1.16)。"
+            },
+            {
+              "claim": "指数加权热核给出每个坐标轴方向的上界，并把 transition region 限在 O(1) 宽度。",
+              "route": "将初值卷积核分解为轴向 tilted walk 与横向概率质量，Chernoff 界控制超过 $m_d(t)+C$ 的尾部；有限支持使横向和保持一致，比较原解的非线性项后得到 Theorem 1.1 的上界。",
+              "evidence": "PDF 第 14-25 页 Section 3 Lemmas 3.1–3.4、Theorem 1.1 proof，equations (3.1)–(3.28)。"
+            },
+            {
+              "claim": "带对数位移的乘积 subsolution 在临界 traveling wave 速度处提供下界。",
+              "route": "取最小速度一维晶格波 profile 与横向正因子相乘，再把位置设为 $c*t-\\beta log(t+T)+b$；选择 $\\beta $ 和 T 使离散 Laplacian 的横向误差被反应项余量吸收，Lemma 6.4 的不等式保证该函数为 subsolution。",
+              "evidence": "PDF 第 26-43 页 Sections 6–7 Lemmas 6.3–6.4、Theorem 7.4，equations (6.1)–(7.33)。"
+            },
+            {
+              "claim": "半管内解收敛到带有界相位的最小速度晶格 traveling wave，并得到全方向上界。",
+              "route": "上下界把每个轴向截面夹在同一 traveling-wave family 的有限平移内；强最大值和紧性排除相位漂移到无穷，沿半管序列抽取极限得 translate convergence。任意方向用加权质量和 Legendre 上界替换轴向几何，得到 Theorem 1.3。",
+              "evidence": "PDF 第 43-52 页 Sections 7–8 Theorems 1.1–1.5，equations (7.34)–(8.18)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 2–8、随机游走和 subsolution 证明、附录与参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-52 页全文。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

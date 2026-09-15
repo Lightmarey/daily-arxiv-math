@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00598",
+  "slug": "2609.00598",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00598:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00598",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Supercritical mean--field limit for magnetized Hamiltonian dynamic",
+    "authors": [
+      "Immanuel Ben Porat",
+      "Gui-Qiang G. Chen",
+      "Difan Yuan"
+    ],
+    "abstract": "The magnetized Vlasov--Poisson equation is a fundamental kinetic model for collisionless plasmas. We establish its quasi-neutral limit in two dimensions in the presence of a spatially inhomogeneous and time-dependent external magnetic field. In the same setting, we also establish the combined mean-field and quasi-neutral limit of the associated repulsive Coulomb particle system, thereby extending the results of \\cite{han2021newton}. Both limits lead to the incompressible Euler equations with Lorentz forcing. A key structural feature is the pointwise skew-symmetry of the Lorentz operator, which produces exact cancellations in the modulated-energy estimates and is crucial for controlling the limiting dynamics. We further derive a closed vorticity formulation in which the sum of the fluid vorticity and the magnetic field is transported by the flow, coupled to an evolution equation for the spatial mean velocity. Finally, we establish global well-posedness of the resulting limiting system in the Lipschitz class.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00598",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00598",
+    "submittedAt": "2026-09-01T02:37:22Z",
+    "updatedAt": "2026-09-01T02:37:22Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "磁化 Hamiltonian 动力学的超临界平均场极限",
+    "workSummary": "论文研究带空间非均匀、时间依赖外磁场的二维磁化 Vlasov–Poisson 系统及相应排斥 Coulomb 粒子系统。作者先利用 Lorentz 算子的点态斜对称性，在 modulated energy 中获得精确抵消并证明准中性极限；再把同一结构用于粒子系统的平均场与准中性联合极限，得到带 Lorentz 力的不可压 Euler 方程，并以涡量输运和平均速度方程证明极限系统在 Lipschitz 类全局适定。",
+    "techniques": [
+      "Brenier modulated energy",
+      "Lorentz 斜对称抵消",
+      "准中性与平均场联合极限",
+      "涡量输运和 Calderón–Zygmund 控制"
+    ],
+    "breakthrough": "论文把外磁场造成的快速 Lorentz 旋转从误差增长项转化为精确零功项，使二维非均匀时变磁场下的准中性极限和粒子平均场极限可以在同一个调制能量框架中同时闭合。",
+    "limitations": "结果限于二维周期域、足够光滑且有界的外磁场和初值、排斥 Coulomb 相互作用及 Lipschitz 极限流；粒子部分需避碰初值和相应能量界，未处理三维、吸引相互作用或奇异极限场。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 2.1 和 Proposition 2.2 提取 Lorentz 项的斜对称恒等式及 Vlasov–Poisson 的能量守恒，建立准中性误差的基本结构。",
+          "route": "对速度变量中的旋转算子逐点取内积，磁场项与自身或相同速度差的内积为零；再结合 Poisson 方程和输运方程积分，得到电场、动能及 modulated energy 的守恒/微分公式。",
+          "evidence": "PDF 第6–8页 Section 2 Lemma 2.1、Proposition 2.2；式(2.1)–(2.8)中的斜对称计算和能量控制。"
+        },
+        {
+          "claim": "Theorem 4.3 证明 Vlasov–Poisson 解到带 Lorentz 力不可压 Euler 解的准中性收敛。",
+          "route": "构造相对于平衡密度和 Euler 流的调制能量，利用 Poisson 椭圆估计控制电荷涨落；动能误差的非磁项由流的 Lipschitz 界估计，而 Lorentz 项因斜对称精确消失，最终用 Grönwall 得到统一时间收敛率。",
+          "evidence": "PDF 第17–23页 Section 4 Theorem 4.1、Lemma 4.2、Theorem 4.3；式(4.1)–(4.12)及 Proof of Theorem 1.1。"
+        },
+        {
+          "claim": "Theorem 5.6 将调制能量方法推广到有限粒子 Coulomb 系统，控制平均场与准中性误差的联合演化。",
+          "route": "先由 Lemma 5.4 保持粒子总能量，再把经验测度与 Euler 密度的差异写成粒子调制能量；Propositions 5.1–5.2 的势能/速度场估计控制离散求和误差，Lorentz 斜对称继续消除磁项，微分不等式经 Grönwall 闭合。",
+          "evidence": "PDF 第29–36页 Section 5 Lemma 5.4、Propositions 5.1–5.2、Theorem 5.6；式(5.1)–(5.31)和 Theorem 1.2 的证明。"
+        },
+        {
+          "claim": "Theorem 3.4、Proposition 6.1 和 Theorem 6.3 证明极限 Euler–Lorentz 系统的全局 Lipschitz 适定性，并确保粒子轨道在给定时间内存在唯一性。",
+          "route": "把流体方程改写成总涡量与平均速度的闭合系统，Calderón–Zygmund 估计把 Lipschitz 速度梯度控制在涡量 Hölder 范数；二维涡量输运保持这些范数，粒子 ODE 再由避碰和能量界获得全局流。",
+          "evidence": "PDF 第11–17页 Section 3 Theorem 3.4、Lemma 3.5；PDF 第39–42页 Section 6 Proposition 6.1、Theorem 6.3 及 Theorem A.1。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–42页（含 Acknowledgments 与 References）；缓存全文 2609.00598.txt。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00598:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00598",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Supercritical mean--field limit for magnetized Hamiltonian dynamic",
+        "authors": [
+          "Immanuel Ben Porat",
+          "Gui-Qiang G. Chen",
+          "Difan Yuan"
+        ],
+        "abstract": "The magnetized Vlasov--Poisson equation is a fundamental kinetic model for collisionless plasmas. We establish its quasi-neutral limit in two dimensions in the presence of a spatially inhomogeneous and time-dependent external magnetic field. In the same setting, we also establish the combined mean-field and quasi-neutral limit of the associated repulsive Coulomb particle system, thereby extending the results of \\cite{han2021newton}. Both limits lead to the incompressible Euler equations with Lorentz forcing. A key structural feature is the pointwise skew-symmetry of the Lorentz operator, which produces exact cancellations in the modulated-energy estimates and is crucial for controlling the limiting dynamics. We further derive a closed vorticity formulation in which the sum of the fluid vorticity and the magnetic field is transported by the flow, coupled to an evolution equation for the spatial mean velocity. Finally, we establish global well-posedness of the resulting limiting system in the Lipschitz class.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00598",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00598",
+        "submittedAt": "2026-09-01T02:37:22Z",
+        "updatedAt": "2026-09-01T02:37:22Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "磁化 Hamiltonian 动力学的超临界平均场极限",
+        "workSummary": "论文研究带空间非均匀、时间依赖外磁场的二维磁化 Vlasov–Poisson 系统及相应排斥 Coulomb 粒子系统。作者先利用 Lorentz 算子的点态斜对称性，在 modulated energy 中获得精确抵消并证明准中性极限；再把同一结构用于粒子系统的平均场与准中性联合极限，得到带 Lorentz 力的不可压 Euler 方程，并以涡量输运和平均速度方程证明极限系统在 Lipschitz 类全局适定。",
+        "techniques": [
+          "Brenier modulated energy",
+          "Lorentz 斜对称抵消",
+          "准中性与平均场联合极限",
+          "涡量输运和 Calderón–Zygmund 控制"
+        ],
+        "breakthrough": "论文把外磁场造成的快速 Lorentz 旋转从误差增长项转化为精确零功项，使二维非均匀时变磁场下的准中性极限和粒子平均场极限可以在同一个调制能量框架中同时闭合。",
+        "limitations": "结果限于二维周期域、足够光滑且有界的外磁场和初值、排斥 Coulomb 相互作用及 Lipschitz 极限流；粒子部分需避碰初值和相应能量界，未处理三维、吸引相互作用或奇异极限场。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 2.1 和 Proposition 2.2 提取 Lorentz 项的斜对称恒等式及 Vlasov–Poisson 的能量守恒，建立准中性误差的基本结构。",
+              "route": "对速度变量中的旋转算子逐点取内积，磁场项与自身或相同速度差的内积为零；再结合 Poisson 方程和输运方程积分，得到电场、动能及 modulated energy 的守恒/微分公式。",
+              "evidence": "PDF 第6–8页 Section 2 Lemma 2.1、Proposition 2.2；式(2.1)–(2.8)中的斜对称计算和能量控制。"
+            },
+            {
+              "claim": "Theorem 4.3 证明 Vlasov–Poisson 解到带 Lorentz 力不可压 Euler 解的准中性收敛。",
+              "route": "构造相对于平衡密度和 Euler 流的调制能量，利用 Poisson 椭圆估计控制电荷涨落；动能误差的非磁项由流的 Lipschitz 界估计，而 Lorentz 项因斜对称精确消失，最终用 Grönwall 得到统一时间收敛率。",
+              "evidence": "PDF 第17–23页 Section 4 Theorem 4.1、Lemma 4.2、Theorem 4.3；式(4.1)–(4.12)及 Proof of Theorem 1.1。"
+            },
+            {
+              "claim": "Theorem 5.6 将调制能量方法推广到有限粒子 Coulomb 系统，控制平均场与准中性误差的联合演化。",
+              "route": "先由 Lemma 5.4 保持粒子总能量，再把经验测度与 Euler 密度的差异写成粒子调制能量；Propositions 5.1–5.2 的势能/速度场估计控制离散求和误差，Lorentz 斜对称继续消除磁项，微分不等式经 Grönwall 闭合。",
+              "evidence": "PDF 第29–36页 Section 5 Lemma 5.4、Propositions 5.1–5.2、Theorem 5.6；式(5.1)–(5.31)和 Theorem 1.2 的证明。"
+            },
+            {
+              "claim": "Theorem 3.4、Proposition 6.1 和 Theorem 6.3 证明极限 Euler–Lorentz 系统的全局 Lipschitz 适定性，并确保粒子轨道在给定时间内存在唯一性。",
+              "route": "把流体方程改写成总涡量与平均速度的闭合系统，Calderón–Zygmund 估计把 Lipschitz 速度梯度控制在涡量 Hölder 范数；二维涡量输运保持这些范数，粒子 ODE 再由避碰和能量界获得全局流。",
+              "evidence": "PDF 第11–17页 Section 3 Theorem 3.4、Lemma 3.5；PDF 第39–42页 Section 6 Proposition 6.1、Theorem 6.3 及 Theorem A.1。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgments、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–42页（含 Acknowledgments 与 References）；缓存全文 2609.00598.txt。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

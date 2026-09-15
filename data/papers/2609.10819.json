@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10819",
+  "slug": "2609.10819",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.10819:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.10819",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Sharp Lifespan Estimates for a Semilinear Wave Equation with Nonlinear Damping",
+    "authors": [
+      "Firas Kaabi"
+    ],
+    "abstract": "We study the maximal existence time $T^{*}(\\varrho)$ of the solution of the semilinear wave equation $u_{tt}-\\Delta u=u|u|^{p-1}-u_{t}|u_{t}|^{q-1}$ in a bounded domain, with Dirichlet boundary condition and initial data $(\\varrho f,\\varrho g)$, where $1<q<p$ and the amplitude $\\varrho$ is large. For nontrivial $f$ and sufficiently large $\\varrho$, the concavity method gives $T^{*}(\\varrho)\\leq C\\varrho^{-(p-1)/2}$ for $q\\leq2p/(p+1)$ and $T^{*}(\\varrho)\\leq C\\varrho^{-(p-q)/q}$ for $q>2p/(p+1)$, whereas the energy method gives a lower bound of order $\\varrho^{1-p}$ only. We prove lower bounds with the same exponents as the upper ones, so that $T^{*}(\\varrho)\\asymp\\varrho^{-\\vartheta(p,q)}$ with $\\vartheta(p,q)=\\min\\{(p-1)/2,\\,(p-q)/q\\}$. The proof rests on a hyperbolic rescaling which converts the large amplitude into a dilation of the domain and a coefficient $\\varrho^{(q(p+1)-2p)/2}$ in front of the damping term, on a local existence theory in uniformly local energy norms whose existence time does not depend on that coefficient, and on a quantitative use of the dissipation when the coefficient is large. The threshold $2p/(p+1)$ is the value of $q$ at which the damping term is invariant under the rescaling. No attempt is made to optimize the constants: sharpness is meant throughout at the level of the exponent.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10819",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10819",
+    "submittedAt": "2026-09-09T20:41:09Z",
+    "updatedAt": "2026-09-09T20:41:09Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "正文级严格核查",
+    "workSummary": "论文考察大振幅初值下带非线性阻尼的半线性波方程最大存在时间。作者在均匀局部能量框架中对重标度解建立与振幅无关的控制，再按阻尼指数相对于 $qc=2p/(p+1)$ 的位置分别使用符号单调性或耗散强度，证明两个互补的寿命下界，并与凹性法上界合并成分区间锐利幂律。",
+    "techniques": [
+      "超曲型方程的振幅-空间时间重标度",
+      "均匀局部能量和有限传播",
+      "非线性阻尼能量耗散",
+      "Bihari 型比较不等式与凹性法"
+    ],
+    "breakthrough": "在 $q\\le qc$ 时寿命尺度为 $varrho^(-(p-1)/2)$，在 qc<q<p 时改善为 $varrho^(-(p-q)/q)$；正文把临界指数归因于重标度阻尼系数，并与爆破解上界配成 sharp lifespan。",
+    "limitations": "结果以初值正则性、非平凡性和大振幅区间为前提；第二个下界只覆盖过阻尼区间，爆破解上界沿用凹性法条件，未推广到其他边界条件或非线性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "重标度把大振幅问题化为小空间时间尺度上的参数方程。",
+          "route": "取 $lambda=varrho^((p-1)/2)$，令 $v(y,s)=varrho^(-1)u(y/lambda,s/lambda)$；各项重排后只剩显式阻尼参数，原寿命由重标度寿命除以 lambda。",
+          "evidence": "PDF 第 7 页第 3 节 Lemma 3.1，式 (3.1) 及 epsilon、kappa 定义。"
+        },
+        {
+          "claim": "重标度解在与振幅无关的时窗内保持均匀局部能量控制。",
+          "route": "局部初值能量和有限传播先给出 $K\\ge E(0)$ 的统一上界，再用局部存在性和唯一性把控制延伸到截断时段。",
+          "evidence": "PDF 第 8--10 页第 3 节 Lemma 3.2、Lemma 3.5 及局部能量估计。"
+        },
+        {
+          "claim": "弱阻尼区间给出 T* 大于等于 $varrho^(-(p-1)/2)$。",
+          "route": "只用阻尼项的符号使能量单调，在固定重标度时窗内控制源项；将该时窗乘回 $lambda^(-1)$ 得第一种振幅指数。",
+          "evidence": "PDF 第 17--18 页 Theorem 2.1(i) 的证明，式 (2.6)。"
+        },
+        {
+          "claim": "过阻尼区间给出 T* 大于等于 $varrho^(-(p-q)/q)$。",
+          "route": "Lemma 3.12 将耗散积分转成 Y 的 Bihari 比较不等式，得到重标度时间大于等于耗散参数的 1/q 次幂；代入参数并还原尺度得到第二指数。",
+          "evidence": "PDF 第 18 页 Lemma 3.12，式 (3.28)--(3.29)；第 19--20 页 Theorem 2.1(ii)、Theorem 2.2。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检查摘要、引言、各节证明、致谢、作者声明和参考文献末尾，没有作者将 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对的明确披露。",
+    "aiEvidenceSource": "PDF 第 1--27 页全文，重点核查第 26--27 页末尾及全文 AI、LLM、ChatGPT、Claude、Gemini、Grammarly 上下文。",
+    "priorityScore": 84,
+    "priorityTier": "high",
+    "priorityReason": "给出非线性阻尼波方程大振幅寿命的分区间锐利幂律。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.10819:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.10819",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Sharp Lifespan Estimates for a Semilinear Wave Equation with Nonlinear Damping",
+        "authors": [
+          "Firas Kaabi"
+        ],
+        "abstract": "We study the maximal existence time $T^{*}(\\varrho)$ of the solution of the semilinear wave equation $u_{tt}-\\Delta u=u|u|^{p-1}-u_{t}|u_{t}|^{q-1}$ in a bounded domain, with Dirichlet boundary condition and initial data $(\\varrho f,\\varrho g)$, where $1<q<p$ and the amplitude $\\varrho$ is large. For nontrivial $f$ and sufficiently large $\\varrho$, the concavity method gives $T^{*}(\\varrho)\\leq C\\varrho^{-(p-1)/2}$ for $q\\leq2p/(p+1)$ and $T^{*}(\\varrho)\\leq C\\varrho^{-(p-q)/q}$ for $q>2p/(p+1)$, whereas the energy method gives a lower bound of order $\\varrho^{1-p}$ only. We prove lower bounds with the same exponents as the upper ones, so that $T^{*}(\\varrho)\\asymp\\varrho^{-\\vartheta(p,q)}$ with $\\vartheta(p,q)=\\min\\{(p-1)/2,\\,(p-q)/q\\}$. The proof rests on a hyperbolic rescaling which converts the large amplitude into a dilation of the domain and a coefficient $\\varrho^{(q(p+1)-2p)/2}$ in front of the damping term, on a local existence theory in uniformly local energy norms whose existence time does not depend on that coefficient, and on a quantitative use of the dissipation when the coefficient is large. The threshold $2p/(p+1)$ is the value of $q$ at which the damping term is invariant under the rescaling. No attempt is made to optimize the constants: sharpness is meant throughout at the level of the exponent.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10819",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10819",
+        "submittedAt": "2026-09-09T20:41:09Z",
+        "updatedAt": "2026-09-09T20:41:09Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "正文级严格核查",
+        "workSummary": "论文考察大振幅初值下带非线性阻尼的半线性波方程最大存在时间。作者在均匀局部能量框架中对重标度解建立与振幅无关的控制，再按阻尼指数相对于 $qc=2p/(p+1)$ 的位置分别使用符号单调性或耗散强度，证明两个互补的寿命下界，并与凹性法上界合并成分区间锐利幂律。",
+        "techniques": [
+          "超曲型方程的振幅-空间时间重标度",
+          "均匀局部能量和有限传播",
+          "非线性阻尼能量耗散",
+          "Bihari 型比较不等式与凹性法"
+        ],
+        "breakthrough": "在 $q\\le qc$ 时寿命尺度为 $varrho^(-(p-1)/2)$，在 qc<q<p 时改善为 $varrho^(-(p-q)/q)$；正文把临界指数归因于重标度阻尼系数，并与爆破解上界配成 sharp lifespan。",
+        "limitations": "结果以初值正则性、非平凡性和大振幅区间为前提；第二个下界只覆盖过阻尼区间，爆破解上界沿用凹性法条件，未推广到其他边界条件或非线性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "重标度把大振幅问题化为小空间时间尺度上的参数方程。",
+              "route": "取 $lambda=varrho^((p-1)/2)$，令 $v(y,s)=varrho^(-1)u(y/lambda,s/lambda)$；各项重排后只剩显式阻尼参数，原寿命由重标度寿命除以 lambda。",
+              "evidence": "PDF 第 7 页第 3 节 Lemma 3.1，式 (3.1) 及 epsilon、kappa 定义。"
+            },
+            {
+              "claim": "重标度解在与振幅无关的时窗内保持均匀局部能量控制。",
+              "route": "局部初值能量和有限传播先给出 $K\\ge E(0)$ 的统一上界，再用局部存在性和唯一性把控制延伸到截断时段。",
+              "evidence": "PDF 第 8--10 页第 3 节 Lemma 3.2、Lemma 3.5 及局部能量估计。"
+            },
+            {
+              "claim": "弱阻尼区间给出 T* 大于等于 $varrho^(-(p-1)/2)$。",
+              "route": "只用阻尼项的符号使能量单调，在固定重标度时窗内控制源项；将该时窗乘回 $lambda^(-1)$ 得第一种振幅指数。",
+              "evidence": "PDF 第 17--18 页 Theorem 2.1(i) 的证明，式 (2.6)。"
+            },
+            {
+              "claim": "过阻尼区间给出 T* 大于等于 $varrho^(-(p-q)/q)$。",
+              "route": "Lemma 3.12 将耗散积分转成 Y 的 Bihari 比较不等式，得到重标度时间大于等于耗散参数的 1/q 次幂；代入参数并还原尺度得到第二指数。",
+              "evidence": "PDF 第 18 页 Lemma 3.12，式 (3.28)--(3.29)；第 19--20 页 Theorem 2.1(ii)、Theorem 2.2。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检查摘要、引言、各节证明、致谢、作者声明和参考文献末尾，没有作者将 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对的明确披露。",
+        "aiEvidenceSource": "PDF 第 1--27 页全文，重点核查第 26--27 页末尾及全文 AI、LLM、ChatGPT、Claude、Gemini、Grammarly 上下文。",
+        "priorityScore": 84,
+        "priorityTier": "high",
+        "priorityReason": "给出非线性阻尼波方程大振幅寿命的分区间锐利幂律。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

@@ -3,93 +3,147 @@
   "arxivId": "2609.01324",
   "slug": "2609.01324",
   "latest": {
+    "id": "math.AP:2026-09-02:2609.01324:v2",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
     "arxivId": "2609.01324",
-    "metadata": {
-      "title": "Mass Bounds for Confined Area-Minimizing Minimal Surfaces",
-      "authors": [
-        "Xumin Jiang",
-        "Jiongduo Xie"
-      ],
-      "abstract": "We establish codimension-independent mass bounds for geometrically confined area-minimizing rectifiable currents. In Euclidean space, we combine the confined-volume doubling theorem of Colding--Minicozzi with a current-theoretic squashing argument. This gives an affirmative answer to Lin's interior mass-bound problem for every algebraic projection multiplicity $Q$: the interior mass is bounded by $C(n)Q$, without an a priori mass bound at a larger scale. For the hyperbolic application, we make the curvature modification of the fixed-scale argument needed in a thin tubular neighborhood of a totally geodesic copy of $\\mathbb{H}^n$. Combining this auxiliary estimate with a localized squashing estimate removes the doubly exponential local mass-growth condition from the boundary regularity results in [13].",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-01T14:42:53Z",
-      "updatedAt": "2026-09-01T14:42:53Z"
+    "version": 2,
+    "entryKind": "cross_list",
+    "title": "Mass Bounds for Confined Area-Minimizing Minimal Surfaces",
+    "authors": [
+      "Xumin Jiang",
+      "Jiongduo Xie"
+    ],
+    "abstract": "We establish codimension-independent mass bounds for geometrically confined area-minimizing rectifiable currents. In Euclidean space, we combine the confined-volume doubling theorem of Colding--Minicozzi with a current-theoretic squashing argument. This gives an affirmative answer to Lin's interior mass-bound problem for every algebraic projection multiplicity $Q$: the interior mass is bounded by $C(n)Q$, without an a priori mass bound at a larger scale. This result yields a degree-one Bernstein-type rigidity result under sublinear confinement. For the hyperbolic application, we make the curvature modification of the fixed-scale argument needed in a thin tubular neighborhood of a totally geodesic copy of $\\mathbb{H}^n$. Combining this auxiliary estimate with a localized squashing estimate removes the doubly exponential local mass-growth condition from the boundary regularity results in [13].",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.01324",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01324",
+    "submittedAt": "2026-09-01T14:42:53Z",
+    "updatedAt": "2026-09-03T17:25:16Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "受限面积极小曲面的质量界",
+    "workSummary": "论文证明几何受限的面积极小整流 current 存在与余维无关的局部质量界。欧氏情形把 Colding–Minicozzi 的受限体积 doubling 与 current 的 squashing 结合，得到任意代数投影重数 Q 的内部质量 O(nQ)；双曲情形则修正固定尺度估计并在全测地 Hn 附近局部压平，进而移除边界正则性结果中的双指数质量增长假设。",
+    "techniques": [
+      "受限体积 doubling",
+      "current-theoretic squashing",
+      "应力/径向能量比较",
+      "双曲固定尺度质量估计"
+    ],
+    "breakthrough": "论文把几何贴近平面的条件直接转成与余维无关的内部质量控制，解决 Lin 的任意投影重数问题；同一 squashing 机制经曲率修正后还消除了双曲边界正则性中原本需要的双指数局部质量增长。",
+    "limitations": "定理要求面积极小、不可分解或局部面积极小 current 满足投影重数和小 Hausdorff 距离条件；双曲应用局限于靠近全测地平面的细管及其给定渐近边界，不能替代任意边界数据的完整质量理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 3.1 和 Corollary 3.2 将几何受限的 area-minimizing current 转化为局部体积 doubling 控制。",
+          "route": "以支撑集到仿射平面的距离作为受限量，使用 Colding–Minicozzi confined-volume theorem 比较不同半径的体积；局部化后得到目标环带中不依赖大尺度总质量的 doubling 比率。",
+          "evidence": "PDF 第7–8页 Section 3.1 Theorem 3.1、Corollary 3.2；受限体积假设和局部 doubling 结论。"
+        },
+        {
+          "claim": "Lemmas 3.3–3.9 的欧氏 squashing 与横向能量估计给出内层质量界 $M(T⌞C1/2)\\le C(n)Q$。",
+          "route": "构造把横向坐标压向目标平面的 Lipschitz 变换，利用 current 最小性比较压缩后的质量；径向法向倾斜、次调和修正势和 annulus 能量估计把压缩损失吸收到 doubling 界中，最后按代数投影重数 Q 控制平面部分。",
+          "evidence": "PDF 第9–15页 Lemmas 3.3–3.9；式(3.17)、(3.24)、(3.35)及 Section 4 Proof of Theorem 1.2 的质量比较。"
+        },
+        {
+          "claim": "Theorem 1.2 由上述局部估计回答 Lin 的 Problem 1，并推出 degree-one 情形的 Bernstein 型刚性。",
+          "route": "在目标圆柱内选择任意中心点，先用 stationary varifold 和局部 doubling，再应用 squashing lemma 得到固定半径质量上界；当 $Q=1$ 时，质量界与投影同度数迫使 current 无额外横向分支，结合正则性得到仿射或图形刚性。",
+          "evidence": "PDF 第3–4页 Theorem 1.2 与 Problem 1.1；PDF 第17–18页 Proof of Theorem 1.2，尤其式(4.1)–(4.6)。"
+        },
+        {
+          "claim": "Theorems 1.3、1.5、1.6 将固定尺度 squashing 修正到双曲空间，并移除边界正则性中的双指数局部质量增长条件。",
+          "route": "在全测地 Hn 的薄管中把欧氏径向距离替换为双曲距离，加入曲率项后重新证明次调和屏障和横向能量估计；局部质量界先给出绝对局部质量，再代入渐近边界的缩放参数，传递到图形正则性和展开结论。",
+          "evidence": "PDF 第5–6页 Theorems 1.3、1.5、1.6；PDF 第14–17页 Lemmas 3.10–3.11 与 Sections 4.2–4.4 的证明。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "解决问题/加强",
-      "workSummary": "为几何受限的面积极小整流流建立与余维无关的内部质量上界。",
-      "techniques": [
-        "体积倍增",
-        "current squashing",
-        "局部化质量估计"
-      ],
-      "breakthrough": "肯定回答 Lin 的内部质量问题，并移除双曲边界正则理论中的双指数质量增长假设。",
-      "limitations": "仍需 confinement 和代数投影重数控制。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 86,
-      "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 86/100。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We establish codimension-independent mass bounds for geometrically confined area-minimizing rectifiable currents. In Euclidean space, we combine the confined-volume doubling theorem of Colding--Minicozzi with a current-theoretic squashing argument. This gives an affirmative answer to Lin's interior mass-bound problem for every algebraic projection multiplicity $Q$: the interior mass is bounded by $C(n)Q$, without an a priori mass bound at a larger scale. For the hyperbolic application, we make the curvature modification of the fixed-scale argument needed in a thin tubular neighborhood of a totally geodesic copy of $\\mathbb{H}^n$. Combining this auxiliary estimate with a localized squashing estimate removes the doubly exponential local mass-growth condition from the boundary regularity results in [13].",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露使用 AI-assisted tools，主要是 ChatGPT；同时说明作者亲自撰写并核验所有定理陈述和证明。工具为 ChatGPT，位置在引言末尾的 AI assistance disclosure。",
+    "aiEvidenceSource": "PDF 第2页 Disclosure on AI assistance；缓存全文 2609.01324.txt。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-02",
-      "entry": {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01324:v2",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
         "arxivId": "2609.01324",
-        "metadata": {
-          "title": "Mass Bounds for Confined Area-Minimizing Minimal Surfaces",
-          "authors": [
-            "Xumin Jiang",
-            "Jiongduo Xie"
-          ],
-          "abstract": "We establish codimension-independent mass bounds for geometrically confined area-minimizing rectifiable currents. In Euclidean space, we combine the confined-volume doubling theorem of Colding--Minicozzi with a current-theoretic squashing argument. This gives an affirmative answer to Lin's interior mass-bound problem for every algebraic projection multiplicity $Q$: the interior mass is bounded by $C(n)Q$, without an a priori mass bound at a larger scale. For the hyperbolic application, we make the curvature modification of the fixed-scale argument needed in a thin tubular neighborhood of a totally geodesic copy of $\\mathbb{H}^n$. Combining this auxiliary estimate with a localized squashing estimate removes the doubly exponential local mass-growth condition from the boundary regularity results in [13].",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-01T14:42:53Z",
-          "updatedAt": "2026-09-01T14:42:53Z"
+        "version": 2,
+        "entryKind": "cross_list",
+        "title": "Mass Bounds for Confined Area-Minimizing Minimal Surfaces",
+        "authors": [
+          "Xumin Jiang",
+          "Jiongduo Xie"
+        ],
+        "abstract": "We establish codimension-independent mass bounds for geometrically confined area-minimizing rectifiable currents. In Euclidean space, we combine the confined-volume doubling theorem of Colding--Minicozzi with a current-theoretic squashing argument. This gives an affirmative answer to Lin's interior mass-bound problem for every algebraic projection multiplicity $Q$: the interior mass is bounded by $C(n)Q$, without an a priori mass bound at a larger scale. This result yields a degree-one Bernstein-type rigidity result under sublinear confinement. For the hyperbolic application, we make the curvature modification of the fixed-scale argument needed in a thin tubular neighborhood of a totally geodesic copy of $\\mathbb{H}^n$. Combining this auxiliary estimate with a localized squashing estimate removes the doubly exponential local mass-growth condition from the boundary regularity results in [13].",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.01324",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01324",
+        "submittedAt": "2026-09-01T14:42:53Z",
+        "updatedAt": "2026-09-03T17:25:16Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "受限面积极小曲面的质量界",
+        "workSummary": "论文证明几何受限的面积极小整流 current 存在与余维无关的局部质量界。欧氏情形把 Colding–Minicozzi 的受限体积 doubling 与 current 的 squashing 结合，得到任意代数投影重数 Q 的内部质量 O(nQ)；双曲情形则修正固定尺度估计并在全测地 Hn 附近局部压平，进而移除边界正则性结果中的双指数质量增长假设。",
+        "techniques": [
+          "受限体积 doubling",
+          "current-theoretic squashing",
+          "应力/径向能量比较",
+          "双曲固定尺度质量估计"
+        ],
+        "breakthrough": "论文把几何贴近平面的条件直接转成与余维无关的内部质量控制，解决 Lin 的任意投影重数问题；同一 squashing 机制经曲率修正后还消除了双曲边界正则性中原本需要的双指数局部质量增长。",
+        "limitations": "定理要求面积极小、不可分解或局部面积极小 current 满足投影重数和小 Hausdorff 距离条件；双曲应用局限于靠近全测地平面的细管及其给定渐近边界，不能替代任意边界数据的完整质量理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 3.1 和 Corollary 3.2 将几何受限的 area-minimizing current 转化为局部体积 doubling 控制。",
+              "route": "以支撑集到仿射平面的距离作为受限量，使用 Colding–Minicozzi confined-volume theorem 比较不同半径的体积；局部化后得到目标环带中不依赖大尺度总质量的 doubling 比率。",
+              "evidence": "PDF 第7–8页 Section 3.1 Theorem 3.1、Corollary 3.2；受限体积假设和局部 doubling 结论。"
+            },
+            {
+              "claim": "Lemmas 3.3–3.9 的欧氏 squashing 与横向能量估计给出内层质量界 $M(T⌞C1/2)\\le C(n)Q$。",
+              "route": "构造把横向坐标压向目标平面的 Lipschitz 变换，利用 current 最小性比较压缩后的质量；径向法向倾斜、次调和修正势和 annulus 能量估计把压缩损失吸收到 doubling 界中，最后按代数投影重数 Q 控制平面部分。",
+              "evidence": "PDF 第9–15页 Lemmas 3.3–3.9；式(3.17)、(3.24)、(3.35)及 Section 4 Proof of Theorem 1.2 的质量比较。"
+            },
+            {
+              "claim": "Theorem 1.2 由上述局部估计回答 Lin 的 Problem 1，并推出 degree-one 情形的 Bernstein 型刚性。",
+              "route": "在目标圆柱内选择任意中心点，先用 stationary varifold 和局部 doubling，再应用 squashing lemma 得到固定半径质量上界；当 $Q=1$ 时，质量界与投影同度数迫使 current 无额外横向分支，结合正则性得到仿射或图形刚性。",
+              "evidence": "PDF 第3–4页 Theorem 1.2 与 Problem 1.1；PDF 第17–18页 Proof of Theorem 1.2，尤其式(4.1)–(4.6)。"
+            },
+            {
+              "claim": "Theorems 1.3、1.5、1.6 将固定尺度 squashing 修正到双曲空间，并移除边界正则性中的双指数局部质量增长条件。",
+              "route": "在全测地 Hn 的薄管中把欧氏径向距离替换为双曲距离，加入曲率项后重新证明次调和屏障和横向能量估计；局部质量界先给出绝对局部质量，再代入渐近边界的缩放参数，传递到图形正则性和展开结论。",
+              "evidence": "PDF 第5–6页 Theorems 1.3、1.5、1.6；PDF 第14–17页 Lemmas 3.10–3.11 与 Sections 4.2–4.4 的证明。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "解决问题/加强",
-          "workSummary": "为几何受限的面积极小整流流建立与余维无关的内部质量上界。",
-          "techniques": [
-            "体积倍增",
-            "current squashing",
-            "局部化质量估计"
-          ],
-          "breakthrough": "肯定回答 Lin 的内部质量问题，并移除双曲边界正则理论中的双指数质量增长假设。",
-          "limitations": "仍需 confinement 和代数投影重数控制。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 86,
-          "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 86/100。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We establish codimension-independent mass bounds for geometrically confined area-minimizing rectifiable currents. In Euclidean space, we combine the confined-volume doubling theorem of Colding--Minicozzi with a current-theoretic squashing argument. This gives an affirmative answer to Lin's interior mass-bound problem for every algebraic projection multiplicity $Q$: the interior mass is bounded by $C(n)Q$, without an a priori mass bound at a larger scale. For the hyperbolic application, we make the curvature modification of the fixed-scale argument needed in a thin tubular neighborhood of a totally geodesic copy of $\\mathbb{H}^n$. Combining this auxiliary estimate with a localized squashing estimate removes the doubly exponential local mass-growth condition from the boundary regularity results in [13].",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露使用 AI-assisted tools，主要是 ChatGPT；同时说明作者亲自撰写并核验所有定理陈述和证明。工具为 ChatGPT，位置在引言末尾的 AI assistance disclosure。",
+        "aiEvidenceSource": "PDF 第2页 Disclosure on AI assistance；缓存全文 2609.01324.txt。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

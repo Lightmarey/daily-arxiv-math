@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.00466",
+  "slug": "2609.00466",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.00466:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.00466",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Shape Holomorphy and Sparse Approximation of the Maxwell Electric Field Integral Operator",
+    "authors": [
+      "Paul Escapil-Inchauspé",
+      "Carlos Jerez-Hanckes"
+    ],
+    "abstract": "Uncertainty quantification for time-harmonic Maxwell scattering by obstacles of uncertain shape needs more than holomorphic dependence of the scattered field: for a boundary element method it is the boundary integral operator family itself that must depend holomorphically on the shape parameters. Two obstructions stand in the way. The natural energy space of the electric field integral equation, $\\boldsymbol H^{-1/2}_{\\mathrm{div}_Γ}(Γ)$, depends on the geometry, and the available operator-valued shape-holomorphy theory for weakly singular kernels is set in $L^2$, which does not reach it. We remove both. A surface contravariant Piola transformation identifies the geometry-dependent Maxwell trace spaces with a fixed reference space, and in the pulled-back variational formulation the surface Jacobians cancel exactly. The principal analytical ingredient is then a uniform fractional mapping theorem $H^{-1/2}\\to H^{1/2}$ for the complex-deformed scalar single-layer family on uniformly $C^{1,1}$ surfaces, obtained by realizing the Laplace principal part as the trace of a complex-coefficient Newton problem on a fixed ambient space. The pulled-back operators are consequently $(\\bm b,p,\\eps)$-holomorphic for $\\bm b\\in\\ell^p(\\N)$, $0<p<1$, and pointwise exclusion of interior electric resonances over the compact real parameter set yields uniform invertibility. Legendre coefficients are therefore $\\ell^p$ summable, so the operator family, the surface current and the far field all admit sparse polynomial approximations at dimension-independent best $N$-term rates. These statements are for the operator family itself in its energy-space operator norm, not only for individual solutions.",
+    "categories": [
+      "math.NA",
+      "math.AP"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2609.00466",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00466",
+    "submittedAt": "2026-08-31T23:15:00Z",
+    "updatedAt": "2026-08-31T23:15:00Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "Maxwell 电场积分算子的形状全纯与稀疏逼近",
+    "workSummary": "论文研究参数化障碍形状下 Maxwell EFIE 算子族的 holomorphy 和稀疏多项式逼近。作者用表面 contravariant Piola 变换把几何依赖的 $Hdiv\\Gamma ^{-1/2}$ 能量空间拉回固定空间，并证明变分式中的表面 Jacobian 精确抵消；核心是固定环境上的复系数 Newton 问题，给出复变形单层算子的 $H^{-1/2}$ 到 $H^{1/2}$ 一致映射。非共振条件再提供一致可逆性和 ℓp Legendre 系数衰减。",
+    "techniques": [
+      "表面 contravariant Piola 变换",
+      "Jacobians 精确抵消",
+      "固定域 trace–Newton 构造",
+      "参数 holomorphy 和 Legendre 稀疏逼近"
+    ],
+    "breakthrough": "论文在 Maxwell 的混合切向能量范数中直接证明整个算子族的形状全纯性，解决了标量 L2 holomorphy 无法触及 $Hdiv\\Gamma ^{-1/2}$ 的障碍，并使算子、表面电流和远场共享维数无关的最佳 N 项逼近率。",
+    "limitations": "结论要求统一 C1,1、方向保持的 tensor-product 形变、紧实参数集和排除内部电共振；构造不覆盖 NURBS 参数化、非一致几何退化或共振频率。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 3.3 和 Theorem 3.3 将不同形状上的 Maxwell 切向 trace 空间经 Piola 变换同构到固定参考空间。",
+          "route": "定义由形变微分和表面 Jacobian 组成的 contravariant Piola 映射，直接计算其切向性与 surface divergence 的交换关系；C1,1 一致界和密度延拓给出 $Hdiv^{-1/2}$ 范数的双向有界性。",
+          "evidence": "PDF 第8–10页 Section 3 Lemma 3.1、Lemma 3.3、Theorem 3.3；式(3.4)–(3.8)及 trace-space 同构。"
+        },
+        {
+          "claim": "Proposition 4.1 证明拉回后的 EFIE 变分式中两侧表面 Jacobian 精确抵消，得到固定参考空间上的算子族。",
+          "route": "把电流和测试函数都用 Piola 变换替换，逐项追踪切向叉乘、法向量和面元；一侧 Jacobian 来自电流变换，另一侧来自测试/积分测度，乘积中的几何因子相消而只留下核的形变依赖。",
+          "evidence": "PDF 第10–11页 Section 4 Proposition 4.1；式(4.1)–(4.3)和 Proof 中的 change-of-variables 计算。"
+        },
+        {
+          "claim": "Theorem 5.1 通过固定域 trace–Newton 构造证明复变形标量单层族一致地映射 $H^{-1/2}$ 到 $H^{1/2}$ 并对参数全纯。",
+          "route": "将复变形表面映射实现为固定环境中的复系数椭圆算子，Lemma 5.3 保证一致强椭圆性；Lax–Milgram 给出 Newton 问题的统一逆，trace 定理和 Helmholtz 修正再把 Laplace 主项提升为 Helmholtz 单层，并用一变量 identity theorem 延拓全纯性。",
+          "evidence": "PDF 第12–19页 Section 5 Theorem 5.1、Lemmas 5.2–5.7、Propositions 5.5/5.8；式(5.8)–(5.19)和固定域 Newton 证明。"
+        },
+        {
+          "claim": "Theorems 6.2、6.7、6.10 和 7.1 将标量映射结果传到 Maxwell EFIE，证明一致可逆、表面电流全纯及 Legendre 系数 ℓp 衰减。",
+          "route": "对单层算子做分量化并乘上矩阵权，Piola cancellation 保持变分结构；实参数的非共振唯一性加紧参数集给出统一逆，再以 Cauchy 积分估计控制各参数方向导数，最后用各向异性 Cauchy 界推出算子、解和远场的稀疏多项式率。",
+          "evidence": "PDF 第20–24页 Section 6 Theorems 6.2、6.7、6.10；PDF 第25–27页 Theorem 7.1 及参数逼近结论。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露在手稿准备期间使用 Generative AI tools 协助语言编辑、结构建议、文献交叉检查和数学表述批评性审阅，并说明所有数学论证、引用和主张均由作者核验。工具名称未具体列出。",
+    "aiEvidenceSource": "PDF 第40页 Declaration on the use of generative AI；缓存全文 2609.00466.txt。",
+    "priorityScore": 53,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00466:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.00466",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Shape Holomorphy and Sparse Approximation of the Maxwell Electric Field Integral Operator",
+        "authors": [
+          "Paul Escapil-Inchauspé",
+          "Carlos Jerez-Hanckes"
+        ],
+        "abstract": "Uncertainty quantification for time-harmonic Maxwell scattering by obstacles of uncertain shape needs more than holomorphic dependence of the scattered field: for a boundary element method it is the boundary integral operator family itself that must depend holomorphically on the shape parameters. Two obstructions stand in the way. The natural energy space of the electric field integral equation, $\\boldsymbol H^{-1/2}_{\\mathrm{div}_Γ}(Γ)$, depends on the geometry, and the available operator-valued shape-holomorphy theory for weakly singular kernels is set in $L^2$, which does not reach it. We remove both. A surface contravariant Piola transformation identifies the geometry-dependent Maxwell trace spaces with a fixed reference space, and in the pulled-back variational formulation the surface Jacobians cancel exactly. The principal analytical ingredient is then a uniform fractional mapping theorem $H^{-1/2}\\to H^{1/2}$ for the complex-deformed scalar single-layer family on uniformly $C^{1,1}$ surfaces, obtained by realizing the Laplace principal part as the trace of a complex-coefficient Newton problem on a fixed ambient space. The pulled-back operators are consequently $(\\bm b,p,\\eps)$-holomorphic for $\\bm b\\in\\ell^p(\\N)$, $0<p<1$, and pointwise exclusion of interior electric resonances over the compact real parameter set yields uniform invertibility. Legendre coefficients are therefore $\\ell^p$ summable, so the operator family, the surface current and the far field all admit sparse polynomial approximations at dimension-independent best $N$-term rates. These statements are for the operator family itself in its energy-space operator norm, not only for individual solutions.",
+        "categories": [
+          "math.NA",
+          "math.AP"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2609.00466",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00466",
+        "submittedAt": "2026-08-31T23:15:00Z",
+        "updatedAt": "2026-08-31T23:15:00Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "Maxwell 电场积分算子的形状全纯与稀疏逼近",
+        "workSummary": "论文研究参数化障碍形状下 Maxwell EFIE 算子族的 holomorphy 和稀疏多项式逼近。作者用表面 contravariant Piola 变换把几何依赖的 $Hdiv\\Gamma ^{-1/2}$ 能量空间拉回固定空间，并证明变分式中的表面 Jacobian 精确抵消；核心是固定环境上的复系数 Newton 问题，给出复变形单层算子的 $H^{-1/2}$ 到 $H^{1/2}$ 一致映射。非共振条件再提供一致可逆性和 ℓp Legendre 系数衰减。",
+        "techniques": [
+          "表面 contravariant Piola 变换",
+          "Jacobians 精确抵消",
+          "固定域 trace–Newton 构造",
+          "参数 holomorphy 和 Legendre 稀疏逼近"
+        ],
+        "breakthrough": "论文在 Maxwell 的混合切向能量范数中直接证明整个算子族的形状全纯性，解决了标量 L2 holomorphy 无法触及 $Hdiv\\Gamma ^{-1/2}$ 的障碍，并使算子、表面电流和远场共享维数无关的最佳 N 项逼近率。",
+        "limitations": "结论要求统一 C1,1、方向保持的 tensor-product 形变、紧实参数集和排除内部电共振；构造不覆盖 NURBS 参数化、非一致几何退化或共振频率。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 3.3 和 Theorem 3.3 将不同形状上的 Maxwell 切向 trace 空间经 Piola 变换同构到固定参考空间。",
+              "route": "定义由形变微分和表面 Jacobian 组成的 contravariant Piola 映射，直接计算其切向性与 surface divergence 的交换关系；C1,1 一致界和密度延拓给出 $Hdiv^{-1/2}$ 范数的双向有界性。",
+              "evidence": "PDF 第8–10页 Section 3 Lemma 3.1、Lemma 3.3、Theorem 3.3；式(3.4)–(3.8)及 trace-space 同构。"
+            },
+            {
+              "claim": "Proposition 4.1 证明拉回后的 EFIE 变分式中两侧表面 Jacobian 精确抵消，得到固定参考空间上的算子族。",
+              "route": "把电流和测试函数都用 Piola 变换替换，逐项追踪切向叉乘、法向量和面元；一侧 Jacobian 来自电流变换，另一侧来自测试/积分测度，乘积中的几何因子相消而只留下核的形变依赖。",
+              "evidence": "PDF 第10–11页 Section 4 Proposition 4.1；式(4.1)–(4.3)和 Proof 中的 change-of-variables 计算。"
+            },
+            {
+              "claim": "Theorem 5.1 通过固定域 trace–Newton 构造证明复变形标量单层族一致地映射 $H^{-1/2}$ 到 $H^{1/2}$ 并对参数全纯。",
+              "route": "将复变形表面映射实现为固定环境中的复系数椭圆算子，Lemma 5.3 保证一致强椭圆性；Lax–Milgram 给出 Newton 问题的统一逆，trace 定理和 Helmholtz 修正再把 Laplace 主项提升为 Helmholtz 单层，并用一变量 identity theorem 延拓全纯性。",
+              "evidence": "PDF 第12–19页 Section 5 Theorem 5.1、Lemmas 5.2–5.7、Propositions 5.5/5.8；式(5.8)–(5.19)和固定域 Newton 证明。"
+            },
+            {
+              "claim": "Theorems 6.2、6.7、6.10 和 7.1 将标量映射结果传到 Maxwell EFIE，证明一致可逆、表面电流全纯及 Legendre 系数 ℓp 衰减。",
+              "route": "对单层算子做分量化并乘上矩阵权，Piola cancellation 保持变分结构；实参数的非共振唯一性加紧参数集给出统一逆，再以 Cauchy 积分估计控制各参数方向导数，最后用各向异性 Cauchy 界推出算子、解和远场的稀疏多项式率。",
+              "evidence": "PDF 第20–24页 Section 6 Theorems 6.2、6.7、6.10；PDF 第25–27页 Theorem 7.1 及参数逼近结论。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露在手稿准备期间使用 Generative AI tools 协助语言编辑、结构建议、文献交叉检查和数学表述批评性审阅，并说明所有数学论证、引用和主张均由作者核验。工具名称未具体列出。",
+        "aiEvidenceSource": "PDF 第40页 Declaration on the use of generative AI；缓存全文 2609.00466.txt。",
+        "priorityScore": 53,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

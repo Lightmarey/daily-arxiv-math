@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28584",
+  "slug": "2608.28584",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28584:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28584",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Bounds for inertialess dynamo",
+    "authors": [
+      "Ali Arslan",
+      "Hezekiah Grayer"
+    ],
+    "abstract": "We derive necessary conditions for instantaneous dynamo action for rotating convection. A magnetohydrodynamic model is considered in two settings: the rapidly rotating plane layer where inertia and viscosity are absent, and at an arbitrary rotation rate where viscosity is finite. In contrast to kinematic dynamo bounds, the evolution of the magnetic field is coupled via an inertialess force balance. The buoyancy-driven part of the flow $\\mathbf{u}^{\\mathrm{A}}$ in the event of dynamo action must in fact satisfy, for $3\\leq p \\leq \\infty$ $$ Rm\\, A_p\\| \\mathbf{u}^{\\mathrm{A}}\\|_{L^p} \\geq 1 $$ where $A_p$ is an explicit constant, and $Rm$ is the magnetic Reynolds number. In the inviscid model, $\\mathbf{u}^{\\mathrm{A}}$ depends only on the horizontal gradients of the vertical primitive of temperature. A refinement via the poloidal-toroidal decomposition allows us to replace $L^p$ in our constraint with an anisotropic norm for $L^{\\infty}_z \\dot{H}^1_{x,y}$. For the viscous model, we also derive necessary conditions for the growth of magnetic enstrophy and a combined thermo-magnetic energy. One branch of our constraints implies that the scaling $Ra_ν\\gtrsim Ek^{-3/2}$ is necessary for dynamo action, where $Ra_ν$ is the classical Rayleigh number and $Ek$ is the Ekman number.",
+    "categories": [
+      "math.AP",
+      "physics.flu-dyn"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28584",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28584",
+    "submittedAt": "2026-08-28T17:56:54Z",
+    "updatedAt": "2026-08-28T17:56:54Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "无惯性动力发电的必要条件",
+    "workSummary": "正文研究旋转对流中的无惯性磁流体动力发电约束，分别处理快速旋转无粘 Taylor 平面层和有限 Ekman 数的黏性无惯性模型。作者从磁能平衡、Taylor 扭矩约束及磁场的 poloidal–toroidal 分解出发，将磁能生产改写成由温度水平梯度或 Archimedean 流驱动的项；用 Sobolev、Poincaré 和二维 Ladyzhenskaya 不等式得到 Rm 与 Ra 的必要下界。有限黏性情形加入 Ekman 修正，进一步控制磁涡量和热磁联合能量，并用吸收球把约束改写为经典 Rayleigh 数的尺度要求。",
+    "techniques": [
+      "Taylor 扭矩约束和 Coriolis 算子值域分解",
+      "磁能/磁涡量能量恒等式",
+      "MAC 分解及 poloidal–toroidal 正交分解",
+      "Sobolev、Poincaré 与二维 Ladyzhenskaya 不等式",
+      "温度方程吸收球和 Ekman 参数渐近"
+    ],
+    "breakthrough": "Theorems 3.1–3.3 给出无粘 Taylor 模型的 Rm/Ra 必要条件，并显示即使磁能生产看似依赖垂直流，约束也迫使水平 Archimedean 流足够大；Theorems 3.5–3.7 扩展到有限黏性、磁涡量和联合能量，Theorem 4.5 导出 $Ra\\nu ≳Ek^{-3/2}$ 型必要尺度。",
+    "limitations": "这些是动力发电或能量增长的必要条件，不是发电存在性或充分条件；Theorem 3.7 还需小 Rm 与边界/磁通假设。模型为平面层、无惯性力平衡和特定边界条件，温度吸收球需要相应热源正则性，不能直接外推到一般球域或完整 Navier–Stokes 动力学。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 5.1 建立 Taylor 模型磁能平衡。",
+          "route": "将感应方程与 B 作 $L^{2}$ 内积，利用 ferromagnetic 磁边界消掉欧姆项边界贡献、速度无穿透消掉输运边界项；再用动量方程与 MAC 分解把 Lorentz 做功改写为 $Ra/\\Lambda $ 乘温度垂直流。",
+          "evidence": "PDF 第17–18页，Section 5 的 Lemma 5.1，式 (5.1)–(5.4)。"
+        },
+        {
+          "claim": "Theorem 3.1 的 Childress 型下界由水平温度梯度控制。",
+          "route": "对 Taylor 动量方程取 curl 并沿 z 积分，边界条件把磁能生产化成 $-Ra⟨\\nabla _{x,y}T,(\\nabla \\times B)\\times B⟩/\\Lambda ；Hölder$ 后用磁场梯度估计和 Poincaré/Sobolev 常数吸收，得到 $A_p||\\nabla _{x,y}T||_{Lp}\\ge 1/Rm$。",
+          "evidence": "PDF 第10页 Theorem 3.1；第18–20页 Section 5.1 的证明与 Lemma 5.2。"
+        },
+        {
+          "claim": "Theorem 3.3 通过 poloidal–toroidal 分解得到各 z 层的 $L^{2}$ 水平梯度下界。",
+          "route": "将 B 分解为正交的 poloidal、toroidal、base-flow 分量，curl 正交性分离耗散和生产的相互作用；在每个水平面用二维 Ladyzhenskaya 而非三维 Poincaré，得到 $A_2^2||\\nabla _{x,y}T||_{L_z\\infty L^2_{x,y}}^2\\ge 1/Rm$。",
+          "evidence": "PDF 第11页 Theorem 3.3 及其 Section 5.2 证明。"
+        },
+        {
+          "claim": "Theorems 3.5–3.7 给出有限 Ekman 数的修正必要条件。",
+          "route": "将有限黏性项留在能量恒等式中，以 Young/插值把速度和温度高阶项分成 $Ek^\\gamma $ 控制与磁梯度剩余；对 $J=\\nabla \\times B$ 的能量再利用 ferromagnetic/stress-free 边界匹配，得到磁涡量增长条件。",
+          "evidence": "PDF 第12–13页，Section 3.2 的 Theorems 3.5–3.7。"
+        },
+        {
+          "claim": "Theorem 4.5 将有限黏性约束转成经典 $Ra\\nu $ 的 $Ek^{-3/2}$ 尺度。",
+          "route": "把 modified Ra 与 classical $Ra\\nu 、Ek、Pe$ 的关系代入 Theorem 3.5，选取 $\\delta /\\gamma $ 使 Ek 修正项同阶；在小 Rm 条件下得到式 (4.10) 的 $Ra\\nu ||\\nabla ^{2}T||^{2}\\ge const\\cdot Ek^{-3/2}$，说明该尺度是必要而非充分条件。",
+          "evidence": "PDF 第15–17页，Section 4.2 的 Theorem 4.5、式 (4.9)–(4.17)。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在 PDF 第43页“Disclosure on AI Usage”明确说明生成式 AI 工具用于文献检索、排版、校对以及辅助检查代数；作者独立审阅并核验全部数学论证、结果、参考文献和最终措辞。",
+    "aiEvidenceSource": "PDF第43页，Disclosure on AI Usage。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28584:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28584",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Bounds for inertialess dynamo",
+        "authors": [
+          "Ali Arslan",
+          "Hezekiah Grayer"
+        ],
+        "abstract": "We derive necessary conditions for instantaneous dynamo action for rotating convection. A magnetohydrodynamic model is considered in two settings: the rapidly rotating plane layer where inertia and viscosity are absent, and at an arbitrary rotation rate where viscosity is finite. In contrast to kinematic dynamo bounds, the evolution of the magnetic field is coupled via an inertialess force balance. The buoyancy-driven part of the flow $\\mathbf{u}^{\\mathrm{A}}$ in the event of dynamo action must in fact satisfy, for $3\\leq p \\leq \\infty$ $$ Rm\\, A_p\\| \\mathbf{u}^{\\mathrm{A}}\\|_{L^p} \\geq 1 $$ where $A_p$ is an explicit constant, and $Rm$ is the magnetic Reynolds number. In the inviscid model, $\\mathbf{u}^{\\mathrm{A}}$ depends only on the horizontal gradients of the vertical primitive of temperature. A refinement via the poloidal-toroidal decomposition allows us to replace $L^p$ in our constraint with an anisotropic norm for $L^{\\infty}_z \\dot{H}^1_{x,y}$. For the viscous model, we also derive necessary conditions for the growth of magnetic enstrophy and a combined thermo-magnetic energy. One branch of our constraints implies that the scaling $Ra_ν\\gtrsim Ek^{-3/2}$ is necessary for dynamo action, where $Ra_ν$ is the classical Rayleigh number and $Ek$ is the Ekman number.",
+        "categories": [
+          "math.AP",
+          "physics.flu-dyn"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28584",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28584",
+        "submittedAt": "2026-08-28T17:56:54Z",
+        "updatedAt": "2026-08-28T17:56:54Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "无惯性动力发电的必要条件",
+        "workSummary": "正文研究旋转对流中的无惯性磁流体动力发电约束，分别处理快速旋转无粘 Taylor 平面层和有限 Ekman 数的黏性无惯性模型。作者从磁能平衡、Taylor 扭矩约束及磁场的 poloidal–toroidal 分解出发，将磁能生产改写成由温度水平梯度或 Archimedean 流驱动的项；用 Sobolev、Poincaré 和二维 Ladyzhenskaya 不等式得到 Rm 与 Ra 的必要下界。有限黏性情形加入 Ekman 修正，进一步控制磁涡量和热磁联合能量，并用吸收球把约束改写为经典 Rayleigh 数的尺度要求。",
+        "techniques": [
+          "Taylor 扭矩约束和 Coriolis 算子值域分解",
+          "磁能/磁涡量能量恒等式",
+          "MAC 分解及 poloidal–toroidal 正交分解",
+          "Sobolev、Poincaré 与二维 Ladyzhenskaya 不等式",
+          "温度方程吸收球和 Ekman 参数渐近"
+        ],
+        "breakthrough": "Theorems 3.1–3.3 给出无粘 Taylor 模型的 Rm/Ra 必要条件，并显示即使磁能生产看似依赖垂直流，约束也迫使水平 Archimedean 流足够大；Theorems 3.5–3.7 扩展到有限黏性、磁涡量和联合能量，Theorem 4.5 导出 $Ra\\nu ≳Ek^{-3/2}$ 型必要尺度。",
+        "limitations": "这些是动力发电或能量增长的必要条件，不是发电存在性或充分条件；Theorem 3.7 还需小 Rm 与边界/磁通假设。模型为平面层、无惯性力平衡和特定边界条件，温度吸收球需要相应热源正则性，不能直接外推到一般球域或完整 Navier–Stokes 动力学。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 5.1 建立 Taylor 模型磁能平衡。",
+              "route": "将感应方程与 B 作 $L^{2}$ 内积，利用 ferromagnetic 磁边界消掉欧姆项边界贡献、速度无穿透消掉输运边界项；再用动量方程与 MAC 分解把 Lorentz 做功改写为 $Ra/\\Lambda $ 乘温度垂直流。",
+              "evidence": "PDF 第17–18页，Section 5 的 Lemma 5.1，式 (5.1)–(5.4)。"
+            },
+            {
+              "claim": "Theorem 3.1 的 Childress 型下界由水平温度梯度控制。",
+              "route": "对 Taylor 动量方程取 curl 并沿 z 积分，边界条件把磁能生产化成 $-Ra⟨\\nabla _{x,y}T,(\\nabla \\times B)\\times B⟩/\\Lambda ；Hölder$ 后用磁场梯度估计和 Poincaré/Sobolev 常数吸收，得到 $A_p||\\nabla _{x,y}T||_{Lp}\\ge 1/Rm$。",
+              "evidence": "PDF 第10页 Theorem 3.1；第18–20页 Section 5.1 的证明与 Lemma 5.2。"
+            },
+            {
+              "claim": "Theorem 3.3 通过 poloidal–toroidal 分解得到各 z 层的 $L^{2}$ 水平梯度下界。",
+              "route": "将 B 分解为正交的 poloidal、toroidal、base-flow 分量，curl 正交性分离耗散和生产的相互作用；在每个水平面用二维 Ladyzhenskaya 而非三维 Poincaré，得到 $A_2^2||\\nabla _{x,y}T||_{L_z\\infty L^2_{x,y}}^2\\ge 1/Rm$。",
+              "evidence": "PDF 第11页 Theorem 3.3 及其 Section 5.2 证明。"
+            },
+            {
+              "claim": "Theorems 3.5–3.7 给出有限 Ekman 数的修正必要条件。",
+              "route": "将有限黏性项留在能量恒等式中，以 Young/插值把速度和温度高阶项分成 $Ek^\\gamma $ 控制与磁梯度剩余；对 $J=\\nabla \\times B$ 的能量再利用 ferromagnetic/stress-free 边界匹配，得到磁涡量增长条件。",
+              "evidence": "PDF 第12–13页，Section 3.2 的 Theorems 3.5–3.7。"
+            },
+            {
+              "claim": "Theorem 4.5 将有限黏性约束转成经典 $Ra\\nu $ 的 $Ek^{-3/2}$ 尺度。",
+              "route": "把 modified Ra 与 classical $Ra\\nu 、Ek、Pe$ 的关系代入 Theorem 3.5，选取 $\\delta /\\gamma $ 使 Ek 修正项同阶；在小 Rm 条件下得到式 (4.10) 的 $Ra\\nu ||\\nabla ^{2}T||^{2}\\ge const\\cdot Ek^{-3/2}$，说明该尺度是必要而非充分条件。",
+              "evidence": "PDF 第15–17页，Section 4.2 的 Theorem 4.5、式 (4.9)–(4.17)。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在 PDF 第43页“Disclosure on AI Usage”明确说明生成式 AI 工具用于文献检索、排版、校对以及辅助检查代数；作者独立审阅并核验全部数学论证、结果、参考文献和最终措辞。",
+        "aiEvidenceSource": "PDF第43页，Disclosure on AI Usage。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

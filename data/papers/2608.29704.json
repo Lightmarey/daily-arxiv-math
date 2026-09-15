@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.29704",
+  "slug": "2608.29704",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.29704:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.29704",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Existence of Periodic Solutions to Steady Viscous Burgers Equation with a General Force",
+    "authors": [
+      "Yuhan Cao",
+      "Quansen Jiu"
+    ],
+    "abstract": "In this paper, we will construct periodic solutions to the viscous steady Burgers equation with an external force $f(x)$, based on the following formal expansion $u^\\varepsilon(x)=u_0(x)+\\varepsilon u_1(x)+\\cdots+\\varepsilon^n u_n(x)+\\cdots$, where $\\varepsilon \\ge 0$ represents the viscosity and $u_0(x)$ is a solution to non-viscous steady Burgers equation with the external force $f(x)$. We will focus on the solutions which are uniformly bounded with respect to the viscosity. In our previous work, starting from $u_0=-(2+\\cos x)$, the authors constructed the periodic solutions to the viscous steady Burgers equation with the external force $f=u_0(x)u_{0x}=-2\\sin x-\\sin x\\cos x$. In this paper, we will extend the main result obtained in our previous work and construct the solutions starting from general $u_0$ and $f$ satisfying the non-viscous steady Burgers equation $u_0(x)u_{0x}=f$. It will be shown that there exists a $\\varepsilon_0>0$, which depends on $n$, such that for any $0<\\varepsilon<\\varepsilon_0$, the viscous steady Burgers equation with the external force $f$ has a periodic solution $u^\\varepsilon(x) \\in C^2([0,2π])$, satisfying $|u^\\varepsilon(x)-u_0(x)-\\varepsilon u_1(x)-\\cdots-\\varepsilon^n u_n(x)| \\leq C\\varepsilon^{n+1}$, where $C>0$ is a constant which depends on $n$, but is independent of $\\varepsilon$. Compared with Jauslin-Kreiss-Moser's result, we present a new approach to construct periodic solutions to the viscous steady Burgers with a general external force. The constructed solutions will tend to the ones of the non-viscous Burgers equation with a sharper convergence rate (up to higher order) when the viscosity vanishes.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.29704",
+    "pdfUrl": "https://arxiv.org/pdf/2608.29704",
+    "submittedAt": "2026-08-30T10:20:59Z",
+    "updatedAt": "2026-08-30T10:20:59Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "稳态 Burgers 周期解构造",
+    "workSummary": "论文从无粘稳态 Burgers 解 $u0u0'=f$ 出发，递归构造粘性方程的形式展开系数 u1,…,un，并证明小粘性下存在周期解且余项为 $O(\\epsilon ^{n+1})$。核心是把余项改写为长区间上的 Riccati 型初值问题，用上下解得到全区间有界性，再以隐函数定理调节初始斜率实现周期闭合。",
+    "techniques": [
+      "粘性展开与递归系数方程",
+      "Riccati 型余项变换",
+      "上下解与全区间有界性",
+      "隐函数定理周期闭合"
+    ],
+    "breakthrough": "论文把任意满足 $u0u0'=f$ 且保持负值的光滑周期无粘解，系统地提升为小粘性稳态周期解，并把任意阶渐近展开的误差控制归约为一个可调初始斜率的全局 Riccati 闭合问题。",
+    "limitations": "构造要求无粘基态 u0 严格有界在负半轴并满足相应光滑周期条件$，\\epsilon $ 只需足够小且阈值依赖展开阶数；结果是存在与渐近误差估计，没有讨论多分支选择、非负基态或大粘性行为。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "式(1.7) 的递归关系确定每个高阶系数 uk，并使截断展开满足稳态 Burgers 方程直到 $\\epsilon ^n$ 阶。",
+          "route": "把 $u\\epsilon =u0+\\epsilon u1+…$ 代入 $-\\epsilon u''+uu'=f$，按 $\\epsilon $ 的幂次比较$；u0u0'=f$ 消去零阶项，因 u0 不为零，逐阶用一阶线性方程解出 uk 的周期光滑解。",
+          "evidence": "PDF 第2–3页，第1节式(1.4)–(1.8)和递归关系(1.7)；Theorem 1.3 在第3页陈述展开误差目标。"
+        },
+        {
+          "claim": "Theorem 1.4 将截断展开的余项转化为长区间 $[0,2\\pi /\\epsilon ]$ 上有界的周期 Riccati 型问题。",
+          "route": "令 $u\\epsilon =\\Sigma _{j=0}^n$ $\\epsilon ^j$ $uj+\\epsilon ^{n+1}g(x/\\epsilon )$，整理得到式(1.9)；再将周期条件写成 $g(0)=g(2\\pi /\\epsilon )$，把问题等价为带初值 $\\alpha _{0}、\\beta _{0}$ 的二阶 Cauchy 方程和一个闭合残差 $\\Phi (\\epsilon ,\\beta _{0})=0$。",
+          "evidence": "PDF 第3–4页，第1节式(1.8)–(1.10)、Theorem 1.4；PDF 第6页式(3.1)–(3.2)和 Theorem 3.1 的 $\\lambda =\\sqrt \\epsilon $ 重标度。"
+        },
+        {
+          "claim": "Lemma 3.3 证明余项初值问题在整个半轴存在，并给出与 $\\lambda $ 无关的上下界。",
+          "route": "将一阶化方程用积分因子变为 w' 方程，利用 $u0+\\lambda ^{2}u1+…$ 保持严格负值；比较 w'与 $w^{2}$ 的上解以及指数下解，得到全局存在，再由微分不等式在 g 低于阈值时强制 g'>0，闭合区间 [−2M1/m0,0) 的统一界。",
+          "evidence": "PDF 第7–9页，第3节 Lemma 3.3 及证明；式(3.4)–(3.8)给出积分因子、上下解和 uniform bound。"
+        },
+        {
+          "claim": "Theorem 3.1 通过隐函数定理选择 $\\beta _{0}$，使余项周期闭合，从而推出 Theorem 1.3 的 $O(\\epsilon ^{n+1})$ 周期解。",
+          "route": "比较 $g(y,\\beta _{0})$ 与 $\\lambda =0$ 的显式极限解，证明闭合残差 $\\Phi $ 连续可微且在 $\\lambda =0$ 对 $\\beta _{0}$ 的导数非零；隐函数定理给出 $\\beta _{0}(\\lambda )$ 使 $\\Phi =0$，统一界再把 g 回代到原变量，得到周期性和余项估计。",
+          "evidence": "PDF 第9–13页，Proof of Theorem 3.1；式(3.9)–(3.12)定义 $\\Phi $、零参数极限并应用隐函数定理，随后回代得到 Theorem 1.3。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、致谢、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–14页（含 Acknowledgements 与 References）；缓存全文 2608.29704.txt。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.29704:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.29704",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Existence of Periodic Solutions to Steady Viscous Burgers Equation with a General Force",
+        "authors": [
+          "Yuhan Cao",
+          "Quansen Jiu"
+        ],
+        "abstract": "In this paper, we will construct periodic solutions to the viscous steady Burgers equation with an external force $f(x)$, based on the following formal expansion $u^\\varepsilon(x)=u_0(x)+\\varepsilon u_1(x)+\\cdots+\\varepsilon^n u_n(x)+\\cdots$, where $\\varepsilon \\ge 0$ represents the viscosity and $u_0(x)$ is a solution to non-viscous steady Burgers equation with the external force $f(x)$. We will focus on the solutions which are uniformly bounded with respect to the viscosity. In our previous work, starting from $u_0=-(2+\\cos x)$, the authors constructed the periodic solutions to the viscous steady Burgers equation with the external force $f=u_0(x)u_{0x}=-2\\sin x-\\sin x\\cos x$. In this paper, we will extend the main result obtained in our previous work and construct the solutions starting from general $u_0$ and $f$ satisfying the non-viscous steady Burgers equation $u_0(x)u_{0x}=f$. It will be shown that there exists a $\\varepsilon_0>0$, which depends on $n$, such that for any $0<\\varepsilon<\\varepsilon_0$, the viscous steady Burgers equation with the external force $f$ has a periodic solution $u^\\varepsilon(x) \\in C^2([0,2π])$, satisfying $|u^\\varepsilon(x)-u_0(x)-\\varepsilon u_1(x)-\\cdots-\\varepsilon^n u_n(x)| \\leq C\\varepsilon^{n+1}$, where $C>0$ is a constant which depends on $n$, but is independent of $\\varepsilon$. Compared with Jauslin-Kreiss-Moser's result, we present a new approach to construct periodic solutions to the viscous steady Burgers with a general external force. The constructed solutions will tend to the ones of the non-viscous Burgers equation with a sharper convergence rate (up to higher order) when the viscosity vanishes.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.29704",
+        "pdfUrl": "https://arxiv.org/pdf/2608.29704",
+        "submittedAt": "2026-08-30T10:20:59Z",
+        "updatedAt": "2026-08-30T10:20:59Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "稳态 Burgers 周期解构造",
+        "workSummary": "论文从无粘稳态 Burgers 解 $u0u0'=f$ 出发，递归构造粘性方程的形式展开系数 u1,…,un，并证明小粘性下存在周期解且余项为 $O(\\epsilon ^{n+1})$。核心是把余项改写为长区间上的 Riccati 型初值问题，用上下解得到全区间有界性，再以隐函数定理调节初始斜率实现周期闭合。",
+        "techniques": [
+          "粘性展开与递归系数方程",
+          "Riccati 型余项变换",
+          "上下解与全区间有界性",
+          "隐函数定理周期闭合"
+        ],
+        "breakthrough": "论文把任意满足 $u0u0'=f$ 且保持负值的光滑周期无粘解，系统地提升为小粘性稳态周期解，并把任意阶渐近展开的误差控制归约为一个可调初始斜率的全局 Riccati 闭合问题。",
+        "limitations": "构造要求无粘基态 u0 严格有界在负半轴并满足相应光滑周期条件$，\\epsilon $ 只需足够小且阈值依赖展开阶数；结果是存在与渐近误差估计，没有讨论多分支选择、非负基态或大粘性行为。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "式(1.7) 的递归关系确定每个高阶系数 uk，并使截断展开满足稳态 Burgers 方程直到 $\\epsilon ^n$ 阶。",
+              "route": "把 $u\\epsilon =u0+\\epsilon u1+…$ 代入 $-\\epsilon u''+uu'=f$，按 $\\epsilon $ 的幂次比较$；u0u0'=f$ 消去零阶项，因 u0 不为零，逐阶用一阶线性方程解出 uk 的周期光滑解。",
+              "evidence": "PDF 第2–3页，第1节式(1.4)–(1.8)和递归关系(1.7)；Theorem 1.3 在第3页陈述展开误差目标。"
+            },
+            {
+              "claim": "Theorem 1.4 将截断展开的余项转化为长区间 $[0,2\\pi /\\epsilon ]$ 上有界的周期 Riccati 型问题。",
+              "route": "令 $u\\epsilon =\\Sigma _{j=0}^n$ $\\epsilon ^j$ $uj+\\epsilon ^{n+1}g(x/\\epsilon )$，整理得到式(1.9)；再将周期条件写成 $g(0)=g(2\\pi /\\epsilon )$，把问题等价为带初值 $\\alpha _{0}、\\beta _{0}$ 的二阶 Cauchy 方程和一个闭合残差 $\\Phi (\\epsilon ,\\beta _{0})=0$。",
+              "evidence": "PDF 第3–4页，第1节式(1.8)–(1.10)、Theorem 1.4；PDF 第6页式(3.1)–(3.2)和 Theorem 3.1 的 $\\lambda =\\sqrt \\epsilon $ 重标度。"
+            },
+            {
+              "claim": "Lemma 3.3 证明余项初值问题在整个半轴存在，并给出与 $\\lambda $ 无关的上下界。",
+              "route": "将一阶化方程用积分因子变为 w' 方程，利用 $u0+\\lambda ^{2}u1+…$ 保持严格负值；比较 w'与 $w^{2}$ 的上解以及指数下解，得到全局存在，再由微分不等式在 g 低于阈值时强制 g'>0，闭合区间 [−2M1/m0,0) 的统一界。",
+              "evidence": "PDF 第7–9页，第3节 Lemma 3.3 及证明；式(3.4)–(3.8)给出积分因子、上下解和 uniform bound。"
+            },
+            {
+              "claim": "Theorem 3.1 通过隐函数定理选择 $\\beta _{0}$，使余项周期闭合，从而推出 Theorem 1.3 的 $O(\\epsilon ^{n+1})$ 周期解。",
+              "route": "比较 $g(y,\\beta _{0})$ 与 $\\lambda =0$ 的显式极限解，证明闭合残差 $\\Phi $ 连续可微且在 $\\lambda =0$ 对 $\\beta _{0}$ 的导数非零；隐函数定理给出 $\\beta _{0}(\\lambda )$ 使 $\\Phi =0$，统一界再把 g 回代到原变量，得到周期性和余项估计。",
+              "evidence": "PDF 第9–13页，Proof of Theorem 3.1；式(3.9)–(3.12)定义 $\\Phi $、零参数极限并应用隐函数定理，随后回代得到 Theorem 1.3。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、致谢、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–14页（含 Acknowledgements 与 References）；缓存全文 2608.29704.txt。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

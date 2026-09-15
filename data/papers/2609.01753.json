@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.01753",
+  "slug": "2609.01753",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.01753:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.01753",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The entropy production is not always monotone for hard spheres or for Maxwell molecules",
+    "authors": [
+      "Luis Silvestre"
+    ],
+    "abstract": "In 1966, McKean asked whether the entropy production of the Boltzmann equation must be monotone decreasing in time. We show that this is not the case even in the space-homogeneous setting for the Boltzmann collision operator with a constant angular cross section and the kinetic parameter $γ\\in [0,1]$. This recovers the classical case of hard spheres and the simplest case of Maxwell molecules. Our examples are radially symmetric mixtures of Maxwellians.",
+    "categories": [
+      "math.AP",
+      "math-ph"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.01753",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01753",
+    "submittedAt": "2026-09-01T18:22:50Z",
+    "updatedAt": "2026-09-01T18:22:50Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "分析结果",
+    "workSummary": "构造空间齐次 Boltzmann 方程的径向 Maxwellian 混合解，证明硬球和常角 Maxwell 分子情形的熵产生率并非总是单调下降；当混合权重足够小时，$R\to\\infty$ 时导数为正且具有 $R^\\gamma\\log R$ 的锐阶。",
+    "techniques": [
+      "径向 Maxwellian 混合族",
+      "熵产生变分公式",
+      "碰撞后变量变换",
+      "大速度尺度渐近",
+      "局部/远场积分分解"
+    ],
+    "breakthrough": "通过显式两温 Maxwellian 混合把熵产生导数的正贡献从碰撞积分中分离出来，证明物理硬球与 Maxwell 分子核都可违反 McKean 的单调性猜想。",
+    "limitations": "反例限于空间齐次、径向 Maxwellian 混合和常角碰撞核；未决定任意初值或一般角截面下的单调性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "两 Maxwellian 混合 $f_R$ 的熵产生导数可写成关于测试函数 $\\psi_R$ 的碰撞积分。",
+          "route": "将熵产生定义对 Boltzmann 方程求导，利用碰撞守恒与后碰撞变量替换，把双线性项对称化为 $\\Delta\\psi_R$ 与碰撞核的积分。",
+          "evidence": "第 1.2 节公式 (5)--(16)（PDF 第 3--4 页）。"
+        },
+        {
+          "claim": "测试函数 $\\psi_R$ 在不同速度尺度上满足统一上界、局部 $\frac32\\log R$ 渐近和远场衰减。",
+          "route": "直接分析 Maxwellian 比值的对数形式：固定速度时指数项保持大，速度为 $\\sqrt R$ 量级时出现转折，远场则指数压过 $R^{3/2}$；由此得到 Lemma 2 的三段控制。",
+          "evidence": "第 2 节 Lemma 2、公式 (17)（PDF 第 4 页）。"
+        },
+        {
+          "claim": "碰撞积分的主项是 $R^\\gamma\\log R$，而其余区域仅为低阶 $O(R^\\gamma)$。",
+          "route": "按碰撞速度是否落在 Maxwellian 尾部和相对速度大小切分积分，利用 Lemma 3 控制非主区域；在主区域代入局部对数渐近并计算角度平均，提取系数 $c_{p,\\gamma}$。",
+          "evidence": "第 2 节 Lemma 3、Lemma 4 及公式 (18)--(24)（PDF 第 4--7 页）。"
+        },
+        {
+          "claim": "对 $0<p<p_\\gamma$，熵产生导数最终为正，且硬球与常角 Maxwell 情形均给出反单调例子。",
+          "route": "将主项和误差项合并，$c_{p,\\gamma}>0$ 使 $R^\\gamma\\log R$ 项支配 $O(R^\\gamma)$；端点 $\\gamma=0,1$ 的显式系数分别给出 $p_0=1/2$ 与 $p_1=\\pi/(\\pi+8)$。",
+          "evidence": "Theorem 1 及 Proof of Theorem 1（PDF 第 2、4、8--9 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露第一版证明由 ChatGPT 5.6 Sol 在 Codex Ultra 模式下生成，随后用 Claude Code 重写并由作者重新解释和重构；作者承担最终证明责任。",
+    "aiEvidenceSource": "PDF 第 3 页第 1.3 节“Disclaimer on the use of AI tools”。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.01753:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.01753",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The entropy production is not always monotone for hard spheres or for Maxwell molecules",
+        "authors": [
+          "Luis Silvestre"
+        ],
+        "abstract": "In 1966, McKean asked whether the entropy production of the Boltzmann equation must be monotone decreasing in time. We show that this is not the case even in the space-homogeneous setting for the Boltzmann collision operator with a constant angular cross section and the kinetic parameter $γ\\in [0,1]$. This recovers the classical case of hard spheres and the simplest case of Maxwell molecules. Our examples are radially symmetric mixtures of Maxwellians.",
+        "categories": [
+          "math.AP",
+          "math-ph"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.01753",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01753",
+        "submittedAt": "2026-09-01T18:22:50Z",
+        "updatedAt": "2026-09-01T18:22:50Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "分析结果",
+        "workSummary": "构造空间齐次 Boltzmann 方程的径向 Maxwellian 混合解，证明硬球和常角 Maxwell 分子情形的熵产生率并非总是单调下降；当混合权重足够小时，$R\to\\infty$ 时导数为正且具有 $R^\\gamma\\log R$ 的锐阶。",
+        "techniques": [
+          "径向 Maxwellian 混合族",
+          "熵产生变分公式",
+          "碰撞后变量变换",
+          "大速度尺度渐近",
+          "局部/远场积分分解"
+        ],
+        "breakthrough": "通过显式两温 Maxwellian 混合把熵产生导数的正贡献从碰撞积分中分离出来，证明物理硬球与 Maxwell 分子核都可违反 McKean 的单调性猜想。",
+        "limitations": "反例限于空间齐次、径向 Maxwellian 混合和常角碰撞核；未决定任意初值或一般角截面下的单调性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "两 Maxwellian 混合 $f_R$ 的熵产生导数可写成关于测试函数 $\\psi_R$ 的碰撞积分。",
+              "route": "将熵产生定义对 Boltzmann 方程求导，利用碰撞守恒与后碰撞变量替换，把双线性项对称化为 $\\Delta\\psi_R$ 与碰撞核的积分。",
+              "evidence": "第 1.2 节公式 (5)--(16)（PDF 第 3--4 页）。"
+            },
+            {
+              "claim": "测试函数 $\\psi_R$ 在不同速度尺度上满足统一上界、局部 $\frac32\\log R$ 渐近和远场衰减。",
+              "route": "直接分析 Maxwellian 比值的对数形式：固定速度时指数项保持大，速度为 $\\sqrt R$ 量级时出现转折，远场则指数压过 $R^{3/2}$；由此得到 Lemma 2 的三段控制。",
+              "evidence": "第 2 节 Lemma 2、公式 (17)（PDF 第 4 页）。"
+            },
+            {
+              "claim": "碰撞积分的主项是 $R^\\gamma\\log R$，而其余区域仅为低阶 $O(R^\\gamma)$。",
+              "route": "按碰撞速度是否落在 Maxwellian 尾部和相对速度大小切分积分，利用 Lemma 3 控制非主区域；在主区域代入局部对数渐近并计算角度平均，提取系数 $c_{p,\\gamma}$。",
+              "evidence": "第 2 节 Lemma 3、Lemma 4 及公式 (18)--(24)（PDF 第 4--7 页）。"
+            },
+            {
+              "claim": "对 $0<p<p_\\gamma$，熵产生导数最终为正，且硬球与常角 Maxwell 情形均给出反单调例子。",
+              "route": "将主项和误差项合并，$c_{p,\\gamma}>0$ 使 $R^\\gamma\\log R$ 项支配 $O(R^\\gamma)$；端点 $\\gamma=0,1$ 的显式系数分别给出 $p_0=1/2$ 与 $p_1=\\pi/(\\pi+8)$。",
+              "evidence": "Theorem 1 及 Proof of Theorem 1（PDF 第 2、4、8--9 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露第一版证明由 ChatGPT 5.6 Sol 在 Codex Ultra 模式下生成，随后用 Claude Code 重写并由作者重新解释和重构；作者承担最终证明责任。",
+        "aiEvidenceSource": "PDF 第 3 页第 1.3 节“Disclaimer on the use of AI tools”。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10005",
+  "slug": "2609.10005",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.10005:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.10005",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global well-posedness for the derivative nonlinear Schrödinger equation on the circle",
+    "authors": [
+      "Hajer Bahouri",
+      "Galina Perelman"
+    ],
+    "abstract": "We consider the derivative nonlinear Schrödinger equation on the circle, and prove that it is globally well-posed in the Sobolev space $H^1(\\TT)$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10005",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10005",
+    "submittedAt": "2026-09-09T10:37:20Z",
+    "updatedAt": "2026-09-09T10:37:20Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "论文证明圆周上一维 derivative nonlinear Schrödinger 方程在 H1(T) 中全局适定。作者沿用 Kaup–Newell 周期谱问题和 Bäcklund 变换，把粗糙 H1 解分解成有限个 profile 与小 remainder；周期谱计数给出守恒质量附近的频谱控制，refined profile decomposition 处理临界尺度集中。关键是迭代 Bäcklund 变换将每个高频 profile 转成可控的 scattering component，避免直接依赖 H1 能量守恒；局部理论的 blow-up alternative 加上 profile 级别的频率/质量排除，最终得到 H1 范数在任意有限时间保持有限。",
+    "techniques": [
+      "Kaup–Newell spectral problem",
+      "Bäcklund transformation",
+      "profile decomposition",
+      "refined profile decomposition",
+      "frequency/energy induction"
+    ],
+    "breakthrough": "在圆周这一非散射几何中建立 DNLS 的 H1 全局适定性，把周期谱信息与 profile 分解结合，排除了局部解可能的 H1 范数爆破。",
+    "limitations": "结果针对圆周、特定 derivative DNLS 方程及 H1 临界正则度；证明依赖 Kaup–Newell 周期谱和质量/频率结构，不直接覆盖更低 Sobolev 指数、一般边界域或其他导数非线性规范。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "DNLS 的局部 H1 解和 blow-up alternative 可由 gauge/谱变量保持在共同存在区间内。",
+          "route": "先用局部理论和守恒质量建立短时间 H1 解；Kaup–Newell Lax 对的周期单值谱把解的高频行为编码在 $a_u(\\lambda )$ 的零点/渐近中，局部延拓失败只能表现为 H1 范数失控。",
+          "evidence": "PDF 第 2-4 页 Introduction Theorem 1、Section 2.1–2.2 Proposition 2.1，equations (1.1)–(2.18)。"
+        },
+        {
+          "claim": "任意有界 H1 序列可抽取有限 profile 与 vanishing remainder，且周期翻译/尺度损失被显式记录。",
+          "route": "用 concentration compactness 在 R 上处理局部化 profile，再把周期函数切到实线并控制周期复制误差；refined decomposition 通过谱阈值迭代，使每个 profile 的质量和频率可排序，剩余项在关键 Strichartz/谱量中消失。",
+          "evidence": "PDF 第 13-23 页 Section 3.1–3.3，Theorem 2、Propositions 4.1–4.3，equations (3.1)–(3.35)。"
+        },
+        {
+          "claim": "Bäcklund 变换能移除一个高频 profile，同时保持可用的谱量和误差控制。",
+          "route": "在 Jost 解上施加一阶 Bäcklund intertwining，变换后的 potential 移除选定谱零点；周期谱计数控制新解的 H1/质量增量，反变换时 profile 的相互作用被 remainder 小量吸收，故可递归下降谱复杂度。",
+          "evidence": "PDF 第 4-12 页 Section 2.3–2.4 Lemmas 2.3–2.6、Propositions 2.3–2.4，equations (2.19)–(2.86)。"
+        },
+        {
+          "claim": "谱/profile 归纳与局部 blow-up alternative 矛盾，因此 H1 解可以延拓到任意时间。",
+          "route": "若存在有限爆破时间，取逼近时刻的 profile 分解；对每个非零 profile 用 Bäcklund 变换降低谱计数，余项由 refined decomposition 在临界范数中消失，反复后只剩零 profile，与质量守恒和非零初值矛盾。于是局部 H1 范数无穷增长不可能发生，得到全局解及连续依赖。",
+          "evidence": "PDF 第 24-61 页 Sections 4–6 Lemmas 4.1–4.4、Theorem 1 proof，equations (4.1)–(6.24)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、Introduction、Sections 2–6、谱论和 profile 证明、附录与参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-61 页全文。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10005:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.10005",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global well-posedness for the derivative nonlinear Schrödinger equation on the circle",
+        "authors": [
+          "Hajer Bahouri",
+          "Galina Perelman"
+        ],
+        "abstract": "We consider the derivative nonlinear Schrödinger equation on the circle, and prove that it is globally well-posed in the Sobolev space $H^1(\\TT)$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10005",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10005",
+        "submittedAt": "2026-09-09T10:37:20Z",
+        "updatedAt": "2026-09-09T10:37:20Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "论文证明圆周上一维 derivative nonlinear Schrödinger 方程在 H1(T) 中全局适定。作者沿用 Kaup–Newell 周期谱问题和 Bäcklund 变换，把粗糙 H1 解分解成有限个 profile 与小 remainder；周期谱计数给出守恒质量附近的频谱控制，refined profile decomposition 处理临界尺度集中。关键是迭代 Bäcklund 变换将每个高频 profile 转成可控的 scattering component，避免直接依赖 H1 能量守恒；局部理论的 blow-up alternative 加上 profile 级别的频率/质量排除，最终得到 H1 范数在任意有限时间保持有限。",
+        "techniques": [
+          "Kaup–Newell spectral problem",
+          "Bäcklund transformation",
+          "profile decomposition",
+          "refined profile decomposition",
+          "frequency/energy induction"
+        ],
+        "breakthrough": "在圆周这一非散射几何中建立 DNLS 的 H1 全局适定性，把周期谱信息与 profile 分解结合，排除了局部解可能的 H1 范数爆破。",
+        "limitations": "结果针对圆周、特定 derivative DNLS 方程及 H1 临界正则度；证明依赖 Kaup–Newell 周期谱和质量/频率结构，不直接覆盖更低 Sobolev 指数、一般边界域或其他导数非线性规范。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "DNLS 的局部 H1 解和 blow-up alternative 可由 gauge/谱变量保持在共同存在区间内。",
+              "route": "先用局部理论和守恒质量建立短时间 H1 解；Kaup–Newell Lax 对的周期单值谱把解的高频行为编码在 $a_u(\\lambda )$ 的零点/渐近中，局部延拓失败只能表现为 H1 范数失控。",
+              "evidence": "PDF 第 2-4 页 Introduction Theorem 1、Section 2.1–2.2 Proposition 2.1，equations (1.1)–(2.18)。"
+            },
+            {
+              "claim": "任意有界 H1 序列可抽取有限 profile 与 vanishing remainder，且周期翻译/尺度损失被显式记录。",
+              "route": "用 concentration compactness 在 R 上处理局部化 profile，再把周期函数切到实线并控制周期复制误差；refined decomposition 通过谱阈值迭代，使每个 profile 的质量和频率可排序，剩余项在关键 Strichartz/谱量中消失。",
+              "evidence": "PDF 第 13-23 页 Section 3.1–3.3，Theorem 2、Propositions 4.1–4.3，equations (3.1)–(3.35)。"
+            },
+            {
+              "claim": "Bäcklund 变换能移除一个高频 profile，同时保持可用的谱量和误差控制。",
+              "route": "在 Jost 解上施加一阶 Bäcklund intertwining，变换后的 potential 移除选定谱零点；周期谱计数控制新解的 H1/质量增量，反变换时 profile 的相互作用被 remainder 小量吸收，故可递归下降谱复杂度。",
+              "evidence": "PDF 第 4-12 页 Section 2.3–2.4 Lemmas 2.3–2.6、Propositions 2.3–2.4，equations (2.19)–(2.86)。"
+            },
+            {
+              "claim": "谱/profile 归纳与局部 blow-up alternative 矛盾，因此 H1 解可以延拓到任意时间。",
+              "route": "若存在有限爆破时间，取逼近时刻的 profile 分解；对每个非零 profile 用 Bäcklund 变换降低谱计数，余项由 refined decomposition 在临界范数中消失，反复后只剩零 profile，与质量守恒和非零初值矛盾。于是局部 H1 范数无穷增长不可能发生，得到全局解及连续依赖。",
+              "evidence": "PDF 第 24-61 页 Sections 4–6 Lemmas 4.1–4.4、Theorem 1 proof，equations (4.1)–(6.24)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、Introduction、Sections 2–6、谱论和 profile 证明、附录与参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-61 页全文。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

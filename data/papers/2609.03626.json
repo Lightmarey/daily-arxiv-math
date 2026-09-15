@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.03626",
+  "slug": "2609.03626",
+  "latest": {
+    "id": "math.AP:2026-09-04:2609.03626:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
+    "arxivId": "2609.03626",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Residual neural networks overcome the curse of dimensionality for semilinear heat equations",
+    "authors": [
+      "Ilkhom Mukhammadiev",
+      "Diyora Salimova"
+    ],
+    "abstract": "Rigorous results show that feedforward neural networks can overcome the curse of dimensionality in the numerical approximation of high-dimensional partial differential equations (PDEs), but comparatively little is known about residual neural networks (ResNets) in the nonlinear PDE setting. We prove that ResNets overcome the curse of dimensionality in the numerical approximation of solutions of semilinear heat equations with globally Lipschitz continuous, gradient-independent nonlinearities: under polynomial growth and network approximability hypotheses on the PDE data, there exist $η\\in(0,\\infty)$ and ResNets $Ψ_{d,\\varepsilon}$, $d\\in\\mathbb{N}$, $\\varepsilon\\in(0,1]$, with at most $ηd^η\\varepsilon^{-η}$ parameters whose realizations approximate the solution in dimension $d$ with an $L^2$-error of at most $\\varepsilon$. The proof represents one deterministic realization of a multilevel Picard estimator by a ResNet whose shortcut connections transmit the spatial variable and a scalar accumulator, while the residual branches successively add the summands of the estimator. For ridge-sum initial conditions, admissible sigmoidal activations, and globally Lipschitz truncations of the nonlinearity, we obtain, for every $ξ>0$, the explicit bound $C_ξd^{4+ξ}\\varepsilon^{-(3+ξ)}$ on the number of parameters.",
+    "categories": [
+      "math.NA",
+      "cs.LG",
+      "math.AP",
+      "math.PR"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2609.03626",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03626",
+    "submittedAt": "2026-09-03T10:15:11Z",
+    "updatedAt": "2026-09-03T10:15:11Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "近似与数值分析",
+    "workSummary": "证明残差网络无维数灾难地逼近半线性热方程解：先用 Feynman--Kac 表示建立 PDE 先验和多层 Picard 误差，再以浅层网络逼近非线性和 Monte Carlo 采样，最后递归组合为 ResNet 并给出参数复杂度。",
+    "techniques": [
+      "Feynman--Kac 表示",
+      "Picard 迭代",
+      "多层 Picard 采样",
+      "sigmoidal 网络逼近",
+      "ResNet 组合"
+    ],
+    "breakthrough": "把多层 Picard 的误差/样本复杂度递归编码为残差块，证明在多项式数据条件下参数数目只按维数多项式增长而非指数增长。",
+    "limitations": "非线性需全局 Lipschitz 且与梯度无关，数据和激活函数满足可逼近性/增长条件；结论是 Lr 数值逼近，不是网络训练算法的保证。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "半线性热方程解具有统一矩界和稳定性。",
+          "route": "用热半群和 Feynman--Kac 表示把解递归写成上一层函数的期望，PDE stability 与 moment bound 控制每次 Picard 迭代的误差和增长。",
+          "evidence": "第 3 节 Lemmas 3.2--3.5（PDF 第 3--5 页）。"
+        },
+        {
+          "claim": "单步 Picard 期望可由 sigmoidal 网络近似且误差可量化。",
+          "route": "先用一维 sigmoidal 近似和 ridge-sum 构造标量非线性，再用 MLP-sample accumulator 表示 Monte Carlo 平均，控制网络参数和均方误差。",
+          "evidence": "第 4 节 Lemmas 4.3--4.10、Proposition 4.9（PDF 第 7--16 页）。"
+        },
+        {
+          "claim": "多层 Picard 近似可以递归组合成残差网络。",
+          "route": "把每个时间步的近似 Picard 更新写成 identity 加网络残差，按层递归传播误差；参数递推 Lemma 4.10 保证总复杂度的维数和精度指数可控。",
+          "evidence": "第 4 节 Lemma 4.10 与第 5 节构造（PDF 第 15--22 页）。"
+        },
+        {
+          "claim": "ResNet 在 Lr 误差下达到无维数灾难的参数上界。",
+          "route": "对截断时间/状态域平衡 Picard 截断误差、网络逼近误差和 Monte Carlo 误差，选择层数与样本数后得到 Theorem 5.1 的参数多项式界。",
+          "evidence": "第 5 节 Theorem 5.1 及其证明（PDF 第 22--28 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确说明使用 OpenAI ChatGPT 和 Claude 改善语言与可读性、检查符号和交叉引用、核对文献并提示数学表述问题；作者审阅并独立核验全部数学内容。",
+    "aiEvidenceSource": "PDF 第 27 页 AI 使用声明（文本行约 1556--1563）。",
+    "priorityScore": 68,
+    "priorityTier": "medium",
+    "priorityReason": "高维 PDE 数值复杂度值得关注，但对临界正则性及非线性机制的直接贡献较间接。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03626:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
+        "arxivId": "2609.03626",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Residual neural networks overcome the curse of dimensionality for semilinear heat equations",
+        "authors": [
+          "Ilkhom Mukhammadiev",
+          "Diyora Salimova"
+        ],
+        "abstract": "Rigorous results show that feedforward neural networks can overcome the curse of dimensionality in the numerical approximation of high-dimensional partial differential equations (PDEs), but comparatively little is known about residual neural networks (ResNets) in the nonlinear PDE setting. We prove that ResNets overcome the curse of dimensionality in the numerical approximation of solutions of semilinear heat equations with globally Lipschitz continuous, gradient-independent nonlinearities: under polynomial growth and network approximability hypotheses on the PDE data, there exist $η\\in(0,\\infty)$ and ResNets $Ψ_{d,\\varepsilon}$, $d\\in\\mathbb{N}$, $\\varepsilon\\in(0,1]$, with at most $ηd^η\\varepsilon^{-η}$ parameters whose realizations approximate the solution in dimension $d$ with an $L^2$-error of at most $\\varepsilon$. The proof represents one deterministic realization of a multilevel Picard estimator by a ResNet whose shortcut connections transmit the spatial variable and a scalar accumulator, while the residual branches successively add the summands of the estimator. For ridge-sum initial conditions, admissible sigmoidal activations, and globally Lipschitz truncations of the nonlinearity, we obtain, for every $ξ>0$, the explicit bound $C_ξd^{4+ξ}\\varepsilon^{-(3+ξ)}$ on the number of parameters.",
+        "categories": [
+          "math.NA",
+          "cs.LG",
+          "math.AP",
+          "math.PR"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2609.03626",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03626",
+        "submittedAt": "2026-09-03T10:15:11Z",
+        "updatedAt": "2026-09-03T10:15:11Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "近似与数值分析",
+        "workSummary": "证明残差网络无维数灾难地逼近半线性热方程解：先用 Feynman--Kac 表示建立 PDE 先验和多层 Picard 误差，再以浅层网络逼近非线性和 Monte Carlo 采样，最后递归组合为 ResNet 并给出参数复杂度。",
+        "techniques": [
+          "Feynman--Kac 表示",
+          "Picard 迭代",
+          "多层 Picard 采样",
+          "sigmoidal 网络逼近",
+          "ResNet 组合"
+        ],
+        "breakthrough": "把多层 Picard 的误差/样本复杂度递归编码为残差块，证明在多项式数据条件下参数数目只按维数多项式增长而非指数增长。",
+        "limitations": "非线性需全局 Lipschitz 且与梯度无关，数据和激活函数满足可逼近性/增长条件；结论是 Lr 数值逼近，不是网络训练算法的保证。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "半线性热方程解具有统一矩界和稳定性。",
+              "route": "用热半群和 Feynman--Kac 表示把解递归写成上一层函数的期望，PDE stability 与 moment bound 控制每次 Picard 迭代的误差和增长。",
+              "evidence": "第 3 节 Lemmas 3.2--3.5（PDF 第 3--5 页）。"
+            },
+            {
+              "claim": "单步 Picard 期望可由 sigmoidal 网络近似且误差可量化。",
+              "route": "先用一维 sigmoidal 近似和 ridge-sum 构造标量非线性，再用 MLP-sample accumulator 表示 Monte Carlo 平均，控制网络参数和均方误差。",
+              "evidence": "第 4 节 Lemmas 4.3--4.10、Proposition 4.9（PDF 第 7--16 页）。"
+            },
+            {
+              "claim": "多层 Picard 近似可以递归组合成残差网络。",
+              "route": "把每个时间步的近似 Picard 更新写成 identity 加网络残差，按层递归传播误差；参数递推 Lemma 4.10 保证总复杂度的维数和精度指数可控。",
+              "evidence": "第 4 节 Lemma 4.10 与第 5 节构造（PDF 第 15--22 页）。"
+            },
+            {
+              "claim": "ResNet 在 Lr 误差下达到无维数灾难的参数上界。",
+              "route": "对截断时间/状态域平衡 Picard 截断误差、网络逼近误差和 Monte Carlo 误差，选择层数与样本数后得到 Theorem 5.1 的参数多项式界。",
+              "evidence": "第 5 节 Theorem 5.1 及其证明（PDF 第 22--28 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确说明使用 OpenAI ChatGPT 和 Claude 改善语言与可读性、检查符号和交叉引用、核对文献并提示数学表述问题；作者审阅并独立核验全部数学内容。",
+        "aiEvidenceSource": "PDF 第 27 页 AI 使用声明（文本行约 1556--1563）。",
+        "priorityScore": 68,
+        "priorityTier": "medium",
+        "priorityReason": "高维 PDE 数值复杂度值得关注，但对临界正则性及非线性机制的直接贡献较间接。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

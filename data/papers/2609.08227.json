@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08227",
+  "slug": "2609.08227",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08227:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08227",
+    "version": 1,
+    "entryKind": "new",
+    "title": "On the singular limit of the Camassa-Holm equation",
+    "authors": [
+      "Billel Guelmame"
+    ],
+    "abstract": "We study the singular limit of the Camassa--Holm equation as the length scale $\\ell$ tends to zero. Although the formal limit is the Burgers equation with flux $3u^2/2$, we show that, for a class of smooth initial data, convergence to entropy solutions fails after the shock formation, even along subsequences in local space-time $L^1$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08227",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08227",
+    "submittedAt": "2026-09-08T04:19:59Z",
+    "updatedAt": "2026-09-08T04:19:59Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "分析结果",
+    "workSummary": "本文研究 Camassa–Holm 方程长度尺度 ℓ→0 的奇异极限。形式上方程趋于通量为 $3u^{2}/2$ 的 Burgers 方程；作者选取初始动量 $u0-\\ell^{2}u0$ 在所有小 ℓ 上保持同号的非平凡 $H^{3}\\cap L^{1}$ 数据，借此得到全局光滑 CH 流。证明先从动量符号、质量和三次 Hamiltonian 导出 uℓ 与 ℓuℓx 的统一 Lp 界，再用局部能量守恒和空间截断建立能量紧性；若假设震后收敛到 Burgers 熵解，则能量损失迫使缺陷密度 $w\\ell=\\ell^{2}(u\\ellx)^{2}$ 留下正质量，极限方程又强迫 $w_x=0$，有限空间质量与正质量矛盾，因而不存在该收敛子列。",
+    "techniques": [
+      "Helmholtz Green 函数与动量输运",
+      "质量/三次 Hamiltonian 守恒",
+      "统一 Lp 与斜率尺度估计",
+      "局部能量守恒和空间尾部紧性",
+      "缺陷密度弱极限",
+      "Burgers 熵解冲击与分布极限"
+    ],
+    "breakthrough": "具体突破是证明光滑、守恒的 Camassa–Holm 流在 Burgers 冲击时间之后，即使取任意 $\\ell_n↓0$ 子列，也不能在局部时空 $L^{1}$ 强收敛到 Burgers 唯一熵解。障碍由 $\\ell^{2}u_x^{2}$ 形成的正缺陷能量承担：它不能逃到无穷远，却在极限方程中被迫空间均匀，最终只能为零，与能量损失留下的正质量冲突。",
+    "limitations": "定理要求 $u0\\in H^{3}\\cap L^{1}$ 非平凡且所有小 ℓ 的初始动量同号；结论只排除趋向 Burgers 熵解的子列，不排除 CH 族向别的极限收敛。证明针对全局光滑同号动量流，不能直接覆盖会波破的初值或耗散弱解；文中也明确对比了另一种 Hamiltonian regularized Burgers 方程。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Burgers 熵解在 TB* 之后形成跳跃并严格损失二次能量。",
+          "route": "用 Lax–Oleinik 极小点公式证明冲击处存在两个不同极小点，得到向下跳跃；再对二次熵对使用 BV 链式法则和 Rankine–Hugoniot 速度，跳跃集上的熵产生为 $-(u--u+)^{3}/4$，从而积分得到严格能量损失。",
+          "evidence": "PDF 第2页 Theorem 1.1 中 TB* 定义；第5–6页 Theorem 2.2、式(2.2)–(2.3)及熵产生计算。"
+        },
+        {
+          "claim": "同号初始动量保证 CH 流全局存在，并给出独立于 ℓ 的质量、斜率和 Lp 控制。",
+          "route": "动量方程保持符号，卷积表示 $u\\ell=G\\ell*m\\ell$ 给出 $\\ell|u\\ellx|\\le |u\\ell|$；质量守恒与局部能量/三次 Hamiltonian 守恒分别控制 L1、H1 和 L3，插值得到 uℓ 与 ℓuℓx 在 $p\\in [1,3]$ 的统一界。",
+          "evidence": "PDF 第2页 Theorem 2.6；第7–8页式(3.1)–(3.9)和 Uniform estimates 小节。"
+        },
+        {
+          "claim": "局部时空 L1 收敛假设会升级为全局时空 L2 收敛，并迫使尺度能量缺陷 $w\\ell=\\ell^{2}(u\\ellx)^{2}$ 保留正质量。",
+          "route": "用统一 L3 界和 Burgers 的 L2 控制将局部 L1 假设提升为局部 L2；再用局部能量守恒式、通量 L1 界和空间 cutoff 得到远场尾部统一消失。震后 Burgers 的严格能量损失与 CH 能量守恒相减，给出 wℓ 的正总质量$；L^{3/2}$ 有界性取弱极限 w。",
+          "evidence": "PDF 第3页证明概述；第8页式(3.6)–(3.9)；第9页式(3.10)–(3.13)的 Energy tightness and strong L2 convergence。"
+        },
+        {
+          "claim": "极限方程迫使缺陷 w 的空间导数为零，与其有限空间质量和正总质量矛盾。",
+          "route": "在非局部 CH 方程(1.4)上测试光滑紧支撑函数，卷积核收敛和强 L2 给出 $Q\\ell⇀u^{2}、\\ell^{2}P\\ell⇀w/2$，故极限满足 $u_t+(3u^{2}/2)_x=-w_x/2$。由于 u 已是 Burgers 熵解$，w_x=0$；而 w 对空间可积则只能几乎处处为零，违背前一步的正质量。",
+          "evidence": "PDF 第2页 Theorem 1.1；第10页 Failure of convergence 小节的分布极限、式(1.4)极限和矛盾收束。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–12页 的摘要、正文、致谢和参考文献；未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–12页 全文检查，特别核对证明末尾、Acknowledgments 和 References。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08227:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08227",
+        "version": 1,
+        "entryKind": "new",
+        "title": "On the singular limit of the Camassa-Holm equation",
+        "authors": [
+          "Billel Guelmame"
+        ],
+        "abstract": "We study the singular limit of the Camassa--Holm equation as the length scale $\\ell$ tends to zero. Although the formal limit is the Burgers equation with flux $3u^2/2$, we show that, for a class of smooth initial data, convergence to entropy solutions fails after the shock formation, even along subsequences in local space-time $L^1$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08227",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08227",
+        "submittedAt": "2026-09-08T04:19:59Z",
+        "updatedAt": "2026-09-08T04:19:59Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "分析结果",
+        "workSummary": "本文研究 Camassa–Holm 方程长度尺度 ℓ→0 的奇异极限。形式上方程趋于通量为 $3u^{2}/2$ 的 Burgers 方程；作者选取初始动量 $u0-\\ell^{2}u0$ 在所有小 ℓ 上保持同号的非平凡 $H^{3}\\cap L^{1}$ 数据，借此得到全局光滑 CH 流。证明先从动量符号、质量和三次 Hamiltonian 导出 uℓ 与 ℓuℓx 的统一 Lp 界，再用局部能量守恒和空间截断建立能量紧性；若假设震后收敛到 Burgers 熵解，则能量损失迫使缺陷密度 $w\\ell=\\ell^{2}(u\\ellx)^{2}$ 留下正质量，极限方程又强迫 $w_x=0$，有限空间质量与正质量矛盾，因而不存在该收敛子列。",
+        "techniques": [
+          "Helmholtz Green 函数与动量输运",
+          "质量/三次 Hamiltonian 守恒",
+          "统一 Lp 与斜率尺度估计",
+          "局部能量守恒和空间尾部紧性",
+          "缺陷密度弱极限",
+          "Burgers 熵解冲击与分布极限"
+        ],
+        "breakthrough": "具体突破是证明光滑、守恒的 Camassa–Holm 流在 Burgers 冲击时间之后，即使取任意 $\\ell_n↓0$ 子列，也不能在局部时空 $L^{1}$ 强收敛到 Burgers 唯一熵解。障碍由 $\\ell^{2}u_x^{2}$ 形成的正缺陷能量承担：它不能逃到无穷远，却在极限方程中被迫空间均匀，最终只能为零，与能量损失留下的正质量冲突。",
+        "limitations": "定理要求 $u0\\in H^{3}\\cap L^{1}$ 非平凡且所有小 ℓ 的初始动量同号；结论只排除趋向 Burgers 熵解的子列，不排除 CH 族向别的极限收敛。证明针对全局光滑同号动量流，不能直接覆盖会波破的初值或耗散弱解；文中也明确对比了另一种 Hamiltonian regularized Burgers 方程。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Burgers 熵解在 TB* 之后形成跳跃并严格损失二次能量。",
+              "route": "用 Lax–Oleinik 极小点公式证明冲击处存在两个不同极小点，得到向下跳跃；再对二次熵对使用 BV 链式法则和 Rankine–Hugoniot 速度，跳跃集上的熵产生为 $-(u--u+)^{3}/4$，从而积分得到严格能量损失。",
+              "evidence": "PDF 第2页 Theorem 1.1 中 TB* 定义；第5–6页 Theorem 2.2、式(2.2)–(2.3)及熵产生计算。"
+            },
+            {
+              "claim": "同号初始动量保证 CH 流全局存在，并给出独立于 ℓ 的质量、斜率和 Lp 控制。",
+              "route": "动量方程保持符号，卷积表示 $u\\ell=G\\ell*m\\ell$ 给出 $\\ell|u\\ellx|\\le |u\\ell|$；质量守恒与局部能量/三次 Hamiltonian 守恒分别控制 L1、H1 和 L3，插值得到 uℓ 与 ℓuℓx 在 $p\\in [1,3]$ 的统一界。",
+              "evidence": "PDF 第2页 Theorem 2.6；第7–8页式(3.1)–(3.9)和 Uniform estimates 小节。"
+            },
+            {
+              "claim": "局部时空 L1 收敛假设会升级为全局时空 L2 收敛，并迫使尺度能量缺陷 $w\\ell=\\ell^{2}(u\\ellx)^{2}$ 保留正质量。",
+              "route": "用统一 L3 界和 Burgers 的 L2 控制将局部 L1 假设提升为局部 L2；再用局部能量守恒式、通量 L1 界和空间 cutoff 得到远场尾部统一消失。震后 Burgers 的严格能量损失与 CH 能量守恒相减，给出 wℓ 的正总质量$；L^{3/2}$ 有界性取弱极限 w。",
+              "evidence": "PDF 第3页证明概述；第8页式(3.6)–(3.9)；第9页式(3.10)–(3.13)的 Energy tightness and strong L2 convergence。"
+            },
+            {
+              "claim": "极限方程迫使缺陷 w 的空间导数为零，与其有限空间质量和正总质量矛盾。",
+              "route": "在非局部 CH 方程(1.4)上测试光滑紧支撑函数，卷积核收敛和强 L2 给出 $Q\\ell⇀u^{2}、\\ell^{2}P\\ell⇀w/2$，故极限满足 $u_t+(3u^{2}/2)_x=-w_x/2$。由于 u 已是 Burgers 熵解$，w_x=0$；而 w 对空间可积则只能几乎处处为零，违背前一步的正质量。",
+              "evidence": "PDF 第2页 Theorem 1.1；第10页 Failure of convergence 小节的分布极限、式(1.4)极限和矛盾收束。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–12页 的摘要、正文、致谢和参考文献；未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–12页 全文检查，特别核对证明末尾、Acknowledgments 和 References。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

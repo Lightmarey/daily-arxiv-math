@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06113",
+  "slug": "2609.06113",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06113:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06113",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Qualitative analysis of positive radial singular solutions on hyperbolic space",
+    "authors": [
+      "Xia Huang",
+      "Yahui Jiang",
+      "Chunyi Zhao"
+    ],
+    "abstract": "We investigate positive radial solutions with an isolated nonremovable singularity for the semilinear elliptic equation \\begin{align*} Δ_{\\mathbb{H}^N} u+λu+u^p=0 \\qquad\\text{in }\\mathbb{H}^N\\setminus\\{Q\\}, \\end{align*} where $N\\geq 3$, $p>1$, $λ\\le \\frac{(N-1)^2}{4}$, and $Q\\in\\mathbb{H}^N$ is a prescribed pole. Our purpose is to describe how the locally Euclidean singular behavior near ${\\{Q}\\}$ interacts with the genuinely hyperbolic dynamics at infinity, and how this interaction changes across the Serrin and Sobolev critical exponents. For $\\frac{N}{N-2}\\le p<\\frac{N+2}{N-2}$, we construct a family of positive radial singular solutions selecting the fast exponential mode at infinity. At the pole, these solutions exhibit the logarithmically corrected fundamental-solution profile when $p=\\frac{N}{N-2}$, and the standard power-law profile when $\\frac{N}{N-2}<p<\\frac{N+2}{N-2}.$ At the conformally invariant pair $(p,λ)=(\\frac{N+2}{N-2},\\frac{N(N-2)}{4})$, we obtain an explicit singular solution and nonconstant Fowler-type solutions, and we classify all positive radial solutions with a nonremovable singularity via the positive periodic orbits of an associated autonomous equation. In the supercritical regime $p>\\frac{N+2}{N-2}$ with $λ\\le\\frac{ N(N-2)}{4}$, we prove existence and uniqueness of the global positive radial singular solution, derive its two-term local asymptotic expansion near the pole, and establish a sharp trichotomy for its behavior at infinity.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06113",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06113",
+    "submittedAt": "2026-09-05T14:23:57Z",
+    "updatedAt": "2026-09-05T14:23:57Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "分析结果",
+    "workSummary": "本文对双曲空间 $H^N\\{Q}$ 上的半线性径向方程 $u''+(N-1)coth(r)u'+\\lambda u+u^p=0$ 进行完整的奇异性与远场分析。作者按 Serrin 与 Sobolev 临界指数分区：次临界至临界之间用反演 $s=log$ coth(r/2) 和加权 Euclidean 方程构造在极点奇异、在无穷远选择快衰减模态的解；超临界区先围绕 L(sinh $r)^{-m}$ 以固定点构造局部奇异剖面，再借助 Pohozaev 恒等式和耗散能量延拓；共形临界对则通过 Emden–Fowler 型变量化为自主 Hamilton 系统，分类常数剖面与 Fowler 周期轨道。",
+    "techniques": [
+      "双曲径向 ODE 与极点/无穷远渐近匹配",
+      "反演变量和加权 Euclidean 约化",
+      "固定点与 Pohozaev 恒等式",
+      "耗散能量与正性延拓",
+      "Emden–Fowler 变换和相平面周期轨道"
+    ],
+    "breakthrough": "论文把局部 Euclidean 奇异结构与双曲无穷远谱模态统一匹配：在 Serrin–Sobolev 区间构造选择快模态的奇异族，在共形临界点完整分类 Fowler 周期奇异解，并在超临界范围证明全局正奇异解的唯一性及按 $\\lambda <0、\\lambda =0、\\lambda >0$ 划分的尖锐远场三分律。",
+    "limitations": "结果限于径向正解$、N\\ge 3、\\lambda \\le (N-1)^2/4$，并只研究单个孤立极点；共形临界的完整分类只适用于特定 $(p,\\lambda )$，超临界唯一性只覆盖 p>pSob 且 $\\lambda \\le N(N-2)/4$。非径向奇异解、多个极点及超出这些参数范围的正解不在结论内。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "当 $pS\\le p<pSob$ 时，存在在极点具有临界幂/对数奇异、在双曲无穷远按 $e^{-\\nu r}$ 快衰减的正径向奇异解族。",
+          "route": "把 r 反演为 $s=log$ coth(r/2)，交换极点与无穷远；先抽掉快模态并用关联线性正解构造加权 Euclidean 径向方程，再用该方程的正解渐近把参数族拉回原始双曲变量。",
+          "evidence": "第1节 Theorem 1.1（PDF 第4页）；第2节 Lemma 2.1–2.4（PDF 第9–16页）；第2节证明收束（PDF 第16–18页）。"
+        },
+        {
+          "claim": "在共形临界对 $(p,\\lambda )=(pSob,N(N-2)/4)$，存在显式奇异剖面并且所有正径向非可去奇异性由常数或正 Fowler 周期轨道给出。",
+          "route": "用 $t=log$ tanh(r/2) 和共形权重把径向方程化为自主 Hamilton 方程；常数平衡对应显式 Us，能量曲线上的非恒定正周期轨道对应振荡族，周期平移给出全部径向分类。",
+          "evidence": "第4节 Lemma 4.1（PDF 第26–27页）；Theorem 1.2–1.3 及证明（PDF 第4、27–29页）。"
+        },
+        {
+          "claim": "当 p>pSob 且 $\\lambda \\le N(N-2)/4$ 时，局部奇异剖面可唯一延拓为全局正解。",
+          "route": "围绕 L(sinh $r)^{-m}$ 设定加权余项的固定点问题，得到局部正奇异解；Pohozaev 型恒等式排除有限半径的零点，随后耗散能量控制轨道，使解继续到所有 r>0。",
+          "evidence": "第3节 Lemma 3.1–3.3（PDF 第18–23页）；Theorem 1.4 的证明（PDF 第23–25页）。"
+        },
+        {
+          "claim": "超临界唯一解的远场行为按 $\\lambda <0、\\lambda =0、0<\\lambda \\le N(N-2)/4$ 分别趋于正平衡、幂律衰减或 $e^{-µr}$ 慢模态。",
+          "route": "利用全局正性后能量耗散和渐近线性化排除振荡支；根据 $\\lambda $ 的符号比较常数平衡、退化零特征值和双曲线性化的慢根 µ，结合 ODE 渐近展开确定唯一的远场分支。",
+          "evidence": "第3节 Lemma 3.4、Theorem 1.4 证明（PDF 第20、24–25页）；Theorem 1.4（PDF 第5页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–29页的 Introduction、四个证明章节、Acknowledgemnet 和 References，并检索 AI/LLM 相关词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–29页全文检查，重点为第29页末尾 Acknowledgemnet/References 及全文 AI/LLM 词项核查。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06113:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06113",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Qualitative analysis of positive radial singular solutions on hyperbolic space",
+        "authors": [
+          "Xia Huang",
+          "Yahui Jiang",
+          "Chunyi Zhao"
+        ],
+        "abstract": "We investigate positive radial solutions with an isolated nonremovable singularity for the semilinear elliptic equation \\begin{align*} Δ_{\\mathbb{H}^N} u+λu+u^p=0 \\qquad\\text{in }\\mathbb{H}^N\\setminus\\{Q\\}, \\end{align*} where $N\\geq 3$, $p>1$, $λ\\le \\frac{(N-1)^2}{4}$, and $Q\\in\\mathbb{H}^N$ is a prescribed pole. Our purpose is to describe how the locally Euclidean singular behavior near ${\\{Q}\\}$ interacts with the genuinely hyperbolic dynamics at infinity, and how this interaction changes across the Serrin and Sobolev critical exponents. For $\\frac{N}{N-2}\\le p<\\frac{N+2}{N-2}$, we construct a family of positive radial singular solutions selecting the fast exponential mode at infinity. At the pole, these solutions exhibit the logarithmically corrected fundamental-solution profile when $p=\\frac{N}{N-2}$, and the standard power-law profile when $\\frac{N}{N-2}<p<\\frac{N+2}{N-2}.$ At the conformally invariant pair $(p,λ)=(\\frac{N+2}{N-2},\\frac{N(N-2)}{4})$, we obtain an explicit singular solution and nonconstant Fowler-type solutions, and we classify all positive radial solutions with a nonremovable singularity via the positive periodic orbits of an associated autonomous equation. In the supercritical regime $p>\\frac{N+2}{N-2}$ with $λ\\le\\frac{ N(N-2)}{4}$, we prove existence and uniqueness of the global positive radial singular solution, derive its two-term local asymptotic expansion near the pole, and establish a sharp trichotomy for its behavior at infinity.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06113",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06113",
+        "submittedAt": "2026-09-05T14:23:57Z",
+        "updatedAt": "2026-09-05T14:23:57Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "分析结果",
+        "workSummary": "本文对双曲空间 $H^N\\{Q}$ 上的半线性径向方程 $u''+(N-1)coth(r)u'+\\lambda u+u^p=0$ 进行完整的奇异性与远场分析。作者按 Serrin 与 Sobolev 临界指数分区：次临界至临界之间用反演 $s=log$ coth(r/2) 和加权 Euclidean 方程构造在极点奇异、在无穷远选择快衰减模态的解；超临界区先围绕 L(sinh $r)^{-m}$ 以固定点构造局部奇异剖面，再借助 Pohozaev 恒等式和耗散能量延拓；共形临界对则通过 Emden–Fowler 型变量化为自主 Hamilton 系统，分类常数剖面与 Fowler 周期轨道。",
+        "techniques": [
+          "双曲径向 ODE 与极点/无穷远渐近匹配",
+          "反演变量和加权 Euclidean 约化",
+          "固定点与 Pohozaev 恒等式",
+          "耗散能量与正性延拓",
+          "Emden–Fowler 变换和相平面周期轨道"
+        ],
+        "breakthrough": "论文把局部 Euclidean 奇异结构与双曲无穷远谱模态统一匹配：在 Serrin–Sobolev 区间构造选择快模态的奇异族，在共形临界点完整分类 Fowler 周期奇异解，并在超临界范围证明全局正奇异解的唯一性及按 $\\lambda <0、\\lambda =0、\\lambda >0$ 划分的尖锐远场三分律。",
+        "limitations": "结果限于径向正解$、N\\ge 3、\\lambda \\le (N-1)^2/4$，并只研究单个孤立极点；共形临界的完整分类只适用于特定 $(p,\\lambda )$，超临界唯一性只覆盖 p>pSob 且 $\\lambda \\le N(N-2)/4$。非径向奇异解、多个极点及超出这些参数范围的正解不在结论内。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "当 $pS\\le p<pSob$ 时，存在在极点具有临界幂/对数奇异、在双曲无穷远按 $e^{-\\nu r}$ 快衰减的正径向奇异解族。",
+              "route": "把 r 反演为 $s=log$ coth(r/2)，交换极点与无穷远；先抽掉快模态并用关联线性正解构造加权 Euclidean 径向方程，再用该方程的正解渐近把参数族拉回原始双曲变量。",
+              "evidence": "第1节 Theorem 1.1（PDF 第4页）；第2节 Lemma 2.1–2.4（PDF 第9–16页）；第2节证明收束（PDF 第16–18页）。"
+            },
+            {
+              "claim": "在共形临界对 $(p,\\lambda )=(pSob,N(N-2)/4)$，存在显式奇异剖面并且所有正径向非可去奇异性由常数或正 Fowler 周期轨道给出。",
+              "route": "用 $t=log$ tanh(r/2) 和共形权重把径向方程化为自主 Hamilton 方程；常数平衡对应显式 Us，能量曲线上的非恒定正周期轨道对应振荡族，周期平移给出全部径向分类。",
+              "evidence": "第4节 Lemma 4.1（PDF 第26–27页）；Theorem 1.2–1.3 及证明（PDF 第4、27–29页）。"
+            },
+            {
+              "claim": "当 p>pSob 且 $\\lambda \\le N(N-2)/4$ 时，局部奇异剖面可唯一延拓为全局正解。",
+              "route": "围绕 L(sinh $r)^{-m}$ 设定加权余项的固定点问题，得到局部正奇异解；Pohozaev 型恒等式排除有限半径的零点，随后耗散能量控制轨道，使解继续到所有 r>0。",
+              "evidence": "第3节 Lemma 3.1–3.3（PDF 第18–23页）；Theorem 1.4 的证明（PDF 第23–25页）。"
+            },
+            {
+              "claim": "超临界唯一解的远场行为按 $\\lambda <0、\\lambda =0、0<\\lambda \\le N(N-2)/4$ 分别趋于正平衡、幂律衰减或 $e^{-µr}$ 慢模态。",
+              "route": "利用全局正性后能量耗散和渐近线性化排除振荡支；根据 $\\lambda $ 的符号比较常数平衡、退化零特征值和双曲线性化的慢根 µ，结合 ODE 渐近展开确定唯一的远场分支。",
+              "evidence": "第3节 Lemma 3.4、Theorem 1.4 证明（PDF 第20、24–25页）；Theorem 1.4（PDF 第5页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–29页的 Introduction、四个证明章节、Acknowledgemnet 和 References，并检索 AI/LLM 相关词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–29页全文检查，重点为第29页末尾 Acknowledgemnet/References 及全文 AI/LLM 词项核查。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

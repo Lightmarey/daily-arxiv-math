@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.30578",
+  "slug": "2608.30578",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.30578:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.30578",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Compactly Supported Solutions near a Nehari Critical Value",
+    "authors": [
+      "J. I. Dıaz",
+      "J. Hernandez",
+      "Y. Ilyasov"
+    ],
+    "abstract": "We study non-negative solutions of the indefinite sublinear Dirichlet problem $$ \\left \\{\\ \\begin{array}{ll} -Δu=λu+m(x)|u|^{α-1}u&\\quad\\hbox{ in $Ω$},\\\\ u=0&\\quad \\hbox{ on $\\partial Ω$}, \\end{array} \\right . $$ where $Ω\\subset \\mathbb{R}^{N}$ is a smooth bounded domain, $0<α<1$, $m\\in L^{\\infty }(Ω)$ is a sign-changing or non-positive weight, and $λ\\in \\mathbb{R}$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.30578",
+    "pdfUrl": "https://arxiv.org/pdf/2608.30578",
+    "submittedAt": "2026-08-31T10:51:32Z",
+    "updatedAt": "2026-08-31T10:51:32Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "Nehari 分支与紧支撑形成",
+    "workSummary": "论文研究接近 Nehari 临界值时半线性椭圆方程的正解分支。作者构造负能量稳定分支和正能量不稳定分支，分析其端点和退化极限，并以反演径向屏障和比较原理证明解在边界负势环存在时形成紧支撑，进一步刻画支撑集与自由边界的收敛。",
+    "techniques": [
+      "Nehari 流形与纤维泛函极小化",
+      "特征函数缩放与端点渐近",
+      "反演径向屏障和比较原理",
+      "$H1/L\\infty $ 紧性与 Hausdorff 支撑收敛"
+    ],
+    "breakthrough": "论文把 Nehari 临界值附近两条能量性质相反的解分支与局部 dead-core 屏障连接起来：在退化极限中不稳定分支能量趋零，而边界负势环将小振幅解压缩到内部，最终给出支撑集和自由边界的几何定位。",
+    "limitations": "紧支撑结论需要 m 的符号结构$、\\Omega _{0}$ 的连通与紧内含以及均匀负边界环等假设；结果是 $\\lambda $ 接近特定临界值或趋于负无穷时的局部渐近结论，并未给出一般参数下的全局分支或自由边界正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1 构造负能量稳定分支 $u\\lambda +$ 与正能量不稳定分支 $u\\lambda -$，并确定它们的连续性、单调性和临界端点行为。",
+          "route": "分别在 Nehari 的正负纤维分支上极小化能量，沿每个非零方向先解纤维临界方程，再用正则性和比较得到分支连续、严格单调；端点处通过特征函数缩放和 $w\\lambda =\\phi +\\epsilon \\lambda \\zeta $ 的试探函数控制能量，处理退化情形的 $E(u\\lambda -)\\to 0$。",
+          "evidence": "PDF 第4–6页 Theorem 1；PDF 第22–23页 Theorem 1 的证明，含 Nehari 极小化、Lemma 1、Corollary 2、Lemma 4–5 及 $w\\lambda $ 构造。"
+        },
+        {
+          "claim": "Theorem 6 给出小振幅正解在均匀负势区域内必须出现零点的局部 dead-core 判据。",
+          "route": "在以 x0 为中心、满足 $-m\\ge q0$ 的球内构造由径向积分反演得到的屏障 $U=\\psi ^{-1}(|x-x0|)$；把 U 的方程不等式与 u 的小值条件组合，再在接触点应用比较原理，迫使 $u(x0)=0$。",
+          "evidence": "PDF 第24–25页，第6节 Theorem 6 及证明；其中给出 $-m\\ge q0$、径向屏障 $U=\\psi ^{-1}(|x-x0|)$ 和接触比较步骤。"
+        },
+        {
+          "claim": "Theorem 2 和 Theorem 3 将 dead-core 判据应用于参数极限，证明相应 Nehari 分支在边界环条件下具有紧支撑。",
+          "route": "先由分支端点估计得到解在边界邻域的统一小 $L\\infty $ 界，再用边界环中的 −m 下界覆盖该邻域内的球；Theorem 6 在每个球上消零，有限覆盖后支撑与边界保持正距离。对符号变号和 $\\lambda \\to -\\infty $ 的情形使用同一局部屏障机制。",
+          "evidence": "PDF 第5–6页 Theorem 2、Theorem 3 的陈述；PDF 第25页以后相应应用中的边界环、小振幅和有限覆盖论证。"
+        },
+        {
+          "claim": "Theorem 8 证明解的支撑集和自由边界在极限中按 Hausdorff 意义收敛到 $\\Omega _{0}$ 的内部几何。",
+          "route": "利用强 H1 与 $L\\infty $ 收敛，在 $\\Omega _{0}$ 内由极限特征函数的正性排除支撑缺失；在 $\\Omega _{0}$ 外及边界环内调用 Theorem 6 得到统一空区。对假设的 Hausdorff 收敛反例取点列，分别用内部正性或 dead-core 空区导出矛盾。",
+          "evidence": "PDF 第36–38页，第8节 Theorem 8 及证明；包含强 $H1/L\\infty $ 收敛、支撑集定位和 Hausdorff 反证。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、附录、致谢、资金与利益声明以及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–46页（含 Acknowledgements、Funding、Declarations 与 References）；缓存全文 2608.30578.txt。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.30578:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.30578",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Compactly Supported Solutions near a Nehari Critical Value",
+        "authors": [
+          "J. I. Dıaz",
+          "J. Hernandez",
+          "Y. Ilyasov"
+        ],
+        "abstract": "We study non-negative solutions of the indefinite sublinear Dirichlet problem $$ \\left \\{\\ \\begin{array}{ll} -Δu=λu+m(x)|u|^{α-1}u&\\quad\\hbox{ in $Ω$},\\\\ u=0&\\quad \\hbox{ on $\\partial Ω$}, \\end{array} \\right . $$ where $Ω\\subset \\mathbb{R}^{N}$ is a smooth bounded domain, $0<α<1$, $m\\in L^{\\infty }(Ω)$ is a sign-changing or non-positive weight, and $λ\\in \\mathbb{R}$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.30578",
+        "pdfUrl": "https://arxiv.org/pdf/2608.30578",
+        "submittedAt": "2026-08-31T10:51:32Z",
+        "updatedAt": "2026-08-31T10:51:32Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "Nehari 分支与紧支撑形成",
+        "workSummary": "论文研究接近 Nehari 临界值时半线性椭圆方程的正解分支。作者构造负能量稳定分支和正能量不稳定分支，分析其端点和退化极限，并以反演径向屏障和比较原理证明解在边界负势环存在时形成紧支撑，进一步刻画支撑集与自由边界的收敛。",
+        "techniques": [
+          "Nehari 流形与纤维泛函极小化",
+          "特征函数缩放与端点渐近",
+          "反演径向屏障和比较原理",
+          "$H1/L\\infty $ 紧性与 Hausdorff 支撑收敛"
+        ],
+        "breakthrough": "论文把 Nehari 临界值附近两条能量性质相反的解分支与局部 dead-core 屏障连接起来：在退化极限中不稳定分支能量趋零，而边界负势环将小振幅解压缩到内部，最终给出支撑集和自由边界的几何定位。",
+        "limitations": "紧支撑结论需要 m 的符号结构$、\\Omega _{0}$ 的连通与紧内含以及均匀负边界环等假设；结果是 $\\lambda $ 接近特定临界值或趋于负无穷时的局部渐近结论，并未给出一般参数下的全局分支或自由边界正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1 构造负能量稳定分支 $u\\lambda +$ 与正能量不稳定分支 $u\\lambda -$，并确定它们的连续性、单调性和临界端点行为。",
+              "route": "分别在 Nehari 的正负纤维分支上极小化能量，沿每个非零方向先解纤维临界方程，再用正则性和比较得到分支连续、严格单调；端点处通过特征函数缩放和 $w\\lambda =\\phi +\\epsilon \\lambda \\zeta $ 的试探函数控制能量，处理退化情形的 $E(u\\lambda -)\\to 0$。",
+              "evidence": "PDF 第4–6页 Theorem 1；PDF 第22–23页 Theorem 1 的证明，含 Nehari 极小化、Lemma 1、Corollary 2、Lemma 4–5 及 $w\\lambda $ 构造。"
+            },
+            {
+              "claim": "Theorem 6 给出小振幅正解在均匀负势区域内必须出现零点的局部 dead-core 判据。",
+              "route": "在以 x0 为中心、满足 $-m\\ge q0$ 的球内构造由径向积分反演得到的屏障 $U=\\psi ^{-1}(|x-x0|)$；把 U 的方程不等式与 u 的小值条件组合，再在接触点应用比较原理，迫使 $u(x0)=0$。",
+              "evidence": "PDF 第24–25页，第6节 Theorem 6 及证明；其中给出 $-m\\ge q0$、径向屏障 $U=\\psi ^{-1}(|x-x0|)$ 和接触比较步骤。"
+            },
+            {
+              "claim": "Theorem 2 和 Theorem 3 将 dead-core 判据应用于参数极限，证明相应 Nehari 分支在边界环条件下具有紧支撑。",
+              "route": "先由分支端点估计得到解在边界邻域的统一小 $L\\infty $ 界，再用边界环中的 −m 下界覆盖该邻域内的球；Theorem 6 在每个球上消零，有限覆盖后支撑与边界保持正距离。对符号变号和 $\\lambda \\to -\\infty $ 的情形使用同一局部屏障机制。",
+              "evidence": "PDF 第5–6页 Theorem 2、Theorem 3 的陈述；PDF 第25页以后相应应用中的边界环、小振幅和有限覆盖论证。"
+            },
+            {
+              "claim": "Theorem 8 证明解的支撑集和自由边界在极限中按 Hausdorff 意义收敛到 $\\Omega _{0}$ 的内部几何。",
+              "route": "利用强 H1 与 $L\\infty $ 收敛，在 $\\Omega _{0}$ 内由极限特征函数的正性排除支撑缺失；在 $\\Omega _{0}$ 外及边界环内调用 Theorem 6 得到统一空区。对假设的 Hausdorff 收敛反例取点列，分别用内部正性或 dead-core 空区导出矛盾。",
+              "evidence": "PDF 第36–38页，第8节 Theorem 8 及证明；包含强 $H1/L\\infty $ 收敛、支撑集定位和 Hausdorff 反证。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、附录、致谢、资金与利益声明以及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–46页（含 Acknowledgements、Funding、Declarations 与 References）；缓存全文 2608.30578.txt。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

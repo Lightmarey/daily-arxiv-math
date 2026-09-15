@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02423",
+  "slug": "2609.02423",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02423:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02423",
+    "version": 1,
+    "entryKind": "new",
+    "title": "On the local well-posedness of the Benjamin-Ono-Zakharov-Kuznetsov equation",
+    "authors": [
+      "Ailton C. Nascimento"
+    ],
+    "abstract": "We study the Cauchy problem for the Benjamin--Ono--Zakharov--Kuznetsov equation on $\\mathbb R^2$. Following the strategy of Kenig and Ziesler, we establish new maximal-function estimates adapted to the BO--ZK equation and use them to implement the Kenig--Koenig method. As a result, we improve the best previously known isotropic result of Nascimento (2020), lowering the local well-posedness threshold from $s>5/4$ to $s>19/16$. At the BO--ZK endpoint, the resulting isotropic data class also contains the anisotropic $E^{5/4+}$ class of the preceding theory. On bounded subsets of $H^s(\\mathbb R^2)$, the lifespan may be chosen so that $ T\\gtrsim_s \\bigl(1+\\norm{u_0}_{H^s}\\bigr)^{-8}. $ The proof combines a sharp dyadic mixed maximal-function estimate with an anisotropic local-smoothing mechanism that exploits the complementary behavior of the longitudinal and transverse group velocities. In particular, transverse dispersion compensates for the degeneration of longitudinal smoothing near the characteristic region. Together with refined short-time Strichartz estimates and a modified energy argument, these ingredients close the nonlinear estimates at the stated regularity. Existence, uniqueness, and continuous dependence on the initial data are then established in the corresponding solution class. The resulting threshold reflects the present optimization of the method and is not claimed to be sharp.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02423",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02423",
+    "submittedAt": "2026-09-02T10:42:39Z",
+    "updatedAt": "2026-09-02T10:42:39Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "对二维 Benjamin–Ono–Zakharov–Kuznetsov 方程建立 $s>19/16$ 的局部适定性：通过频率分块最大函数估计、各向异性局部平滑、短时 Strichartz 和修正能量闭合非线性估计，并得到存在性、唯一性和连续依赖。",
+    "techniques": [
+      "频率适配混合最大函数估计",
+      "各向异性局部平滑",
+      "短时 Strichartz 估计",
+      "正交换子与微局部图表",
+      "Bona--Smith 频率包络"
+    ],
+    "breakthrough": "横向色散在特征区域补偿纵向平滑退化，使新的 $N^{1/2}$ 最大函数估计与修正能量在各向同性 $H^s$ 中闭合到 $s>19/16$。",
+    "limitations": "阈值是该估计方案的优化结果而非锐性声明；结果为局部适定性，低于 $19/16$ 的各向异性或范数膨胀问题未解决。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "线性 BO--ZK 群在每个 dyadic 频率块上满足带时间最大值的 $N^{1/2}$ 混合估计。",
+          "route": "按纵向/横向群速度把频率块切成四个互补微局部图表，在每张图上用正交换子恢复局部平滑，再以核表示和非驻相尾部估计合并图表。",
+          "evidence": "第 3 节 Proposition 3.1--3.2、Lemma 3.3 及 Proof of Theorem 1.2（PDF 第 10--16 页）。"
+        },
+        {
+          "claim": "短时分解与频率局部化给出非线性项所需的 Strichartz、最大函数和局部平滑控制。",
+          "route": "把解限制到 $N^{-\u000bartheta}$ 短时间片，利用分数阶时间积分和 dyadic Bernstein 估计控制乘积；微局部正交换子产生正项，正常形修正吸收图表过渡区的低高共振余项。",
+          "evidence": "第 4--5 节 Lemma 4.1、Proposition 4.2、Lemma 5.1/5.3 与 Proposition 5.5/5.14（PDF 第 17--49 页）。"
+        },
+        {
+          "claim": "当 $s>19/16$ 时，修正能量、最大函数、局部平滑和 Strichartz 范数满足统一先验估计。",
+          "route": "将 dyadic 非线性分解按平衡、低--高和高--高相互作用分组，利用正交换子主项控制剩余项；在短时指数取平衡值 $\u000bartheta=1/2$ 后，各指数余量使所有高频和可求和。",
+          "evidence": "第 6 节 Proposition 6.1--6.3、公式 (6.15)--(6.26)（PDF 第 49--54 页）；第 8 节公式 (8.1)（PDF 第 57--58 页）。"
+        },
+        {
+          "claim": "对任意 $H^s$ 初值，方程在正时间内局部存在、唯一并连续依赖，寿命满足 $T\\gtrsim_s(1+\\|u_0\\|_{H^s})^{-8}$。",
+          "route": "先用频率截断和正则化构造光滑近似，先验估计阻止其范数爆炸；差分方程的 $L^2$ 能量给出 Cauchy 性，再以频率包络控制高频尾并完成 Bona--Smith 极限和强 $H^s$ 连续性。",
+          "evidence": "第 7 节 Proof of the main theorem、公式 (7.1)--(7.10) 与 Lemma 7.1（PDF 第 54--57 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确披露在写作准备中使用 Claude 与 ChatGPT 协助组织频率适配微局部分析、改善语言清晰度，并准备/重构/诊断检查符号和数值一致性的代码；还说明交流启发了局部平滑的频率适配图表组织，但数学构造和证明由作者随后独立完成。",
+    "aiEvidenceSource": "PDF 第 59 页，标题“Declaration of Generative AI and AI-assisted technologies in the writing process”。",
+    "priorityScore": 76,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02423:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02423",
+        "version": 1,
+        "entryKind": "new",
+        "title": "On the local well-posedness of the Benjamin-Ono-Zakharov-Kuznetsov equation",
+        "authors": [
+          "Ailton C. Nascimento"
+        ],
+        "abstract": "We study the Cauchy problem for the Benjamin--Ono--Zakharov--Kuznetsov equation on $\\mathbb R^2$. Following the strategy of Kenig and Ziesler, we establish new maximal-function estimates adapted to the BO--ZK equation and use them to implement the Kenig--Koenig method. As a result, we improve the best previously known isotropic result of Nascimento (2020), lowering the local well-posedness threshold from $s>5/4$ to $s>19/16$. At the BO--ZK endpoint, the resulting isotropic data class also contains the anisotropic $E^{5/4+}$ class of the preceding theory. On bounded subsets of $H^s(\\mathbb R^2)$, the lifespan may be chosen so that $ T\\gtrsim_s \\bigl(1+\\norm{u_0}_{H^s}\\bigr)^{-8}. $ The proof combines a sharp dyadic mixed maximal-function estimate with an anisotropic local-smoothing mechanism that exploits the complementary behavior of the longitudinal and transverse group velocities. In particular, transverse dispersion compensates for the degeneration of longitudinal smoothing near the characteristic region. Together with refined short-time Strichartz estimates and a modified energy argument, these ingredients close the nonlinear estimates at the stated regularity. Existence, uniqueness, and continuous dependence on the initial data are then established in the corresponding solution class. The resulting threshold reflects the present optimization of the method and is not claimed to be sharp.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02423",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02423",
+        "submittedAt": "2026-09-02T10:42:39Z",
+        "updatedAt": "2026-09-02T10:42:39Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "对二维 Benjamin–Ono–Zakharov–Kuznetsov 方程建立 $s>19/16$ 的局部适定性：通过频率分块最大函数估计、各向异性局部平滑、短时 Strichartz 和修正能量闭合非线性估计，并得到存在性、唯一性和连续依赖。",
+        "techniques": [
+          "频率适配混合最大函数估计",
+          "各向异性局部平滑",
+          "短时 Strichartz 估计",
+          "正交换子与微局部图表",
+          "Bona--Smith 频率包络"
+        ],
+        "breakthrough": "横向色散在特征区域补偿纵向平滑退化，使新的 $N^{1/2}$ 最大函数估计与修正能量在各向同性 $H^s$ 中闭合到 $s>19/16$。",
+        "limitations": "阈值是该估计方案的优化结果而非锐性声明；结果为局部适定性，低于 $19/16$ 的各向异性或范数膨胀问题未解决。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "线性 BO--ZK 群在每个 dyadic 频率块上满足带时间最大值的 $N^{1/2}$ 混合估计。",
+              "route": "按纵向/横向群速度把频率块切成四个互补微局部图表，在每张图上用正交换子恢复局部平滑，再以核表示和非驻相尾部估计合并图表。",
+              "evidence": "第 3 节 Proposition 3.1--3.2、Lemma 3.3 及 Proof of Theorem 1.2（PDF 第 10--16 页）。"
+            },
+            {
+              "claim": "短时分解与频率局部化给出非线性项所需的 Strichartz、最大函数和局部平滑控制。",
+              "route": "把解限制到 $N^{-\u000bartheta}$ 短时间片，利用分数阶时间积分和 dyadic Bernstein 估计控制乘积；微局部正交换子产生正项，正常形修正吸收图表过渡区的低高共振余项。",
+              "evidence": "第 4--5 节 Lemma 4.1、Proposition 4.2、Lemma 5.1/5.3 与 Proposition 5.5/5.14（PDF 第 17--49 页）。"
+            },
+            {
+              "claim": "当 $s>19/16$ 时，修正能量、最大函数、局部平滑和 Strichartz 范数满足统一先验估计。",
+              "route": "将 dyadic 非线性分解按平衡、低--高和高--高相互作用分组，利用正交换子主项控制剩余项；在短时指数取平衡值 $\u000bartheta=1/2$ 后，各指数余量使所有高频和可求和。",
+              "evidence": "第 6 节 Proposition 6.1--6.3、公式 (6.15)--(6.26)（PDF 第 49--54 页）；第 8 节公式 (8.1)（PDF 第 57--58 页）。"
+            },
+            {
+              "claim": "对任意 $H^s$ 初值，方程在正时间内局部存在、唯一并连续依赖，寿命满足 $T\\gtrsim_s(1+\\|u_0\\|_{H^s})^{-8}$。",
+              "route": "先用频率截断和正则化构造光滑近似，先验估计阻止其范数爆炸；差分方程的 $L^2$ 能量给出 Cauchy 性，再以频率包络控制高频尾并完成 Bona--Smith 极限和强 $H^s$ 连续性。",
+              "evidence": "第 7 节 Proof of the main theorem、公式 (7.1)--(7.10) 与 Lemma 7.1（PDF 第 54--57 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确披露在写作准备中使用 Claude 与 ChatGPT 协助组织频率适配微局部分析、改善语言清晰度，并准备/重构/诊断检查符号和数值一致性的代码；还说明交流启发了局部平滑的频率适配图表组织，但数学构造和证明由作者随后独立完成。",
+        "aiEvidenceSource": "PDF 第 59 页，标题“Declaration of Generative AI and AI-assisted technologies in the writing process”。",
+        "priorityScore": 76,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

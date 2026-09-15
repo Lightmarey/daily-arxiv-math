@@ -3,93 +3,147 @@
   "arxivId": "2609.10527",
   "slug": "2609.10527",
   "latest": {
+    "id": "math.AP:2026-09-10:2609.10527:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
     "arxivId": "2609.10527",
-    "metadata": {
-      "title": "A sharp threshold for mixed $Q$-curvature rigidity",
-      "authors": [
-        "Wangzhe Wu"
-      ],
-      "abstract": "Let $I_a(g)=Q_g+aσ_2(A_g)$, where $A_g$ is the Schouten tensor and $Q_g$ is Branson's $Q$-curvature. On a closed connected manifold of dimension $n\\ge4$ with a positive Einstein metric $g_0$, we prove that every smooth metric conformal to $g_0$ with nonnegative scalar curvature and constant $I_a(g)$ is Einstein for $a\\ge-4$. This lower threshold is sharp in every dimension: for each sufficiently small $η>0$, the round sphere admits a smooth non-Einstein conformal metric with positive scalar curvature and constant $I_{-4-η}(g)$. The rigidity proof combines the pointwise Obata identity with a Newton identity whose reference curvature is the minimum of the scalar curvature. A local pole equation and integral estimates yield a radial shooting construction joining a neck to nearly round caps. The rescaled necks converge to the Riemannian Schwarzschild metric, and we determine the asymptotic neck scale. We also prove rigidity for $I_a(g)=ΛR_g^θ$ when $R_g>0$, $a\\ge-4$, and $θ\\le1$. In dimension four, constant-$I_a(g)$ rigidity holds for $-4\\le a\\le-4/3$ without a scalar-curvature sign assumption.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-09T17:55:43Z",
-      "updatedAt": "2026-09-09T17:55:43Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "A sharp threshold for mixed $Q$-curvature rigidity",
+    "authors": [
+      "Wangzhe Wu"
+    ],
+    "abstract": "Let $I_a(g)=Q_g+aσ_2(A_g)$, where $A_g$ is the Schouten tensor and $Q_g$ is Branson's $Q$-curvature. On a closed connected manifold of dimension $n\\ge4$ with a positive Einstein metric $g_0$, we prove that every smooth metric conformal to $g_0$ with nonnegative scalar curvature and constant $I_a(g)$ is Einstein for $a\\ge-4$. This lower threshold is sharp in every dimension: for each sufficiently small $η>0$, the round sphere admits a smooth non-Einstein conformal metric with positive scalar curvature and constant $I_{-4-η}(g)$. The rigidity proof combines the pointwise Obata identity with a Newton identity whose reference curvature is the minimum of the scalar curvature. A local pole equation and integral estimates yield a radial shooting construction joining a neck to nearly round caps. The rescaled necks converge to the Riemannian Schwarzschild metric, and we determine the asymptotic neck scale. We also prove rigidity for $I_a(g)=ΛR_g^θ$ when $R_g>0$, $a\\ge-4$, and $θ\\le1$. In dimension four, constant-$I_a(g)$ rigidity holds for $-4\\le a\\le-4/3$ without a scalar-curvature sign assumption.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.10527",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10527",
+    "submittedAt": "2026-09-09T17:55:43Z",
+    "updatedAt": "2026-09-09T17:55:43Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文确定混合曲率 $Ia(g)=Qg+a\\sigma _{2}(Ag)$ 刚性的 sharp threshold。对闭连通 $n\\ge 4$、正 Einstein 参考度量及非负标量曲率的共形度量，作者以最小标量曲率为参考构造 Newton identity 和 pointwise Obata identity；当 $a\\ge -4$ 时，这些恒等式在积分后强迫 Schouten 张量的非 Einstein 部分消失，得到 g 为 Einstein。sharpness 通过极点处的局部径向 ODE、两条初始数据曲线和 shooting 闭合构造，产生 a<−4 的非 Einstein 正标量曲率度量；neck 缩放趋向 Schwarzschild，并给出颈尺度渐近。",
+    "techniques": [
+      "Newton identity with reference curvature",
+      "pointwise Obata identity",
+      "conformal curvature reduction",
+      "radial shooting",
+      "Schwarzschild neck blow-up"
+    ],
+    "breakthrough": "证明 $a=-4$ 是所有 $n\\ge 4$ 的混合 $Q/\\sigma _{2}$ 曲率 Einstein 刚性的精确阈值，并构造低于该阈值的非 Einstein 共形反例。",
+    "limitations": "刚性部分要求正 Einstein 背景、闭连通流形和非负标量曲率；sharpness 构造是球面上的径向共形度量且需 $\\eta $ 足够小，不能直接给出非径向或任意背景的反例，结论也不替代一般非线性稳定性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "以最小标量曲率为参考的 Newton 与 Obata 恒等式把 Ia 常数条件化为非负平方项。",
+          "route": "将 Schouten 张量分解为参考标量曲率的 trace 与无迹部分，Newton identity 重写 $\\sigma _{2}(A_g)$；共形变换的 Obata identity 把梯度/Hessian 项与 Ia(g)−Ia(g0) 配对$，a\\ge -4$ 时剩余项符号非负。",
+          "evidence": "PDF 第 4-8 页 Sections 1–3 Propositions 2.1–2.2、Corollary 3.1，equations (2.1)–(3.18)。"
+        },
+        {
+          "claim": "闭流形积分和最大值参数迫使无迹 Schouten 部分消失，因此刚性度量 Einstein。",
+          "route": "把 pointwise identity 在 M 上积分，利用 $Rg\\ge 0$ 和常数 Ia 消除边界项；等号条件要求梯度 Hessian 达到 Obata 等式且 Newton remainder 为零，进而 $A_g$ 的无迹部分消失、共形因子为常数。",
+          "evidence": "PDF 第 7-10 页 Theorem A proof、Section 3 Proposition 3.2，equations (3.19)–(3.34)。"
+        },
+        {
+          "claim": "当 a<−4 时，极点局部径向系统存在两条可延拓初始曲线并保持正标量曲率。",
+          "route": "用 pole coordinate 将共形因子和曲率写成一阶/二阶 ODE，Lemma 4.4 给出任意初始参数的光滑极点展开；Lemma 4.5 产生 $C\\eta \\pm $ 两条轨道，积分不等式和 scalar-positivity lemma 控制它们不穿过奇异边界。",
+          "evidence": "PDF 第 11-18 页 Section 4 Lemmas 4.1–4.6，equations (4.1)–(4.24)。"
+        },
+        {
+          "claim": "径向 shooting 在另一极点闭合为光滑球面反例，且 neck 缩放趋向 Schwarzschild。",
+          "route": "对两条极点轨道比较其 pole data 和 curvature integral，连续改变参数使第二极点的正则闭合条件相等；neck 区重缩放 ODE，紧性给 Schwarzschild 极限，first variation 确定 neck scale，最终得到 Theorem B 的非 Einstein constant-Ia 度量。",
+          "evidence": "PDF 第 18-26 页 Sections 4–5 Lemmas 5.1–5.6、Theorem B，equations (4.25)–(5.39)。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "曲率与比较几何",
-      "progressType": "新定理/分类",
-      "workSummary": "对 Q+aσ₂ 混合曲率证明正 Einstein 共形类中的锐刚性阈值 a=-4，并在阈值下构造非 Einstein 例子。",
-      "techniques": [
-        "Obata 与 Newton 恒等式",
-        "径向打靶",
-        "颈部积分控制",
-        "Schwarzschild 缩放极限"
-      ],
-      "breakthrough": "兼有阈值刚性与尖锐性构造，并给出四维去标量符号条件的参数区间。",
-      "limitations": "阈值下构造为小参数范围；其他维数和指定曲率版本仍各有符号条件。 已补读相关引言或主结果片段，尚未逐行验证完整证明。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "声明 ChatGPT 辅助数学推导、证明组织、一致性检查和语言编辑。",
-      "aiEvidenceSource": "https://arxiv.org/html/2609.10527v1 — Generative AI declaration",
-      "priorityScore": 92,
-      "priorityReason": "锐阈值、构造及几何极限结合，优先核查颈部拼接与先验估计。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "Let $I_a(g)=Q_g+aσ_2(A_g)$, where $A_g$ is the Schouten tensor and $Q_g$ is Branson's $Q$-curvature. On a closed connected manifold of dimension $n\\ge4$ with a positive Einstein metric $g_0$, we prove that every smooth metric conformal to $g_0$ with nonnegative scalar curvature and constant $I_a(g)$ is Einstein for $a\\ge-4$. This lower threshold is sharp in every dimension: for each sufficiently small $η>0$, the round sphere admits a smooth non-Einstein conformal metric with positive scalar curvature and constant $I_{-4-η}(g)$. The rigidity proof combines the pointwise Obata identity with a Newton identity whose reference curvature is the minimum of the scalar curvature. A local pole equation and integral estimates yield a radial shooting construction joining a neck to nearly round caps. The rescaled necks converge to the Riemannian Schwarzschild metric, and we determine the asymptotic neck scale. We also prove rigidity for $I_a(g)=ΛR_g^θ$ when $R_g>0$, $a\\ge-4$, and $θ\\le1$. In dimension four, constant-$I_a(g)$ rigidity holds for $-4\\le a\\le-4/3$ without a scalar-curvature sign assumption.",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在 Use of generative AI 中明确披露 ChatGPT (OpenAI) 辅助 mathematical derivations、proof organization、consistency checks 和 language editing，并由作者对数学论证和全文负责；这些均属于论文研究/制作用途。",
+    "aiEvidenceSource": "PDF 第 24 页 Use of generative AI。",
+    "priorityScore": 58,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-10",
-      "entry": {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10527:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
         "arxivId": "2609.10527",
-        "metadata": {
-          "title": "A sharp threshold for mixed $Q$-curvature rigidity",
-          "authors": [
-            "Wangzhe Wu"
-          ],
-          "abstract": "Let $I_a(g)=Q_g+aσ_2(A_g)$, where $A_g$ is the Schouten tensor and $Q_g$ is Branson's $Q$-curvature. On a closed connected manifold of dimension $n\\ge4$ with a positive Einstein metric $g_0$, we prove that every smooth metric conformal to $g_0$ with nonnegative scalar curvature and constant $I_a(g)$ is Einstein for $a\\ge-4$. This lower threshold is sharp in every dimension: for each sufficiently small $η>0$, the round sphere admits a smooth non-Einstein conformal metric with positive scalar curvature and constant $I_{-4-η}(g)$. The rigidity proof combines the pointwise Obata identity with a Newton identity whose reference curvature is the minimum of the scalar curvature. A local pole equation and integral estimates yield a radial shooting construction joining a neck to nearly round caps. The rescaled necks converge to the Riemannian Schwarzschild metric, and we determine the asymptotic neck scale. We also prove rigidity for $I_a(g)=ΛR_g^θ$ when $R_g>0$, $a\\ge-4$, and $θ\\le1$. In dimension four, constant-$I_a(g)$ rigidity holds for $-4\\le a\\le-4/3$ without a scalar-curvature sign assumption.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-09T17:55:43Z",
-          "updatedAt": "2026-09-09T17:55:43Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "A sharp threshold for mixed $Q$-curvature rigidity",
+        "authors": [
+          "Wangzhe Wu"
+        ],
+        "abstract": "Let $I_a(g)=Q_g+aσ_2(A_g)$, where $A_g$ is the Schouten tensor and $Q_g$ is Branson's $Q$-curvature. On a closed connected manifold of dimension $n\\ge4$ with a positive Einstein metric $g_0$, we prove that every smooth metric conformal to $g_0$ with nonnegative scalar curvature and constant $I_a(g)$ is Einstein for $a\\ge-4$. This lower threshold is sharp in every dimension: for each sufficiently small $η>0$, the round sphere admits a smooth non-Einstein conformal metric with positive scalar curvature and constant $I_{-4-η}(g)$. The rigidity proof combines the pointwise Obata identity with a Newton identity whose reference curvature is the minimum of the scalar curvature. A local pole equation and integral estimates yield a radial shooting construction joining a neck to nearly round caps. The rescaled necks converge to the Riemannian Schwarzschild metric, and we determine the asymptotic neck scale. We also prove rigidity for $I_a(g)=ΛR_g^θ$ when $R_g>0$, $a\\ge-4$, and $θ\\le1$. In dimension four, constant-$I_a(g)$ rigidity holds for $-4\\le a\\le-4/3$ without a scalar-curvature sign assumption.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.10527",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10527",
+        "submittedAt": "2026-09-09T17:55:43Z",
+        "updatedAt": "2026-09-09T17:55:43Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文确定混合曲率 $Ia(g)=Qg+a\\sigma _{2}(Ag)$ 刚性的 sharp threshold。对闭连通 $n\\ge 4$、正 Einstein 参考度量及非负标量曲率的共形度量，作者以最小标量曲率为参考构造 Newton identity 和 pointwise Obata identity；当 $a\\ge -4$ 时，这些恒等式在积分后强迫 Schouten 张量的非 Einstein 部分消失，得到 g 为 Einstein。sharpness 通过极点处的局部径向 ODE、两条初始数据曲线和 shooting 闭合构造，产生 a<−4 的非 Einstein 正标量曲率度量；neck 缩放趋向 Schwarzschild，并给出颈尺度渐近。",
+        "techniques": [
+          "Newton identity with reference curvature",
+          "pointwise Obata identity",
+          "conformal curvature reduction",
+          "radial shooting",
+          "Schwarzschild neck blow-up"
+        ],
+        "breakthrough": "证明 $a=-4$ 是所有 $n\\ge 4$ 的混合 $Q/\\sigma _{2}$ 曲率 Einstein 刚性的精确阈值，并构造低于该阈值的非 Einstein 共形反例。",
+        "limitations": "刚性部分要求正 Einstein 背景、闭连通流形和非负标量曲率；sharpness 构造是球面上的径向共形度量且需 $\\eta $ 足够小，不能直接给出非径向或任意背景的反例，结论也不替代一般非线性稳定性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "以最小标量曲率为参考的 Newton 与 Obata 恒等式把 Ia 常数条件化为非负平方项。",
+              "route": "将 Schouten 张量分解为参考标量曲率的 trace 与无迹部分，Newton identity 重写 $\\sigma _{2}(A_g)$；共形变换的 Obata identity 把梯度/Hessian 项与 Ia(g)−Ia(g0) 配对$，a\\ge -4$ 时剩余项符号非负。",
+              "evidence": "PDF 第 4-8 页 Sections 1–3 Propositions 2.1–2.2、Corollary 3.1，equations (2.1)–(3.18)。"
+            },
+            {
+              "claim": "闭流形积分和最大值参数迫使无迹 Schouten 部分消失，因此刚性度量 Einstein。",
+              "route": "把 pointwise identity 在 M 上积分，利用 $Rg\\ge 0$ 和常数 Ia 消除边界项；等号条件要求梯度 Hessian 达到 Obata 等式且 Newton remainder 为零，进而 $A_g$ 的无迹部分消失、共形因子为常数。",
+              "evidence": "PDF 第 7-10 页 Theorem A proof、Section 3 Proposition 3.2，equations (3.19)–(3.34)。"
+            },
+            {
+              "claim": "当 a<−4 时，极点局部径向系统存在两条可延拓初始曲线并保持正标量曲率。",
+              "route": "用 pole coordinate 将共形因子和曲率写成一阶/二阶 ODE，Lemma 4.4 给出任意初始参数的光滑极点展开；Lemma 4.5 产生 $C\\eta \\pm $ 两条轨道，积分不等式和 scalar-positivity lemma 控制它们不穿过奇异边界。",
+              "evidence": "PDF 第 11-18 页 Section 4 Lemmas 4.1–4.6，equations (4.1)–(4.24)。"
+            },
+            {
+              "claim": "径向 shooting 在另一极点闭合为光滑球面反例，且 neck 缩放趋向 Schwarzschild。",
+              "route": "对两条极点轨道比较其 pole data 和 curvature integral，连续改变参数使第二极点的正则闭合条件相等；neck 区重缩放 ODE，紧性给 Schwarzschild 极限，first variation 确定 neck scale，最终得到 Theorem B 的非 Einstein constant-Ia 度量。",
+              "evidence": "PDF 第 18-26 页 Sections 4–5 Lemmas 5.1–5.6、Theorem B，equations (4.25)–(5.39)。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "曲率与比较几何",
-          "progressType": "新定理/分类",
-          "workSummary": "对 Q+aσ₂ 混合曲率证明正 Einstein 共形类中的锐刚性阈值 a=-4，并在阈值下构造非 Einstein 例子。",
-          "techniques": [
-            "Obata 与 Newton 恒等式",
-            "径向打靶",
-            "颈部积分控制",
-            "Schwarzschild 缩放极限"
-          ],
-          "breakthrough": "兼有阈值刚性与尖锐性构造，并给出四维去标量符号条件的参数区间。",
-          "limitations": "阈值下构造为小参数范围；其他维数和指定曲率版本仍各有符号条件。 已补读相关引言或主结果片段，尚未逐行验证完整证明。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "声明 ChatGPT 辅助数学推导、证明组织、一致性检查和语言编辑。",
-          "aiEvidenceSource": "https://arxiv.org/html/2609.10527v1 — Generative AI declaration",
-          "priorityScore": 92,
-          "priorityReason": "锐阈值、构造及几何极限结合，优先核查颈部拼接与先验估计。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "Let $I_a(g)=Q_g+aσ_2(A_g)$, where $A_g$ is the Schouten tensor and $Q_g$ is Branson's $Q$-curvature. On a closed connected manifold of dimension $n\\ge4$ with a positive Einstein metric $g_0$, we prove that every smooth metric conformal to $g_0$ with nonnegative scalar curvature and constant $I_a(g)$ is Einstein for $a\\ge-4$. This lower threshold is sharp in every dimension: for each sufficiently small $η>0$, the round sphere admits a smooth non-Einstein conformal metric with positive scalar curvature and constant $I_{-4-η}(g)$. The rigidity proof combines the pointwise Obata identity with a Newton identity whose reference curvature is the minimum of the scalar curvature. A local pole equation and integral estimates yield a radial shooting construction joining a neck to nearly round caps. The rescaled necks converge to the Riemannian Schwarzschild metric, and we determine the asymptotic neck scale. We also prove rigidity for $I_a(g)=ΛR_g^θ$ when $R_g>0$, $a\\ge-4$, and $θ\\le1$. In dimension four, constant-$I_a(g)$ rigidity holds for $-4\\le a\\le-4/3$ without a scalar-curvature sign assumption.",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在 Use of generative AI 中明确披露 ChatGPT (OpenAI) 辅助 mathematical derivations、proof organization、consistency checks 和 language editing，并由作者对数学论证和全文负责；这些均属于论文研究/制作用途。",
+        "aiEvidenceSource": "PDF 第 24 页 Use of generative AI。",
+        "priorityScore": 58,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

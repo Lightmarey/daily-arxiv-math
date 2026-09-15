@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06732",
+  "slug": "2609.06732",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06732:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06732",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global Strong Solutions for Maxwell-Stefan Diffusion with Additive Friction Coefficients",
+    "authors": [
+      "Dieter Bothe"
+    ],
+    "abstract": "We study Maxwell-Stefan diffusion with additive friction coefficients $f_{ij}=g_i+g_j$. In mass fractions, the system isolates the constrained pair-friction block; in mole fractions, it is the classical ideal isothermal/isobaric Maxwell-Stefan system at constant total molar concentration. Additivity makes the constrained pair-friction dissipation species-diagonal; conversely, species-diagonality on one interior barycentric constraint space forces a pair-sum representation. At operator level, the positive constrained relaxation operator is a scalar shift of a compression of $G=diag[g_1,\\ldots,g_N]$. Its scalar resolvent yields both an explicit constrained inverse and interlacing spectral roots, which form global real-analytic coordinates on the open simplex and whose differentials are left eigen-covectors. In root coordinates the principal part is diagonal, no self-square gradient term occurs, and scalar comparison yields invariant rectangles and separation from the simplex boundary. For regularity we introduce entropy-stabilized one-sided multi-EPD truncations: Euler-Poisson-Darboux entropies cancel mixed quadratic production, while for $N\\ge4$ a truncation-weighted mixing-entropy correction supplies transverse coercivity. Caccioppoli and logarithmic estimates, shrinking, and critical mass yield Hölder continuity up to the Neumann boundary. The mixing entropy also symmetrizes the moment system; frozen conormal estimates give spatial Lipschitz bounds. Together with time Hölder control and short-interval maximal regularity, this yields global strong solvability on bounded $C^{2+α}$ domains with $0<α<1$, for each $N\\ge2$, $d\\ge2$, and $p>d+2$, for all uniformly positive, compatible initial concentrations in the natural trace class. Solutions become classical for positive times and converge exponentially to equilibrium in relative entropy, $L^2$, and $C^1(\\barΩ)$.",
+    "categories": [
+      "math.AP",
+      "math-ph"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06732",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06732",
+    "submittedAt": "2026-09-06T17:09:50Z",
+    "updatedAt": "2026-09-06T17:09:50Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文研究二元摩擦系数满足 $f_ij=g_i+g_j$ 的 Maxwell–Stefan 扩散系统，并在有界 $C^{2+\\alpha }$ 区域、均匀正初始浓度和齐次 Neumann 条件下建立无小数据限制的全局强解理论。正文先在受约束的摩擦空间上显式压缩并反演算子，以 interlacing roots 作为全局谱坐标；这些坐标把主部对角化并由标量比较保持在远离单纯形边界的矩形内。随后作者用单侧 multi-EPD 熵得到根变量的 De Giorgi Hölder 正则性，用混合熵 Hessian 对仿射矩变量系统化，再结合冻结 conormal 估计与短区间最大正则性排除有限极大时间，并推出相对熵、L2 和 C1 的指数趋于平衡。",
+    "techniques": [
+      "受约束摩擦算子的谱压缩与 resolvent 反演",
+      "interlacing root 全局坐标",
+      "标量比较与不变矩形",
+      "multi-EPD 熵和 De Giorgi 正则性",
+      "混合熵对称化、conormal 估计与 maximal regularity"
+    ],
+    "breakthrough": "论文把可加摩擦律的代数结构转化成一套可延拓的根坐标机制：根方程没有自平方梯度项，标量比较因此能把浓度轨迹锁在单纯形内部的紧子集；同一混合熵又对称化矩系统，补上空间 Lipschitz 与时间最大正则性，从而在不要求小初始振荡的情况下闭合全局强解。",
+    "limitations": "结论依赖严格递增的 species 参数 0<g1<…<gN、均匀正初始浓度、齐次 Neumann 相容性和有界 $C^{2+\\alpha }$ 区域，且 $p>d+2、d\\ge 2$。作者没有声称重复 $g_i、N\\ge 4$ 的一般非可加摩擦系数或初态落在浓度单纯形边界时的全局强解结果。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "可加摩擦系数使受约束的正松弛算子成为 $G=diag(g_i)$ 的压缩加标量平移，并给出显式约束逆和交错谱根。",
+          "route": "在 barycentric 约束空间上把 pair-friction 二次型展开，利用 $f_ij=g_i+g_j$ 消去非对角耦合；标量 resolvent 的极点交错性随后把特征值组织成单纯形上的实解析 root map。",
+          "evidence": "第1.1–1.2节算子结构说明（PDF 第2–3页）；第4节 Proposition 4.1、Theorem 4.4（PDF 第19、22页）。"
+        },
+        {
+          "claim": "根坐标满足主部对角的方程，并且每个根被困在前向不变矩形中，从而浓度远离单纯形边界。",
+          "route": "把 root 的左特征协向量确认为状态函数的微分，代入通量方程后得到第 j 个方程无 $|\\nabla z_j|^{2}$ 自平方项；对该标量方程应用边界最大值/比较原理，逐分量保持初始根区间。",
+          "evidence": "第5节 Theorem 5.1（PDF 第23页）；第6节 Theorem 6.1（PDF 第24页）；第9节 Theorem 9.1（PDF 第34页）。"
+        },
+        {
+          "claim": "单侧 multi-EPD 熵和混合熵控制根变量的振荡，并产生直到物理边界的 Hölder 正则性。",
+          "route": "在选定 level-set 上使用 EPD 熵抵消混合二次梯度产生项$，N\\ge 4$ 时加入截断加权 mixing entropy 提供横向 coercivity；局部 Caccioppoli、对数平方根估计、critical-mass 与 De Giorgi shrinking 依次降低振荡。",
+          "evidence": "第11–12节 Lemma 12.3–12.9、Theorem 12.10（PDF 第51–57页）；第8节 Theorem 8.1（PDF 第31–32页）。"
+        },
+        {
+          "claim": "在 p>d+2 的自然 trace 类初值下，系统存在全局强解并指数收敛到由守恒质量确定的均匀平衡。",
+          "route": "混合熵 Hessian 使仿射矩系统系数对称正定，冻结根坐标后用 conormal 估计取得空间 Lipschitz 界；时间 Hölder 控制短终端区间的最大正则性，结合不变矩形对局部解反复重启，排除有限 Tmax，最后以 Fisher 信息和对数 Sobolev 不等式闭合指数衰减。",
+          "evidence": "第10节 Theorem 10.6（PDF 第42–44页）；第14节 Theorem 14.2、Corollary 14.3（PDF 第64–66页）；第15节渐近结论（PDF 第69–70页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在正文末尾明确写明 ChatGPT（OpenAI）用于 manuscript preparation 的 editorial assistance、consistency checks 和 alternative formulations，同时声明数学内容和最终文本由作者负责。",
+    "aiEvidenceSource": "PDF 第70页 Acknowledgments（正文末尾，紧接 Statements and Declarations）。",
+    "priorityScore": 72,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06732:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06732",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global Strong Solutions for Maxwell-Stefan Diffusion with Additive Friction Coefficients",
+        "authors": [
+          "Dieter Bothe"
+        ],
+        "abstract": "We study Maxwell-Stefan diffusion with additive friction coefficients $f_{ij}=g_i+g_j$. In mass fractions, the system isolates the constrained pair-friction block; in mole fractions, it is the classical ideal isothermal/isobaric Maxwell-Stefan system at constant total molar concentration. Additivity makes the constrained pair-friction dissipation species-diagonal; conversely, species-diagonality on one interior barycentric constraint space forces a pair-sum representation. At operator level, the positive constrained relaxation operator is a scalar shift of a compression of $G=diag[g_1,\\ldots,g_N]$. Its scalar resolvent yields both an explicit constrained inverse and interlacing spectral roots, which form global real-analytic coordinates on the open simplex and whose differentials are left eigen-covectors. In root coordinates the principal part is diagonal, no self-square gradient term occurs, and scalar comparison yields invariant rectangles and separation from the simplex boundary. For regularity we introduce entropy-stabilized one-sided multi-EPD truncations: Euler-Poisson-Darboux entropies cancel mixed quadratic production, while for $N\\ge4$ a truncation-weighted mixing-entropy correction supplies transverse coercivity. Caccioppoli and logarithmic estimates, shrinking, and critical mass yield Hölder continuity up to the Neumann boundary. The mixing entropy also symmetrizes the moment system; frozen conormal estimates give spatial Lipschitz bounds. Together with time Hölder control and short-interval maximal regularity, this yields global strong solvability on bounded $C^{2+α}$ domains with $0<α<1$, for each $N\\ge2$, $d\\ge2$, and $p>d+2$, for all uniformly positive, compatible initial concentrations in the natural trace class. Solutions become classical for positive times and converge exponentially to equilibrium in relative entropy, $L^2$, and $C^1(\\barΩ)$.",
+        "categories": [
+          "math.AP",
+          "math-ph"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06732",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06732",
+        "submittedAt": "2026-09-06T17:09:50Z",
+        "updatedAt": "2026-09-06T17:09:50Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文研究二元摩擦系数满足 $f_ij=g_i+g_j$ 的 Maxwell–Stefan 扩散系统，并在有界 $C^{2+\\alpha }$ 区域、均匀正初始浓度和齐次 Neumann 条件下建立无小数据限制的全局强解理论。正文先在受约束的摩擦空间上显式压缩并反演算子，以 interlacing roots 作为全局谱坐标；这些坐标把主部对角化并由标量比较保持在远离单纯形边界的矩形内。随后作者用单侧 multi-EPD 熵得到根变量的 De Giorgi Hölder 正则性，用混合熵 Hessian 对仿射矩变量系统化，再结合冻结 conormal 估计与短区间最大正则性排除有限极大时间，并推出相对熵、L2 和 C1 的指数趋于平衡。",
+        "techniques": [
+          "受约束摩擦算子的谱压缩与 resolvent 反演",
+          "interlacing root 全局坐标",
+          "标量比较与不变矩形",
+          "multi-EPD 熵和 De Giorgi 正则性",
+          "混合熵对称化、conormal 估计与 maximal regularity"
+        ],
+        "breakthrough": "论文把可加摩擦律的代数结构转化成一套可延拓的根坐标机制：根方程没有自平方梯度项，标量比较因此能把浓度轨迹锁在单纯形内部的紧子集；同一混合熵又对称化矩系统，补上空间 Lipschitz 与时间最大正则性，从而在不要求小初始振荡的情况下闭合全局强解。",
+        "limitations": "结论依赖严格递增的 species 参数 0<g1<…<gN、均匀正初始浓度、齐次 Neumann 相容性和有界 $C^{2+\\alpha }$ 区域，且 $p>d+2、d\\ge 2$。作者没有声称重复 $g_i、N\\ge 4$ 的一般非可加摩擦系数或初态落在浓度单纯形边界时的全局强解结果。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "可加摩擦系数使受约束的正松弛算子成为 $G=diag(g_i)$ 的压缩加标量平移，并给出显式约束逆和交错谱根。",
+              "route": "在 barycentric 约束空间上把 pair-friction 二次型展开，利用 $f_ij=g_i+g_j$ 消去非对角耦合；标量 resolvent 的极点交错性随后把特征值组织成单纯形上的实解析 root map。",
+              "evidence": "第1.1–1.2节算子结构说明（PDF 第2–3页）；第4节 Proposition 4.1、Theorem 4.4（PDF 第19、22页）。"
+            },
+            {
+              "claim": "根坐标满足主部对角的方程，并且每个根被困在前向不变矩形中，从而浓度远离单纯形边界。",
+              "route": "把 root 的左特征协向量确认为状态函数的微分，代入通量方程后得到第 j 个方程无 $|\\nabla z_j|^{2}$ 自平方项；对该标量方程应用边界最大值/比较原理，逐分量保持初始根区间。",
+              "evidence": "第5节 Theorem 5.1（PDF 第23页）；第6节 Theorem 6.1（PDF 第24页）；第9节 Theorem 9.1（PDF 第34页）。"
+            },
+            {
+              "claim": "单侧 multi-EPD 熵和混合熵控制根变量的振荡，并产生直到物理边界的 Hölder 正则性。",
+              "route": "在选定 level-set 上使用 EPD 熵抵消混合二次梯度产生项$，N\\ge 4$ 时加入截断加权 mixing entropy 提供横向 coercivity；局部 Caccioppoli、对数平方根估计、critical-mass 与 De Giorgi shrinking 依次降低振荡。",
+              "evidence": "第11–12节 Lemma 12.3–12.9、Theorem 12.10（PDF 第51–57页）；第8节 Theorem 8.1（PDF 第31–32页）。"
+            },
+            {
+              "claim": "在 p>d+2 的自然 trace 类初值下，系统存在全局强解并指数收敛到由守恒质量确定的均匀平衡。",
+              "route": "混合熵 Hessian 使仿射矩系统系数对称正定，冻结根坐标后用 conormal 估计取得空间 Lipschitz 界；时间 Hölder 控制短终端区间的最大正则性，结合不变矩形对局部解反复重启，排除有限 Tmax，最后以 Fisher 信息和对数 Sobolev 不等式闭合指数衰减。",
+              "evidence": "第10节 Theorem 10.6（PDF 第42–44页）；第14节 Theorem 14.2、Corollary 14.3（PDF 第64–66页）；第15节渐近结论（PDF 第69–70页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在正文末尾明确写明 ChatGPT（OpenAI）用于 manuscript preparation 的 editorial assistance、consistency checks 和 alternative formulations，同时声明数学内容和最终文本由作者负责。",
+        "aiEvidenceSource": "PDF 第70页 Acknowledgments（正文末尾，紧接 Statements and Declarations）。",
+        "priorityScore": 72,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

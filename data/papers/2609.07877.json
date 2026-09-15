@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07877",
+  "slug": "2609.07877",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07877:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07877",
+    "version": 1,
+    "entryKind": "new",
+    "title": "An improved strong comparison principle for singular $p$-Laplace equations, with applications",
+    "authors": [
+      "Phuong Le"
+    ],
+    "abstract": "We consider positive weak solutions of $-Δ_p u=f(u)$, with $f$ positive and locally Lipschitz continuous. In the singular case $1<p<2$, the Harnack-type inequalities, the strong maximum principle for the linearized operator, the description of the critical set and the strong comparison principle established by Damascelli and Sciunzi [Calc.\\ Var.\\ Partial Differential Equations \\textbf{25} (2006), 139--159] have been available, for more than twenty years, only under the restriction $\\frac{2N+2}{N+2}<p<2$, a range that shrinks to the empty set as $N\\to\\infty$. We remove the dependence on the dimension and prove all of these results for $\\frac32<p<2$. Since the strong comparison principle is used as a black box throughout the qualitative theory of $p$-Laplace equations, the improvement propagates. We show in particular that the assumption $\\frac{2N+2}{N+2}<p<2$ may be replaced by $\\frac32<p<2$ in the resolution of Gibbons' conjecture for $-Δ_pu=f(u)$ by Esposito, Farina, Montoro and Sciunzi [Math.\\ Ann.\\ \\textbf{382} (2022), 943--974] and in their monotonicity theorem in half-spaces for changing-sign nonlinearities [Calc.\\ Var.\\ Partial Differential Equations \\textbf{61} (2022), art.\\ 154]; further applications are given in the body of the paper.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07877",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07877",
+    "submittedAt": "2026-09-07T18:37:41Z",
+    "updatedAt": "2026-09-07T18:37:41Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文把正解 $-\\Delta _pu=f(u)$ 的奇异区间 1<p<2 的强比较理论从依赖维数的 p>(2N+2)/(N+2) 推进到维数无关的 p>3/2。核心是对负梯度幂建立统一 Morrey 估计：对任意临界集中心$，∫|Du|^{-\\sigma }\\le Cr^{N-2+\\kappa }，\\kappa >0$；该估计通过加权 Caccioppoli 和临界集分支分析得到，再与 Adams 型 trace/Sobolev 不等式结合，在权测度中运行 Moser 迭代，获得线性化算子的弱 Harnack、强最大原理和强比较原理。作者还给出临界集结构、Gibbons 猜想等应用，并用平面临界集的径向/平面模型说明 3/2 是该加权线性化框架的真实阈值。",
+    "techniques": [
+      "负梯度幂的统一 Morrey 估计",
+      "加权 Caccioppoli 不等式",
+      "Adams trace 与加权 Sobolev 不等式",
+      "权测度中的 Moser 迭代",
+      "线性化算子的 Harnack/比较原理"
+    ],
+    "breakthrough": "论文的具体进展是把关键可积性条件从依赖 N 的权指数提升为 p>3/2 的 Morrey 增益，因而在任意维数证明弱 Harnack、线性化强最大原理和强比较原理，并将改进传递到 Gibbons 猜想及半空间单调性等既有应用。",
+    "limitations": "主结果针对正解、f>0 且局部 Lipschitz 的标量 p-Laplace 方程，并在奇异情形使用 p>3/2；作者明确未解决 $1<p\\le 3/2$ 的强比较问题。该阈值对其 $H^{1,2}_\\rho $ 加权线性化方法是最优障碍，不能据此断言 PDE 本身在低 p 区间失败。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "对 p>3/2，负梯度幂在所有内点中心满足带正增益的 Morrey 估计。",
+          "route": "对线性化方程的导数分量使用截断负幂测试函数，先得到带 $|Du|^{p-2-\\beta }$ 的二阶 Caccioppoli 界；围绕临界集按梯度大小二分并迭代半径，借 Hölder 连续性把临界层体积转化为 $r^{N-2+\\kappa }$ 的统一上界。",
+          "evidence": "第1.3节 Theorem 5（PDF 第4页）；第3节 Lemma 16 及 Theorem 5 证明（PDF 第7–12页）。"
+        },
+        {
+          "claim": "该 Morrey 估计使权测度满足 Adams trace 条件，并产生带增益的加权 Sobolev 不等式。",
+          "route": "令 $\\rho =|Du|^{p-2}、dµ=\\rho dx$，将 Morrey 球测度界代入 Adams 势估计；对加权函数应用 Riesz potential 及 duality，把梯度能量同时放入左、右两侧，形成可迭代的 weighted Sobolev 界。",
+          "evidence": "第1.3节 Theorem 7 的抽象机制（PDF 第4页）；第4节 Theorem 21、相关 Adams 估计（PDF 第11–16页）。"
+        },
+        {
+          "claim": "在 p>3/2 时，线性化算子满足弱 Harnack、强最大原理和强比较原理。",
+          "route": "用加权 Sobolev 界对线性化 supersolution 测试，Moser 迭代控制正部的高次平均并降到局部下确界；对非负解应用强最大原理，比较两解时对差值使用同一权测度和迭代，从而得到严格不等或恒等二分。",
+          "evidence": "Theorem 1–3（PDF 第3页）；第4.3–5节主证明（PDF 第16–18页）。"
+        },
+        {
+          "claim": "阈值 $p=3/2$ 是该加权线性化路线的真实边界，并可支持临界集和既有 PDE 应用。",
+          "route": "在含平面临界集的显式局部解与环形 Dirichlet p-扭转解中计算 $\\rho =|Du|^{p-2}$ 的可积性，发现 $p\\le 3/2$ 时权测度甚至不是 Radon 测度；因此将新比较原理应用到 Gibbons/半空间结果，同时保留低 p 区间的开放性。",
+          "evidence": "Proposition 9–10（PDF 第5、18–21页）；Remark 35–37（PDF 第21–22页）；Theorem 30、32–33（PDF 第19–21页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在 Statements and Declarations 明确说明：AI-assisted tools 用于 developing and drafting this work；作者已核实内容并承担全部责任。该声明是对研究/写作过程的直接披露。",
+    "aiEvidenceSource": "PDF 第22页 “Use of AI tools” 声明。",
+    "priorityScore": 69,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07877:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07877",
+        "version": 1,
+        "entryKind": "new",
+        "title": "An improved strong comparison principle for singular $p$-Laplace equations, with applications",
+        "authors": [
+          "Phuong Le"
+        ],
+        "abstract": "We consider positive weak solutions of $-Δ_p u=f(u)$, with $f$ positive and locally Lipschitz continuous. In the singular case $1<p<2$, the Harnack-type inequalities, the strong maximum principle for the linearized operator, the description of the critical set and the strong comparison principle established by Damascelli and Sciunzi [Calc.\\ Var.\\ Partial Differential Equations \\textbf{25} (2006), 139--159] have been available, for more than twenty years, only under the restriction $\\frac{2N+2}{N+2}<p<2$, a range that shrinks to the empty set as $N\\to\\infty$. We remove the dependence on the dimension and prove all of these results for $\\frac32<p<2$. Since the strong comparison principle is used as a black box throughout the qualitative theory of $p$-Laplace equations, the improvement propagates. We show in particular that the assumption $\\frac{2N+2}{N+2}<p<2$ may be replaced by $\\frac32<p<2$ in the resolution of Gibbons' conjecture for $-Δ_pu=f(u)$ by Esposito, Farina, Montoro and Sciunzi [Math.\\ Ann.\\ \\textbf{382} (2022), 943--974] and in their monotonicity theorem in half-spaces for changing-sign nonlinearities [Calc.\\ Var.\\ Partial Differential Equations \\textbf{61} (2022), art.\\ 154]; further applications are given in the body of the paper.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07877",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07877",
+        "submittedAt": "2026-09-07T18:37:41Z",
+        "updatedAt": "2026-09-07T18:37:41Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文把正解 $-\\Delta _pu=f(u)$ 的奇异区间 1<p<2 的强比较理论从依赖维数的 p>(2N+2)/(N+2) 推进到维数无关的 p>3/2。核心是对负梯度幂建立统一 Morrey 估计：对任意临界集中心$，∫|Du|^{-\\sigma }\\le Cr^{N-2+\\kappa }，\\kappa >0$；该估计通过加权 Caccioppoli 和临界集分支分析得到，再与 Adams 型 trace/Sobolev 不等式结合，在权测度中运行 Moser 迭代，获得线性化算子的弱 Harnack、强最大原理和强比较原理。作者还给出临界集结构、Gibbons 猜想等应用，并用平面临界集的径向/平面模型说明 3/2 是该加权线性化框架的真实阈值。",
+        "techniques": [
+          "负梯度幂的统一 Morrey 估计",
+          "加权 Caccioppoli 不等式",
+          "Adams trace 与加权 Sobolev 不等式",
+          "权测度中的 Moser 迭代",
+          "线性化算子的 Harnack/比较原理"
+        ],
+        "breakthrough": "论文的具体进展是把关键可积性条件从依赖 N 的权指数提升为 p>3/2 的 Morrey 增益，因而在任意维数证明弱 Harnack、线性化强最大原理和强比较原理，并将改进传递到 Gibbons 猜想及半空间单调性等既有应用。",
+        "limitations": "主结果针对正解、f>0 且局部 Lipschitz 的标量 p-Laplace 方程，并在奇异情形使用 p>3/2；作者明确未解决 $1<p\\le 3/2$ 的强比较问题。该阈值对其 $H^{1,2}_\\rho $ 加权线性化方法是最优障碍，不能据此断言 PDE 本身在低 p 区间失败。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "对 p>3/2，负梯度幂在所有内点中心满足带正增益的 Morrey 估计。",
+              "route": "对线性化方程的导数分量使用截断负幂测试函数，先得到带 $|Du|^{p-2-\\beta }$ 的二阶 Caccioppoli 界；围绕临界集按梯度大小二分并迭代半径，借 Hölder 连续性把临界层体积转化为 $r^{N-2+\\kappa }$ 的统一上界。",
+              "evidence": "第1.3节 Theorem 5（PDF 第4页）；第3节 Lemma 16 及 Theorem 5 证明（PDF 第7–12页）。"
+            },
+            {
+              "claim": "该 Morrey 估计使权测度满足 Adams trace 条件，并产生带增益的加权 Sobolev 不等式。",
+              "route": "令 $\\rho =|Du|^{p-2}、dµ=\\rho dx$，将 Morrey 球测度界代入 Adams 势估计；对加权函数应用 Riesz potential 及 duality，把梯度能量同时放入左、右两侧，形成可迭代的 weighted Sobolev 界。",
+              "evidence": "第1.3节 Theorem 7 的抽象机制（PDF 第4页）；第4节 Theorem 21、相关 Adams 估计（PDF 第11–16页）。"
+            },
+            {
+              "claim": "在 p>3/2 时，线性化算子满足弱 Harnack、强最大原理和强比较原理。",
+              "route": "用加权 Sobolev 界对线性化 supersolution 测试，Moser 迭代控制正部的高次平均并降到局部下确界；对非负解应用强最大原理，比较两解时对差值使用同一权测度和迭代，从而得到严格不等或恒等二分。",
+              "evidence": "Theorem 1–3（PDF 第3页）；第4.3–5节主证明（PDF 第16–18页）。"
+            },
+            {
+              "claim": "阈值 $p=3/2$ 是该加权线性化路线的真实边界，并可支持临界集和既有 PDE 应用。",
+              "route": "在含平面临界集的显式局部解与环形 Dirichlet p-扭转解中计算 $\\rho =|Du|^{p-2}$ 的可积性，发现 $p\\le 3/2$ 时权测度甚至不是 Radon 测度；因此将新比较原理应用到 Gibbons/半空间结果，同时保留低 p 区间的开放性。",
+              "evidence": "Proposition 9–10（PDF 第5、18–21页）；Remark 35–37（PDF 第21–22页）；Theorem 30、32–33（PDF 第19–21页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在 Statements and Declarations 明确说明：AI-assisted tools 用于 developing and drafting this work；作者已核实内容并承担全部责任。该声明是对研究/写作过程的直接披露。",
+        "aiEvidenceSource": "PDF 第22页 “Use of AI tools” 声明。",
+        "priorityScore": 69,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

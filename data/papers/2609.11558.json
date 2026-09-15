@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11558",
+  "slug": "2609.11558",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11558:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11558",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "The radial part of $p$-Brownian motion",
+    "authors": [
+      "Mathias Braun"
+    ],
+    "abstract": "We initiate a geometric theory of $p$-Brownian motion, the nonlinear Markov process associated with the $p$-Laplacian introduced by Barbu-Rehmeier-R\\\"ockner. More precisely, we analyze its radial processes thoroughly, relative to an arbitrary center and in every dimension. On the one hand, we show explicit Tanaka--Meyer semimartingale formulas; our consequential characterization of nontriviality of the associated local times reveals notable differences to classical Brownian motion. In parallel, we establish sharp exit time estimates as well as scaling estimates for the self-similarly rescaled radial process. We also prove isometry of the corresponding marginal laws in each Wasserstein distance. Our contributions equally cover the Leibenson process - the nonlinear Markov process associated with the \"porous medium equation\" with $p$-Laplacian - recently introduced by Barbu-Grube-Rehmeier-R\\\"ockner.",
+    "categories": [
+      "math.PR",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.11558",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11558",
+    "submittedAt": "2026-09-10T13:50:01Z",
+    "updatedAt": "2026-09-10T13:50:01Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "正文分析",
+    "workSummary": "论文建立 p-Brownian motion 径向部分的几何随机分析。作者先用 Barenblatt 解和弱解构造把非线性 Markov 过程表示为带退化系数的径向过程，再对平滑近似径向函数应用 Itô 公式并取 ucp 极限，得到各维数的 Tanaka–Meyer 半鞅分解和局部时。随后在一维计算局部时的占用恒等式、期望渐近和跳跃测度，并用 Barenblatt 缩放证明退出时间、重标度过程及 Wasserstein 等距/梯度估计；结果同样覆盖 Leibenson 过程。",
+    "techniques": [
+      "Barenblatt/Leibenson 弱解表示",
+      "径向平滑近似与 Itô 极限",
+      "Tanaka–Meyer 局部时",
+      "占用时间和退出时间估计",
+      "Wasserstein 最优耦合与 Kuwada 对偶"
+    ],
+    "breakthrough": "论文把非线性 p-Laplacian Markov 过程的径向几何行为写成显式半鞅公式，揭示一维局部时与经典 Brownian motion 的差异，并同时给出自相似退出估计和 Barenblatt 流的 Wasserstein 等距。",
+    "limitations": "局部时的非平凡性和精确期望在一维最完整；高维结果侧重半鞅和退出界，过程构造依赖文中给定的 Barenblatt/Leibenson 弱解理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "平滑径向近似的 Itô 展开收敛为中心和非中心径向过程的 Tanaka–Meyer 公式。",
+          "route": "取 $r\\epsilon (x)=(|x-o|^{2}+\\epsilon ^{2})^{1/2}$ 等近似，Lemma 3.1 控制二阶导数和退化系数；Proposition 3.4 给出漂移、二次变差和局部时项的三类 ucp 收敛，随后 Theorem 3.5、3.7、3.8 分维数取极限。",
+          "evidence": "Lemmas 2.6–2.7、Proposition 3.4、Theorems 3.5、3.7、3.8（PDF 第 10–20 页）。"
+        },
+        {
+          "claim": "一维局部时具有占用恒等式、非平凡性条件和精确期望渐近。",
+          "route": "将一维径向过程的半鞅式代入 Tanaka 公式，借助 Revuz–Yor 局部时刻画得到 Theorem 3.9；Lemma 3.10 用系数期望连续性补足参数，Corollary 3.11 从显式 Barenblatt 系数积分得到渐近。",
+          "evidence": "Theorem 3.9、Lemma 3.10、Corollary 3.11（PDF 第 20–21 页）。"
+        },
+        {
+          "claim": "径向过程有由 Barenblatt 边界控制的退出时间和自相似重标度界。",
+          "route": "先以 Lemma 2.7 的系数界和 Proposition 3.18/3.19 的确定性下界、存活概率控制径向半径，再对停止后的重标度过程用局部鞅估计，得到 Theorem 3.16、3.23 及移动边界推论。",
+          "evidence": "Propositions 3.18–3.20、Theorems 3.16、3.23（PDF 第 23–27 页）。"
+        },
+        {
+          "claim": "Barenblatt 流对所有扩展 Wasserstein 距离保持平移距离，并产生梯度估计。",
+          "route": "先用平移耦合给 Lemma A.1 的上下界；结合过程的平移协变得到 Proposition A.2 的等距性，再取 $W\\infty $ 最优耦合并令 y→x，用局部 Lipschitz 商和 Jensen/Kuwada 对偶推出 Theorem A.4。",
+          "evidence": "Appendix A Lemma A.1、Proposition A.2、Theorem A.4（PDF 第 28–29 页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "PDF 第 29 页“Declaration of GenAI and AI-assisted technologies”明确披露：ChatGPT（初期）与 Claude（后期）用于论文准备；作者说明概念框架、主要思想和中心结果由本人提供，模型仅用于例行计算、排版和措辞，作者多次纠正并详细核验全部论证。",
+    "aiEvidenceSource": "官方 PDF 第 29 页 GenAI 声明。",
+    "priorityScore": 87,
+    "priorityTier": "high",
+    "priorityReason": "首次系统化分析 p-Brownian 径向局部时、退出和自相似结构，并把非线性 Barenblatt 流的 Wasserstein 几何性质显式化。",
+    "lowPriorityReason": "结果依赖特定非线性 Markov 过程及其 Barenblatt 结构；高维局部时精细性质和更一般流形几何未覆盖。",
+    "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11558:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11558",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "The radial part of $p$-Brownian motion",
+        "authors": [
+          "Mathias Braun"
+        ],
+        "abstract": "We initiate a geometric theory of $p$-Brownian motion, the nonlinear Markov process associated with the $p$-Laplacian introduced by Barbu-Rehmeier-R\\\"ockner. More precisely, we analyze its radial processes thoroughly, relative to an arbitrary center and in every dimension. On the one hand, we show explicit Tanaka--Meyer semimartingale formulas; our consequential characterization of nontriviality of the associated local times reveals notable differences to classical Brownian motion. In parallel, we establish sharp exit time estimates as well as scaling estimates for the self-similarly rescaled radial process. We also prove isometry of the corresponding marginal laws in each Wasserstein distance. Our contributions equally cover the Leibenson process - the nonlinear Markov process associated with the \"porous medium equation\" with $p$-Laplacian - recently introduced by Barbu-Grube-Rehmeier-R\\\"ockner.",
+        "categories": [
+          "math.PR",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.11558",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11558",
+        "submittedAt": "2026-09-10T13:50:01Z",
+        "updatedAt": "2026-09-10T13:50:01Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "正文分析",
+        "workSummary": "论文建立 p-Brownian motion 径向部分的几何随机分析。作者先用 Barenblatt 解和弱解构造把非线性 Markov 过程表示为带退化系数的径向过程，再对平滑近似径向函数应用 Itô 公式并取 ucp 极限，得到各维数的 Tanaka–Meyer 半鞅分解和局部时。随后在一维计算局部时的占用恒等式、期望渐近和跳跃测度，并用 Barenblatt 缩放证明退出时间、重标度过程及 Wasserstein 等距/梯度估计；结果同样覆盖 Leibenson 过程。",
+        "techniques": [
+          "Barenblatt/Leibenson 弱解表示",
+          "径向平滑近似与 Itô 极限",
+          "Tanaka–Meyer 局部时",
+          "占用时间和退出时间估计",
+          "Wasserstein 最优耦合与 Kuwada 对偶"
+        ],
+        "breakthrough": "论文把非线性 p-Laplacian Markov 过程的径向几何行为写成显式半鞅公式，揭示一维局部时与经典 Brownian motion 的差异，并同时给出自相似退出估计和 Barenblatt 流的 Wasserstein 等距。",
+        "limitations": "局部时的非平凡性和精确期望在一维最完整；高维结果侧重半鞅和退出界，过程构造依赖文中给定的 Barenblatt/Leibenson 弱解理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "平滑径向近似的 Itô 展开收敛为中心和非中心径向过程的 Tanaka–Meyer 公式。",
+              "route": "取 $r\\epsilon (x)=(|x-o|^{2}+\\epsilon ^{2})^{1/2}$ 等近似，Lemma 3.1 控制二阶导数和退化系数；Proposition 3.4 给出漂移、二次变差和局部时项的三类 ucp 收敛，随后 Theorem 3.5、3.7、3.8 分维数取极限。",
+              "evidence": "Lemmas 2.6–2.7、Proposition 3.4、Theorems 3.5、3.7、3.8（PDF 第 10–20 页）。"
+            },
+            {
+              "claim": "一维局部时具有占用恒等式、非平凡性条件和精确期望渐近。",
+              "route": "将一维径向过程的半鞅式代入 Tanaka 公式，借助 Revuz–Yor 局部时刻画得到 Theorem 3.9；Lemma 3.10 用系数期望连续性补足参数，Corollary 3.11 从显式 Barenblatt 系数积分得到渐近。",
+              "evidence": "Theorem 3.9、Lemma 3.10、Corollary 3.11（PDF 第 20–21 页）。"
+            },
+            {
+              "claim": "径向过程有由 Barenblatt 边界控制的退出时间和自相似重标度界。",
+              "route": "先以 Lemma 2.7 的系数界和 Proposition 3.18/3.19 的确定性下界、存活概率控制径向半径，再对停止后的重标度过程用局部鞅估计，得到 Theorem 3.16、3.23 及移动边界推论。",
+              "evidence": "Propositions 3.18–3.20、Theorems 3.16、3.23（PDF 第 23–27 页）。"
+            },
+            {
+              "claim": "Barenblatt 流对所有扩展 Wasserstein 距离保持平移距离，并产生梯度估计。",
+              "route": "先用平移耦合给 Lemma A.1 的上下界；结合过程的平移协变得到 Proposition A.2 的等距性，再取 $W\\infty $ 最优耦合并令 y→x，用局部 Lipschitz 商和 Jensen/Kuwada 对偶推出 Theorem A.4。",
+              "evidence": "Appendix A Lemma A.1、Proposition A.2、Theorem A.4（PDF 第 28–29 页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "PDF 第 29 页“Declaration of GenAI and AI-assisted technologies”明确披露：ChatGPT（初期）与 Claude（后期）用于论文准备；作者说明概念框架、主要思想和中心结果由本人提供，模型仅用于例行计算、排版和措辞，作者多次纠正并详细核验全部论证。",
+        "aiEvidenceSource": "官方 PDF 第 29 页 GenAI 声明。",
+        "priorityScore": 87,
+        "priorityTier": "high",
+        "priorityReason": "首次系统化分析 p-Brownian 径向局部时、退出和自相似结构，并把非线性 Barenblatt 流的 Wasserstein 几何性质显式化。",
+        "lowPriorityReason": "结果依赖特定非线性 Markov 过程及其 Barenblatt 结构；高维局部时精细性质和更一般流形几何未覆盖。",
+        "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+      }
+    }
+  ]
+}

@@ -3,91 +3,147 @@
   "arxivId": "2609.02073",
   "slug": "2609.02073",
   "latest": {
+    "id": "math.AP:2026-09-03:2609.02073:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
     "arxivId": "2609.02073",
-    "metadata": {
-      "title": "Existence of closed non-planar $p$-elasticae",
-      "authors": [
-        "Florian Gruen"
-      ],
-      "abstract": "We prove existence of closed non-planar $p$-elasticae for general exponents $p\\in (1,\\infty)$. In particular, we show that for any $p \\in (1,\\infty)$, there exists a countable family of non-planar $p$-elasticae, which are realized as torus knots. This generalizes well-known results of Langer--Singer for the quadratic case $p=2$ to general exponents $p\\in (1,\\infty)$.",
-      "categories": [
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "math.AP",
-      "version": 1,
-      "submittedAt": "2026-09-02T03:58:02Z",
-      "updatedAt": "2026-09-02T03:58:02Z"
+    "version": 1,
+    "entryKind": "new",
+    "title": "Existence of closed non-planar $p$-elasticae",
+    "authors": [
+      "Florian Gruen"
+    ],
+    "abstract": "We prove existence of closed non-planar $p$-elasticae for general exponents $p\\in (1,\\infty)$. In particular, we show that for any $p \\in (1,\\infty)$, there exists a countable family of non-planar $p$-elasticae, which are realized as torus knots. This generalizes well-known results of Langer--Singer for the quadratic case $p=2$ to general exponents $p\\in (1,\\infty)$.",
+    "categories": [
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02073",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02073",
+    "submittedAt": "2026-09-02T03:58:02Z",
+    "updatedAt": "2026-09-02T03:58:02Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "证明任意 $p\\in (1,\\infty )$ 存在闭的非平面 p-elastica，并构造可实现为环面结的可数族。论文把 Euler--Lagrange 方程化为参数常微分系统，分析周期轨道的闭合条件，再用拓扑绕数排除平面性。",
+    "techniques": [
+      "弧长参数 Euler--Lagrange 方程",
+      "参数相平面分析",
+      "周期轨道与闭合条件",
+      "椭圆积分渐近",
+      "环面结拓扑不变量"
+    ],
+    "breakthrough": "将 Langer--Singer 的二次弯曲能结论推广到所有 p>1，并通过周期参数的连续穿越构造具有非平凡结型的闭合非平面临界曲线。",
+    "limitations": "构造集中于特定对称 ansatz 和环面结族；不声称分类全部闭合 p-elastica 或解决一般边界条件下的极小性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "闭 p-elastica 的变分方程可化为曲率和切向量满足的低阶常微分系统。",
+          "route": "对弧长参数化的弯曲能和长度约束做一阶变分，利用 Frenet 分解消去切向冗余，得到曲率变量与常数积分之间的 Hamilton 型方程。",
+          "evidence": "第 1 节 Definitions 1.1--1.2 与第 2 节 Euler--Lagrange reduction（PDF 第 1--5 页）。"
+        },
+        {
+          "claim": "参数域中的特定初值产生全局有界的周期曲率轨道。",
+          "route": "在参数平面按能量曲线分区，利用 Proposition 2.3、2.6 的根存在性和单调性确定正根分支；对周期积分估计保证轨道不触及奇异边界。",
+          "evidence": "第 2 节 Propositions 2.3、2.6、2.11（PDF 第 5--13 页）。"
+        },
+        {
+          "claim": "选取周期参数可使空间轨道闭合且具有给定绕数。",
+          "route": "把一周期曲率积分成切向量旋转和位置增量，研究这些积分随参数的连续性和端点渐近；介值定理使横向位移与轴向位移同时满足有理闭合关系。",
+          "evidence": "第 3 节 closure conditions、Lemma 3.8 与参数渐近（PDF 第 14--26 页）。"
+        },
+        {
+          "claim": "闭合轨道非平面，并可构成可数的 torus-knot p-elasticae。",
+          "route": "闭合条件下检查 Frenet frame 的两个独立旋转分量，绕数对参数族连续且非零，因而轨道不能落在平面；取不同互素绕数得到可数个结型。",
+          "evidence": "第 4 节 Proof of Theorem 1.3 Steps 1--4（PDF 第 33--39 页）。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "推广/构造",
-      "workSummary": "对每个 p∈(1,∞) 构造可数族闭合非平面 p-弹性曲线，并将其实现为环面结，推广经典 p=2 的结果。",
-      "techniques": [
-        "p-弹性能量",
-        "闭合非平面曲线",
-        "环面结构造"
-      ],
-      "breakthrough": "把二次弹性能量下的存在性现象延伸到完整非线性指数范围。",
-      "limitations": "给出存在族而非所有临界点分类，也未由摘要确认其全局极小性或动力稳定性。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 66,
-      "priorityReason": "变分曲线与结型结合明确，适合几何变分方向；影响主要集中在这一能量模型。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We prove existence of closed non-planar $p$-elasticae for general exponents $p\\in (1,\\infty)$. In particular, we show that for any $p \\in (1,\\infty)$, there exists a countable family of non-planar $p$-elasticae, which are realized as torus knots. This generalizes well-known results of Langer--Singer for the quadratic case $p=2$ to general exponents $p\\in (1,\\infty)$.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgments/References；未见作者明确 AI 使用声明。",
+    "aiEvidenceSource": "PDF 第 1--39 页全文关键词检索；第 3 页 Acknowledgments 和末尾 References。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-03",
-      "entry": {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02073:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
         "arxivId": "2609.02073",
-        "metadata": {
-          "title": "Existence of closed non-planar $p$-elasticae",
-          "authors": [
-            "Florian Gruen"
-          ],
-          "abstract": "We prove existence of closed non-planar $p$-elasticae for general exponents $p\\in (1,\\infty)$. In particular, we show that for any $p \\in (1,\\infty)$, there exists a countable family of non-planar $p$-elasticae, which are realized as torus knots. This generalizes well-known results of Langer--Singer for the quadratic case $p=2$ to general exponents $p\\in (1,\\infty)$.",
-          "categories": [
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "math.AP",
-          "version": 1,
-          "submittedAt": "2026-09-02T03:58:02Z",
-          "updatedAt": "2026-09-02T03:58:02Z"
+        "version": 1,
+        "entryKind": "new",
+        "title": "Existence of closed non-planar $p$-elasticae",
+        "authors": [
+          "Florian Gruen"
+        ],
+        "abstract": "We prove existence of closed non-planar $p$-elasticae for general exponents $p\\in (1,\\infty)$. In particular, we show that for any $p \\in (1,\\infty)$, there exists a countable family of non-planar $p$-elasticae, which are realized as torus knots. This generalizes well-known results of Langer--Singer for the quadratic case $p=2$ to general exponents $p\\in (1,\\infty)$.",
+        "categories": [
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02073",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02073",
+        "submittedAt": "2026-09-02T03:58:02Z",
+        "updatedAt": "2026-09-02T03:58:02Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "证明任意 $p\\in (1,\\infty )$ 存在闭的非平面 p-elastica，并构造可实现为环面结的可数族。论文把 Euler--Lagrange 方程化为参数常微分系统，分析周期轨道的闭合条件，再用拓扑绕数排除平面性。",
+        "techniques": [
+          "弧长参数 Euler--Lagrange 方程",
+          "参数相平面分析",
+          "周期轨道与闭合条件",
+          "椭圆积分渐近",
+          "环面结拓扑不变量"
+        ],
+        "breakthrough": "将 Langer--Singer 的二次弯曲能结论推广到所有 p>1，并通过周期参数的连续穿越构造具有非平凡结型的闭合非平面临界曲线。",
+        "limitations": "构造集中于特定对称 ansatz 和环面结族；不声称分类全部闭合 p-elastica 或解决一般边界条件下的极小性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "闭 p-elastica 的变分方程可化为曲率和切向量满足的低阶常微分系统。",
+              "route": "对弧长参数化的弯曲能和长度约束做一阶变分，利用 Frenet 分解消去切向冗余，得到曲率变量与常数积分之间的 Hamilton 型方程。",
+              "evidence": "第 1 节 Definitions 1.1--1.2 与第 2 节 Euler--Lagrange reduction（PDF 第 1--5 页）。"
+            },
+            {
+              "claim": "参数域中的特定初值产生全局有界的周期曲率轨道。",
+              "route": "在参数平面按能量曲线分区，利用 Proposition 2.3、2.6 的根存在性和单调性确定正根分支；对周期积分估计保证轨道不触及奇异边界。",
+              "evidence": "第 2 节 Propositions 2.3、2.6、2.11（PDF 第 5--13 页）。"
+            },
+            {
+              "claim": "选取周期参数可使空间轨道闭合且具有给定绕数。",
+              "route": "把一周期曲率积分成切向量旋转和位置增量，研究这些积分随参数的连续性和端点渐近；介值定理使横向位移与轴向位移同时满足有理闭合关系。",
+              "evidence": "第 3 节 closure conditions、Lemma 3.8 与参数渐近（PDF 第 14--26 页）。"
+            },
+            {
+              "claim": "闭合轨道非平面，并可构成可数的 torus-knot p-elasticae。",
+              "route": "闭合条件下检查 Frenet frame 的两个独立旋转分量，绕数对参数族连续且非零，因而轨道不能落在平面；取不同互素绕数得到可数个结型。",
+              "evidence": "第 4 节 Proof of Theorem 1.3 Steps 1--4（PDF 第 33--39 页）。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "推广/构造",
-          "workSummary": "对每个 p∈(1,∞) 构造可数族闭合非平面 p-弹性曲线，并将其实现为环面结，推广经典 p=2 的结果。",
-          "techniques": [
-            "p-弹性能量",
-            "闭合非平面曲线",
-            "环面结构造"
-          ],
-          "breakthrough": "把二次弹性能量下的存在性现象延伸到完整非线性指数范围。",
-          "limitations": "给出存在族而非所有临界点分类，也未由摘要确认其全局极小性或动力稳定性。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 66,
-          "priorityReason": "变分曲线与结型结合明确，适合几何变分方向；影响主要集中在这一能量模型。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We prove existence of closed non-planar $p$-elasticae for general exponents $p\\in (1,\\infty)$. In particular, we show that for any $p \\in (1,\\infty)$, there exists a countable family of non-planar $p$-elasticae, which are realized as torus knots. This generalizes well-known results of Langer--Singer for the quadratic case $p=2$ to general exponents $p\\in (1,\\infty)$.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgments/References；未见作者明确 AI 使用声明。",
+        "aiEvidenceSource": "PDF 第 1--39 页全文关键词检索；第 3 页 Acknowledgments 和末尾 References。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

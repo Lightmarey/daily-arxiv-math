@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11644",
+  "slug": "2609.11644",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11644:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11644",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Gaussians Do Not Always Maximize Mixed-Norm Strichartz Inequalities for the Schr\\\"odinger Equation",
+    "authors": [
+      "Felipe Gonçalves",
+      "Giuseppe Negro",
+      "Diogo Oliveira e Silva"
+    ],
+    "abstract": "We investigate the maximization problem for the family of mixed-norm Strichartz inequalities for the Schr\\\"odinger equation, $\\|e^{-it\\Delta/2}f\\|_{L_t^qL_{\\boldsymbol{x}}^r(\\mathbb{R}^{1+d})}\\le C_{q,r}\\lVert f\\rVert_{L^2(\\mathbb{R}^d)}$, with $2/q+d/r=d/2$, $q,r\\geq 2$, and thus $r\\leq 2d/(d-2)$ if $d\\geq 3$. We show that, in low dimensions $1\\leq d\\leq 5$, the thresholds $\\rho_1=10$, $\\rho_2=6$, $\\rho_3=4\\sqrt{7}-6\\approx 4.583$, $\\rho_4=2\\sqrt{15}-4\\approx 3.746$, and $\\rho_5=10/3\\approx 3.333$ are such that gaussians are stable local maximizers for $2<r<\\rho_d$, and fail to be local maximizers for $\\rho_d<r\\leq 2d/(d-2)$ (with the conventions there is no upper bound on $r$ when $d\\in\\{1,2\\}$ and that $r=\\infty$ is excluded when $d=2$). In the cases $(q,r,d)\\in\\{(6,6,1),(8,4,1),(4,4,2)\\}$, we establish global stability inequalities with effective stability constants. Both proofs hinge on spectral gaps which we compute exactly.",
+    "categories": [
+      "math.AP",
+      "math.CA"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11644",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11644",
+    "submittedAt": "2026-09-10T14:52:06Z",
+    "updatedAt": "2026-09-10T14:52:06Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "稳定性",
+    "workSummary": "论文研究 Schrödinger 混合范数算子在低维的 Gaussian 局部极大性。通过 lens transform 把自由演化变为谐振子流，在 Hermite/Laguerre/球谐基中计算二阶变分谱隙，得到临界阈值 $\\rho _d$；在特定 (q,r,d) 上再证明带有效常数的全局稳定性。",
+    "techniques": [
+      "lens 变换",
+      "Hermite/Laguerre 谱分解",
+      "二阶变分",
+      "谱隙",
+      "热流单调性"
+    ],
+    "breakthrough": "证明高斯在 $r<\\rho _d$ 时局部稳定极大、超过阈值失去局部极大，并在三个具体指数对上建立全局稳定不等式。",
+    "limitations": "阈值与稳定性结论限于 $d\\le 5$ 及 Schrödinger-admissible 指数；全局极大者的完整分类和高维阈值未解决。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.2 将 Gaussian 局部极大性化为二阶谱隙的符号。",
+          "route": "利用 Schrödinger 对称群消去质量、相位、平移和缩放切向方向，在 Gaussian 处计算商范数的 Hessian；剩余 Hermite 模态的最小特征值随 r 变化并在 $\\rho _d$ 处过零。",
+          "evidence": "PDF 第 2–5 页，Theorem 1.2、Theorem 1.5。"
+        },
+        {
+          "claim": "Lemma 2.1 的 lens transform 把混合范数演化积分转成谐振子周期积分。",
+          "route": "令 $t=tan$ $T、x=cos$ T·X，将自由 Schrödinger 解写成相位、缩放因子和谐振子演化；Gaussian 变为基态，时间积分中的空间范数因此可用 Hermite 分解逐模态计算。",
+          "evidence": "PDF 第 8–10 页，Lemma 2.1、Lemmas 2.4–2.6。"
+        },
+        {
+          "claim": "Propositions 2.11、3.3 精确计算非切向 Hermite/Laguerre 模态的二阶系数。",
+          "route": "将扰动展开到径向 Laguerre 与球谐基，正交性消去交叉项；Proposition 2.11 给出每个 (k,m) 系数，Proposition 3.3 按奇偶模态比较其符号，得到 $\\rho _d$ 阈值。",
+          "evidence": "PDF 第 13–22 页，Proposition 2.11、Proposition 3.3。"
+        },
+        {
+          "claim": "Theorems 1.4、4.1 与 Lemma 4.2 将正谱隙提升为有效全局稳定性。",
+          "route": "先把 deficit 写成 Gaussian 距离的二阶项，Lemma 4.2 在对称轨道正交补上给局部 coercivity；热流单调性和 Theorem 4.1 的 compactness 排除远离 Gaussian 的极限，得到三组指数的全局稳定常数。",
+          "evidence": "PDF 第 3–4 页及第 23–30 页，Theorem 1.4、Theorem 4.1、Lemma 4.2。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 88,
+    "priorityTier": "high",
+    "priorityReason": "混合范数 Strichartz 极值和高斯稳定性由精确谱隙驱动。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11644:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11644",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Gaussians Do Not Always Maximize Mixed-Norm Strichartz Inequalities for the Schr\\\"odinger Equation",
+        "authors": [
+          "Felipe Gonçalves",
+          "Giuseppe Negro",
+          "Diogo Oliveira e Silva"
+        ],
+        "abstract": "We investigate the maximization problem for the family of mixed-norm Strichartz inequalities for the Schr\\\"odinger equation, $\\|e^{-it\\Delta/2}f\\|_{L_t^qL_{\\boldsymbol{x}}^r(\\mathbb{R}^{1+d})}\\le C_{q,r}\\lVert f\\rVert_{L^2(\\mathbb{R}^d)}$, with $2/q+d/r=d/2$, $q,r\\geq 2$, and thus $r\\leq 2d/(d-2)$ if $d\\geq 3$. We show that, in low dimensions $1\\leq d\\leq 5$, the thresholds $\\rho_1=10$, $\\rho_2=6$, $\\rho_3=4\\sqrt{7}-6\\approx 4.583$, $\\rho_4=2\\sqrt{15}-4\\approx 3.746$, and $\\rho_5=10/3\\approx 3.333$ are such that gaussians are stable local maximizers for $2<r<\\rho_d$, and fail to be local maximizers for $\\rho_d<r\\leq 2d/(d-2)$ (with the conventions there is no upper bound on $r$ when $d\\in\\{1,2\\}$ and that $r=\\infty$ is excluded when $d=2$). In the cases $(q,r,d)\\in\\{(6,6,1),(8,4,1),(4,4,2)\\}$, we establish global stability inequalities with effective stability constants. Both proofs hinge on spectral gaps which we compute exactly.",
+        "categories": [
+          "math.AP",
+          "math.CA"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11644",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11644",
+        "submittedAt": "2026-09-10T14:52:06Z",
+        "updatedAt": "2026-09-10T14:52:06Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "稳定性",
+        "workSummary": "论文研究 Schrödinger 混合范数算子在低维的 Gaussian 局部极大性。通过 lens transform 把自由演化变为谐振子流，在 Hermite/Laguerre/球谐基中计算二阶变分谱隙，得到临界阈值 $\\rho _d$；在特定 (q,r,d) 上再证明带有效常数的全局稳定性。",
+        "techniques": [
+          "lens 变换",
+          "Hermite/Laguerre 谱分解",
+          "二阶变分",
+          "谱隙",
+          "热流单调性"
+        ],
+        "breakthrough": "证明高斯在 $r<\\rho _d$ 时局部稳定极大、超过阈值失去局部极大，并在三个具体指数对上建立全局稳定不等式。",
+        "limitations": "阈值与稳定性结论限于 $d\\le 5$ 及 Schrödinger-admissible 指数；全局极大者的完整分类和高维阈值未解决。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.2 将 Gaussian 局部极大性化为二阶谱隙的符号。",
+              "route": "利用 Schrödinger 对称群消去质量、相位、平移和缩放切向方向，在 Gaussian 处计算商范数的 Hessian；剩余 Hermite 模态的最小特征值随 r 变化并在 $\\rho _d$ 处过零。",
+              "evidence": "PDF 第 2–5 页，Theorem 1.2、Theorem 1.5。"
+            },
+            {
+              "claim": "Lemma 2.1 的 lens transform 把混合范数演化积分转成谐振子周期积分。",
+              "route": "令 $t=tan$ $T、x=cos$ T·X，将自由 Schrödinger 解写成相位、缩放因子和谐振子演化；Gaussian 变为基态，时间积分中的空间范数因此可用 Hermite 分解逐模态计算。",
+              "evidence": "PDF 第 8–10 页，Lemma 2.1、Lemmas 2.4–2.6。"
+            },
+            {
+              "claim": "Propositions 2.11、3.3 精确计算非切向 Hermite/Laguerre 模态的二阶系数。",
+              "route": "将扰动展开到径向 Laguerre 与球谐基，正交性消去交叉项；Proposition 2.11 给出每个 (k,m) 系数，Proposition 3.3 按奇偶模态比较其符号，得到 $\\rho _d$ 阈值。",
+              "evidence": "PDF 第 13–22 页，Proposition 2.11、Proposition 3.3。"
+            },
+            {
+              "claim": "Theorems 1.4、4.1 与 Lemma 4.2 将正谱隙提升为有效全局稳定性。",
+              "route": "先把 deficit 写成 Gaussian 距离的二阶项，Lemma 4.2 在对称轨道正交补上给局部 coercivity；热流单调性和 Theorem 4.1 的 compactness 排除远离 Gaussian 的极限，得到三组指数的全局稳定常数。",
+              "evidence": "PDF 第 3–4 页及第 23–30 页，Theorem 1.4、Theorem 4.1、Lemma 4.2。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 88,
+        "priorityTier": "high",
+        "priorityReason": "混合范数 Strichartz 极值和高斯稳定性由精确谱隙驱动。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07758",
+  "slug": "2609.07758",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07758:v2",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07758",
+    "version": 2,
+    "entryKind": "cross_list",
+    "title": "Polynomial Bohnenblust--Hille bounds for product of cyclic groups",
+    "authors": [
+      "Joseph Slote",
+      "Alexander Volberg"
+    ],
+    "abstract": "Fix an integer $K\\ge2$, and let $C_K^n =\\{(e^{\\frac{2πij}{K}})_{j=0}^{K-1}\\}^n$ be the product of cyclic groups of order $K$. For a Fourier character $χ_α$, let $s(α)$ be the number of active coordinates. We give a self-contained proposed proof that the dimension-free Bohnenblust--Hille constants governed by interaction order grow polynomially: if $p_d=2d/(d+1)$ and \\[ γ_2=\\frac12, \\qquad γ_K=\\frac{K\\log(K-1)}{4(K-2)}\\quad(K\\ge3), \\] then the $\\ell^{p_d}$ norm of Fourier coefficients $\\{\\hat f(α)\\}$ is bounded by $L^\\infty$ norm of $f$ multiplied by $C(K) d^{4γ_K+5}$. The constant $C(K)$ is actually at most of the order $K^{5/2}$.",
+    "categories": [
+      "math.CA",
+      "math.AP",
+      "math.PR"
+    ],
+    "primaryCategory": "math.CA",
+    "arxivUrl": "https://arxiv.org/abs/2609.07758",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07758",
+    "submittedAt": "2026-09-07T17:01:09Z",
+    "updatedAt": "2026-09-09T14:29:51Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文提出 product of cyclic groups 上 polynomial Bohnenblust–Hille bound 的一条 self-contained proof route。对 interaction order 分层后，作者把 Potts hypercontractivity、固定低阶 spectral projection 和 mixed-norm interpolation 接入加权 graded square function。随机把 active coordinates 二染色，保留每个局部 Fourier degree 并以 exact ancestry 回收 parent coefficient；binomial central capture 与 Potts entropy contraction 控制高 interaction levels。低阶层先单独闭合，高阶部分通过 uniform contraction 和 bootstrap 得到 weighted square-function $O(d^3)$，最后将权重还原为 coefficient $l^p$ 范数，得到固定 K 时 $C(K)d^(4$ $gamma_K+5)$ 的 proposed polynomial bound。",
+    "techniques": [
+      "Potts hypercontractivity",
+      "interaction-order Fourier projections",
+      "weighted row–column square-function bootstrap",
+      "random coordinate bicoloring and exact ancestry",
+      "binary-entropy contraction"
+    ],
+    "breakthrough": "将 support-layer 的随机坐标二染色与 Potts hypercontractivity 结合，建立统一收缩常数小于 1 的加权 bootstrap，从而把 cyclic-group Bohnenblust–Hille 的 degree dependence 从既有 subexponential 机制推进到固定 K 下的 polynomial exponent 4 $gamma_K+5$；作者同时明确指出该结果不 uniform in K。",
+    "limitations": "论文标题和 Theorem 1.1 将结果称为 proposed proof，结论只对每个固定 K 成立，常数和指数均随 K 变差；证明依赖既有 Potts hypercontractivity、低 interaction-level estimate 和 projection estimate，不能直接宣称 uniform-K 或非交换群版本。AI 曾参与 Section 5 [19] 的探索性证明开发，但数学内容由作者核验并编辑。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Potts hypercontractivity、低 interaction levels 和 projection estimate 为各 support layer 提供初始 weighted bounds。",
+          "route": "用 $T_rho$ 的谱作用把 interaction order r 的 Fourier layer 衰减为 $rho^r$；对 $r=1,2,3$ 直接调用 support-sensitive bound，对一般 r 用负 Potts interval 保持 L-infinity contraction，并以一维 Markov kernel 的正性控制 projection。",
+          "evidence": "PDF 第 8-9 页 Section 3 Theorem 3.1、Lemmas 3.2–3.5，equations (13)–(19)。"
+        },
+        {
+          "claim": "混合范数插值和 row–column square function 将二块 Fourier 系数控制为 weighted bootstrap 递推。",
+          "route": "对随机二分后的两块 interaction degrees 使用 fractional two-block interpolation，把行和列的系数范数分别放入混合 $l^p/l^2$ 范数；再用 variable-angle summation 和 weighted square function 汇总所有 balanced bidegrees，产生带 entropy weight 的递推量 Gamma。",
+          "evidence": "PDF 第 10-13 页 Sections 4–6，Lemmas 4.1–4.2、Proposition 6.2，equations (29)–(45)。"
+        },
+        {
+          "claim": "随机坐标二染色在高 interaction levels 上保持 parent coefficient 并产生统一概率捕获。",
+          "route": "每个 active coordinate 整体分配到 x 或 y block，局部频率不被合并；因此子系数的支持并集唯一恢复 parent index。二染色计数服从 Bin(r,1/2)，中心区概率至少为 1/3，结合中央 entropy contraction 得到 Proposition 8.1 的高层递推。",
+          "evidence": "PDF 第 14-15 页 Section 7 Lemma 7.1，equations (47)–(50)，以及 Proposition 8.1 equation (52)。"
+        },
+        {
+          "claim": "uniform contraction 使 weighted square function bootstrap 闭合，并推出 polynomial Bohnenblust–Hille bound。",
+          "route": "取 $B_K=4$ $gamma_K+2$ 后，显式计算 contraction $c_star=0.820772...<1$；将低层常数与高层递推相加并移项，得到 $Gamma\\le D_K$ $M^3$。最后按 $p_r\\le p_d$ 的单调性把每层系数求和，恢复 $d^(4$ $gamma_K+5)$ 的 $l^p$ 估计。",
+          "evidence": "PDF 第 16-17 页 Lemma 8.2、Theorem 8.3、Theorem 9.1，equations (54)–(63)。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在附录 B 明确披露准备手稿期间使用 ChatGPT Pro（OpenAI）协助 exploratory proof development，尤其分析文献 [19] 的 Section 5；作者说明随后核验数学内容、编辑手稿并承担责任。该用途属于证明研究和编辑，计为 explicit。",
+    "aiEvidenceSource": "PDF 第 19-20 页 Appendix B Declaration of generative AI and AI-assisted technologies。",
+    "priorityScore": 49,
+    "priorityTier": "low",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Polynomial Bohnenblust--Hille bounds for product of cyclic groups》。",
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07758:v2",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07758",
+        "version": 2,
+        "entryKind": "cross_list",
+        "title": "Polynomial Bohnenblust--Hille bounds for product of cyclic groups",
+        "authors": [
+          "Joseph Slote",
+          "Alexander Volberg"
+        ],
+        "abstract": "Fix an integer $K\\ge2$, and let $C_K^n =\\{(e^{\\frac{2πij}{K}})_{j=0}^{K-1}\\}^n$ be the product of cyclic groups of order $K$. For a Fourier character $χ_α$, let $s(α)$ be the number of active coordinates. We give a self-contained proposed proof that the dimension-free Bohnenblust--Hille constants governed by interaction order grow polynomially: if $p_d=2d/(d+1)$ and \\[ γ_2=\\frac12, \\qquad γ_K=\\frac{K\\log(K-1)}{4(K-2)}\\quad(K\\ge3), \\] then the $\\ell^{p_d}$ norm of Fourier coefficients $\\{\\hat f(α)\\}$ is bounded by $L^\\infty$ norm of $f$ multiplied by $C(K) d^{4γ_K+5}$. The constant $C(K)$ is actually at most of the order $K^{5/2}$.",
+        "categories": [
+          "math.CA",
+          "math.AP",
+          "math.PR"
+        ],
+        "primaryCategory": "math.CA",
+        "arxivUrl": "https://arxiv.org/abs/2609.07758",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07758",
+        "submittedAt": "2026-09-07T17:01:09Z",
+        "updatedAt": "2026-09-09T14:29:51Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文提出 product of cyclic groups 上 polynomial Bohnenblust–Hille bound 的一条 self-contained proof route。对 interaction order 分层后，作者把 Potts hypercontractivity、固定低阶 spectral projection 和 mixed-norm interpolation 接入加权 graded square function。随机把 active coordinates 二染色，保留每个局部 Fourier degree 并以 exact ancestry 回收 parent coefficient；binomial central capture 与 Potts entropy contraction 控制高 interaction levels。低阶层先单独闭合，高阶部分通过 uniform contraction 和 bootstrap 得到 weighted square-function $O(d^3)$，最后将权重还原为 coefficient $l^p$ 范数，得到固定 K 时 $C(K)d^(4$ $gamma_K+5)$ 的 proposed polynomial bound。",
+        "techniques": [
+          "Potts hypercontractivity",
+          "interaction-order Fourier projections",
+          "weighted row–column square-function bootstrap",
+          "random coordinate bicoloring and exact ancestry",
+          "binary-entropy contraction"
+        ],
+        "breakthrough": "将 support-layer 的随机坐标二染色与 Potts hypercontractivity 结合，建立统一收缩常数小于 1 的加权 bootstrap，从而把 cyclic-group Bohnenblust–Hille 的 degree dependence 从既有 subexponential 机制推进到固定 K 下的 polynomial exponent 4 $gamma_K+5$；作者同时明确指出该结果不 uniform in K。",
+        "limitations": "论文标题和 Theorem 1.1 将结果称为 proposed proof，结论只对每个固定 K 成立，常数和指数均随 K 变差；证明依赖既有 Potts hypercontractivity、低 interaction-level estimate 和 projection estimate，不能直接宣称 uniform-K 或非交换群版本。AI 曾参与 Section 5 [19] 的探索性证明开发，但数学内容由作者核验并编辑。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Potts hypercontractivity、低 interaction levels 和 projection estimate 为各 support layer 提供初始 weighted bounds。",
+              "route": "用 $T_rho$ 的谱作用把 interaction order r 的 Fourier layer 衰减为 $rho^r$；对 $r=1,2,3$ 直接调用 support-sensitive bound，对一般 r 用负 Potts interval 保持 L-infinity contraction，并以一维 Markov kernel 的正性控制 projection。",
+              "evidence": "PDF 第 8-9 页 Section 3 Theorem 3.1、Lemmas 3.2–3.5，equations (13)–(19)。"
+            },
+            {
+              "claim": "混合范数插值和 row–column square function 将二块 Fourier 系数控制为 weighted bootstrap 递推。",
+              "route": "对随机二分后的两块 interaction degrees 使用 fractional two-block interpolation，把行和列的系数范数分别放入混合 $l^p/l^2$ 范数；再用 variable-angle summation 和 weighted square function 汇总所有 balanced bidegrees，产生带 entropy weight 的递推量 Gamma。",
+              "evidence": "PDF 第 10-13 页 Sections 4–6，Lemmas 4.1–4.2、Proposition 6.2，equations (29)–(45)。"
+            },
+            {
+              "claim": "随机坐标二染色在高 interaction levels 上保持 parent coefficient 并产生统一概率捕获。",
+              "route": "每个 active coordinate 整体分配到 x 或 y block，局部频率不被合并；因此子系数的支持并集唯一恢复 parent index。二染色计数服从 Bin(r,1/2)，中心区概率至少为 1/3，结合中央 entropy contraction 得到 Proposition 8.1 的高层递推。",
+              "evidence": "PDF 第 14-15 页 Section 7 Lemma 7.1，equations (47)–(50)，以及 Proposition 8.1 equation (52)。"
+            },
+            {
+              "claim": "uniform contraction 使 weighted square function bootstrap 闭合，并推出 polynomial Bohnenblust–Hille bound。",
+              "route": "取 $B_K=4$ $gamma_K+2$ 后，显式计算 contraction $c_star=0.820772...<1$；将低层常数与高层递推相加并移项，得到 $Gamma\\le D_K$ $M^3$。最后按 $p_r\\le p_d$ 的单调性把每层系数求和，恢复 $d^(4$ $gamma_K+5)$ 的 $l^p$ 估计。",
+              "evidence": "PDF 第 16-17 页 Lemma 8.2、Theorem 8.3、Theorem 9.1，equations (54)–(63)。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在附录 B 明确披露准备手稿期间使用 ChatGPT Pro（OpenAI）协助 exploratory proof development，尤其分析文献 [19] 的 Section 5；作者说明随后核验数学内容、编辑手稿并承担责任。该用途属于证明研究和编辑，计为 explicit。",
+        "aiEvidenceSource": "PDF 第 19-20 页 Appendix B Declaration of generative AI and AI-assisted technologies。",
+        "priorityScore": 49,
+        "priorityTier": "low",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Polynomial Bohnenblust--Hille bounds for product of cyclic groups》。",
+        "revisionSummary": null
+      }
+    }
+  ]
+}

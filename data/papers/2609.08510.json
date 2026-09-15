@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08510",
+  "slug": "2609.08510",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08510:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08510",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Critical fractional $p$-Hardy Sobolev equations: Global compactness and multiplicity of positive solutions",
+    "authors": [
+      "Nirjan Biswas",
+      "Souptik Chakraborty",
+      "Debangana Mukherjee"
+    ],
+    "abstract": "We study the critical fractional $p$-Hardy-Sobolev equation \\begin{equation}\\tag{$\\mathcal{P}$}\\label{a-main} (-Δ_p)^s u -μ\\dfrac{|u|^{p-2}u}{|x|^{sp}}=\\dfrac{|u|^{p^*_s(α)-2}u}{|x|^α}+f \\;\\mbox{ in }\\,\\mathbb{R}^d, \\quad u\\in \\mathcal{D}^{s,p}(\\mathbb{R}^d), \\end{equation} where $1<p<\\infty$, $0<s<1$, $0\\leqα<sp<d$, $μ>0$, $p^*_s(α):= p(d-α)/(d-sp)$ is the critical Hardy-Sobolev exponent, and $f$ is a nontrivial nonnegative functional in $(\\mathcal{D}^{s,p}(\\mathbb{R}^d))^*$. We first establish global compactness results for Palais-Smale sequences associated with the corresponding energy functional. When $α>0$, the loss of compactness is described by dilations of solutions of the Hardy-Sobolev limit problem. The case $α=0$ has a different structure: in addition to Hardy profiles, pure Sobolev profiles may occur when the centre of concentration escapes from the Hardy singularity relative to its scale. We give a direct centre-scale analysis of these two concentration regimes and obtain the corresponding energy decomposition and profile separation. As an application, under an explicit smallness assumption on $f$, we first obtain a positive solution for \\eqref{a-main} with negative energy. We then construct a nonlinear path based on hidden convexity whose energy remains strictly below the first bubbling threshold. A minimax argument, combined with the global compactness theorem, then yields a second distinct positive solution for \\eqref{a-main}.",
+    "categories": [
+      "math.AP",
+      "math.FA"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08510",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08510",
+    "submittedAt": "2026-09-08T09:56:58Z",
+    "updatedAt": "2026-09-08T09:56:58Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "$theorem_proof_reviewed$",
+    "workSummary": "论文研究临界分数阶 p-Hardy–Sobolev 方程中 Palais–Smale 序列的全局紧性与正解多重性。方程含 Hardy 权 $|x|^{-sp}$、临界指数 $p_s*(\\alpha )$ 和非负泛函 f；正文第 1–3 节建立分数阶 Sobolev/Hardy 工具和 PS 分解，第 4 节按尺度与中心位置分析浓缩，第 5–6 节将 profile decomposition 应用于 $\\alpha >0$ 的 Hardy $bubble、\\alpha =0$ 时逃离奇点的纯 Sobolev bubble，并用变分阈值获得 Theorems 1.1–1.4 的正解存在/多重性。",
+    "techniques": [
+      "分数阶 Hardy–Sobolev 不等式",
+      "extension/非局部能量",
+      "concentration–compactness",
+      "中心—尺度 profile decomposition",
+      "Nehari/Palais–Smale 变分法"
+    ],
+    "breakthrough": "论文明确分离了两种此前容易混淆的失紧机制$：\\alpha >0$ 时浓缩中心随尺度锁在 Hardy 奇点$，\\alpha =0$ 时中心相对尺度逃离奇点并产生纯 Sobolev profile；该中心—尺度分析给出精确能量分解，并把不同阈值下的正解构造连接起来。",
+    "limitations": "参数需 $1<p<\\infty 、0<s<1、0\\le \\alpha <sp<d、\\mu >0$ 且 f 为非平凡非负对偶泛函$；\\alpha =0$ 的额外逃逸 profile 使紧性更弱，多重性结论依赖文中能量阈值/小扰动条件，不能简化为一般临界方程的无条件存在。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "临界能量泛函的 PS 序列在局部强收敛失败时只能由尺度化 Hardy profile（以及 $\\alpha =0$ 时的纯 Sobolev profile）贡献缺失能量。",
+          "route": "先用 Hardy–Sobolev 临界嵌入和分数阶能量界提取弱极限，再在每个坏尺度作 $blow-up；\\alpha >0$ 时把中心相对尺度归一化到原点$，\\alpha =0$ 时把中心/尺度比趋无穷的序列另行重标度，剥离出极限方程的非零 profile。",
+          "evidence": "Theorem 1.1–1.2（PDF 第 1–4 页）；Section 2 Lemmas 2.1–2.5 与 Section 3 Proposition 3.1（PDF 第 10–14 页）。"
+        },
+        {
+          "claim": "不同 profile 的中心与尺度渐近正交，且总能量分解为弱极限、各 profile 能量和 vanishing remainder。",
+          "route": "对两个候选 bubble 比较尺度比和中心距离，利用分数阶核的双线性交叉项趋零；迭代剥离后，若余项仍超过固定阈值则继续提取，有限能量保证 profile 数量有限，并由 Brezis–Lieb 型分解得到范数/能量加法。",
+          "evidence": "Section 3 Proposition 3.2–3.3（PDF 第 12–14 页）；Section 4 Lemmas 4.4–4.10（PDF 第 20–31 页）；能量分解总结见 Theorem 1.1 proof（PDF 第 37–41 页）。"
+        },
+        {
+          "claim": "当 $\\alpha >0$ 时所有非紧 profile 是 Hardy 奇点上的 dilated limit solution；当 $\\alpha =0$ 时还允许中心逃逸而形成纯 Sobolev profile。",
+          "route": "把 Hardy 权在中心尺度变换下的相对位置代入方程：中心/尺度有界时权保留并收敛到 Hardy 方程，中心/尺度$\\to \\infty $时权项在局部消失而得到无权 Sobolev 方程；Lemma 4.8–4.10 分别控制两种极限的误差与相互排斥。",
+          "evidence": "Section 4 Lemmas 4.8–4.10（PDF 第 23–26、38–39 页）；Theorem 1.2（PDF 第 4 页）及 $\\alpha =0$ 分解论证（PDF 第 37–41 页）。"
+        },
+        {
+          "claim": "在相应能量低于首个 profile 阈值时 PS 序列紧，从而得到正解；进一步的拓扑/变分分层产生 Theorems 1.3–1.4 的多重性。",
+          "route": "先以阈值排除任何 Hardy 或 Sobolev bubble，使 PS 序列强收敛到非零临界点；对正泛函 f 用强最大值原理保持正性，再在互不相同的 Nehari/约束层上重复最小化，利用 profile 能量量子阻止不同临界点塌缩。",
+          "evidence": "Theorems 1.3–1.4（PDF 第 4–5 页）；Section 5 Lemmas 5.1–5.3（PDF 第 34–39 页）；Section 6 Proposition 6.4 与 Theorem 1.4（PDF 第 41–44 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查正文引言、证明章节、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文逐页核查，包含主证明章节、末页致谢/声明和 References。",
+    "priorityScore": 77,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08510:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08510",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Critical fractional $p$-Hardy Sobolev equations: Global compactness and multiplicity of positive solutions",
+        "authors": [
+          "Nirjan Biswas",
+          "Souptik Chakraborty",
+          "Debangana Mukherjee"
+        ],
+        "abstract": "We study the critical fractional $p$-Hardy-Sobolev equation \\begin{equation}\\tag{$\\mathcal{P}$}\\label{a-main} (-Δ_p)^s u -μ\\dfrac{|u|^{p-2}u}{|x|^{sp}}=\\dfrac{|u|^{p^*_s(α)-2}u}{|x|^α}+f \\;\\mbox{ in }\\,\\mathbb{R}^d, \\quad u\\in \\mathcal{D}^{s,p}(\\mathbb{R}^d), \\end{equation} where $1<p<\\infty$, $0<s<1$, $0\\leqα<sp<d$, $μ>0$, $p^*_s(α):= p(d-α)/(d-sp)$ is the critical Hardy-Sobolev exponent, and $f$ is a nontrivial nonnegative functional in $(\\mathcal{D}^{s,p}(\\mathbb{R}^d))^*$. We first establish global compactness results for Palais-Smale sequences associated with the corresponding energy functional. When $α>0$, the loss of compactness is described by dilations of solutions of the Hardy-Sobolev limit problem. The case $α=0$ has a different structure: in addition to Hardy profiles, pure Sobolev profiles may occur when the centre of concentration escapes from the Hardy singularity relative to its scale. We give a direct centre-scale analysis of these two concentration regimes and obtain the corresponding energy decomposition and profile separation. As an application, under an explicit smallness assumption on $f$, we first obtain a positive solution for \\eqref{a-main} with negative energy. We then construct a nonlinear path based on hidden convexity whose energy remains strictly below the first bubbling threshold. A minimax argument, combined with the global compactness theorem, then yields a second distinct positive solution for \\eqref{a-main}.",
+        "categories": [
+          "math.AP",
+          "math.FA"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08510",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08510",
+        "submittedAt": "2026-09-08T09:56:58Z",
+        "updatedAt": "2026-09-08T09:56:58Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "$theorem_proof_reviewed$",
+        "workSummary": "论文研究临界分数阶 p-Hardy–Sobolev 方程中 Palais–Smale 序列的全局紧性与正解多重性。方程含 Hardy 权 $|x|^{-sp}$、临界指数 $p_s*(\\alpha )$ 和非负泛函 f；正文第 1–3 节建立分数阶 Sobolev/Hardy 工具和 PS 分解，第 4 节按尺度与中心位置分析浓缩，第 5–6 节将 profile decomposition 应用于 $\\alpha >0$ 的 Hardy $bubble、\\alpha =0$ 时逃离奇点的纯 Sobolev bubble，并用变分阈值获得 Theorems 1.1–1.4 的正解存在/多重性。",
+        "techniques": [
+          "分数阶 Hardy–Sobolev 不等式",
+          "extension/非局部能量",
+          "concentration–compactness",
+          "中心—尺度 profile decomposition",
+          "Nehari/Palais–Smale 变分法"
+        ],
+        "breakthrough": "论文明确分离了两种此前容易混淆的失紧机制$：\\alpha >0$ 时浓缩中心随尺度锁在 Hardy 奇点$，\\alpha =0$ 时中心相对尺度逃离奇点并产生纯 Sobolev profile；该中心—尺度分析给出精确能量分解，并把不同阈值下的正解构造连接起来。",
+        "limitations": "参数需 $1<p<\\infty 、0<s<1、0\\le \\alpha <sp<d、\\mu >0$ 且 f 为非平凡非负对偶泛函$；\\alpha =0$ 的额外逃逸 profile 使紧性更弱，多重性结论依赖文中能量阈值/小扰动条件，不能简化为一般临界方程的无条件存在。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "临界能量泛函的 PS 序列在局部强收敛失败时只能由尺度化 Hardy profile（以及 $\\alpha =0$ 时的纯 Sobolev profile）贡献缺失能量。",
+              "route": "先用 Hardy–Sobolev 临界嵌入和分数阶能量界提取弱极限，再在每个坏尺度作 $blow-up；\\alpha >0$ 时把中心相对尺度归一化到原点$，\\alpha =0$ 时把中心/尺度比趋无穷的序列另行重标度，剥离出极限方程的非零 profile。",
+              "evidence": "Theorem 1.1–1.2（PDF 第 1–4 页）；Section 2 Lemmas 2.1–2.5 与 Section 3 Proposition 3.1（PDF 第 10–14 页）。"
+            },
+            {
+              "claim": "不同 profile 的中心与尺度渐近正交，且总能量分解为弱极限、各 profile 能量和 vanishing remainder。",
+              "route": "对两个候选 bubble 比较尺度比和中心距离，利用分数阶核的双线性交叉项趋零；迭代剥离后，若余项仍超过固定阈值则继续提取，有限能量保证 profile 数量有限，并由 Brezis–Lieb 型分解得到范数/能量加法。",
+              "evidence": "Section 3 Proposition 3.2–3.3（PDF 第 12–14 页）；Section 4 Lemmas 4.4–4.10（PDF 第 20–31 页）；能量分解总结见 Theorem 1.1 proof（PDF 第 37–41 页）。"
+            },
+            {
+              "claim": "当 $\\alpha >0$ 时所有非紧 profile 是 Hardy 奇点上的 dilated limit solution；当 $\\alpha =0$ 时还允许中心逃逸而形成纯 Sobolev profile。",
+              "route": "把 Hardy 权在中心尺度变换下的相对位置代入方程：中心/尺度有界时权保留并收敛到 Hardy 方程，中心/尺度$\\to \\infty $时权项在局部消失而得到无权 Sobolev 方程；Lemma 4.8–4.10 分别控制两种极限的误差与相互排斥。",
+              "evidence": "Section 4 Lemmas 4.8–4.10（PDF 第 23–26、38–39 页）；Theorem 1.2（PDF 第 4 页）及 $\\alpha =0$ 分解论证（PDF 第 37–41 页）。"
+            },
+            {
+              "claim": "在相应能量低于首个 profile 阈值时 PS 序列紧，从而得到正解；进一步的拓扑/变分分层产生 Theorems 1.3–1.4 的多重性。",
+              "route": "先以阈值排除任何 Hardy 或 Sobolev bubble，使 PS 序列强收敛到非零临界点；对正泛函 f 用强最大值原理保持正性，再在互不相同的 Nehari/约束层上重复最小化，利用 profile 能量量子阻止不同临界点塌缩。",
+              "evidence": "Theorems 1.3–1.4（PDF 第 4–5 页）；Section 5 Lemmas 5.1–5.3（PDF 第 34–39 页）；Section 6 Proposition 6.4 与 Theorem 1.4（PDF 第 41–44 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查正文引言、证明章节、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文逐页核查，包含主证明章节、末页致谢/声明和 References。",
+        "priorityScore": 77,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

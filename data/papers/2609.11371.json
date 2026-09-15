@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11371",
+  "slug": "2609.11371",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11371:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11371",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Emergence of a convex strange term via homogenization of non-local energies at the critical exponent",
+    "authors": [
+      "Giuseppe Cosma Brusca",
+      "Giuliana Fusco"
+    ],
+    "abstract": "We derive the $\\Gamma$-limit of convolution-type and discrete energies subject to Dirichlet boundary conditions on periodically perforated domains at the critical exponent. We assume that the length-scale of the non-local interactions is much smaller than the side-length of the cubic perforations and prove that a separation of scales occurs. Exploiting the analogies between the variational frameworks of our interest, we employ a unified argument to overcome the technical difficulties that arise from the scaling invariance of the energies. Our multiscale analysis yields a novel observation that is not related to the non-local nature of the functionals, but rather to the analysis at the critical exponent: we prove that the energy density of the $\\textit{strange term}$ is convex, even in the vector-valued setting.",
+    "categories": [
+      "math.AP",
+      "math.OC"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11371",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11371",
+    "submittedAt": "2026-09-10T11:08:05Z",
+    "updatedAt": "2026-09-10T11:08:05Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "变分极限",
+    "workSummary": "论文研究周期穿孔域上卷积型和离散非局部能量的临界 $\\Gamma -$极限。通过局部容量剖面、非局部相互作用尺度分离和 recovery sequence，作者证明额外 strange term 的能量密度在向量值情形仍为凸函数。",
+    "techniques": [
+      "$\\Gamma -$收敛",
+      "容量剖面",
+      "多尺度分离",
+      "凸包/双共轭",
+      "recovery sequence"
+    ],
+    "breakthrough": "揭示临界尺度下 strange term 的非局部来源可与相互作用长度分离，并证明其向量值能量密度的凸性。",
+    "limitations": "结果依赖周期立方穿孔、临界尺度和连续/齐次能量密度；非周期孔洞或临界尺度之外的极限未被统一处理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorems 3.2、3.4 把连续与离散非局部能量的临界局部模型归约到容量问题。",
+          "route": "先在穿孔立方附近缩放卷积核和边界数据，把远场贡献分离为局部常数；下界用截断函数和容量控制，上界用局部最优剖面拼接，确定单孔 strange-term 密度。",
+          "evidence": "PDF 第 8–10 页，Theorems 3.2、3.4。"
+        },
+        {
+          "claim": "Propositions 4.3–4.8 建立临界尺度下剖面族的分离与收敛。",
+          "route": "对环带 Q(L)\\Q(ℓ) 上的剖面使用 Poincaré/容量比较，先让相互作用长度与孔边长按不同顺序趋零，再通过单调截断和局部均匀收敛控制两尺度交叉项。",
+          "evidence": "PDF 第 11–15 页，Propositions 4.3–4.8。"
+        },
+        {
+          "claim": "Propositions 4.9–4.11 证明 strange-term 密度是凸的。",
+          "route": "对 d-齐次非负密度 g 与 coercive $\\psi $，构造 $\\psi $ 的双共轭 $\\psi **；Proposition$ 4.10 的凸包表示给出 $\\psi \\le \\psi **$，而 Proposition 4.11 通过局部拼接剖面反向实现 $\\psi **$，遂得到凸性。",
+          "evidence": "PDF 第 14–15 页，Propositions 4.9–4.11。"
+        },
+        {
+          "claim": "Lemmas 6.1–6.3 把局部剖面能量传递到全局 $\\Gamma -liminf/\\Gamma -limsup$。",
+          "route": "覆盖穿孔域并用 Lemma 6.2 的局部收敛控制每个孔附近的能量缺陷，Lemma 6.3 处理离散采样误差；对恢复序列求和后得到含凸 strange term 的全局极限。",
+          "evidence": "PDF 第 23–33 页，Lemmas 6.1–6.3。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 86,
+    "priorityTier": "high",
+    "priorityReason": "临界指数非局部 $\\Gamma -$收敛与凸 strange term 是变分分析核心。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11371:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11371",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Emergence of a convex strange term via homogenization of non-local energies at the critical exponent",
+        "authors": [
+          "Giuseppe Cosma Brusca",
+          "Giuliana Fusco"
+        ],
+        "abstract": "We derive the $\\Gamma$-limit of convolution-type and discrete energies subject to Dirichlet boundary conditions on periodically perforated domains at the critical exponent. We assume that the length-scale of the non-local interactions is much smaller than the side-length of the cubic perforations and prove that a separation of scales occurs. Exploiting the analogies between the variational frameworks of our interest, we employ a unified argument to overcome the technical difficulties that arise from the scaling invariance of the energies. Our multiscale analysis yields a novel observation that is not related to the non-local nature of the functionals, but rather to the analysis at the critical exponent: we prove that the energy density of the $\\textit{strange term}$ is convex, even in the vector-valued setting.",
+        "categories": [
+          "math.AP",
+          "math.OC"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11371",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11371",
+        "submittedAt": "2026-09-10T11:08:05Z",
+        "updatedAt": "2026-09-10T11:08:05Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "变分极限",
+        "workSummary": "论文研究周期穿孔域上卷积型和离散非局部能量的临界 $\\Gamma -$极限。通过局部容量剖面、非局部相互作用尺度分离和 recovery sequence，作者证明额外 strange term 的能量密度在向量值情形仍为凸函数。",
+        "techniques": [
+          "$\\Gamma -$收敛",
+          "容量剖面",
+          "多尺度分离",
+          "凸包/双共轭",
+          "recovery sequence"
+        ],
+        "breakthrough": "揭示临界尺度下 strange term 的非局部来源可与相互作用长度分离，并证明其向量值能量密度的凸性。",
+        "limitations": "结果依赖周期立方穿孔、临界尺度和连续/齐次能量密度；非周期孔洞或临界尺度之外的极限未被统一处理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorems 3.2、3.4 把连续与离散非局部能量的临界局部模型归约到容量问题。",
+              "route": "先在穿孔立方附近缩放卷积核和边界数据，把远场贡献分离为局部常数；下界用截断函数和容量控制，上界用局部最优剖面拼接，确定单孔 strange-term 密度。",
+              "evidence": "PDF 第 8–10 页，Theorems 3.2、3.4。"
+            },
+            {
+              "claim": "Propositions 4.3–4.8 建立临界尺度下剖面族的分离与收敛。",
+              "route": "对环带 Q(L)\\Q(ℓ) 上的剖面使用 Poincaré/容量比较，先让相互作用长度与孔边长按不同顺序趋零，再通过单调截断和局部均匀收敛控制两尺度交叉项。",
+              "evidence": "PDF 第 11–15 页，Propositions 4.3–4.8。"
+            },
+            {
+              "claim": "Propositions 4.9–4.11 证明 strange-term 密度是凸的。",
+              "route": "对 d-齐次非负密度 g 与 coercive $\\psi $，构造 $\\psi $ 的双共轭 $\\psi **；Proposition$ 4.10 的凸包表示给出 $\\psi \\le \\psi **$，而 Proposition 4.11 通过局部拼接剖面反向实现 $\\psi **$，遂得到凸性。",
+              "evidence": "PDF 第 14–15 页，Propositions 4.9–4.11。"
+            },
+            {
+              "claim": "Lemmas 6.1–6.3 把局部剖面能量传递到全局 $\\Gamma -liminf/\\Gamma -limsup$。",
+              "route": "覆盖穿孔域并用 Lemma 6.2 的局部收敛控制每个孔附近的能量缺陷，Lemma 6.3 处理离散采样误差；对恢复序列求和后得到含凸 strange term 的全局极限。",
+              "evidence": "PDF 第 23–33 页，Lemmas 6.1–6.3。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 86,
+        "priorityTier": "high",
+        "priorityReason": "临界指数非局部 $\\Gamma -$收敛与凸 strange term 是变分分析核心。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

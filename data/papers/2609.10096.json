@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10096",
+  "slug": "2609.10096",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.10096:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.10096",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Observability and controllability for the Schrödinger equation on polyhedra",
+    "authors": [
+      "Wei Qu",
+      "Zhiwen Duan"
+    ],
+    "abstract": "We consider the observability and controllability for the Schrödinger equation on polyhedra. We show that for the Schrödinger equation on convex polyhedra in $\\mathbb{R}^d\\,(d\\geq2)$, when the initial data possess $H^s\\,(s>d/2)$ regularity, observability and controllability hold, with the control region being an arbitrary nonempty open neighborhood of the singular set of the boundary, which is the same as the control region for eigenfunctions. Our proof of observability is a concrete adaptation of the method in the Burq--Zworski black box control work, where the observability inequality is proved via a resolvent estimate. Hence, before proving observability, we present an observability resolvent estimate on polyhedra. The idea of the proof of this resolvent estimate comes from the case of eigenfunction concentration on polyhedra considered by Cekić--Georgiev--Mukherjee, which uses semiclassical measures and relies closely on the dynamical properties of the billiard flow in polyhedra. Finally, by a standard HUM argument, we show that observability implies controllability.",
+    "categories": [
+      "math.OC",
+      "math.AP"
+    ],
+    "primaryCategory": "math.OC",
+    "arxivUrl": "https://arxiv.org/abs/2609.10096",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10096",
+    "submittedAt": "2026-09-09T12:22:03Z",
+    "updatedAt": "2026-09-09T12:22:03Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "论文证明凸多面体上 Dirichlet Schrödinger 方程的观测性：只要控制区 U 是奇异边界集合 S 的任意非空开邻域，长于某个 T0 的时间内即可从 U 上的 L2 观测控制全域初值，并由 HUM 得到同一区域的可控性。证明核心是高频 resolvent 估计。作者利用凸多面体 billiard flow 的周期 tube 结构和 doubling，把假设 resolvent 估计失败的序列转成周期管上的近似驻波；沿管方向作 Bohr–Fourier 展开并用横截面椭圆估计，在 U 不可见的假设下迫使极限测度同时消失和归一化矛盾。再通过频率分解和 Schrödinger 半群 TT* 参数积分得到时间观测不等式。",
+    "techniques": [
+      "resolvent observability",
+      "billiard periodic tubes",
+      "doubling of polyhedra",
+      "Bohr–Fourier reduction",
+      "HUM controllability"
+    ],
+    "breakthrough": "把 Burq–Zworski black-box 观测方法具体化到凸多面体的角点奇异几何，证明控制区无需覆盖内部，只需邻域化 singular set 即可在长时间观测和控制 Schrödinger 解。",
+    "limitations": "初值正则性要求 $H^s(P)$, s>d/2 以保证空间连续性，控制区必须邻域覆盖全部奇异集且观测时间 T>T0；结果针对凸多面体和 Dirichlet 边界，未声称 L2 初值、非凸多面体或短时间控制。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "凸多面体中不撞击奇异集的 billiard 轨道被包含在具有凸截面的 immersed periodic tube 内。",
+          "route": "对多面体作 doubling，把反射轨道变成无边界流；凸性和有限面结构排除无限新方向，周期性返回给出 tube，横截面凸性保证后续 Fourier/椭圆分解可用。",
+          "evidence": "PDF 第 5-8 页 Section 2.1 Propositions 2.3–2.10，尤其 Proposition 2.3 和 Corollary 2.7。"
+        },
+        {
+          "claim": "高频 Dirichlet resolvent 满足 $||u||_{L2(P)}\\le C(||u||_{L2(U)}+||f||_{L2(P)})$。",
+          "route": "反设存在归一化解而 U 内质量和源项趋零；在 periodic tube 上截断并作 Bohr–Fourier 展开，横截面方程与唯一延拓迫使每个频率分量消失；半经典测度的传播则把管外残余质量沿 billiard 流带入 U，矛盾于归一化。",
+          "evidence": "PDF 第 8-12 页 Section 3 Proposition 3.1，equations (3.1)–(3.12)。"
+        },
+        {
+          "claim": "resolvent 估计经频率分解和 TT* 转化为长时间 Schrödinger 观测不等式。",
+          "route": "将解写为谱积分，对低频部分用有限模态控制，对高频部分插入 resolvent 界；时间 Fourier/Plancherel 将每个频率片的 U 观测平方和，TT* 消除交叉项并在 T>T0 时闭合全局 L2 初值估计。",
+          "evidence": "PDF 第 12-18 页 Section 3 proof of Theorem 1.1，equations (3.13)–(3.38)。"
+        },
+        {
+          "claim": "观测不等式通过 HUM 给出 U 内部控制使任意 $H^s$ 初值在 T 时归零。",
+          "route": "把观测算子 $W_T$ 与其伴随组成 Gramian，观测下界使 Gramian coercive；Lax–Milgram 解出最小能量伴随初值，取其受限源项作为控制，终端对偶配对为零，得到控制函数的 $H^s$ 空间界。",
+          "evidence": "PDF 第 3 页 Theorem 1.2 及第 17-18 页 HUM argument after Theorem 1.1，equations (1.5)–(1.6)、(3.39)–(3.46)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 2–3、billiard/resolvent 证明、HUM 论证、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-18 页全文。",
+    "priorityScore": 65,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10096:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.10096",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Observability and controllability for the Schrödinger equation on polyhedra",
+        "authors": [
+          "Wei Qu",
+          "Zhiwen Duan"
+        ],
+        "abstract": "We consider the observability and controllability for the Schrödinger equation on polyhedra. We show that for the Schrödinger equation on convex polyhedra in $\\mathbb{R}^d\\,(d\\geq2)$, when the initial data possess $H^s\\,(s>d/2)$ regularity, observability and controllability hold, with the control region being an arbitrary nonempty open neighborhood of the singular set of the boundary, which is the same as the control region for eigenfunctions. Our proof of observability is a concrete adaptation of the method in the Burq--Zworski black box control work, where the observability inequality is proved via a resolvent estimate. Hence, before proving observability, we present an observability resolvent estimate on polyhedra. The idea of the proof of this resolvent estimate comes from the case of eigenfunction concentration on polyhedra considered by Cekić--Georgiev--Mukherjee, which uses semiclassical measures and relies closely on the dynamical properties of the billiard flow in polyhedra. Finally, by a standard HUM argument, we show that observability implies controllability.",
+        "categories": [
+          "math.OC",
+          "math.AP"
+        ],
+        "primaryCategory": "math.OC",
+        "arxivUrl": "https://arxiv.org/abs/2609.10096",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10096",
+        "submittedAt": "2026-09-09T12:22:03Z",
+        "updatedAt": "2026-09-09T12:22:03Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "论文证明凸多面体上 Dirichlet Schrödinger 方程的观测性：只要控制区 U 是奇异边界集合 S 的任意非空开邻域，长于某个 T0 的时间内即可从 U 上的 L2 观测控制全域初值，并由 HUM 得到同一区域的可控性。证明核心是高频 resolvent 估计。作者利用凸多面体 billiard flow 的周期 tube 结构和 doubling，把假设 resolvent 估计失败的序列转成周期管上的近似驻波；沿管方向作 Bohr–Fourier 展开并用横截面椭圆估计，在 U 不可见的假设下迫使极限测度同时消失和归一化矛盾。再通过频率分解和 Schrödinger 半群 TT* 参数积分得到时间观测不等式。",
+        "techniques": [
+          "resolvent observability",
+          "billiard periodic tubes",
+          "doubling of polyhedra",
+          "Bohr–Fourier reduction",
+          "HUM controllability"
+        ],
+        "breakthrough": "把 Burq–Zworski black-box 观测方法具体化到凸多面体的角点奇异几何，证明控制区无需覆盖内部，只需邻域化 singular set 即可在长时间观测和控制 Schrödinger 解。",
+        "limitations": "初值正则性要求 $H^s(P)$, s>d/2 以保证空间连续性，控制区必须邻域覆盖全部奇异集且观测时间 T>T0；结果针对凸多面体和 Dirichlet 边界，未声称 L2 初值、非凸多面体或短时间控制。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "凸多面体中不撞击奇异集的 billiard 轨道被包含在具有凸截面的 immersed periodic tube 内。",
+              "route": "对多面体作 doubling，把反射轨道变成无边界流；凸性和有限面结构排除无限新方向，周期性返回给出 tube，横截面凸性保证后续 Fourier/椭圆分解可用。",
+              "evidence": "PDF 第 5-8 页 Section 2.1 Propositions 2.3–2.10，尤其 Proposition 2.3 和 Corollary 2.7。"
+            },
+            {
+              "claim": "高频 Dirichlet resolvent 满足 $||u||_{L2(P)}\\le C(||u||_{L2(U)}+||f||_{L2(P)})$。",
+              "route": "反设存在归一化解而 U 内质量和源项趋零；在 periodic tube 上截断并作 Bohr–Fourier 展开，横截面方程与唯一延拓迫使每个频率分量消失；半经典测度的传播则把管外残余质量沿 billiard 流带入 U，矛盾于归一化。",
+              "evidence": "PDF 第 8-12 页 Section 3 Proposition 3.1，equations (3.1)–(3.12)。"
+            },
+            {
+              "claim": "resolvent 估计经频率分解和 TT* 转化为长时间 Schrödinger 观测不等式。",
+              "route": "将解写为谱积分，对低频部分用有限模态控制，对高频部分插入 resolvent 界；时间 Fourier/Plancherel 将每个频率片的 U 观测平方和，TT* 消除交叉项并在 T>T0 时闭合全局 L2 初值估计。",
+              "evidence": "PDF 第 12-18 页 Section 3 proof of Theorem 1.1，equations (3.13)–(3.38)。"
+            },
+            {
+              "claim": "观测不等式通过 HUM 给出 U 内部控制使任意 $H^s$ 初值在 T 时归零。",
+              "route": "把观测算子 $W_T$ 与其伴随组成 Gramian，观测下界使 Gramian coercive；Lax–Milgram 解出最小能量伴随初值，取其受限源项作为控制，终端对偶配对为零，得到控制函数的 $H^s$ 空间界。",
+              "evidence": "PDF 第 3 页 Theorem 1.2 及第 17-18 页 HUM argument after Theorem 1.1，equations (1.5)–(1.6)、(3.39)–(3.46)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 2–3、billiard/resolvent 证明、HUM 论证、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-18 页全文。",
+        "priorityScore": 65,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

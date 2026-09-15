@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08640",
+  "slug": "2609.08640",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08640:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08640",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Modulated Gibbs Measure and Mean-Field Limit for 3D Vlasov--Poisson--Fokker--Planck Equations",
+    "authors": [
+      "Xuanrui Feng",
+      "Zhenfu Wang"
+    ],
+    "abstract": "We introduce a modulated Gibbs measure for the usual tensorized initial data for stochastic Newton's systems with singular repulsive interactions. Using the uniform-in-$N$ partition-function estimates of Wang--Zhao \\cite{wang2026uniform}, we show that the modulated Gibbs measure and its tensorized reference are $O(N^{-1})$-close in normalized relative entropy. A stability argument then transfers propagation of chaos from modulated Gibbs measures to tensorized data and other initial laws at the same entropy scale. Combined with the weighted BBGKY estimates of Bresch--Jabin--Soler \\cite{bresch2025new}, this yields the first cutoff-free mean-field limit and propagation of chaos for the three-dimensional Vlasov--Poisson--Fokker--Planck (VPFP) equation on an $N$-independent short-time interval.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08640",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08640",
+    "submittedAt": "2026-09-08T12:08:33Z",
+    "updatedAt": "2026-09-08T12:08:33Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文为具有奇异排斥 Riesz 相互作用的随机 Newton 系统引入相对于给定单粒子密度的 modulated Gibbs 初始律。均匀 N 无关的配分函数界把 Gibbs 倾斜与张量积参考律之间的归一化相对熵控制在 $O(N^{-1})；modulated$ free energy 的演化恒等式把该控制传给带速度扩散的 N 粒子方程。作者用熵稳定性和 Donsker–Varadhan 不等式先把 Gibbs 初律的 chaos 转移到一般熵相近初律，再调用加权 BBGKY 估计，得到三维无截断 VPFP 在 N 无关短时间内的 mean-field limit。",
+    "techniques": [
+      "奇异 Riesz 势的均匀配分函数估计",
+      "modulated Gibbs 权与 modulated free energy",
+      "相对熵/相对 Fisher 信息耗散恒等式",
+      "Donsker–Varadhan 熵不等式与经验测度 chaos 转移",
+      "加权 BBGKY 层级估计"
+    ],
+    "breakthrough": "将通常张量积初始数据归约到抑制近碰撞的 modulated Gibbs 律，并在此基础上给出三维 VPFP 排斥库仑相互作用的首个无 N 依赖截断短时 mean-field/propagation-of-chaos 结果。",
+    "limitations": "Theorem 1.3 需要 f0 有界、空间边缘有界、速度或全相空间指数矩、光滑且 VPFP 在固定区间有唯一光滑解；时间只到依赖数据的短区间 T*。论文不处理长时间极限、三维无扩散 Vlasov–Poisson 或吸引相互作用；Theorem 1.2 还以从 Gibbs 初律出发的 chaos 作为条件输入。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "modulated Gibbs 配分函数 $Z_{N,\\beta }$ 在 N 上有统一上下界，因而 Gibbs 律定义良好。",
+          "route": "将相互作用的 modulated energy 只写成空间边缘的 N 体积分；排斥 Riesz 势下直接用 Jensen 得下界，用 Wang–Zhao 的均匀配分函数估计给上界。该双边界使指数倾斜不会产生 N 级归一化损失。",
+          "evidence": "PDF 第6页第2.1节 Proposition 2.1；PDF 第7页配分函数证明及势的条件(1.6)/(1.8)。"
+        },
+        {
+          "claim": "modulated free energy 等于相对于 Gibbs 律的归一化相对熵（差一个 $O(N^{-1})$ 配分函数项），并具有 Fisher 信息耗散。",
+          "route": "把 Gibbs 密度定义代入相对熵，得到 Proposition 2.4 的自由能恒等式；对 N 粒子 Fokker–Planck 与极限 VPFP 方程分别做熵和 modulated energy 的时间微分，速度扩散给出 $-\\beta ^{-1}$ $I_N^v$，剩余项合并成 commutator $C_N[a_f]$。",
+          "evidence": "PDF 第7–8页 Proposition 2.4；PDF 第8页 Proposition 2.6 的演化公式与证明。"
+        },
+        {
+          "claim": "若 Gibbs 初律的解满足 chaos，则张量积初律及 $O(N^{-1})$ 相对熵邻域内的初律也满足同一 chaos。",
+          "route": "Lemma 2.7 用配分函数上下界与 Donsker–Varadhan 变分不等式证明 Gibbs 律与 $f0^{⊗N}$ 双向相对熵均为 $O(N^{-1})；Proposition$ 3.1 通过正则化方程的 Fisher 耗散把相对熵界沿时间保持；Lemma 3.3 在经验测度坏事件上再用 Donsker–Varadhan 界传递概率趋零。",
+          "evidence": "PDF 第9页 Lemma 2.7；PDF 第10页 Proposition 3.1；PDF 第11页 Lemma 3.3 及 Theorem 1.2 证明。"
+        },
+        {
+          "claim": "在三维 VPFP 的 Riesz/Coulomb 条件下，Gibbs 初律的加权 BBGKY 界在某个 N 无关 T* 内成立，从而得到 Theorem 1.3。",
+          "route": "对加权 k 粒子边缘施加 BBGKY 方程，选择随时间衰减的 $\\lambda (t)$，把输运、速度扩散和奇异力项逐项积分分部；Holder 后得到 k 层递推并用 Gronwall/归纳控制所有固定边缘。再将该 Gibbs chaos 代入 Theorem 1.2 的熵转移机制。",
+          "evidence": "PDF 第12页 Proposition 3.4–3.5；PDF 第13页加权 BBGKY 微分不等式；PDF 第12页 Theorem 1.3 证明起点及 Theorem 1.3 正文（第4页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查摘要、引言、Section 2–3、Acknowledgements 与 References，并全文检索 AI、LLM、ChatGPT、Claude、人工智能；未发现作者明确披露相关使用。",
+    "aiEvidenceSource": "PDF 第1–15页全文及末尾致谢/参考文献。",
+    "priorityScore": 62,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08640:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08640",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Modulated Gibbs Measure and Mean-Field Limit for 3D Vlasov--Poisson--Fokker--Planck Equations",
+        "authors": [
+          "Xuanrui Feng",
+          "Zhenfu Wang"
+        ],
+        "abstract": "We introduce a modulated Gibbs measure for the usual tensorized initial data for stochastic Newton's systems with singular repulsive interactions. Using the uniform-in-$N$ partition-function estimates of Wang--Zhao \\cite{wang2026uniform}, we show that the modulated Gibbs measure and its tensorized reference are $O(N^{-1})$-close in normalized relative entropy. A stability argument then transfers propagation of chaos from modulated Gibbs measures to tensorized data and other initial laws at the same entropy scale. Combined with the weighted BBGKY estimates of Bresch--Jabin--Soler \\cite{bresch2025new}, this yields the first cutoff-free mean-field limit and propagation of chaos for the three-dimensional Vlasov--Poisson--Fokker--Planck (VPFP) equation on an $N$-independent short-time interval.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08640",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08640",
+        "submittedAt": "2026-09-08T12:08:33Z",
+        "updatedAt": "2026-09-08T12:08:33Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文为具有奇异排斥 Riesz 相互作用的随机 Newton 系统引入相对于给定单粒子密度的 modulated Gibbs 初始律。均匀 N 无关的配分函数界把 Gibbs 倾斜与张量积参考律之间的归一化相对熵控制在 $O(N^{-1})；modulated$ free energy 的演化恒等式把该控制传给带速度扩散的 N 粒子方程。作者用熵稳定性和 Donsker–Varadhan 不等式先把 Gibbs 初律的 chaos 转移到一般熵相近初律，再调用加权 BBGKY 估计，得到三维无截断 VPFP 在 N 无关短时间内的 mean-field limit。",
+        "techniques": [
+          "奇异 Riesz 势的均匀配分函数估计",
+          "modulated Gibbs 权与 modulated free energy",
+          "相对熵/相对 Fisher 信息耗散恒等式",
+          "Donsker–Varadhan 熵不等式与经验测度 chaos 转移",
+          "加权 BBGKY 层级估计"
+        ],
+        "breakthrough": "将通常张量积初始数据归约到抑制近碰撞的 modulated Gibbs 律，并在此基础上给出三维 VPFP 排斥库仑相互作用的首个无 N 依赖截断短时 mean-field/propagation-of-chaos 结果。",
+        "limitations": "Theorem 1.3 需要 f0 有界、空间边缘有界、速度或全相空间指数矩、光滑且 VPFP 在固定区间有唯一光滑解；时间只到依赖数据的短区间 T*。论文不处理长时间极限、三维无扩散 Vlasov–Poisson 或吸引相互作用；Theorem 1.2 还以从 Gibbs 初律出发的 chaos 作为条件输入。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "modulated Gibbs 配分函数 $Z_{N,\\beta }$ 在 N 上有统一上下界，因而 Gibbs 律定义良好。",
+              "route": "将相互作用的 modulated energy 只写成空间边缘的 N 体积分；排斥 Riesz 势下直接用 Jensen 得下界，用 Wang–Zhao 的均匀配分函数估计给上界。该双边界使指数倾斜不会产生 N 级归一化损失。",
+              "evidence": "PDF 第6页第2.1节 Proposition 2.1；PDF 第7页配分函数证明及势的条件(1.6)/(1.8)。"
+            },
+            {
+              "claim": "modulated free energy 等于相对于 Gibbs 律的归一化相对熵（差一个 $O(N^{-1})$ 配分函数项），并具有 Fisher 信息耗散。",
+              "route": "把 Gibbs 密度定义代入相对熵，得到 Proposition 2.4 的自由能恒等式；对 N 粒子 Fokker–Planck 与极限 VPFP 方程分别做熵和 modulated energy 的时间微分，速度扩散给出 $-\\beta ^{-1}$ $I_N^v$，剩余项合并成 commutator $C_N[a_f]$。",
+              "evidence": "PDF 第7–8页 Proposition 2.4；PDF 第8页 Proposition 2.6 的演化公式与证明。"
+            },
+            {
+              "claim": "若 Gibbs 初律的解满足 chaos，则张量积初律及 $O(N^{-1})$ 相对熵邻域内的初律也满足同一 chaos。",
+              "route": "Lemma 2.7 用配分函数上下界与 Donsker–Varadhan 变分不等式证明 Gibbs 律与 $f0^{⊗N}$ 双向相对熵均为 $O(N^{-1})；Proposition$ 3.1 通过正则化方程的 Fisher 耗散把相对熵界沿时间保持；Lemma 3.3 在经验测度坏事件上再用 Donsker–Varadhan 界传递概率趋零。",
+              "evidence": "PDF 第9页 Lemma 2.7；PDF 第10页 Proposition 3.1；PDF 第11页 Lemma 3.3 及 Theorem 1.2 证明。"
+            },
+            {
+              "claim": "在三维 VPFP 的 Riesz/Coulomb 条件下，Gibbs 初律的加权 BBGKY 界在某个 N 无关 T* 内成立，从而得到 Theorem 1.3。",
+              "route": "对加权 k 粒子边缘施加 BBGKY 方程，选择随时间衰减的 $\\lambda (t)$，把输运、速度扩散和奇异力项逐项积分分部；Holder 后得到 k 层递推并用 Gronwall/归纳控制所有固定边缘。再将该 Gibbs chaos 代入 Theorem 1.2 的熵转移机制。",
+              "evidence": "PDF 第12页 Proposition 3.4–3.5；PDF 第13页加权 BBGKY 微分不等式；PDF 第12页 Theorem 1.3 证明起点及 Theorem 1.3 正文（第4页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查摘要、引言、Section 2–3、Acknowledgements 与 References，并全文检索 AI、LLM、ChatGPT、Claude、人工智能；未发现作者明确披露相关使用。",
+        "aiEvidenceSource": "PDF 第1–15页全文及末尾致谢/参考文献。",
+        "priorityScore": 62,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

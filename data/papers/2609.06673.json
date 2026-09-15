@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06673",
+  "slug": "2609.06673",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06673:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06673",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Singular Extremal Solutions on Thin Ellipsoids with Varying Nonlinearities",
+    "authors": [
+      "Bao Yu",
+      "Yang Zhou"
+    ],
+    "abstract": "Let $N=m+1$ and consider the thin ellipsoid \\[ Ω_\\varepsilon=\\{(y,x_N)\\in\\mathbb R^m\\times\\mathbb R:\\ |y|^2+\\varepsilon^{-2}x_N^2<1\\}. \\] We prove that in every sufficiently large dimension, for every sufficiently small $\\varepsilon>0$, there exists a smooth positive, strictly increasing, strictly convex, superlinear nonlinearity $f_\\varepsilon$ for which the extremal solution in $Ω_\\varepsilon$ is an unbounded $H^1_0$ solution. Combining this result with Dancer's thin-domain regularity theorem for the Gelfand nonlinearity $f(t)=e^t$, we obtain on the same sufficiently thin ellipsoids a bounded Gelfand extremal solution and an unbounded extremal solution for another nonlinearity. Thus, in this two-part sense, Brézis' Open Problem~6.1 is resolved in every sufficiently large dimension.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06673",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06673",
+    "submittedAt": "2026-09-06T15:24:49Z",
+    "updatedAt": "2026-09-06T15:24:49Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文研究高维薄椭球上的半线性 Dirichlet 极值解。作者先把薄椭球缩放为圆柱域，围绕常边界问题 $-\\Delta q=\\Lambda _{0}(q+q^{2})$ 构造随边界参数变化的最小正解分支，再用三种尺度的 blow-up 分析控制分支的径向幅度和尾部。高维条件 $m\\ge m1\\ge 17$ 使 Hardy 不等式与薄方向 Poincaré gap 合起来给出分支一致的 Jacobi 算子 coercivity；加权 Lyapunov–Schmidt 构造也提供阈值附近的模型。最后把边界参数推进到极值端点：若端点有界，椭圆正则性和统一谱隙会继续分支，矛盾，因此得到 $H01\\cap L3$ 但不属于 $L\\infty $ 的半稳定极值解，并与 Gelfand 非线性的有界性结果组合解决 Brézis 问题的两部分。",
+    "techniques": [
+      "薄椭球到圆柱的重标度",
+      "三种区域的 blow-up 与径向尾部估计",
+      "Hardy 不等式和薄方向 Poincaré 谱隙",
+      "加权 Lyapunov–Schmidt 约化",
+      "单调极值分支与端点延拓反证"
+    ],
+    "breakthrough": "论文构造了同一族任意足够薄、足够高维椭球上的两种相反行为：Gelfand 非线性的极值解有界，而另一族随厚度调节的光滑凸超线性非线性具有真正无界的半稳定极值解；这使 Brézis Open Problem 6.1 的两问在同一几何族上同时得到回答。",
+    "limitations": "结论要求横向维数 $m\\ge m1\\ge 17$、厚度 $\\epsilon $ 足够小，并允许非线性 $f\\delta $ 随 $\\epsilon $ 选择且 $\\delta \\le Cm\\epsilon ^{2}$；奇异极值解的函数空间是 $H01\\cap L3$，证明依赖轴对称/偶对称 profile、半稳定性和薄椭球的特定几何。结果不说明固定任意非线性在所有维数或厚度下都奇异，也不提供端点的 $L\\infty $ 之外更高正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "薄椭球问题可化为圆柱上的常边界问题，并在最小正解分支上获得统一幅度控制。",
+          "route": "以 $y/\\epsilon 、xN/\\epsilon $ 重标度把 $\\Omega \\epsilon $ 变成 $D\\epsilon $，选取 $f\\delta (t)=1+t+\\delta (1+t)^2$ 和常边界 $\\delta $，得到 $-\\Delta q\\delta =\\Lambda _{0}(q\\delta +q\\delta ^{2})$。对径向 profile 分解横向第一特征函数与正交余项，Lemma 2.1–2.3 给出横向/径向单调性和尾部控制，三种 blow-up 区域再合并为 Theorem 3.3 的分支一致估计。",
+          "evidence": "第1节式(1.6)–(1.12)（PDF 第2–4页）；第2节 Lemma 2.1–2.3（PDF 第7–23页）；第3节 Theorem 3.3（PDF 第5页）。"
+        },
+        {
+          "claim": "阈值以下的 Dirichlet 线性化具有与 $\\delta $ 无关的正 coercivity 谱隙。",
+          "route": "将线性化二次型拆成横向梯度、径向梯度和势项；Theorem 3.3 的幅度尾估计使势项可由 Hardy 不等式吸收，薄方向的第一横向特征值提供 $\\epsilon ^{-2}$ Poincaré gap，最终得到对所有测试函数的统一正下界。",
+          "evidence": "第3节由 Theorem 3.3 推出 Proposition 3.4 的 Hardy/Poincaré 估计（PDF 第5页）；Proposition 3.4 的具体二次型不等式（PDF 第5页）。"
+        },
+        {
+          "claim": "在小尺度参数下，阈值附近存在满足归一化条件的径向偶对称 profile，且其线性化仍保持 coercivity。",
+          "route": "把 profile 方程投影到横向主模态及其正交补，构造加权乘积 resolvent；Proposition 2.18 用 Lyapunov–Schmidt 消去正交分量，在 $s^{2}=\\tau $ 参数下解投影系统，得到 $v_s=V+O(s^{2})、w_s=w0+O(s^{2})$，并保留二次型下界(2.147)。",
+          "evidence": "第2.5节 Proposition 2.18、方程(2.142)–(2.147)（PDF 第36页）。"
+        },
+        {
+          "claim": "推进单调分支到端点后，端点必无界并给出原薄椭球上的奇异半稳定极值解。",
+          "route": "令 $q\\epsilon $ 为 $\\delta ↑\\delta *$ 的单调极限；能量界和半稳定性给出 $H^{1}\\cap L^{3}$ 极限。若 $q\\epsilon $ 有界，椭圆正则性把它提升为经典解，且 Proposition 3.4 的统一谱隙允许隐函数定理继续常边界分支越过 $\\delta *$，违背极值定义，故 $q\\epsilon \\notin L\\infty $。式(4.7)的重标度把 $q\\epsilon -\\delta \\epsilon *$ 转成 u*，并由极值分支识别其参数。",
+          "evidence": "第4节端点反证与 Theorem 4.2（PDF 第59–60页）；式(4.6)–(4.8)（PDF 第59页）；第1节 Theorem 1.2（PDF 第3页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明：在准备稿件期间使用 ChatGPT (OpenAI) 协助“verifying proof ideas, converting the proof arguments into preliminary drafts, and checking the manuscript for potential logical errors”，随后作者审阅并修改全部 AI 辅助内容并承担责任。",
+    "aiEvidenceSource": "PDF 第61页“Declaration of generative AI and AI-assisted technologies in the manuscript preparation process”。",
+    "priorityScore": 64,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06673:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06673",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Singular Extremal Solutions on Thin Ellipsoids with Varying Nonlinearities",
+        "authors": [
+          "Bao Yu",
+          "Yang Zhou"
+        ],
+        "abstract": "Let $N=m+1$ and consider the thin ellipsoid \\[ Ω_\\varepsilon=\\{(y,x_N)\\in\\mathbb R^m\\times\\mathbb R:\\ |y|^2+\\varepsilon^{-2}x_N^2<1\\}. \\] We prove that in every sufficiently large dimension, for every sufficiently small $\\varepsilon>0$, there exists a smooth positive, strictly increasing, strictly convex, superlinear nonlinearity $f_\\varepsilon$ for which the extremal solution in $Ω_\\varepsilon$ is an unbounded $H^1_0$ solution. Combining this result with Dancer's thin-domain regularity theorem for the Gelfand nonlinearity $f(t)=e^t$, we obtain on the same sufficiently thin ellipsoids a bounded Gelfand extremal solution and an unbounded extremal solution for another nonlinearity. Thus, in this two-part sense, Brézis' Open Problem~6.1 is resolved in every sufficiently large dimension.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06673",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06673",
+        "submittedAt": "2026-09-06T15:24:49Z",
+        "updatedAt": "2026-09-06T15:24:49Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文研究高维薄椭球上的半线性 Dirichlet 极值解。作者先把薄椭球缩放为圆柱域，围绕常边界问题 $-\\Delta q=\\Lambda _{0}(q+q^{2})$ 构造随边界参数变化的最小正解分支，再用三种尺度的 blow-up 分析控制分支的径向幅度和尾部。高维条件 $m\\ge m1\\ge 17$ 使 Hardy 不等式与薄方向 Poincaré gap 合起来给出分支一致的 Jacobi 算子 coercivity；加权 Lyapunov–Schmidt 构造也提供阈值附近的模型。最后把边界参数推进到极值端点：若端点有界，椭圆正则性和统一谱隙会继续分支，矛盾，因此得到 $H01\\cap L3$ 但不属于 $L\\infty $ 的半稳定极值解，并与 Gelfand 非线性的有界性结果组合解决 Brézis 问题的两部分。",
+        "techniques": [
+          "薄椭球到圆柱的重标度",
+          "三种区域的 blow-up 与径向尾部估计",
+          "Hardy 不等式和薄方向 Poincaré 谱隙",
+          "加权 Lyapunov–Schmidt 约化",
+          "单调极值分支与端点延拓反证"
+        ],
+        "breakthrough": "论文构造了同一族任意足够薄、足够高维椭球上的两种相反行为：Gelfand 非线性的极值解有界，而另一族随厚度调节的光滑凸超线性非线性具有真正无界的半稳定极值解；这使 Brézis Open Problem 6.1 的两问在同一几何族上同时得到回答。",
+        "limitations": "结论要求横向维数 $m\\ge m1\\ge 17$、厚度 $\\epsilon $ 足够小，并允许非线性 $f\\delta $ 随 $\\epsilon $ 选择且 $\\delta \\le Cm\\epsilon ^{2}$；奇异极值解的函数空间是 $H01\\cap L3$，证明依赖轴对称/偶对称 profile、半稳定性和薄椭球的特定几何。结果不说明固定任意非线性在所有维数或厚度下都奇异，也不提供端点的 $L\\infty $ 之外更高正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "薄椭球问题可化为圆柱上的常边界问题，并在最小正解分支上获得统一幅度控制。",
+              "route": "以 $y/\\epsilon 、xN/\\epsilon $ 重标度把 $\\Omega \\epsilon $ 变成 $D\\epsilon $，选取 $f\\delta (t)=1+t+\\delta (1+t)^2$ 和常边界 $\\delta $，得到 $-\\Delta q\\delta =\\Lambda _{0}(q\\delta +q\\delta ^{2})$。对径向 profile 分解横向第一特征函数与正交余项，Lemma 2.1–2.3 给出横向/径向单调性和尾部控制，三种 blow-up 区域再合并为 Theorem 3.3 的分支一致估计。",
+              "evidence": "第1节式(1.6)–(1.12)（PDF 第2–4页）；第2节 Lemma 2.1–2.3（PDF 第7–23页）；第3节 Theorem 3.3（PDF 第5页）。"
+            },
+            {
+              "claim": "阈值以下的 Dirichlet 线性化具有与 $\\delta $ 无关的正 coercivity 谱隙。",
+              "route": "将线性化二次型拆成横向梯度、径向梯度和势项；Theorem 3.3 的幅度尾估计使势项可由 Hardy 不等式吸收，薄方向的第一横向特征值提供 $\\epsilon ^{-2}$ Poincaré gap，最终得到对所有测试函数的统一正下界。",
+              "evidence": "第3节由 Theorem 3.3 推出 Proposition 3.4 的 Hardy/Poincaré 估计（PDF 第5页）；Proposition 3.4 的具体二次型不等式（PDF 第5页）。"
+            },
+            {
+              "claim": "在小尺度参数下，阈值附近存在满足归一化条件的径向偶对称 profile，且其线性化仍保持 coercivity。",
+              "route": "把 profile 方程投影到横向主模态及其正交补，构造加权乘积 resolvent；Proposition 2.18 用 Lyapunov–Schmidt 消去正交分量，在 $s^{2}=\\tau $ 参数下解投影系统，得到 $v_s=V+O(s^{2})、w_s=w0+O(s^{2})$，并保留二次型下界(2.147)。",
+              "evidence": "第2.5节 Proposition 2.18、方程(2.142)–(2.147)（PDF 第36页）。"
+            },
+            {
+              "claim": "推进单调分支到端点后，端点必无界并给出原薄椭球上的奇异半稳定极值解。",
+              "route": "令 $q\\epsilon $ 为 $\\delta ↑\\delta *$ 的单调极限；能量界和半稳定性给出 $H^{1}\\cap L^{3}$ 极限。若 $q\\epsilon $ 有界，椭圆正则性把它提升为经典解，且 Proposition 3.4 的统一谱隙允许隐函数定理继续常边界分支越过 $\\delta *$，违背极值定义，故 $q\\epsilon \\notin L\\infty $。式(4.7)的重标度把 $q\\epsilon -\\delta \\epsilon *$ 转成 u*，并由极值分支识别其参数。",
+              "evidence": "第4节端点反证与 Theorem 4.2（PDF 第59–60页）；式(4.6)–(4.8)（PDF 第59页）；第1节 Theorem 1.2（PDF 第3页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明：在准备稿件期间使用 ChatGPT (OpenAI) 协助“verifying proof ideas, converting the proof arguments into preliminary drafts, and checking the manuscript for potential logical errors”，随后作者审阅并修改全部 AI 辅助内容并承担责任。",
+        "aiEvidenceSource": "PDF 第61页“Declaration of generative AI and AI-assisted technologies in the manuscript preparation process”。",
+        "priorityScore": 64,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

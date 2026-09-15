@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02193",
+  "slug": "2609.02193",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02193:v2",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02193",
+    "version": 2,
+    "entryKind": "cross_list",
+    "title": "State-law dynamics of McKean-Vlasov stochastic reaction-diffusion equations on $\\mathbb R^n$: pullback random attractors and zero-noise stability",
+    "authors": [
+      "Guifen Liu",
+      "Yangrong Li"
+    ],
+    "abstract": "Distribution dependence generally prevents McKean-Vlasov state solution maps from satisfying a cocycle identity, while the relevant Sobolev embedding is noncompact on unbounded domains. For a class of stochastic reaction-diffusion equations with a dissipative polynomial reaction, a one-sided monotone state-law coupling and finite-dimensional additive noise, we combine the deterministic law semiflow with the pathwise state evolution to construct a continuous random dynamical system on the product of the state space and its quadratic Wasserstein law space. An abstract product-space criterion, mixed-energy estimates, local regularity and uniform far-field estimates yield a unique pullback random attractor without global law contraction. Its law projection is the global attractor of the law semiflow, and its state fibers need not be singletons. Under an additional strict contraction condition, the law attractor reduces to the unique invariant law and the corresponding state fiber to a self-consistent random equilibrium. We also establish zero-noise upper semicontinuity and, in the contractive regime, quantitative convergence of the invariant laws and random equilibria with bounds linear in the noise amplitude.",
+    "categories": [
+      "math.PR",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.02193",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02193",
+    "submittedAt": "2026-09-02T06:57:28Z",
+    "updatedAt": "2026-09-04T08:28:05Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "研究全空间 McKean--Vlasov 随机反应扩散方程的状态--分布动力学，构造状态与 Wasserstein 法空间上的连续随机动力系统，证明唯一 pullback 随机吸引子、其 law 投影的全局吸引子，以及严格收缩和零噪声稳定性。",
+    "techniques": [
+      "状态--法空间乘积 cocycle",
+      "混合能量估计",
+      "局部正则性与远场控制",
+      "pullback 吸收与渐近紧性",
+      "零噪声上半连续性"
+    ],
+    "breakthrough": "乘积空间 cocycle 同时解决分布依赖破坏状态 cocycle 和全空间非紧嵌入两项障碍，并允许在没有全局 law contraction 时仍构造唯一 pullback 吸引子。",
+    "limitations": "随机噪声为有限维加性噪声，反应项和 law coupling 需满足文中单调耗散条件；全局唯一不变 law 只在额外严格收缩条件下成立。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "状态解映射与 law semiflow 可组合为状态--法空间上的连续 cocycle。",
+          "route": "先对固定 law 解确定性反应扩散方程，利用单侧单调性得到解映射连续性；再证明 law 映射满足半群关系，将状态和分布坐标组合并验证 cocycle 恒等式。",
+          "evidence": "第 3 节 Theorem 3.7、公式 (3.1)--(3.18)（PDF 第 27--35 页）。"
+        },
+        {
+          "claim": "乘积系统存在闭的 pullback absorbing 集，并具有 pullback 渐近紧性。",
+          "route": "混合能量估计控制状态范数，局部正则性在有界球内提供紧嵌入，远场估计控制无界域尾部；两部分结合给出统一吸收半径和任意 pullback 序列的收敛子列。",
+          "evidence": "第 4 节 Lemmas 4.1--4.7 及 absorbing/asymptotic compactness 证明（PDF 第 36--42 页）。"
+        },
+        {
+          "claim": "每个噪声幅度下存在唯一 pullback 随机吸引子，其 law 投影等于 law semiflow 的全局吸引子。",
+          "route": "把 Theorem 2.3 的随机吸引子构造应用于连续 cocycle，利用吸收和渐近紧性定义 omega 极限；投影连续性保持紧性，并用 law semiflow 的吸引性质识别投影。",
+          "evidence": "Theorem 4.8 及其证明（PDF 第 42--44 页）。"
+        },
+        {
+          "claim": "在严格收缩条件下吸引子退化为唯一不变 law，并随噪声趋零上半连续且具有线性误差。",
+          "route": "用 law 距离的严格收缩消除多个不变 law，得到单一 law 与自洽随机平衡；比较有噪声和零噪声 cocycle 的吸收集，结合统一耗散估计和 Gronwall 界得到上半连续性及噪声幅度线性收敛。",
+          "evidence": "第 5 节 Theorem 2.10、Theorem 5.5 及零噪声证明（PDF 第 45--51 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgements/References；未见作者明确 AI 使用声明。",
+    "aiEvidenceSource": "PDF 第 1--51 页全文关键词检索；第 50--51 页末尾/References。",
+    "priorityScore": 60,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02193:v2",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02193",
+        "version": 2,
+        "entryKind": "cross_list",
+        "title": "State-law dynamics of McKean-Vlasov stochastic reaction-diffusion equations on $\\mathbb R^n$: pullback random attractors and zero-noise stability",
+        "authors": [
+          "Guifen Liu",
+          "Yangrong Li"
+        ],
+        "abstract": "Distribution dependence generally prevents McKean-Vlasov state solution maps from satisfying a cocycle identity, while the relevant Sobolev embedding is noncompact on unbounded domains. For a class of stochastic reaction-diffusion equations with a dissipative polynomial reaction, a one-sided monotone state-law coupling and finite-dimensional additive noise, we combine the deterministic law semiflow with the pathwise state evolution to construct a continuous random dynamical system on the product of the state space and its quadratic Wasserstein law space. An abstract product-space criterion, mixed-energy estimates, local regularity and uniform far-field estimates yield a unique pullback random attractor without global law contraction. Its law projection is the global attractor of the law semiflow, and its state fibers need not be singletons. Under an additional strict contraction condition, the law attractor reduces to the unique invariant law and the corresponding state fiber to a self-consistent random equilibrium. We also establish zero-noise upper semicontinuity and, in the contractive regime, quantitative convergence of the invariant laws and random equilibria with bounds linear in the noise amplitude.",
+        "categories": [
+          "math.PR",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.02193",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02193",
+        "submittedAt": "2026-09-02T06:57:28Z",
+        "updatedAt": "2026-09-04T08:28:05Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "研究全空间 McKean--Vlasov 随机反应扩散方程的状态--分布动力学，构造状态与 Wasserstein 法空间上的连续随机动力系统，证明唯一 pullback 随机吸引子、其 law 投影的全局吸引子，以及严格收缩和零噪声稳定性。",
+        "techniques": [
+          "状态--法空间乘积 cocycle",
+          "混合能量估计",
+          "局部正则性与远场控制",
+          "pullback 吸收与渐近紧性",
+          "零噪声上半连续性"
+        ],
+        "breakthrough": "乘积空间 cocycle 同时解决分布依赖破坏状态 cocycle 和全空间非紧嵌入两项障碍，并允许在没有全局 law contraction 时仍构造唯一 pullback 吸引子。",
+        "limitations": "随机噪声为有限维加性噪声，反应项和 law coupling 需满足文中单调耗散条件；全局唯一不变 law 只在额外严格收缩条件下成立。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "状态解映射与 law semiflow 可组合为状态--法空间上的连续 cocycle。",
+              "route": "先对固定 law 解确定性反应扩散方程，利用单侧单调性得到解映射连续性；再证明 law 映射满足半群关系，将状态和分布坐标组合并验证 cocycle 恒等式。",
+              "evidence": "第 3 节 Theorem 3.7、公式 (3.1)--(3.18)（PDF 第 27--35 页）。"
+            },
+            {
+              "claim": "乘积系统存在闭的 pullback absorbing 集，并具有 pullback 渐近紧性。",
+              "route": "混合能量估计控制状态范数，局部正则性在有界球内提供紧嵌入，远场估计控制无界域尾部；两部分结合给出统一吸收半径和任意 pullback 序列的收敛子列。",
+              "evidence": "第 4 节 Lemmas 4.1--4.7 及 absorbing/asymptotic compactness 证明（PDF 第 36--42 页）。"
+            },
+            {
+              "claim": "每个噪声幅度下存在唯一 pullback 随机吸引子，其 law 投影等于 law semiflow 的全局吸引子。",
+              "route": "把 Theorem 2.3 的随机吸引子构造应用于连续 cocycle，利用吸收和渐近紧性定义 omega 极限；投影连续性保持紧性，并用 law semiflow 的吸引性质识别投影。",
+              "evidence": "Theorem 4.8 及其证明（PDF 第 42--44 页）。"
+            },
+            {
+              "claim": "在严格收缩条件下吸引子退化为唯一不变 law，并随噪声趋零上半连续且具有线性误差。",
+              "route": "用 law 距离的严格收缩消除多个不变 law，得到单一 law 与自洽随机平衡；比较有噪声和零噪声 cocycle 的吸收集，结合统一耗散估计和 Gronwall 界得到上半连续性及噪声幅度线性收敛。",
+              "evidence": "第 5 节 Theorem 2.10、Theorem 5.5 及零噪声证明（PDF 第 45--51 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgements/References；未见作者明确 AI 使用声明。",
+        "aiEvidenceSource": "PDF 第 1--51 页全文关键词检索；第 50--51 页末尾/References。",
+        "priorityScore": 60,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

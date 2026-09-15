@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02225",
+  "slug": "2609.02225",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02225:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02225",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The direct moving plane method for weak solutions of the fractional $p$-Laplacian",
+    "authors": [
+      "Meiqing Xu",
+      "Hui Yang"
+    ],
+    "abstract": "In this paper, we develop the method of moving planes entirely in the weak formulation for the fractional $p$-Laplacian in the singular range $1<p\\leq2$. We first establish a small region principle for antisymmetric functions and apply it to prove radial symmetry and monotonicity of nonnegative weak solutions of fractional $p$-Laplacian equations in a bounded domain. We also consider the nonlocal quasilinear Lane--Emden equation $(-Δ)^s_pu=u^q$ in $\\mathbb R^n$. In the Sobolev critical case, we establish radial symmetry, monotonicity, and precise asymptotic behavior at infinity for finite-energy weak solutions. Under a suitable decay condition, we also obtain radial symmetry for the full range $q>p-1$. Our results complete those of Chen-Li (Adv. Math., 2018: 735-758), where analogous results were obtained for $C^{1,1}$ solutions in the pointwise sense.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02225",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02225",
+    "submittedAt": "2026-09-02T07:36:45Z",
+    "updatedAt": "2026-09-02T07:36:45Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "对称性与渐近分析",
+    "workSummary": "论文在奇异范围 $1<p\\le 2$ 内完全以弱形式发展分数 p-拉普拉斯的移动平面法。核心先是对反对称测试函数建立小区域原理，再用窄区域继续移动平面证明有界域弱解的径向对称与单调性；对全空间 Lane–Emden 方程，作者在衰减条件或 Sobolev 临界有限能量条件下完成全方向移动、临界分类和无穷远精确渐近。",
+    "techniques": [
+      "分数 p-拉普拉斯弱形式与反对称测试函数",
+      "小区域能量原理与窄区域继续法",
+      "移动平面、Kelvin/缩放比较",
+      "局部 Hölder 正则性与临界渐近分类"
+    ],
+    "breakthrough": "论文把移动平面法从点态 $C^{1,1}$ 框架推进到奇异范围分数 p-拉普拉斯的弱解框架，并在 Sobolev 临界情形取得有限能量解的径向对称、单调性和无穷远精确渐近。",
+    "limitations": "参数限制为 $0<s<1、1<p\\le 2$；有界域结论依赖文中给定的域和边界条件，全空间一般指数 q>p−1 的对称性需要衰减条件，临界分类与精确渐近依赖有限能量和临界方程假设。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.1 建立反对称函数在小区域上的弱形式最大值原理。",
+          "route": "把 $u-u_\\lambda $ 的正部与截断函数作为测试函数，使用 Lemma 2.1 的可容许性和 Lemma 2.4 的非局部双积分分解；交叉区域给出正的反对称贡献，结合 Lemma 2.5 的 Hardy 型控制及 $p\\le 2$ 的代数不等式使小区域测度项可吸收。",
+          "evidence": "PDF 第3页，第1节 Theorem 1.1；PDF 第6–12页，第2节 Lemmas 2.1、2.4–2.7 与第3节 Proof of Theorem 1.1，式(10)、(26)。"
+        },
+        {
+          "claim": "Theorem 1.2 证明有界球内非负弱解关于任意方向的径向对称与严格单调性。",
+          "route": "先由局部正则性取得连续代表，再从靠近边界的反射平面开始，使反射差的负集落入 Theorem 1.1 的小区域；移动到临界位置后，Lemma 4.1 用非局部核差的统一正下界排除内部接触，故可继续移动并得到反射不等式，最后对所有方向汇合。",
+          "evidence": "PDF 第13–16页，第4节 Proof of Theorem 1.2；PDF 第14页 Step 1 的小区域启动和 PDF 第15–16页 Lemma 4.1 及临界平面继续论证。"
+        },
+        {
+          "claim": "Theorem 1.4 在适当衰减下给出全空间 Lane–Emden 弱解的径向对称和单调性。",
+          "route": "对每个方向移动平面，Lemma 5.1 提供反射差在远处和局部球中的 Hardy 型估计；先用衰减把负集限制到可控小测度，再用 Lemma 5.2 的窄区域估计排除临界接触，沿平面位置推进到全空间并由强比较得到严格单调。",
+          "evidence": "PDF 第16–20页，第5节 Lemma 5.1、Proof of Theorem 1.4 和 Lemma 5.2；PDF 第18–20页，式(51)–(57) 的窄区域估计。"
+        },
+        {
+          "claim": "Theorem 1.3 在 Sobolev 临界有限能量情形给出径向分类、单调性及无穷远精确渐近。",
+          "route": "Lemma 6.1 通过反证缩放：若无统一衰减，则在趋于无穷的极大点重标度得到非平凡局部极限，与临界能量控制和 Hölder 估计矛盾；因此可用 Theorem 1.4 得到径向单调，随后调用临界 Lane–Emden 的分类和渐近恒等式完成结论。",
+          "evidence": "PDF 第21–23页，第6节 Lemma 6.1、Proof of Theorem 1.3；PDF 第22页的重标度与局部 Hölder 估计，PDF 第23页临界分类和渐近结论。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文各节、Acknowledgements、References 及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–26页（含 Acknowledgements 与 References）；缓存全文 2609.02225.txt。",
+    "priorityScore": 68,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02225:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02225",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The direct moving plane method for weak solutions of the fractional $p$-Laplacian",
+        "authors": [
+          "Meiqing Xu",
+          "Hui Yang"
+        ],
+        "abstract": "In this paper, we develop the method of moving planes entirely in the weak formulation for the fractional $p$-Laplacian in the singular range $1<p\\leq2$. We first establish a small region principle for antisymmetric functions and apply it to prove radial symmetry and monotonicity of nonnegative weak solutions of fractional $p$-Laplacian equations in a bounded domain. We also consider the nonlocal quasilinear Lane--Emden equation $(-Δ)^s_pu=u^q$ in $\\mathbb R^n$. In the Sobolev critical case, we establish radial symmetry, monotonicity, and precise asymptotic behavior at infinity for finite-energy weak solutions. Under a suitable decay condition, we also obtain radial symmetry for the full range $q>p-1$. Our results complete those of Chen-Li (Adv. Math., 2018: 735-758), where analogous results were obtained for $C^{1,1}$ solutions in the pointwise sense.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02225",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02225",
+        "submittedAt": "2026-09-02T07:36:45Z",
+        "updatedAt": "2026-09-02T07:36:45Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "对称性与渐近分析",
+        "workSummary": "论文在奇异范围 $1<p\\le 2$ 内完全以弱形式发展分数 p-拉普拉斯的移动平面法。核心先是对反对称测试函数建立小区域原理，再用窄区域继续移动平面证明有界域弱解的径向对称与单调性；对全空间 Lane–Emden 方程，作者在衰减条件或 Sobolev 临界有限能量条件下完成全方向移动、临界分类和无穷远精确渐近。",
+        "techniques": [
+          "分数 p-拉普拉斯弱形式与反对称测试函数",
+          "小区域能量原理与窄区域继续法",
+          "移动平面、Kelvin/缩放比较",
+          "局部 Hölder 正则性与临界渐近分类"
+        ],
+        "breakthrough": "论文把移动平面法从点态 $C^{1,1}$ 框架推进到奇异范围分数 p-拉普拉斯的弱解框架，并在 Sobolev 临界情形取得有限能量解的径向对称、单调性和无穷远精确渐近。",
+        "limitations": "参数限制为 $0<s<1、1<p\\le 2$；有界域结论依赖文中给定的域和边界条件，全空间一般指数 q>p−1 的对称性需要衰减条件，临界分类与精确渐近依赖有限能量和临界方程假设。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.1 建立反对称函数在小区域上的弱形式最大值原理。",
+              "route": "把 $u-u_\\lambda $ 的正部与截断函数作为测试函数，使用 Lemma 2.1 的可容许性和 Lemma 2.4 的非局部双积分分解；交叉区域给出正的反对称贡献，结合 Lemma 2.5 的 Hardy 型控制及 $p\\le 2$ 的代数不等式使小区域测度项可吸收。",
+              "evidence": "PDF 第3页，第1节 Theorem 1.1；PDF 第6–12页，第2节 Lemmas 2.1、2.4–2.7 与第3节 Proof of Theorem 1.1，式(10)、(26)。"
+            },
+            {
+              "claim": "Theorem 1.2 证明有界球内非负弱解关于任意方向的径向对称与严格单调性。",
+              "route": "先由局部正则性取得连续代表，再从靠近边界的反射平面开始，使反射差的负集落入 Theorem 1.1 的小区域；移动到临界位置后，Lemma 4.1 用非局部核差的统一正下界排除内部接触，故可继续移动并得到反射不等式，最后对所有方向汇合。",
+              "evidence": "PDF 第13–16页，第4节 Proof of Theorem 1.2；PDF 第14页 Step 1 的小区域启动和 PDF 第15–16页 Lemma 4.1 及临界平面继续论证。"
+            },
+            {
+              "claim": "Theorem 1.4 在适当衰减下给出全空间 Lane–Emden 弱解的径向对称和单调性。",
+              "route": "对每个方向移动平面，Lemma 5.1 提供反射差在远处和局部球中的 Hardy 型估计；先用衰减把负集限制到可控小测度，再用 Lemma 5.2 的窄区域估计排除临界接触，沿平面位置推进到全空间并由强比较得到严格单调。",
+              "evidence": "PDF 第16–20页，第5节 Lemma 5.1、Proof of Theorem 1.4 和 Lemma 5.2；PDF 第18–20页，式(51)–(57) 的窄区域估计。"
+            },
+            {
+              "claim": "Theorem 1.3 在 Sobolev 临界有限能量情形给出径向分类、单调性及无穷远精确渐近。",
+              "route": "Lemma 6.1 通过反证缩放：若无统一衰减，则在趋于无穷的极大点重标度得到非平凡局部极限，与临界能量控制和 Hölder 估计矛盾；因此可用 Theorem 1.4 得到径向单调，随后调用临界 Lane–Emden 的分类和渐近恒等式完成结论。",
+              "evidence": "PDF 第21–23页，第6节 Lemma 6.1、Proof of Theorem 1.3；PDF 第22页的重标度与局部 Hölder 估计，PDF 第23页临界分类和渐近结论。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文各节、Acknowledgements、References 及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–26页（含 Acknowledgements 与 References）；缓存全文 2609.02225.txt。",
+        "priorityScore": 68,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

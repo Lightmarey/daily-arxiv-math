@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02197",
+  "slug": "2609.02197",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02197:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02197",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Paracontrolled approach to the stochastic Cahn-Hilliard equation",
+    "authors": [
+      "Joe Ghafari"
+    ],
+    "abstract": "We prove the existence and uniqueness of a local-in-time solution to the stochastic Cahn-Hilliard equation in space dimensions 1, 2, 3, 4 and 5. Our method relies on the Da Prato-Debussche trick for $d=4$ and paracontrolled distributions for $d=5.$",
+    "categories": [
+      "math.PR",
+      "math-ph",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2609.02197",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02197",
+    "submittedAt": "2026-09-02T07:06:32Z",
+    "updatedAt": "2026-09-02T07:06:32Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "按空间维数逐层阅读随机 Cahn--Hilliard 方程的局部适定性证明：低维使用随机卷积后的固定点，四维采用 Da Prato--Debussche 分解，五维用 paracontrolled 变量和共振项估计建立耦合收缩。",
+    "techniques": [
+      "双调和半群平滑估计",
+      "Besov/Hölder 空间固定点",
+      "随机卷积分解",
+      "Da Prato--Debussche 方法",
+      "paracontrolled 分布与共振项估计"
+    ],
+    "breakthrough": "把同一局部 mild 解框架推进到完整次临界维数：四维通过分解隔离奇异随机项，五维进一步把不可直接相乘的项编码进受控变量，从而闭合局部解的收缩映射。",
+    "limitations": "结论是局部时间存在唯一性，爆破判据是相应正则范数发散；五维构造依赖已定义的随机模型、重整化对象和参数范围，尚未给出全局时间理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "低维随机方程可在正则空间中构造唯一局部 mild 解。",
+          "route": "先用双调和半群估计控制随机卷积和三次漂移的时间奇异性，再在带时间权的 Hölder 空间建立局部映射；小时间区间上映射收缩，拼接得到最大停时。",
+          "evidence": "第 2.4 节 Theorem 2.4.2 及证明（PDF 第 18--19 页，积分方程与爆破判据）。"
+        },
+        {
+          "claim": "四维奇异项可由 Da Prato--Debussche 分解转为确定性固定点问题。",
+          "route": "把解写成规则余项与随机卷积之和，将随机卷积的三阶对象作为给定输入；Proposition 2.5.1 对余项方程给出存在唯一性和范数爆破判据，再回代随机对象。",
+          "evidence": "第 2.5 节 Proposition 2.5.1、Theorem-Definition 2.5.2 及证明（PDF 第 19--22 页）。"
+        },
+        {
+          "claim": "五维中的乘积和共振项在 paracontrolled 空间中可定义并受控。",
+          "route": "引入 v,w 两个受控分量和 $\\Lambda (v,w)$ 修正项，把与最奇异随机对象的乘积写成受控主项加余项；利用共振/交换子估计获得映射的时间 Hölder 和空间正则界。",
+          "evidence": "第 2.6 节定义及 Proposition 2.6.3（PDF 第 23--26 页$，\\Lambda (v,w)$ 与映射估计）。"
+        },
+        {
+          "claim": "五维 paracontrolled 映射在短时间上收缩，给出唯一局部 mild 解。",
+          "route": "将上述正则性估计代入耦合固定点映射的自映射和 Lipschitz 界，选取足够小的时间 U 应用 Banach 不动点定理，再把 v,w 与随机对象重组为原方程解。",
+          "evidence": "第 2.6 节 Theorem-Definition 2.6.6 及证明（PDF 第 26--28 页，固定点映射和收缩结论）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--28 页全文关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查摘要、引言和致谢。",
+    "priorityScore": 49,
+    "priorityTier": "low",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Paracontrolled approach to the stochastic Cahn-Hilliard equation》。",
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02197:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02197",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Paracontrolled approach to the stochastic Cahn-Hilliard equation",
+        "authors": [
+          "Joe Ghafari"
+        ],
+        "abstract": "We prove the existence and uniqueness of a local-in-time solution to the stochastic Cahn-Hilliard equation in space dimensions 1, 2, 3, 4 and 5. Our method relies on the Da Prato-Debussche trick for $d=4$ and paracontrolled distributions for $d=5.$",
+        "categories": [
+          "math.PR",
+          "math-ph",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2609.02197",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02197",
+        "submittedAt": "2026-09-02T07:06:32Z",
+        "updatedAt": "2026-09-02T07:06:32Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "按空间维数逐层阅读随机 Cahn--Hilliard 方程的局部适定性证明：低维使用随机卷积后的固定点，四维采用 Da Prato--Debussche 分解，五维用 paracontrolled 变量和共振项估计建立耦合收缩。",
+        "techniques": [
+          "双调和半群平滑估计",
+          "Besov/Hölder 空间固定点",
+          "随机卷积分解",
+          "Da Prato--Debussche 方法",
+          "paracontrolled 分布与共振项估计"
+        ],
+        "breakthrough": "把同一局部 mild 解框架推进到完整次临界维数：四维通过分解隔离奇异随机项，五维进一步把不可直接相乘的项编码进受控变量，从而闭合局部解的收缩映射。",
+        "limitations": "结论是局部时间存在唯一性，爆破判据是相应正则范数发散；五维构造依赖已定义的随机模型、重整化对象和参数范围，尚未给出全局时间理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "低维随机方程可在正则空间中构造唯一局部 mild 解。",
+              "route": "先用双调和半群估计控制随机卷积和三次漂移的时间奇异性，再在带时间权的 Hölder 空间建立局部映射；小时间区间上映射收缩，拼接得到最大停时。",
+              "evidence": "第 2.4 节 Theorem 2.4.2 及证明（PDF 第 18--19 页，积分方程与爆破判据）。"
+            },
+            {
+              "claim": "四维奇异项可由 Da Prato--Debussche 分解转为确定性固定点问题。",
+              "route": "把解写成规则余项与随机卷积之和，将随机卷积的三阶对象作为给定输入；Proposition 2.5.1 对余项方程给出存在唯一性和范数爆破判据，再回代随机对象。",
+              "evidence": "第 2.5 节 Proposition 2.5.1、Theorem-Definition 2.5.2 及证明（PDF 第 19--22 页）。"
+            },
+            {
+              "claim": "五维中的乘积和共振项在 paracontrolled 空间中可定义并受控。",
+              "route": "引入 v,w 两个受控分量和 $\\Lambda (v,w)$ 修正项，把与最奇异随机对象的乘积写成受控主项加余项；利用共振/交换子估计获得映射的时间 Hölder 和空间正则界。",
+              "evidence": "第 2.6 节定义及 Proposition 2.6.3（PDF 第 23--26 页$，\\Lambda (v,w)$ 与映射估计）。"
+            },
+            {
+              "claim": "五维 paracontrolled 映射在短时间上收缩，给出唯一局部 mild 解。",
+              "route": "将上述正则性估计代入耦合固定点映射的自映射和 Lipschitz 界，选取足够小的时间 U 应用 Banach 不动点定理，再把 v,w 与随机对象重组为原方程解。",
+              "evidence": "第 2.6 节 Theorem-Definition 2.6.6 及证明（PDF 第 26--28 页，固定点映射和收缩结论）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--28 页全文关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查摘要、引言和致谢。",
+        "priorityScore": 49,
+        "priorityTier": "low",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Paracontrolled approach to the stochastic Cahn-Hilliard equation》。",
+        "revisionSummary": null
+      }
+    }
+  ]
+}

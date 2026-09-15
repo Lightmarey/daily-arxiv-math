@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08533",
+  "slug": "2609.08533",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08533:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08533",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Global large solutions of the Cauchy problem for the NS-NPP equations with Fujita-Kato type initial data",
+    "authors": [
+      "Jihong Zhao",
+      "Chao Deng"
+    ],
+    "abstract": "In this paper, we prove the global well-posedness of the Cauchy problem for the NS-NPP equations with some large Fujita-Kato type initial data. Specifically, we show that there exist two positive constants $c_{0}$ and $C_{0}$ such that if the initial data $(u_{0}, N_{0}, P_{0})$ satisfies the following condition: \\begin{equation*} \\left(\\|u_0\\|_{\\dot{H}^{-1+\\frac{d}{2}}}+\\|N_{0}-P_{0}\\|_{\\dot{H}^{-2+\\frac{d}{2}}}\\right)\\exp\\left\\{C_{0}\\big(\\|N_{0}+P_{0}\\|_{\\dot{H}^{-2+\\frac{d}{2}}}^2+1\\big)\\right\\} \\leq c_{0}, \\end{equation*} then the NS-NPP equations admits a unique global solution. This result implies global existence of solutions without any smallness conditions imposed on the sum of initial particle densities of negative and positive electric charge in the framework of Sobolev spaces.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08533",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08533",
+    "submittedAt": "2026-09-08T10:20:30Z",
+    "updatedAt": "2026-09-08T10:20:30Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文证明全空间 NS-NPP 方程在临界齐次 Besov 空间中可由大幅度总电荷初值产生全局唯一解。作者先用 $v=N-P、w=N+P$ 把系统改写为对称结构，其中 w 方程是由 u、v 驱动的线性输运扩散方程；局部解由热方程 Besov 估计建立。证明核心是先估计 w，再对 v 引入由 w 的时间加权 L2 范数定义的指数权重，最后用 Leray 投影估计 u，并以 bootstrap 反证排除有限最大时间。",
+    "techniques": [
+      "NS-NPP 对称变量变换",
+      "Littlewood-Paley 齐次 Besov 估计",
+      "Chemin-Lerner 时间空间",
+      "时间加权 L2 指数变换",
+      "Bony 抛物分解与 bootstrap 延拓"
+    ],
+    "breakthrough": "新时间加权 L2 范数把电荷和的可能大幅度影响收进指数权重，使小性只需作用于速度和电荷差；由此把此前 Besov 小数据结果推进到允许 N+P 大的 Fujita-Kato 型初值，并包含 Sobolev 特例。",
+    "limitations": "要求 $d>=3$、指数 p,q 满足 $q<=2p$ 及文中的临界关系，数据位于齐次 Besov 空间且速度散度为零；“大”只允许总电荷通过指数因子出现，速度和电荷差仍需满足联合小性。没有覆盖二维、边界域、非零背景流或更弱的临界空间。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "变量 $v=N-P、w=N+P$ 将 NS-NPP 写成 w 线性驱动且保持对称结构的系统。",
+          "route": "将两种电荷方程相加减并用 -Delta $phi=P-N$ 得到 (1.8)，流体力写成 -v $grad(-Delta)^{-1}v；w$ 只线性受 u 和 v 的源项驱动，为后续只限制 v 与 u 的小性提供结构。",
+          "evidence": "PDF 第 3-5 页 equations (1.7)-(1.10)、Theorem 1.3 statement。"
+        },
+        {
+          "claim": "局部解满足临界 Besov-Chemin-Lerner 正则性。",
+          "route": "对热方程的 Littlewood-Paley 块使用 Proposition 2.1 的 dyadic heat estimate，附录 Lemmas 3.6-3.10 控制输运、Poisson 和乘积项；定点/延拓给出 system (1.8) 的局部解。",
+          "evidence": "PDF 第 6 页 Proposition 2.1；第 10-18 页 Appendix Section 3、Theorem 3.5 和 Lemmas 3.6-3.10。"
+        },
+        {
+          "claim": "w 的 Besov 范数可由初值 w0 和小的 u、v 范数控制，而不要求 w0 小。",
+          "route": "将 w 方程写成热半群 Duhamel 公式，Bony 分解分别估计 u dot grad w 与 v $grad(-Delta)^{-1}v$；在 bootstrap 区间令 2C eta<1，将含 w 的项吸收，得到 (2.5)-(2.6)。",
+          "evidence": "PDF 第 6-7 页 proof Step 1、equations (2.4)-(2.6)。"
+        },
+        {
+          "claim": "指数时间加权的 v 与 u 估计闭合 bootstrap，因而最大存在时间为无穷并得到 Theorem 1.3。",
+          "route": "令 $f(t)=||w(t)||$ 并定义 $v_lambda,f$ 和 $u_lambda,f$；对 v 的 dyadic Duhamel 估计用 Fubini 产生 sqrt(lambda) 加权耗散，对 u 用 Leray 投影和双线性 Besov 界，选择 lambda 足够大吸收耦合项，最终把 (2.24) 代入初值条件与 $T_eta$ 定义，排除有限 T*。",
+          "evidence": "PDF 第 7-10 页 proof Steps 2-3、equations (2.7)-(2.24)；第 4-5 页 Theorem 1.3。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、方程变换、局部适定性、全局 bootstrap、Besov 附录、结论、Acknowledgements 和 References，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-18 页全文检索及第 17-18 页 Acknowledgements、References。",
+    "priorityScore": 57,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08533:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08533",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Global large solutions of the Cauchy problem for the NS-NPP equations with Fujita-Kato type initial data",
+        "authors": [
+          "Jihong Zhao",
+          "Chao Deng"
+        ],
+        "abstract": "In this paper, we prove the global well-posedness of the Cauchy problem for the NS-NPP equations with some large Fujita-Kato type initial data. Specifically, we show that there exist two positive constants $c_{0}$ and $C_{0}$ such that if the initial data $(u_{0}, N_{0}, P_{0})$ satisfies the following condition: \\begin{equation*} \\left(\\|u_0\\|_{\\dot{H}^{-1+\\frac{d}{2}}}+\\|N_{0}-P_{0}\\|_{\\dot{H}^{-2+\\frac{d}{2}}}\\right)\\exp\\left\\{C_{0}\\big(\\|N_{0}+P_{0}\\|_{\\dot{H}^{-2+\\frac{d}{2}}}^2+1\\big)\\right\\} \\leq c_{0}, \\end{equation*} then the NS-NPP equations admits a unique global solution. This result implies global existence of solutions without any smallness conditions imposed on the sum of initial particle densities of negative and positive electric charge in the framework of Sobolev spaces.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08533",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08533",
+        "submittedAt": "2026-09-08T10:20:30Z",
+        "updatedAt": "2026-09-08T10:20:30Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文证明全空间 NS-NPP 方程在临界齐次 Besov 空间中可由大幅度总电荷初值产生全局唯一解。作者先用 $v=N-P、w=N+P$ 把系统改写为对称结构，其中 w 方程是由 u、v 驱动的线性输运扩散方程；局部解由热方程 Besov 估计建立。证明核心是先估计 w，再对 v 引入由 w 的时间加权 L2 范数定义的指数权重，最后用 Leray 投影估计 u，并以 bootstrap 反证排除有限最大时间。",
+        "techniques": [
+          "NS-NPP 对称变量变换",
+          "Littlewood-Paley 齐次 Besov 估计",
+          "Chemin-Lerner 时间空间",
+          "时间加权 L2 指数变换",
+          "Bony 抛物分解与 bootstrap 延拓"
+        ],
+        "breakthrough": "新时间加权 L2 范数把电荷和的可能大幅度影响收进指数权重，使小性只需作用于速度和电荷差；由此把此前 Besov 小数据结果推进到允许 N+P 大的 Fujita-Kato 型初值，并包含 Sobolev 特例。",
+        "limitations": "要求 $d>=3$、指数 p,q 满足 $q<=2p$ 及文中的临界关系，数据位于齐次 Besov 空间且速度散度为零；“大”只允许总电荷通过指数因子出现，速度和电荷差仍需满足联合小性。没有覆盖二维、边界域、非零背景流或更弱的临界空间。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "变量 $v=N-P、w=N+P$ 将 NS-NPP 写成 w 线性驱动且保持对称结构的系统。",
+              "route": "将两种电荷方程相加减并用 -Delta $phi=P-N$ 得到 (1.8)，流体力写成 -v $grad(-Delta)^{-1}v；w$ 只线性受 u 和 v 的源项驱动，为后续只限制 v 与 u 的小性提供结构。",
+              "evidence": "PDF 第 3-5 页 equations (1.7)-(1.10)、Theorem 1.3 statement。"
+            },
+            {
+              "claim": "局部解满足临界 Besov-Chemin-Lerner 正则性。",
+              "route": "对热方程的 Littlewood-Paley 块使用 Proposition 2.1 的 dyadic heat estimate，附录 Lemmas 3.6-3.10 控制输运、Poisson 和乘积项；定点/延拓给出 system (1.8) 的局部解。",
+              "evidence": "PDF 第 6 页 Proposition 2.1；第 10-18 页 Appendix Section 3、Theorem 3.5 和 Lemmas 3.6-3.10。"
+            },
+            {
+              "claim": "w 的 Besov 范数可由初值 w0 和小的 u、v 范数控制，而不要求 w0 小。",
+              "route": "将 w 方程写成热半群 Duhamel 公式，Bony 分解分别估计 u dot grad w 与 v $grad(-Delta)^{-1}v$；在 bootstrap 区间令 2C eta<1，将含 w 的项吸收，得到 (2.5)-(2.6)。",
+              "evidence": "PDF 第 6-7 页 proof Step 1、equations (2.4)-(2.6)。"
+            },
+            {
+              "claim": "指数时间加权的 v 与 u 估计闭合 bootstrap，因而最大存在时间为无穷并得到 Theorem 1.3。",
+              "route": "令 $f(t)=||w(t)||$ 并定义 $v_lambda,f$ 和 $u_lambda,f$；对 v 的 dyadic Duhamel 估计用 Fubini 产生 sqrt(lambda) 加权耗散，对 u 用 Leray 投影和双线性 Besov 界，选择 lambda 足够大吸收耦合项，最终把 (2.24) 代入初值条件与 $T_eta$ 定义，排除有限 T*。",
+              "evidence": "PDF 第 7-10 页 proof Steps 2-3、equations (2.7)-(2.24)；第 4-5 页 Theorem 1.3。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、方程变换、局部适定性、全局 bootstrap、Besov 附录、结论、Acknowledgements 和 References，并检索 AI、LLM、ChatGPT、artificial 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-18 页全文检索及第 17-18 页 Acknowledgements、References。",
+        "priorityScore": 57,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

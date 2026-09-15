@@ -3,93 +3,147 @@
   "arxivId": "2609.03424",
   "slug": "2609.03424",
   "latest": {
+    "id": "math.AP:2026-09-04:2609.03424:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-04",
     "arxivId": "2609.03424",
-    "metadata": {
-      "title": "Catenoid-sharp index-topology estimates for minimal hypersurfaces",
-      "authors": [
-        "Junzhang Li"
-      ],
-      "abstract": "We show that for an embedded two-sided minimal hypersurface in $\\mathbb{R}^N$, there is a lower bound for the index in terms of the first Betti number and the number of ends, using ideas from the recent work of Chodosh--Gianocca. This estimate is sharp for the higher-dimensional catenoid. We also obtain a $\\operatorname{Spin}(7)$ analogue of Theorem 10.1 of Chodosh--Gianocca: a complete two-sided minimal immersion $M^7\\to\\mathbb{R}^8$ of index one and finite total curvature is a higher-dimensional catenoid.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-03T06:28:43Z",
-      "updatedAt": "2026-09-03T06:28:43Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Catenoid-sharp index-topology estimates for minimal hypersurfaces",
+    "authors": [
+      "Junzhang Li"
+    ],
+    "abstract": "We show that for an embedded two-sided minimal hypersurface in $\\mathbb{R}^N$, there is a lower bound for the index in terms of the first Betti number and the number of ends, using ideas from the recent work of Chodosh--Gianocca. This estimate is sharp for the higher-dimensional catenoid. We also obtain a $\\operatorname{Spin}(7)$ analogue of Theorem 10.1 of Chodosh--Gianocca: a complete two-sided minimal immersion $M^7\\to\\mathbb{R}^8$ of index one and finite total curvature is a higher-dimensional catenoid.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.03424",
+    "pdfUrl": "https://arxiv.org/pdf/2609.03424",
+    "submittedAt": "2026-09-03T06:28:43Z",
+    "updatedAt": "2026-09-03T06:28:43Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "刚性",
+    "workSummary": "证明极小超曲面的 index--topology 下界及 catenoid sharpness：先用 harmonic one-forms 与 Jacobi 算子的测试函数构造 index 估计，再用 Spin(7) 分解改善七维浸入情形，最后由 index one 和有限总曲率推出高维 catenoid。",
+    "techniques": [
+      "Jacobi 算子与 Morse index",
+      "调和一形式",
+      "外端拓扑",
+      "Spin(7) 表示分解",
+      "有限总曲率渐近"
+    ],
+    "breakthrough": "把第一 Betti 数和端数直接转成 sharp index 下界，并证明七维 index-one 有限总曲率情形刚性等于高维 catenoid。",
+    "limitations": "要求完整、连通、两侧、嵌入或浸入的极小超曲面及有限总曲率；Spin(7) 结论限于七维到 R8。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "调和一形式可产生 Jacobi 场的测试方向。",
+          "route": "将调和一形式与环境坐标微分/法向分量配对，利用 Weitzenböck 恒等式和极小曲率公式把 Jacobi 二次型写成一形式能量与边界端项。",
+          "evidence": "第 2 节 Proposition 3.2 及相关构造（PDF 第 5--8 页）。"
+        },
+        {
+          "claim": "端的数量和第一 Betti 数给出线性独立的负方向。",
+          "route": "对每个拓扑生成元选择带 cutoff 的调和一形式，控制 cutoff 误差并令端半径趋于无穷；二次型在这些子空间上负定，得到 index 下界。",
+          "evidence": "第 3 节 Lemma 4.1、Corollary 3.4 与 index 估计（PDF 第 8--13 页）。"
+        },
+        {
+          "claim": "七维表示论约束消灭额外的几何自由度。",
+          "route": "将二维形式分解到 Spin(7) 不变子表示，利用闭性、调和性和 Jacobi 核条件证明特定分量消失；index one 迫使第二基本形式满足 catenoid 型对称。",
+          "evidence": "引言 Theorem 1.2、Theorem 1.3 及第 3 节 Spin(7) 分解（PDF 第 3--7 页）。"
+        },
+        {
+          "claim": "有限总曲率和刚性条件把极小浸入识别为高维 catenoid。",
+          "route": "利用端的渐近展开和唯一延拓，将局部 catenoid 数据延伸到整个超曲面；index one 排除额外端/拓扑，得到 Theorems 1.1--1.3。",
+          "evidence": "第 1 节 Theorems 1.1--1.3（PDF 第 2--4 页）与第 7--8 节完成证明（PDF 第 14--28 页）。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "推广/加强",
-      "workSummary": "建立欧氏空间中完备嵌入双侧极小超曲面的 Morse 指标、第一 Betti 数与端数之间的下界，并在 R8 中借 Spin(7) 二形式分解加强估计和分类指标一浸入。",
-      "techniques": [
-        "有限指标谱分解",
-        "调和 1-形式测试函数",
-        "Chodosh–Gianocca 可容配对",
-        "Spin(7) 二形式分解"
-      ],
-      "breakthrough": "所得估计在高维 catenoid 上取等；Spin(7) 的秩七配对把一般 28 个测试方向降至 7，并推出有限总曲率指标一浸入必为 catenoid。",
-      "limitations": "需要有限总曲率；一般维度的分母并不预期最优，且浸入分类的 Spin(7) 加强限于环境维数八。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "大型语言模型建议把 Chodosh–Gianocca 方法用于指标估计并使用 Spin(7) 分解；作者主导、重写并独立验证全部数学内容。",
-      "aiEvidenceSource": "正文 “Use of AI”",
-      "priorityScore": 90,
-      "priorityReason": "同时给出尖锐模型、可复用的指标—拓扑方法和新的 Spin(7) 分类，是极小超曲面方向的重要进展。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We show that for an embedded two-sided minimal hypersurface in $\\mathbb{R}^N$, there is a lower bound for the index in terms of the first Betti number and the number of ends, using ideas from the recent work of Chodosh--Gianocca. This estimate is sharp for the higher-dimensional catenoid. We also obtain a $\\operatorname{Spin}(7)$ analogue of Theorem 10.1 of Chodosh--Gianocca: a complete two-sided minimal immersion $M^7\\to\\mathbb{R}^8$ of index one and finite total curvature is a higher-dimensional catenoid.",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确说明将 [CG26] 方法应用于 index 估计和使用 Spin(7) 分解的想法由大语言模型提出；作者指导使用、实质修改生成文本并独立核验数学陈述和证明。",
+    "aiEvidenceSource": "PDF 第 3 页 Use of AI 声明（文本行约 153--157）。",
+    "priorityScore": 69,
+    "priorityTier": "medium",
+    "priorityReason": "变分稳定性和尖锐指标估计有交叉价值，优先级低于直接发展一般 PDE 估计的工作。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-04",
-      "entry": {
+      "announcementDate": "2026-09-04",
+      "report": {
+        "id": "math.AP:2026-09-04:2609.03424:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-04",
         "arxivId": "2609.03424",
-        "metadata": {
-          "title": "Catenoid-sharp index-topology estimates for minimal hypersurfaces",
-          "authors": [
-            "Junzhang Li"
-          ],
-          "abstract": "We show that for an embedded two-sided minimal hypersurface in $\\mathbb{R}^N$, there is a lower bound for the index in terms of the first Betti number and the number of ends, using ideas from the recent work of Chodosh--Gianocca. This estimate is sharp for the higher-dimensional catenoid. We also obtain a $\\operatorname{Spin}(7)$ analogue of Theorem 10.1 of Chodosh--Gianocca: a complete two-sided minimal immersion $M^7\\to\\mathbb{R}^8$ of index one and finite total curvature is a higher-dimensional catenoid.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-03T06:28:43Z",
-          "updatedAt": "2026-09-03T06:28:43Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Catenoid-sharp index-topology estimates for minimal hypersurfaces",
+        "authors": [
+          "Junzhang Li"
+        ],
+        "abstract": "We show that for an embedded two-sided minimal hypersurface in $\\mathbb{R}^N$, there is a lower bound for the index in terms of the first Betti number and the number of ends, using ideas from the recent work of Chodosh--Gianocca. This estimate is sharp for the higher-dimensional catenoid. We also obtain a $\\operatorname{Spin}(7)$ analogue of Theorem 10.1 of Chodosh--Gianocca: a complete two-sided minimal immersion $M^7\\to\\mathbb{R}^8$ of index one and finite total curvature is a higher-dimensional catenoid.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.03424",
+        "pdfUrl": "https://arxiv.org/pdf/2609.03424",
+        "submittedAt": "2026-09-03T06:28:43Z",
+        "updatedAt": "2026-09-03T06:28:43Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "刚性",
+        "workSummary": "证明极小超曲面的 index--topology 下界及 catenoid sharpness：先用 harmonic one-forms 与 Jacobi 算子的测试函数构造 index 估计，再用 Spin(7) 分解改善七维浸入情形，最后由 index one 和有限总曲率推出高维 catenoid。",
+        "techniques": [
+          "Jacobi 算子与 Morse index",
+          "调和一形式",
+          "外端拓扑",
+          "Spin(7) 表示分解",
+          "有限总曲率渐近"
+        ],
+        "breakthrough": "把第一 Betti 数和端数直接转成 sharp index 下界，并证明七维 index-one 有限总曲率情形刚性等于高维 catenoid。",
+        "limitations": "要求完整、连通、两侧、嵌入或浸入的极小超曲面及有限总曲率；Spin(7) 结论限于七维到 R8。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "调和一形式可产生 Jacobi 场的测试方向。",
+              "route": "将调和一形式与环境坐标微分/法向分量配对，利用 Weitzenböck 恒等式和极小曲率公式把 Jacobi 二次型写成一形式能量与边界端项。",
+              "evidence": "第 2 节 Proposition 3.2 及相关构造（PDF 第 5--8 页）。"
+            },
+            {
+              "claim": "端的数量和第一 Betti 数给出线性独立的负方向。",
+              "route": "对每个拓扑生成元选择带 cutoff 的调和一形式，控制 cutoff 误差并令端半径趋于无穷；二次型在这些子空间上负定，得到 index 下界。",
+              "evidence": "第 3 节 Lemma 4.1、Corollary 3.4 与 index 估计（PDF 第 8--13 页）。"
+            },
+            {
+              "claim": "七维表示论约束消灭额外的几何自由度。",
+              "route": "将二维形式分解到 Spin(7) 不变子表示，利用闭性、调和性和 Jacobi 核条件证明特定分量消失；index one 迫使第二基本形式满足 catenoid 型对称。",
+              "evidence": "引言 Theorem 1.2、Theorem 1.3 及第 3 节 Spin(7) 分解（PDF 第 3--7 页）。"
+            },
+            {
+              "claim": "有限总曲率和刚性条件把极小浸入识别为高维 catenoid。",
+              "route": "利用端的渐近展开和唯一延拓，将局部 catenoid 数据延伸到整个超曲面；index one 排除额外端/拓扑，得到 Theorems 1.1--1.3。",
+              "evidence": "第 1 节 Theorems 1.1--1.3（PDF 第 2--4 页）与第 7--8 节完成证明（PDF 第 14--28 页）。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "推广/加强",
-          "workSummary": "建立欧氏空间中完备嵌入双侧极小超曲面的 Morse 指标、第一 Betti 数与端数之间的下界，并在 R8 中借 Spin(7) 二形式分解加强估计和分类指标一浸入。",
-          "techniques": [
-            "有限指标谱分解",
-            "调和 1-形式测试函数",
-            "Chodosh–Gianocca 可容配对",
-            "Spin(7) 二形式分解"
-          ],
-          "breakthrough": "所得估计在高维 catenoid 上取等；Spin(7) 的秩七配对把一般 28 个测试方向降至 7，并推出有限总曲率指标一浸入必为 catenoid。",
-          "limitations": "需要有限总曲率；一般维度的分母并不预期最优，且浸入分类的 Spin(7) 加强限于环境维数八。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "大型语言模型建议把 Chodosh–Gianocca 方法用于指标估计并使用 Spin(7) 分解；作者主导、重写并独立验证全部数学内容。",
-          "aiEvidenceSource": "正文 “Use of AI”",
-          "priorityScore": 90,
-          "priorityReason": "同时给出尖锐模型、可复用的指标—拓扑方法和新的 Spin(7) 分类，是极小超曲面方向的重要进展。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We show that for an embedded two-sided minimal hypersurface in $\\mathbb{R}^N$, there is a lower bound for the index in terms of the first Betti number and the number of ends, using ideas from the recent work of Chodosh--Gianocca. This estimate is sharp for the higher-dimensional catenoid. We also obtain a $\\operatorname{Spin}(7)$ analogue of Theorem 10.1 of Chodosh--Gianocca: a complete two-sided minimal immersion $M^7\\to\\mathbb{R}^8$ of index one and finite total curvature is a higher-dimensional catenoid.",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确说明将 [CG26] 方法应用于 index 估计和使用 Spin(7) 分解的想法由大语言模型提出；作者指导使用、实质修改生成文本并独立核验数学陈述和证明。",
+        "aiEvidenceSource": "PDF 第 3 页 Use of AI 声明（文本行约 153--157）。",
+        "priorityScore": 69,
+        "priorityTier": "medium",
+        "priorityReason": "变分稳定性和尖锐指标估计有交叉价值，优先级低于直接发展一般 PDE 估计的工作。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

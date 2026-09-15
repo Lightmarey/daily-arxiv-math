@@ -3,93 +3,149 @@
   "arxivId": "2609.05715",
   "slug": "2609.05715",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.05715:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.05715",
-    "metadata": {
-      "title": "Interface foliation near a minimal isoparametric hypersurface for the Allen-Cahn equation",
-      "authors": [
-        "Guillermo Henry",
-        "Jimmy Petean"
-      ],
-      "abstract": "Let $(M,g)$ be a closed Riemannian manifold of positive Ricci curvature. Let $f$ be a proper isoparametric function on $M$, and $Γ$ the unique level set of $f$ which is a minimal hypersurface. For any positive integer $k$, and $λ>0$ large enough, we construct a solution of the Allen-Cahn equation $ Δu + λ(u-u^3 ) =0$ which is constant along the level sets of $f$ and has exactly $k$ nodal components. We prove that the nodal components approach the minimal isoparametric hypersurface $Γ$ as $λ\\rightarrow \\infty$ and the energy is uniformly bounded for all such solutions.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-04T20:45:16Z",
-      "updatedAt": "2026-09-04T20:45:16Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Interface foliation near a minimal isoparametric hypersurface for the Allen-Cahn equation",
+    "authors": [
+      "Guillermo Henry",
+      "Jimmy Petean"
+    ],
+    "abstract": "Let $(M,g)$ be a closed Riemannian manifold of positive Ricci curvature. Let $f$ be a proper isoparametric function on $M$, and $Γ$ the unique level set of $f$ which is a minimal hypersurface. For any positive integer $k$, and $λ>0$ large enough, we construct a solution of the Allen-Cahn equation $ Δu + λ(u-u^3 ) =0$ which is constant along the level sets of $f$ and has exactly $k$ nodal components. We prove that the nodal components approach the minimal isoparametric hypersurface $Γ$ as $λ\\rightarrow \\infty$ and the energy is uniformly bounded for all such solutions.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.05715",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05715",
+    "submittedAt": "2026-09-04T20:45:16Z",
+    "updatedAt": "2026-09-04T20:45:16Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文在正 Ricci 曲率闭 Riemann 流形上研究沿 proper isoparametric function 的 Allen–Cahn 解。对 level-set 常值的 f-invariant 函数，作者把椭圆 PDE 化为带单调 mean-curvature coefficient h 的一维 ODE，并用 shooting/phase-plane 构造任意固定 nodal multiplicity k 的全局解。通过 discrepancy D(w) 的单调性、临界点衰减、Sturm comparison 和区间分解，证明大 lambda 时所有零点集中到唯一 $h=0$ 的 minimal isoparametric hypersurface；最后控制每个单调区间的梯度与势能，得到固定零点数下的统一能量界。",
+    "techniques": [
+      "isoparametric level-set 降维",
+      "Allen–Cahn ODE shooting",
+      "discrepancy function 单调性",
+      "Sturm–Picone comparison",
+      "相图角度与能量区间估计"
+    ],
+    "breakthrough": "对每个固定 k 和所有充分大的 lambda 构造具有恰好 k 个 nodal components 的 f-invariant Allen–Cahn 解，并证明这些界面同时趋向同一个 minimal isoparametric hypersurface；相较只沿参数序列存在的结果，本文在受控几何条件下给出逐个大参数的构造与统一能量界。",
+    "limitations": "构造限制在 positive Ricci、proper isoparametric foliation 和严格递减 mean curvature 的对称子空间，不能直接覆盖一般 minimal hypersurface 或无对称 PDE 解。零点聚集和能量界针对固定 nodal 数 k；没有给出非 f-invariant 扰动的稳定性或完整 moduli 描述。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "f-invariant Allen–Cahn PDE 等价于带端点 Neumann 条件的一维 ODE。",
+          "route": "用距离函数 d 的 level-set 几何计算 Laplacian，焦点子流形附近的 mean-curvature 渐近保证端点延拓条件；因此 $u=phi∘d$ 时，PDE 的 Laplace 项变为 phi double prime plus h phi prime，得到方程 (2.3)。",
+          "evidence": "PDF 第 4-5 页 Section 2 Lemmas 2.2–2.3，equations (2.1)–(2.3)。"
+        },
+        {
+          "claim": "对任意固定 k，充分大 lambda 时存在恰好 k 个零点的全局 ODE 解。",
+          "route": "定义 discrepancy D(w)，其导数等于 −h(w $prime)^2$，在 h 的零点两侧分别单调；用端点 shooting 解的相图角度连续延拓，零点数在初值参数穿越特定角度时增加，借此在大 lambda 时命中 k 个零点并满足两端正则条件。",
+          "evidence": "PDF 第 6-8 页 Section 3 Theorem 3.1 proof；discrepancy identity 见 equation (3.2)，shooting angle construction 见 Section 3。"
+        },
+        {
+          "claim": "任意固定零点数的解，其零点在 lambda 趋于无穷时集中到唯一 minimal level a0。",
+          "route": "在零点之后用 discrepancy 下降证明靠近 $\\pm 1$ 的区间长度至多为 lambda 的负幂；在远离 $\\pm 1$ 的区间用 Sturm comparison 限制每个单调区间长度，有限零点数使所有剩余区间总长趋零，排除零点远离 T 的假设。",
+          "evidence": "PDF 第 8-12 页 Section 4 Theorem 4.1、Corollary 4.2、Lemmas 4.3–4.8；关键 discrepancy equations (4.1)–(4.3)。"
+        },
+        {
+          "claim": "具有固定 k 个 nodal components 的解具有与 lambda 无关的统一能量上界。",
+          "route": "全区间上 $D(w)\\le 0$ 给出 w prime 的点态上界；将区间按连续临界点切分，每个单调段的端点变化量和势能项分别积分控制，段数由 k 固定，叠加后得到能量 E(w) 的统一常数。",
+          "evidence": "PDF 第 12-14 页 Section 5 Theorem 5.1 proof，energy definition 与 estimates 见 equations (5.1)–(5.4)。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新方法/构造",
-      "workSummary": "在正 Ricci 曲率闭流形的等参结构下构造任意层数 Allen–Cahn 解，节点趋向极小等参超曲面且能量一致有界。",
-      "techniques": [
-        "等参约化",
-        "多层界面",
-        "奇异极限"
-      ],
-      "breakthrough": "在特定对称背景中实现多层界面聚集。",
-      "limitations": "依赖等参函数与正 Ricci 假设，不能推及一般极小超曲面。 已补读所列正文片段；这不是逐行独立证明审查。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 78,
-      "priorityReason": "连接几何 PDE 与极小曲面，构造技术值得借鉴。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "Let $(M,g)$ be a closed Riemannian manifold of positive Ricci curvature. Let $f$ be a proper isoparametric function on $M$, and $Γ$ the unique level set of $f$ which is a minimal hypersurface. For any positive integer $k$, and $λ>0$ large enough, we construct a solution of the Allen-Cahn equation $ Δu + λ(u-u^3 ) =0$ which is constant along the level sets of $f$ and has exactly $k$ nodal components. We prove that the nodal components approach the minimal isoparametric hypersurface $Γ$ as $λ\\rightarrow \\infty$ and the energy is uniformly bounded for all such solutions.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、几何降维、shooting、零点聚集、能量估计、结论、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、Claude、generative 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码、编辑、校对、翻译、排版或图表。",
+    "aiEvidenceSource": "PDF 第 1-14 页全文，重点核查第 1-5 页 Sections 1–2、第 6-12 页 Sections 3–4、第 12-14 页 Section 5。",
+    "priorityScore": 49,
+    "priorityTier": "low",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Interface foliation near a minimal isoparametric hypersurface for the Allen-Cahn equation》。",
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.05715:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.05715",
-        "metadata": {
-          "title": "Interface foliation near a minimal isoparametric hypersurface for the Allen-Cahn equation",
-          "authors": [
-            "Guillermo Henry",
-            "Jimmy Petean"
-          ],
-          "abstract": "Let $(M,g)$ be a closed Riemannian manifold of positive Ricci curvature. Let $f$ be a proper isoparametric function on $M$, and $Γ$ the unique level set of $f$ which is a minimal hypersurface. For any positive integer $k$, and $λ>0$ large enough, we construct a solution of the Allen-Cahn equation $ Δu + λ(u-u^3 ) =0$ which is constant along the level sets of $f$ and has exactly $k$ nodal components. We prove that the nodal components approach the minimal isoparametric hypersurface $Γ$ as $λ\\rightarrow \\infty$ and the energy is uniformly bounded for all such solutions.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-04T20:45:16Z",
-          "updatedAt": "2026-09-04T20:45:16Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Interface foliation near a minimal isoparametric hypersurface for the Allen-Cahn equation",
+        "authors": [
+          "Guillermo Henry",
+          "Jimmy Petean"
+        ],
+        "abstract": "Let $(M,g)$ be a closed Riemannian manifold of positive Ricci curvature. Let $f$ be a proper isoparametric function on $M$, and $Γ$ the unique level set of $f$ which is a minimal hypersurface. For any positive integer $k$, and $λ>0$ large enough, we construct a solution of the Allen-Cahn equation $ Δu + λ(u-u^3 ) =0$ which is constant along the level sets of $f$ and has exactly $k$ nodal components. We prove that the nodal components approach the minimal isoparametric hypersurface $Γ$ as $λ\\rightarrow \\infty$ and the energy is uniformly bounded for all such solutions.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.05715",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05715",
+        "submittedAt": "2026-09-04T20:45:16Z",
+        "updatedAt": "2026-09-04T20:45:16Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文在正 Ricci 曲率闭 Riemann 流形上研究沿 proper isoparametric function 的 Allen–Cahn 解。对 level-set 常值的 f-invariant 函数，作者把椭圆 PDE 化为带单调 mean-curvature coefficient h 的一维 ODE，并用 shooting/phase-plane 构造任意固定 nodal multiplicity k 的全局解。通过 discrepancy D(w) 的单调性、临界点衰减、Sturm comparison 和区间分解，证明大 lambda 时所有零点集中到唯一 $h=0$ 的 minimal isoparametric hypersurface；最后控制每个单调区间的梯度与势能，得到固定零点数下的统一能量界。",
+        "techniques": [
+          "isoparametric level-set 降维",
+          "Allen–Cahn ODE shooting",
+          "discrepancy function 单调性",
+          "Sturm–Picone comparison",
+          "相图角度与能量区间估计"
+        ],
+        "breakthrough": "对每个固定 k 和所有充分大的 lambda 构造具有恰好 k 个 nodal components 的 f-invariant Allen–Cahn 解，并证明这些界面同时趋向同一个 minimal isoparametric hypersurface；相较只沿参数序列存在的结果，本文在受控几何条件下给出逐个大参数的构造与统一能量界。",
+        "limitations": "构造限制在 positive Ricci、proper isoparametric foliation 和严格递减 mean curvature 的对称子空间，不能直接覆盖一般 minimal hypersurface 或无对称 PDE 解。零点聚集和能量界针对固定 nodal 数 k；没有给出非 f-invariant 扰动的稳定性或完整 moduli 描述。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "f-invariant Allen–Cahn PDE 等价于带端点 Neumann 条件的一维 ODE。",
+              "route": "用距离函数 d 的 level-set 几何计算 Laplacian，焦点子流形附近的 mean-curvature 渐近保证端点延拓条件；因此 $u=phi∘d$ 时，PDE 的 Laplace 项变为 phi double prime plus h phi prime，得到方程 (2.3)。",
+              "evidence": "PDF 第 4-5 页 Section 2 Lemmas 2.2–2.3，equations (2.1)–(2.3)。"
+            },
+            {
+              "claim": "对任意固定 k，充分大 lambda 时存在恰好 k 个零点的全局 ODE 解。",
+              "route": "定义 discrepancy D(w)，其导数等于 −h(w $prime)^2$，在 h 的零点两侧分别单调；用端点 shooting 解的相图角度连续延拓，零点数在初值参数穿越特定角度时增加，借此在大 lambda 时命中 k 个零点并满足两端正则条件。",
+              "evidence": "PDF 第 6-8 页 Section 3 Theorem 3.1 proof；discrepancy identity 见 equation (3.2)，shooting angle construction 见 Section 3。"
+            },
+            {
+              "claim": "任意固定零点数的解，其零点在 lambda 趋于无穷时集中到唯一 minimal level a0。",
+              "route": "在零点之后用 discrepancy 下降证明靠近 $\\pm 1$ 的区间长度至多为 lambda 的负幂；在远离 $\\pm 1$ 的区间用 Sturm comparison 限制每个单调区间长度，有限零点数使所有剩余区间总长趋零，排除零点远离 T 的假设。",
+              "evidence": "PDF 第 8-12 页 Section 4 Theorem 4.1、Corollary 4.2、Lemmas 4.3–4.8；关键 discrepancy equations (4.1)–(4.3)。"
+            },
+            {
+              "claim": "具有固定 k 个 nodal components 的解具有与 lambda 无关的统一能量上界。",
+              "route": "全区间上 $D(w)\\le 0$ 给出 w prime 的点态上界；将区间按连续临界点切分，每个单调段的端点变化量和势能项分别积分控制，段数由 k 固定，叠加后得到能量 E(w) 的统一常数。",
+              "evidence": "PDF 第 12-14 页 Section 5 Theorem 5.1 proof，energy definition 与 estimates 见 equations (5.1)–(5.4)。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新方法/构造",
-          "workSummary": "在正 Ricci 曲率闭流形的等参结构下构造任意层数 Allen–Cahn 解，节点趋向极小等参超曲面且能量一致有界。",
-          "techniques": [
-            "等参约化",
-            "多层界面",
-            "奇异极限"
-          ],
-          "breakthrough": "在特定对称背景中实现多层界面聚集。",
-          "limitations": "依赖等参函数与正 Ricci 假设，不能推及一般极小超曲面。 已补读所列正文片段；这不是逐行独立证明审查。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 78,
-          "priorityReason": "连接几何 PDE 与极小曲面，构造技术值得借鉴。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "Let $(M,g)$ be a closed Riemannian manifold of positive Ricci curvature. Let $f$ be a proper isoparametric function on $M$, and $Γ$ the unique level set of $f$ which is a minimal hypersurface. For any positive integer $k$, and $λ>0$ large enough, we construct a solution of the Allen-Cahn equation $ Δu + λ(u-u^3 ) =0$ which is constant along the level sets of $f$ and has exactly $k$ nodal components. We prove that the nodal components approach the minimal isoparametric hypersurface $Γ$ as $λ\\rightarrow \\infty$ and the energy is uniformly bounded for all such solutions.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、几何降维、shooting、零点聚集、能量估计、结论、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、Claude、generative 等词；未见作者明确披露 AI 或 LLM 用于研究、证明、写作、代码、编辑、校对、翻译、排版或图表。",
+        "aiEvidenceSource": "PDF 第 1-14 页全文，重点核查第 1-5 页 Sections 1–2、第 6-12 页 Sections 3–4、第 12-14 页 Section 5。",
+        "priorityScore": 49,
+        "priorityTier": "low",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Interface foliation near a minimal isoparametric hypersurface for the Allen-Cahn equation》。",
+        "revisionSummary": null
       }
     }
   ]

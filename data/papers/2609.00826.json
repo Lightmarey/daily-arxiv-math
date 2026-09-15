@@ -3,91 +3,137 @@
   "arxivId": "2609.00826",
   "slug": "2609.00826",
   "latest": {
+    "id": "math.AP:2026-09-02:2609.00826:v2",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
     "arxivId": "2609.00826",
-    "metadata": {
-      "title": "Regularity and Rivière's ${GL}(m)$-Gauge Construction for Elliptic Systems with Antisymmetric Potentials in Arbitrary Dimensions",
-      "authors": [
-        "Carolin Bayer"
-      ],
-      "abstract": "Let $1 \\leq q \\le 2$ and denote by $2 \\leq q'$ its corresponding conjugate exponent. We prove the continuity of solutions $u \\in W^{1,(\\frac{n}{n-1},q')}(B^n, \\mathbb{R}^m)$ to the critical elliptic system $-Δu = Ω\\cdot \\nabla u$ in dimension $n \\ge 3$, where the potential $Ω\\in L^{(n,q)}(B^n, \\mathfrak{so}(m) \\otimes \\wedge^1)$ is antisymmetric. First, we construct $P \\in W^{1,(n,q)}(B^n, \\mathrm{SO}(m))$ such that the PDE can be rewritten as $-\\operatorname{div}(P^{-1}du) = \\ast dξ\\cdot P^{-1}du$, which is nearly a Jacobian structure up to the rotation $P$. Second, we provide a Rivière's $\\mathrm{GL}(m)$-Gauge in order to establish a \"full\" $(A,B)$-conservation law, i.e. $-\\operatorname{div}(Adu)=d^\\ast B \\cdot du.$",
-      "categories": [
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "math.AP",
-      "version": 1,
-      "submittedAt": "2026-09-01T07:26:55Z",
-      "updatedAt": "2026-09-01T07:26:55Z"
+    "version": 2,
+    "entryKind": "new",
+    "title": "Regularity and Rivière's ${GL}(m)$-Gauge Construction for Elliptic Systems with Antisymmetric Potentials in Arbitrary Dimensions",
+    "authors": [
+      "Carolin Bayer"
+    ],
+    "abstract": "Let $1 \\leq q \\le 2$ and denote by $2 \\leq q'$ its corresponding conjugate exponent. We prove the continuity of solutions $u \\in W^{1,(\\frac{n}{n-1},q')}(B^n, \\mathbb{R}^m)$ to the critical elliptic system $-Δu = Ω\\cdot \\nabla u$ in dimension $n \\ge 3$, where the potential $Ω\\in L^{(n,q)}(B^n, \\mathfrak{so}(m) \\otimes \\wedge^1)$ is antisymmetric. First, we construct $P \\in W^{1,(n,q)}(B^n, \\mathrm{SO}(m))$ such that the PDE can be rewritten as $-\\operatorname{div}(P^{-1}du) = \\ast dξ\\cdot P^{-1}du$, which is nearly a Jacobian structure up to the rotation $P$. Second, we provide a Rivière's $\\mathrm{GL}(m)$-Gauge in order to establish a \"full\" $(A,B)$-conservation law, i.e. $-\\operatorname{div}(Adu)=d^\\ast B \\cdot du$. We show that the assumption on $Ω\\in L^{(n,q)} (B^n, \\mathfrak{so}(m) \\otimes \\wedge^1) $ for $q\\leq 2$ is optimal.",
+    "categories": [
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.00826",
+    "pdfUrl": "https://arxiv.org/pdf/2609.00826",
+    "submittedAt": "2026-09-01T07:26:55Z",
+    "updatedAt": "2026-09-02T19:53:40Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "正则性",
+    "workSummary": "论文研究任意维度、带反对称势的椭圆系统中的 Rivière GL(m)-规范构造，证明临界 Lorentz-Sobolev 数据下的连续性/高阶正则性，并给出低维最优性障碍。",
+    "techniques": [
+      "Lorentz 空间估计",
+      "Rivière gauge 变换",
+      "Hodge 分解",
+      "连续性方法",
+      "反例构造"
+    ],
+    "breakthrough": "Theorem 1.1 建立二维临界 $W^{1,(2,1)}$ 连续性；Theorem 1.2 给出 $n\\ge 3$ 的 $W^{1,(n,1)}$ 正则性；Section 6 的 Proposition 6.1 构造表明更弱临界指数下结论不能统一提升。",
+    "limitations": "正则性依赖反对称势的 Lorentz 控制及边界/域假设；最优性由 Section 6 的特定构造证明，并非所有椭圆系统都自动满足。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.1 给出二维系统解的连续性及局部控制。",
+          "route": "先用 Lorentz Hölder、卷积 Young 不等式和边界 Sobolev 控制建立小范数估计，再通过 Lemma 3.1 的 gauge/迭代估计获得连续代表。",
+          "evidence": "PDF 第2页，第1节 Introduction，Theorem 1.1；PDF 第6–8页，第3节，Lemma 3.1 及 Proof of Theorem 1.1。"
+        },
+        {
+          "claim": "Theorem 1.2 将结论提升到 $n\\ge 3$ 的临界 $W^{1,(n,1)}$ 情形。",
+          "route": "构造 GL(m) gauge，使反对称势的主项转化为可控散度结构；Theorem 5.1 给出规范化方程的全局估计，再回代原方程。",
+          "evidence": "PDF 第2–3页，第1节 Theorem 1.2；PDF 第25–29页，第5节 Theorem 5.1 及其证明。"
+        },
+        {
+          "claim": "Section 6 证明临界指数的统一最优性。",
+          "route": "选择显式奇异构造并验证其满足系统方程及边界条件，同时计算梯度不属于目标 Lorentz 类，从而排除更强正则性。",
+          "evidence": "PDF 第30–33页，第6节 Proposition 6.1 及 Proof of Proposition 6.1。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "推广/加强",
-      "workSummary": "在任意维临界 Lorentz 空间中证明带反对称势的椭圆系统弱解连续性，并构造 Rivière 型 GL(m) gauge。",
-      "techniques": [
-        "反对称势",
-        "Lorentz--Sobolev 空间",
-        "守恒律与 gauge"
-      ],
-      "breakthrough": "把二维 gauge/守恒律机制推进到高维临界正则性框架。",
-      "limitations": "势与解需满足特定临界 Lorentz 指数条件。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 80,
-      "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 80/100。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "Let $1 \\leq q \\le 2$ and denote by $2 \\leq q'$ its corresponding conjugate exponent. We prove the continuity of solutions $u \\in W^{1,(\\frac{n}{n-1},q')}(B^n, \\mathbb{R}^m)$ to the critical elliptic system $-Δu = Ω\\cdot \\nabla u$ in dimension $n \\ge 3$, where the potential $Ω\\in L^{(n,q)}(B^n, \\mathfrak{so}(m) \\otimes \\wedge^1)$ is antisymmetric. First, we construct $P \\in W^{1,(n,q)}(B^n, \\mathrm{SO}(m))$ such that the PDE can be rewritten as $-\\operatorname{div}(P^{-1}du) = \\ast dξ\\cdot P^{-1}du$, which is nearly a Jacobian structure up to the rotation $P$. Second, we provide a Rivière's $\\mathrm{GL}(m)$-Gauge in order to establish a \"full\" $(A,B)$-conservation law, i.e. $-\\operatorname{div}(Adu)=d^\\ast B \\cdot du.$",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在正文末尾“On the Use of AI”明确声明：除 Section 6 外，其余部分没有由 AI 生成的证明、策略或思想；完成论文后使用 ChatGPT-5.6 Sol Pro 证明 Section 6 的最优性，并使用 Gemini 查找文献和错字。",
+    "aiEvidenceSource": "PDF 第35页，Acknowledgements 后的“On the Use of AI”声明；缓存全文第2223行附近。",
+    "priorityScore": 73,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-02",
-      "entry": {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.00826:v2",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
         "arxivId": "2609.00826",
-        "metadata": {
-          "title": "Regularity and Rivière's ${GL}(m)$-Gauge Construction for Elliptic Systems with Antisymmetric Potentials in Arbitrary Dimensions",
-          "authors": [
-            "Carolin Bayer"
-          ],
-          "abstract": "Let $1 \\leq q \\le 2$ and denote by $2 \\leq q'$ its corresponding conjugate exponent. We prove the continuity of solutions $u \\in W^{1,(\\frac{n}{n-1},q')}(B^n, \\mathbb{R}^m)$ to the critical elliptic system $-Δu = Ω\\cdot \\nabla u$ in dimension $n \\ge 3$, where the potential $Ω\\in L^{(n,q)}(B^n, \\mathfrak{so}(m) \\otimes \\wedge^1)$ is antisymmetric. First, we construct $P \\in W^{1,(n,q)}(B^n, \\mathrm{SO}(m))$ such that the PDE can be rewritten as $-\\operatorname{div}(P^{-1}du) = \\ast dξ\\cdot P^{-1}du$, which is nearly a Jacobian structure up to the rotation $P$. Second, we provide a Rivière's $\\mathrm{GL}(m)$-Gauge in order to establish a \"full\" $(A,B)$-conservation law, i.e. $-\\operatorname{div}(Adu)=d^\\ast B \\cdot du.$",
-          "categories": [
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "math.AP",
-          "version": 1,
-          "submittedAt": "2026-09-01T07:26:55Z",
-          "updatedAt": "2026-09-01T07:26:55Z"
+        "version": 2,
+        "entryKind": "new",
+        "title": "Regularity and Rivière's ${GL}(m)$-Gauge Construction for Elliptic Systems with Antisymmetric Potentials in Arbitrary Dimensions",
+        "authors": [
+          "Carolin Bayer"
+        ],
+        "abstract": "Let $1 \\leq q \\le 2$ and denote by $2 \\leq q'$ its corresponding conjugate exponent. We prove the continuity of solutions $u \\in W^{1,(\\frac{n}{n-1},q')}(B^n, \\mathbb{R}^m)$ to the critical elliptic system $-Δu = Ω\\cdot \\nabla u$ in dimension $n \\ge 3$, where the potential $Ω\\in L^{(n,q)}(B^n, \\mathfrak{so}(m) \\otimes \\wedge^1)$ is antisymmetric. First, we construct $P \\in W^{1,(n,q)}(B^n, \\mathrm{SO}(m))$ such that the PDE can be rewritten as $-\\operatorname{div}(P^{-1}du) = \\ast dξ\\cdot P^{-1}du$, which is nearly a Jacobian structure up to the rotation $P$. Second, we provide a Rivière's $\\mathrm{GL}(m)$-Gauge in order to establish a \"full\" $(A,B)$-conservation law, i.e. $-\\operatorname{div}(Adu)=d^\\ast B \\cdot du$. We show that the assumption on $Ω\\in L^{(n,q)} (B^n, \\mathfrak{so}(m) \\otimes \\wedge^1) $ for $q\\leq 2$ is optimal.",
+        "categories": [
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.00826",
+        "pdfUrl": "https://arxiv.org/pdf/2609.00826",
+        "submittedAt": "2026-09-01T07:26:55Z",
+        "updatedAt": "2026-09-02T19:53:40Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "正则性",
+        "workSummary": "论文研究任意维度、带反对称势的椭圆系统中的 Rivière GL(m)-规范构造，证明临界 Lorentz-Sobolev 数据下的连续性/高阶正则性，并给出低维最优性障碍。",
+        "techniques": [
+          "Lorentz 空间估计",
+          "Rivière gauge 变换",
+          "Hodge 分解",
+          "连续性方法",
+          "反例构造"
+        ],
+        "breakthrough": "Theorem 1.1 建立二维临界 $W^{1,(2,1)}$ 连续性；Theorem 1.2 给出 $n\\ge 3$ 的 $W^{1,(n,1)}$ 正则性；Section 6 的 Proposition 6.1 构造表明更弱临界指数下结论不能统一提升。",
+        "limitations": "正则性依赖反对称势的 Lorentz 控制及边界/域假设；最优性由 Section 6 的特定构造证明，并非所有椭圆系统都自动满足。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.1 给出二维系统解的连续性及局部控制。",
+              "route": "先用 Lorentz Hölder、卷积 Young 不等式和边界 Sobolev 控制建立小范数估计，再通过 Lemma 3.1 的 gauge/迭代估计获得连续代表。",
+              "evidence": "PDF 第2页，第1节 Introduction，Theorem 1.1；PDF 第6–8页，第3节，Lemma 3.1 及 Proof of Theorem 1.1。"
+            },
+            {
+              "claim": "Theorem 1.2 将结论提升到 $n\\ge 3$ 的临界 $W^{1,(n,1)}$ 情形。",
+              "route": "构造 GL(m) gauge，使反对称势的主项转化为可控散度结构；Theorem 5.1 给出规范化方程的全局估计，再回代原方程。",
+              "evidence": "PDF 第2–3页，第1节 Theorem 1.2；PDF 第25–29页，第5节 Theorem 5.1 及其证明。"
+            },
+            {
+              "claim": "Section 6 证明临界指数的统一最优性。",
+              "route": "选择显式奇异构造并验证其满足系统方程及边界条件，同时计算梯度不属于目标 Lorentz 类，从而排除更强正则性。",
+              "evidence": "PDF 第30–33页，第6节 Proposition 6.1 及 Proof of Proposition 6.1。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "推广/加强",
-          "workSummary": "在任意维临界 Lorentz 空间中证明带反对称势的椭圆系统弱解连续性，并构造 Rivière 型 GL(m) gauge。",
-          "techniques": [
-            "反对称势",
-            "Lorentz--Sobolev 空间",
-            "守恒律与 gauge"
-          ],
-          "breakthrough": "把二维 gauge/守恒律机制推进到高维临界正则性框架。",
-          "limitations": "势与解需满足特定临界 Lorentz 指数条件。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 80,
-          "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 80/100。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "Let $1 \\leq q \\le 2$ and denote by $2 \\leq q'$ its corresponding conjugate exponent. We prove the continuity of solutions $u \\in W^{1,(\\frac{n}{n-1},q')}(B^n, \\mathbb{R}^m)$ to the critical elliptic system $-Δu = Ω\\cdot \\nabla u$ in dimension $n \\ge 3$, where the potential $Ω\\in L^{(n,q)}(B^n, \\mathfrak{so}(m) \\otimes \\wedge^1)$ is antisymmetric. First, we construct $P \\in W^{1,(n,q)}(B^n, \\mathrm{SO}(m))$ such that the PDE can be rewritten as $-\\operatorname{div}(P^{-1}du) = \\ast dξ\\cdot P^{-1}du$, which is nearly a Jacobian structure up to the rotation $P$. Second, we provide a Rivière's $\\mathrm{GL}(m)$-Gauge in order to establish a \"full\" $(A,B)$-conservation law, i.e. $-\\operatorname{div}(Adu)=d^\\ast B \\cdot du.$",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在正文末尾“On the Use of AI”明确声明：除 Section 6 外，其余部分没有由 AI 生成的证明、策略或思想；完成论文后使用 ChatGPT-5.6 Sol Pro 证明 Section 6 的最优性，并使用 Gemini 查找文献和错字。",
+        "aiEvidenceSource": "PDF 第35页，Acknowledgements 后的“On the Use of AI”声明；缓存全文第2223行附近。",
+        "priorityScore": 73,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

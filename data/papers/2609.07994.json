@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07994",
+  "slug": "2609.07994",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07994:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07994",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Solvability of Semilinear Elliptic Equations on Infinite Graphs",
+    "authors": [
+      "Bobo Hua",
+      "Yong Lin",
+      "Haohang Zhang"
+    ],
+    "abstract": "We develop a constructive method for solving semilinear elliptic equations $Δu(x)=f(x,u(x))$ on locally finite, connected infinite graphs with layered structure. Using Eidelheit's theorem, we establish coupling criteria ensuring that arbitrary initial-layer data extend to global solutions for every $f$. We apply combinatorial criteria to prove solvability on leafless infinite trees, integer lattices, the triangular and hexagonal lattices, and a Cayley graph of the discrete Heisenberg group. We further establish solvability for a broad class of Cayley graphs of semidirect products $G\\cong\\mathbb Z\\ltimes_θH$. In particular, $Δu=e^u$ has infinitely many solutions on $\\mathbb Z^2$, but none of finite energy. We also extend the method to the bi-Laplacian under two-step coupling conditions, to the $p$-Laplacian under a unique-neighbor condition, and to magnetic Laplacians.",
+    "categories": [
+      "math.AP",
+      "math.CO"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07994",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07994",
+    "submittedAt": "2026-09-07T21:25:02Z",
+    "updatedAt": "2026-09-07T21:25:02Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文研究局部有限、连通且具有分层结构的无限图上 $\\Delta u=f(x,u(x))$ 的全局可解性。作者把图拉普拉斯按层写成相邻层耦合算子，利用 Eidelheit 定理把每个耦合算子的有限行独立性转成满射，再逐层解出下一层，从而任意指定一层或两层数据都能延拓为全局解。正文又用有限子式和唯一完美匹配给出组合判据，应用于无叶树、整数/三角/六边形格点、离散 Heisenberg 图及半直积 Cayley 图；最后说明双拉普拉斯、p-拉普拉斯和磁拉普拉斯的相应延拓机制。",
+    "techniques": [
+      "分层图与块三对角拉普拉斯",
+      "Frechet 空间上的 Eidelheit 满射定理",
+      "有限行独立与有限子式判据",
+      "唯一完美匹配和三角矩阵",
+      "逐层构造全局非线性解",
+      "两步耦合及 p-拉普拉斯标量反演"
+    ],
+    "breakthrough": "主要新结论是一个对任意非线性 f 的构造性全局延拓定理：在全球耦合条件成立时，N 分层图上任意初始层数据、Z 分层图上任意相邻两层数据，都可逐层延拓为全局解。有限行独立被精确等价为非零满行子式，唯一完美匹配提供可检验的图组合充分条件；因此 $Z^{2}$ 上 $\\Delta u=e^u$ 有无穷多个全局解，但有限能量条件反而不可能成立。",
+    "limitations": "结论在全体乘积空间 $R^V$ 的逐点拓扑中成立，不提供正性、增长、可和性或能量控制；作者在第5节明确留下加权 ℓp/指定增长空间中的定量右逆问题。双拉普拉斯需要两步耦合条件$，p\\ne 2$ 时一般有限行线性满射不能直接替代唯一邻居的逐点反演；Cayley 图的判据也依赖给定分层与生成集。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "分层图上的方程可化成只含相邻三层的块递推，并把求下一层转化为耦合算子的满射问题。",
+          "route": "按 $V_n$ 限制 u 和 $\\Delta $，把层内项收进 $\\Delta _n$；由于边只跨同层或相邻层$，V_n$ 方程整理为 $M_{n,n+1}u_{n+1}=f(\\cdot ,u_n)-\\Delta _nu_n-M_{n,n-1}u_{n-1}$，右端在已知两层后完全确定。",
+          "evidence": "PDF 第3–4页 Definition 2.1、式(4)–(5)及 Section 3.1。"
+        },
+        {
+          "claim": "耦合算子满射当且仅当其每个有限行子集线性独立，并等价于存在非零满行子式；唯一完美匹配给出直接充分条件。",
+          "route": "将每层函数空间识别为可数乘积 Frechet 空间，验证 Eidelheit 定理的连续性和有限支撑半范数条件；有限行独立即坐标泛函独立。对有限 U 去掉零列后应用最大子式判据，唯一匹配使 Leibniz 展开只剩一个非零项。",
+          "evidence": "PDF 第4–6页 Lemma 3.2、Proposition 3.3、Theorem 1.3 及其证明。"
+        },
+        {
+          "claim": "全球耦合条件使任意初始层数据逐层延拓，并在双向分层中同时向两侧延拓。",
+          "route": "N 分层从 u0 开始，已知 $(u_{n-1},u_n)$ 后由满射选取 $u_{n+1}$，且该选择只影响尚未施加的层方程；Z 分层先给定 $(u_{-1},u0)$，分别用正向/反向耦合解 u1 和 u−2，再归纳向两端推进。",
+          "evidence": "PDF 第5页 Definition 3.5 和 Theorem 1.2 的完整证明；第6页 Proposition 4.1。"
+        },
+        {
+          "claim": "这些组合条件确实导出具体图上的全局解存在性及扩展版本。",
+          "route": "在 $Z^d$ 中层间算子是恒等映射，得到两层数据到全局解的双射；在树和格点图中选唯一子节点或构造三角子矩阵验证行独立。对半直积图用左序把有限子式排成块三角并以极值纤维块的行列式闭合；双拉普拉斯和 p-拉普拉斯则分别用两步外耦合和 $\\Phi _p$ 的单调双射递推。",
+          "evidence": "PDF 第6–13页 Corollary 1.1、Examples 4.3–4.5、Theorems 4.7、4.9、4.11、5.1–5.2；第14页磁拉普拉斯扩展与边界。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–16页 的摘要、正文、致谢和参考文献；未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–16页 全文检查，特别核对证明末尾、Acknowledgments 和 References。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07994:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07994",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Solvability of Semilinear Elliptic Equations on Infinite Graphs",
+        "authors": [
+          "Bobo Hua",
+          "Yong Lin",
+          "Haohang Zhang"
+        ],
+        "abstract": "We develop a constructive method for solving semilinear elliptic equations $Δu(x)=f(x,u(x))$ on locally finite, connected infinite graphs with layered structure. Using Eidelheit's theorem, we establish coupling criteria ensuring that arbitrary initial-layer data extend to global solutions for every $f$. We apply combinatorial criteria to prove solvability on leafless infinite trees, integer lattices, the triangular and hexagonal lattices, and a Cayley graph of the discrete Heisenberg group. We further establish solvability for a broad class of Cayley graphs of semidirect products $G\\cong\\mathbb Z\\ltimes_θH$. In particular, $Δu=e^u$ has infinitely many solutions on $\\mathbb Z^2$, but none of finite energy. We also extend the method to the bi-Laplacian under two-step coupling conditions, to the $p$-Laplacian under a unique-neighbor condition, and to magnetic Laplacians.",
+        "categories": [
+          "math.AP",
+          "math.CO"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07994",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07994",
+        "submittedAt": "2026-09-07T21:25:02Z",
+        "updatedAt": "2026-09-07T21:25:02Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文研究局部有限、连通且具有分层结构的无限图上 $\\Delta u=f(x,u(x))$ 的全局可解性。作者把图拉普拉斯按层写成相邻层耦合算子，利用 Eidelheit 定理把每个耦合算子的有限行独立性转成满射，再逐层解出下一层，从而任意指定一层或两层数据都能延拓为全局解。正文又用有限子式和唯一完美匹配给出组合判据，应用于无叶树、整数/三角/六边形格点、离散 Heisenberg 图及半直积 Cayley 图；最后说明双拉普拉斯、p-拉普拉斯和磁拉普拉斯的相应延拓机制。",
+        "techniques": [
+          "分层图与块三对角拉普拉斯",
+          "Frechet 空间上的 Eidelheit 满射定理",
+          "有限行独立与有限子式判据",
+          "唯一完美匹配和三角矩阵",
+          "逐层构造全局非线性解",
+          "两步耦合及 p-拉普拉斯标量反演"
+        ],
+        "breakthrough": "主要新结论是一个对任意非线性 f 的构造性全局延拓定理：在全球耦合条件成立时，N 分层图上任意初始层数据、Z 分层图上任意相邻两层数据，都可逐层延拓为全局解。有限行独立被精确等价为非零满行子式，唯一完美匹配提供可检验的图组合充分条件；因此 $Z^{2}$ 上 $\\Delta u=e^u$ 有无穷多个全局解，但有限能量条件反而不可能成立。",
+        "limitations": "结论在全体乘积空间 $R^V$ 的逐点拓扑中成立，不提供正性、增长、可和性或能量控制；作者在第5节明确留下加权 ℓp/指定增长空间中的定量右逆问题。双拉普拉斯需要两步耦合条件$，p\\ne 2$ 时一般有限行线性满射不能直接替代唯一邻居的逐点反演；Cayley 图的判据也依赖给定分层与生成集。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "分层图上的方程可化成只含相邻三层的块递推，并把求下一层转化为耦合算子的满射问题。",
+              "route": "按 $V_n$ 限制 u 和 $\\Delta $，把层内项收进 $\\Delta _n$；由于边只跨同层或相邻层$，V_n$ 方程整理为 $M_{n,n+1}u_{n+1}=f(\\cdot ,u_n)-\\Delta _nu_n-M_{n,n-1}u_{n-1}$，右端在已知两层后完全确定。",
+              "evidence": "PDF 第3–4页 Definition 2.1、式(4)–(5)及 Section 3.1。"
+            },
+            {
+              "claim": "耦合算子满射当且仅当其每个有限行子集线性独立，并等价于存在非零满行子式；唯一完美匹配给出直接充分条件。",
+              "route": "将每层函数空间识别为可数乘积 Frechet 空间，验证 Eidelheit 定理的连续性和有限支撑半范数条件；有限行独立即坐标泛函独立。对有限 U 去掉零列后应用最大子式判据，唯一匹配使 Leibniz 展开只剩一个非零项。",
+              "evidence": "PDF 第4–6页 Lemma 3.2、Proposition 3.3、Theorem 1.3 及其证明。"
+            },
+            {
+              "claim": "全球耦合条件使任意初始层数据逐层延拓，并在双向分层中同时向两侧延拓。",
+              "route": "N 分层从 u0 开始，已知 $(u_{n-1},u_n)$ 后由满射选取 $u_{n+1}$，且该选择只影响尚未施加的层方程；Z 分层先给定 $(u_{-1},u0)$，分别用正向/反向耦合解 u1 和 u−2，再归纳向两端推进。",
+              "evidence": "PDF 第5页 Definition 3.5 和 Theorem 1.2 的完整证明；第6页 Proposition 4.1。"
+            },
+            {
+              "claim": "这些组合条件确实导出具体图上的全局解存在性及扩展版本。",
+              "route": "在 $Z^d$ 中层间算子是恒等映射，得到两层数据到全局解的双射；在树和格点图中选唯一子节点或构造三角子矩阵验证行独立。对半直积图用左序把有限子式排成块三角并以极值纤维块的行列式闭合；双拉普拉斯和 p-拉普拉斯则分别用两步外耦合和 $\\Phi _p$ 的单调双射递推。",
+              "evidence": "PDF 第6–13页 Corollary 1.1、Examples 4.3–4.5、Theorems 4.7、4.9、4.11、5.1–5.2；第14页磁拉普拉斯扩展与边界。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–16页 的摘要、正文、致谢和参考文献；未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–16页 全文检查，特别核对证明末尾、Acknowledgments 和 References。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

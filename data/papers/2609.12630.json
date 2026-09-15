@@ -3,99 +3,165 @@
   "arxivId": "2609.12630",
   "slug": "2609.12630",
   "latest": {
+    "id": "math.AP:2026-09-14:2609.12630:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
     "arxivId": "2609.12630",
-    "metadata": {
-      "title": "Bernstein theorem for $3$-dimensional anisotropic minimal graphs with free boundary",
-      "authors": [
-        "Guofang Wang",
-        "Wei Wei",
-        "Chao Xia",
-        "Xuwen Zhang"
-      ],
-      "abstract": "In this paper, we continue our recent study on anisotropic minimal surface equation with free boundary condition in Wang-Wei-Xia-Zhang (Arch Ration Mech Anal 250:42, 2026). The first main result solves the corresponding mixed boundary value problem. As an application, we prove the following Bernstein-type theorem: any anisotropic minimal graph over $\\mathbb{R}^3_+$ with free boundary must be flat. These extend the classical results of Simon (Indiana Univ Math J 25:821--855, 1976; Math Z 154:265--273, 1977) to an appropriate free boundary setting.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "comment": "36pages. Comments are welcome"
-    },
-    "sources": [
-      {
-        "url": "https://arxiv.org/list/math.DG/new",
-        "observedAt": "2026-09-14T03:56:59.688782+00:00",
-        "contentHash": "5ac95496a585ee3089b028e1aa919ba0fdc07c0c9c1dc3b38f1eea90236e6ea5"
-      }
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Bernstein theorem for $3$-dimensional anisotropic minimal graphs with free boundary",
+    "authors": [
+      "Guofang Wang",
+      "Wei Wei",
+      "Chao Xia",
+      "Xuwen Zhang"
     ],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "自由边界 Bernstein 定理",
-      "workSummary": "作者解决一类各向异性极小曲面方程的混合边值问题，并据此证明 R³ 正半空间上带自由边界的各向异性极小图必平坦。",
-      "techniques": [
-        "各向异性极小曲面方程",
-        "混合边值问题",
-        "Bernstein 刚性"
-      ],
-      "breakthrough": "将经典各向异性整图刚性推进到适当自由边界环境。",
-      "limitations": "各向异性积分被积函数条件及边界正则假设在摘要中未列全，须回查主定理。 本次依据官方公告摘要分析，尚未核查正文和完整证明；未见披露仅指当前已读摘要与作者评论。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "priorityScore": 88,
-      "priorityReason": "与几何 PDE、自由边界和整体刚性直接相关，边值技术可能可复用。"
+    "abstract": "In this paper, we continue our recent study on anisotropic minimal surface equation with free boundary condition in Wang-Wei-Xia-Zhang (Arch Ration Mech Anal 250:42, 2026). The first main result solves the corresponding mixed boundary value problem. As an application, we prove the following Bernstein-type theorem: any anisotropic minimal graph over $\\mathbb{R}^3_+$ with free boundary must be flat. These extend the classical results of Simon (Indiana Univ Math J 25:821--855, 1976; Math Z 154:265--273, 1977) to an appropriate free boundary setting.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.12630",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12630",
+    "submittedAt": "2026-09-11T09:27:15Z",
+    "updatedAt": "2026-09-11T09:27:15Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "各向异性自由边界极小图的正则性与刚性",
+    "workSummary": "已核查论文 PDF 第 1--36 页。论文先对各向异性极小曲面方程的自由边界混合问题进行严格椭圆正则化和 $\\tau$ 一致梯度估计，证明半球域混合边值问题的存在唯一性与可去奇点性；继而在三维半空间用 blow-down、各向异性极小集紧性、边界正则性和 Harnack 二分法证明任意满足自由边界条件的整个各向异性极小图必须为仿射函数，并推出恒定接触角的半仿射结论。",
+    "techniques": [
+      "一齐次均匀椭圆积分函数、Wulff 几何与各向异性通量",
+      "正则化 $f_\\tau=f+\\frac{\\tau}{2}f^2$、严格凸泛函直接法与唯一极小化子",
+      "变分积分方法、自由边界梯度估计与 Moser 型迭代",
+      "BV 紧性、局部 Schauder 正则性、障碍函数与截断极限",
+      "各向异性极小集、周长增长、blow-down 紧性与边界 $\\varepsilon$-正则性",
+      "法向量的各向异性 Harnack 估计、奇点可去性与 Bernstein 反证法"
+    ],
+    "breakthrough": "第一主结果解决半球上球面 Dirichlet、平面自由边界的各向异性混合边值问题，并给出可去奇点工具；第二主结果在三维半空间证明全局各向异性自由边界极小图的 Bernstein 刚性。关键是将 $\\tau$-一致梯度估计传过非均匀椭圆极限，再把图的子图转为各向异性极小集，通过 blow-down 后的边界 Harnack 与 $\\varepsilon$-正则性把极限法向量恒定性反推回原图。",
+    "limitations": "结果依赖 $F$ 光滑、一齐次、均匀椭圆且 Wulff 形严格凸，以及欧氏半球和半空间几何；Bernstein 刚性只在图维数 $n=3$ 成立，论文明确不覆盖 $n\\ge 4$（已有反例），也不处理一般非图形自由边界极小超曲面或非平面、粗糙边界。混合边值解要求球面数据可由邻域内 $C^2$ 函数延拓，极限正则性和唯一性主要在所构造的解类内；证明依赖 BV 紧性、边界 $\\varepsilon$-正则性和 Harnack 工具，但没有给出定量稳定性、非仿射近似误差或奇异流、重联理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "正则化并求解自由边界混合边值问题。",
+          "route": "定义 $f_\\tau(y)=f(y)+\\frac{\\tau}{2}f(y)^2$，由 Lemma 3.1 的椭圆性估计保证正则化方程统一椭圆；构造严格凸泛函 $A_\\tau$，用直接法得到唯一极小化子，并由一阶变分得到弱方程、BV 能量界和局部正则性。",
+          "evidence": "第 1.1 节和第 3 节，公式 (1.11)--(1.13)、(3.1)--(3.5)，Lemma 3.1、Proposition 3.2，PDF 第 5--15 页。"
+        },
+        {
+          "claim": "建立与参数 $\\tau$ 无关的边界和内部梯度估计。",
+          "route": "利用正则化问题的变分结构处理自由边界项，建立积分不等式和边界 Sobolev 估计；Lemma 3.5 至 Lemma 3.8 的迭代将局部振荡控制闭合为梯度上界，Theorem 3.3 给出边界和内部的指数型估计，随后线性障碍函数给出一致的 $L^\\infty$ 界。",
+          "evidence": "第 3.1--3.3 节，Lemmas 3.5--3.8、Lemma 3.10、Proposition 3.11、Theorem 3.3，公式 (3.6)--(3.7)、(3.23)--(3.29)，PDF 第 15--24 页。"
+        },
+        {
+          "claim": "令 $\\tau$ 趋于零并闭合 Theorem 1.1 的存在性、正则性和弱积分恒等式。",
+          "route": "由一致 $L^\\infty$ 界和 BV 界取紧子列得到 (3.30)，局部梯度界使方程在紧子域上保持统一椭圆，从而得到 $C^2$ 局部收敛 (3.31)；障碍函数给出球面边界迹 (3.32)--(3.34)，对球面附近测试函数截断并用支配收敛传递弱恒等式 (1.10)，严格单调性 (2.6) 给出唯一性。",
+          "evidence": "第 3.3 节 Theorem 1.1 的证明，公式 (3.29)--(3.34)，以及定理陈述中的 (1.8)--(1.10)，PDF 第 3--4、24--26 页。"
+        },
+        {
+          "claim": "去除自由边界上的紧奇点。",
+          "route": "用 Theorem 1.1 在包含奇点集的半球内构造替代解，围绕奇点集和棱边取满足 $\\int|D\\eta_\\varepsilon|\\le C\\varepsilon$ 的截断函数；将原解与替代解的弱恒等式相减，利用严格单调性 (2.6) 和 $\\varepsilon$ 趋于零得到梯度相等，再由球面迹确定加性常数为零。",
+          "evidence": "第 4 节 Corollary 1.2 的证明，公式 (4.1)--(4.3) 及弱比较步骤，PDF 第 26--27 页。"
+        },
+        {
+          "claim": "在三维半空间证明 Bernstein 刚性。",
+          "route": "由 Lemma 5.1 将图的子图视为各向异性极小集；任取 blow-down 序列，利用极小集紧性得到极限，并由子图结构得到 $D_4\\chi_{E_\\infty}\\le0$。边界正则性排除二维奇点后，Lemma 5.4 对 $V_F=F_\\nu(\\nu)_4$ 的均匀椭圆方程 (5.4) 使用 Harnack 二分法和 $\\varepsilon$-正则性，得到法向收敛 (5.10)；缩放回原图后任意点法向都等于极限法向，故图为超平面。",
+          "evidence": "第 5 节 Lemmas 5.1--5.4，公式 (5.1)--(5.9)，以及 Theorem 1.3 的证明和公式 (5.10)，PDF 第 27--34 页。"
+        }
+      ]
     },
-    "analysisBasis": {
-      "abstract": "In this paper, we continue our recent study on anisotropic minimal surface equation with free boundary condition in Wang-Wei-Xia-Zhang (Arch Ration Mech Anal 250:42, 2026). The first main result solves the corresponding mixed boundary value problem. As an application, we prove the following Bernstein-type theorem: any anisotropic minimal graph over $\\mathbb{R}^3_+$ with free boundary must be flat. These extend the classical results of Simon (Indiana Univ Math J 25:821--855, 1976; Math Z 154:265--273, 1977) to an appropriate free boundary setting.",
-      "version": null
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在 PDF 第 7 页的 On the use of AI 段落中明确披露 ChatGPT 5.6 Pro 协助识别正则化设定 (1.11)，并协助获得混合边值问题 Theorem 1.1 的存在性与正则性所需估计。作者声明已核验全部论证，并对证明的完整性与正确性负责；因此 AI 协助范围不替代作者对最终数学论证和证明的核查与责任。未进一步说明是否用于代码、编辑、校对、翻译、排版、图表或插图。",
+    "aiEvidenceSource": "逐页核查 PDF 第 1--36 页，覆盖 Introduction、Sections 2--5、全部定理证明、Acknowledgments、On the use of AI（第 7 页）及 References；AI 声明和具体用途位于第 7 页。",
+    "priorityScore": 92,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“各向异性自由边界极小图的正则性与刚性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 92/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
   },
   "history": [
     {
-      "date": "2026-09-14",
-      "entry": {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12630:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
         "arxivId": "2609.12630",
-        "metadata": {
-          "title": "Bernstein theorem for $3$-dimensional anisotropic minimal graphs with free boundary",
-          "authors": [
-            "Guofang Wang",
-            "Wei Wei",
-            "Chao Xia",
-            "Xuwen Zhang"
-          ],
-          "abstract": "In this paper, we continue our recent study on anisotropic minimal surface equation with free boundary condition in Wang-Wei-Xia-Zhang (Arch Ration Mech Anal 250:42, 2026). The first main result solves the corresponding mixed boundary value problem. As an application, we prove the following Bernstein-type theorem: any anisotropic minimal graph over $\\mathbb{R}^3_+$ with free boundary must be flat. These extend the classical results of Simon (Indiana Univ Math J 25:821--855, 1976; Math Z 154:265--273, 1977) to an appropriate free boundary setting.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "comment": "36pages. Comments are welcome"
-        },
-        "sources": [
-          {
-            "url": "https://arxiv.org/list/math.DG/new",
-            "observedAt": "2026-09-14T03:56:59.688782+00:00",
-            "contentHash": "5ac95496a585ee3089b028e1aa919ba0fdc07c0c9c1dc3b38f1eea90236e6ea5"
-          }
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Bernstein theorem for $3$-dimensional anisotropic minimal graphs with free boundary",
+        "authors": [
+          "Guofang Wang",
+          "Wei Wei",
+          "Chao Xia",
+          "Xuwen Zhang"
         ],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "自由边界 Bernstein 定理",
-          "workSummary": "作者解决一类各向异性极小曲面方程的混合边值问题，并据此证明 R³ 正半空间上带自由边界的各向异性极小图必平坦。",
-          "techniques": [
-            "各向异性极小曲面方程",
-            "混合边值问题",
-            "Bernstein 刚性"
-          ],
-          "breakthrough": "将经典各向异性整图刚性推进到适当自由边界环境。",
-          "limitations": "各向异性积分被积函数条件及边界正则假设在摘要中未列全，须回查主定理。 本次依据官方公告摘要分析，尚未核查正文和完整证明；未见披露仅指当前已读摘要与作者评论。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "priorityScore": 88,
-          "priorityReason": "与几何 PDE、自由边界和整体刚性直接相关，边值技术可能可复用。"
+        "abstract": "In this paper, we continue our recent study on anisotropic minimal surface equation with free boundary condition in Wang-Wei-Xia-Zhang (Arch Ration Mech Anal 250:42, 2026). The first main result solves the corresponding mixed boundary value problem. As an application, we prove the following Bernstein-type theorem: any anisotropic minimal graph over $\\mathbb{R}^3_+$ with free boundary must be flat. These extend the classical results of Simon (Indiana Univ Math J 25:821--855, 1976; Math Z 154:265--273, 1977) to an appropriate free boundary setting.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.12630",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12630",
+        "submittedAt": "2026-09-11T09:27:15Z",
+        "updatedAt": "2026-09-11T09:27:15Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "各向异性自由边界极小图的正则性与刚性",
+        "workSummary": "已核查论文 PDF 第 1--36 页。论文先对各向异性极小曲面方程的自由边界混合问题进行严格椭圆正则化和 $\\tau$ 一致梯度估计，证明半球域混合边值问题的存在唯一性与可去奇点性；继而在三维半空间用 blow-down、各向异性极小集紧性、边界正则性和 Harnack 二分法证明任意满足自由边界条件的整个各向异性极小图必须为仿射函数，并推出恒定接触角的半仿射结论。",
+        "techniques": [
+          "一齐次均匀椭圆积分函数、Wulff 几何与各向异性通量",
+          "正则化 $f_\\tau=f+\\frac{\\tau}{2}f^2$、严格凸泛函直接法与唯一极小化子",
+          "变分积分方法、自由边界梯度估计与 Moser 型迭代",
+          "BV 紧性、局部 Schauder 正则性、障碍函数与截断极限",
+          "各向异性极小集、周长增长、blow-down 紧性与边界 $\\varepsilon$-正则性",
+          "法向量的各向异性 Harnack 估计、奇点可去性与 Bernstein 反证法"
+        ],
+        "breakthrough": "第一主结果解决半球上球面 Dirichlet、平面自由边界的各向异性混合边值问题，并给出可去奇点工具；第二主结果在三维半空间证明全局各向异性自由边界极小图的 Bernstein 刚性。关键是将 $\\tau$-一致梯度估计传过非均匀椭圆极限，再把图的子图转为各向异性极小集，通过 blow-down 后的边界 Harnack 与 $\\varepsilon$-正则性把极限法向量恒定性反推回原图。",
+        "limitations": "结果依赖 $F$ 光滑、一齐次、均匀椭圆且 Wulff 形严格凸，以及欧氏半球和半空间几何；Bernstein 刚性只在图维数 $n=3$ 成立，论文明确不覆盖 $n\\ge 4$（已有反例），也不处理一般非图形自由边界极小超曲面或非平面、粗糙边界。混合边值解要求球面数据可由邻域内 $C^2$ 函数延拓，极限正则性和唯一性主要在所构造的解类内；证明依赖 BV 紧性、边界 $\\varepsilon$-正则性和 Harnack 工具，但没有给出定量稳定性、非仿射近似误差或奇异流、重联理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "正则化并求解自由边界混合边值问题。",
+              "route": "定义 $f_\\tau(y)=f(y)+\\frac{\\tau}{2}f(y)^2$，由 Lemma 3.1 的椭圆性估计保证正则化方程统一椭圆；构造严格凸泛函 $A_\\tau$，用直接法得到唯一极小化子，并由一阶变分得到弱方程、BV 能量界和局部正则性。",
+              "evidence": "第 1.1 节和第 3 节，公式 (1.11)--(1.13)、(3.1)--(3.5)，Lemma 3.1、Proposition 3.2，PDF 第 5--15 页。"
+            },
+            {
+              "claim": "建立与参数 $\\tau$ 无关的边界和内部梯度估计。",
+              "route": "利用正则化问题的变分结构处理自由边界项，建立积分不等式和边界 Sobolev 估计；Lemma 3.5 至 Lemma 3.8 的迭代将局部振荡控制闭合为梯度上界，Theorem 3.3 给出边界和内部的指数型估计，随后线性障碍函数给出一致的 $L^\\infty$ 界。",
+              "evidence": "第 3.1--3.3 节，Lemmas 3.5--3.8、Lemma 3.10、Proposition 3.11、Theorem 3.3，公式 (3.6)--(3.7)、(3.23)--(3.29)，PDF 第 15--24 页。"
+            },
+            {
+              "claim": "令 $\\tau$ 趋于零并闭合 Theorem 1.1 的存在性、正则性和弱积分恒等式。",
+              "route": "由一致 $L^\\infty$ 界和 BV 界取紧子列得到 (3.30)，局部梯度界使方程在紧子域上保持统一椭圆，从而得到 $C^2$ 局部收敛 (3.31)；障碍函数给出球面边界迹 (3.32)--(3.34)，对球面附近测试函数截断并用支配收敛传递弱恒等式 (1.10)，严格单调性 (2.6) 给出唯一性。",
+              "evidence": "第 3.3 节 Theorem 1.1 的证明，公式 (3.29)--(3.34)，以及定理陈述中的 (1.8)--(1.10)，PDF 第 3--4、24--26 页。"
+            },
+            {
+              "claim": "去除自由边界上的紧奇点。",
+              "route": "用 Theorem 1.1 在包含奇点集的半球内构造替代解，围绕奇点集和棱边取满足 $\\int|D\\eta_\\varepsilon|\\le C\\varepsilon$ 的截断函数；将原解与替代解的弱恒等式相减，利用严格单调性 (2.6) 和 $\\varepsilon$ 趋于零得到梯度相等，再由球面迹确定加性常数为零。",
+              "evidence": "第 4 节 Corollary 1.2 的证明，公式 (4.1)--(4.3) 及弱比较步骤，PDF 第 26--27 页。"
+            },
+            {
+              "claim": "在三维半空间证明 Bernstein 刚性。",
+              "route": "由 Lemma 5.1 将图的子图视为各向异性极小集；任取 blow-down 序列，利用极小集紧性得到极限，并由子图结构得到 $D_4\\chi_{E_\\infty}\\le0$。边界正则性排除二维奇点后，Lemma 5.4 对 $V_F=F_\\nu(\\nu)_4$ 的均匀椭圆方程 (5.4) 使用 Harnack 二分法和 $\\varepsilon$-正则性，得到法向收敛 (5.10)；缩放回原图后任意点法向都等于极限法向，故图为超平面。",
+              "evidence": "第 5 节 Lemmas 5.1--5.4，公式 (5.1)--(5.9)，以及 Theorem 1.3 的证明和公式 (5.10)，PDF 第 27--34 页。"
+            }
+          ]
         },
-        "analysisBasis": {
-          "abstract": "In this paper, we continue our recent study on anisotropic minimal surface equation with free boundary condition in Wang-Wei-Xia-Zhang (Arch Ration Mech Anal 250:42, 2026). The first main result solves the corresponding mixed boundary value problem. As an application, we prove the following Bernstein-type theorem: any anisotropic minimal graph over $\\mathbb{R}^3_+$ with free boundary must be flat. These extend the classical results of Simon (Indiana Univ Math J 25:821--855, 1976; Math Z 154:265--273, 1977) to an appropriate free boundary setting.",
-          "version": null
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在 PDF 第 7 页的 On the use of AI 段落中明确披露 ChatGPT 5.6 Pro 协助识别正则化设定 (1.11)，并协助获得混合边值问题 Theorem 1.1 的存在性与正则性所需估计。作者声明已核验全部论证，并对证明的完整性与正确性负责；因此 AI 协助范围不替代作者对最终数学论证和证明的核查与责任。未进一步说明是否用于代码、编辑、校对、翻译、排版、图表或插图。",
+        "aiEvidenceSource": "逐页核查 PDF 第 1--36 页，覆盖 Introduction、Sections 2--5、全部定理证明、Acknowledgments、On the use of AI（第 7 页）及 References；AI 声明和具体用途位于第 7 页。",
+        "priorityScore": 92,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“各向异性自由边界极小图的正则性与刚性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 92/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
       }
     }
   ]

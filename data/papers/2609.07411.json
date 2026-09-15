@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07411",
+  "slug": "2609.07411",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07411:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07411",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Threshold phenomena for least energy solutions of a doubly critical Neumann problem with a critical absorption term",
+    "authors": [
+      "Yinbin Deng",
+      "Yulin Shi",
+      "Pengyan Wang"
+    ],
+    "abstract": "We investigate the existence and nonexistence of least energy solutions for a doubly critical Neumann problem with a critical absorption term. We consider a positive function $u$ defined on a smooth bounded domain $Ω\\subset\\mathbb{R}^n$ with $n\\ge 5$, satisfying $-Δu + λu = u^{2^* - 1} -αu^{2^\\sharp-1}$ inside $Ω$, with Neumann boundary condition $\\nabla u\\cdot ν= u^{2^\\sharp -1}$ on $\\partialΩ$, where $λ>0$, $α\\ge0$, $2^*=\\frac{2n}{n-2}$ is the critical Sobolev exponent and $2^\\sharp=\\frac{2(n-1)}{n-2}$ denotes the critical trace exponent. The simultaneous presence of the interior and boundary critical exponents together with this critical absorption term creates a new interaction between competing concentration mechanisms. In particular, the absorption term has the same critical trace exponent as the boundary nonlinearity, but with the opposite sign and acting in the interior of $Ω$. Consequently, it competes with the boundary mean curvature correction at the same asymptotic order in the energy expansion, leading to a sharp threshold phenomenon. Combining several analytic techniques and geometric tools, we prove the existence of a threshold value $α_{0}=α_{0}(λ,Ω)\\in(0,+\\infty)$ such that the problem admits a least energy solution if $α<α_{0}$, and no least energy solution if $α>α_{0}$. Moreover, the problem also has a least energy solution at $α=α_0$ provided $α_0> C(n)\\max_{\\partial Ω} H$, where $C(n)$ is a positive constant depending only on $n$ and $H$ is the mean curvature on $\\partialΩ$.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07411",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07411",
+    "submittedAt": "2026-09-07T12:24:04Z",
+    "updatedAt": "2026-09-07T12:24:04Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究 $n\\ge 5$ 光滑有界域上的双临界 Neumann 问题：内部临界 Sobolev 幂、边界临界迹幂以及同阶的内部临界吸收项共同作用。正文第 2 节建立半空间 bubble 和浓缩阈值 A，第 3 节用 Nehari/Palais–Smale 方法处理 $\\alpha <\\alpha _{0}$，第 4 节分析 $\\alpha _k\\to \\infty $ 的边界集中，第 5 节计算曲率与吸收在 $\\epsilon $ 阶的能量展开，第 6 节处理阈值情形。主结果是存在 $\\alpha _{0}(\\lambda ,\\Omega )，\\alpha <\\alpha _{0}$ 时有最小能量解$、\\alpha >\\alpha _{0}$ 时没有，并给出 $\\alpha _{0}\\ge C(n)max\\partial \\Omega H$ 以及边界临界情形的存在条件。",
+    "techniques": [
+      "Nehari 流形与最小能量变分",
+      "半空间临界 bubble",
+      "浓缩紧性与 blow-up",
+      "边界坐标能量展开",
+      "Pohozaev/曲率比较"
+    ],
+    "breakthrough": "具体推进在于把临界吸收项 $B(n)\\alpha \\epsilon $ 与边界平均曲率项 $-L(n)H(\\xi )\\epsilon $ 放在同一 bubble 能量阶上比较；因此阈值由几何曲率和吸收强度共同决定，而不是像低阶扰动那样自动被曲率项压过。",
+    "limitations": "结论限于 $n\\ge 5、\\lambda >0$、光滑有界域和正吸收参数 $\\alpha \\ge 0；\\alpha =\\alpha _{0}$ 且 $\\alpha _{0}=C(n)maxH$ 时只给出“存在或在最大曲率点浓缩”的二择一描述，临界等号情形没有被统一决定。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "半空间临界水平 A 是有界域 Palais–Smale 序列失去紧性的能量门槛。",
+          "route": "先用显式半空间 bubble $V_1$ 和尺度/切向平移不变性定义 A；对弱收敛到零的序列使用临界 Sobolev 与 trace 分解，若不强收敛则其最大一维缩放能量至少达到 A。",
+          "evidence": "Section 2 Lemma 2.1（PDF 第 9 页）给出 $V_1$ 与 A；Lemma 2.2 及公式(2.6)–(2.7)（PDF 第 9 页）给出浓缩阈值。"
+        },
+        {
+          "claim": "当 $\\alpha <\\alpha _{0}$ 且 $S_\\alpha <A$ 时，Neumann 泛函的最小能量水平被取得并产生正解。",
+          "route": "在 Nehari 流形上取最小序列，利用 $S_0<A、S_\\alpha $ 的连续单调性和临界阈值排除内部/边界 bubble；无浓缩后弱极限强收敛，再以最大值原理恢复正性和 Euler–Lagrange 方程。",
+          "evidence": "Section 3 Lemma 3.4 与 Corollary 3.1（PDF 第 5 页附近）；Theorem 1.1(i) 的定义(1.8)–(1.10)（PDF 第 5 页）；Section 3 existence proof（PDF 第 12–17 页）。"
+        },
+        {
+          "claim": "当 $\\alpha _k\\to \\infty $ 时，最小能量解不能保持紧，且其主质量在边界点按半空间 bubble 重新缩放。",
+          "route": "先假设一列解没有集中，用统一正则性与能量界得到与 $\\alpha _k$ 吸收项矛盾的极限；选择最大点和尺度 $\\epsilon _k$，边界坐标缩放后由半空间分类把归一化剖面识别为 $V_1$。",
+          "evidence": "Section 4 的 blow-up 分析（PDF 第 18–24 页）；Lemma 2.1 的 bubble 公式(2.1)–(2.3)（PDF 第 9 页）。"
+        },
+        {
+          "claim": "bubble 的一阶能量系数为 $-L(n)H(\\xi )+B(n)\\alpha $，故 $\\alpha _{0}\\ge C(n)max\\partial \\Omega H$，并得到定理的存在/非存在分支。",
+          "route": "把半空间 bubble 通过边界图坐标植入 $\\Omega $，逐项展开梯度、内临界积分和边界临界积分；Lemma 5.6 给出 $I_\\alpha (V_{\\epsilon ,\\xi })=A-L(n)H(\\xi )\\epsilon +B(n)\\alpha \\epsilon +O(\\epsilon ^{2})$，再用 $\\xi $ 处最大曲率选择测试 bubble，结合 $S_\\alpha =A$ 的定义完成阈值判别。",
+          "evidence": "Section 5 Lemma 5.6 与公式(1.12)（PDF 第 7 页及第 25–27 页）；Theorem 1.1(i)–(ii)（PDF 第 5 页）；Section 6 threshold argument（PDF 第 28–35 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、变分构造、爆破分析、能量展开、致谢和参考文献，并全文检索 AI、LLM、ChatGPT、artificial intelligence；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1–53 页全文；重点核查 Section 1.5 的正文结构、Section 5–6 的主证明、致谢和 References。",
+    "priorityScore": 87,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07411:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07411",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Threshold phenomena for least energy solutions of a doubly critical Neumann problem with a critical absorption term",
+        "authors": [
+          "Yinbin Deng",
+          "Yulin Shi",
+          "Pengyan Wang"
+        ],
+        "abstract": "We investigate the existence and nonexistence of least energy solutions for a doubly critical Neumann problem with a critical absorption term. We consider a positive function $u$ defined on a smooth bounded domain $Ω\\subset\\mathbb{R}^n$ with $n\\ge 5$, satisfying $-Δu + λu = u^{2^* - 1} -αu^{2^\\sharp-1}$ inside $Ω$, with Neumann boundary condition $\\nabla u\\cdot ν= u^{2^\\sharp -1}$ on $\\partialΩ$, where $λ>0$, $α\\ge0$, $2^*=\\frac{2n}{n-2}$ is the critical Sobolev exponent and $2^\\sharp=\\frac{2(n-1)}{n-2}$ denotes the critical trace exponent. The simultaneous presence of the interior and boundary critical exponents together with this critical absorption term creates a new interaction between competing concentration mechanisms. In particular, the absorption term has the same critical trace exponent as the boundary nonlinearity, but with the opposite sign and acting in the interior of $Ω$. Consequently, it competes with the boundary mean curvature correction at the same asymptotic order in the energy expansion, leading to a sharp threshold phenomenon. Combining several analytic techniques and geometric tools, we prove the existence of a threshold value $α_{0}=α_{0}(λ,Ω)\\in(0,+\\infty)$ such that the problem admits a least energy solution if $α<α_{0}$, and no least energy solution if $α>α_{0}$. Moreover, the problem also has a least energy solution at $α=α_0$ provided $α_0> C(n)\\max_{\\partial Ω} H$, where $C(n)$ is a positive constant depending only on $n$ and $H$ is the mean curvature on $\\partialΩ$.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07411",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07411",
+        "submittedAt": "2026-09-07T12:24:04Z",
+        "updatedAt": "2026-09-07T12:24:04Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究 $n\\ge 5$ 光滑有界域上的双临界 Neumann 问题：内部临界 Sobolev 幂、边界临界迹幂以及同阶的内部临界吸收项共同作用。正文第 2 节建立半空间 bubble 和浓缩阈值 A，第 3 节用 Nehari/Palais–Smale 方法处理 $\\alpha <\\alpha _{0}$，第 4 节分析 $\\alpha _k\\to \\infty $ 的边界集中，第 5 节计算曲率与吸收在 $\\epsilon $ 阶的能量展开，第 6 节处理阈值情形。主结果是存在 $\\alpha _{0}(\\lambda ,\\Omega )，\\alpha <\\alpha _{0}$ 时有最小能量解$、\\alpha >\\alpha _{0}$ 时没有，并给出 $\\alpha _{0}\\ge C(n)max\\partial \\Omega H$ 以及边界临界情形的存在条件。",
+        "techniques": [
+          "Nehari 流形与最小能量变分",
+          "半空间临界 bubble",
+          "浓缩紧性与 blow-up",
+          "边界坐标能量展开",
+          "Pohozaev/曲率比较"
+        ],
+        "breakthrough": "具体推进在于把临界吸收项 $B(n)\\alpha \\epsilon $ 与边界平均曲率项 $-L(n)H(\\xi )\\epsilon $ 放在同一 bubble 能量阶上比较；因此阈值由几何曲率和吸收强度共同决定，而不是像低阶扰动那样自动被曲率项压过。",
+        "limitations": "结论限于 $n\\ge 5、\\lambda >0$、光滑有界域和正吸收参数 $\\alpha \\ge 0；\\alpha =\\alpha _{0}$ 且 $\\alpha _{0}=C(n)maxH$ 时只给出“存在或在最大曲率点浓缩”的二择一描述，临界等号情形没有被统一决定。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "半空间临界水平 A 是有界域 Palais–Smale 序列失去紧性的能量门槛。",
+              "route": "先用显式半空间 bubble $V_1$ 和尺度/切向平移不变性定义 A；对弱收敛到零的序列使用临界 Sobolev 与 trace 分解，若不强收敛则其最大一维缩放能量至少达到 A。",
+              "evidence": "Section 2 Lemma 2.1（PDF 第 9 页）给出 $V_1$ 与 A；Lemma 2.2 及公式(2.6)–(2.7)（PDF 第 9 页）给出浓缩阈值。"
+            },
+            {
+              "claim": "当 $\\alpha <\\alpha _{0}$ 且 $S_\\alpha <A$ 时，Neumann 泛函的最小能量水平被取得并产生正解。",
+              "route": "在 Nehari 流形上取最小序列，利用 $S_0<A、S_\\alpha $ 的连续单调性和临界阈值排除内部/边界 bubble；无浓缩后弱极限强收敛，再以最大值原理恢复正性和 Euler–Lagrange 方程。",
+              "evidence": "Section 3 Lemma 3.4 与 Corollary 3.1（PDF 第 5 页附近）；Theorem 1.1(i) 的定义(1.8)–(1.10)（PDF 第 5 页）；Section 3 existence proof（PDF 第 12–17 页）。"
+            },
+            {
+              "claim": "当 $\\alpha _k\\to \\infty $ 时，最小能量解不能保持紧，且其主质量在边界点按半空间 bubble 重新缩放。",
+              "route": "先假设一列解没有集中，用统一正则性与能量界得到与 $\\alpha _k$ 吸收项矛盾的极限；选择最大点和尺度 $\\epsilon _k$，边界坐标缩放后由半空间分类把归一化剖面识别为 $V_1$。",
+              "evidence": "Section 4 的 blow-up 分析（PDF 第 18–24 页）；Lemma 2.1 的 bubble 公式(2.1)–(2.3)（PDF 第 9 页）。"
+            },
+            {
+              "claim": "bubble 的一阶能量系数为 $-L(n)H(\\xi )+B(n)\\alpha $，故 $\\alpha _{0}\\ge C(n)max\\partial \\Omega H$，并得到定理的存在/非存在分支。",
+              "route": "把半空间 bubble 通过边界图坐标植入 $\\Omega $，逐项展开梯度、内临界积分和边界临界积分；Lemma 5.6 给出 $I_\\alpha (V_{\\epsilon ,\\xi })=A-L(n)H(\\xi )\\epsilon +B(n)\\alpha \\epsilon +O(\\epsilon ^{2})$，再用 $\\xi $ 处最大曲率选择测试 bubble，结合 $S_\\alpha =A$ 的定义完成阈值判别。",
+              "evidence": "Section 5 Lemma 5.6 与公式(1.12)（PDF 第 7 页及第 25–27 页）；Theorem 1.1(i)–(ii)（PDF 第 5 页）；Section 6 threshold argument（PDF 第 28–35 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、变分构造、爆破分析、能量展开、致谢和参考文献，并全文检索 AI、LLM、ChatGPT、artificial intelligence；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1–53 页全文；重点核查 Section 1.5 的正文结构、Section 5–6 的主证明、致谢和 References。",
+        "priorityScore": 87,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.29085",
+  "slug": "2608.29085",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.29085:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.29085",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Absence of the Lavrentiev phenomenon for a general class of parabolic double phase problems",
+    "authors": [
+      "Youngchae Kim",
+      "Jehan Oh"
+    ],
+    "abstract": "In this paper, we prove the absence of the Lavrentiev phenomenon for a general class of parabolic double phase functionals with Orlicz growth. The energy density is given by $$ G(|Dw|)+a(x,t)H(|Dw|), $$ where $G$ and $H$ are Young functions satisfying the $Δ_2$ and $\\nabla_2$ conditions with $G\\prec H$, and $a(\\cdot)$ is a continuous nonnegative coefficient. Under suitable balance conditions between the growth gap of $G$ and $H$ and the modulus of continuity of $a(\\cdot)$, we show that every finite-energy map can be approximated locally by smooth functions without loss of energy. The result extends the known parabolic double phase theory from power type growth to a broad Young function framework and identifies the natural space-time Orlicz energy class for the problem.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.29085",
+    "pdfUrl": "https://arxiv.org/pdf/2608.29085",
+    "submittedAt": "2026-08-29T06:26:29Z",
+    "updatedAt": "2026-08-29T06:26:29Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "$theorem_proof_reviewed$",
+    "workSummary": "论文研究具有 Orlicz 增长的抛物双相泛函 $P(w)=∫[G(|Dw|)+a(z)H(|Dw|)]$ 中是否出现 Lavrentiev 间隙。正文第 1 节提出 G、H 的 $\\Delta _{2}/\\nabla 2、G≺H$ 和系数模连续性条件，第 2 节建立 Young 函数复合与抛物平滑工具，第 3 节完成局部平滑逼近。Theorem 1.1 说明有限能量映射可在任意紧内柱体 Q 中由光滑序列逼近，且函数、梯度模块和泛函能量分别收敛。",
+    "techniques": [
+      "Orlicz Young 函数的 $\\Delta _{2}/\\nabla 2$ 伸缩",
+      "抛物尺度 mollification",
+      "双相系数振荡的模估计",
+      "截断与 modular 收敛",
+      "局部对角逼近"
+    ],
+    "breakthrough": "核心结果把幂次双相理论的无 Lavrentiev 结论推广到一般 Young 函数，并把 G/H 的增长间隙与 a 的抛物连续模写成三个可检验的平衡条件；逼近不只保持函数收敛，也保持 Orlicz 梯度模块和原泛函能量。",
+    "limitations": "结果是局部结论，只对有限能量的 $W^{1,1}$ 映射和紧内柱体成立；需要 G,H 同时满足 $\\Delta _{2}/\\nabla 2、G≺H、a$ 非负连续及定理 (1.2)–(1.4) 中至少一个平衡条件，并未给出边界保持或无条件的全域光滑密度。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "$\\Delta _{2}、\\nabla 2$ 与 G≺H 使复合增长 $\\Phi =H∘G^{-1}$ 具有可控伸缩，且能量有限性确定自然的 Orlicz 梯度空间。",
+          "route": "先用 Definition 2.1 的两侧伸缩不等式控制 Young 函数在大、小尺度的变化，再由 Lemma 2.4–2.5 证明复合函数的 $\\Delta _{2}$ 和比值估计；这一步把后续 mollification 产生的尺度因子转成可积模块。",
+          "evidence": "Section 2.1 Definition 2.1（PDF 第 5 页）；Lemma 2.2 和 Lemmas 2.4–2.5（PDF 第 5–6 页）。"
+        },
+        {
+          "claim": "抛物平滑后的函数仍能在局部柱体内控制双相能量，系数 a 的振荡只产生由 $\\omega (\\rho )$ 衡量的误差。",
+          "route": "在内部柱体先按空间半径 $\\rho $、时间半径 $\\rho ^{2}$ 作抛物卷积；把 $a(z)-a(\\zeta )$ 从卷积核中提出，用其连续模乘以 H 的伸缩估计，随后用 G≺H 将高增长项吸收到条件 (1.2)、(1.3) 或 (1.4) 的比值中。",
+          "evidence": "Theorem 1.1 的三种平衡条件(1.2)–(1.4)（PDF 第 4 页）；Section 3 的抛物平滑与系数振荡估计（PDF 第 7–9 页）。"
+        },
+        {
+          "claim": "截断平滑序列在 L1、LG 梯度模块和 P 中分别收敛到 w、Dw 和原能量。",
+          "route": "先对 w 和 Dw 做局部截断，避免卷积在大梯度尾部失控；用 Lemma 2.5 的复合增长比较得到均匀可积，再由 Orlicz modular 收敛把逐点收敛提升为积分收敛，并单独估计 aH 项。",
+          "evidence": "Section 3 Proposition 2.7 与 Proposition 2.8（PDF 第 7 页）；Section 3 证明 Theorem 1.1 中的收敛链（PDF 第 8–9 页）。"
+        },
+        {
+          "claim": "对任意 $Q\\subset \\subset \\Omega T$ 存在 $C\\infty (Q)$ 序列 wm，使 wm→w、Dwm→Dw 且 P(wm,Q)→P(w,Q)，从而无 Lavrentiev 现象。",
+          "route": "将内部尺度逐级选小，使每一级的函数、梯度和双相能量误差小于 $2^{-m}$；把各局部近似按有限覆盖拼接，再用对角选择得到单一序列，三种条件分别对应三种尾项吸收方式。",
+          "evidence": "Theorem 1.1（PDF 第 4 页）；Section 3 Proposition 2.8 后的最终构造与 Theorem 1.1 证明收束（PDF 第 7–9 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查正文、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文逐页核查，包含引言、证明章节与末尾致谢/声明区域。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.29085:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.29085",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Absence of the Lavrentiev phenomenon for a general class of parabolic double phase problems",
+        "authors": [
+          "Youngchae Kim",
+          "Jehan Oh"
+        ],
+        "abstract": "In this paper, we prove the absence of the Lavrentiev phenomenon for a general class of parabolic double phase functionals with Orlicz growth. The energy density is given by $$ G(|Dw|)+a(x,t)H(|Dw|), $$ where $G$ and $H$ are Young functions satisfying the $Δ_2$ and $\\nabla_2$ conditions with $G\\prec H$, and $a(\\cdot)$ is a continuous nonnegative coefficient. Under suitable balance conditions between the growth gap of $G$ and $H$ and the modulus of continuity of $a(\\cdot)$, we show that every finite-energy map can be approximated locally by smooth functions without loss of energy. The result extends the known parabolic double phase theory from power type growth to a broad Young function framework and identifies the natural space-time Orlicz energy class for the problem.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.29085",
+        "pdfUrl": "https://arxiv.org/pdf/2608.29085",
+        "submittedAt": "2026-08-29T06:26:29Z",
+        "updatedAt": "2026-08-29T06:26:29Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "$theorem_proof_reviewed$",
+        "workSummary": "论文研究具有 Orlicz 增长的抛物双相泛函 $P(w)=∫[G(|Dw|)+a(z)H(|Dw|)]$ 中是否出现 Lavrentiev 间隙。正文第 1 节提出 G、H 的 $\\Delta _{2}/\\nabla 2、G≺H$ 和系数模连续性条件，第 2 节建立 Young 函数复合与抛物平滑工具，第 3 节完成局部平滑逼近。Theorem 1.1 说明有限能量映射可在任意紧内柱体 Q 中由光滑序列逼近，且函数、梯度模块和泛函能量分别收敛。",
+        "techniques": [
+          "Orlicz Young 函数的 $\\Delta _{2}/\\nabla 2$ 伸缩",
+          "抛物尺度 mollification",
+          "双相系数振荡的模估计",
+          "截断与 modular 收敛",
+          "局部对角逼近"
+        ],
+        "breakthrough": "核心结果把幂次双相理论的无 Lavrentiev 结论推广到一般 Young 函数，并把 G/H 的增长间隙与 a 的抛物连续模写成三个可检验的平衡条件；逼近不只保持函数收敛，也保持 Orlicz 梯度模块和原泛函能量。",
+        "limitations": "结果是局部结论，只对有限能量的 $W^{1,1}$ 映射和紧内柱体成立；需要 G,H 同时满足 $\\Delta _{2}/\\nabla 2、G≺H、a$ 非负连续及定理 (1.2)–(1.4) 中至少一个平衡条件，并未给出边界保持或无条件的全域光滑密度。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "$\\Delta _{2}、\\nabla 2$ 与 G≺H 使复合增长 $\\Phi =H∘G^{-1}$ 具有可控伸缩，且能量有限性确定自然的 Orlicz 梯度空间。",
+              "route": "先用 Definition 2.1 的两侧伸缩不等式控制 Young 函数在大、小尺度的变化，再由 Lemma 2.4–2.5 证明复合函数的 $\\Delta _{2}$ 和比值估计；这一步把后续 mollification 产生的尺度因子转成可积模块。",
+              "evidence": "Section 2.1 Definition 2.1（PDF 第 5 页）；Lemma 2.2 和 Lemmas 2.4–2.5（PDF 第 5–6 页）。"
+            },
+            {
+              "claim": "抛物平滑后的函数仍能在局部柱体内控制双相能量，系数 a 的振荡只产生由 $\\omega (\\rho )$ 衡量的误差。",
+              "route": "在内部柱体先按空间半径 $\\rho $、时间半径 $\\rho ^{2}$ 作抛物卷积；把 $a(z)-a(\\zeta )$ 从卷积核中提出，用其连续模乘以 H 的伸缩估计，随后用 G≺H 将高增长项吸收到条件 (1.2)、(1.3) 或 (1.4) 的比值中。",
+              "evidence": "Theorem 1.1 的三种平衡条件(1.2)–(1.4)（PDF 第 4 页）；Section 3 的抛物平滑与系数振荡估计（PDF 第 7–9 页）。"
+            },
+            {
+              "claim": "截断平滑序列在 L1、LG 梯度模块和 P 中分别收敛到 w、Dw 和原能量。",
+              "route": "先对 w 和 Dw 做局部截断，避免卷积在大梯度尾部失控；用 Lemma 2.5 的复合增长比较得到均匀可积，再由 Orlicz modular 收敛把逐点收敛提升为积分收敛，并单独估计 aH 项。",
+              "evidence": "Section 3 Proposition 2.7 与 Proposition 2.8（PDF 第 7 页）；Section 3 证明 Theorem 1.1 中的收敛链（PDF 第 8–9 页）。"
+            },
+            {
+              "claim": "对任意 $Q\\subset \\subset \\Omega T$ 存在 $C\\infty (Q)$ 序列 wm，使 wm→w、Dwm→Dw 且 P(wm,Q)→P(w,Q)，从而无 Lavrentiev 现象。",
+              "route": "将内部尺度逐级选小，使每一级的函数、梯度和双相能量误差小于 $2^{-m}$；把各局部近似按有限覆盖拼接，再用对角选择得到单一序列，三种条件分别对应三种尾项吸收方式。",
+              "evidence": "Theorem 1.1（PDF 第 4 页）；Section 3 Proposition 2.8 后的最终构造与 Theorem 1.1 证明收束（PDF 第 7–9 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查正文、致谢/声明、附录和参考文献，并全文检索 AI、LLM、ChatGPT、Claude、Gemini、Grammarly；未见作者明确说明 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文逐页核查，包含引言、证明章节与末尾致谢/声明区域。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

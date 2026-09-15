@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.27926",
+  "slug": "2608.27926",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.27926:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.27926",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Optimal error estimates for the half-way bounce-back lattice Boltzmann method for the Stokes equations",
+    "authors": [
+      "Kai Koike"
+    ],
+    "abstract": "We give a mathematical proof of the optimal convergence rates for the D2Q9 BGK lattice Boltzmann method with the half-way bounce-back rule for the incompressible Stokes equations in a flat channel. The convergence rates are second-order for the velocity and first-order for the pressure as the lattice spacing $h$ tends to zero, in agreement with formal analyses and numerical experiments, whereas the available rigorous convergence theorems only yield an $O(h^{1/2})$ bound for the velocity error. A key step in the proof is a decomposition of the leading boundary consistency error into macroscopic and kinetic components. These components are absorbed by suitably constructed Stokes and discrete Knudsen layer correctors, respectively. Incorporating these correctors into the prediction function used in previous rigorous analyses, we obtain a refined prediction function with consistency errors of sufficiently high order. Combined with the known weighted $L^2$-stability estimate, this gives the optimal convergence rates.",
+    "categories": [
+      "math.NA",
+      "math.AP"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2608.27926",
+    "pdfUrl": "https://arxiv.org/pdf/2608.27926",
+    "submittedAt": "2026-08-28T05:04:56Z",
+    "updatedAt": "2026-08-28T05:04:56Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "theoretical",
+    "workSummary": "论文为平直通道中不可压 Stokes 方程的 D2Q9 BGK 半格点格子 Boltzmann 半程反弹格式给出最优误差证明。核心不是直接估计原始离散解，而是把由宏观 Stokes 解生成的预测函数加入 Stokes 校正层和 Knudsen 层，使边界残差从 $O(h^3)$ 降到 $O(h^5)$，内部残差保持足够高阶；再将残差代入加权 L2 稳定性和离散 Duhamel 公式，得到速度 $O(h^2)$、压力 O(h) 的收敛。",
+    "techniques": [
+      "D2Q9 BGK 半格点反弹格式",
+      "Stokes 边界校正层与离散 Knudsen 层",
+      "Taylor 渐近展开和内部/边界残差分解",
+      "加权 L2 稳定性与离散 Duhamel 原理",
+      "三阶初始化与宏观量提取"
+    ],
+    "breakthrough": "正文把半格点边界的主导一致性误差分解为宏观和动理学分量，分别用 Stokes corrector 与 Knudsen corrector 消掉，建立此前仅给出半阶速度界时缺失的二阶速度和一阶压力最优估计。",
+    "limitations": "定理限于平直通道、D2Q9 BGK、半格点反弹$、\\tau >1/2$、足够光滑的 Stokes 解和三阶初始化。作者明确把非半格点配置、一般碰撞算子、非线性 Navier–Stokes 以及曲边界留作后续问题，不能据此声称这些情形已有最优误差界。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "预测函数的内部残差高阶而边界残差主项可被识别。",
+          "route": "将预测算子由 Stokes 解(U,P)和辅助的修正解(W,Q)组成，按 streaming/collision 定义总残差并拆成内部与边界部分；Taylor 展开逐项显示内部为 $O(h^6)$，边界主项为 $h^3$ $R^{\\pm ,(3)}$。",
+          "evidence": "PDF 第13–16页式(19)–(29)、引理3.1–3.2和命题3.3，给出残差分解及 $O(h^6)/O(h^3)$ 阶数。"
+        },
+        {
+          "claim": "Stokes 校正消去边界残差的宏观分量。",
+          "route": "利用 $C\\pm $ 的值域与 $\\kappa \\pm $ 张成的直和，把 $R^{\\pm ,(3)}$ 分解为 $C\\pm g0\\pm $ 与动理学方向；引理3.4验证校正数据的总通量为零，因此可以解 Stokes 边值问题并把宏观边界误差降阶。",
+          "evidence": "PDF 第16–18页式(30)–(34)、引理3.4和随后校正构造，明确使用 $C\\pm $ 的单射及通量守恒。"
+        },
+        {
+          "claim": "Knudsen 层和后续校正使最终边界残差达到 $O(h^5)$。",
+          "route": "先对动理学剩余方向解离散半空间问题，再按切向/法向展开加入二阶校正；引理与命题3.15–3.19逐层控制指数衰减层和残差，得到只支撑在边界层的 $O(h^5)$ 误差。",
+          "evidence": "PDF 第28–31页命题3.16–3.19的层级展开与式(87)–(88)，其中命题3.19明确给出内部 $O(h^6)$ 与边界 $O(h^5)$。"
+        },
+        {
+          "claim": "预测误差在离散时间推进中保持可控。",
+          "route": "将精化预测函数代入一步格式形成误差递推，使用稳定算子范数不超过1和离散 Duhamel 展开累加内部/边界残差；三阶初始化把初值项压到 $O(h^3)$，从而得到分布函数误差。",
+          "evidence": "PDF 第32–33页命题4.1–4.2、式(89)–(97)给出残差界、稳定性和 Duhamel 累积。"
+        },
+        {
+          "claim": "宏观速度和压力分别达到二阶和一阶收敛。",
+          "route": "从精化预测分布的矩提取速度与压力，直接用式(10)的矩展开把预测量与连续 Stokes 解比较，再加上命题4.2的离散分布误差；两项分别保留 $h^2$ 与 h 阶。",
+          "evidence": "PDF 第12页定理2.5陈述目标阶数；PDF 第34页定理2.5证明中的式(98)–(99)完成速度 $O(h^2)$、压力 O(h)。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "正文末尾声明作者在研究开发中使用 OpenAI ChatGPT 作为交互式研究工具，具体用于探索和细化证明策略、检查中间论证与计算、辅助文献检索以及起草/修改表述，并说明作者独立核验数学内容。此为作者明确披露的研究和论文制作用途。",
+    "aiEvidenceSource": "PDF 第35页“Statements and Declarations / Use of generative AI”逐字核查；同时全文搜索 AI、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 并判读上下文。",
+    "priorityScore": 68,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.27926:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.27926",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Optimal error estimates for the half-way bounce-back lattice Boltzmann method for the Stokes equations",
+        "authors": [
+          "Kai Koike"
+        ],
+        "abstract": "We give a mathematical proof of the optimal convergence rates for the D2Q9 BGK lattice Boltzmann method with the half-way bounce-back rule for the incompressible Stokes equations in a flat channel. The convergence rates are second-order for the velocity and first-order for the pressure as the lattice spacing $h$ tends to zero, in agreement with formal analyses and numerical experiments, whereas the available rigorous convergence theorems only yield an $O(h^{1/2})$ bound for the velocity error. A key step in the proof is a decomposition of the leading boundary consistency error into macroscopic and kinetic components. These components are absorbed by suitably constructed Stokes and discrete Knudsen layer correctors, respectively. Incorporating these correctors into the prediction function used in previous rigorous analyses, we obtain a refined prediction function with consistency errors of sufficiently high order. Combined with the known weighted $L^2$-stability estimate, this gives the optimal convergence rates.",
+        "categories": [
+          "math.NA",
+          "math.AP"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2608.27926",
+        "pdfUrl": "https://arxiv.org/pdf/2608.27926",
+        "submittedAt": "2026-08-28T05:04:56Z",
+        "updatedAt": "2026-08-28T05:04:56Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "theoretical",
+        "workSummary": "论文为平直通道中不可压 Stokes 方程的 D2Q9 BGK 半格点格子 Boltzmann 半程反弹格式给出最优误差证明。核心不是直接估计原始离散解，而是把由宏观 Stokes 解生成的预测函数加入 Stokes 校正层和 Knudsen 层，使边界残差从 $O(h^3)$ 降到 $O(h^5)$，内部残差保持足够高阶；再将残差代入加权 L2 稳定性和离散 Duhamel 公式，得到速度 $O(h^2)$、压力 O(h) 的收敛。",
+        "techniques": [
+          "D2Q9 BGK 半格点反弹格式",
+          "Stokes 边界校正层与离散 Knudsen 层",
+          "Taylor 渐近展开和内部/边界残差分解",
+          "加权 L2 稳定性与离散 Duhamel 原理",
+          "三阶初始化与宏观量提取"
+        ],
+        "breakthrough": "正文把半格点边界的主导一致性误差分解为宏观和动理学分量，分别用 Stokes corrector 与 Knudsen corrector 消掉，建立此前仅给出半阶速度界时缺失的二阶速度和一阶压力最优估计。",
+        "limitations": "定理限于平直通道、D2Q9 BGK、半格点反弹$、\\tau >1/2$、足够光滑的 Stokes 解和三阶初始化。作者明确把非半格点配置、一般碰撞算子、非线性 Navier–Stokes 以及曲边界留作后续问题，不能据此声称这些情形已有最优误差界。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "预测函数的内部残差高阶而边界残差主项可被识别。",
+              "route": "将预测算子由 Stokes 解(U,P)和辅助的修正解(W,Q)组成，按 streaming/collision 定义总残差并拆成内部与边界部分；Taylor 展开逐项显示内部为 $O(h^6)$，边界主项为 $h^3$ $R^{\\pm ,(3)}$。",
+              "evidence": "PDF 第13–16页式(19)–(29)、引理3.1–3.2和命题3.3，给出残差分解及 $O(h^6)/O(h^3)$ 阶数。"
+            },
+            {
+              "claim": "Stokes 校正消去边界残差的宏观分量。",
+              "route": "利用 $C\\pm $ 的值域与 $\\kappa \\pm $ 张成的直和，把 $R^{\\pm ,(3)}$ 分解为 $C\\pm g0\\pm $ 与动理学方向；引理3.4验证校正数据的总通量为零，因此可以解 Stokes 边值问题并把宏观边界误差降阶。",
+              "evidence": "PDF 第16–18页式(30)–(34)、引理3.4和随后校正构造，明确使用 $C\\pm $ 的单射及通量守恒。"
+            },
+            {
+              "claim": "Knudsen 层和后续校正使最终边界残差达到 $O(h^5)$。",
+              "route": "先对动理学剩余方向解离散半空间问题，再按切向/法向展开加入二阶校正；引理与命题3.15–3.19逐层控制指数衰减层和残差，得到只支撑在边界层的 $O(h^5)$ 误差。",
+              "evidence": "PDF 第28–31页命题3.16–3.19的层级展开与式(87)–(88)，其中命题3.19明确给出内部 $O(h^6)$ 与边界 $O(h^5)$。"
+            },
+            {
+              "claim": "预测误差在离散时间推进中保持可控。",
+              "route": "将精化预测函数代入一步格式形成误差递推，使用稳定算子范数不超过1和离散 Duhamel 展开累加内部/边界残差；三阶初始化把初值项压到 $O(h^3)$，从而得到分布函数误差。",
+              "evidence": "PDF 第32–33页命题4.1–4.2、式(89)–(97)给出残差界、稳定性和 Duhamel 累积。"
+            },
+            {
+              "claim": "宏观速度和压力分别达到二阶和一阶收敛。",
+              "route": "从精化预测分布的矩提取速度与压力，直接用式(10)的矩展开把预测量与连续 Stokes 解比较，再加上命题4.2的离散分布误差；两项分别保留 $h^2$ 与 h 阶。",
+              "evidence": "PDF 第12页定理2.5陈述目标阶数；PDF 第34页定理2.5证明中的式(98)–(99)完成速度 $O(h^2)$、压力 O(h)。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "正文末尾声明作者在研究开发中使用 OpenAI ChatGPT 作为交互式研究工具，具体用于探索和细化证明策略、检查中间论证与计算、辅助文献检索以及起草/修改表述，并说明作者独立核验数学内容。此为作者明确披露的研究和论文制作用途。",
+        "aiEvidenceSource": "PDF 第35页“Statements and Declarations / Use of generative AI”逐字核查；同时全文搜索 AI、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 并判读上下文。",
+        "priorityScore": 68,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

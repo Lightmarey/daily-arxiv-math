@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.07466",
+  "slug": "2609.07466",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.07466:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.07466",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Gradient flow approach to Landau equation: A cross-product structure",
+    "authors": [
+      "Manh Hong Duong",
+      "Zihui He"
+    ],
+    "abstract": "We introduce a cross-product Landau gradient that commutes with Gaussian mollification. For the hard-potential interaction kernels of the form $A(|v-v_*|)\\sim \\langle v-v_*\\rangle^γ|v-v_*|^2$ with $γ\\in(-\\infty,1]$, this construction yields a variational characterisation of the gradient-flow structure of the spatially homogeneous Landau equation. The cross-product gradient induces the same gradient-flow geometry as that introduced by Carrillo, Delgadino, Desvillettes and Wu (2024), while providing a different representation of the Landau gradient. The main advantage of this formulation is that it requires only weighted $L^1$-control. We also discuss a similar variational characterisation for the GENERIC structure of the fuzzy Landau equations.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.07466",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07466",
+    "submittedAt": "2026-09-07T13:21:45Z",
+    "updatedAt": "2026-09-07T13:21:45Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "分析结果",
+    "workSummary": "本文处理空间齐次 Landau 方程的梯度流表示。作者把投影张量 $|v-v*|^{2}\\Pi ⊥$ 改写为叉积 $(v-v*)\\times (\\cdot )\\times (v-v*)$，在三维速度空间定义 cross-Landau gradient，并围绕该结构分析高斯卷积、作用量和熵链式法则。正文先建立与高斯卷积精确交换的球面微分结构，再用径向核的卷积界控制 A0，随后对测度曲线和 grazing rate 做正则化、链式法则极限，最终得到作用量加熵耗散的变分不等式及等号刻画；文末说明同一机制如何延伸到 fuzzy Landau 的 GENERIC 结构。",
+    "techniques": [
+      "叉积型 Landau 梯度与球面微分",
+      "质心/相对坐标变换",
+      "高斯卷积交换子恒等式",
+      "加权 L1 核卷积估计",
+      "测度曲线正则化与熵链式法则",
+      "Cauchy–Schwarz 作用量估计"
+    ],
+    "breakthrough": "核心新结论是：在 $A0(|v-v*|)∼〈v-v*〉^\\gamma 、\\gamma \\le 1$ 的正则化硬势核下，叉积梯度与高斯 mollifier 的交换性足以把 Landau 梯度流的变分刻画降到加权 L1 控制，并且其二次型、曲线作用量和原投影梯度产生同一 Onsager 几何。由此 Theorem 1.1 的等号条件精确恢复 H-solution，而不再依赖既有方法中的额外 Lp 沿曲线假设。",
+    "limitations": "主证明固定三维空间，虽在 Remark 1.2 给出用斜对称矩阵推广到 $d\\ge 3$ 的形式，但未在正文展开完整高维论证。核必须满足 (1.2) 的正则化径向比较；作者明确指出奇异幂核 $A0=|v-v*|^\\gamma $ 的一般范围不享有所需交换子界。定理还要求加权 L1、有限初始熵和作用量/耗散可积性，结论是变分刻画而非独立的全局存在唯一性定理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "叉积梯度表示 Landau 投影张量，并且在两粒子质心坐标中只作用于相对方向的球面变量。",
+          "route": "把 $|v-v*|^{2}\\Pi ⊥u$ 写成 $(v-v*)\\times u\\times (v-v*)$，再令 $z=(v-v*)/2=r\\sigma 、z0=(v+v*)/2$；由 $\\nabla z=\\sigma \\partial r+r^{-1}\\nabla \\sigma $ 消去径向分量，得到张量化梯度为 $2\\sigma \\times \\nabla \\sigma $。",
+          "evidence": "PDF 第2页式(1.4)–(1.6)；第8页 $z0,z,r,\\sigma $ 定义及 lifted gradient。"
+        },
+        {
+          "claim": "该梯度和相应散度与双变量高斯卷积交换，从而正则化不会制造新的交换子误差。",
+          "route": "将高斯核改写成质心/相对坐标中的 $exp(rr̄\\sigma \\cdot \\sigma ̄/\\beta )$ 因子，对 $\\sigma ̄$ 做球面分部积分；恒等式 $(\\Pi \\sigma ̄⊥\\sigma )\\times \\sigma ̄=\\sigma \\times \\sigma ̄$ 把被积导数转移成 $\\sigma \\times \\nabla \\sigma $，散度情形用同样的切向恒等式处理。",
+          "evidence": "PDF 第8页 Lemma 2.2、式(2.4)；第9–10页式(2.5)–(2.6)及交换子证明。"
+        },
+        {
+          "claim": "A0 的作用量与耗散在高斯正则化下保持一致的上界并收敛到原泛函。",
+          "route": "先用凸函数 $|a|^{2}/b$ 的 Jensen 不等式和 Lemma 2.2 把正则化后的梯度平方压回原梯度的卷积，再用 $A0^{\\pm 1}*M\\beta \\le CA0^{\\pm 1}$ 控制径向权；逐点收敛后由支配收敛给出两项极限。",
+          "evidence": "PDF 第12页 Lemma 3.3、Proposition 3.5；第13页式(3.5)–(3.6)及 Jensen/核卷积估计。"
+        },
+        {
+          "claim": "满足假设的 grazing-rate 曲线满足熵链式法则，并由此得到 Theorem 1.1 的非负作用量泛函与等号刻画。",
+          "route": "对速度、高斯、时间及正下界依次正则化，使测试 log f 合法；交换性给出正则化连续性方程，先得到近似熵链式法则，再用 Proposition 3.5 和 Cauchy–Schwarz 通过 $\\beta \\to 0$。等号迫使 $U=-A0ff*\\nabla ̃log f$，代回连续性方程即为 H-solution。",
+          "evidence": "PDF 第10页第3节开头熵估计；第12页 Lemma 3.4；第14–15页式(3.7)–(3.8)及极限；第3页 Theorem 1.1 式(1.8)–(1.9)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–17页 的摘要、正文、致谢和参考文献；未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第1–17页 全文检查，特别核对结尾、致谢与参考文献。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于控制理论；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07466:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.07466",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Gradient flow approach to Landau equation: A cross-product structure",
+        "authors": [
+          "Manh Hong Duong",
+          "Zihui He"
+        ],
+        "abstract": "We introduce a cross-product Landau gradient that commutes with Gaussian mollification. For the hard-potential interaction kernels of the form $A(|v-v_*|)\\sim \\langle v-v_*\\rangle^γ|v-v_*|^2$ with $γ\\in(-\\infty,1]$, this construction yields a variational characterisation of the gradient-flow structure of the spatially homogeneous Landau equation. The cross-product gradient induces the same gradient-flow geometry as that introduced by Carrillo, Delgadino, Desvillettes and Wu (2024), while providing a different representation of the Landau gradient. The main advantage of this formulation is that it requires only weighted $L^1$-control. We also discuss a similar variational characterisation for the GENERIC structure of the fuzzy Landau equations.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.07466",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07466",
+        "submittedAt": "2026-09-07T13:21:45Z",
+        "updatedAt": "2026-09-07T13:21:45Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "分析结果",
+        "workSummary": "本文处理空间齐次 Landau 方程的梯度流表示。作者把投影张量 $|v-v*|^{2}\\Pi ⊥$ 改写为叉积 $(v-v*)\\times (\\cdot )\\times (v-v*)$，在三维速度空间定义 cross-Landau gradient，并围绕该结构分析高斯卷积、作用量和熵链式法则。正文先建立与高斯卷积精确交换的球面微分结构，再用径向核的卷积界控制 A0，随后对测度曲线和 grazing rate 做正则化、链式法则极限，最终得到作用量加熵耗散的变分不等式及等号刻画；文末说明同一机制如何延伸到 fuzzy Landau 的 GENERIC 结构。",
+        "techniques": [
+          "叉积型 Landau 梯度与球面微分",
+          "质心/相对坐标变换",
+          "高斯卷积交换子恒等式",
+          "加权 L1 核卷积估计",
+          "测度曲线正则化与熵链式法则",
+          "Cauchy–Schwarz 作用量估计"
+        ],
+        "breakthrough": "核心新结论是：在 $A0(|v-v*|)∼〈v-v*〉^\\gamma 、\\gamma \\le 1$ 的正则化硬势核下，叉积梯度与高斯 mollifier 的交换性足以把 Landau 梯度流的变分刻画降到加权 L1 控制，并且其二次型、曲线作用量和原投影梯度产生同一 Onsager 几何。由此 Theorem 1.1 的等号条件精确恢复 H-solution，而不再依赖既有方法中的额外 Lp 沿曲线假设。",
+        "limitations": "主证明固定三维空间，虽在 Remark 1.2 给出用斜对称矩阵推广到 $d\\ge 3$ 的形式，但未在正文展开完整高维论证。核必须满足 (1.2) 的正则化径向比较；作者明确指出奇异幂核 $A0=|v-v*|^\\gamma $ 的一般范围不享有所需交换子界。定理还要求加权 L1、有限初始熵和作用量/耗散可积性，结论是变分刻画而非独立的全局存在唯一性定理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "叉积梯度表示 Landau 投影张量，并且在两粒子质心坐标中只作用于相对方向的球面变量。",
+              "route": "把 $|v-v*|^{2}\\Pi ⊥u$ 写成 $(v-v*)\\times u\\times (v-v*)$，再令 $z=(v-v*)/2=r\\sigma 、z0=(v+v*)/2$；由 $\\nabla z=\\sigma \\partial r+r^{-1}\\nabla \\sigma $ 消去径向分量，得到张量化梯度为 $2\\sigma \\times \\nabla \\sigma $。",
+              "evidence": "PDF 第2页式(1.4)–(1.6)；第8页 $z0,z,r,\\sigma $ 定义及 lifted gradient。"
+            },
+            {
+              "claim": "该梯度和相应散度与双变量高斯卷积交换，从而正则化不会制造新的交换子误差。",
+              "route": "将高斯核改写成质心/相对坐标中的 $exp(rr̄\\sigma \\cdot \\sigma ̄/\\beta )$ 因子，对 $\\sigma ̄$ 做球面分部积分；恒等式 $(\\Pi \\sigma ̄⊥\\sigma )\\times \\sigma ̄=\\sigma \\times \\sigma ̄$ 把被积导数转移成 $\\sigma \\times \\nabla \\sigma $，散度情形用同样的切向恒等式处理。",
+              "evidence": "PDF 第8页 Lemma 2.2、式(2.4)；第9–10页式(2.5)–(2.6)及交换子证明。"
+            },
+            {
+              "claim": "A0 的作用量与耗散在高斯正则化下保持一致的上界并收敛到原泛函。",
+              "route": "先用凸函数 $|a|^{2}/b$ 的 Jensen 不等式和 Lemma 2.2 把正则化后的梯度平方压回原梯度的卷积，再用 $A0^{\\pm 1}*M\\beta \\le CA0^{\\pm 1}$ 控制径向权；逐点收敛后由支配收敛给出两项极限。",
+              "evidence": "PDF 第12页 Lemma 3.3、Proposition 3.5；第13页式(3.5)–(3.6)及 Jensen/核卷积估计。"
+            },
+            {
+              "claim": "满足假设的 grazing-rate 曲线满足熵链式法则，并由此得到 Theorem 1.1 的非负作用量泛函与等号刻画。",
+              "route": "对速度、高斯、时间及正下界依次正则化，使测试 log f 合法；交换性给出正则化连续性方程，先得到近似熵链式法则，再用 Proposition 3.5 和 Cauchy–Schwarz 通过 $\\beta \\to 0$。等号迫使 $U=-A0ff*\\nabla ̃log f$，代回连续性方程即为 H-solution。",
+              "evidence": "PDF 第10页第3节开头熵估计；第12页 Lemma 3.4；第14–15页式(3.7)–(3.8)及极限；第3页 Theorem 1.1 式(1.8)–(1.9)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–17页 的摘要、正文、致谢和参考文献；未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第1–17页 全文检查，特别核对结尾、致谢与参考文献。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于控制理论；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

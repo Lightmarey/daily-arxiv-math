@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.05354",
+  "slug": "2609.05354",
+  "latest": {
+    "id": "math.AP:2026-09-07:2609.05354:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-07",
+    "arxivId": "2609.05354",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Existence of thermodynamically consistent solutions for data-driven porous media problems",
+    "authors": [
+      "Ramon Codina",
+      "Cristian Guillermo Gebhardt",
+      "Michael Ortiz"
+    ],
+    "abstract": "Data-Driven Computational Mechanics (DDCM) replaces traditional phenomenological constitutive models by directly reformulating boundary-value problems in terms of local material state data obtained from experiments or fine-scale simulations. Standard DDCM formulations, only enforcing equilibrium and compatibility, do not inherently guarantee compliance with the second law of thermodynamics. This breakdown occurs particularly when input material data sets are subject to noise or local physical non-admissibility. In this work, we present a variational DDCM framework specifically tailored to diffusion--reaction problems. Taking advantage of the simplicity of the thermodynamic constraint in gradient-flux systems, we propose an augmented formulation that explicitly enforces the second law of thermodynamics as a hard constraint within the energy-minimization problem. Although the set of thermodynamically admissible states is non-convex and fails to be weakly closed in the ambient phase space, we establish existence of minimizers by proving that the intersection of the admissible set with the subspace of fields that are compatible and in equilibrium is weakly sequentially closed via a compensated compactness argument. To enable practical computations, we analyze both a Lagrange multiplier formulation and a penalization scheme. We prove the $Γ$-convergence of the penalized functionals to the exact constrained problem and establish a fully discrete convergence framework incorporating spatial finite-element discretization and empirical data-set approximations. Numerical experiments confirm that the proposed penalty scheme effectively restores thermodynamic consistency even in the presence of severely corrupted material data.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.05354",
+    "pdfUrl": "https://arxiv.org/pdf/2609.05354",
+    "submittedAt": "2026-09-04T17:01:01Z",
+    "updatedAt": "2026-09-04T17:01:01Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "变分方法",
+    "workSummary": "研究数据驱动多孔介质 Darcy 问题的热力学一致解：先证明可行集和数据驱动距离下的最小值存在，再用 Mosco/有限元收敛处理近似，最后以正部分惩罚和 $\\Gamma $ 收敛恢复约束 Darcy 解。",
+    "techniques": [
+      "数据驱动最小化",
+      "弱闭性",
+      "Mosco 收敛",
+      "有限元紧性",
+      "$\\Gamma $ 收敛与惩罚"
+    ],
+    "breakthrough": "把热力学一致性作为数据驱动本构数据集的可行约束，证明其与 Darcy PDE 的最小化、离散收敛及惩罚 $\\Gamma $ 极限相容。",
+    "limitations": "数据集需弱闭/一致横截且椭圆性满足条件；惩罚参数极限的结论是变分收敛，不保证任意非一致数据集有精确解。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Darcy 状态方程和可行集具有良好的变分结构。",
+          "route": "先由 Lax--Milgram 证明给定导电率的 Darcy 问题经典适定，再定义场变量与本构数据集的距离和约束集。",
+          "evidence": "第 2 节 Theorem 2.1、Lemma 3.1（PDF 第 4--8 页）。"
+        },
+        {
+          "claim": "数据驱动泛函取得最小值并在直和条件下残差为零。",
+          "route": "利用反射性和弱闭性取得 minimizing sequence 的弱极限；power identity 提供 coercivity，direct-sum 条件迫使数据点与可行场同时满足 constitutive relation。",
+          "evidence": "第 3 节 Lemma 3.2、Theorems 3.3--3.4（PDF 第 8--14 页）。"
+        },
+        {
+          "claim": "离散有限元近似保持紧性并收敛到连续 minimizer。",
+          "route": "建立离散空间的统一能量界，使用弱紧性和一致横截性将有限元场/数据对传到极限；Mosco 收敛识别离散最小化问题。",
+          "evidence": "第 4 节 Theorem 4.1、Corollary 4.2（PDF 第 15--19 页）。"
+        },
+        {
+          "claim": "热力学约束和惩罚方法分别恢复物理解与 $\\Gamma $ 极限。",
+          "route": "对 pointwise sign constraint 用 compensated compactness 证明弱闭性，再把正部分惩罚做 equicoercive $\\Gamma $ 收敛；对角选取离散和惩罚参数得到 fully approximate minimizer convergence。",
+          "evidence": "第 5、7、8 节 Theorem 5.4、Theorems 7.1--7.4、Theorems 8.1--8.3（PDF 第 19--34 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--50 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-07",
+      "report": {
+        "id": "math.AP:2026-09-07:2609.05354:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-07",
+        "arxivId": "2609.05354",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Existence of thermodynamically consistent solutions for data-driven porous media problems",
+        "authors": [
+          "Ramon Codina",
+          "Cristian Guillermo Gebhardt",
+          "Michael Ortiz"
+        ],
+        "abstract": "Data-Driven Computational Mechanics (DDCM) replaces traditional phenomenological constitutive models by directly reformulating boundary-value problems in terms of local material state data obtained from experiments or fine-scale simulations. Standard DDCM formulations, only enforcing equilibrium and compatibility, do not inherently guarantee compliance with the second law of thermodynamics. This breakdown occurs particularly when input material data sets are subject to noise or local physical non-admissibility. In this work, we present a variational DDCM framework specifically tailored to diffusion--reaction problems. Taking advantage of the simplicity of the thermodynamic constraint in gradient-flux systems, we propose an augmented formulation that explicitly enforces the second law of thermodynamics as a hard constraint within the energy-minimization problem. Although the set of thermodynamically admissible states is non-convex and fails to be weakly closed in the ambient phase space, we establish existence of minimizers by proving that the intersection of the admissible set with the subspace of fields that are compatible and in equilibrium is weakly sequentially closed via a compensated compactness argument. To enable practical computations, we analyze both a Lagrange multiplier formulation and a penalization scheme. We prove the $Γ$-convergence of the penalized functionals to the exact constrained problem and establish a fully discrete convergence framework incorporating spatial finite-element discretization and empirical data-set approximations. Numerical experiments confirm that the proposed penalty scheme effectively restores thermodynamic consistency even in the presence of severely corrupted material data.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.05354",
+        "pdfUrl": "https://arxiv.org/pdf/2609.05354",
+        "submittedAt": "2026-09-04T17:01:01Z",
+        "updatedAt": "2026-09-04T17:01:01Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "变分方法",
+        "workSummary": "研究数据驱动多孔介质 Darcy 问题的热力学一致解：先证明可行集和数据驱动距离下的最小值存在，再用 Mosco/有限元收敛处理近似，最后以正部分惩罚和 $\\Gamma $ 收敛恢复约束 Darcy 解。",
+        "techniques": [
+          "数据驱动最小化",
+          "弱闭性",
+          "Mosco 收敛",
+          "有限元紧性",
+          "$\\Gamma $ 收敛与惩罚"
+        ],
+        "breakthrough": "把热力学一致性作为数据驱动本构数据集的可行约束，证明其与 Darcy PDE 的最小化、离散收敛及惩罚 $\\Gamma $ 极限相容。",
+        "limitations": "数据集需弱闭/一致横截且椭圆性满足条件；惩罚参数极限的结论是变分收敛，不保证任意非一致数据集有精确解。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Darcy 状态方程和可行集具有良好的变分结构。",
+              "route": "先由 Lax--Milgram 证明给定导电率的 Darcy 问题经典适定，再定义场变量与本构数据集的距离和约束集。",
+              "evidence": "第 2 节 Theorem 2.1、Lemma 3.1（PDF 第 4--8 页）。"
+            },
+            {
+              "claim": "数据驱动泛函取得最小值并在直和条件下残差为零。",
+              "route": "利用反射性和弱闭性取得 minimizing sequence 的弱极限；power identity 提供 coercivity，direct-sum 条件迫使数据点与可行场同时满足 constitutive relation。",
+              "evidence": "第 3 节 Lemma 3.2、Theorems 3.3--3.4（PDF 第 8--14 页）。"
+            },
+            {
+              "claim": "离散有限元近似保持紧性并收敛到连续 minimizer。",
+              "route": "建立离散空间的统一能量界，使用弱紧性和一致横截性将有限元场/数据对传到极限；Mosco 收敛识别离散最小化问题。",
+              "evidence": "第 4 节 Theorem 4.1、Corollary 4.2（PDF 第 15--19 页）。"
+            },
+            {
+              "claim": "热力学约束和惩罚方法分别恢复物理解与 $\\Gamma $ 极限。",
+              "route": "对 pointwise sign constraint 用 compensated compactness 证明弱闭性，再把正部分惩罚做 equicoercive $\\Gamma $ 收敛；对角选取离散和惩罚参数得到 fully approximate minimizer convergence。",
+              "evidence": "第 5、7、8 节 Theorem 5.4、Theorems 7.1--7.4、Theorems 8.1--8.3（PDF 第 19--34 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--50 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

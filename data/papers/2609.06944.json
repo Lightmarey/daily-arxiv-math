@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06944",
+  "slug": "2609.06944",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06944:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06944",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Local Well-Posedness of the Boundary Layer Equations for Dilatant Power-Law Fluids",
+    "authors": [
+      "Mingxue Zhang",
+      "Zhonger Wu"
+    ],
+    "abstract": "We establish the local-in-time existence and uniqueness of monotone solutions to the two-dimensional nonstationary boundary-layer equations for a dilatant power-law fluid in a periodic half-space for $1<n<\\frac{7}{3}$. Under Oleinik's monotonicity condition and suitable weighted Sobolev assumptions on the initial data and outer flow, we construct solutions through tangential regularization and derive uniform a priori estimates. A suitable good unknown compensates for the loss of one tangential derivative caused by the normal velocity. By combining weighted energy estimates, the Faà di Bruno formula, and the maximum and minimum principles, we control the nonlinear degenerate diffusion term $\\partial_y^2(ω^n)$, whose effective diffusion coefficient vanishes as $ω=\\partial_yu$ decays at infinity, and propagate the weighted monotonicity of the vorticity. Within this exponent range, our result partially resolves the eleventh open problem posed by Oleinik and Samokhin \\cite{OAO} on the existence and uniqueness of solutions to nonstationary boundary-layer systems for dilatant fluids.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.06944",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06944",
+    "submittedAt": "2026-09-07T02:28:33Z",
+    "updatedAt": "2026-09-07T02:28:33Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "分析结果",
+    "workSummary": "本文证明周期半空间中稀释型幂律流体二维非定常边界层方程的局部存在唯一性。对满足 Oleinik 单调性 $\\partial _y$ u>0 的解，作者把非线性扩散写成退化系数 $n\\omega ^{n-1}\\partial _y^{2}\\omega $，并加入小切向黏性 $\\epsilon ^{2}\\partial _x^{2}$ 构造正则化系统。法向导数使用加权能量估计，纯切向最高阶导数因法向速度 $v=-\\partial _y^{-1}\\partial _x u$ 产生导数损失，于是引入 good unknown $g^s_\\epsilon =\\partial _x^s\\omega _\\epsilon -(\\partial _y\\omega _\\epsilon /\\omega _\\epsilon )\\partial _x^s(u_\\epsilon -U)$ 消除主损失。配合 Faà di Bruno 展开、边界兼容性、最大/最小值原理，得到独立于 $\\epsilon $ 的加权 Sobolev 和单调性界；Aubin–Lions 极限给出原方程，最后对差解用通量平均线性化和 ḡ 能量不等式证明唯一性。",
+    "techniques": [
+      "切向黏性正则化与 vorticity 方程",
+      "加权法向能量估计",
+      "good unknown 消除切向导数损失",
+      "Faà di Bruno 与边界兼容性估计",
+      "最大/最小值原理、Aubin–Lions 紧性与差值能量法"
+    ],
+    "breakthrough": "论文在 1<n<7/3 的一整段稀释型幂律指数上，将原先主要针对 $n=2$ 的单调边界层局部理论推广为存在唯一经典解，并以 good unknown 处理退化扩散与法向速度共同造成的最高阶切向损失。",
+    "limitations": "指数范围严格为 1<n<7/3，且需要周期半空间、正外流、Oleinik 单调性、很高的偶数阶正则性和多阶初始边界兼容条件；权重参数还需满足 $\\sigma >\\gamma +1/2、\\sigma \\le 2/(n-1)、\\sigma \\le \\gamma +3/4$，作者未声称这些限制最优，也未给出长时间或失去单调性的理论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "切向黏性正则化系统对每个 $\\epsilon >0$ 具有局部经典解，并保持正 vorticity 的退化抛物结构。",
+          "route": "在 $\\partial _y$ u>0 下令 $\\omega _\\epsilon =\\partial _y$ $u_\\epsilon $，把扩散写成 $n\\omega _\\epsilon ^{n-1}\\partial _y^{2}\\omega _\\epsilon +n(n-1)\\omega _\\epsilon ^{n-2}|\\partial _y\\omega _\\epsilon |^{2}$；加入 $\\epsilon ^{2}\\partial _x^{2}$ 后得到正则化 vorticity 方程，再由标准抛物理论、速度积分表示(1.8)和兼容初值构造解。",
+          "evidence": "正则化系统(1.5)–(1.8)（PDF第3–4页）；Lemma 3.1（PDF第9页）。"
+        },
+        {
+          "claim": "所有含法向导数的加权高阶导数满足统一能量不等式，退化系数的负幂由权重和单调下界控制。",
+          "route": "对 vorticity 方程施加 $D^\\alpha （|\\alpha |\\le s、\\alpha _1\\le s-1）$，与 $(1+y)^{2\\gamma +2\\alpha _2}D^\\alpha \\omega _\\epsilon $ 配对并在 y 上分部积分，主项产生 $n\\omega _\\epsilon ^{n-1}|\\partial _yD^\\alpha \\omega _\\epsilon |^{2}。Faà$ di Bruno 展开将系数导数拆成低阶乘积，条件 $\\delta (1+y)^{-\\sigma }\\le \\omega _\\epsilon \\le \\delta ^{-1}(1+y)^{-\\sigma }$ 与 $\\sigma \\le 2/(n-1)$ 控制所有负幂和边界项。",
+          "evidence": "Proposition 3.1、式(3.1)–(3.8)（PDF第10–11页）；权重类定义(1.9)及限制（PDF第4–5页）。"
+        },
+        {
+          "claim": "good unknown $g^s_\\epsilon $ 消除最高阶纯切向导数损失，并与低阶能量合并得到闭合的 $H^s$ 加权界。",
+          "route": "分别对 $\\partial _x^s(u_\\epsilon -U)$ 和 $\\partial _x^s\\omega _\\epsilon $ 方程求导，再以 $(\\partial _y\\omega _\\epsilon /\\omega _\\epsilon )\\partial _x^s(u_\\epsilon -U)$ 相减，法向速度带来的 $\\partial _x^{s+1}$ 项相消。剩余边界项通过 Lemma 3.2 的递推兼容公式改写为压力导数和低阶多项式；Proposition 3.2 的耗散项与 Proposition 3.1 合并进入 Proposition 3.3 的 ODE 型范数估计。",
+          "evidence": "good unknown 的方程(3.75)–(3.79)及 Proposition 3.2（PDF第27页）；Lemma 3.2的边界递推(3.45)–(3.46)（PDF第20页）；Proposition 3.3及式(3.109)–(3.112)（PDF第33–34页）。"
+        },
+        {
+          "claim": "正则化解有 $\\epsilon $ 无关寿命并收敛到原方程的唯一经典解。",
+          "route": "Propositions 3.3–3.4 用常微分比较和最大/最小值原理同时控制 $H^s$ 范数、加权低阶导数与正单调下界，Proposition 4.1 因而给出统一寿命。Aubin–Lions 提取局部强收敛，连续性把 $\\omega _\\epsilon ^n、\\partial _y^{2}\\omega _\\epsilon ^n$ 和速度积分传到极限，得到(4.7)及边界通量。两解相减后用平均系数 $µ=n∫(\\omega _2+\\theta \\omega ̄)^{n-1}d\\theta $ 和 $ḡ=\\omega ̄-a_2ū，L^{2}$ 能量式(4.17)经 Gronwall 强制 $ḡ=0$，再由边界条件恢复 $ū=v̄=\\omega ̄=0$。",
+          "evidence": "Proposition 4.1及式(4.2)（PDF第39–40页）；极限过程式(4.3)–(4.9)（PDF第40–41页）；Lemma 4.1、Proposition 4.2及式(4.10)–(4.19)（PDF第41–42页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查 PDF 第1–44页的引言、正则化构造、三组加权估计、紧性与唯一性证明、Acknowledgements、Competing interests 和 References，并检索 AI、LLM、ChatGPT、language model 等词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。文中“Institute for Math and AI”仅是作者机构名称，不是 AI 工具使用声明。",
+    "aiEvidenceSource": "PDF 第1–44页全文及文末声明区域；特别复核 Theorem 1.1、Propositions 3.1–3.4、Proposition 4.1–4.2。",
+    "priorityScore": 63,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06944:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06944",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Local Well-Posedness of the Boundary Layer Equations for Dilatant Power-Law Fluids",
+        "authors": [
+          "Mingxue Zhang",
+          "Zhonger Wu"
+        ],
+        "abstract": "We establish the local-in-time existence and uniqueness of monotone solutions to the two-dimensional nonstationary boundary-layer equations for a dilatant power-law fluid in a periodic half-space for $1<n<\\frac{7}{3}$. Under Oleinik's monotonicity condition and suitable weighted Sobolev assumptions on the initial data and outer flow, we construct solutions through tangential regularization and derive uniform a priori estimates. A suitable good unknown compensates for the loss of one tangential derivative caused by the normal velocity. By combining weighted energy estimates, the Faà di Bruno formula, and the maximum and minimum principles, we control the nonlinear degenerate diffusion term $\\partial_y^2(ω^n)$, whose effective diffusion coefficient vanishes as $ω=\\partial_yu$ decays at infinity, and propagate the weighted monotonicity of the vorticity. Within this exponent range, our result partially resolves the eleventh open problem posed by Oleinik and Samokhin \\cite{OAO} on the existence and uniqueness of solutions to nonstationary boundary-layer systems for dilatant fluids.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.06944",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06944",
+        "submittedAt": "2026-09-07T02:28:33Z",
+        "updatedAt": "2026-09-07T02:28:33Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "分析结果",
+        "workSummary": "本文证明周期半空间中稀释型幂律流体二维非定常边界层方程的局部存在唯一性。对满足 Oleinik 单调性 $\\partial _y$ u>0 的解，作者把非线性扩散写成退化系数 $n\\omega ^{n-1}\\partial _y^{2}\\omega $，并加入小切向黏性 $\\epsilon ^{2}\\partial _x^{2}$ 构造正则化系统。法向导数使用加权能量估计，纯切向最高阶导数因法向速度 $v=-\\partial _y^{-1}\\partial _x u$ 产生导数损失，于是引入 good unknown $g^s_\\epsilon =\\partial _x^s\\omega _\\epsilon -(\\partial _y\\omega _\\epsilon /\\omega _\\epsilon )\\partial _x^s(u_\\epsilon -U)$ 消除主损失。配合 Faà di Bruno 展开、边界兼容性、最大/最小值原理，得到独立于 $\\epsilon $ 的加权 Sobolev 和单调性界；Aubin–Lions 极限给出原方程，最后对差解用通量平均线性化和 ḡ 能量不等式证明唯一性。",
+        "techniques": [
+          "切向黏性正则化与 vorticity 方程",
+          "加权法向能量估计",
+          "good unknown 消除切向导数损失",
+          "Faà di Bruno 与边界兼容性估计",
+          "最大/最小值原理、Aubin–Lions 紧性与差值能量法"
+        ],
+        "breakthrough": "论文在 1<n<7/3 的一整段稀释型幂律指数上，将原先主要针对 $n=2$ 的单调边界层局部理论推广为存在唯一经典解，并以 good unknown 处理退化扩散与法向速度共同造成的最高阶切向损失。",
+        "limitations": "指数范围严格为 1<n<7/3，且需要周期半空间、正外流、Oleinik 单调性、很高的偶数阶正则性和多阶初始边界兼容条件；权重参数还需满足 $\\sigma >\\gamma +1/2、\\sigma \\le 2/(n-1)、\\sigma \\le \\gamma +3/4$，作者未声称这些限制最优，也未给出长时间或失去单调性的理论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "切向黏性正则化系统对每个 $\\epsilon >0$ 具有局部经典解，并保持正 vorticity 的退化抛物结构。",
+              "route": "在 $\\partial _y$ u>0 下令 $\\omega _\\epsilon =\\partial _y$ $u_\\epsilon $，把扩散写成 $n\\omega _\\epsilon ^{n-1}\\partial _y^{2}\\omega _\\epsilon +n(n-1)\\omega _\\epsilon ^{n-2}|\\partial _y\\omega _\\epsilon |^{2}$；加入 $\\epsilon ^{2}\\partial _x^{2}$ 后得到正则化 vorticity 方程，再由标准抛物理论、速度积分表示(1.8)和兼容初值构造解。",
+              "evidence": "正则化系统(1.5)–(1.8)（PDF第3–4页）；Lemma 3.1（PDF第9页）。"
+            },
+            {
+              "claim": "所有含法向导数的加权高阶导数满足统一能量不等式，退化系数的负幂由权重和单调下界控制。",
+              "route": "对 vorticity 方程施加 $D^\\alpha （|\\alpha |\\le s、\\alpha _1\\le s-1）$，与 $(1+y)^{2\\gamma +2\\alpha _2}D^\\alpha \\omega _\\epsilon $ 配对并在 y 上分部积分，主项产生 $n\\omega _\\epsilon ^{n-1}|\\partial _yD^\\alpha \\omega _\\epsilon |^{2}。Faà$ di Bruno 展开将系数导数拆成低阶乘积，条件 $\\delta (1+y)^{-\\sigma }\\le \\omega _\\epsilon \\le \\delta ^{-1}(1+y)^{-\\sigma }$ 与 $\\sigma \\le 2/(n-1)$ 控制所有负幂和边界项。",
+              "evidence": "Proposition 3.1、式(3.1)–(3.8)（PDF第10–11页）；权重类定义(1.9)及限制（PDF第4–5页）。"
+            },
+            {
+              "claim": "good unknown $g^s_\\epsilon $ 消除最高阶纯切向导数损失，并与低阶能量合并得到闭合的 $H^s$ 加权界。",
+              "route": "分别对 $\\partial _x^s(u_\\epsilon -U)$ 和 $\\partial _x^s\\omega _\\epsilon $ 方程求导，再以 $(\\partial _y\\omega _\\epsilon /\\omega _\\epsilon )\\partial _x^s(u_\\epsilon -U)$ 相减，法向速度带来的 $\\partial _x^{s+1}$ 项相消。剩余边界项通过 Lemma 3.2 的递推兼容公式改写为压力导数和低阶多项式；Proposition 3.2 的耗散项与 Proposition 3.1 合并进入 Proposition 3.3 的 ODE 型范数估计。",
+              "evidence": "good unknown 的方程(3.75)–(3.79)及 Proposition 3.2（PDF第27页）；Lemma 3.2的边界递推(3.45)–(3.46)（PDF第20页）；Proposition 3.3及式(3.109)–(3.112)（PDF第33–34页）。"
+            },
+            {
+              "claim": "正则化解有 $\\epsilon $ 无关寿命并收敛到原方程的唯一经典解。",
+              "route": "Propositions 3.3–3.4 用常微分比较和最大/最小值原理同时控制 $H^s$ 范数、加权低阶导数与正单调下界，Proposition 4.1 因而给出统一寿命。Aubin–Lions 提取局部强收敛，连续性把 $\\omega _\\epsilon ^n、\\partial _y^{2}\\omega _\\epsilon ^n$ 和速度积分传到极限，得到(4.7)及边界通量。两解相减后用平均系数 $µ=n∫(\\omega _2+\\theta \\omega ̄)^{n-1}d\\theta $ 和 $ḡ=\\omega ̄-a_2ū，L^{2}$ 能量式(4.17)经 Gronwall 强制 $ḡ=0$，再由边界条件恢复 $ū=v̄=\\omega ̄=0$。",
+              "evidence": "Proposition 4.1及式(4.2)（PDF第39–40页）；极限过程式(4.3)–(4.9)（PDF第40–41页）；Lemma 4.1、Proposition 4.2及式(4.10)–(4.19)（PDF第41–42页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查 PDF 第1–44页的引言、正则化构造、三组加权估计、紧性与唯一性证明、Acknowledgements、Competing interests 和 References，并检索 AI、LLM、ChatGPT、language model 等词；未见作者明确披露 AI/LLM 用于研究、证明、写作、代码或编辑。文中“Institute for Math and AI”仅是作者机构名称，不是 AI 工具使用声明。",
+        "aiEvidenceSource": "PDF 第1–44页全文及文末声明区域；特别复核 Theorem 1.1、Propositions 3.1–3.4、Proposition 4.1–4.2。",
+        "priorityScore": 63,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

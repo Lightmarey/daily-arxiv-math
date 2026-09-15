@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10127",
+  "slug": "2609.10127",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.10127:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.10127",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Resolvent bounds and eigenvalue estimates of generalized Schrödinger operators with complex potentials on compact manifolds",
+    "authors": [
+      "Eduard Stefanescu"
+    ],
+    "abstract": "We extend Cuenin's compact-manifold spectral bounds for Schrödinger operators with complex potentials to a general pseudodifferential setting. More precisely, we study operators \\(P+V\\), where \\(P\\) is a positive self-adjoint elliptic classical pseudodifferential operator of positive order and \\(V\\) is complex-valued. The main analytic input is a resolvent principle showing that spectral cluster estimates for \\(P\\) imply \\(L^p\\)-\\(L^{p'}\\) resolvent estimates along suitable complex curves. Combined with Sogge's spectral cluster bounds, this yields exterior-region resolvent estimates extending those of Krupchyk and Uhlmann; we also prove direct resolvent bounds in the interior region. On Zoll manifolds, we discuss the sharpness of the resulting spectral bounds.",
+    "categories": [
+      "math.SP",
+      "math.AP",
+      "math.FA"
+    ],
+    "primaryCategory": "math.SP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10127",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10127",
+    "submittedAt": "2026-09-09T13:03:53Z",
+    "updatedAt": "2026-09-09T13:03:53Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "论文把紧致流形上的非自伴广义 Schrödinger 算子 P+V 的复谱估计推广到一般正自伴椭圆伪微分算子。核心解析输入是：由 P 的 spectral cluster bounds 沿复曲线控制 Lp→Lp′ resolvent；作者先在高频边界曲线用谱簇投影和 Christ–Kiselev upgrade 获得 exterior-region 估计，再用局部坐标、参数拟微分分解和 direct energy estimate 处理 interior region。最后以 Gohberg–Sigal argument 把 resolvent 界转成复特征值落在细化的区域，并在 Zoll 流形上用窄谱簇饱和展示 sharpness。",
+    "techniques": [
+      "spectral cluster estimates",
+      "complex resolvent curves",
+      "Christ–Kiselev upgrade",
+      "microlocal localization",
+      "Gohberg–Sigal spectral counting"
+    ],
+    "breakthrough": "建立适用于一般正阶椭圆伪微分主部的复势 resolvent 和 eigenvalue bounds，并在 Zoll 型谱簇聚集下说明外部指数基本 sharp。",
+    "limitations": "假设紧致光滑流形、正自伴椭圆 classical pseudodifferential P 和 $V\\in Lq；sharpness$ 还需 Zoll 谱簇聚集/投影饱和，不能直接覆盖边界流形、非椭圆主部或更粗糙势。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "spectral cluster bounds 沿复曲线给出高频 resolvent 的 Lp→Lp′ 控制。",
+          "route": "把 $(P-(\\lambda \\pm i)^m)^{-1}$ 写成按 $P^{1/m}$ 的谱簇分解；每个簇用 Sogge 型投影界，离曲线的复分母提供可求和衰减，Christ–Kiselev 将时间积分算子转成 resolvent 界。",
+          "evidence": "PDF 第 6-13 页 Section 2 Theorem 2.1、Theorem 2.5，equations (2.1)–(2.15)。"
+        },
+        {
+          "claim": "Zoll 型窄谱簇和投影饱和使外部谱界在指数意义上不可进一步改善。",
+          "route": "选取落在单个窄簇的高频投影函数，复参数靠近簇中心使 resolvent 分母达到最坏尺度；投影 Lp→Lp′ 下界与 V 的乘法测试匹配，构造特征值/谱偏移达到估计边界。",
+          "evidence": "PDF 第 4-6 页 Theorem 2.2、Corollaries 2.3–2.4，equations (2.5)–(2.10)。"
+        },
+        {
+          "claim": "局部化和 direct estimate 控制 interior region 的 resolvent，不依赖谱簇曲线。",
+          "route": "用有限坐标图和 pseudodifferential cutoff 分离 principal symbol；局部 elliptic estimate 将高频主部倒数控制在 L2 加 forcing 的 $Y\\lambda $ 范数，commutator/lower-order 项归入 L2 误差并吸收，得到 Proposition 4.3。",
+          "evidence": "PDF 第 17-22 页 Section 4 Proposition 4.1、Proposition 4.3，equations (4.1)–(4.36)。"
+        },
+        {
+          "claim": "全域 resolvent 区域估计通过 Gohberg–Sigal 原理转化为 P+V 的复特征值界。",
+          "route": "把 resolvent bounds 与 V 的 Lq 乘法映射组合成 $I+V(P-z)^{-1}$ 的 Fredholm family；若 z 为特征值则该族不可逆，Gohberg–Sigal 的有理零点计数结合区域边界增长给出 eigenvalue inclusion。",
+          "evidence": "PDF 第 22-31 页 Sections 5–8 Theorem 8.1、Theorem 2.1 conclusion，equations (5.1)–(8.18)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、Sections 1–8、谱簇/resolvent 证明、附录、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；文中“Claude”仅为参考文献作者姓名语境，未见作者披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-35 页全文，重点核查致谢与声明段落。",
+    "priorityScore": 53,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10127:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.10127",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Resolvent bounds and eigenvalue estimates of generalized Schrödinger operators with complex potentials on compact manifolds",
+        "authors": [
+          "Eduard Stefanescu"
+        ],
+        "abstract": "We extend Cuenin's compact-manifold spectral bounds for Schrödinger operators with complex potentials to a general pseudodifferential setting. More precisely, we study operators \\(P+V\\), where \\(P\\) is a positive self-adjoint elliptic classical pseudodifferential operator of positive order and \\(V\\) is complex-valued. The main analytic input is a resolvent principle showing that spectral cluster estimates for \\(P\\) imply \\(L^p\\)-\\(L^{p'}\\) resolvent estimates along suitable complex curves. Combined with Sogge's spectral cluster bounds, this yields exterior-region resolvent estimates extending those of Krupchyk and Uhlmann; we also prove direct resolvent bounds in the interior region. On Zoll manifolds, we discuss the sharpness of the resulting spectral bounds.",
+        "categories": [
+          "math.SP",
+          "math.AP",
+          "math.FA"
+        ],
+        "primaryCategory": "math.SP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10127",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10127",
+        "submittedAt": "2026-09-09T13:03:53Z",
+        "updatedAt": "2026-09-09T13:03:53Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "论文把紧致流形上的非自伴广义 Schrödinger 算子 P+V 的复谱估计推广到一般正自伴椭圆伪微分算子。核心解析输入是：由 P 的 spectral cluster bounds 沿复曲线控制 Lp→Lp′ resolvent；作者先在高频边界曲线用谱簇投影和 Christ–Kiselev upgrade 获得 exterior-region 估计，再用局部坐标、参数拟微分分解和 direct energy estimate 处理 interior region。最后以 Gohberg–Sigal argument 把 resolvent 界转成复特征值落在细化的区域，并在 Zoll 流形上用窄谱簇饱和展示 sharpness。",
+        "techniques": [
+          "spectral cluster estimates",
+          "complex resolvent curves",
+          "Christ–Kiselev upgrade",
+          "microlocal localization",
+          "Gohberg–Sigal spectral counting"
+        ],
+        "breakthrough": "建立适用于一般正阶椭圆伪微分主部的复势 resolvent 和 eigenvalue bounds，并在 Zoll 型谱簇聚集下说明外部指数基本 sharp。",
+        "limitations": "假设紧致光滑流形、正自伴椭圆 classical pseudodifferential P 和 $V\\in Lq；sharpness$ 还需 Zoll 谱簇聚集/投影饱和，不能直接覆盖边界流形、非椭圆主部或更粗糙势。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "spectral cluster bounds 沿复曲线给出高频 resolvent 的 Lp→Lp′ 控制。",
+              "route": "把 $(P-(\\lambda \\pm i)^m)^{-1}$ 写成按 $P^{1/m}$ 的谱簇分解；每个簇用 Sogge 型投影界，离曲线的复分母提供可求和衰减，Christ–Kiselev 将时间积分算子转成 resolvent 界。",
+              "evidence": "PDF 第 6-13 页 Section 2 Theorem 2.1、Theorem 2.5，equations (2.1)–(2.15)。"
+            },
+            {
+              "claim": "Zoll 型窄谱簇和投影饱和使外部谱界在指数意义上不可进一步改善。",
+              "route": "选取落在单个窄簇的高频投影函数，复参数靠近簇中心使 resolvent 分母达到最坏尺度；投影 Lp→Lp′ 下界与 V 的乘法测试匹配，构造特征值/谱偏移达到估计边界。",
+              "evidence": "PDF 第 4-6 页 Theorem 2.2、Corollaries 2.3–2.4，equations (2.5)–(2.10)。"
+            },
+            {
+              "claim": "局部化和 direct estimate 控制 interior region 的 resolvent，不依赖谱簇曲线。",
+              "route": "用有限坐标图和 pseudodifferential cutoff 分离 principal symbol；局部 elliptic estimate 将高频主部倒数控制在 L2 加 forcing 的 $Y\\lambda $ 范数，commutator/lower-order 项归入 L2 误差并吸收，得到 Proposition 4.3。",
+              "evidence": "PDF 第 17-22 页 Section 4 Proposition 4.1、Proposition 4.3，equations (4.1)–(4.36)。"
+            },
+            {
+              "claim": "全域 resolvent 区域估计通过 Gohberg–Sigal 原理转化为 P+V 的复特征值界。",
+              "route": "把 resolvent bounds 与 V 的 Lq 乘法映射组合成 $I+V(P-z)^{-1}$ 的 Fredholm family；若 z 为特征值则该族不可逆，Gohberg–Sigal 的有理零点计数结合区域边界增长给出 eigenvalue inclusion。",
+              "evidence": "PDF 第 22-31 页 Sections 5–8 Theorem 8.1、Theorem 2.1 conclusion，equations (5.1)–(8.18)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、Sections 1–8、谱簇/resolvent 证明、附录、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；文中“Claude”仅为参考文献作者姓名语境，未见作者披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-35 页全文，重点核查致谢与声明段落。",
+        "priorityScore": 53,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

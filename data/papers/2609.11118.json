@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11118",
+  "slug": "2609.11118",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11118:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11118",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Minimal null control time of some 1D linear hyperbolic balance laws with constant coefficients and properties of related kernel equations",
+    "authors": [
+      "Long Hu",
+      "Guillaume Olive"
+    ],
+    "abstract": "In this work, we study the null controllability by one-sided boundary controls of one-dimensional hyperbolic balance laws with constant coefficients. Our first result shows that, when the system has only one negative or positive speed, the minimal null control time of such systems depends on some orthogonality conditions for a particular sequence. This sequence is explicit in function of the coefficients of the system but it is defined by a nonlinear recurrence relation. Our second result then completes the previous one by giving explicit bounds on the number of orthogonality conditions that have to be checked in two nontrivial situations. The proofs rely on a careful analysis of the so-called kernel equations associated with the system, including a new well-posedness result. Our results are also valid for the finite-time stabilization property.",
+    "categories": [
+      "math.OC",
+      "math.AP"
+    ],
+    "primaryCategory": "math.OC",
+    "arxivUrl": "https://arxiv.org/abs/2609.11118",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11118",
+    "submittedAt": "2026-09-10T05:53:33Z",
+    "updatedAt": "2026-09-10T05:53:33Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "正文分析",
+    "workSummary": "论文研究常系数一维双曲平衡律在单侧边界控制下的最小零控制时间。对仅有一个负速的情形，作者用系数构造的非线性递归序列 $\\psi ^r$ 和正交条件 $⟨b,\\psi ^r⟩=0$ 定义嵌套集合 Ck，证明 Tinf 只能取 $\\tau _{2},…,\\tau n+1$ 且 $Tinf=\\tau k$ 当且仅当 $(M,q)\\in Ck\\Ck+1$；随后给出 $n=3、4$ 时递归检查长度的上界，并在附录证明相关 kernel 方程的存在唯一性。",
+    "techniques": [
+      "特征线表示",
+      "backstepping kernel 方程",
+      "非线性递归序列 $\\psi ^r$",
+      "正交性与最小控制时间",
+      "Banach 不动点/Volterra 积分方程"
+    ],
+    "breakthrough": "论文把内部耦合矩阵、边界耦合和传播速度压缩成可计算的递归正交条件，首次在一个负速的常系数系统中给出最小控制时间的离散分类，并量化 $n=3、4$ 时所需检查的条件数。",
+    "limitations": "主要结果限于常系数、线性、单侧控制和特定速度符号分裂；一般 n 的 $N\\psi $ 上界仍未知，附录 kernel 正则性也依赖延拓到特征线域的构造。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "单负速系统的最小控制时间只可能是 $\\tau _{2},…,\\tau n+1$，并由 Ck\\Ck+1 精确分类。",
+          "route": "沿特征线消去受控负速分量，把 kernel 方程的级数系数递推编码为 $\\psi ^r$；每多一个时间层，必须增加 $q_{i-1}=0$ 和 $⟨b,\\psi ^r⟩=0$ 的可消去条件，于是获得 $C2\\supset …\\supset Cn+1$ 的分层判别。",
+          "evidence": "Theorem 1.3、公式 (4)–(8)（PDF 第 4–5 页）。"
+        },
+        {
+          "claim": "正交条件序列在三、四维分别至多需要 3、6 个独立检查。",
+          "route": "利用 $\\psi ^r$ 递归中的有限维线性包络和特定 n 的 Cayley–Hamilton 关系，证明后续序列落在前几项张成空间；因此无限 r 的正交性等价于前 $N\\psi $ 项。",
+          "evidence": "Theorem 1.6 及其后的 $n=3、4$ 情形讨论（PDF 第 5–8 页）。"
+        },
+        {
+          "claim": "backstepping kernel 方程在特征线域 D 上存在唯一 $C^s$ 解并有数据范数估计。",
+          "route": "先沿第 i 条特征线显式解出 ki（70），代回其余分量得到积分映射 $\\Phi =\\Phi _{1}+\\Phi _{2}$；特征线交点估计 (69)、(72) 给出 $\\Phi ^N$ 的阶乘衰减 $C^N|x-\\xi |^N/N$!，故 Banach 不动点获得唯一连续解，再逐阶微分提升 $C^s$。",
+          "evidence": "Appendix B Theorem B.1、公式 (66)–(72) 和 Lemmas B.2–B.3（PDF 第 28–31 页）。"
+        },
+        {
+          "claim": "Theorem 1.3 的零控制时间结论也适用于有限时间稳定化。",
+          "route": "backstepping 构造给出的 kernel 变换把原系统映到有限传播的目标系统；同一正交消去条件使边界输入在 $\\tau k$ 前后逐层清空，因此把 null controllability 的判别传递给 $L^{2}$ 有界反馈稳定化。",
+          "evidence": "Remark 1.5 及 Theorem 1.3 后的控制解释（PDF 第 5 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+    "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+    "priorityScore": 89,
+    "priorityTier": "high",
+    "priorityReason": "把最小控制时间转成递归正交条件和有限维代数分类，并补足三、四维 kernel 条件的可操作上界。",
+    "lowPriorityReason": "一般维度的递归长度仍无统一界，空间变系数和非线性双曲系统不在结论范围内。",
+    "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11118:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11118",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Minimal null control time of some 1D linear hyperbolic balance laws with constant coefficients and properties of related kernel equations",
+        "authors": [
+          "Long Hu",
+          "Guillaume Olive"
+        ],
+        "abstract": "In this work, we study the null controllability by one-sided boundary controls of one-dimensional hyperbolic balance laws with constant coefficients. Our first result shows that, when the system has only one negative or positive speed, the minimal null control time of such systems depends on some orthogonality conditions for a particular sequence. This sequence is explicit in function of the coefficients of the system but it is defined by a nonlinear recurrence relation. Our second result then completes the previous one by giving explicit bounds on the number of orthogonality conditions that have to be checked in two nontrivial situations. The proofs rely on a careful analysis of the so-called kernel equations associated with the system, including a new well-posedness result. Our results are also valid for the finite-time stabilization property.",
+        "categories": [
+          "math.OC",
+          "math.AP"
+        ],
+        "primaryCategory": "math.OC",
+        "arxivUrl": "https://arxiv.org/abs/2609.11118",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11118",
+        "submittedAt": "2026-09-10T05:53:33Z",
+        "updatedAt": "2026-09-10T05:53:33Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "正文分析",
+        "workSummary": "论文研究常系数一维双曲平衡律在单侧边界控制下的最小零控制时间。对仅有一个负速的情形，作者用系数构造的非线性递归序列 $\\psi ^r$ 和正交条件 $⟨b,\\psi ^r⟩=0$ 定义嵌套集合 Ck，证明 Tinf 只能取 $\\tau _{2},…,\\tau n+1$ 且 $Tinf=\\tau k$ 当且仅当 $(M,q)\\in Ck\\Ck+1$；随后给出 $n=3、4$ 时递归检查长度的上界，并在附录证明相关 kernel 方程的存在唯一性。",
+        "techniques": [
+          "特征线表示",
+          "backstepping kernel 方程",
+          "非线性递归序列 $\\psi ^r$",
+          "正交性与最小控制时间",
+          "Banach 不动点/Volterra 积分方程"
+        ],
+        "breakthrough": "论文把内部耦合矩阵、边界耦合和传播速度压缩成可计算的递归正交条件，首次在一个负速的常系数系统中给出最小控制时间的离散分类，并量化 $n=3、4$ 时所需检查的条件数。",
+        "limitations": "主要结果限于常系数、线性、单侧控制和特定速度符号分裂；一般 n 的 $N\\psi $ 上界仍未知，附录 kernel 正则性也依赖延拓到特征线域的构造。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "单负速系统的最小控制时间只可能是 $\\tau _{2},…,\\tau n+1$，并由 Ck\\Ck+1 精确分类。",
+              "route": "沿特征线消去受控负速分量，把 kernel 方程的级数系数递推编码为 $\\psi ^r$；每多一个时间层，必须增加 $q_{i-1}=0$ 和 $⟨b,\\psi ^r⟩=0$ 的可消去条件，于是获得 $C2\\supset …\\supset Cn+1$ 的分层判别。",
+              "evidence": "Theorem 1.3、公式 (4)–(8)（PDF 第 4–5 页）。"
+            },
+            {
+              "claim": "正交条件序列在三、四维分别至多需要 3、6 个独立检查。",
+              "route": "利用 $\\psi ^r$ 递归中的有限维线性包络和特定 n 的 Cayley–Hamilton 关系，证明后续序列落在前几项张成空间；因此无限 r 的正交性等价于前 $N\\psi $ 项。",
+              "evidence": "Theorem 1.6 及其后的 $n=3、4$ 情形讨论（PDF 第 5–8 页）。"
+            },
+            {
+              "claim": "backstepping kernel 方程在特征线域 D 上存在唯一 $C^s$ 解并有数据范数估计。",
+              "route": "先沿第 i 条特征线显式解出 ki（70），代回其余分量得到积分映射 $\\Phi =\\Phi _{1}+\\Phi _{2}$；特征线交点估计 (69)、(72) 给出 $\\Phi ^N$ 的阶乘衰减 $C^N|x-\\xi |^N/N$!，故 Banach 不动点获得唯一连续解，再逐阶微分提升 $C^s$。",
+              "evidence": "Appendix B Theorem B.1、公式 (66)–(72) 和 Lemmas B.2–B.3（PDF 第 28–31 页）。"
+            },
+            {
+              "claim": "Theorem 1.3 的零控制时间结论也适用于有限时间稳定化。",
+              "route": "backstepping 构造给出的 kernel 变换把原系统映到有限传播的目标系统；同一正交消去条件使边界输入在 $\\tau k$ 前后逐层清空，因此把 null controllability 的判别传递给 $L^{2}$ 有界反馈稳定化。",
+              "evidence": "Remark 1.5 及 Theorem 1.3 后的控制解释（PDF 第 5 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "已逐页检查 PDF 正文、Acknowledgments、Declaration/致谢和 References，并全文检索 AI、LLM、ChatGPT、GPT、artificial intelligence；未发现作者披露与论文研究或制作相关的 AI 使用。",
+        "aiEvidenceSource": "官方 PDF 全文（含末页致谢/声明和参考文献）及上述关键词核查。",
+        "priorityScore": 89,
+        "priorityTier": "high",
+        "priorityReason": "把最小控制时间转成递归正交条件和有限维代数分类，并补足三、四维 kernel 条件的可操作上界。",
+        "lowPriorityReason": "一般维度的递归长度仍无统一界，空间变系数和非线性双曲系统不在结论范围内。",
+        "revisionSummary": "已逐页阅读官方 arXiv PDF，并按正文定理、引理和公式定位证明链。"
+      }
+    }
+  ]
+}

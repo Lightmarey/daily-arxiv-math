@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09570",
+  "slug": "2609.09570",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09570:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09570",
+    "version": 1,
+    "entryKind": "new",
+    "title": "A density result for admissible displacements for an obstacle problem in linearised elasticity",
+    "authors": [
+      "Paolo Piersanti"
+    ],
+    "abstract": "In this short note we provide an improvement of the ``density property'', which was employed to establish the justification of Koiter's model for linearly elastic elliptic membrane shells subjected to remaining confined in a prescribed half-space. This technique has the potential to be applicable to other types of obstacle problems.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09570",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09570",
+    "submittedAt": "2026-09-09T00:50:03Z",
+    "updatedAt": "2026-09-09T00:50:03Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "论文证明线性弹性障碍问题中 admissible displacement 的密度性质。对具有 C1 边界的有界 Lipschitz 域和满足 $\\theta (y)\\cdot q>0$ 的光滑浸入，作者把满足严格半空间约束的位移集合 $UM\\cap D(\\omega )$ 稠密到 UM。证明先用缩放保持正裕量，再用靠近边界的截断把位移变成在边界邻域为零，最后用平滑卷积和局部投影保持障碍约束；这一结果正是 Koiter 膜壳模型 justification 所需的 admissible test space 近似。",
+    "techniques": [
+      "strict-margin scaling",
+      "boundary cutoff",
+      "Schoenflies collar coordinates",
+      "mollification",
+      "admissible constraint preservation"
+    ],
+    "breakthrough": "把障碍约束下的 $H1\\times H1\\times L2$ 位移从严格可行集合逼近到具有紧支撑光滑代表的子集，解决此前密度步骤中边界支撑与半空间约束同时保持的问题。",
+    "limitations": "结果依赖 C1 边界、光滑浸入和存在固定法向 q 使 $\\theta \\cdot q$ 处处严格正；只处理线性化弹性位移的特定 admissibility 约束，不涉及非线性壳、低于 Lipschitz 边界或失去正裕量的接触情形。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "严格满足障碍约束的 UM 位移可通过缩放在同一约束集合内逼近。",
+          "route": "对 $\\eta $ 取 $\\eta _k=(1-1/k)\\eta $；由于原始 $\\theta +\\eta _i$ $a_i$ 与 q 有统一正裕量，缩放后仍保留至少 $k^{-1}min$ $\\theta \\cdot q$ 的严格下界，且 $\\eta _k\\to \\eta $ 于目标范数。",
+          "evidence": "PDF 第 2-3 页 Theorem 1.1 proof part (i)，equations (1)–(2)。"
+        },
+        {
+          "claim": "可把 admissible 位移截断为在边界邻域消失而不破坏约束。",
+          "route": "利用 C1 边界的 collar 坐标定义靠近 $\\partial \\omega $ 的截断因子，将 $\\eta _k$ 乘以从 0 到 1 的 cutoff；严格裕量保证 cutoff 产生的凸组合仍在半空间内，边界层测度趋零使范数误差消失。",
+          "evidence": "PDF 第 3-4 页 Theorem 1.1 proof part (ii)，boundary collar construction。"
+        },
+        {
+          "claim": "截断后的位移可用光滑紧支撑函数逼近并保持点态 admissibility。",
+          "route": "先在内部对每个分量卷积平滑，再用正裕量选择足够小的卷积半径；卷积是邻域值的凸平均，半空间为凸集，因此 $\\theta +\\eta _i^\\epsilon $ $a_i$ 仍满足非负/严格正约束，L2/H1 收敛由标准密度给出。",
+          "evidence": "PDF 第 4-6 页 Theorem 1.1 proof part (iii)，mollification estimates。"
+        },
+        {
+          "claim": "三步逼近合成 $UM\\cap D(\\omega )$ 在 UM 中稠密。",
+          "route": "先选 k 使缩放误差小，再选边界层宽度使 cutoff 误差小，最后选卷积半径使平滑误差小；三角不等式把三个误差相加控制在任意 $\\epsilon $ 内。",
+          "evidence": "PDF 第 2 页 Theorem 1.1 statement and 第 6-7 页 proof conclusion。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、Sections 1–3、定理证明、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-7 页全文。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09570:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09570",
+        "version": 1,
+        "entryKind": "new",
+        "title": "A density result for admissible displacements for an obstacle problem in linearised elasticity",
+        "authors": [
+          "Paolo Piersanti"
+        ],
+        "abstract": "In this short note we provide an improvement of the ``density property'', which was employed to establish the justification of Koiter's model for linearly elastic elliptic membrane shells subjected to remaining confined in a prescribed half-space. This technique has the potential to be applicable to other types of obstacle problems.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09570",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09570",
+        "submittedAt": "2026-09-09T00:50:03Z",
+        "updatedAt": "2026-09-09T00:50:03Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "论文证明线性弹性障碍问题中 admissible displacement 的密度性质。对具有 C1 边界的有界 Lipschitz 域和满足 $\\theta (y)\\cdot q>0$ 的光滑浸入，作者把满足严格半空间约束的位移集合 $UM\\cap D(\\omega )$ 稠密到 UM。证明先用缩放保持正裕量，再用靠近边界的截断把位移变成在边界邻域为零，最后用平滑卷积和局部投影保持障碍约束；这一结果正是 Koiter 膜壳模型 justification 所需的 admissible test space 近似。",
+        "techniques": [
+          "strict-margin scaling",
+          "boundary cutoff",
+          "Schoenflies collar coordinates",
+          "mollification",
+          "admissible constraint preservation"
+        ],
+        "breakthrough": "把障碍约束下的 $H1\\times H1\\times L2$ 位移从严格可行集合逼近到具有紧支撑光滑代表的子集，解决此前密度步骤中边界支撑与半空间约束同时保持的问题。",
+        "limitations": "结果依赖 C1 边界、光滑浸入和存在固定法向 q 使 $\\theta \\cdot q$ 处处严格正；只处理线性化弹性位移的特定 admissibility 约束，不涉及非线性壳、低于 Lipschitz 边界或失去正裕量的接触情形。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "严格满足障碍约束的 UM 位移可通过缩放在同一约束集合内逼近。",
+              "route": "对 $\\eta $ 取 $\\eta _k=(1-1/k)\\eta $；由于原始 $\\theta +\\eta _i$ $a_i$ 与 q 有统一正裕量，缩放后仍保留至少 $k^{-1}min$ $\\theta \\cdot q$ 的严格下界，且 $\\eta _k\\to \\eta $ 于目标范数。",
+              "evidence": "PDF 第 2-3 页 Theorem 1.1 proof part (i)，equations (1)–(2)。"
+            },
+            {
+              "claim": "可把 admissible 位移截断为在边界邻域消失而不破坏约束。",
+              "route": "利用 C1 边界的 collar 坐标定义靠近 $\\partial \\omega $ 的截断因子，将 $\\eta _k$ 乘以从 0 到 1 的 cutoff；严格裕量保证 cutoff 产生的凸组合仍在半空间内，边界层测度趋零使范数误差消失。",
+              "evidence": "PDF 第 3-4 页 Theorem 1.1 proof part (ii)，boundary collar construction。"
+            },
+            {
+              "claim": "截断后的位移可用光滑紧支撑函数逼近并保持点态 admissibility。",
+              "route": "先在内部对每个分量卷积平滑，再用正裕量选择足够小的卷积半径；卷积是邻域值的凸平均，半空间为凸集，因此 $\\theta +\\eta _i^\\epsilon $ $a_i$ 仍满足非负/严格正约束，L2/H1 收敛由标准密度给出。",
+              "evidence": "PDF 第 4-6 页 Theorem 1.1 proof part (iii)，mollification estimates。"
+            },
+            {
+              "claim": "三步逼近合成 $UM\\cap D(\\omega )$ 在 UM 中稠密。",
+              "route": "先选 k 使缩放误差小，再选边界层宽度使 cutoff 误差小，最后选卷积半径使平滑误差小；三角不等式把三个误差相加控制在任意 $\\epsilon $ 内。",
+              "evidence": "PDF 第 2 页 Theorem 1.1 statement and 第 6-7 页 proof conclusion。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、Sections 1–3、定理证明、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-7 页全文。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

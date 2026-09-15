@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.08952",
+  "slug": "2609.08952",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.08952:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.08952",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The Sharp $C^{1,1}$ Target Threshold for Minimizing Constraint Maps",
+    "authors": [
+      "Yilu Liu"
+    ],
+    "abstract": "Let $K\\subset\\R^m$ be the closure of a bounded domain whose boundary is a compact embedded hypersurface, and let \\( \\overline M=\\R^m\\setminus\\operatorname{int}K \\) be the allowed target. We prove that if $\\partial K$ is of class $C^{1,1}$, then every $\\overline M$-valued local minimizer of the Dirichlet energy $E(u;B):=\\int_B|Du|^2\\dd x$ is locally $W^{2,\\infty}$, and hence locally $C^{1,1}$, on its continuity set. For every $0<α<1$, we also construct a convex body with $C^{1,α}$ boundary and an everywhere continuous global minimizer that is not $C^{1,1}$. Thus $C^{1,1}$ is the sharp target regularity threshold in the Hölder scale.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.08952",
+    "pdfUrl": "https://arxiv.org/pdf/2609.08952",
+    "submittedAt": "2026-09-08T16:10:10Z",
+    "updatedAt": "2026-09-08T16:10:10Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "分析结果",
+    "workSummary": "本文研究目标空间含有 $C^{1,1}$ 障碍边界的 Dirichlet 能量约束映射。作者在连续性集上先用正到达几何和近似非扩张投影把目标约束转成带有单侧二次支持的变分不等式，再通过调和替换与两次 Campanato 迭代从连续性提升到局部 Lipschitz。随后由接触集恒等式得到有界标量反应项和向量 Euler 方程，最后用旋转法向抵消与 Newton 势估计控制 Hessian，证明 $C^{1,1}$ 目标边界时局部 $W^{2,\\infty }$；另构造 $C^{1,\\alpha }$ 凸障碍及连续全局极小映射，说明阈值不可降低。",
+    "techniques": [
+      "正到达管中的近似非扩张投影",
+      "调和替换与 Campanato 迭代",
+      "Lewy–Stampacchia 型标量反应估计",
+      "接触集 Euler 方程",
+      "旋转法向抵消和 Newton 势 Hessian 估计"
+    ],
+    "breakthrough": "论文在目标障碍边界仅具 $C^{1,1}$ 时仍获得连续性集上的 $W^{2,\\infty }/C^{1,1}$ 正则性，并以一个 $C^{1,\\alpha }$ 但非 $C^{1,1}$ 的凸障碍反例证明 Hölder 尺度下 $C^{1,1}$ 正是保证该端点正则性的锐阈值。",
+    "limitations": "正则性结论只在 Reg0(u) 连续性集上成立，不能消除可能的奇异集；目标需为紧嵌入 $C^{1,1}$ 超曲面的外侧，反例也只说明 Hölder/Dini 正则性不足。证明是 Dirichlet 二次能量的局部极小映射，未覆盖一般非凸能量或边界点正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "$C^{1,1}$ 目标边界在较小管邻域内提供 Lipschitz 法向场、正到达半径和单侧二次支持不等式。",
+          "route": "用 signed distance 和最近点投影建立 tubular coordinates；投影的 Lipschitz 性把目标曲率信息转成源空间可测向量场，支持不等式则允许对接触点作合法的外侧变分。",
+          "evidence": "第2节目标几何构造（PDF 第3–7页）；第2节相关投影与支持引理。"
+        },
+        {
+          "claim": "连续性集上的局部极小映射先获得 Lipschitz 控制。",
+          "route": "以调和替换比较能量，投影替换保持可行性并给出平均振荡衰减；第一次 Campanato 迭代控制平均梯度，第二次迭代处理投影误差，从而将连续代表提升为局部 Lipschitz。",
+          "evidence": "第3节 harmonic replacement 与两次 Campanato 迭代（PDF 第8–13页）；第3节主正则性命题。"
+        },
+        {
+          "claim": "约束反应项有界，且映射满足带目标法向的向量 Euler 方程。",
+          "route": "在接触区用单侧支持函数测试变分不等式，把法向反力视为标量测度/反应；Lewy–Stampacchia 型比较给出其 $L\\infty $ 界，再将其与切向自由变分组合得到分布意义 Euler 方程。",
+          "evidence": "第4节标量反应和 Euler 方程（PDF 第14–17页）；第4节相关 Proposition 4.1。"
+        },
+        {
+          "claim": "在 Reg0(u) 上$，D^{2}u\\in L\\infty $，因而 $u\\in C^{1,1}$；并且 $C^{1,1}$ 是锐的目标正则性阈值。",
+          "route": "把 Euler 方程的 Newton 表示分成固定法向与旋转法向部分，利用旋转法向的抵消消去不可积曲率项，再施加调和核导数估计得到 Hessian 界；第6节用 $C^{1,\\alpha }$ 凸障碍构造全局极小映射，其二阶差商发散。",
+          "evidence": "第5节接触恒等式、旋转法向抵消和 Newton 势估计（PDF 第18–22页）；Theorem 1.2–1.3（PDF 第2页）；第6节反例（PDF 第22页）。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在正文末尾明确披露：准备稿件时使用 ChatGPT（OpenAI）将证明手稿转换为初步 LaTeX 草稿，并识别潜在语法和逻辑错误；作者随后审阅、编辑并对内容负责。",
+    "aiEvidenceSource": "PDF 第22页 “Declaration of generative AI and AI-assisted technologies in the manuscript preparation process”。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.08952:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.08952",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The Sharp $C^{1,1}$ Target Threshold for Minimizing Constraint Maps",
+        "authors": [
+          "Yilu Liu"
+        ],
+        "abstract": "Let $K\\subset\\R^m$ be the closure of a bounded domain whose boundary is a compact embedded hypersurface, and let \\( \\overline M=\\R^m\\setminus\\operatorname{int}K \\) be the allowed target. We prove that if $\\partial K$ is of class $C^{1,1}$, then every $\\overline M$-valued local minimizer of the Dirichlet energy $E(u;B):=\\int_B|Du|^2\\dd x$ is locally $W^{2,\\infty}$, and hence locally $C^{1,1}$, on its continuity set. For every $0<α<1$, we also construct a convex body with $C^{1,α}$ boundary and an everywhere continuous global minimizer that is not $C^{1,1}$. Thus $C^{1,1}$ is the sharp target regularity threshold in the Hölder scale.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.08952",
+        "pdfUrl": "https://arxiv.org/pdf/2609.08952",
+        "submittedAt": "2026-09-08T16:10:10Z",
+        "updatedAt": "2026-09-08T16:10:10Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "分析结果",
+        "workSummary": "本文研究目标空间含有 $C^{1,1}$ 障碍边界的 Dirichlet 能量约束映射。作者在连续性集上先用正到达几何和近似非扩张投影把目标约束转成带有单侧二次支持的变分不等式，再通过调和替换与两次 Campanato 迭代从连续性提升到局部 Lipschitz。随后由接触集恒等式得到有界标量反应项和向量 Euler 方程，最后用旋转法向抵消与 Newton 势估计控制 Hessian，证明 $C^{1,1}$ 目标边界时局部 $W^{2,\\infty }$；另构造 $C^{1,\\alpha }$ 凸障碍及连续全局极小映射，说明阈值不可降低。",
+        "techniques": [
+          "正到达管中的近似非扩张投影",
+          "调和替换与 Campanato 迭代",
+          "Lewy–Stampacchia 型标量反应估计",
+          "接触集 Euler 方程",
+          "旋转法向抵消和 Newton 势 Hessian 估计"
+        ],
+        "breakthrough": "论文在目标障碍边界仅具 $C^{1,1}$ 时仍获得连续性集上的 $W^{2,\\infty }/C^{1,1}$ 正则性，并以一个 $C^{1,\\alpha }$ 但非 $C^{1,1}$ 的凸障碍反例证明 Hölder 尺度下 $C^{1,1}$ 正是保证该端点正则性的锐阈值。",
+        "limitations": "正则性结论只在 Reg0(u) 连续性集上成立，不能消除可能的奇异集；目标需为紧嵌入 $C^{1,1}$ 超曲面的外侧，反例也只说明 Hölder/Dini 正则性不足。证明是 Dirichlet 二次能量的局部极小映射，未覆盖一般非凸能量或边界点正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "$C^{1,1}$ 目标边界在较小管邻域内提供 Lipschitz 法向场、正到达半径和单侧二次支持不等式。",
+              "route": "用 signed distance 和最近点投影建立 tubular coordinates；投影的 Lipschitz 性把目标曲率信息转成源空间可测向量场，支持不等式则允许对接触点作合法的外侧变分。",
+              "evidence": "第2节目标几何构造（PDF 第3–7页）；第2节相关投影与支持引理。"
+            },
+            {
+              "claim": "连续性集上的局部极小映射先获得 Lipschitz 控制。",
+              "route": "以调和替换比较能量，投影替换保持可行性并给出平均振荡衰减；第一次 Campanato 迭代控制平均梯度，第二次迭代处理投影误差，从而将连续代表提升为局部 Lipschitz。",
+              "evidence": "第3节 harmonic replacement 与两次 Campanato 迭代（PDF 第8–13页）；第3节主正则性命题。"
+            },
+            {
+              "claim": "约束反应项有界，且映射满足带目标法向的向量 Euler 方程。",
+              "route": "在接触区用单侧支持函数测试变分不等式，把法向反力视为标量测度/反应；Lewy–Stampacchia 型比较给出其 $L\\infty $ 界，再将其与切向自由变分组合得到分布意义 Euler 方程。",
+              "evidence": "第4节标量反应和 Euler 方程（PDF 第14–17页）；第4节相关 Proposition 4.1。"
+            },
+            {
+              "claim": "在 Reg0(u) 上$，D^{2}u\\in L\\infty $，因而 $u\\in C^{1,1}$；并且 $C^{1,1}$ 是锐的目标正则性阈值。",
+              "route": "把 Euler 方程的 Newton 表示分成固定法向与旋转法向部分，利用旋转法向的抵消消去不可积曲率项，再施加调和核导数估计得到 Hessian 界；第6节用 $C^{1,\\alpha }$ 凸障碍构造全局极小映射，其二阶差商发散。",
+              "evidence": "第5节接触恒等式、旋转法向抵消和 Newton 势估计（PDF 第18–22页）；Theorem 1.2–1.3（PDF 第2页）；第6节反例（PDF 第22页）。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在正文末尾明确披露：准备稿件时使用 ChatGPT（OpenAI）将证明手稿转换为初步 LaTeX 草稿，并识别潜在语法和逻辑错误；作者随后审阅、编辑并对内容负责。",
+        "aiEvidenceSource": "PDF 第22页 “Declaration of generative AI and AI-assisted technologies in the manuscript preparation process”。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

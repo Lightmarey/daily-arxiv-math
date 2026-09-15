@@ -3,95 +3,151 @@
   "arxivId": "2609.07657",
   "slug": "2609.07657",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.07657:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.07657",
-    "metadata": {
-      "title": "Classification of Solutions to a Critical Fourth-Order Equation on Complete Non-compact Manifolds",
-      "authors": [
-        "Huabin Li",
-        "Tian Wu",
-        "Xiao Zhou"
-      ],
-      "abstract": "We study the critical biharmonic equation \\[ Δ^2 u=u^{\\frac{n+4}{n-4}}, \\] on a complete, connected, and non-compact Riemannian manifold \\((M^n,g)\\) of dimension \\(n\\geq 5\\) with non-negative Ricci curvature. We establish an optimal pointwise second-order derivative estimate by Bernstein's method and the continuity method. Using invariant tensors, we derive a differential inequality that yields a rigidity result. More precisely, if there exists a positive finite energy solution, then the manifold is isometric to the Euclidean space \\(\\mathbb{R}^n\\), and the solution is given by \\[ u(x)= \\frac{ \\left[λ^2 n(n-4)(n^2-4)\\right]^{\\frac{n-4}{8}} } {\\left(1+λ|x-x_0|^2\\right)^{\\frac{n-4}{2}}}, \\qquad λ>0,\\quad x_0\\in\\mathbb{R}^n . \\]",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-07T15:42:54Z",
-      "updatedAt": "2026-09-07T15:42:54Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Classification of Solutions to a Critical Fourth-Order Equation on Complete Non-compact Manifolds",
+    "authors": [
+      "Huabin Li",
+      "Tian Wu",
+      "Xiao Zhou"
+    ],
+    "abstract": "We study the critical biharmonic equation \\[ Δ^2 u=u^{\\frac{n+4}{n-4}}, \\] on a complete, connected, and non-compact Riemannian manifold \\((M^n,g)\\) of dimension \\(n\\geq 5\\) with non-negative Ricci curvature. We establish an optimal pointwise second-order derivative estimate by Bernstein's method and the continuity method. Using invariant tensors, we derive a differential inequality that yields a rigidity result. More precisely, if there exists a positive finite energy solution, then the manifold is isometric to the Euclidean space \\(\\mathbb{R}^n\\), and the solution is given by \\[ u(x)= \\frac{ \\left[λ^2 n(n-4)(n^2-4)\\right]^{\\frac{n-4}{8}} } {\\left(1+λ|x-x_0|^2\\right)^{\\frac{n-4}{2}}}, \\qquad λ>0,\\quad x_0\\in\\mathbb{R}^n . \\]",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.07657",
+    "pdfUrl": "https://arxiv.org/pdf/2609.07657",
+    "submittedAt": "2026-09-07T15:42:54Z",
+    "updatedAt": "2026-09-07T15:42:54Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文分类非紧完备流形上的临界四阶方程 $Delta^2$ $u=u^{(n+4)/(n-4)}$。在 $n>=5、Ricci$ 曲率非负的条件下，作者先用最大值原理和 Bernstein 连续性论证得到 Delta u 的符号与 Hessian 控制，再构造不变量张量并对其微分不等式做截断积分，迫使流形达到欧氏刚性；最后在 $R^n$ 上解等式情形并得到标准 bubble。",
+    "techniques": [
+      "双调和方程最大值原理",
+      "Bernstein 连续性方法",
+      "Hessian 不变量张量",
+      "截断积分与曲率刚性",
+      "临界 Sobolev bubble 分类"
+    ],
+    "breakthrough": "将点态 Hessian 估计与非紧流形上的积分增长条件连接起来，证明正的有限能量解不仅具有欧氏显式形式，而且反过来强迫底流形就是 $R^n$。",
+    "limitations": "维数要求 $n>=5$ 且 Ricci 曲率非负；正解需满足有限临界范数或文中的增长/limsup 条件，不能直接覆盖变号解、一般曲率或带边界流形。分类结论依赖临界幂和严格正则性，未给出弱奇异解的完整分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "在定理 1.1 的 limsup 条件或定理 1.2 的积分增长条件下，正解满足 Delta $u<=0$。",
+          "route": "把 $w=Delta u$ 看作满足 Delta $w=u^{(n+4)/(n-4)}>=0$ 的次调和量；先在大球上用最大值原理，再利用 limsup 或增长条件让球面边界贡献消失，得到全局符号。",
+          "evidence": "PDF 第 4 页 Proposition 1.3；第 2-4 页 Theorems 1.1-1.2 的假设与结论。"
+        },
+        {
+          "claim": "正解满足由 $h=Delta$ u+2|grad $u|^2/((n-4)u)$ 给出的点态二阶控制，特别是 $h<=0$。",
+          "route": "在正则化的最大值点对 h 进行 Bernstein 计算，利用 Ricci 非负消去坏曲率项；从 h 的正部分出发连续改变系数，并用边界符号阻止首次正值，从而完成连续性法。",
+          "evidence": "PDF 第 8 页 Lemma 2.1；第 9 页 Proposition 2.2 及 h 的定义。"
+        },
+        {
+          "claim": "不变量 Hessian 张量的微分不等式结合截断积分，迫使非负 Ricci 流形上的解达到欧氏几何刚性。",
+          "route": "将 Hessian 分解为迹部分和无迹部分，应用 Section 3 的不变量张量恒等式获得带正权的微分不等式；乘以紧支撑截断函数积分并令半径趋于无穷，有限能量使误差项消失，因而无迹部分和相应曲率项必须为零。",
+          "evidence": "PDF 第 12-15 页 Section 3、Lemma 3.2；第 15-20 页 Section 4 的 cutoff integral estimates。"
+        },
+        {
+          "claim": "所有满足假设的正解都定义在 $R^n$ 上并等于标准临界 bubble（在定理 1.1 情形为相应显式表达式）。",
+          "route": "刚性步骤给出欧氏度量和等式情形的 Hessian 方程；对该方程沿径向积分并利用临界缩放确定平移、尺度和振幅参数，再以 Theorem 1.1/1.2 的积分条件排除其它分支。",
+          "evidence": "PDF 第 2-3 页 Theorems 1.1-1.2；第 15-22 页定理证明和 Euclidean bubble classification。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新定理/分类",
-      "workSummary": "证明非负 Ricci 完备非紧流形上临界双调和方程若存在正有限能量解，则底空间欧氏且解为标准泡。",
-      "techniques": [
-        "Bernstein 法",
-        "连续性法",
-        "不变张量微分不等式"
-      ],
-      "breakthrough": "把有限能量四阶解存在性转成环境几何刚性。",
-      "limitations": "正性、有限能量、n≥5 均关键；需核查导数估计的整体适用性。 研究结论按摘要级分析；未完成正文方法核验。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 94,
-      "priorityReason": "直接连接 Ricci 几何与临界 PDE，优先级很高。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "We study the critical biharmonic equation \\[ Δ^2 u=u^{\\frac{n+4}{n-4}}, \\] on a complete, connected, and non-compact Riemannian manifold \\((M^n,g)\\) of dimension \\(n\\geq 5\\) with non-negative Ricci curvature. We establish an optimal pointwise second-order derivative estimate by Bernstein's method and the continuity method. Using invariant tensors, we derive a differential inequality that yields a rigidity result. More precisely, if there exists a positive finite energy solution, then the manifold is isometric to the Euclidean space \\(\\mathbb{R}^n\\), and the solution is given by \\[ u(x)= \\frac{ \\left[λ^2 n(n-4)(n^2-4)\\right]^{\\frac{n-4}{8}} } {\\left(1+λ|x-x_0|^2\\right)^{\\frac{n-4}{2}}}, \\qquad λ>0,\\quad x_0\\in\\mathbb{R}^n . \\]",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "检查摘要、引言、所有证明章节、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未发现作者明确披露 AI/LLM 参与研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 第 1-24 页全文检索，以及第 22-24 页结尾、Acknowledgments、References。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.07657:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.07657",
-        "metadata": {
-          "title": "Classification of Solutions to a Critical Fourth-Order Equation on Complete Non-compact Manifolds",
-          "authors": [
-            "Huabin Li",
-            "Tian Wu",
-            "Xiao Zhou"
-          ],
-          "abstract": "We study the critical biharmonic equation \\[ Δ^2 u=u^{\\frac{n+4}{n-4}}, \\] on a complete, connected, and non-compact Riemannian manifold \\((M^n,g)\\) of dimension \\(n\\geq 5\\) with non-negative Ricci curvature. We establish an optimal pointwise second-order derivative estimate by Bernstein's method and the continuity method. Using invariant tensors, we derive a differential inequality that yields a rigidity result. More precisely, if there exists a positive finite energy solution, then the manifold is isometric to the Euclidean space \\(\\mathbb{R}^n\\), and the solution is given by \\[ u(x)= \\frac{ \\left[λ^2 n(n-4)(n^2-4)\\right]^{\\frac{n-4}{8}} } {\\left(1+λ|x-x_0|^2\\right)^{\\frac{n-4}{2}}}, \\qquad λ>0,\\quad x_0\\in\\mathbb{R}^n . \\]",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-07T15:42:54Z",
-          "updatedAt": "2026-09-07T15:42:54Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Classification of Solutions to a Critical Fourth-Order Equation on Complete Non-compact Manifolds",
+        "authors": [
+          "Huabin Li",
+          "Tian Wu",
+          "Xiao Zhou"
+        ],
+        "abstract": "We study the critical biharmonic equation \\[ Δ^2 u=u^{\\frac{n+4}{n-4}}, \\] on a complete, connected, and non-compact Riemannian manifold \\((M^n,g)\\) of dimension \\(n\\geq 5\\) with non-negative Ricci curvature. We establish an optimal pointwise second-order derivative estimate by Bernstein's method and the continuity method. Using invariant tensors, we derive a differential inequality that yields a rigidity result. More precisely, if there exists a positive finite energy solution, then the manifold is isometric to the Euclidean space \\(\\mathbb{R}^n\\), and the solution is given by \\[ u(x)= \\frac{ \\left[λ^2 n(n-4)(n^2-4)\\right]^{\\frac{n-4}{8}} } {\\left(1+λ|x-x_0|^2\\right)^{\\frac{n-4}{2}}}, \\qquad λ>0,\\quad x_0\\in\\mathbb{R}^n . \\]",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.07657",
+        "pdfUrl": "https://arxiv.org/pdf/2609.07657",
+        "submittedAt": "2026-09-07T15:42:54Z",
+        "updatedAt": "2026-09-07T15:42:54Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文分类非紧完备流形上的临界四阶方程 $Delta^2$ $u=u^{(n+4)/(n-4)}$。在 $n>=5、Ricci$ 曲率非负的条件下，作者先用最大值原理和 Bernstein 连续性论证得到 Delta u 的符号与 Hessian 控制，再构造不变量张量并对其微分不等式做截断积分，迫使流形达到欧氏刚性；最后在 $R^n$ 上解等式情形并得到标准 bubble。",
+        "techniques": [
+          "双调和方程最大值原理",
+          "Bernstein 连续性方法",
+          "Hessian 不变量张量",
+          "截断积分与曲率刚性",
+          "临界 Sobolev bubble 分类"
+        ],
+        "breakthrough": "将点态 Hessian 估计与非紧流形上的积分增长条件连接起来，证明正的有限能量解不仅具有欧氏显式形式，而且反过来强迫底流形就是 $R^n$。",
+        "limitations": "维数要求 $n>=5$ 且 Ricci 曲率非负；正解需满足有限临界范数或文中的增长/limsup 条件，不能直接覆盖变号解、一般曲率或带边界流形。分类结论依赖临界幂和严格正则性，未给出弱奇异解的完整分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "在定理 1.1 的 limsup 条件或定理 1.2 的积分增长条件下，正解满足 Delta $u<=0$。",
+              "route": "把 $w=Delta u$ 看作满足 Delta $w=u^{(n+4)/(n-4)}>=0$ 的次调和量；先在大球上用最大值原理，再利用 limsup 或增长条件让球面边界贡献消失，得到全局符号。",
+              "evidence": "PDF 第 4 页 Proposition 1.3；第 2-4 页 Theorems 1.1-1.2 的假设与结论。"
+            },
+            {
+              "claim": "正解满足由 $h=Delta$ u+2|grad $u|^2/((n-4)u)$ 给出的点态二阶控制，特别是 $h<=0$。",
+              "route": "在正则化的最大值点对 h 进行 Bernstein 计算，利用 Ricci 非负消去坏曲率项；从 h 的正部分出发连续改变系数，并用边界符号阻止首次正值，从而完成连续性法。",
+              "evidence": "PDF 第 8 页 Lemma 2.1；第 9 页 Proposition 2.2 及 h 的定义。"
+            },
+            {
+              "claim": "不变量 Hessian 张量的微分不等式结合截断积分，迫使非负 Ricci 流形上的解达到欧氏几何刚性。",
+              "route": "将 Hessian 分解为迹部分和无迹部分，应用 Section 3 的不变量张量恒等式获得带正权的微分不等式；乘以紧支撑截断函数积分并令半径趋于无穷，有限能量使误差项消失，因而无迹部分和相应曲率项必须为零。",
+              "evidence": "PDF 第 12-15 页 Section 3、Lemma 3.2；第 15-20 页 Section 4 的 cutoff integral estimates。"
+            },
+            {
+              "claim": "所有满足假设的正解都定义在 $R^n$ 上并等于标准临界 bubble（在定理 1.1 情形为相应显式表达式）。",
+              "route": "刚性步骤给出欧氏度量和等式情形的 Hessian 方程；对该方程沿径向积分并利用临界缩放确定平移、尺度和振幅参数，再以 Theorem 1.1/1.2 的积分条件排除其它分支。",
+              "evidence": "PDF 第 2-3 页 Theorems 1.1-1.2；第 15-22 页定理证明和 Euclidean bubble classification。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新定理/分类",
-          "workSummary": "证明非负 Ricci 完备非紧流形上临界双调和方程若存在正有限能量解，则底空间欧氏且解为标准泡。",
-          "techniques": [
-            "Bernstein 法",
-            "连续性法",
-            "不变张量微分不等式"
-          ],
-          "breakthrough": "把有限能量四阶解存在性转成环境几何刚性。",
-          "limitations": "正性、有限能量、n≥5 均关键；需核查导数估计的整体适用性。 研究结论按摘要级分析；未完成正文方法核验。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 94,
-          "priorityReason": "直接连接 Ricci 几何与临界 PDE，优先级很高。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "We study the critical biharmonic equation \\[ Δ^2 u=u^{\\frac{n+4}{n-4}}, \\] on a complete, connected, and non-compact Riemannian manifold \\((M^n,g)\\) of dimension \\(n\\geq 5\\) with non-negative Ricci curvature. We establish an optimal pointwise second-order derivative estimate by Bernstein's method and the continuity method. Using invariant tensors, we derive a differential inequality that yields a rigidity result. More precisely, if there exists a positive finite energy solution, then the manifold is isometric to the Euclidean space \\(\\mathbb{R}^n\\), and the solution is given by \\[ u(x)= \\frac{ \\left[λ^2 n(n-4)(n^2-4)\\right]^{\\frac{n-4}{8}} } {\\left(1+λ|x-x_0|^2\\right)^{\\frac{n-4}{2}}}, \\qquad λ>0,\\quad x_0\\in\\mathbb{R}^n . \\]",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "检查摘要、引言、所有证明章节、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、artificial 等词；未发现作者明确披露 AI/LLM 参与研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 第 1-24 页全文检索，以及第 22-24 页结尾、Acknowledgments、References。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

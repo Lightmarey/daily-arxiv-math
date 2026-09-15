@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09966",
+  "slug": "2609.09966",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09966:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09966",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The $C^{p'}$-regularity conjecture near $p=2$",
+    "authors": [
+      "Se-Chan Lee",
+      "Taehun Lee"
+    ],
+    "abstract": "We prove the $C^{p'}$-regularity conjecture in every dimension when $p>2$ is sufficiently close to $2$. To this end, we establish improved Hölder estimates for the gradients of $p$-harmonic functions. These estimates also determine the first-order asymptotics of the optimal gradient Hölder exponent in every dimension. The proof combines compactness, harmonic rigidity of the limiting profiles, and a sharp uniform gap estimate for the first variation of the gradient excess.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09966",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09966",
+    "submittedAt": "2026-09-09T09:53:51Z",
+    "updatedAt": "2026-09-09T09:53:51Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "论文证明 p 大于 2 且足够接近 2 时的 $C^p$ 正则性猜想，并给出 p-harmonic 函数梯度 Hölder 指数的一阶渐近。作者把归一化梯度 excess 的衰减问题转为紧性极限：若改进衰减失败，尺度重标度序列收敛到一个具有额外二次齐次结构的极限；harmonic rigidity 排除该退化模式。关键的 uniform gap 估计控制第一变分在无迹 Hessian 方向上的损失，再结合临界点 excess decay、近临界/非退化分区和 Campanato 迭代，把局部梯度增长推广到一般点，最终得到全维度的 $C^p$ 结论。",
+    "techniques": [
+      "p-harmonic excess decay",
+      "compactness and blow-up",
+      "harmonic rigidity",
+      "first-variation uniform gap",
+      "Campanato iteration"
+    ],
+    "breakthrough": "把 $C^p$ 正则性从低维或特殊情形推进到任意维度中 p→2 的统一邻域，并同时识别最优梯度 Hölder 指数随 p−2 的首阶行为。",
+    "limitations": "结论要求 p 在维度依赖的 2 邻域内，且主要处理 p-harmonic 方程的局部正则性；uniform gap 和 blow-up 论证不能直接覆盖远离 2 的 p、含更一般系数或边界奇异性的方程。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "归一化 p-harmonic 梯度 excess 在临界尺度具有紧性和 harmonic 极限。",
+          "route": "对违反衰减的解按 excess 尺度重标度，使归一化梯度和临界点位置保持有界；Caccioppoli/局部正则性给出紧性，极限方程在 p→2 时趋于 harmonic 方程，并保留归一化二次信息。",
+          "evidence": "PDF 第 7-10 页 Section 3 Lemmas 3.1–3.2，equations (2.1)–(2.2)。"
+        },
+        {
+          "claim": "非零无迹二次极限不能实现违反目标衰减的最小缺陷。",
+          "route": "对无迹 Hessian H 构造对应的 harmonic quadratic profile $w_H$ 和 first variation；球面平均与 Dirichlet 边值问题把 excess 变分化，Lemma 5.3 给出严格正 gap，阻止极限沿任何非零 H 保持同样低的增长。",
+          "evidence": "PDF 第 12-16 页 Section 5 Lemmas 5.1–5.3、Proposition 5.4，equations (5.1)–(5.8)。"
+        },
+        {
+          "claim": "临界点附近的 excess 和函数增长满足改进 Hölder 估计。",
+          "route": "在 critical regime 使用 Proposition 5.4 的 gap 反复缩小球半径，得到 excess decay；将 excess 控制转成梯度振荡和 pointwise growth，形成 Lemmas 6.1–6.2 的迭代界。",
+          "evidence": "PDF 第 17-19 页 Section 6 Lemmas 6.1–6.2，equations (6.1)–(6.8)。"
+        },
+        {
+          "claim": "把临界点估计与非退化点估计拼接后得到 Theorems 1.2–1.3。",
+          "route": "按梯度 excess 相对于尺度的大小把一般点分为 near-critical 和 non-degenerate 两类，分别调用 Lemmas 6.3–6.5；覆盖到任意小球并累积尺度幂次，得到全局局部 $C^p$ growth 及最优 exponent 的渐近展开。",
+          "evidence": "PDF 第 19-23 页 Section 6 Lemmas 6.3–6.5 与 Theorems 1.2–1.3 proof。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、紧性极限、gap 估计、正则性证明、Appendix 和 References，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者披露 AI 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-26 页全文。",
+    "priorityScore": 85,
+    "priorityTier": "high",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09966:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09966",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The $C^{p'}$-regularity conjecture near $p=2$",
+        "authors": [
+          "Se-Chan Lee",
+          "Taehun Lee"
+        ],
+        "abstract": "We prove the $C^{p'}$-regularity conjecture in every dimension when $p>2$ is sufficiently close to $2$. To this end, we establish improved Hölder estimates for the gradients of $p$-harmonic functions. These estimates also determine the first-order asymptotics of the optimal gradient Hölder exponent in every dimension. The proof combines compactness, harmonic rigidity of the limiting profiles, and a sharp uniform gap estimate for the first variation of the gradient excess.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09966",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09966",
+        "submittedAt": "2026-09-09T09:53:51Z",
+        "updatedAt": "2026-09-09T09:53:51Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "论文证明 p 大于 2 且足够接近 2 时的 $C^p$ 正则性猜想，并给出 p-harmonic 函数梯度 Hölder 指数的一阶渐近。作者把归一化梯度 excess 的衰减问题转为紧性极限：若改进衰减失败，尺度重标度序列收敛到一个具有额外二次齐次结构的极限；harmonic rigidity 排除该退化模式。关键的 uniform gap 估计控制第一变分在无迹 Hessian 方向上的损失，再结合临界点 excess decay、近临界/非退化分区和 Campanato 迭代，把局部梯度增长推广到一般点，最终得到全维度的 $C^p$ 结论。",
+        "techniques": [
+          "p-harmonic excess decay",
+          "compactness and blow-up",
+          "harmonic rigidity",
+          "first-variation uniform gap",
+          "Campanato iteration"
+        ],
+        "breakthrough": "把 $C^p$ 正则性从低维或特殊情形推进到任意维度中 p→2 的统一邻域，并同时识别最优梯度 Hölder 指数随 p−2 的首阶行为。",
+        "limitations": "结论要求 p 在维度依赖的 2 邻域内，且主要处理 p-harmonic 方程的局部正则性；uniform gap 和 blow-up 论证不能直接覆盖远离 2 的 p、含更一般系数或边界奇异性的方程。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "归一化 p-harmonic 梯度 excess 在临界尺度具有紧性和 harmonic 极限。",
+              "route": "对违反衰减的解按 excess 尺度重标度，使归一化梯度和临界点位置保持有界；Caccioppoli/局部正则性给出紧性，极限方程在 p→2 时趋于 harmonic 方程，并保留归一化二次信息。",
+              "evidence": "PDF 第 7-10 页 Section 3 Lemmas 3.1–3.2，equations (2.1)–(2.2)。"
+            },
+            {
+              "claim": "非零无迹二次极限不能实现违反目标衰减的最小缺陷。",
+              "route": "对无迹 Hessian H 构造对应的 harmonic quadratic profile $w_H$ 和 first variation；球面平均与 Dirichlet 边值问题把 excess 变分化，Lemma 5.3 给出严格正 gap，阻止极限沿任何非零 H 保持同样低的增长。",
+              "evidence": "PDF 第 12-16 页 Section 5 Lemmas 5.1–5.3、Proposition 5.4，equations (5.1)–(5.8)。"
+            },
+            {
+              "claim": "临界点附近的 excess 和函数增长满足改进 Hölder 估计。",
+              "route": "在 critical regime 使用 Proposition 5.4 的 gap 反复缩小球半径，得到 excess decay；将 excess 控制转成梯度振荡和 pointwise growth，形成 Lemmas 6.1–6.2 的迭代界。",
+              "evidence": "PDF 第 17-19 页 Section 6 Lemmas 6.1–6.2，equations (6.1)–(6.8)。"
+            },
+            {
+              "claim": "把临界点估计与非退化点估计拼接后得到 Theorems 1.2–1.3。",
+              "route": "按梯度 excess 相对于尺度的大小把一般点分为 near-critical 和 non-degenerate 两类，分别调用 Lemmas 6.3–6.5；覆盖到任意小球并累积尺度幂次，得到全局局部 $C^p$ growth 及最优 exponent 的渐近展开。",
+              "evidence": "PDF 第 19-23 页 Section 6 Lemmas 6.3–6.5 与 Theorems 1.2–1.3 proof。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、紧性极限、gap 估计、正则性证明、Appendix 和 References，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者披露 AI 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-26 页全文。",
+        "priorityScore": 85,
+        "priorityTier": "high",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

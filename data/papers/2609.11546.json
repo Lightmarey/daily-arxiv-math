@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11546",
+  "slug": "2609.11546",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11546:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11546",
+    "version": 1,
+    "entryKind": "new",
+    "title": "The Singular Set of Minima of Multiple Integrals",
+    "authors": [
+      "Cristiana De Filippis",
+      "Jan Kristensen",
+      "Giuseppe Mingione",
+      "Aidan Strong"
+    ],
+    "abstract": "The Hausdorff dimension of the singular set of local minimizers of quasiconvex integrals is strictly less than the ambient dimension.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11546",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11546",
+    "submittedAt": "2026-09-10T13:41:44Z",
+    "updatedAt": "2026-09-10T13:41:44Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "部分正则性",
+    "workSummary": "论文在无先验 Lipschitz 假设下研究满足 p-growth、强准凸和 Hölder x,y 依赖的局部极小子。通过高阶可积性、加权 Caccioppoli 和 Dorronsoro 减 exceso 估计，证明梯度属于某个分数 Sobolev 空间，进而把奇异集 Hausdorff 维数压低。",
+    "techniques": [
+      "准凸变分法",
+      "高阶可积性",
+      "加权 Caccioppoli",
+      "Campanato/excess 衰减",
+      "分数 Sobolev 估计"
+    ],
+    "breakthrough": "解决一般向量值准凸积分极小子奇异集严格降维问题，去掉过去证明所需的先验 Lipschitz 正则性。",
+    "limitations": "只处理满足结构条件 (A1)–(A5) 和 $p\\ge 2$ 的局部极小子；维数界是严格低于 n，未给出所有模型的最佳具体余维。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 1.1 将奇异集测度问题转化为梯度的分数 Sobolev 可积性。",
+          "route": "先由 Gehring 高阶可积性取得 $Du\\in L^q$，定义 $V(Du)=(1+|Du|^{2})^{(p-2)/4}Du$；若 V(Du) 在某个分数阶 $W^{s,2}$ 中，则其非 Hölder 点可用容量估计覆盖，从而得到 $dim_H$ $\\Sigma _u<n$。",
+          "evidence": "PDF 第 3–4 页，Theorem 1.1。"
+        },
+        {
+          "claim": "Lemmas 2.1–2.2 把局部极小性转成 excess 的 Caccioppoli 与近似控制。",
+          "route": "Dorronsoro 分解把 $Du-(Du)_B$ 的振荡写成多尺度仿射误差，weighted Caccioppoli 用准凸性和测试函数截断控制 V(Du) 的梯度；两者组合产生尺度递减的 excess 项。",
+          "evidence": "PDF 第 5–7 页，Lemmas 2.1–2.2。"
+        },
+        {
+          "claim": "Proposition 3.1 的分数差分估计完成奇异集降维。",
+          "route": "将每个球上的 excess 递推写成 V(Du) 的双点差分积分，利用结构常数和高阶可积性在小尺度求和；得到 V(Du) 属于分数 Sobolev 空间，随后用 Sobolev-capacity 覆盖 $\\Sigma _u$。",
+          "evidence": "PDF 第 7–9 页，Proposition 3.1。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 90,
+    "priorityTier": "high",
+    "priorityReason": "准凸多重积分极小子的奇异集维数严格低于环境维数，是高阶正则性核心结果。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11546:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11546",
+        "version": 1,
+        "entryKind": "new",
+        "title": "The Singular Set of Minima of Multiple Integrals",
+        "authors": [
+          "Cristiana De Filippis",
+          "Jan Kristensen",
+          "Giuseppe Mingione",
+          "Aidan Strong"
+        ],
+        "abstract": "The Hausdorff dimension of the singular set of local minimizers of quasiconvex integrals is strictly less than the ambient dimension.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11546",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11546",
+        "submittedAt": "2026-09-10T13:41:44Z",
+        "updatedAt": "2026-09-10T13:41:44Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "部分正则性",
+        "workSummary": "论文在无先验 Lipschitz 假设下研究满足 p-growth、强准凸和 Hölder x,y 依赖的局部极小子。通过高阶可积性、加权 Caccioppoli 和 Dorronsoro 减 exceso 估计，证明梯度属于某个分数 Sobolev 空间，进而把奇异集 Hausdorff 维数压低。",
+        "techniques": [
+          "准凸变分法",
+          "高阶可积性",
+          "加权 Caccioppoli",
+          "Campanato/excess 衰减",
+          "分数 Sobolev 估计"
+        ],
+        "breakthrough": "解决一般向量值准凸积分极小子奇异集严格降维问题，去掉过去证明所需的先验 Lipschitz 正则性。",
+        "limitations": "只处理满足结构条件 (A1)–(A5) 和 $p\\ge 2$ 的局部极小子；维数界是严格低于 n，未给出所有模型的最佳具体余维。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 1.1 将奇异集测度问题转化为梯度的分数 Sobolev 可积性。",
+              "route": "先由 Gehring 高阶可积性取得 $Du\\in L^q$，定义 $V(Du)=(1+|Du|^{2})^{(p-2)/4}Du$；若 V(Du) 在某个分数阶 $W^{s,2}$ 中，则其非 Hölder 点可用容量估计覆盖，从而得到 $dim_H$ $\\Sigma _u<n$。",
+              "evidence": "PDF 第 3–4 页，Theorem 1.1。"
+            },
+            {
+              "claim": "Lemmas 2.1–2.2 把局部极小性转成 excess 的 Caccioppoli 与近似控制。",
+              "route": "Dorronsoro 分解把 $Du-(Du)_B$ 的振荡写成多尺度仿射误差，weighted Caccioppoli 用准凸性和测试函数截断控制 V(Du) 的梯度；两者组合产生尺度递减的 excess 项。",
+              "evidence": "PDF 第 5–7 页，Lemmas 2.1–2.2。"
+            },
+            {
+              "claim": "Proposition 3.1 的分数差分估计完成奇异集降维。",
+              "route": "将每个球上的 excess 递推写成 V(Du) 的双点差分积分，利用结构常数和高阶可积性在小尺度求和；得到 V(Du) 属于分数 Sobolev 空间，随后用 Sobolev-capacity 覆盖 $\\Sigma _u$。",
+              "evidence": "PDF 第 7–9 页，Proposition 3.1。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 90,
+        "priorityTier": "high",
+        "priorityReason": "准凸多重积分极小子的奇异集维数严格低于环境维数，是高阶正则性核心结果。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

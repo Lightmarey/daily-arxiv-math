@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.01488",
+  "slug": "2609.01488",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.01488:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.01488",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Stabilization by a background magnetic field: global well-posedness of the full compressible viscous non-resistive MHD system without heat-conductivity",
+    "authors": [
+      "Liening Qiao",
+      "Juntao Sun",
+      "Jiahong Wu",
+      "Fuyi Xu"
+    ],
+    "abstract": "We consider the three-dimensional full compressible magnetohydrodynamic(MHD) system on the periodic torus $\\mathbb T^3$ in the regime where the only dissipative mechanism acting on the system is the viscosity of the fluid: the magnetic field is non-resistive and the flow is non-heat-conducting. We prove that this system admits a unique global smooth solution, together with explicit algebraic decay rates, provided that the perturbation $(\\mathbf u_0,\\,P_0-\\bar P,\\,\\mathbf H_0-\\mathbf n)$ of the equilibrium state $(\\mathbf 0,\\bar P,\\mathbf n)$ is sufficiently small in a high-order Sobolev space and the background magnetic field $\\mathbf n\\in\\mathbb R^3$ satisfies a Diophantine condition. No smallness whatsoever is imposed on the initial density: it is only required to be bounded away from vacuum and from infinity, and may exhibit arbitrarily large variations. The proof uncovers a hidden dissipation mechanism. Although neither the density, nor the pressure, nor the magnetic field is endowed with any diffusion or damping of its own, the coupling of these quantities with the velocity through the background field $\\mathbf n$, combined with a Poincaré-type inequality of Diophantine origin, generates effective dissipation for both the pressure and the magnetic field perturbations. The large variations of the density are handled by a two-tier energy argument, in which weighted time-decay estimates for the intermediate-order energy compensate exactly for the linear-in-time growth of the highest-order norm of the density.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.01488",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01488",
+    "submittedAt": "2026-09-01T16:20:05Z",
+    "updatedAt": "2026-09-01T16:20:05Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "无热传导非电阻 MHD 稳定性",
+    "workSummary": "论文研究带背景磁场的三维全可压缩黏性非电阻 MHD 系统，在无热传导下的全局适定性和衰减稳定性。作者利用磁场 Diophantine 条件产生带导数损失的 Poincare 型控制，再结合密度守恒、低阶能量衰减、高阶交换子和连续性 bootstrap，允许初始密度大但保持远离真空和无穷。",
+    "techniques": [
+      "背景磁场 Diophantine Poincare 不等式",
+      "密度守恒与有效压力变量",
+      "低阶/高阶能量层级",
+      "连续性 bootstrap 与全局延拓"
+    ],
+    "breakthrough": "论文在没有热传导和磁扩散的完整可压缩 MHD 中，借助非共振背景磁场的横向振荡恢复足够的高阶控制，首次允许密度初值完全不小并只要求远离真空/无穷，同时得到全局解和显式代数衰减。",
+    "limitations": "稳定性要求速度、压力和磁场扰动在高阶 Sobolev 空间小，以及背景磁场满足 Diophantine 条件；密度本身可大但必须有正下界和有限上界，结果未覆盖共振磁场、热传导缺失下的大扰动或真空形成。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 3.1 利用质量守恒把密度和压力变量控制在固定平均值附近，并建立基本能量不等式。",
+          "route": "对连续性方程积分得到密度平均值守恒，选择 pressure 变量消除平衡常数；把动量与磁场方程乘以速度/磁扰动并分部积分，耗散项控制梯度，留下由密度振荡加权的低阶能量。",
+          "evidence": "PDF 第14–17页，第3节 Lemma 3.1；守恒常数和基本能量估计见式(3.1)–(3.5)。"
+        },
+        {
+          "claim": "Lemma 2.2 和 Lemmas 3.2–3.6 通过 Diophantine 背景磁场获得带导数损失的高阶控制。",
+          "route": "对沿磁场方向的导数 Fourier 模态使用 Diophantine 下界排除小分母，得到 Poincare 型不等式；把该不等式插入速度/磁场的交换子能量，结合 Sobolev 乘积和 Gagliardo–Nirenberg 控制非线性，从低阶能量逐级恢复中高阶导数。",
+          "evidence": "PDF 第13–18页 Lemma 2.2；PDF 第18–31页 Lemmas 3.2–3.6 及相应能量推导。"
+        },
+        {
+          "claim": "Lemmas 3.7–3.11 建立中阶衰减、顶阶增长控制和可积的高阶能量微分不等式。",
+          "route": "先利用磁场振荡和低阶耗散得到中阶能量代数衰减，再对高阶方程交换微分；把密度项拆成平均与零均值部分，用带损失 Poincare 和时间权重吸收非线性，最后将顶阶能量增长系数压到中阶衰减可积的形式。",
+          "evidence": "PDF 第25–33页 Lemmas 3.7–3.11；中阶衰减在第27–29页，顶阶估计和时间权重在第30–33页。"
+        },
+        {
+          "claim": "Proposition 3.12 和 Theorem 1.1 通过连续性 bootstrap 证明全局存在、唯一性和扰动衰减。",
+          "route": "以局部经典解的最大存在区间定义 bootstrap 能量阈值，Proposition 3.12 在阈值内给出统一高阶界和正密度界；若最大时间有限，界允许继续局部解，矛盾于最大性，故 $Tmax=\\infty $，同时能量微分不等式积分得到显式代数衰减。",
+          "evidence": "PDF 第31–33页 Proposition 3.12；PDF 第33页 Section 4 Proof of Theorem 1.1，包含连续性延拓和 $Tmax=\\infty $ 的反证。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgement、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–33页（含 Acknowledgement 与 References）；缓存全文 2609.01488.txt。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦流体方程，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01488:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.01488",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Stabilization by a background magnetic field: global well-posedness of the full compressible viscous non-resistive MHD system without heat-conductivity",
+        "authors": [
+          "Liening Qiao",
+          "Juntao Sun",
+          "Jiahong Wu",
+          "Fuyi Xu"
+        ],
+        "abstract": "We consider the three-dimensional full compressible magnetohydrodynamic(MHD) system on the periodic torus $\\mathbb T^3$ in the regime where the only dissipative mechanism acting on the system is the viscosity of the fluid: the magnetic field is non-resistive and the flow is non-heat-conducting. We prove that this system admits a unique global smooth solution, together with explicit algebraic decay rates, provided that the perturbation $(\\mathbf u_0,\\,P_0-\\bar P,\\,\\mathbf H_0-\\mathbf n)$ of the equilibrium state $(\\mathbf 0,\\bar P,\\mathbf n)$ is sufficiently small in a high-order Sobolev space and the background magnetic field $\\mathbf n\\in\\mathbb R^3$ satisfies a Diophantine condition. No smallness whatsoever is imposed on the initial density: it is only required to be bounded away from vacuum and from infinity, and may exhibit arbitrarily large variations. The proof uncovers a hidden dissipation mechanism. Although neither the density, nor the pressure, nor the magnetic field is endowed with any diffusion or damping of its own, the coupling of these quantities with the velocity through the background field $\\mathbf n$, combined with a Poincaré-type inequality of Diophantine origin, generates effective dissipation for both the pressure and the magnetic field perturbations. The large variations of the density are handled by a two-tier energy argument, in which weighted time-decay estimates for the intermediate-order energy compensate exactly for the linear-in-time growth of the highest-order norm of the density.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.01488",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01488",
+        "submittedAt": "2026-09-01T16:20:05Z",
+        "updatedAt": "2026-09-01T16:20:05Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "无热传导非电阻 MHD 稳定性",
+        "workSummary": "论文研究带背景磁场的三维全可压缩黏性非电阻 MHD 系统，在无热传导下的全局适定性和衰减稳定性。作者利用磁场 Diophantine 条件产生带导数损失的 Poincare 型控制，再结合密度守恒、低阶能量衰减、高阶交换子和连续性 bootstrap，允许初始密度大但保持远离真空和无穷。",
+        "techniques": [
+          "背景磁场 Diophantine Poincare 不等式",
+          "密度守恒与有效压力变量",
+          "低阶/高阶能量层级",
+          "连续性 bootstrap 与全局延拓"
+        ],
+        "breakthrough": "论文在没有热传导和磁扩散的完整可压缩 MHD 中，借助非共振背景磁场的横向振荡恢复足够的高阶控制，首次允许密度初值完全不小并只要求远离真空/无穷，同时得到全局解和显式代数衰减。",
+        "limitations": "稳定性要求速度、压力和磁场扰动在高阶 Sobolev 空间小，以及背景磁场满足 Diophantine 条件；密度本身可大但必须有正下界和有限上界，结果未覆盖共振磁场、热传导缺失下的大扰动或真空形成。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 3.1 利用质量守恒把密度和压力变量控制在固定平均值附近，并建立基本能量不等式。",
+              "route": "对连续性方程积分得到密度平均值守恒，选择 pressure 变量消除平衡常数；把动量与磁场方程乘以速度/磁扰动并分部积分，耗散项控制梯度，留下由密度振荡加权的低阶能量。",
+              "evidence": "PDF 第14–17页，第3节 Lemma 3.1；守恒常数和基本能量估计见式(3.1)–(3.5)。"
+            },
+            {
+              "claim": "Lemma 2.2 和 Lemmas 3.2–3.6 通过 Diophantine 背景磁场获得带导数损失的高阶控制。",
+              "route": "对沿磁场方向的导数 Fourier 模态使用 Diophantine 下界排除小分母，得到 Poincare 型不等式；把该不等式插入速度/磁场的交换子能量，结合 Sobolev 乘积和 Gagliardo–Nirenberg 控制非线性，从低阶能量逐级恢复中高阶导数。",
+              "evidence": "PDF 第13–18页 Lemma 2.2；PDF 第18–31页 Lemmas 3.2–3.6 及相应能量推导。"
+            },
+            {
+              "claim": "Lemmas 3.7–3.11 建立中阶衰减、顶阶增长控制和可积的高阶能量微分不等式。",
+              "route": "先利用磁场振荡和低阶耗散得到中阶能量代数衰减，再对高阶方程交换微分；把密度项拆成平均与零均值部分，用带损失 Poincare 和时间权重吸收非线性，最后将顶阶能量增长系数压到中阶衰减可积的形式。",
+              "evidence": "PDF 第25–33页 Lemmas 3.7–3.11；中阶衰减在第27–29页，顶阶估计和时间权重在第30–33页。"
+            },
+            {
+              "claim": "Proposition 3.12 和 Theorem 1.1 通过连续性 bootstrap 证明全局存在、唯一性和扰动衰减。",
+              "route": "以局部经典解的最大存在区间定义 bootstrap 能量阈值，Proposition 3.12 在阈值内给出统一高阶界和正密度界；若最大时间有限，界允许继续局部解，矛盾于最大性，故 $Tmax=\\infty $，同时能量微分不等式积分得到显式代数衰减。",
+              "evidence": "PDF 第31–33页 Proposition 3.12；PDF 第33页 Section 4 Proof of Theorem 1.1，包含连续性延拓和 $Tmax=\\infty $ 的反证。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgement、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–33页（含 Acknowledgement 与 References）；缓存全文 2609.01488.txt。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦流体方程，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

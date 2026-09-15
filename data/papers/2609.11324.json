@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11324",
+  "slug": "2609.11324",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11324:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11324",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Regularity of a free boundary determined by the value of the gradient. Part 1: Third order asymptotics",
+    "authors": [
+      "Frida Fejne"
+    ],
+    "abstract": "This is the first part of a project concerning the regularity of the free boundary of a function, where the free boundary depends on the gradient of the function. We study the minimizer of the expression \\begin{equation*} J(u) : = \\int_{B_1} F(\\nabla u) \\ dx, \\end{equation*} where $F(x)$ is a uniformly convex function whose second derivatives might jump at $|x|=1$. This results in an Euler-Lagrange equation that varies over the free boundary, which we define as $$ \\Gamma = \\partial \\{x \\in B_1: |\\nabla u| >1 \\} \\cap \\partial \\{x \\in B_1: |\\nabla u| <1 \\}. $$ We consider two-phase flat points for which the second derivatives of $F$ jump over $\\Gamma$. In this paper, we show that under some regularity and non-degeneracy assumptions, a minimizer $u$ can be expressed as $$ u(x)= a + \\nu \\cdot x+ \\delta p(x) + \\delta \\epsilon q(x), $$ where $a \\in \\mathbb{R}$, $\\nu \\in \\mathbb{R}^n$, $0 < \\delta, \\epsilon << 1$. Here $p$ is a $C^1$ function, which consists of one polynomial in the upper half ball and another polynomial in the lower half ball. The function $q$ is a rest term with bounded $L^2$ norm. Furthermore, assuming that we have a sequence, $u^j$, of minimizers, we show that $q^j$ converges weakly to a function $q^0$ that satisfies a certain PDE. In addition, we show that $q^0$ is $C^3$ in $B_r^+$ and $B_r^-$, respectively, for $0<r<1$. This is the main result of this paper which is intended to be used to show regularity of the free boundary.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11324",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11324",
+    "submittedAt": "2026-09-10T09:55:21Z",
+    "updatedAt": "2026-09-10T09:55:21Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "正则性",
+    "workSummary": "论文分析梯度决定的两相自由边界。对能量最小子 u，作者先得到一阶线性化与 broken polynomial 近似，再将二阶投影余项 $q^j$ 归一化；通过两侧椭圆估计证明 $q^j$ 的弱极限在自由边界两侧具有 $C^3$ 正则性，为第三阶自由边界展开提供输入。",
+    "techniques": [
+      "自由边界渐近",
+      "broken polynomial",
+      "$L^{2}$ 投影",
+      "两相椭圆正则性"
+    ],
+    "breakthrough": "在非退化和平坦假设下把最小子展开为 $a+\\nu \\cdot x+\\delta p+\\delta \\epsilon q$，并证明归一化余项极限满足两侧 PDE 且分别 $C^3$。",
+    "limitations": "结论局部化于平坦两相点，依赖 F 的分段 $C^{2}$ 结构、非退化和序列最小子假设；尚未给出完整自由边界全局正则性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 2.3 将一阶自由边界平坦化后的最小子余项提升到局部 Hölder 控制。",
+          "route": "用 Euler–Lagrange 方程在 $|\\nabla u|>1$ 与 $|\\nabla u|<1$ 两相分别线性化，Lemma 2.1 的局部 Sobolev 正则性和边界条件控制两侧梯度；紧集上的估计使一阶平面斜率可稳定选取。",
+          "evidence": "PDF 第 11–16 页，Lemma 2.1、Corollary 2.2、Theorem 2.3。"
+        },
+        {
+          "claim": "Lemmas 3.1–3.3 和 Theorem 3.9 构造 broken polynomial p 并识别二阶投影余项。",
+          "route": "对最小子序列以 $L^{2}$ 投影消去常数、线性项和两侧二次矩，Lemma 3.1–3.3 给出归一化余项的两相 PDE；Definition 3.5 的 broken-polynomial 类保留自由边界跳跃，Theorem 3.9 给出序列收敛到其中的 p。",
+          "evidence": "PDF 第 19–36 页，Lemmas 3.1–3.3、Definition 3.5、Theorem 3.9。"
+        },
+        {
+          "claim": "Section 4.2 的 $q^j$ 正则性理论证明极限 $q^0$ 在两侧为 $C^3$。",
+          "route": "用 $L^{2}$ 投影后的方程把 $q^j$ 的系数误差写成 $\\delta _j$ 的余项，内外半球分别应用 $Schauder/W^{2,2}$ 提升；统一界和弱收敛允许在任意 $B_r^\\pm $ 中迭代到三阶连续性。",
+          "evidence": "PDF 第 40–60 页，Section 4.1–4.2、Lemma 4.2、Lemma 4.6。"
+        },
+        {
+          "claim": "Section 4.3 的主定理把 p 与 $q^0$ 拼成第三阶渐近展开。",
+          "route": "将 Section 4.2 的两侧 $C^3$ 极限代回原能量的一阶变分，控制 $q^j-q^0$ 的 $L^{2}$ 余项；Theorem 4.17 的重标度恢复 $u=a+\\nu \\cdot x+\\delta p+\\delta \\epsilon q$，并给出自由边界后续正则化所需的展开。",
+          "evidence": "PDF 第 61–71 页，Section 4.3、Theorem 4.17 及其 proof。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+    "priorityScore": 90,
+    "priorityTier": "high",
+    "priorityReason": "自由边界高阶渐近和极限 PDE 是椭圆自由边界正则性核心问题。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11324:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11324",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Regularity of a free boundary determined by the value of the gradient. Part 1: Third order asymptotics",
+        "authors": [
+          "Frida Fejne"
+        ],
+        "abstract": "This is the first part of a project concerning the regularity of the free boundary of a function, where the free boundary depends on the gradient of the function. We study the minimizer of the expression \\begin{equation*} J(u) : = \\int_{B_1} F(\\nabla u) \\ dx, \\end{equation*} where $F(x)$ is a uniformly convex function whose second derivatives might jump at $|x|=1$. This results in an Euler-Lagrange equation that varies over the free boundary, which we define as $$ \\Gamma = \\partial \\{x \\in B_1: |\\nabla u| >1 \\} \\cap \\partial \\{x \\in B_1: |\\nabla u| <1 \\}. $$ We consider two-phase flat points for which the second derivatives of $F$ jump over $\\Gamma$. In this paper, we show that under some regularity and non-degeneracy assumptions, a minimizer $u$ can be expressed as $$ u(x)= a + \\nu \\cdot x+ \\delta p(x) + \\delta \\epsilon q(x), $$ where $a \\in \\mathbb{R}$, $\\nu \\in \\mathbb{R}^n$, $0 < \\delta, \\epsilon << 1$. Here $p$ is a $C^1$ function, which consists of one polynomial in the upper half ball and another polynomial in the lower half ball. The function $q$ is a rest term with bounded $L^2$ norm. Furthermore, assuming that we have a sequence, $u^j$, of minimizers, we show that $q^j$ converges weakly to a function $q^0$ that satisfies a certain PDE. In addition, we show that $q^0$ is $C^3$ in $B_r^+$ and $B_r^-$, respectively, for $0<r<1$. This is the main result of this paper which is intended to be used to show regularity of the free boundary.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11324",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11324",
+        "submittedAt": "2026-09-10T09:55:21Z",
+        "updatedAt": "2026-09-10T09:55:21Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "正则性",
+        "workSummary": "论文分析梯度决定的两相自由边界。对能量最小子 u，作者先得到一阶线性化与 broken polynomial 近似，再将二阶投影余项 $q^j$ 归一化；通过两侧椭圆估计证明 $q^j$ 的弱极限在自由边界两侧具有 $C^3$ 正则性，为第三阶自由边界展开提供输入。",
+        "techniques": [
+          "自由边界渐近",
+          "broken polynomial",
+          "$L^{2}$ 投影",
+          "两相椭圆正则性"
+        ],
+        "breakthrough": "在非退化和平坦假设下把最小子展开为 $a+\\nu \\cdot x+\\delta p+\\delta \\epsilon q$，并证明归一化余项极限满足两侧 PDE 且分别 $C^3$。",
+        "limitations": "结论局部化于平坦两相点，依赖 F 的分段 $C^{2}$ 结构、非退化和序列最小子假设；尚未给出完整自由边界全局正则性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 2.3 将一阶自由边界平坦化后的最小子余项提升到局部 Hölder 控制。",
+              "route": "用 Euler–Lagrange 方程在 $|\\nabla u|>1$ 与 $|\\nabla u|<1$ 两相分别线性化，Lemma 2.1 的局部 Sobolev 正则性和边界条件控制两侧梯度；紧集上的估计使一阶平面斜率可稳定选取。",
+              "evidence": "PDF 第 11–16 页，Lemma 2.1、Corollary 2.2、Theorem 2.3。"
+            },
+            {
+              "claim": "Lemmas 3.1–3.3 和 Theorem 3.9 构造 broken polynomial p 并识别二阶投影余项。",
+              "route": "对最小子序列以 $L^{2}$ 投影消去常数、线性项和两侧二次矩，Lemma 3.1–3.3 给出归一化余项的两相 PDE；Definition 3.5 的 broken-polynomial 类保留自由边界跳跃，Theorem 3.9 给出序列收敛到其中的 p。",
+              "evidence": "PDF 第 19–36 页，Lemmas 3.1–3.3、Definition 3.5、Theorem 3.9。"
+            },
+            {
+              "claim": "Section 4.2 的 $q^j$ 正则性理论证明极限 $q^0$ 在两侧为 $C^3$。",
+              "route": "用 $L^{2}$ 投影后的方程把 $q^j$ 的系数误差写成 $\\delta _j$ 的余项，内外半球分别应用 $Schauder/W^{2,2}$ 提升；统一界和弱收敛允许在任意 $B_r^\\pm $ 中迭代到三阶连续性。",
+              "evidence": "PDF 第 40–60 页，Section 4.1–4.2、Lemma 4.2、Lemma 4.6。"
+            },
+            {
+              "claim": "Section 4.3 的主定理把 p 与 $q^0$ 拼成第三阶渐近展开。",
+              "route": "将 Section 4.2 的两侧 $C^3$ 极限代回原能量的一阶变分，控制 $q^j-q^0$ 的 $L^{2}$ 余项；Theorem 4.17 的重标度恢复 $u=a+\\nu \\cdot x+\\delta p+\\delta \\epsilon q$，并给出自由边界后续正则化所需的展开。",
+              "evidence": "PDF 第 61–71 页，Section 4.3、Theorem 4.17 及其 proof。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查官方 PDF 的摘要、正文各节、致谢、作者声明、正文末尾和参考文献，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly 等词；未见作者明确披露将 AI/LLM 工具用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "官方 arXiv PDF 全文逐页核查，覆盖正文、致谢、声明、附录（如有）与参考文献。",
+        "priorityScore": 90,
+        "priorityTier": "high",
+        "priorityReason": "自由边界高阶渐近和极限 PDE 是椭圆自由边界正则性核心问题。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次完成官方正文逐页核查与证明链记录。"
+      }
+    }
+  ]
+}

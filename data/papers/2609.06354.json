@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.06354",
+  "slug": "2609.06354",
+  "latest": {
+    "id": "math.AP:2026-09-09:2609.06354:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
+    "arxivId": "2609.06354",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Continuum Limit of Nonlocal Electrostatics in Random Media",
+    "authors": [
+      "Prashant K. Jha",
+      "Kaushik Dayal"
+    ],
+    "abstract": "We derive a two-scale continuum limit for the electrostatic energy of random charge density fields that are stationary and ergodic under lattice translations. Each microscopic cell is charge neutral in every realization, while its dipole moment may fluctuate and have a nonzero mean. Under assumptions on the stationary microscopic potential and the finite-volume fields, the local and nonlocal energies converge almost surely to deterministic limits. The local limit consists of the ensemble-averaged microscopic Coulomb energy and a cell-depolarization term, whereas the effective polarization determines the nonlocal limit. The cell-depolarization terms cancel in the total energy, which consists of the ensemble-averaged microscopic cell energy and the macroscopic electrostatic field energy. The deterministic specialization recovers the periodic two-scale limit. For an independent-cell random-displacement model, we verify the assumptions of the continuum-limit theorem and show that centered microscopic fluctuations can change the local energy without changing the effective polarization or the nonlocal energy.",
+    "categories": [
+      "cond-mat.mes-hall",
+      "math.AP"
+    ],
+    "primaryCategory": "cond-mat.mes-hall",
+    "arxivUrl": "https://arxiv.org/abs/2609.06354",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06354",
+    "submittedAt": "2026-09-06T03:08:00Z",
+    "updatedAt": "2026-09-06T03:08:00Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文建立具有晶格平移平稳遍历性的随机电荷密度场的两尺度连续静电能极限。每个微观 cell 在每个 realization 中电中性，但 dipole 可随机波动；作者用 lattice ergodic theorem 将 cell dipole 平均识别为确定性 effective polarization p。局部能量的 thermodynamic limit 保留 ensemble-averaged microscopic Coulomb energy，并出现 cell depolarization 项；非局部材料点相互作用先收敛到 polarized-cell 离散能，再在 epsilon 趋零时收敛到由 p 生成的宏观 electrostatic field energy。局部的正 depolarization 与非局部的负项相消，得到总能量的 deterministic continuum formula，并在 periodic 与 independent-cell random-displacement 模型中验证假设。",
+    "techniques": [
+      "lattice stationary ergodic averaging",
+      "两尺度 local/nonlocal energy decomposition",
+      "cell polarization 与 Poisson field",
+      "weak–strong convergence of polarization fields",
+      "Coulomb dipole kernel 与边界层估计"
+    ],
+    "breakthrough": "证明随机平稳遍历电中性 cell 的局部和非局部静电能几乎处处收敛到确定性极限，并清楚分离两类微观信息：局部能量保留 ensemble microscopic statistics，而非局部能量只由 effective polarization 决定；两种 depolarization 项在总能量中精确抵消。",
+    "limitations": "结果依赖固定立方 reference cell、晶格平移遍历性、电中性和 Section 3 的微观势/有限体场正则性假设；独立位移模型是静态 ensemble，不是含时间相关性的 atomistic Gibbs dynamics。论文没有覆盖非立方材料点、带长程 cell correlations 的动力学随机场或脱离这些假设的边界几何。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "cell dipole 的大尺度平均几乎处处收敛到确定性 effective polarization p(x)。",
+          "route": "把 microscopic polarization 写成 reference cell 内的随机场 $P-bar(x,s,T_k$ omega)，先用可积性控制边界余项，再对晶格索引 k 使用 weighted lattice ergodic theorem；得到局部平均在 realization 间消除随机性并识别为期望 dipole。",
+          "evidence": "PDF 第 8-14 页 Section 2 Theorem 2.1/Corollary 2.1 与 Section 4.1 Lemma 4.2，equations (52)–(58)。"
+        },
+        {
+          "claim": "局部能量在 thermodynamic 与 continuum 两尺度极限中收敛到 microscopic average 加 depolarization term。",
+          "route": "先在每个 material point 固定 epsilon 使用 cell potential correction，把 local Coulomb energy 拆成 reference-cell microscopic term 和 polarization-field pairing；weak convergence of P 与 strong convergence of scaled potential correction 给出 $|p|^2/6$，最后用有限网格求和和 Lipschitz domain boundary layer 消失完成 epsilon limit。",
+          "evidence": "PDF 第 14-16 页 Section 4.1 Proposition 4.2，equations (59)–(64)。"
+        },
+        {
+          "claim": "非局部能量先收敛到 polarized-cell lattice interaction，再收敛到宏观 electrostatic field energy minus depolarization。",
+          "route": "对不同 material points 的 Coulomb interaction 做 cell integration by parts，把 charge density 换成无通量 polarization field；在固定 epsilon 下以 weak–strong pairing 得到 $B_k(p(x),p(x-prime))$，再将 piecewise-constant polarization 强收敛到 p 的零延拓，Lax–Milgram 场解给出宏观梯度能量。",
+          "evidence": "PDF 第 16-19 页 Section 4.2 Propositions 4.3–4.4，equations (65)–(80)。"
+        },
+        {
+          "claim": "总 electrostatic energy 的局部与非局部 depolarization 项相消，得到确定性 continuum energy。",
+          "route": "将 Proposition 4.2 的正 one-sixth polarization contribution 与 Proposition 4.4 的负 one-sixth contribution 相加；剩下 ensemble microscopic cell term 和 whole-space Poisson field energy，几乎处处极限不再依赖 realization。",
+          "evidence": "PDF 第 3 页 introduction main formula；第 19-24 页 Section 4.2–6 conclusion，total-energy cancellation and equations (74)–(80)。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、随机模型、ergodic theorem、local/nonlocal limits、periodic/random-displacement specializations、conclusions、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、Claude、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-40 页全文，重点核查第 1-3 页主结果、第 8-24 页证明、第 24-25 页结尾与 References。",
+    "priorityScore": 49,
+    "priorityTier": "low",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Continuum Limit of Nonlocal Electrostatics in Random Media》。",
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06354:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
+        "arxivId": "2609.06354",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Continuum Limit of Nonlocal Electrostatics in Random Media",
+        "authors": [
+          "Prashant K. Jha",
+          "Kaushik Dayal"
+        ],
+        "abstract": "We derive a two-scale continuum limit for the electrostatic energy of random charge density fields that are stationary and ergodic under lattice translations. Each microscopic cell is charge neutral in every realization, while its dipole moment may fluctuate and have a nonzero mean. Under assumptions on the stationary microscopic potential and the finite-volume fields, the local and nonlocal energies converge almost surely to deterministic limits. The local limit consists of the ensemble-averaged microscopic Coulomb energy and a cell-depolarization term, whereas the effective polarization determines the nonlocal limit. The cell-depolarization terms cancel in the total energy, which consists of the ensemble-averaged microscopic cell energy and the macroscopic electrostatic field energy. The deterministic specialization recovers the periodic two-scale limit. For an independent-cell random-displacement model, we verify the assumptions of the continuum-limit theorem and show that centered microscopic fluctuations can change the local energy without changing the effective polarization or the nonlocal energy.",
+        "categories": [
+          "cond-mat.mes-hall",
+          "math.AP"
+        ],
+        "primaryCategory": "cond-mat.mes-hall",
+        "arxivUrl": "https://arxiv.org/abs/2609.06354",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06354",
+        "submittedAt": "2026-09-06T03:08:00Z",
+        "updatedAt": "2026-09-06T03:08:00Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文建立具有晶格平移平稳遍历性的随机电荷密度场的两尺度连续静电能极限。每个微观 cell 在每个 realization 中电中性，但 dipole 可随机波动；作者用 lattice ergodic theorem 将 cell dipole 平均识别为确定性 effective polarization p。局部能量的 thermodynamic limit 保留 ensemble-averaged microscopic Coulomb energy，并出现 cell depolarization 项；非局部材料点相互作用先收敛到 polarized-cell 离散能，再在 epsilon 趋零时收敛到由 p 生成的宏观 electrostatic field energy。局部的正 depolarization 与非局部的负项相消，得到总能量的 deterministic continuum formula，并在 periodic 与 independent-cell random-displacement 模型中验证假设。",
+        "techniques": [
+          "lattice stationary ergodic averaging",
+          "两尺度 local/nonlocal energy decomposition",
+          "cell polarization 与 Poisson field",
+          "weak–strong convergence of polarization fields",
+          "Coulomb dipole kernel 与边界层估计"
+        ],
+        "breakthrough": "证明随机平稳遍历电中性 cell 的局部和非局部静电能几乎处处收敛到确定性极限，并清楚分离两类微观信息：局部能量保留 ensemble microscopic statistics，而非局部能量只由 effective polarization 决定；两种 depolarization 项在总能量中精确抵消。",
+        "limitations": "结果依赖固定立方 reference cell、晶格平移遍历性、电中性和 Section 3 的微观势/有限体场正则性假设；独立位移模型是静态 ensemble，不是含时间相关性的 atomistic Gibbs dynamics。论文没有覆盖非立方材料点、带长程 cell correlations 的动力学随机场或脱离这些假设的边界几何。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "cell dipole 的大尺度平均几乎处处收敛到确定性 effective polarization p(x)。",
+              "route": "把 microscopic polarization 写成 reference cell 内的随机场 $P-bar(x,s,T_k$ omega)，先用可积性控制边界余项，再对晶格索引 k 使用 weighted lattice ergodic theorem；得到局部平均在 realization 间消除随机性并识别为期望 dipole。",
+              "evidence": "PDF 第 8-14 页 Section 2 Theorem 2.1/Corollary 2.1 与 Section 4.1 Lemma 4.2，equations (52)–(58)。"
+            },
+            {
+              "claim": "局部能量在 thermodynamic 与 continuum 两尺度极限中收敛到 microscopic average 加 depolarization term。",
+              "route": "先在每个 material point 固定 epsilon 使用 cell potential correction，把 local Coulomb energy 拆成 reference-cell microscopic term 和 polarization-field pairing；weak convergence of P 与 strong convergence of scaled potential correction 给出 $|p|^2/6$，最后用有限网格求和和 Lipschitz domain boundary layer 消失完成 epsilon limit。",
+              "evidence": "PDF 第 14-16 页 Section 4.1 Proposition 4.2，equations (59)–(64)。"
+            },
+            {
+              "claim": "非局部能量先收敛到 polarized-cell lattice interaction，再收敛到宏观 electrostatic field energy minus depolarization。",
+              "route": "对不同 material points 的 Coulomb interaction 做 cell integration by parts，把 charge density 换成无通量 polarization field；在固定 epsilon 下以 weak–strong pairing 得到 $B_k(p(x),p(x-prime))$，再将 piecewise-constant polarization 强收敛到 p 的零延拓，Lax–Milgram 场解给出宏观梯度能量。",
+              "evidence": "PDF 第 16-19 页 Section 4.2 Propositions 4.3–4.4，equations (65)–(80)。"
+            },
+            {
+              "claim": "总 electrostatic energy 的局部与非局部 depolarization 项相消，得到确定性 continuum energy。",
+              "route": "将 Proposition 4.2 的正 one-sixth polarization contribution 与 Proposition 4.4 的负 one-sixth contribution 相加；剩下 ensemble microscopic cell term 和 whole-space Poisson field energy，几乎处处极限不再依赖 realization。",
+              "evidence": "PDF 第 3 页 introduction main formula；第 19-24 页 Section 4.2–6 conclusion，total-energy cancellation and equations (74)–(80)。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、随机模型、ergodic theorem、local/nonlocal limits、periodic/random-displacement specializations、conclusions、Acknowledgments 和 References，并检索 AI、LLM、ChatGPT、Claude、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-40 页全文，重点核查第 1-3 页主结果、第 8-24 页证明、第 24-25 页结尾与 References。",
+        "priorityScore": 49,
+        "priorityTier": "low",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Continuum Limit of Nonlocal Electrostatics in Random Media》。",
+        "revisionSummary": null
+      }
+    }
+  ]
+}

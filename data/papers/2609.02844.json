@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.02844",
+  "slug": "2609.02844",
+  "latest": {
+    "id": "math.AP:2026-09-03:2609.02844:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
+    "arxivId": "2609.02844",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Inverse scattering method for nonlinear negative first order coupled Klein-Gordon equation",
+    "authors": [
+      "Cihan Sabaz",
+      "Ilmar Gahramanov",
+      "Mansur I. Ismailov"
+    ],
+    "abstract": "The exact N-soliton solutions are derived for the coupled negative first order Klein-Gordon (CNKG) equation subject to vanishing boundary conditions by using the inverse scattering method via Gelfand-Levitan-Marchenko equation. Based on the zero-curvature representation, the conservation laws, integrals of motion, and Hamiltonian structure of the aforementioned coupled nonlinear equations are constructed. The Jost functions and their analyticity properties for the Manakov spectral problem are recalled. The integral equations for the eigenfunctions are then used to formulate the Gel'fand-Levitan-Marchenko equations. Solving these equations establishes a direct correspondence between the kernel functions and the potential, yielding the general N-soliton expressions.",
+    "categories": [
+      "nlin.SI",
+      "math-ph",
+      "math.AP",
+      "math.SP"
+    ],
+    "primaryCategory": "nlin.SI",
+    "arxivUrl": "https://arxiv.org/abs/2609.02844",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02844",
+    "submittedAt": "2026-09-02T17:29:01Z",
+    "updatedAt": "2026-09-02T17:29:01Z",
+    "topicId": "dispersive",
+    "topicLabel": "色散方程",
+    "progressType": "分析结果",
+    "workSummary": "对负一阶耦合 Klein--Gordon 方程建立零曲率表示和 Manakov 谱问题，利用 Jost 解、散射数据和 Gel'fand--Levitan--Marchenko 方程构造一般 N-孤子解，并给出守恒律、运动积分与 Hamilton 结构。",
+    "techniques": [
+      "零曲率兼容条件",
+      "Jost 解三角表示",
+      "散射矩阵解析性",
+      "GLM 积分方程",
+      "反散射核重构势函数"
+    ],
+    "breakthrough": "将二分量负一阶 Klein--Gordon 系统的散射数据与三角核一一对应，并从 GLM 核的对角值直接恢复两个势分量，完成一般 N-soliton 构造。",
+    "limitations": "散射重构部分假设势在有限区间外消失、离散零点简单；未讨论更一般长程势或高重数谱。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "耦合负一阶 Klein--Gordon 方程由谱问题的零曲率条件导出，并具有守恒律和 Hamilton 结构。",
+          "route": "对兼容方程展开矩阵元素，消去辅助场和积分常数得到原方程；对谱参数展开兼容关系，逐阶取迹得到守恒密度和运动积分。",
+          "evidence": "第 2 节 Proposition 1、兼容方程 (2.1)--(2.5)（PDF 第 4--6 页）。"
+        },
+        {
+          "claim": "Jost 解具有半平面解析性和三角积分表示，散射矩阵元素构成完整散射数据。",
+          "route": "用 Volterra 积分方程构造左右 Jost 解，利用势的紧支撑和指数因子在上/下半平面闭合积分；得到核独立于谱参数的三角表示，并由 unitary/unimodular 性质确定散射系数关系。",
+          "evidence": "第 3.1--3.3 节解析性与公式 (3.1)--(3.2)（PDF 第 8--12 页）。"
+        },
+        {
+          "claim": "散射数据满足 GLM 方程，且其解唯一确定三角核。",
+          "route": "将左右 Jost 三角表示代入散射关系，对谱参数作 Fourier 反演并围绕 S11 的上半平面零点取留数；整理连续谱和离散谱项得到 Volterra 型 GLM 方程 (3.4)/(3.7)，其三角结构给出递推唯一解。",
+          "evidence": "第 3.4 节公式 (3.3)--(3.7)（PDF 第 12--15 页）。"
+        },
+        {
+          "claim": "GLM 核的对角值恢复 q2,q3，并由有限离散散射数据得到一般 N-孤子表达式。",
+          "route": "将三角表示代回原谱方程，在 $xi=x$ 处比较系数，得到 q2,q3 与 $K_j^(i)(x,x)$ 的关系；对简单离散谱的有限秩 GLM 核求解后，得到 N 个指数相互作用的显式孤子公式。",
+          "evidence": "第 3.4--4 节公式 (3.8)、N-soliton construction（PDF 第 14--22 页）。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgements/References；未见作者明确 AI 使用声明。",
+    "aiEvidenceSource": "PDF 第 1--22 页全文关键词检索；第 21--22 页末尾/References。",
+    "priorityScore": 61,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02844:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
+        "arxivId": "2609.02844",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Inverse scattering method for nonlinear negative first order coupled Klein-Gordon equation",
+        "authors": [
+          "Cihan Sabaz",
+          "Ilmar Gahramanov",
+          "Mansur I. Ismailov"
+        ],
+        "abstract": "The exact N-soliton solutions are derived for the coupled negative first order Klein-Gordon (CNKG) equation subject to vanishing boundary conditions by using the inverse scattering method via Gelfand-Levitan-Marchenko equation. Based on the zero-curvature representation, the conservation laws, integrals of motion, and Hamiltonian structure of the aforementioned coupled nonlinear equations are constructed. The Jost functions and their analyticity properties for the Manakov spectral problem are recalled. The integral equations for the eigenfunctions are then used to formulate the Gel'fand-Levitan-Marchenko equations. Solving these equations establishes a direct correspondence between the kernel functions and the potential, yielding the general N-soliton expressions.",
+        "categories": [
+          "nlin.SI",
+          "math-ph",
+          "math.AP",
+          "math.SP"
+        ],
+        "primaryCategory": "nlin.SI",
+        "arxivUrl": "https://arxiv.org/abs/2609.02844",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02844",
+        "submittedAt": "2026-09-02T17:29:01Z",
+        "updatedAt": "2026-09-02T17:29:01Z",
+        "topicId": "dispersive",
+        "topicLabel": "色散方程",
+        "progressType": "分析结果",
+        "workSummary": "对负一阶耦合 Klein--Gordon 方程建立零曲率表示和 Manakov 谱问题，利用 Jost 解、散射数据和 Gel'fand--Levitan--Marchenko 方程构造一般 N-孤子解，并给出守恒律、运动积分与 Hamilton 结构。",
+        "techniques": [
+          "零曲率兼容条件",
+          "Jost 解三角表示",
+          "散射矩阵解析性",
+          "GLM 积分方程",
+          "反散射核重构势函数"
+        ],
+        "breakthrough": "将二分量负一阶 Klein--Gordon 系统的散射数据与三角核一一对应，并从 GLM 核的对角值直接恢复两个势分量，完成一般 N-soliton 构造。",
+        "limitations": "散射重构部分假设势在有限区间外消失、离散零点简单；未讨论更一般长程势或高重数谱。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "耦合负一阶 Klein--Gordon 方程由谱问题的零曲率条件导出，并具有守恒律和 Hamilton 结构。",
+              "route": "对兼容方程展开矩阵元素，消去辅助场和积分常数得到原方程；对谱参数展开兼容关系，逐阶取迹得到守恒密度和运动积分。",
+              "evidence": "第 2 节 Proposition 1、兼容方程 (2.1)--(2.5)（PDF 第 4--6 页）。"
+            },
+            {
+              "claim": "Jost 解具有半平面解析性和三角积分表示，散射矩阵元素构成完整散射数据。",
+              "route": "用 Volterra 积分方程构造左右 Jost 解，利用势的紧支撑和指数因子在上/下半平面闭合积分；得到核独立于谱参数的三角表示，并由 unitary/unimodular 性质确定散射系数关系。",
+              "evidence": "第 3.1--3.3 节解析性与公式 (3.1)--(3.2)（PDF 第 8--12 页）。"
+            },
+            {
+              "claim": "散射数据满足 GLM 方程，且其解唯一确定三角核。",
+              "route": "将左右 Jost 三角表示代入散射关系，对谱参数作 Fourier 反演并围绕 S11 的上半平面零点取留数；整理连续谱和离散谱项得到 Volterra 型 GLM 方程 (3.4)/(3.7)，其三角结构给出递推唯一解。",
+              "evidence": "第 3.4 节公式 (3.3)--(3.7)（PDF 第 12--15 页）。"
+            },
+            {
+              "claim": "GLM 核的对角值恢复 q2,q3，并由有限离散散射数据得到一般 N-孤子表达式。",
+              "route": "将三角表示代回原谱方程，在 $xi=x$ 处比较系数，得到 q2,q3 与 $K_j^(i)(x,x)$ 的关系；对简单离散谱的有限秩 GLM 核求解后，得到 N 个指数相互作用的显式孤子公式。",
+              "evidence": "第 3.4--4 节公式 (3.8)、N-soliton construction（PDF 第 14--22 页）。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检索 AI、artificial intelligence、large language、LLM、ChatGPT、GPT、AI tools，并检查 Acknowledgements/References；未见作者明确 AI 使用声明。",
+        "aiEvidenceSource": "PDF 第 1--22 页全文关键词检索；第 21--22 页末尾/References。",
+        "priorityScore": 61,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦色散方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28954",
+  "slug": "2608.28954",
+  "latest": {
+    "id": "math.AP:2026-09-01:2608.28954:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-01",
+    "arxivId": "2608.28954",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Analysis validation of a new continuum model for the evolution of grain boundaries in polycrystalline materials",
+    "authors": [
+      "Peicheng Zhu",
+      "Xiaoxue Qin",
+      "Yang Xiang"
+    ],
+    "abstract": "To describe the evolution of grain boundaries based on the underlying microscopic mechanisms of line defects (disconnections) and the integrated effects of a diverse range of thermodynamic driving forces, Zhang, et al. in 2017 formulated a continuum equation. We prove the global-in-time existence, uniqueness, and regularity of the weak solution to an initial-boundary value problem for this model. The existence, uniqueness of the stationary solution are also established. Finally, we investigate the large-time behavior of the weak solution of the evolution problem, and show that the solution converges to the stationary solution in a suitable sense. Numerical simulations are carried out to validate the analysis results. The main difficulties in the proof of main theorems are due to a non-local term with singularity, a non-smooth coefficient of the highest derivative associated with the gradient of the unknown, and the special form of free energy which is not uniformly bounded from below. The key ingredients in the proof are the energy method, an estimate for a singular integral of the Hilbert type, Fourier transform of Hilbert transformations, and an estimate with a weight, for time-derivative of the unknown.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28954",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28954",
+    "submittedAt": "2026-08-28T23:46:19Z",
+    "updatedAt": "2026-08-28T23:46:19Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "弱解存在性",
+    "workSummary": "论文研究周期抛物界面问题，先构造正则化近似解，再用紧性和弱收敛建立原始 IBVP 的弱解、正性与正则性。",
+    "techniques": [
+      "Aubin–Lions 紧性",
+      "能量不等式",
+      "弱收敛",
+      "截断测试函数",
+      "抛物正则性"
+    ],
+    "breakthrough": "Theorems 1.1–1.3 给出近似问题、原始问题及正性/存在性结论。",
+    "limitations": "依赖周期边界、初值 $H^1$ 条件、参数 B>0 和文中非线性通量结构。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 2.1 的近似系统具有统一先验估计。",
+          "route": "第2节用 Lemma 2.1 的能量界控制近似解，并以 Aubin–Lions（Lemma 2.2）取得时间空间紧性。",
+          "evidence": "PDF 第10–18页，第2节 Theorem 2.1、Lemmas 2.1–2.4。"
+        },
+        {
+          "claim": "Lemmas 3.1–3.4 控制原方程的符号、质量和正则性。",
+          "route": "对方程乘以 $h_t/(|h_x|+B)$ 等截断测试函数，分情形处理平均值符号，得到能量耗散和导数控制。",
+          "evidence": "PDF 第19–30页，第3节 Lemmas 3.1–3.4，尤其公式(3.1)、(3.16)、(3.24)。"
+        },
+        {
+          "claim": "Theorems 1.1–1.3 由近似极限和正则性提升闭合。",
+          "route": "从统一界中抽取收敛子列，识别非线性通量的弱极限，回代弱形式；随后利用第3.2节正则性估计完成原始 IBVP 的结论。",
+          "evidence": "PDF 第3–6页，第1节 Theorems 1.1–1.3；PDF 第约30页第3.1–3.2节。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "检查 PDF 末尾致谢/参考文献前区域及全文 AI/artificial intelligence/ChatGPT/LLM/Gemini/Claude/Grammarly 关键词，未见明确 AI 使用声明。",
+    "aiEvidenceSource": "缓存全文 2608.28954.txt；PDF 末尾区域与全文关键词检索。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-01",
+      "report": {
+        "id": "math.AP:2026-09-01:2608.28954:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-01",
+        "arxivId": "2608.28954",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Analysis validation of a new continuum model for the evolution of grain boundaries in polycrystalline materials",
+        "authors": [
+          "Peicheng Zhu",
+          "Xiaoxue Qin",
+          "Yang Xiang"
+        ],
+        "abstract": "To describe the evolution of grain boundaries based on the underlying microscopic mechanisms of line defects (disconnections) and the integrated effects of a diverse range of thermodynamic driving forces, Zhang, et al. in 2017 formulated a continuum equation. We prove the global-in-time existence, uniqueness, and regularity of the weak solution to an initial-boundary value problem for this model. The existence, uniqueness of the stationary solution are also established. Finally, we investigate the large-time behavior of the weak solution of the evolution problem, and show that the solution converges to the stationary solution in a suitable sense. Numerical simulations are carried out to validate the analysis results. The main difficulties in the proof of main theorems are due to a non-local term with singularity, a non-smooth coefficient of the highest derivative associated with the gradient of the unknown, and the special form of free energy which is not uniformly bounded from below. The key ingredients in the proof are the energy method, an estimate for a singular integral of the Hilbert type, Fourier transform of Hilbert transformations, and an estimate with a weight, for time-derivative of the unknown.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28954",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28954",
+        "submittedAt": "2026-08-28T23:46:19Z",
+        "updatedAt": "2026-08-28T23:46:19Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "弱解存在性",
+        "workSummary": "论文研究周期抛物界面问题，先构造正则化近似解，再用紧性和弱收敛建立原始 IBVP 的弱解、正性与正则性。",
+        "techniques": [
+          "Aubin–Lions 紧性",
+          "能量不等式",
+          "弱收敛",
+          "截断测试函数",
+          "抛物正则性"
+        ],
+        "breakthrough": "Theorems 1.1–1.3 给出近似问题、原始问题及正性/存在性结论。",
+        "limitations": "依赖周期边界、初值 $H^1$ 条件、参数 B>0 和文中非线性通量结构。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 2.1 的近似系统具有统一先验估计。",
+              "route": "第2节用 Lemma 2.1 的能量界控制近似解，并以 Aubin–Lions（Lemma 2.2）取得时间空间紧性。",
+              "evidence": "PDF 第10–18页，第2节 Theorem 2.1、Lemmas 2.1–2.4。"
+            },
+            {
+              "claim": "Lemmas 3.1–3.4 控制原方程的符号、质量和正则性。",
+              "route": "对方程乘以 $h_t/(|h_x|+B)$ 等截断测试函数，分情形处理平均值符号，得到能量耗散和导数控制。",
+              "evidence": "PDF 第19–30页，第3节 Lemmas 3.1–3.4，尤其公式(3.1)、(3.16)、(3.24)。"
+            },
+            {
+              "claim": "Theorems 1.1–1.3 由近似极限和正则性提升闭合。",
+              "route": "从统一界中抽取收敛子列，识别非线性通量的弱极限，回代弱形式；随后利用第3.2节正则性估计完成原始 IBVP 的结论。",
+              "evidence": "PDF 第3–6页，第1节 Theorems 1.1–1.3；PDF 第约30页第3.1–3.2节。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "检查 PDF 末尾致谢/参考文献前区域及全文 AI/artificial intelligence/ChatGPT/LLM/Gemini/Claude/Grammarly 关键词，未见明确 AI 使用声明。",
+        "aiEvidenceSource": "缓存全文 2608.28954.txt；PDF 末尾区域与全文关键词检索。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

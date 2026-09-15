@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.10936",
+  "slug": "2609.10936",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.10936:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.10936",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Well-posedness of the two-dimensional unsteady Prandtl system in Sobolev space with degenerate critical points",
+    "authors": [
+      "Shi-Yong Zhu",
+      "Ya-Guang Wang"
+    ],
+    "abstract": "This paper is devoted to the well-posedness of classical Prandtl equations in a finite order Sobolev space. For a initial data with degenerate critical points and general outflow, we obtain the local-in-time existence and uniqueness of the solution to the Prandtl equations in a Sobolev space, by introducing a new iteration scheme and linear cancelation. This result shows that Oleinik's monotonicity condition is not a necessary condition for the Prandtl equations to be well-posed in Sobolev spaces and provides evidence to demonstrate that zero shear stress does not necessarily lead to boundary layer separation in two-dimensional unsteady boundary layers.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.10936",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10936",
+    "submittedAt": "2026-09-10T00:55:05Z",
+    "updatedAt": "2026-09-10T00:55:05Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "正文级严格核查",
+    "workSummary": "论文证明带有限阶退化临界点和一般出流的二维非定常 Prandtl 方程局部 Sobolev 适定性。核心是 corrected increment 迭代：先构造背景剖面，再在线性增量方程中加入抵消项，以加权 conormal 能量控制退化点附近的法向导数，最后用后验估计令迭代收敛并证明唯一性。",
+    "techniques": [
+      "退化临界点的加权 Sobolev 空间",
+      "corrected increment 迭代",
+      "线性 cancellation",
+      "边界层能量估计",
+      "后验收敛和唯一性"
+    ],
+    "breakthrough": "Theorem 2.1 在 odd $s\\ge 11$ 和正出流条件下得到局部唯一经典解，说明 Oleinik 单调性不是 Sobolev 局部适定的必要条件。证明机制是把退化临界点带来的失控项转为可吸收的线性抵消，而不是假设剪切始终正。",
+    "limitations": "结果为局部时间且依赖高阶兼容条件、加权空间和正出流；不覆盖任意退化阶、长时间存在或零出流情形。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "corrected increment 迭代把非线性问题化为可估计的线性层。",
+          "route": "第 3 节在已构造的近似解上定义校正增量，将最危险的退化 transport 项显式抵消，并逐步构造 $U_n、F_n$。",
+          "evidence": "PDF 第 8--13 页第 3 节 iteration scheme，校正方程和 $F_n$ 收敛式。"
+        },
+        {
+          "claim": "加权能量控制每个校正增量的 Sobolev 范数。",
+          "route": "第 4 节选取由 psi、y 衰减和高阶导数组成的权函数，对线性问题积分分部；Lemma 4.1 的 $\\lambda $ 大参数使边界高阶项得到正的吸收。",
+          "evidence": "PDF 第 17 页 Theorem 4.1；第 18--20 页 Lemma 4.2、Lemma 4.3 及其能量估计。"
+        },
+        {
+          "claim": "近似序列在目标空间中收敛。",
+          "route": "将每层能量界代入 corrected source 的差分估计，利用 ϵ0 小和时间 t* 小使递推常数小于 1，故 $U_n$ 与 $F_n$ 形成 Cauchy 序列。",
+          "evidence": "PDF 第 10--16 页第 3 节末尾的收敛估计；PDF 第 6 页 Theorem 2.1 的正则性结论。"
+        },
+        {
+          "claim": "极限解存在且唯一。",
+          "route": "把收敛序列代回 Prandtl 方程恢复边界条件和兼容性；对两解作同样的 corrected energy estimate，差值初值为零从而差值恒为零。",
+          "evidence": "PDF 第 6 页 Theorem 2.1；第 114 页 Appendix 中最终能量估计和结论。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检查摘要、引言、迭代与附录证明、致谢和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "PDF 第 1--117 页全文，重点核查第 114--117 页致谢和作者信息及全文 AI 关键词上下文。",
+    "priorityScore": 82,
+    "priorityTier": "high",
+    "priorityReason": "针对退化临界点给出 Prandtl 方程 Sobolev 局部适定性新迭代机制。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.10936:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.10936",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Well-posedness of the two-dimensional unsteady Prandtl system in Sobolev space with degenerate critical points",
+        "authors": [
+          "Shi-Yong Zhu",
+          "Ya-Guang Wang"
+        ],
+        "abstract": "This paper is devoted to the well-posedness of classical Prandtl equations in a finite order Sobolev space. For a initial data with degenerate critical points and general outflow, we obtain the local-in-time existence and uniqueness of the solution to the Prandtl equations in a Sobolev space, by introducing a new iteration scheme and linear cancelation. This result shows that Oleinik's monotonicity condition is not a necessary condition for the Prandtl equations to be well-posed in Sobolev spaces and provides evidence to demonstrate that zero shear stress does not necessarily lead to boundary layer separation in two-dimensional unsteady boundary layers.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.10936",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10936",
+        "submittedAt": "2026-09-10T00:55:05Z",
+        "updatedAt": "2026-09-10T00:55:05Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "正文级严格核查",
+        "workSummary": "论文证明带有限阶退化临界点和一般出流的二维非定常 Prandtl 方程局部 Sobolev 适定性。核心是 corrected increment 迭代：先构造背景剖面，再在线性增量方程中加入抵消项，以加权 conormal 能量控制退化点附近的法向导数，最后用后验估计令迭代收敛并证明唯一性。",
+        "techniques": [
+          "退化临界点的加权 Sobolev 空间",
+          "corrected increment 迭代",
+          "线性 cancellation",
+          "边界层能量估计",
+          "后验收敛和唯一性"
+        ],
+        "breakthrough": "Theorem 2.1 在 odd $s\\ge 11$ 和正出流条件下得到局部唯一经典解，说明 Oleinik 单调性不是 Sobolev 局部适定的必要条件。证明机制是把退化临界点带来的失控项转为可吸收的线性抵消，而不是假设剪切始终正。",
+        "limitations": "结果为局部时间且依赖高阶兼容条件、加权空间和正出流；不覆盖任意退化阶、长时间存在或零出流情形。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "corrected increment 迭代把非线性问题化为可估计的线性层。",
+              "route": "第 3 节在已构造的近似解上定义校正增量，将最危险的退化 transport 项显式抵消，并逐步构造 $U_n、F_n$。",
+              "evidence": "PDF 第 8--13 页第 3 节 iteration scheme，校正方程和 $F_n$ 收敛式。"
+            },
+            {
+              "claim": "加权能量控制每个校正增量的 Sobolev 范数。",
+              "route": "第 4 节选取由 psi、y 衰减和高阶导数组成的权函数，对线性问题积分分部；Lemma 4.1 的 $\\lambda $ 大参数使边界高阶项得到正的吸收。",
+              "evidence": "PDF 第 17 页 Theorem 4.1；第 18--20 页 Lemma 4.2、Lemma 4.3 及其能量估计。"
+            },
+            {
+              "claim": "近似序列在目标空间中收敛。",
+              "route": "将每层能量界代入 corrected source 的差分估计，利用 ϵ0 小和时间 t* 小使递推常数小于 1，故 $U_n$ 与 $F_n$ 形成 Cauchy 序列。",
+              "evidence": "PDF 第 10--16 页第 3 节末尾的收敛估计；PDF 第 6 页 Theorem 2.1 的正则性结论。"
+            },
+            {
+              "claim": "极限解存在且唯一。",
+              "route": "把收敛序列代回 Prandtl 方程恢复边界条件和兼容性；对两解作同样的 corrected energy estimate，差值初值为零从而差值恒为零。",
+              "evidence": "PDF 第 6 页 Theorem 2.1；第 114 页 Appendix 中最终能量估计和结论。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检查摘要、引言、迭代与附录证明、致谢和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "PDF 第 1--117 页全文，重点核查第 114--117 页致谢和作者信息及全文 AI 关键词上下文。",
+        "priorityScore": 82,
+        "priorityTier": "high",
+        "priorityReason": "针对退化临界点给出 Prandtl 方程 Sobolev 局部适定性新迭代机制。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

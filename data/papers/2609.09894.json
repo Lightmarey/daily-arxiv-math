@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09894",
+  "slug": "2609.09894",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09894:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09894",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Positive Solutions for an Indefinite-Weight Minkowski Mean Curvature Neumann Problem: Multiplicity and Asymptotic Behaviour",
+    "authors": [
+      "Ricardo Ziegele"
+    ],
+    "abstract": "We study the Neumann boundary value problem $$ -\\operatorname{div}\\left(\\frac{\\nabla u}{\\sqrt{1-|\\nabla u|^2}}\\right) = λa(x)g(u) \\quad \\text{in } Ω, \\qquad \\frac{\\nabla u}{\\sqrt{1-|\\nabla u|^2}}\\cdot \\mathbf n = 0 \\quad \\text{on } \\partialΩ, $$ where $Ω\\subset \\mathbb R^N$ is a bounded convex domain, $a\\in L^\\infty(Ω)$ is an indefinite weight with $\\int_Ωa < 0$, and $g$ is a nonlinearity. Under suitable assumptions on $g$, we prove the existence of two positive solutions for sufficiently large $λ>0$, using Szulkin's theory for nonsmooth functionals: a global minimizer $u_λ^{(l)}$ with negative energy, and a mountain-pass critical point $u_λ^{(s)}$ with positive energy. Furthermore, we study the asymptotic behaviour of both solutions as $λ\\to +\\infty$ in the model case $g(u) = |u|^{p-2} u$. We show that the mountain-pass energy level decays at the explicit rate $c_λ= O(λ^{-2/(p-2)})$, and that $u_λ^{(s)} \\to 0$ in $C(\\overlineΩ)$; moreover, we prove that $u_λ^{(l)} \\to u_\\infty$ uniformly, where $u_\\infty$ solves a constrained maximization problem. The limiting profile $u_\\infty$ saturates the geometric constraint, $\\|\\nabla u_\\infty\\|_{L^\\infty(Ω)}=1$, and on every connected open set where the gradient constraint is inactive and $a\\neq 0$, the function $u_\\infty$ is constant.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09894",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09894",
+    "submittedAt": "2026-09-09T08:50:03Z",
+    "updatedAt": "2026-09-09T08:50:03Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "分析结果",
+    "workSummary": "论文研究有符号权重 a 的 Minkowski 平均曲率 Neumann 问题，在凸有界域、平均权重为负且正权集合非空的条件下，建立大参数 $\\lambda $ 时两类正解：负能量全局极小解和正能量 mountain-pass 解。作者先在 1-Lipschitz 函数锥上用 Szulkin 非光滑变分理论得到 Palais–Smale 紧性及两种临界点，再分别分析 $\\lambda \\to \\infty $：小解一致趋于零，大解一致趋于一个梯度饱和的约束极大 profile；在梯度未饱和且 a 不为零的连通区域，极限只能呈现零或同一正平台。",
+    "techniques": [
+      "非光滑 Szulkin 变分理论",
+      "1-Lipschitz 约束锥",
+      "Palais–Smale 紧性",
+      "mountain-pass 构造",
+      "梯度约束极限分析"
+    ],
+    "breakthrough": "把不定权重和 Neumann 边界下的 Minkowski 曲率问题推进到一般凸域，既证明两支正解的存在与重数，又给出 mountain-pass 能级的显式衰减率和大解的两平台极限结构。",
+    "limitations": "存在性要求凸的 C2 有界域、a 属于 $L\\infty $ 且平均值为负、正权集合非空，并依赖 g 的增长与奇偶性假设；极限 profile 的接触集可能占满除零权集合外的区域，论文没有刻画其自由边界几何，也未给出 Neumann 情形的显式距离函数公式。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "约束泛函 $I_\\lambda $ 在 $K={u:|\\nabla u|\\le 1}$ 上满足临界点理论所需的下半连续性、紧性和 Palais–Smale 条件。",
+          "route": "将 Minkowski 梯度能量作为 K 上的扩展值凸泛函，把非光滑部分与连续扰动分离；零均值原函数引理和权重的正负区域控制常数方向，进而防止 PS 序列逃逸并得到一致收敛子列。",
+          "evidence": "PDF 第 5-9 页 Section 2 Lemmas 2.5、2.7、2.9、Theorem 2.10、Corollary 2.6。"
+        },
+        {
+          "claim": "当 $\\lambda $ 足够大时存在负能量的全局极小正解 $u_\\lambda ^(l)$。",
+          "route": "在 a>0 的小区域选取满足梯度约束的试探函数，使 $\\lambda ∫aG(u)$ 项压过梯度能量并产生负值；全局极小元由前一步的直接法取得，临界方程与强最大值论证把非平凡极小元提升为正解。",
+          "evidence": "PDF 第 10-11 页 Section 3 Theorem 3.1，equation (3.1) 及其 proof。"
+        },
+        {
+          "claim": "同一 $\\lambda $ 阈值以上还存在正能量的 mountain-pass 解 $u_\\lambda ^(s)$。",
+          "route": "零函数能量为零，而负能量极小解提供山谷；沿小范数方向用 g 的局部超线性条件建立正能垒，再用 K 上的 PS 条件和 Szulkin mountain-pass 定理取临界值，奇性假设下再用正负部分得到正解。",
+          "evidence": "PDF 第 11-13 页 Section 3 Theorem 3.2、Corollary 3.3，equations (3.3)–(3.5)。"
+        },
+        {
+          "claim": "两支解在 $\\lambda \\to \\infty $ 时分别趋于零和梯度饱和 profile，并得到平台性质。",
+          "route": "对小解用其正能量和非线性缩放估计压低一致范数；对大解用统一 Lipschitz 界提取极限，能量重标度迫使 $||\\nabla u\\infty ||\\infty =1$；在一个连通开集内若梯度严格小于 1，则极限变分的一阶条件结合 a 的符号把梯度压成零，从而函数只能是零或正常数。",
+          "evidence": "PDF 第 14-24 页 Section 4 Lemma 4.1、Propositions 4.2、4.4、4.7、Corollary 4.8；Theorem 1.1 在第 3 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 2–4、Appendix A、结论性讨论和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-30 页全文。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦变分方法，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09894:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09894",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Positive Solutions for an Indefinite-Weight Minkowski Mean Curvature Neumann Problem: Multiplicity and Asymptotic Behaviour",
+        "authors": [
+          "Ricardo Ziegele"
+        ],
+        "abstract": "We study the Neumann boundary value problem $$ -\\operatorname{div}\\left(\\frac{\\nabla u}{\\sqrt{1-|\\nabla u|^2}}\\right) = λa(x)g(u) \\quad \\text{in } Ω, \\qquad \\frac{\\nabla u}{\\sqrt{1-|\\nabla u|^2}}\\cdot \\mathbf n = 0 \\quad \\text{on } \\partialΩ, $$ where $Ω\\subset \\mathbb R^N$ is a bounded convex domain, $a\\in L^\\infty(Ω)$ is an indefinite weight with $\\int_Ωa < 0$, and $g$ is a nonlinearity. Under suitable assumptions on $g$, we prove the existence of two positive solutions for sufficiently large $λ>0$, using Szulkin's theory for nonsmooth functionals: a global minimizer $u_λ^{(l)}$ with negative energy, and a mountain-pass critical point $u_λ^{(s)}$ with positive energy. Furthermore, we study the asymptotic behaviour of both solutions as $λ\\to +\\infty$ in the model case $g(u) = |u|^{p-2} u$. We show that the mountain-pass energy level decays at the explicit rate $c_λ= O(λ^{-2/(p-2)})$, and that $u_λ^{(s)} \\to 0$ in $C(\\overlineΩ)$; moreover, we prove that $u_λ^{(l)} \\to u_\\infty$ uniformly, where $u_\\infty$ solves a constrained maximization problem. The limiting profile $u_\\infty$ saturates the geometric constraint, $\\|\\nabla u_\\infty\\|_{L^\\infty(Ω)}=1$, and on every connected open set where the gradient constraint is inactive and $a\\neq 0$, the function $u_\\infty$ is constant.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09894",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09894",
+        "submittedAt": "2026-09-09T08:50:03Z",
+        "updatedAt": "2026-09-09T08:50:03Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "分析结果",
+        "workSummary": "论文研究有符号权重 a 的 Minkowski 平均曲率 Neumann 问题，在凸有界域、平均权重为负且正权集合非空的条件下，建立大参数 $\\lambda $ 时两类正解：负能量全局极小解和正能量 mountain-pass 解。作者先在 1-Lipschitz 函数锥上用 Szulkin 非光滑变分理论得到 Palais–Smale 紧性及两种临界点，再分别分析 $\\lambda \\to \\infty $：小解一致趋于零，大解一致趋于一个梯度饱和的约束极大 profile；在梯度未饱和且 a 不为零的连通区域，极限只能呈现零或同一正平台。",
+        "techniques": [
+          "非光滑 Szulkin 变分理论",
+          "1-Lipschitz 约束锥",
+          "Palais–Smale 紧性",
+          "mountain-pass 构造",
+          "梯度约束极限分析"
+        ],
+        "breakthrough": "把不定权重和 Neumann 边界下的 Minkowski 曲率问题推进到一般凸域，既证明两支正解的存在与重数，又给出 mountain-pass 能级的显式衰减率和大解的两平台极限结构。",
+        "limitations": "存在性要求凸的 C2 有界域、a 属于 $L\\infty $ 且平均值为负、正权集合非空，并依赖 g 的增长与奇偶性假设；极限 profile 的接触集可能占满除零权集合外的区域，论文没有刻画其自由边界几何，也未给出 Neumann 情形的显式距离函数公式。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "约束泛函 $I_\\lambda $ 在 $K={u:|\\nabla u|\\le 1}$ 上满足临界点理论所需的下半连续性、紧性和 Palais–Smale 条件。",
+              "route": "将 Minkowski 梯度能量作为 K 上的扩展值凸泛函，把非光滑部分与连续扰动分离；零均值原函数引理和权重的正负区域控制常数方向，进而防止 PS 序列逃逸并得到一致收敛子列。",
+              "evidence": "PDF 第 5-9 页 Section 2 Lemmas 2.5、2.7、2.9、Theorem 2.10、Corollary 2.6。"
+            },
+            {
+              "claim": "当 $\\lambda $ 足够大时存在负能量的全局极小正解 $u_\\lambda ^(l)$。",
+              "route": "在 a>0 的小区域选取满足梯度约束的试探函数，使 $\\lambda ∫aG(u)$ 项压过梯度能量并产生负值；全局极小元由前一步的直接法取得，临界方程与强最大值论证把非平凡极小元提升为正解。",
+              "evidence": "PDF 第 10-11 页 Section 3 Theorem 3.1，equation (3.1) 及其 proof。"
+            },
+            {
+              "claim": "同一 $\\lambda $ 阈值以上还存在正能量的 mountain-pass 解 $u_\\lambda ^(s)$。",
+              "route": "零函数能量为零，而负能量极小解提供山谷；沿小范数方向用 g 的局部超线性条件建立正能垒，再用 K 上的 PS 条件和 Szulkin mountain-pass 定理取临界值，奇性假设下再用正负部分得到正解。",
+              "evidence": "PDF 第 11-13 页 Section 3 Theorem 3.2、Corollary 3.3，equations (3.3)–(3.5)。"
+            },
+            {
+              "claim": "两支解在 $\\lambda \\to \\infty $ 时分别趋于零和梯度饱和 profile，并得到平台性质。",
+              "route": "对小解用其正能量和非线性缩放估计压低一致范数；对大解用统一 Lipschitz 界提取极限，能量重标度迫使 $||\\nabla u\\infty ||\\infty =1$；在一个连通开集内若梯度严格小于 1，则极限变分的一阶条件结合 a 的符号把梯度压成零，从而函数只能是零或正常数。",
+              "evidence": "PDF 第 14-24 页 Section 4 Lemma 4.1、Propositions 4.2、4.4、4.7、Corollary 4.8；Theorem 1.1 在第 3 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 2–4、Appendix A、结论性讨论和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-30 页全文。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦变分方法，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

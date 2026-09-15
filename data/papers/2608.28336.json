@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28336",
+  "slug": "2608.28336",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28336:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28336",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Hölder regularity for nonlocal equations governed by measures and non-standard growth",
+    "authors": [
+      "Luke Schleef"
+    ],
+    "abstract": "On doubling metric measure spaces, we study nonlocal operators with non-standard $(p,q)$-Orlicz growth ($1<p\\leq q<\\infty$), where the interaction kernel is given by a general, non-translation-invariant measure. Under natural assumptions on the interaction measure - namely symmetry, a suitable nonlocal Poincaré inequality, and a tail bound - we prove that every weak solution to the corresponding homogeneous nonlocal equation admits a locally Hölder continuous representative. These regularity results are new even in the Euclidean setting.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28336",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28336",
+    "submittedAt": "2026-08-28T13:46:41Z",
+    "updatedAt": "2026-08-28T13:46:41Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "非局部非标准增长方程的 Hölder 正则性",
+    "workSummary": "正文研究度量测度空间上由一般非平移不变相互作用测度控制、具有非标准 (p,q)-Orlicz 增长的非局部方程。作者先在 doubling 空间中建立非局部 Poincaré 自提升到 Sobolev–Poincaré 的积分增益，再对弱次解/超解建立 Caccioppoli 和对数估计，通过临界质量与正性展开把小球上的正性推进到更小球，最后对 u 与 -u 迭代振荡衰减，得到局部 $C^{0,\\alpha }$ 控制。",
+    "techniques": [
+      "doubling 度量空间上的非局部 Poincaré 与 Sobolev–Poincaré 自提升",
+      "截断测试函数导出的 Caccioppoli 能量估计",
+      "对数变换与尾项控制",
+      "De Giorgi 临界质量、正性展开和几何振荡迭代",
+      "对一般相互作用测度的尾部与 Orlicz 增长估计"
+    ],
+    "breakthrough": "论文把非局部正则性的 De Giorgi–Nash–Moser 链条扩展到非平移不变测度和非标准增长同时存在的框架。Theorem 2.21 给出的 Hölder 指数与范数估计只依赖 doubling、测度结构、增长条件及弱解的有界性，并由 Lemma 6.1 的振荡递推把前面各局部估计闭合。",
+    "limitations": "结论要求度量测度 doubling、相互作用测度满足正文的对称性/可积性和尾项假设，并以局部有界弱解为对象；证明依赖非局部 Poincaré 自提升，正文没有覆盖缺乏 doubling 的空间、临界增长或无界弱解的统一正则性结论。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Theorem 3.3 建立非局部 Sobolev–Poincaré 估计并产生可迭代的积分增益。",
+          "route": "作者从 doubling 覆盖和给定的非局部 Poincaré 不等式出发，用增长函数的 Young 型控制把平均振荡转换成更高可积性的能量界；这为后续截断超水平集的测度递推提供指数增益。",
+          "evidence": "PDF 第18–20页，Section 3 的 Theorem 3.3。"
+        },
+        {
+          "claim": "Lemma 4.1 给出弱超解的 Caccioppoli 能量界。",
+          "route": "对截断后的负部/正部乘以紧支撑 cutoff 测试，利用相互作用测度的对称性整理双积分，并将远场部分吸收到 tail，得到小球内截断能量由较大球的超水平集和尾项控制。",
+          "evidence": "PDF 第21–24页，Section 4 的 Lemma 4.1。"
+        },
+        {
+          "claim": "Lemma 4.3 将超解的低水平集控制转为对数估计。",
+          "route": "测试函数改用截断的对数变换，分离局部相互作用与远场尾项；对数的差分结构使远处的大值只以可控 tail 出现，从而为正性传播提供低水平集的定量约束。",
+          "evidence": "PDF 第25–30页，Section 4 的 Lemma 4.3。"
+        },
+        {
+          "claim": "Lemma 5.3 实现从临界质量到较小球正性展开。",
+          "route": "把 Caccioppoli 能量、Sobolev 积分增益和对数估计串联：若某球上的超水平集占比超过临界质量，反复缩小半径会排除大尺度的低值集，迫使更小球上出现统一正下界。",
+          "evidence": "PDF 第31–38页，Section 5 的 Lemma 5.3。"
+        },
+        {
+          "claim": "Lemma 6.1 和 Theorem 2.21 完成 Hölder 振荡衰减。",
+          "route": "对 u 与 -u 分别使用正性展开，在嵌套球上得到振荡按固定比例递减的递推；几何级数求和给出 Hölder 半范数，并结合 tail 和有界范数得到 Theorem 2.21 的局部估计。",
+          "evidence": "PDF 第36–39页，Section 6 的 Lemma 6.1 及 Proof of Theorem 2.21。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查正文、引言、参考文献、结论及文末致谢，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未发现作者将此类工具用于研究、证明、写作、代码或编辑的明示声明。",
+    "aiEvidenceSource": "本地缓存 PDF 全文第1–42页；重点核查正文末尾、Acknowledgements/致谢区域和全文关键词检索。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28336:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28336",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Hölder regularity for nonlocal equations governed by measures and non-standard growth",
+        "authors": [
+          "Luke Schleef"
+        ],
+        "abstract": "On doubling metric measure spaces, we study nonlocal operators with non-standard $(p,q)$-Orlicz growth ($1<p\\leq q<\\infty$), where the interaction kernel is given by a general, non-translation-invariant measure. Under natural assumptions on the interaction measure - namely symmetry, a suitable nonlocal Poincaré inequality, and a tail bound - we prove that every weak solution to the corresponding homogeneous nonlocal equation admits a locally Hölder continuous representative. These regularity results are new even in the Euclidean setting.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28336",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28336",
+        "submittedAt": "2026-08-28T13:46:41Z",
+        "updatedAt": "2026-08-28T13:46:41Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "非局部非标准增长方程的 Hölder 正则性",
+        "workSummary": "正文研究度量测度空间上由一般非平移不变相互作用测度控制、具有非标准 (p,q)-Orlicz 增长的非局部方程。作者先在 doubling 空间中建立非局部 Poincaré 自提升到 Sobolev–Poincaré 的积分增益，再对弱次解/超解建立 Caccioppoli 和对数估计，通过临界质量与正性展开把小球上的正性推进到更小球，最后对 u 与 -u 迭代振荡衰减，得到局部 $C^{0,\\alpha }$ 控制。",
+        "techniques": [
+          "doubling 度量空间上的非局部 Poincaré 与 Sobolev–Poincaré 自提升",
+          "截断测试函数导出的 Caccioppoli 能量估计",
+          "对数变换与尾项控制",
+          "De Giorgi 临界质量、正性展开和几何振荡迭代",
+          "对一般相互作用测度的尾部与 Orlicz 增长估计"
+        ],
+        "breakthrough": "论文把非局部正则性的 De Giorgi–Nash–Moser 链条扩展到非平移不变测度和非标准增长同时存在的框架。Theorem 2.21 给出的 Hölder 指数与范数估计只依赖 doubling、测度结构、增长条件及弱解的有界性，并由 Lemma 6.1 的振荡递推把前面各局部估计闭合。",
+        "limitations": "结论要求度量测度 doubling、相互作用测度满足正文的对称性/可积性和尾项假设，并以局部有界弱解为对象；证明依赖非局部 Poincaré 自提升，正文没有覆盖缺乏 doubling 的空间、临界增长或无界弱解的统一正则性结论。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Theorem 3.3 建立非局部 Sobolev–Poincaré 估计并产生可迭代的积分增益。",
+              "route": "作者从 doubling 覆盖和给定的非局部 Poincaré 不等式出发，用增长函数的 Young 型控制把平均振荡转换成更高可积性的能量界；这为后续截断超水平集的测度递推提供指数增益。",
+              "evidence": "PDF 第18–20页，Section 3 的 Theorem 3.3。"
+            },
+            {
+              "claim": "Lemma 4.1 给出弱超解的 Caccioppoli 能量界。",
+              "route": "对截断后的负部/正部乘以紧支撑 cutoff 测试，利用相互作用测度的对称性整理双积分，并将远场部分吸收到 tail，得到小球内截断能量由较大球的超水平集和尾项控制。",
+              "evidence": "PDF 第21–24页，Section 4 的 Lemma 4.1。"
+            },
+            {
+              "claim": "Lemma 4.3 将超解的低水平集控制转为对数估计。",
+              "route": "测试函数改用截断的对数变换，分离局部相互作用与远场尾项；对数的差分结构使远处的大值只以可控 tail 出现，从而为正性传播提供低水平集的定量约束。",
+              "evidence": "PDF 第25–30页，Section 4 的 Lemma 4.3。"
+            },
+            {
+              "claim": "Lemma 5.3 实现从临界质量到较小球正性展开。",
+              "route": "把 Caccioppoli 能量、Sobolev 积分增益和对数估计串联：若某球上的超水平集占比超过临界质量，反复缩小半径会排除大尺度的低值集，迫使更小球上出现统一正下界。",
+              "evidence": "PDF 第31–38页，Section 5 的 Lemma 5.3。"
+            },
+            {
+              "claim": "Lemma 6.1 和 Theorem 2.21 完成 Hölder 振荡衰减。",
+              "route": "对 u 与 -u 分别使用正性展开，在嵌套球上得到振荡按固定比例递减的递推；几何级数求和给出 Hölder 半范数，并结合 tail 和有界范数得到 Theorem 2.21 的局部估计。",
+              "evidence": "PDF 第36–39页，Section 6 的 Lemma 6.1 及 Proof of Theorem 2.21。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查正文、引言、参考文献、结论及文末致谢，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未发现作者将此类工具用于研究、证明、写作、代码或编辑的明示声明。",
+        "aiEvidenceSource": "本地缓存 PDF 全文第1–42页；重点核查正文末尾、Acknowledgements/致谢区域和全文关键词检索。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

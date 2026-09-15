@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.28061",
+  "slug": "2608.28061",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.28061:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.28061",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Large-diffusion dynamics for a planar Neumann heat equation with exponential nonlinearity",
+    "authors": [
+      "Juneyoung Seo"
+    ],
+    "abstract": "We study the Neumann problem $u_t-\\varepsilonΔu=e^u-1-au\\ (a>1)$ on a smooth bounded domain $Ω\\subset\\mathbb{R}^2$. For the spatially homogeneous problem, $0$ is stable, the positive equilibrium $ξ_a$ is unstable, and solutions starting above $ξ_a$ blow up in finite time. Although finite-time blow-up persists at every diffusivity, we show that sufficiently large diffusion recovers this scalar trichotomy uniformly on every bounded $H^1$ ball, and that blow-up occurs precisely when the spatial mean crosses $ξ_a$. For initial data with $\\|u_0\\|_{H^1}\\le R$ and spatial mean at most $ξ_a-δ$, let $\\varepsilon_{\\mathrm{unif}}(R,δ)$ denote the uniform diffusion threshold above which all such solutions are global and converge to $0$. We prove $\\log \\varepsilon_{\\mathrm{unif}}(R,δ)=R^2/(8π)+O(\\log R)$ as $R\\to\\infty$. The domain-independent coefficient $1/(8π)$ arises from the sharp mean-zero Moser--Trudinger inequality. A matching lower bound is obtained from boundary-concentrating Moser profiles via a localized Kaplan argument.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2608.28061",
+    "pdfUrl": "https://arxiv.org/pdf/2608.28061",
+    "submittedAt": "2026-08-28T08:24:33Z",
+    "updatedAt": "2026-08-28T08:24:33Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "theoretical",
+    "workSummary": "论文分析二维有界光滑域上的 Neumann 方程 $u_t-\\epsilon \\Delta u=e^u-1-au$，说明大扩散如何在有界 H1 球上恢复标量方程的衰减、临界平衡和有限时爆破三分图景。正文用均值零的尖锐 Moser–Trudinger 不等式控制指数源，把方程放到快扩散时间尺度并证明梯度/均值 bootstrap；热半群谱隙随后把解推进低于不稳定平衡的点态条带。相反方向构造边界集中 Moser 剖面，并用局部 Kaplan 泛函证明即使均值低于阈值也会爆破，从而得到 $\\epsilon _unif$ 的匹配指数尺度。",
+    "techniques": [
+      "均值零 Moser–Trudinger 指数估计",
+      "Neumann 热半群谱隙与快时间 Duhamel 逼近",
+      "梯度/均值 bootstrap 与标量比较",
+      "边界局部化 Moser 剖面",
+      "Kaplan 加权泛函和 Jensen 爆破比较"
+    ],
+    "breakthrough": "论文把二维边界集中造成的最坏情形量化为 log $\\epsilon _unif(R,\\delta )=R^2/(8\\pi )+O(log$ R)，并证明大扩散在 H1 有界族上排除“均值尚未过阈值却由空间集中触发爆破”的路径；下界与上界分别来自边界 Moser 构造和快时间均质化。",
+    "limitations": "结论依赖二维有界 C2 域、Neumann 边界、凸指数反应 $e^u-1-au$ 及固定均值缺口 $\\delta >0$。作者把 Dirichlet 情形和高维临界幂反应列为开放问题；结果不声称对任意小扩散或无 H1 界的初值统一成立。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "指数非线性在 H1 有界集上可由均值和梯度统一控制。",
+          "route": "将函数分成空间均值与均值零部分，使用二维 Neumann 均值零 Moser–Trudinger 的尖锐 $2\\pi $ 系数，再通过 Holder 得到 $e^u$ 的 Lq 界，为反应项 bootstrap 提供闭合常数。",
+          "evidence": "PDF 第6–7页引理2.3–2.5证明均值零指数估计、热半群和局部 Lipschitz 性；PDF 第3页说明 $1/(8\\pi )$ 正是该不等式进入阈值的系数。"
+        },
+        {
+          "claim": "足够大扩散时，解在快时间内接近 Neumann 热流且仍存在。",
+          "route": "令 $s=\\epsilon t$，把反应项变成 $\\epsilon ^{-1}f(u)$；以梯度和均值的严格 bootstrap 界控制 Duhamel 项，若边界首次触及则改进不等式矛盾，同时用延拓准则排除快时间提前爆破。",
+          "evidence": "PDF 第10–11页引理3.2从式(3.6)推导梯度、均值和反应项界，并证明 $S_max>S$；引理3.3给出式(3.7)的热半群谱隙衰减。"
+        },
+        {
+          "claim": "解进入低于 $\\xi _a$ 的点态条带后全局衰减并得到上界。",
+          "route": "选择热均质化时间 $S_{R,\\delta }$，将 Duhamel 误差和热半群误差各压到 $\\delta /4$，得到点态上下条带；再用标量反应的区间不变性和比较原理维持条带，排除临界以上均值并证明指数趋零。",
+          "evidence": "PDF 第12–13页命题3.4给出式(3.10)–(3.11)的点态条带，随后引理3.5和定理3.6完成全局存在与指数收敛。"
+        },
+        {
+          "claim": "边界集中初值在小扩散下必然有限时爆破。",
+          "route": "在 Fermi 坐标中构造支撑于边界半球的非负权 $\\phi \\rho $，满足 $\\Delta \\phi \\rho \\ge -\\kappa \\rho ^{-2}\\phi \\rho $；对 $J(t)=∫u\\phi \\rho $ 用 Jensen 把指数项下界为 $e^J$，再与 Kaplan 标量 ODE 比较。",
+          "evidence": "PDF 第20–21页引理5.2给出局部化权的 Neumann 边界和 Laplace 下界；PDF 第21–22页引理5.3推导 $J'\\ge e^J-1-(a+\\Gamma )J$ 及爆破时间界。"
+        },
+        {
+          "claim": "边界 Moser 剖面产生 $\\epsilon _unif$ 的指数下界并与上界匹配。",
+          "route": "取高度 h 和浓缩尺度 L 的边界对数剖面，使 H1 范数为 R、均值仍低于 $\\xi _a-\\delta $；优化 h−2L 在 $L\\approx R^{2}/(16\\pi )$ 处达到 $R^{2}/(8\\pi )$，再把引理5.3的爆破条件代入阈值定义。",
+          "evidence": "PDF 第22–23页引理5.4给出梯度和均值估计，定理5.6优化 $L_R、h_R$ 并得到式(5.7)；PDF 第24页用推论5.5和定理5.6证明定理1.2。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文核查摘要、正文、所有证明、结论、参考文献以及正文末尾，并搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly。命中“artificial semicircle”等是局部几何构造术语，没有作者关于 AI/LLM 用于研究或制作论文的明确声明。",
+    "aiEvidenceSource": "PDF 第1–26页逐页核查，重点复核 PDF 第24–26页结论/末尾及全部声明性文字；无作者 AI 使用披露。",
+    "priorityScore": 70,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.28061:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.28061",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Large-diffusion dynamics for a planar Neumann heat equation with exponential nonlinearity",
+        "authors": [
+          "Juneyoung Seo"
+        ],
+        "abstract": "We study the Neumann problem $u_t-\\varepsilonΔu=e^u-1-au\\ (a>1)$ on a smooth bounded domain $Ω\\subset\\mathbb{R}^2$. For the spatially homogeneous problem, $0$ is stable, the positive equilibrium $ξ_a$ is unstable, and solutions starting above $ξ_a$ blow up in finite time. Although finite-time blow-up persists at every diffusivity, we show that sufficiently large diffusion recovers this scalar trichotomy uniformly on every bounded $H^1$ ball, and that blow-up occurs precisely when the spatial mean crosses $ξ_a$. For initial data with $\\|u_0\\|_{H^1}\\le R$ and spatial mean at most $ξ_a-δ$, let $\\varepsilon_{\\mathrm{unif}}(R,δ)$ denote the uniform diffusion threshold above which all such solutions are global and converge to $0$. We prove $\\log \\varepsilon_{\\mathrm{unif}}(R,δ)=R^2/(8π)+O(\\log R)$ as $R\\to\\infty$. The domain-independent coefficient $1/(8π)$ arises from the sharp mean-zero Moser--Trudinger inequality. A matching lower bound is obtained from boundary-concentrating Moser profiles via a localized Kaplan argument.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2608.28061",
+        "pdfUrl": "https://arxiv.org/pdf/2608.28061",
+        "submittedAt": "2026-08-28T08:24:33Z",
+        "updatedAt": "2026-08-28T08:24:33Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "theoretical",
+        "workSummary": "论文分析二维有界光滑域上的 Neumann 方程 $u_t-\\epsilon \\Delta u=e^u-1-au$，说明大扩散如何在有界 H1 球上恢复标量方程的衰减、临界平衡和有限时爆破三分图景。正文用均值零的尖锐 Moser–Trudinger 不等式控制指数源，把方程放到快扩散时间尺度并证明梯度/均值 bootstrap；热半群谱隙随后把解推进低于不稳定平衡的点态条带。相反方向构造边界集中 Moser 剖面，并用局部 Kaplan 泛函证明即使均值低于阈值也会爆破，从而得到 $\\epsilon _unif$ 的匹配指数尺度。",
+        "techniques": [
+          "均值零 Moser–Trudinger 指数估计",
+          "Neumann 热半群谱隙与快时间 Duhamel 逼近",
+          "梯度/均值 bootstrap 与标量比较",
+          "边界局部化 Moser 剖面",
+          "Kaplan 加权泛函和 Jensen 爆破比较"
+        ],
+        "breakthrough": "论文把二维边界集中造成的最坏情形量化为 log $\\epsilon _unif(R,\\delta )=R^2/(8\\pi )+O(log$ R)，并证明大扩散在 H1 有界族上排除“均值尚未过阈值却由空间集中触发爆破”的路径；下界与上界分别来自边界 Moser 构造和快时间均质化。",
+        "limitations": "结论依赖二维有界 C2 域、Neumann 边界、凸指数反应 $e^u-1-au$ 及固定均值缺口 $\\delta >0$。作者把 Dirichlet 情形和高维临界幂反应列为开放问题；结果不声称对任意小扩散或无 H1 界的初值统一成立。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "指数非线性在 H1 有界集上可由均值和梯度统一控制。",
+              "route": "将函数分成空间均值与均值零部分，使用二维 Neumann 均值零 Moser–Trudinger 的尖锐 $2\\pi $ 系数，再通过 Holder 得到 $e^u$ 的 Lq 界，为反应项 bootstrap 提供闭合常数。",
+              "evidence": "PDF 第6–7页引理2.3–2.5证明均值零指数估计、热半群和局部 Lipschitz 性；PDF 第3页说明 $1/(8\\pi )$ 正是该不等式进入阈值的系数。"
+            },
+            {
+              "claim": "足够大扩散时，解在快时间内接近 Neumann 热流且仍存在。",
+              "route": "令 $s=\\epsilon t$，把反应项变成 $\\epsilon ^{-1}f(u)$；以梯度和均值的严格 bootstrap 界控制 Duhamel 项，若边界首次触及则改进不等式矛盾，同时用延拓准则排除快时间提前爆破。",
+              "evidence": "PDF 第10–11页引理3.2从式(3.6)推导梯度、均值和反应项界，并证明 $S_max>S$；引理3.3给出式(3.7)的热半群谱隙衰减。"
+            },
+            {
+              "claim": "解进入低于 $\\xi _a$ 的点态条带后全局衰减并得到上界。",
+              "route": "选择热均质化时间 $S_{R,\\delta }$，将 Duhamel 误差和热半群误差各压到 $\\delta /4$，得到点态上下条带；再用标量反应的区间不变性和比较原理维持条带，排除临界以上均值并证明指数趋零。",
+              "evidence": "PDF 第12–13页命题3.4给出式(3.10)–(3.11)的点态条带，随后引理3.5和定理3.6完成全局存在与指数收敛。"
+            },
+            {
+              "claim": "边界集中初值在小扩散下必然有限时爆破。",
+              "route": "在 Fermi 坐标中构造支撑于边界半球的非负权 $\\phi \\rho $，满足 $\\Delta \\phi \\rho \\ge -\\kappa \\rho ^{-2}\\phi \\rho $；对 $J(t)=∫u\\phi \\rho $ 用 Jensen 把指数项下界为 $e^J$，再与 Kaplan 标量 ODE 比较。",
+              "evidence": "PDF 第20–21页引理5.2给出局部化权的 Neumann 边界和 Laplace 下界；PDF 第21–22页引理5.3推导 $J'\\ge e^J-1-(a+\\Gamma )J$ 及爆破时间界。"
+            },
+            {
+              "claim": "边界 Moser 剖面产生 $\\epsilon _unif$ 的指数下界并与上界匹配。",
+              "route": "取高度 h 和浓缩尺度 L 的边界对数剖面，使 H1 范数为 R、均值仍低于 $\\xi _a-\\delta $；优化 h−2L 在 $L\\approx R^{2}/(16\\pi )$ 处达到 $R^{2}/(8\\pi )$，再把引理5.3的爆破条件代入阈值定义。",
+              "evidence": "PDF 第22–23页引理5.4给出梯度和均值估计，定理5.6优化 $L_R、h_R$ 并得到式(5.7)；PDF 第24页用推论5.5和定理5.6证明定理1.2。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文核查摘要、正文、所有证明、结论、参考文献以及正文末尾，并搜索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly。命中“artificial semicircle”等是局部几何构造术语，没有作者关于 AI/LLM 用于研究或制作论文的明确声明。",
+        "aiEvidenceSource": "PDF 第1–26页逐页核查，重点复核 PDF 第24–26页结论/末尾及全部声明性文字；无作者 AI 使用披露。",
+        "priorityScore": 70,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09959",
+  "slug": "2609.09959",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09959:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09959",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Null-controllability for some linear parabolic systems with controls acting on different parts of the domain and its boundary",
+    "authors": [
+      "Guillaume Olive"
+    ],
+    "abstract": "In this work we study the null-controllability properties of linear parabolic systems with constant coefficients in the case where several controls are acting on different distributed subdomains and/or on the boundary. We prove a Kalman rank condition in the one-dimensional case. In the case where only distributed controls are considered we also establish related results such as a Carleman estimate.",
+    "categories": [
+      "math.OC",
+      "math.AP"
+    ],
+    "primaryCategory": "math.OC",
+    "arxivUrl": "https://arxiv.org/abs/2609.09959",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09959",
+    "submittedAt": "2026-09-09T09:48:42Z",
+    "updatedAt": "2026-09-09T09:48:42Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "论文研究线性抛物系统同时具有分布控制和边界控制时的零可控性。首先在一维常系数系统中，把每个空间 Fourier/Laplacian 模态的代数控制矩阵写成 A、B、D 的迭代块，证明所有模态满足统一 Kalman rank condition 当且仅当系统 null-controllable。对仅分布控制的高维情形，作者沿 Jordan 链分组耦合分量，用不同空间子域的权函数和 Carleman 估计逐级恢复伴随变量；边界控制则通过椭圆法向迹和 Fattorini/Hautus 条件转换为相同的模态秩判据。",
+    "techniques": [
+      "Kalman rank condition",
+      "Jordan-chain decomposition",
+      "Carleman observability estimate",
+      "boundary trace duality",
+      "Fattorini–Hautus criterion"
+    ],
+    "breakthrough": "把不同内部子域和边界片段上的控制统一到同一 rank condition，并在一维给出分布/边界混合控制的充要判据，高维分布控制则获得相应 Carleman 估计。",
+    "limitations": "充要 Kalman 结论主要是一维常系数系统；高维结果要求耦合系数在子域上具有固定符号下界和几何开集，系统矩阵结构、边界正则性及控制时间条件不能任意放宽。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "一维系统零可控当且仅当所有空间模态的迭代控制矩阵达到满秩。",
+          "route": "对 Dirichlet/Laplacian 特征函数展开，时间方程变成有限维 ODE 模态；伴随系统若某模态控制观测为零，则其初始系数落入所有 $[A^q:B^qD^q]$ 的共同核。有限维唯一性把该共同核为零等价于满秩。",
+          "evidence": "PDF 第 3-6 页 Theorem 1、equations (3)–(9)，system (7)。"
+        },
+        {
+          "claim": "高维分布控制下，伴随系统中每个耦合 Jordan 链的首个非零分量可由局部观测控制。",
+          "route": "按耦合矩阵的 Jordan 链分组，选择嵌套权函数 $\\beta _j$ 使第 j 层的零阶耦合具有固定符号；对伴随方程反复应用时间加权 Carleman，低层观测经链式递推控制高层，Theorem 3 给出所有链的加权 L2 界。",
+          "evidence": "PDF 第 10-17 页 Section 2.2 Theorem 3、Lemmas 1–5，equations (34)–(40)。"
+        },
+        {
+          "claim": "伴随可观测性不等式推出仅分布控制系统的 null-controllability。",
+          "route": "将 Theorem 3 的观测量代回伴随终值问题，得到 $||\\Phi (0)||^{2}\\le C∫_\\omega |D*\\Phi |^{2}$；由 HUM/凸泛函最小化求伴随源，取其控制后终端对偶配对为零，得到控制在 L2 的存在性。",
+          "evidence": "PDF 第 14-19 页 Theorem 4、equations (41)–(45) and duality argument。"
+        },
+        {
+          "claim": "边界控制的充要条件可化为离散 Laplacian 模态上的 Hautus rank test。",
+          "route": "边界控制通过 Green 公式把伴随观测写成法向导数乘 $D*\\phi $；对每个 Laplacian eigenspace，Fattorini 条件要求 $ker(-\\lambda _kJ+A)\\cap ker$ $D*={0}$，即 $rank[-\\lambda _kJ+A:D]=n$，且该条件同时足够。",
+          "evidence": "PDF 第 18-20 页 Theorem 4、equation (42)，boundary duality discussion。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、引言、Sections 1–3、Carleman 和控制性证明、附录及参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-20 页全文。",
+    "priorityScore": 56,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于控制理论；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09959:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09959",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Null-controllability for some linear parabolic systems with controls acting on different parts of the domain and its boundary",
+        "authors": [
+          "Guillaume Olive"
+        ],
+        "abstract": "In this work we study the null-controllability properties of linear parabolic systems with constant coefficients in the case where several controls are acting on different distributed subdomains and/or on the boundary. We prove a Kalman rank condition in the one-dimensional case. In the case where only distributed controls are considered we also establish related results such as a Carleman estimate.",
+        "categories": [
+          "math.OC",
+          "math.AP"
+        ],
+        "primaryCategory": "math.OC",
+        "arxivUrl": "https://arxiv.org/abs/2609.09959",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09959",
+        "submittedAt": "2026-09-09T09:48:42Z",
+        "updatedAt": "2026-09-09T09:48:42Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "论文研究线性抛物系统同时具有分布控制和边界控制时的零可控性。首先在一维常系数系统中，把每个空间 Fourier/Laplacian 模态的代数控制矩阵写成 A、B、D 的迭代块，证明所有模态满足统一 Kalman rank condition 当且仅当系统 null-controllable。对仅分布控制的高维情形，作者沿 Jordan 链分组耦合分量，用不同空间子域的权函数和 Carleman 估计逐级恢复伴随变量；边界控制则通过椭圆法向迹和 Fattorini/Hautus 条件转换为相同的模态秩判据。",
+        "techniques": [
+          "Kalman rank condition",
+          "Jordan-chain decomposition",
+          "Carleman observability estimate",
+          "boundary trace duality",
+          "Fattorini–Hautus criterion"
+        ],
+        "breakthrough": "把不同内部子域和边界片段上的控制统一到同一 rank condition，并在一维给出分布/边界混合控制的充要判据，高维分布控制则获得相应 Carleman 估计。",
+        "limitations": "充要 Kalman 结论主要是一维常系数系统；高维结果要求耦合系数在子域上具有固定符号下界和几何开集，系统矩阵结构、边界正则性及控制时间条件不能任意放宽。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "一维系统零可控当且仅当所有空间模态的迭代控制矩阵达到满秩。",
+              "route": "对 Dirichlet/Laplacian 特征函数展开，时间方程变成有限维 ODE 模态；伴随系统若某模态控制观测为零，则其初始系数落入所有 $[A^q:B^qD^q]$ 的共同核。有限维唯一性把该共同核为零等价于满秩。",
+              "evidence": "PDF 第 3-6 页 Theorem 1、equations (3)–(9)，system (7)。"
+            },
+            {
+              "claim": "高维分布控制下，伴随系统中每个耦合 Jordan 链的首个非零分量可由局部观测控制。",
+              "route": "按耦合矩阵的 Jordan 链分组，选择嵌套权函数 $\\beta _j$ 使第 j 层的零阶耦合具有固定符号；对伴随方程反复应用时间加权 Carleman，低层观测经链式递推控制高层，Theorem 3 给出所有链的加权 L2 界。",
+              "evidence": "PDF 第 10-17 页 Section 2.2 Theorem 3、Lemmas 1–5，equations (34)–(40)。"
+            },
+            {
+              "claim": "伴随可观测性不等式推出仅分布控制系统的 null-controllability。",
+              "route": "将 Theorem 3 的观测量代回伴随终值问题，得到 $||\\Phi (0)||^{2}\\le C∫_\\omega |D*\\Phi |^{2}$；由 HUM/凸泛函最小化求伴随源，取其控制后终端对偶配对为零，得到控制在 L2 的存在性。",
+              "evidence": "PDF 第 14-19 页 Theorem 4、equations (41)–(45) and duality argument。"
+            },
+            {
+              "claim": "边界控制的充要条件可化为离散 Laplacian 模态上的 Hautus rank test。",
+              "route": "边界控制通过 Green 公式把伴随观测写成法向导数乘 $D*\\phi $；对每个 Laplacian eigenspace，Fattorini 条件要求 $ker(-\\lambda _kJ+A)\\cap ker$ $D*={0}$，即 $rank[-\\lambda _kJ+A:D]=n$，且该条件同时足够。",
+              "evidence": "PDF 第 18-20 页 Theorem 4、equation (42)，boundary duality discussion。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、引言、Sections 1–3、Carleman 和控制性证明、附录及参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-20 页全文。",
+        "priorityScore": 56,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于控制理论；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

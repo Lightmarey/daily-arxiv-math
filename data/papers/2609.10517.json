@@ -3,99 +3,155 @@
   "arxivId": "2609.10517",
   "slug": "2609.10517",
   "latest": {
+    "id": "math.AP:2026-09-10:2609.10517:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
     "arxivId": "2609.10517",
-    "metadata": {
-      "title": "An isoperimetric problem for Fourier zeros of centrally symmetric convex bodies",
-      "authors": [
-        "Javier Gómez-Serrano",
-        "Michael Levitin",
-        "Daniel Platt",
-        "Iosif Polterovich"
-      ],
-      "abstract": "Given a centrally symmetric convex body, consider the zero set of the Fourier transform of its characteristic function. We study how large the distance from this set to the origin can be when the volume of the body is fixed. A 2009 conjecture of Benguria, Levitin, and Parnovski asserts that the maximum is attained by a Euclidean ball. We disprove it in all dimensions greater than one. In the plane, every regular centrally symmetric polygon with at least twelve sides outperforms the disk, albeit by a tiny margin, and the regular dodecagon is best among them. In dimensions three and higher, no maximiser exists.",
-      "categories": [
-        "math.MG",
-        "math.AP",
-        "math.SP"
-      ],
-      "primaryCategory": "math.MG",
-      "version": 1,
-      "submittedAt": "2026-09-09T17:49:53Z",
-      "updatedAt": "2026-09-09T17:49:53Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "An isoperimetric problem for Fourier zeros of centrally symmetric convex bodies",
+    "authors": [
+      "Javier Gómez-Serrano",
+      "Michael Levitin",
+      "Daniel Platt",
+      "Iosif Polterovich"
+    ],
+    "abstract": "Given a centrally symmetric convex body, consider the zero set of the Fourier transform of its characteristic function. We study how large the distance from this set to the origin can be when the volume of the body is fixed. A 2009 conjecture of Benguria, Levitin, and Parnovski asserts that the maximum is attained by a Euclidean ball. We disprove it in all dimensions greater than one. In the plane, every regular centrally symmetric polygon with at least twelve sides outperforms the disk, albeit by a tiny margin, and the regular dodecagon is best among them. In dimensions three and higher, no maximiser exists.",
+    "categories": [
+      "math.MG",
+      "math.AP",
+      "math.SP"
+    ],
+    "primaryCategory": "math.MG",
+    "arxivUrl": "https://arxiv.org/abs/2609.10517",
+    "pdfUrl": "https://arxiv.org/pdf/2609.10517",
+    "submittedAt": "2026-09-09T17:49:53Z",
+    "updatedAt": "2026-09-09T17:49:53Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "分析结果",
+    "workSummary": "论文研究固定体积的中心对称凸体，其指示函数 Fourier 变换零点离原点的最小距离 $\\kappa $。作者证明球体在所有维数 d>1 都不是最大者$：d\\ge 3$ 用带参数的细长凸体构造使 $\\kappa $ 无界，平面则对正多边形的 Fourier-Bessel 展开做严格比较，证明十二边形以上优于圆盘并在正多边形族中 dodecagon 最优。关键技术是把对称性降到一个角向函数 $\\Phi \\rho (\\phi )$，用 Bessel 展开识别最小方向，再以解析零点夹逼和 certified numerical bounds 比较候选体的首个零点。",
+    "techniques": [
+      "Fourier–Bessel expansion",
+      "central symmetry and angular reduction",
+      "zero bracketing",
+      "convex-body scaling",
+      "certified numerical inequalities"
+    ],
+    "breakthrough": "全面否定球体在该 Fourier 零点等周问题中的最优性，给出高维无最大者和二维正十二边形族内的精确竞争结论。",
+    "limitations": "高维反例依赖特定细长参数族且说明无界/无最大，二维 polygon 比较部分使用经过认证的数值界并限于正多边形候选；未分类所有平面中心对称凸体的全局最大者。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "体积归一化和中心对称性把 Fourier 零点问题化为 $\\kappa (\\Omega )$ 的方向最小值。",
+          "route": "利用 $\\chi _{r\\Omega }$ 的 Fourier 缩放关系把体积固定化，中心对称使变换为实偶函数；定义方向零点函数并证明平衡集合至少有一个非零零点，建立后续优化对象。",
+          "evidence": "PDF 第 2-6 页 Sections 1–2 Proposition 1.1、Theorem 1.2，equations (1.1)–(2.9)。"
+        },
+        {
+          "claim": "$d\\ge 3$ 的细长凸体族使 $\\kappa /\\kappa _ball$ 严格超过球并在参数增大时无界。",
+          "route": "选取长轴与横截面尺度耦合的 balanced body，沿长轴方向把 Fourier 变换写成横截面因子的乘积；首零点由横截面 Bessel 因子控制，体积归一化后的尺度增长给出 Theorem 1.2 的下界。",
+          "evidence": "PDF 第 3-6 页 Section 1.2 Theorem 1.2、Corollary 1.3，parameter construction。"
+        },
+        {
+          "claim": "正偶多边形的 Fourier 变换可展开为角向 Bessel 级数，最小方向由边中点/顶点集合决定。",
+          "route": "将 polygon 的极坐标半径代入 Jacobi–Anger 展开并按 dihedral symmetry 收集 $cos(2nm\\phi )$ 项；Proposition 3.1 的绝对一致收敛允许逐项求导，Theorem 1.7 再用单调性把 global minimisers 限定到有限对称方向。",
+          "evidence": "PDF 第 10-16 页 Sections 3.1–3.3 Proposition 3.1、Theorem 1.7，equations (3.1)–(3.18)。"
+        },
+        {
+          "claim": "经零点夹逼和认证数值比较，正十二边形在正多边形族中优于圆盘且是候选最佳者。",
+          "route": "固定最小方向后把 Fourier 变换记为 $q_n(\\rho )$，用相邻 Bessel 零点和 remainder bound 夹住首个正零；对 $n=6$ 及 $n\\ge 6$ 分区执行 interval arithmetic，得到严格不等式和 $n=6$ 的最优比较。",
+          "evidence": "PDF 第 16-29 页 Section 4 Theorems 1.5、4.6、Appendix A certified computations，equations (4.1)–(4.19)。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "交叉方向与基础工具",
-      "progressType": "新方法/构造",
-      "workSummary": "声称否定固定体积中心对称凸体 Fourier 首零距离由球极大的猜想。",
-      "techniques": [
-        "Fourier 零点",
-        "对称多边形比较",
-        "高维凸体极值构造"
-      ],
-      "breakthrough": "平面给出优于圆盘的正多边形；正文推论 1.3 更证明高维固定体积下该量的上确界为无穷。",
-      "limitations": "平面优势很小，须核对严谨误差控制。高维不只是未达到极大值，正文给出无界性；当前已补读主结果，未逐行验证构造。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "用 ChatGPT、Claude、Gemini 建议证明策略并辅助计算。",
-      "aiEvidenceSource": "https://arxiv.org/html/2609.10517v1 — AI usage disclosure",
-      "priorityScore": 83,
-      "priorityReason": "明确凸几何谱型猜想的反例，值得检查构造与估计。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "Given a centrally symmetric convex body, consider the zero set of the Fourier transform of its characteristic function. We study how large the distance from this set to the origin can be when the volume of the body is fixed. A 2009 conjecture of Benguria, Levitin, and Parnovski asserts that the maximum is attained by a Euclidean ball. We disprove it in all dimensions greater than one. In the plane, every regular centrally symmetric polygon with at least twelve sides outperforms the disk, albeit by a tiny margin, and the regular dodecagon is best among them. In dimensions three and higher, no maximiser exists.",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者在 AI usage disclosure 中明确披露 ChatGPT Pro 5.5、Claude Opus 4.8 和 Gemini Pro 3.1 用于 development，包括 suggesting proof strategies 和 assisting with calculations，并说明数学陈述、证明和验证由作者进一步独立完成和严格核验；按扩展规则计为 explicit。",
+    "aiEvidenceSource": "PDF 第 29 页 AI usage disclosure。",
+    "priorityScore": 54,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-10",
-      "entry": {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.10517:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
         "arxivId": "2609.10517",
-        "metadata": {
-          "title": "An isoperimetric problem for Fourier zeros of centrally symmetric convex bodies",
-          "authors": [
-            "Javier Gómez-Serrano",
-            "Michael Levitin",
-            "Daniel Platt",
-            "Iosif Polterovich"
-          ],
-          "abstract": "Given a centrally symmetric convex body, consider the zero set of the Fourier transform of its characteristic function. We study how large the distance from this set to the origin can be when the volume of the body is fixed. A 2009 conjecture of Benguria, Levitin, and Parnovski asserts that the maximum is attained by a Euclidean ball. We disprove it in all dimensions greater than one. In the plane, every regular centrally symmetric polygon with at least twelve sides outperforms the disk, albeit by a tiny margin, and the regular dodecagon is best among them. In dimensions three and higher, no maximiser exists.",
-          "categories": [
-            "math.MG",
-            "math.AP",
-            "math.SP"
-          ],
-          "primaryCategory": "math.MG",
-          "version": 1,
-          "submittedAt": "2026-09-09T17:49:53Z",
-          "updatedAt": "2026-09-09T17:49:53Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "An isoperimetric problem for Fourier zeros of centrally symmetric convex bodies",
+        "authors": [
+          "Javier Gómez-Serrano",
+          "Michael Levitin",
+          "Daniel Platt",
+          "Iosif Polterovich"
+        ],
+        "abstract": "Given a centrally symmetric convex body, consider the zero set of the Fourier transform of its characteristic function. We study how large the distance from this set to the origin can be when the volume of the body is fixed. A 2009 conjecture of Benguria, Levitin, and Parnovski asserts that the maximum is attained by a Euclidean ball. We disprove it in all dimensions greater than one. In the plane, every regular centrally symmetric polygon with at least twelve sides outperforms the disk, albeit by a tiny margin, and the regular dodecagon is best among them. In dimensions three and higher, no maximiser exists.",
+        "categories": [
+          "math.MG",
+          "math.AP",
+          "math.SP"
+        ],
+        "primaryCategory": "math.MG",
+        "arxivUrl": "https://arxiv.org/abs/2609.10517",
+        "pdfUrl": "https://arxiv.org/pdf/2609.10517",
+        "submittedAt": "2026-09-09T17:49:53Z",
+        "updatedAt": "2026-09-09T17:49:53Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "分析结果",
+        "workSummary": "论文研究固定体积的中心对称凸体，其指示函数 Fourier 变换零点离原点的最小距离 $\\kappa $。作者证明球体在所有维数 d>1 都不是最大者$：d\\ge 3$ 用带参数的细长凸体构造使 $\\kappa $ 无界，平面则对正多边形的 Fourier-Bessel 展开做严格比较，证明十二边形以上优于圆盘并在正多边形族中 dodecagon 最优。关键技术是把对称性降到一个角向函数 $\\Phi \\rho (\\phi )$，用 Bessel 展开识别最小方向，再以解析零点夹逼和 certified numerical bounds 比较候选体的首个零点。",
+        "techniques": [
+          "Fourier–Bessel expansion",
+          "central symmetry and angular reduction",
+          "zero bracketing",
+          "convex-body scaling",
+          "certified numerical inequalities"
+        ],
+        "breakthrough": "全面否定球体在该 Fourier 零点等周问题中的最优性，给出高维无最大者和二维正十二边形族内的精确竞争结论。",
+        "limitations": "高维反例依赖特定细长参数族且说明无界/无最大，二维 polygon 比较部分使用经过认证的数值界并限于正多边形候选；未分类所有平面中心对称凸体的全局最大者。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "体积归一化和中心对称性把 Fourier 零点问题化为 $\\kappa (\\Omega )$ 的方向最小值。",
+              "route": "利用 $\\chi _{r\\Omega }$ 的 Fourier 缩放关系把体积固定化，中心对称使变换为实偶函数；定义方向零点函数并证明平衡集合至少有一个非零零点，建立后续优化对象。",
+              "evidence": "PDF 第 2-6 页 Sections 1–2 Proposition 1.1、Theorem 1.2，equations (1.1)–(2.9)。"
+            },
+            {
+              "claim": "$d\\ge 3$ 的细长凸体族使 $\\kappa /\\kappa _ball$ 严格超过球并在参数增大时无界。",
+              "route": "选取长轴与横截面尺度耦合的 balanced body，沿长轴方向把 Fourier 变换写成横截面因子的乘积；首零点由横截面 Bessel 因子控制，体积归一化后的尺度增长给出 Theorem 1.2 的下界。",
+              "evidence": "PDF 第 3-6 页 Section 1.2 Theorem 1.2、Corollary 1.3，parameter construction。"
+            },
+            {
+              "claim": "正偶多边形的 Fourier 变换可展开为角向 Bessel 级数，最小方向由边中点/顶点集合决定。",
+              "route": "将 polygon 的极坐标半径代入 Jacobi–Anger 展开并按 dihedral symmetry 收集 $cos(2nm\\phi )$ 项；Proposition 3.1 的绝对一致收敛允许逐项求导，Theorem 1.7 再用单调性把 global minimisers 限定到有限对称方向。",
+              "evidence": "PDF 第 10-16 页 Sections 3.1–3.3 Proposition 3.1、Theorem 1.7，equations (3.1)–(3.18)。"
+            },
+            {
+              "claim": "经零点夹逼和认证数值比较，正十二边形在正多边形族中优于圆盘且是候选最佳者。",
+              "route": "固定最小方向后把 Fourier 变换记为 $q_n(\\rho )$，用相邻 Bessel 零点和 remainder bound 夹住首个正零；对 $n=6$ 及 $n\\ge 6$ 分区执行 interval arithmetic，得到严格不等式和 $n=6$ 的最优比较。",
+              "evidence": "PDF 第 16-29 页 Section 4 Theorems 1.5、4.6、Appendix A certified computations，equations (4.1)–(4.19)。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "交叉方向与基础工具",
-          "progressType": "新方法/构造",
-          "workSummary": "声称否定固定体积中心对称凸体 Fourier 首零距离由球极大的猜想。",
-          "techniques": [
-            "Fourier 零点",
-            "对称多边形比较",
-            "高维凸体极值构造"
-          ],
-          "breakthrough": "平面给出优于圆盘的正多边形；正文推论 1.3 更证明高维固定体积下该量的上确界为无穷。",
-          "limitations": "平面优势很小，须核对严谨误差控制。高维不只是未达到极大值，正文给出无界性；当前已补读主结果，未逐行验证构造。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "用 ChatGPT、Claude、Gemini 建议证明策略并辅助计算。",
-          "aiEvidenceSource": "https://arxiv.org/html/2609.10517v1 — AI usage disclosure",
-          "priorityScore": 83,
-          "priorityReason": "明确凸几何谱型猜想的反例，值得检查构造与估计。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "Given a centrally symmetric convex body, consider the zero set of the Fourier transform of its characteristic function. We study how large the distance from this set to the origin can be when the volume of the body is fixed. A 2009 conjecture of Benguria, Levitin, and Parnovski asserts that the maximum is attained by a Euclidean ball. We disprove it in all dimensions greater than one. In the plane, every regular centrally symmetric polygon with at least twelve sides outperforms the disk, albeit by a tiny margin, and the regular dodecagon is best among them. In dimensions three and higher, no maximiser exists.",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者在 AI usage disclosure 中明确披露 ChatGPT Pro 5.5、Claude Opus 4.8 和 Gemini Pro 3.1 用于 development，包括 suggesting proof strategies 和 assisting with calculations，并说明数学陈述、证明和验证由作者进一步独立完成和严格核验；按扩展规则计为 explicit。",
+        "aiEvidenceSource": "PDF 第 29 页 AI usage disclosure。",
+        "priorityScore": 54,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

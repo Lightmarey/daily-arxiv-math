@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2608.27828",
+  "slug": "2608.27828",
+  "latest": {
+    "id": "math.AP:2026-08-31:2608.27828:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-08-31",
+    "arxivId": "2608.27828",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Scaling limit of the 3D abelian Yang--Mills Langevin dynamics",
+    "authors": [
+      "Ilya Chevyrev",
+      "Yahui Qu",
+      "Hao Shen"
+    ],
+    "abstract": "We study the continuum scaling limit of the Langevin dynamics for three-dimensional U(1) lattice Yang--Mills theory. The model is defined on the discrete 3D torus with a general class of plaquette actions that are suitably normalized, including Wilson, Manton, and Villain actions. Under the weak-coupling scaling and in the DeTurck gauge, we prove that, locally in time and in probability, the rescaled logarithmic field converges to the solution of the one-form stochastic heat equation. In particular, the limiting dynamics are universal and do not depend on the higher-order details of the plaquette action.",
+    "categories": [
+      "math.PR",
+      "math-ph",
+      "math.AP"
+    ],
+    "primaryCategory": "math.PR",
+    "arxivUrl": "https://arxiv.org/abs/2608.27828",
+    "pdfUrl": "https://arxiv.org/pdf/2608.27828",
+    "submittedAt": "2026-08-28T01:52:13Z",
+    "updatedAt": "2026-08-28T01:52:13Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "三维阿贝尔 Yang–Mills Langevin 动力学的连续标度极限",
+    "workSummary": "论文研究三维 U(1) 晶格 Yang–Mills 模型在弱耦合标度下的 Langevin 动力学。作者在 DeTurck gauge 下把紧群值连接的对数场写成离散实值 1-形式，利用 plaquette action 在零点的二阶展开识别离散随机热方程及三次余项；随后建立离散 Hölder/Schauder 空间，分别控制离散热卷积的确定性非线性项和 Gaussian 随机卷积。对余项给出高概率先验界并证明不会离开局部坐标邻域，再用离散/连续热方程的初值和随机卷积收敛完成到一形式随机热方程的局部概率收敛。",
+    "techniques": [
+      "U(1) 连接的对数坐标和 DeTurck gauge",
+      "离散外微分、余微分及有限差分 Hodge Laplacian",
+      "离散 Schauder/Hölder 空间估计",
+      "Gaussian 随机卷积的 Wick 分解和协方差奇异性估计",
+      "高概率事件上的余项先验界与退出时间控制",
+      "离散热半群到连续热半群的 mollification 逼近"
+    ],
+    "breakthrough": "Theorem 2.5 证明三维 U(1) 晶格 Langevin 动力学在局部时间、概率意义下收敛到一形式随机热方程，并且极限不依赖 plaquette action 的高阶细节，覆盖 Wilson、Manton 和满足统一局部条件的 Villain 家族。正文的关键是把强奇异三维问题拆成可控的线性随机卷积和在 $\\epsilon \\to 0$ 时消失的 remainder。",
+    "limitations": "结果限定为 abelian U(1)、三维、弱耦合和 DeTurck gauge，并在退出局部角坐标前给出局部时间收敛；初值需满足统一离散/连续粗糙范数界且相互收敛。论文没有处理非阿贝尔三维模型、全局时间、退出邻域后的动力学或四维临界情形。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Lemma 2.3 验证 Villain plaquette action 在大 $\\lambda $ 下满足统一的局部 $C^6$ 假设。",
+          "route": "把周期和中零模项分离，写成 $r_\\lambda (\\alpha )$ 的指数尾和；在固定 $|\\alpha |\\le ϱ_0$ 内对尾和及其导数作一致估计，从而保留 $h″_\\lambda (0)=1$ 和所需局部光滑界。",
+          "evidence": "PDF 第9页，Section 2 的 Lemma 2.3。"
+        },
+        {
+          "claim": "Lemma 3.1 从离散 Langevin 方程抽取 DeTurck 规范下的离散随机热方程与余项结构。",
+          "route": "对 plaquette action 在零点 Taylor 展开，二次项给出 $d^*_\\epsilon d_\\epsilon $ 的线性热算子，奇次余项经离散余微分写成 $\\epsilon ^4$ $d^*_\\epsilon (d_\\epsilon \\theta )^3$ 型非线性；这为后面的线性/余项分解提供精确方程。",
+          "evidence": "PDF 第12页，Section 3 的 Lemma 3.1。"
+        },
+        {
+          "claim": "Lemmas 4.1、5.3 和 5.4 给出非线性余项所需的离散空间确定性估计。",
+          "route": "离散 Schauder 估计先把 $d_\\epsilon \\Psi ̃^\\epsilon $ 的粗糙度转为乘积空间的尺度余量，再用离散乘积/卷积界控制确定性非线性项和 remainder 方程中的初始数据依赖，保证固定点估计中的每个 $\\epsilon $ 幂为正。",
+          "evidence": "PDF 第16页及第20–21页，Section 4 的 Lemma 4.1 与 Section 5.1 的 Lemmas 5.3–5.4。"
+        },
+        {
+          "claim": "Lemmas 5.5–5.7 把随机卷积的协方差奇异性转化为高概率控制。",
+          "route": "先证明离散协方差对称性与时间/空间尺度界，再用 Wick 分解 $X^3=:X^3:+3c^\\epsilon _tX$，将三阶 chaos 的核奇异性估计为可积的测试函数矩界；Markov 不等式由此构造事件 $\\Omega _{r,\\epsilon }$，其补集概率按 $r^{-p}$ 衰减。",
+          "evidence": "PDF 第22–24页，Section 5.2 的 Lemmas 5.5–5.7。"
+        },
+        {
+          "claim": "Proposition 5.8、Theorem 5.12 和 Proof of Theorem 2.5 闭合退出时间与连续标度极限。",
+          "route": "在 $\\Omega _{r,\\epsilon }$ 上以 remainder 的连续 Hölder 范数做 bootstrap，得到 $\\tau ̂_\\epsilon >T$ 并使 remainder 以 $\\epsilon ^{\\kappa /2}$ 消失；Lemma 5.10–5.11 分别处理离散初值热流和随机卷积收敛，最后在 ${\\tau _\\epsilon >T}$ 上合并两项并令 $\\epsilon \\to 0$。",
+          "evidence": "PDF 第27–33页，Proposition 5.8、Theorem 5.12 及 Proof of Theorem 2.5。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查引言、Sections 2–5、附录、参考文献和文末区域，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未发现作者明示将 AI/LLM 用于研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "本地缓存 PDF 全文第1–35页；重点核查 Proof of Theorem 2.5 后、参考文献区域和全文关键词检索。",
+    "priorityScore": 55,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-08-31",
+      "report": {
+        "id": "math.AP:2026-08-31:2608.27828:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-08-31",
+        "arxivId": "2608.27828",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Scaling limit of the 3D abelian Yang--Mills Langevin dynamics",
+        "authors": [
+          "Ilya Chevyrev",
+          "Yahui Qu",
+          "Hao Shen"
+        ],
+        "abstract": "We study the continuum scaling limit of the Langevin dynamics for three-dimensional U(1) lattice Yang--Mills theory. The model is defined on the discrete 3D torus with a general class of plaquette actions that are suitably normalized, including Wilson, Manton, and Villain actions. Under the weak-coupling scaling and in the DeTurck gauge, we prove that, locally in time and in probability, the rescaled logarithmic field converges to the solution of the one-form stochastic heat equation. In particular, the limiting dynamics are universal and do not depend on the higher-order details of the plaquette action.",
+        "categories": [
+          "math.PR",
+          "math-ph",
+          "math.AP"
+        ],
+        "primaryCategory": "math.PR",
+        "arxivUrl": "https://arxiv.org/abs/2608.27828",
+        "pdfUrl": "https://arxiv.org/pdf/2608.27828",
+        "submittedAt": "2026-08-28T01:52:13Z",
+        "updatedAt": "2026-08-28T01:52:13Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "三维阿贝尔 Yang–Mills Langevin 动力学的连续标度极限",
+        "workSummary": "论文研究三维 U(1) 晶格 Yang–Mills 模型在弱耦合标度下的 Langevin 动力学。作者在 DeTurck gauge 下把紧群值连接的对数场写成离散实值 1-形式，利用 plaquette action 在零点的二阶展开识别离散随机热方程及三次余项；随后建立离散 Hölder/Schauder 空间，分别控制离散热卷积的确定性非线性项和 Gaussian 随机卷积。对余项给出高概率先验界并证明不会离开局部坐标邻域，再用离散/连续热方程的初值和随机卷积收敛完成到一形式随机热方程的局部概率收敛。",
+        "techniques": [
+          "U(1) 连接的对数坐标和 DeTurck gauge",
+          "离散外微分、余微分及有限差分 Hodge Laplacian",
+          "离散 Schauder/Hölder 空间估计",
+          "Gaussian 随机卷积的 Wick 分解和协方差奇异性估计",
+          "高概率事件上的余项先验界与退出时间控制",
+          "离散热半群到连续热半群的 mollification 逼近"
+        ],
+        "breakthrough": "Theorem 2.5 证明三维 U(1) 晶格 Langevin 动力学在局部时间、概率意义下收敛到一形式随机热方程，并且极限不依赖 plaquette action 的高阶细节，覆盖 Wilson、Manton 和满足统一局部条件的 Villain 家族。正文的关键是把强奇异三维问题拆成可控的线性随机卷积和在 $\\epsilon \\to 0$ 时消失的 remainder。",
+        "limitations": "结果限定为 abelian U(1)、三维、弱耦合和 DeTurck gauge，并在退出局部角坐标前给出局部时间收敛；初值需满足统一离散/连续粗糙范数界且相互收敛。论文没有处理非阿贝尔三维模型、全局时间、退出邻域后的动力学或四维临界情形。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Lemma 2.3 验证 Villain plaquette action 在大 $\\lambda $ 下满足统一的局部 $C^6$ 假设。",
+              "route": "把周期和中零模项分离，写成 $r_\\lambda (\\alpha )$ 的指数尾和；在固定 $|\\alpha |\\le ϱ_0$ 内对尾和及其导数作一致估计，从而保留 $h″_\\lambda (0)=1$ 和所需局部光滑界。",
+              "evidence": "PDF 第9页，Section 2 的 Lemma 2.3。"
+            },
+            {
+              "claim": "Lemma 3.1 从离散 Langevin 方程抽取 DeTurck 规范下的离散随机热方程与余项结构。",
+              "route": "对 plaquette action 在零点 Taylor 展开，二次项给出 $d^*_\\epsilon d_\\epsilon $ 的线性热算子，奇次余项经离散余微分写成 $\\epsilon ^4$ $d^*_\\epsilon (d_\\epsilon \\theta )^3$ 型非线性；这为后面的线性/余项分解提供精确方程。",
+              "evidence": "PDF 第12页，Section 3 的 Lemma 3.1。"
+            },
+            {
+              "claim": "Lemmas 4.1、5.3 和 5.4 给出非线性余项所需的离散空间确定性估计。",
+              "route": "离散 Schauder 估计先把 $d_\\epsilon \\Psi ̃^\\epsilon $ 的粗糙度转为乘积空间的尺度余量，再用离散乘积/卷积界控制确定性非线性项和 remainder 方程中的初始数据依赖，保证固定点估计中的每个 $\\epsilon $ 幂为正。",
+              "evidence": "PDF 第16页及第20–21页，Section 4 的 Lemma 4.1 与 Section 5.1 的 Lemmas 5.3–5.4。"
+            },
+            {
+              "claim": "Lemmas 5.5–5.7 把随机卷积的协方差奇异性转化为高概率控制。",
+              "route": "先证明离散协方差对称性与时间/空间尺度界，再用 Wick 分解 $X^3=:X^3:+3c^\\epsilon _tX$，将三阶 chaos 的核奇异性估计为可积的测试函数矩界；Markov 不等式由此构造事件 $\\Omega _{r,\\epsilon }$，其补集概率按 $r^{-p}$ 衰减。",
+              "evidence": "PDF 第22–24页，Section 5.2 的 Lemmas 5.5–5.7。"
+            },
+            {
+              "claim": "Proposition 5.8、Theorem 5.12 和 Proof of Theorem 2.5 闭合退出时间与连续标度极限。",
+              "route": "在 $\\Omega _{r,\\epsilon }$ 上以 remainder 的连续 Hölder 范数做 bootstrap，得到 $\\tau ̂_\\epsilon >T$ 并使 remainder 以 $\\epsilon ^{\\kappa /2}$ 消失；Lemma 5.10–5.11 分别处理离散初值热流和随机卷积收敛，最后在 ${\\tau _\\epsilon >T}$ 上合并两项并令 $\\epsilon \\to 0$。",
+              "evidence": "PDF 第27–33页，Proposition 5.8、Theorem 5.12 及 Proof of Theorem 2.5。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查引言、Sections 2–5、附录、参考文献和文末区域，并全文检索 AI、artificial intelligence、ChatGPT、LLM、language model、Claude、Gemini、Grammarly；未发现作者明示将 AI/LLM 用于研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "本地缓存 PDF 全文第1–35页；重点核查 Proof of Theorem 2.5 后、参考文献区域和全文关键词检索。",
+        "priorityScore": 55,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.09360",
+  "slug": "2609.09360",
+  "latest": {
+    "id": "math.AP:2026-09-10:2609.09360:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-10",
+    "arxivId": "2609.09360",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Breathing and moving vesicles in a geometric mechanochemical model",
+    "authors": [
+      "Alexander Meiners",
+      "Hannes Uecker"
+    ],
+    "abstract": "We consider a geometric mechanochemical model of vesicles which couples the Helfrich flow for the shape of a lipid bilayer vesicle membrane $X$ with a reaction-diffusion equations for a single ``morphogen'' $φ$ on $X$. The Helfrich flow is the $L^2$ gradient flow of the elastic bending energy $E(X)=\\int_X (H-c_0)^2 dS$ of $X$, typically supplemented by area or volume constraints, or both. The morphogen $φ$ adsorbs/desorbs at places of high/low mean curvature $H$, i.e., the kinetics of $φ$ depend on $H$, and conversely $φ$ modifies the spontaneous curvature $c_0$ on $X$. The flow is no longer gradient, and hence allows for more complicated dynamics, including time periodic orbits, e.g., ``breathing and moving'' vesicle shapes. We show how to compute bifurcation diagrams for such solution branches via numerical continuation and bifurcation methods. We mostly focus on ``planar'' vesicles (1D closed curves) but also give an outlook on 3D vesicles (2D closed membranes).",
+    "categories": [
+      "math.AP",
+      "nlin.AO"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.09360",
+    "pdfUrl": "https://arxiv.org/pdf/2609.09360",
+    "submittedAt": "2026-09-08T18:52:07Z",
+    "updatedAt": "2026-09-08T18:52:07Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "论文研究带 Helfrich 弯曲能与曲率耦合反应扩散的几何 mechanochemical vesicle 模型，重点是平面闭曲线并辅以二维球面的展望。作者推导曲线形状、形态变量和约束乘子的耦合演化，先用线性化谱和对称性识别从圆到波数 m 分支的 pitchfork/transcritical bifurcation，再以 pde2path 的 arclength continuation 跟踪稳态、相对稳态和 Hopf 产生的周期轨道；DNS 显示 breathing/moving vesicle、漂移、触发波和自交失效。全文以数值延拓和直接模拟为主，没有独立的 theorem/lemma proof chain。",
+    "techniques": [
+      "Helfrich geometric flow",
+      "reaction–diffusion coupling",
+      "equivariant bifurcation analysis",
+      "arclength continuation",
+      "pde2path/DNS"
+    ],
+    "breakthrough": "展示形态变量反馈如何把平面 vesicle 的稳态分支推进为呼吸与移动周期轨道，并给出可复现的数值延拓框架来追踪对称破缺和 Hopf 分岔。",
+    "limitations": "结论主要来自离散化、数值延拓和 DNS，周期轨道稳定性及自交后的模型失效没有被解析证明；参数区间、网格质量和对称性选择影响分支图，三维曲面只作展望，不能把数值分支当作一般存在定理。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "not_applicable",
+      "steps": []
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查摘要、模型推导、Sections 2–4、数值算法、图注、讨论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+    "aiEvidenceSource": "PDF 第 1-34 页全文。",
+    "priorityScore": 63,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-10",
+      "report": {
+        "id": "math.AP:2026-09-10:2609.09360:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-10",
+        "arxivId": "2609.09360",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Breathing and moving vesicles in a geometric mechanochemical model",
+        "authors": [
+          "Alexander Meiners",
+          "Hannes Uecker"
+        ],
+        "abstract": "We consider a geometric mechanochemical model of vesicles which couples the Helfrich flow for the shape of a lipid bilayer vesicle membrane $X$ with a reaction-diffusion equations for a single ``morphogen'' $φ$ on $X$. The Helfrich flow is the $L^2$ gradient flow of the elastic bending energy $E(X)=\\int_X (H-c_0)^2 dS$ of $X$, typically supplemented by area or volume constraints, or both. The morphogen $φ$ adsorbs/desorbs at places of high/low mean curvature $H$, i.e., the kinetics of $φ$ depend on $H$, and conversely $φ$ modifies the spontaneous curvature $c_0$ on $X$. The flow is no longer gradient, and hence allows for more complicated dynamics, including time periodic orbits, e.g., ``breathing and moving'' vesicle shapes. We show how to compute bifurcation diagrams for such solution branches via numerical continuation and bifurcation methods. We mostly focus on ``planar'' vesicles (1D closed curves) but also give an outlook on 3D vesicles (2D closed membranes).",
+        "categories": [
+          "math.AP",
+          "nlin.AO"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.09360",
+        "pdfUrl": "https://arxiv.org/pdf/2609.09360",
+        "submittedAt": "2026-09-08T18:52:07Z",
+        "updatedAt": "2026-09-08T18:52:07Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "论文研究带 Helfrich 弯曲能与曲率耦合反应扩散的几何 mechanochemical vesicle 模型，重点是平面闭曲线并辅以二维球面的展望。作者推导曲线形状、形态变量和约束乘子的耦合演化，先用线性化谱和对称性识别从圆到波数 m 分支的 pitchfork/transcritical bifurcation，再以 pde2path 的 arclength continuation 跟踪稳态、相对稳态和 Hopf 产生的周期轨道；DNS 显示 breathing/moving vesicle、漂移、触发波和自交失效。全文以数值延拓和直接模拟为主，没有独立的 theorem/lemma proof chain。",
+        "techniques": [
+          "Helfrich geometric flow",
+          "reaction–diffusion coupling",
+          "equivariant bifurcation analysis",
+          "arclength continuation",
+          "pde2path/DNS"
+        ],
+        "breakthrough": "展示形态变量反馈如何把平面 vesicle 的稳态分支推进为呼吸与移动周期轨道，并给出可复现的数值延拓框架来追踪对称破缺和 Hopf 分岔。",
+        "limitations": "结论主要来自离散化、数值延拓和 DNS，周期轨道稳定性及自交后的模型失效没有被解析证明；参数区间、网格质量和对称性选择影响分支图，三维曲面只作展望，不能把数值分支当作一般存在定理。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "not_applicable",
+          "steps": []
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查摘要、模型推导、Sections 2–4、数值算法、图注、讨论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+        "aiEvidenceSource": "PDF 第 1-34 页全文。",
+        "priorityScore": 63,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

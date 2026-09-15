@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.13000",
+  "slug": "2609.13000",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.13000:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.13000",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Parity-Skeleton First-Passage Dynamics and Optimal Intervention in Two-Sided Discrete Monitoring Systems",
+    "authors": [
+      "Ye Liang"
+    ],
+    "abstract": "Two-sided threshold crossings arise in discrete monitoring systems whenever intervention is triggered by departure from an operating band. This paper develops a finite-state first-passage framework based on a biased random walk with symmetric absorbing barriers. To remove parity gaps of the raw hitting time, we analyse a parity-corrected lifetime through even- and odd-state Markov skeletons. Adjacent-row likelihood-ratio inequalities verify the monotonicity condition and establish increasing failure rate and new-better-than-used properties. These ageing properties yield log-concave survival probabilities and geometric persistence bounds. Substochastic-matrix formulas are derived for survival, hazard, mean lifetime, state-conditioned remaining useful life, and finite-horizon crossing risk. A renewal-cost criterion then converts the first-passage distribution into an optimal preventive-intervention schedule. Model parameters are obtained by matching the drift and variance of observed increments to a two-point random-walk approximation, with a rolling-window extension for nonstationary regimes. Numerical experiments compare exact calculations with Monte Carlo diagnostics, moment-matched inverse-Gaussian and Weibull benchmarks, serially correlated increments, calibration perturbations, and fixed-interval policies. A synthetic remote-patient-monitoring example illustrates how discrete physiological deviations can be mapped to transparent risk scores and personalized review schedules. The framework provides an auditable link between discrete stochastic dynamics, remaining-lifetime prediction, and condition-based intervention, while separating mathematical validation from clinical validation.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.13000",
+    "pdfUrl": "https://arxiv.org/pdf/2609.13000",
+    "submittedAt": "2026-07-11T04:29:34Z",
+    "updatedAt": "2026-07-11T04:29:34Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "奇偶骨架首达动力学与干预优化",
+    "workSummary": "论文建立双侧离散监测系统的有限状态首达框架。模型以带偏置的随机游走和对称吸收边界为核心，通过偶数与奇数奇偶骨架消除原始首达时间的奇偶间隙，证明奇偶修正寿命具有递增失效率，并用有限次幂矩阵计算生存概率、风险、RUL 和预防性干预策略。",
+    "techniques": [
+      "奇偶修正的出生死亡链",
+      "相邻行似然比与 Kijima 单调性判据",
+      "吸收链次随机矩阵",
+      "矩阵幂与 resolvent 计算",
+      "生存比率的几何包络",
+      "更新成本率与单调穿越搜索",
+      "漂移方差矩匹配校准",
+      "滚动窗口和 Monte Carlo 稳健性检验"
+    ],
+    "breakthrough": "命题 2.4 证明所有正整数边界宽度对应的奇偶修正首达寿命 $T_k$ 都具有递增失效率。其证明把偶数和奇数骨架的转移概率写成有限出生死亡链，并验证相邻行似然比严格大于 $1$；由此推得生存序列对数凹性和 NBU 性质。论文进一步把结构时间与原始遥测时间分离，给出精确次随机矩阵公式、几何持久概率上界以及基于更新成本的最优预防性干预年龄。",
+    "limitations": "数值实验全部基于合成随机过程或合成监测轨迹，不能证明真实患者上的临床安全性、诊断准确性或治疗收益。基准模型假设校准后的增量局部独立，正序列相关会显著缩短首达时间。模型针对对称双侧边界，不适用于严格单调退化；矩匹配到两点随机游走不保留完整增量分布，且 $k=\\lfloor L/\\delta\\rfloor$ 引入离散边界误差。参数不确定性、非平稳转移核、非对称或移动边界以及高维状态空间尚未纳入理论主结果。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "命题 2.4 证明奇偶修正寿命 $T_k$ 的递增失效率性质。",
+          "route": "先按边界宽度的奇偶性构造偶数骨架 $X_n$ 和奇数骨架 $Y_n$，显式写出相邻状态的转移概率。对每一对相邻暂态行验证似然比不等式（2.4）；附录 A 中代数化简表明内部行比值为 $4$，边界行比值为 $2$ 或 $6$，均严格大于 $1$。因此满足 Kijima 的一致单调性条件，吸收时间具有 IFR 性。",
+          "evidence": "第 2.1--2.2 节，公式（2.1）--（2.4），PDF 第 5--7 页；引理 2.3 与命题 2.4，PDF 第 6--8 页；附录 A 对（2.4）的逐项验证，PDF 第 33--36 页。"
+        },
+        {
+          "claim": "推论 2.5 从 IFR 推出生存序列对数凹性和 NBU 性质。",
+          "route": "令 $r_k(n)=\\overline F_k(n+1)/\\overline F_k(n)$。IFR 等价于 $r_k(n)$ 非增，因此连续生存比率的乘积给出生存序列的对数凹不等式。对任意年龄 $s$ 和增量 $t$，把条件生存概率写成从 $s$ 开始的比率乘积，再用比率单调性逐项比较到从零开始的乘积，得到 NBU 不等式。",
+          "evidence": "第 2.2 节推论 2.5 及其证明，PDF 第 7--8 页；对数凹性和 NBU 的乘积公式见推论 2.5 后的公式，PDF 第 8 页。"
+        },
+        {
+          "claim": "第 3 节的次随机矩阵公式把结构寿命和原始有符号状态的 RUL 转化为精确有限维线性代数。",
+          "route": "对偶数和奇数骨架分别取暂态矩阵 $Q_{\\mathrm{even}}$ 和 $Q_{\\mathrm{odd}}$，生存概率由初始行向量与矩阵幂作用于全一向量给出，均值由 $(I-Q)^{-1}$ 的 resolvent 给出。对任意当前有符号状态，构造暂态矩阵 $P_{\\mathrm{sgn}}$，其矩阵幂直接给出条件生存概率，求和后得到状态条件均值 RUL。矩匹配公式把观测漂移和方差映射到有效参数 $p$、$\\delta$ 和 $k$。",
+          "evidence": "第 3.1 节校准公式（3.1），PDF 第 9 页；第 3.2 节偶数和奇数骨架公式（3.2）--（3.4），PDF 第 9--10 页；有符号链条件 RUL 公式（3.5），PDF 第 10 页。"
+        },
+        {
+          "claim": "命题 4.1 和命题 4.2 将 IFR 结构转化为持久概率包络和最优干预规则。",
+          "route": "由生存比率非增性，对任意锚点年龄 $n_0$ 将之后各期比率统一以上限 $r_k(n_0)$ 替代，得到几何生存上界。随后把预防干预和越界干预的期望成本除以更新周期期望长度，得到成本率 $J(\\tau)$。比较相邻年龄的成本差，并用 IFR 把下降条件化为 hazard 与当前平均成本的单次穿越，因此最优年龄可通过一维整数搜索确定。",
+          "evidence": "第 4.1 节命题 4.1 及几何界公式，PDF 第 11--12 页；第 4.2 节成本率公式（4.1）、命题 4.2 及其证明，PDF 第 12--13 页；算法 1，PDF 第 13 页。"
+        }
+      ]
+    },
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明在准备文章期间使用 Gemini 3 进行语言润色；文章内容已由作者审阅和编辑以确保准确性。披露用途限于语言 refinement，未声明 Gemini 3 用于研究设计、数学推导、证明、代码、校对以外的编辑、翻译、排版、图表或插图。",
+    "aiEvidenceSource": "PDF 第 33 页 Declaration of generative AI use；同页相邻的 Acknowledgments、Declaration of interest statement 和 Data availability statement 也已核查。",
+    "priorityScore": 52,
+    "priorityTier": "medium",
+    "priorityReason": "正文核查显示该文围绕“奇偶骨架首达动力学与干预优化”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 52/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.13000:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.13000",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Parity-Skeleton First-Passage Dynamics and Optimal Intervention in Two-Sided Discrete Monitoring Systems",
+        "authors": [
+          "Ye Liang"
+        ],
+        "abstract": "Two-sided threshold crossings arise in discrete monitoring systems whenever intervention is triggered by departure from an operating band. This paper develops a finite-state first-passage framework based on a biased random walk with symmetric absorbing barriers. To remove parity gaps of the raw hitting time, we analyse a parity-corrected lifetime through even- and odd-state Markov skeletons. Adjacent-row likelihood-ratio inequalities verify the monotonicity condition and establish increasing failure rate and new-better-than-used properties. These ageing properties yield log-concave survival probabilities and geometric persistence bounds. Substochastic-matrix formulas are derived for survival, hazard, mean lifetime, state-conditioned remaining useful life, and finite-horizon crossing risk. A renewal-cost criterion then converts the first-passage distribution into an optimal preventive-intervention schedule. Model parameters are obtained by matching the drift and variance of observed increments to a two-point random-walk approximation, with a rolling-window extension for nonstationary regimes. Numerical experiments compare exact calculations with Monte Carlo diagnostics, moment-matched inverse-Gaussian and Weibull benchmarks, serially correlated increments, calibration perturbations, and fixed-interval policies. A synthetic remote-patient-monitoring example illustrates how discrete physiological deviations can be mapped to transparent risk scores and personalized review schedules. The framework provides an auditable link between discrete stochastic dynamics, remaining-lifetime prediction, and condition-based intervention, while separating mathematical validation from clinical validation.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.13000",
+        "pdfUrl": "https://arxiv.org/pdf/2609.13000",
+        "submittedAt": "2026-07-11T04:29:34Z",
+        "updatedAt": "2026-07-11T04:29:34Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "奇偶骨架首达动力学与干预优化",
+        "workSummary": "论文建立双侧离散监测系统的有限状态首达框架。模型以带偏置的随机游走和对称吸收边界为核心，通过偶数与奇数奇偶骨架消除原始首达时间的奇偶间隙，证明奇偶修正寿命具有递增失效率，并用有限次幂矩阵计算生存概率、风险、RUL 和预防性干预策略。",
+        "techniques": [
+          "奇偶修正的出生死亡链",
+          "相邻行似然比与 Kijima 单调性判据",
+          "吸收链次随机矩阵",
+          "矩阵幂与 resolvent 计算",
+          "生存比率的几何包络",
+          "更新成本率与单调穿越搜索",
+          "漂移方差矩匹配校准",
+          "滚动窗口和 Monte Carlo 稳健性检验"
+        ],
+        "breakthrough": "命题 2.4 证明所有正整数边界宽度对应的奇偶修正首达寿命 $T_k$ 都具有递增失效率。其证明把偶数和奇数骨架的转移概率写成有限出生死亡链，并验证相邻行似然比严格大于 $1$；由此推得生存序列对数凹性和 NBU 性质。论文进一步把结构时间与原始遥测时间分离，给出精确次随机矩阵公式、几何持久概率上界以及基于更新成本的最优预防性干预年龄。",
+        "limitations": "数值实验全部基于合成随机过程或合成监测轨迹，不能证明真实患者上的临床安全性、诊断准确性或治疗收益。基准模型假设校准后的增量局部独立，正序列相关会显著缩短首达时间。模型针对对称双侧边界，不适用于严格单调退化；矩匹配到两点随机游走不保留完整增量分布，且 $k=\\lfloor L/\\delta\\rfloor$ 引入离散边界误差。参数不确定性、非平稳转移核、非对称或移动边界以及高维状态空间尚未纳入理论主结果。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "命题 2.4 证明奇偶修正寿命 $T_k$ 的递增失效率性质。",
+              "route": "先按边界宽度的奇偶性构造偶数骨架 $X_n$ 和奇数骨架 $Y_n$，显式写出相邻状态的转移概率。对每一对相邻暂态行验证似然比不等式（2.4）；附录 A 中代数化简表明内部行比值为 $4$，边界行比值为 $2$ 或 $6$，均严格大于 $1$。因此满足 Kijima 的一致单调性条件，吸收时间具有 IFR 性。",
+              "evidence": "第 2.1--2.2 节，公式（2.1）--（2.4），PDF 第 5--7 页；引理 2.3 与命题 2.4，PDF 第 6--8 页；附录 A 对（2.4）的逐项验证，PDF 第 33--36 页。"
+            },
+            {
+              "claim": "推论 2.5 从 IFR 推出生存序列对数凹性和 NBU 性质。",
+              "route": "令 $r_k(n)=\\overline F_k(n+1)/\\overline F_k(n)$。IFR 等价于 $r_k(n)$ 非增，因此连续生存比率的乘积给出生存序列的对数凹不等式。对任意年龄 $s$ 和增量 $t$，把条件生存概率写成从 $s$ 开始的比率乘积，再用比率单调性逐项比较到从零开始的乘积，得到 NBU 不等式。",
+              "evidence": "第 2.2 节推论 2.5 及其证明，PDF 第 7--8 页；对数凹性和 NBU 的乘积公式见推论 2.5 后的公式，PDF 第 8 页。"
+            },
+            {
+              "claim": "第 3 节的次随机矩阵公式把结构寿命和原始有符号状态的 RUL 转化为精确有限维线性代数。",
+              "route": "对偶数和奇数骨架分别取暂态矩阵 $Q_{\\mathrm{even}}$ 和 $Q_{\\mathrm{odd}}$，生存概率由初始行向量与矩阵幂作用于全一向量给出，均值由 $(I-Q)^{-1}$ 的 resolvent 给出。对任意当前有符号状态，构造暂态矩阵 $P_{\\mathrm{sgn}}$，其矩阵幂直接给出条件生存概率，求和后得到状态条件均值 RUL。矩匹配公式把观测漂移和方差映射到有效参数 $p$、$\\delta$ 和 $k$。",
+              "evidence": "第 3.1 节校准公式（3.1），PDF 第 9 页；第 3.2 节偶数和奇数骨架公式（3.2）--（3.4），PDF 第 9--10 页；有符号链条件 RUL 公式（3.5），PDF 第 10 页。"
+            },
+            {
+              "claim": "命题 4.1 和命题 4.2 将 IFR 结构转化为持久概率包络和最优干预规则。",
+              "route": "由生存比率非增性，对任意锚点年龄 $n_0$ 将之后各期比率统一以上限 $r_k(n_0)$ 替代，得到几何生存上界。随后把预防干预和越界干预的期望成本除以更新周期期望长度，得到成本率 $J(\\tau)$。比较相邻年龄的成本差，并用 IFR 把下降条件化为 hazard 与当前平均成本的单次穿越，因此最优年龄可通过一维整数搜索确定。",
+              "evidence": "第 4.1 节命题 4.1 及几何界公式，PDF 第 11--12 页；第 4.2 节成本率公式（4.1）、命题 4.2 及其证明，PDF 第 12--13 页；算法 1，PDF 第 13 页。"
+            }
+          ]
+        },
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明在准备文章期间使用 Gemini 3 进行语言润色；文章内容已由作者审阅和编辑以确保准确性。披露用途限于语言 refinement，未声明 Gemini 3 用于研究设计、数学推导、证明、代码、校对以外的编辑、翻译、排版、图表或插图。",
+        "aiEvidenceSource": "PDF 第 33 页 Declaration of generative AI use；同页相邻的 Acknowledgments、Declaration of interest statement 和 Data availability statement 也已核查。",
+        "priorityScore": 52,
+        "priorityTier": "medium",
+        "priorityReason": "正文核查显示该文围绕“奇偶骨架首达动力学与干预优化”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 52/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

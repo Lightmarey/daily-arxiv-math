@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.01218",
+  "slug": "2609.01218",
+  "latest": {
+    "id": "math.AP:2026-09-02:2609.01218:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
+    "arxivId": "2609.01218",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Projection-based low-rank assembly in IgA",
+    "authors": [
+      "Tom-Christian Riemer",
+      "Martin Stoll"
+    ],
+    "abstract": "Isogeometric Analysis (IgA) uses the same spline functions to represent the computational domain and to approximate the solution. This allows exact geometry descriptions, but the resulting mass and stiffness matrices are expensive to assemble and to store, especially in three dimensions. We present a projection-based low-rank approach for assembling the mass and stiffness tensors of orientation-preserving tensor-product B-spline geometries. For the mass tensor, we exploit the polynomial structure of the determinant of the Jacobian of the geometry map and represent it in reduced spline product spaces by univariate coefficient transfer operators; with exact quadrature and without truncation, the resulting low-rank tensor is an exact reformulation of the standard Galerkin mass tensor. For the stiffness tensor, we split the rational weight function into a polynomial numerator, again represented in reduced spline product spaces, and the reciprocal determinant, which is in general not a spline function and is therefore approximated by an $L^2$-projection onto a tensor-product spline space. Both constructions are carried out entirely in the tensor-train (TT) format, with the projection system solved by the alternating minimal energy (AMEn) method, so that full high-order coefficient tensors are never formed and the multidimensional integrals reduce to univariate integrals and contracted products. The method is implemented in MATLAB using GeoPDEs and the TT-Toolbox. Numerical experiments show that it is competitive with full assembly and with the interpolation-based low-rank method, and that it applies in two situations in which interpolation is problematic: a singular interpolation system and nearly singular geometries. The construction is restricted to orientation-preserving tensor-product B-spline geometries and does not cover NURBS.",
+    "categories": [
+      "math.NA",
+      "math.AP"
+    ],
+    "primaryCategory": "math.NA",
+    "arxivUrl": "https://arxiv.org/abs/2609.01218",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01218",
+    "submittedAt": "2026-09-01T13:22:02Z",
+    "updatedAt": "2026-09-01T13:22:02Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "等几何分析中的投影低秩张量组装",
+    "workSummary": "论文提出面向方向保持 tensor-product B-spline 几何的投影低秩质量与刚度张量组装方法。质量张量利用几何 Jacobian 行列式的多项式结构，通过单变量系数转移在降维 spline 乘积空间中精确表示；刚度张量把有理权分成多项式分子和倒行列式，并对后者作 L2 投影。所有步骤在 tensor-train 格式中用 AMEn 求解，数值实验比较了完整组装和插值低秩方法。",
+    "techniques": [
+      "B-spline 几何 Jacobian 多项式分解",
+      "投影到降维 spline 乘积空间",
+      "tensor-train 格式",
+      "AMEn 交替最小能量求解"
+    ],
+    "breakthrough": "论文把质量张量的低秩压缩做成标准 Galerkin 组装的精确重写，并用 L2 投影处理刚度张量中的非 spline 倒行列式，从而在近奇异几何或插值系统奇异时仍能保持可计算的低秩结构。",
+    "limitations": "方法限于方向保持 tensor-product B-spline 几何，不覆盖 NURBS；质量部分可精确，刚度部分依赖倒行列式的 L2 投影误差和 AMEn 收敛，数值优势取决于参数维度、阶数和几何条件数。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Section 2 的几何展开表明 Jacobian 行列式和刚度分子属于可分离的 spline 乘积空间。",
+          "route": "将 tensor-product B-spline 几何映射按坐标方向展开，利用行列式是 Jacobian 列的多线性多项式，把多维系数写成单变量系数的 contracted products；刚度中的 $G^{-1}det(J)$ 则分成多项式余子式与倒行列式。",
+          "evidence": "PDF 第3–10页 Section 2.1–2.2；几何 Jacobian、行列式展开和质量/刚度积分公式。"
+        },
+        {
+          "claim": "Section 3.1 的投影组装把质量张量精确转成低秩 TT 表达，无需形成完整高阶系数张量。",
+          "route": "对每个一维因子构造 coefficient transfer operator，将多维 B-spline 乘积系数映射到降阶空间；利用精确 quadrature 和 TT contraction 交换积分与收缩，得到与标准 Galerkin 质量张量相同的 contracted form。",
+          "evidence": "PDF 第11–17页 Section 3.1；质量张量公式、univariate transfer operators 和 TT 组装步骤。"
+        },
+        {
+          "claim": "Section 3.2 对刚度张量的倒行列式采用 L2 投影，并用 AMEn 在 TT 格式中求解投影系统。",
+          "route": "先对多项式分子使用与质量相同的低秩转移，再把 reciprocal determinant 作为目标函数投影到 tensor-product spline 空间；投影所得线性系统在 TT 中以 AMEn 交替最小化，最终与分子因子 contracted 得到刚度近似。",
+          "evidence": "PDF 第18–27页 Section 3.2；投影问题、AMEn 迭代和刚度 tensor-train 构造。"
+        },
+        {
+          "claim": "Section 5 的数值实验验证投影低秩组装在质量精确性、刚度误差和近奇异几何上的计算收益。",
+          "route": "在不同维度、阶数和几何参数下比较完整组装、插值低秩和投影低秩的存储与时间；质量张量比较到机器精度，刚度误差随投影阶数和 AMEn 容差下降，并展示插值系统奇异时投影方法仍可运行。",
+          "evidence": "PDF 第29–40页 Section 5 数值实验；质量/刚度误差曲线、运行时间和近奇异几何测试。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、致谢、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–49页（含致谢与 References）；缓存全文 2609.01218.txt。",
+    "priorityScore": 51,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦其他分析方向，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01218:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
+        "arxivId": "2609.01218",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Projection-based low-rank assembly in IgA",
+        "authors": [
+          "Tom-Christian Riemer",
+          "Martin Stoll"
+        ],
+        "abstract": "Isogeometric Analysis (IgA) uses the same spline functions to represent the computational domain and to approximate the solution. This allows exact geometry descriptions, but the resulting mass and stiffness matrices are expensive to assemble and to store, especially in three dimensions. We present a projection-based low-rank approach for assembling the mass and stiffness tensors of orientation-preserving tensor-product B-spline geometries. For the mass tensor, we exploit the polynomial structure of the determinant of the Jacobian of the geometry map and represent it in reduced spline product spaces by univariate coefficient transfer operators; with exact quadrature and without truncation, the resulting low-rank tensor is an exact reformulation of the standard Galerkin mass tensor. For the stiffness tensor, we split the rational weight function into a polynomial numerator, again represented in reduced spline product spaces, and the reciprocal determinant, which is in general not a spline function and is therefore approximated by an $L^2$-projection onto a tensor-product spline space. Both constructions are carried out entirely in the tensor-train (TT) format, with the projection system solved by the alternating minimal energy (AMEn) method, so that full high-order coefficient tensors are never formed and the multidimensional integrals reduce to univariate integrals and contracted products. The method is implemented in MATLAB using GeoPDEs and the TT-Toolbox. Numerical experiments show that it is competitive with full assembly and with the interpolation-based low-rank method, and that it applies in two situations in which interpolation is problematic: a singular interpolation system and nearly singular geometries. The construction is restricted to orientation-preserving tensor-product B-spline geometries and does not cover NURBS.",
+        "categories": [
+          "math.NA",
+          "math.AP"
+        ],
+        "primaryCategory": "math.NA",
+        "arxivUrl": "https://arxiv.org/abs/2609.01218",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01218",
+        "submittedAt": "2026-09-01T13:22:02Z",
+        "updatedAt": "2026-09-01T13:22:02Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "等几何分析中的投影低秩张量组装",
+        "workSummary": "论文提出面向方向保持 tensor-product B-spline 几何的投影低秩质量与刚度张量组装方法。质量张量利用几何 Jacobian 行列式的多项式结构，通过单变量系数转移在降维 spline 乘积空间中精确表示；刚度张量把有理权分成多项式分子和倒行列式，并对后者作 L2 投影。所有步骤在 tensor-train 格式中用 AMEn 求解，数值实验比较了完整组装和插值低秩方法。",
+        "techniques": [
+          "B-spline 几何 Jacobian 多项式分解",
+          "投影到降维 spline 乘积空间",
+          "tensor-train 格式",
+          "AMEn 交替最小能量求解"
+        ],
+        "breakthrough": "论文把质量张量的低秩压缩做成标准 Galerkin 组装的精确重写，并用 L2 投影处理刚度张量中的非 spline 倒行列式，从而在近奇异几何或插值系统奇异时仍能保持可计算的低秩结构。",
+        "limitations": "方法限于方向保持 tensor-product B-spline 几何，不覆盖 NURBS；质量部分可精确，刚度部分依赖倒行列式的 L2 投影误差和 AMEn 收敛，数值优势取决于参数维度、阶数和几何条件数。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Section 2 的几何展开表明 Jacobian 行列式和刚度分子属于可分离的 spline 乘积空间。",
+              "route": "将 tensor-product B-spline 几何映射按坐标方向展开，利用行列式是 Jacobian 列的多线性多项式，把多维系数写成单变量系数的 contracted products；刚度中的 $G^{-1}det(J)$ 则分成多项式余子式与倒行列式。",
+              "evidence": "PDF 第3–10页 Section 2.1–2.2；几何 Jacobian、行列式展开和质量/刚度积分公式。"
+            },
+            {
+              "claim": "Section 3.1 的投影组装把质量张量精确转成低秩 TT 表达，无需形成完整高阶系数张量。",
+              "route": "对每个一维因子构造 coefficient transfer operator，将多维 B-spline 乘积系数映射到降阶空间；利用精确 quadrature 和 TT contraction 交换积分与收缩，得到与标准 Galerkin 质量张量相同的 contracted form。",
+              "evidence": "PDF 第11–17页 Section 3.1；质量张量公式、univariate transfer operators 和 TT 组装步骤。"
+            },
+            {
+              "claim": "Section 3.2 对刚度张量的倒行列式采用 L2 投影，并用 AMEn 在 TT 格式中求解投影系统。",
+              "route": "先对多项式分子使用与质量相同的低秩转移，再把 reciprocal determinant 作为目标函数投影到 tensor-product spline 空间；投影所得线性系统在 TT 中以 AMEn 交替最小化，最终与分子因子 contracted 得到刚度近似。",
+              "evidence": "PDF 第18–27页 Section 3.2；投影问题、AMEn 迭代和刚度 tensor-train 构造。"
+            },
+            {
+              "claim": "Section 5 的数值实验验证投影低秩组装在质量精确性、刚度误差和近奇异几何上的计算收益。",
+              "route": "在不同维度、阶数和几何参数下比较完整组装、插值低秩和投影低秩的存储与时间；质量张量比较到机器精度，刚度误差随投影阶数和 AMEn 容差下降，并展示插值系统奇异时投影方法仍可运行。",
+              "evidence": "PDF 第29–40页 Section 5 数值实验；质量/刚度误差曲线、运行时间和近奇异几何测试。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、致谢、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–49页（含致谢与 References）；缓存全文 2609.01218.txt。",
+        "priorityScore": 51,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦其他分析方向，主要进展属于近似与数值分析；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
+      }
+    }
+  ]
+}

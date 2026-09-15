@@ -3,99 +3,153 @@
   "arxivId": "2609.04723",
   "slug": "2609.04723",
   "latest": {
+    "id": "math.AP:2026-09-07:2609.04723:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-07",
     "arxivId": "2609.04723",
-    "metadata": {
-      "title": "Naked Singularities beyond Spherical Symmetry: Instability of $κ$-Self-Similar Solutions via an Iteration Scheme",
-      "authors": [
-        "Xinliang An",
-        "Shengrong Wu"
-      ],
-      "abstract": "This paper provides the instability counterpart to our recent construction of nonspherically symmetric approximating $κ$-self-similar naked-singularity solutions for the Einstein--scalar field system. These singular solutions contain pervasive nonspherical borderline terms, and to prove instability the delicate renormalization procedure developed in [2] does not extend to the more singular setting considered here. To overcome these difficulties, we introduce a new iteration scheme adapted to singular backgrounds whose leading-order geometry depends on the angular variables. At each step, the nonlinear coefficients are frozen using the preceding double-null geometry, and the resulting equations are solved in a triangular order. In this way, the nonspherical borderline terms are incorporated into the approximate geometry rather than treated as perturbative errors, yielding successively sharper estimates. After sufficiently many iterations, the scheme controls the singular angular structure and produces an approximate spacetime whose difference from the exact solution satisfies the required bounds. In particular, these bounds provide an existence region large enough to carry out the instability argument. We further prove that anisotropic perturbations of the outgoing data, arbitrarily small in a scale-critical norm, lead to the formation of a trapped surface. We also formulate and verify a matter-focusing condition under which a parabolic flow argument guarantees the existence of a corresponding marginally outer trapped surface (MOTS). Together, these results establish the nonlinear instability of $κ$-self-similar naked singularities beyond spherical symmetry in the Einstein--scalar field system and introduce a framework for applications across Einstein systems.",
-      "categories": [
-        "gr-qc",
-        "math-ph",
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "gr-qc",
-      "version": 1,
-      "submittedAt": "2026-09-04T04:46:29Z",
-      "updatedAt": "2026-09-04T04:46:29Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Naked Singularities beyond Spherical Symmetry: Instability of $κ$-Self-Similar Solutions via an Iteration Scheme",
+    "authors": [
+      "Xinliang An",
+      "Shengrong Wu"
+    ],
+    "abstract": "This paper provides the instability counterpart to our recent construction of nonspherically symmetric approximating $κ$-self-similar naked-singularity solutions for the Einstein--scalar field system. These singular solutions contain pervasive nonspherical borderline terms, and to prove instability the delicate renormalization procedure developed in [2] does not extend to the more singular setting considered here. To overcome these difficulties, we introduce a new iteration scheme adapted to singular backgrounds whose leading-order geometry depends on the angular variables. At each step, the nonlinear coefficients are frozen using the preceding double-null geometry, and the resulting equations are solved in a triangular order. In this way, the nonspherical borderline terms are incorporated into the approximate geometry rather than treated as perturbative errors, yielding successively sharper estimates. After sufficiently many iterations, the scheme controls the singular angular structure and produces an approximate spacetime whose difference from the exact solution satisfies the required bounds. In particular, these bounds provide an existence region large enough to carry out the instability argument. We further prove that anisotropic perturbations of the outgoing data, arbitrarily small in a scale-critical norm, lead to the formation of a trapped surface. We also formulate and verify a matter-focusing condition under which a parabolic flow argument guarantees the existence of a corresponding marginally outer trapped surface (MOTS). Together, these results establish the nonlinear instability of $κ$-self-similar naked singularities beyond spherical symmetry in the Einstein--scalar field system and introduce a framework for applications across Einstein systems.",
+    "categories": [
+      "gr-qc",
+      "math-ph",
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "gr-qc",
+    "arxivUrl": "https://arxiv.org/abs/2609.04723",
+    "pdfUrl": "https://arxiv.org/pdf/2609.04723",
+    "submittedAt": "2026-09-04T04:46:29Z",
+    "updatedAt": "2026-09-04T04:46:29Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "稳定性",
+    "workSummary": "构造 $\\kappa -self-similar$ 裸奇点的非球对称不稳定性迭代：先在双零坐标建立背景解和边界数据范数，再控制输运、椭圆和能量误差，最后用 trapped surface 与 null comparison 识别不稳定机制。",
+    "techniques": [
+      "双零坐标",
+      "$\\kappa -self-similar$ 重标度",
+      "输运/椭圆估计",
+      "能量 bootstrap",
+      "trapped surface 比较"
+    ],
+    "breakthrough": "针对非球对称临界项建立可迭代的 renormalized 控制，证明 $\\kappa -self-similar$ 裸奇点在局部扰动下可沿特定角向数据产生不稳定演化。",
+    "limitations": "参数层级和小量关系非常严格；不稳定性结论针对构造的边界盘数据和 Einstein--scalar 场框架，不是所有自相似奇点的谱不稳定性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "双零坐标中的 $\\kappa -self-similar$ 初始数据满足一组可传播小量。",
+          "route": "在 $u=-1$ 的初始面指定度规、标量场和旋度数据，利用 Sobolev/角向范数定义 $(\\epsilon ,N)-smallness$，并由约束方程传播到特征边界。",
+          "evidence": "第 1、3 节 Theorems 1.4--1.5、Propositions 3.1--3.4（PDF 第 5--12、18--23 页）。"
+        },
+        {
+          "claim": "特征区域内的输运和椭圆变量保持层级估计。",
+          "route": "沿 incoming/outgoing null direction 对 Ricci 系数、标量导数和 curvature 分量作 transport estimates；角向椭圆估计控制每层导数，能量估计吸收边界误差。",
+          "evidence": "第 4 节 Theorem 4.1、Lemmas 4.2、4.7--4.9、Propositions 4.12--4.16（PDF 第 28--43 页）。"
+        },
+        {
+          "claim": "非球对称扰动可累积为 trapped surface 形成。",
+          "route": "将角向初始盘数据通过 null transport 推进，利用 Hawking mass/expansion 的二阶变分和 nonlinear comparison；不稳定项在迭代中超过背景收缩率。",
+          "evidence": "第 5 节 Propositions 5.1、5.3、5.8--5.9（PDF 第 44--52 页）。"
+        },
+        {
+          "claim": "null comparison 排除延拓并证明裸奇点不稳定。",
+          "route": "若假设仍可延拓，则 trapped surface 与 expansion 的符号应满足相反不等式；Proposition 5.12 的 comparison principle 产生矛盾，完成 Theorem 1.5。",
+          "evidence": "第 5 节 Proposition 5.12、Theorem 1.5（PDF 第 49--52 页）。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新方法/构造",
-      "workSummary": "证明超出球对称的 κ 自相似 Einstein–标量场裸奇点非线性不稳定：尺度临界范数任意小的各向异性扰动可形成俘获面。",
-      "techniques": [
-        "双零坐标",
-        "冻结非线性系数的迭代",
-        "角向临界项",
-        "抛物流与 MOTS"
-      ],
-      "breakthrough": "将非球对称临界项纳入近似背景几何，替代失效的重整化步骤，并建立支持不稳定性论证的存在区域。",
-      "limitations": "只覆盖所构造奇异背景及给定数据扰动类；不等价于一般宇宙监督猜想。 本条基于已检查来源的阅读分析，关键结论请回查原文。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 83,
-      "priorityReason": "奇异几何上的迭代机制可能复用，但 Einstein 系统假设与尺度估计需要细读。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "This paper provides the instability counterpart to our recent construction of nonspherically symmetric approximating $κ$-self-similar naked-singularity solutions for the Einstein--scalar field system. These singular solutions contain pervasive nonspherical borderline terms, and to prove instability the delicate renormalization procedure developed in [2] does not extend to the more singular setting considered here. To overcome these difficulties, we introduce a new iteration scheme adapted to singular backgrounds whose leading-order geometry depends on the angular variables. At each step, the nonlinear coefficients are frozen using the preceding double-null geometry, and the resulting equations are solved in a triangular order. In this way, the nonspherical borderline terms are incorporated into the approximate geometry rather than treated as perturbative errors, yielding successively sharper estimates. After sufficiently many iterations, the scheme controls the singular angular structure and produces an approximate spacetime whose difference from the exact solution satisfies the required bounds. In particular, these bounds provide an existence region large enough to carry out the instability argument. We further prove that anisotropic perturbations of the outgoing data, arbitrarily small in a scale-critical norm, lead to the formation of a trapped surface. We also formulate and verify a matter-focusing condition under which a parabolic flow argument guarantees the existence of a corresponding marginally outer trapped surface (MOTS). Together, these results establish the nonlinear instability of $κ$-self-similar naked singularities beyond spherical symmetry in the Einstein--scalar field system and introduce a framework for applications across Einstein systems.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+    "aiEvidenceSource": "已检查 PDF 第 1--52 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+    "priorityScore": 58,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-07",
-      "entry": {
+      "announcementDate": "2026-09-07",
+      "report": {
+        "id": "math.AP:2026-09-07:2609.04723:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-07",
         "arxivId": "2609.04723",
-        "metadata": {
-          "title": "Naked Singularities beyond Spherical Symmetry: Instability of $κ$-Self-Similar Solutions via an Iteration Scheme",
-          "authors": [
-            "Xinliang An",
-            "Shengrong Wu"
-          ],
-          "abstract": "This paper provides the instability counterpart to our recent construction of nonspherically symmetric approximating $κ$-self-similar naked-singularity solutions for the Einstein--scalar field system. These singular solutions contain pervasive nonspherical borderline terms, and to prove instability the delicate renormalization procedure developed in [2] does not extend to the more singular setting considered here. To overcome these difficulties, we introduce a new iteration scheme adapted to singular backgrounds whose leading-order geometry depends on the angular variables. At each step, the nonlinear coefficients are frozen using the preceding double-null geometry, and the resulting equations are solved in a triangular order. In this way, the nonspherical borderline terms are incorporated into the approximate geometry rather than treated as perturbative errors, yielding successively sharper estimates. After sufficiently many iterations, the scheme controls the singular angular structure and produces an approximate spacetime whose difference from the exact solution satisfies the required bounds. In particular, these bounds provide an existence region large enough to carry out the instability argument. We further prove that anisotropic perturbations of the outgoing data, arbitrarily small in a scale-critical norm, lead to the formation of a trapped surface. We also formulate and verify a matter-focusing condition under which a parabolic flow argument guarantees the existence of a corresponding marginally outer trapped surface (MOTS). Together, these results establish the nonlinear instability of $κ$-self-similar naked singularities beyond spherical symmetry in the Einstein--scalar field system and introduce a framework for applications across Einstein systems.",
-          "categories": [
-            "gr-qc",
-            "math-ph",
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "gr-qc",
-          "version": 1,
-          "submittedAt": "2026-09-04T04:46:29Z",
-          "updatedAt": "2026-09-04T04:46:29Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Naked Singularities beyond Spherical Symmetry: Instability of $κ$-Self-Similar Solutions via an Iteration Scheme",
+        "authors": [
+          "Xinliang An",
+          "Shengrong Wu"
+        ],
+        "abstract": "This paper provides the instability counterpart to our recent construction of nonspherically symmetric approximating $κ$-self-similar naked-singularity solutions for the Einstein--scalar field system. These singular solutions contain pervasive nonspherical borderline terms, and to prove instability the delicate renormalization procedure developed in [2] does not extend to the more singular setting considered here. To overcome these difficulties, we introduce a new iteration scheme adapted to singular backgrounds whose leading-order geometry depends on the angular variables. At each step, the nonlinear coefficients are frozen using the preceding double-null geometry, and the resulting equations are solved in a triangular order. In this way, the nonspherical borderline terms are incorporated into the approximate geometry rather than treated as perturbative errors, yielding successively sharper estimates. After sufficiently many iterations, the scheme controls the singular angular structure and produces an approximate spacetime whose difference from the exact solution satisfies the required bounds. In particular, these bounds provide an existence region large enough to carry out the instability argument. We further prove that anisotropic perturbations of the outgoing data, arbitrarily small in a scale-critical norm, lead to the formation of a trapped surface. We also formulate and verify a matter-focusing condition under which a parabolic flow argument guarantees the existence of a corresponding marginally outer trapped surface (MOTS). Together, these results establish the nonlinear instability of $κ$-self-similar naked singularities beyond spherical symmetry in the Einstein--scalar field system and introduce a framework for applications across Einstein systems.",
+        "categories": [
+          "gr-qc",
+          "math-ph",
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "gr-qc",
+        "arxivUrl": "https://arxiv.org/abs/2609.04723",
+        "pdfUrl": "https://arxiv.org/pdf/2609.04723",
+        "submittedAt": "2026-09-04T04:46:29Z",
+        "updatedAt": "2026-09-04T04:46:29Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "稳定性",
+        "workSummary": "构造 $\\kappa -self-similar$ 裸奇点的非球对称不稳定性迭代：先在双零坐标建立背景解和边界数据范数，再控制输运、椭圆和能量误差，最后用 trapped surface 与 null comparison 识别不稳定机制。",
+        "techniques": [
+          "双零坐标",
+          "$\\kappa -self-similar$ 重标度",
+          "输运/椭圆估计",
+          "能量 bootstrap",
+          "trapped surface 比较"
+        ],
+        "breakthrough": "针对非球对称临界项建立可迭代的 renormalized 控制，证明 $\\kappa -self-similar$ 裸奇点在局部扰动下可沿特定角向数据产生不稳定演化。",
+        "limitations": "参数层级和小量关系非常严格；不稳定性结论针对构造的边界盘数据和 Einstein--scalar 场框架，不是所有自相似奇点的谱不稳定性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "双零坐标中的 $\\kappa -self-similar$ 初始数据满足一组可传播小量。",
+              "route": "在 $u=-1$ 的初始面指定度规、标量场和旋度数据，利用 Sobolev/角向范数定义 $(\\epsilon ,N)-smallness$，并由约束方程传播到特征边界。",
+              "evidence": "第 1、3 节 Theorems 1.4--1.5、Propositions 3.1--3.4（PDF 第 5--12、18--23 页）。"
+            },
+            {
+              "claim": "特征区域内的输运和椭圆变量保持层级估计。",
+              "route": "沿 incoming/outgoing null direction 对 Ricci 系数、标量导数和 curvature 分量作 transport estimates；角向椭圆估计控制每层导数，能量估计吸收边界误差。",
+              "evidence": "第 4 节 Theorem 4.1、Lemmas 4.2、4.7--4.9、Propositions 4.12--4.16（PDF 第 28--43 页）。"
+            },
+            {
+              "claim": "非球对称扰动可累积为 trapped surface 形成。",
+              "route": "将角向初始盘数据通过 null transport 推进，利用 Hawking mass/expansion 的二阶变分和 nonlinear comparison；不稳定项在迭代中超过背景收缩率。",
+              "evidence": "第 5 节 Propositions 5.1、5.3、5.8--5.9（PDF 第 44--52 页）。"
+            },
+            {
+              "claim": "null comparison 排除延拓并证明裸奇点不稳定。",
+              "route": "若假设仍可延拓，则 trapped surface 与 expansion 的符号应满足相反不等式；Proposition 5.12 的 comparison principle 产生矛盾，完成 Theorem 1.5。",
+              "evidence": "第 5 节 Proposition 5.12、Theorem 1.5（PDF 第 49--52 页）。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新方法/构造",
-          "workSummary": "证明超出球对称的 κ 自相似 Einstein–标量场裸奇点非线性不稳定：尺度临界范数任意小的各向异性扰动可形成俘获面。",
-          "techniques": [
-            "双零坐标",
-            "冻结非线性系数的迭代",
-            "角向临界项",
-            "抛物流与 MOTS"
-          ],
-          "breakthrough": "将非球对称临界项纳入近似背景几何，替代失效的重整化步骤，并建立支持不稳定性论证的存在区域。",
-          "limitations": "只覆盖所构造奇异背景及给定数据扰动类；不等价于一般宇宙监督猜想。 本条基于已检查来源的阅读分析，关键结论请回查原文。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 83,
-          "priorityReason": "奇异几何上的迭代机制可能复用，但 Einstein 系统假设与尺度估计需要细读。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "This paper provides the instability counterpart to our recent construction of nonspherically symmetric approximating $κ$-self-similar naked-singularity solutions for the Einstein--scalar field system. These singular solutions contain pervasive nonspherical borderline terms, and to prove instability the delicate renormalization procedure developed in [2] does not extend to the more singular setting considered here. To overcome these difficulties, we introduce a new iteration scheme adapted to singular backgrounds whose leading-order geometry depends on the angular variables. At each step, the nonlinear coefficients are frozen using the preceding double-null geometry, and the resulting equations are solved in a triangular order. In this way, the nonspherical borderline terms are incorporated into the approximate geometry rather than treated as perturbative errors, yielding successively sharper estimates. After sufficiently many iterations, the scheme controls the singular angular structure and produces an approximate spacetime whose difference from the exact solution satisfies the required bounds. In particular, these bounds provide an existence region large enough to carry out the instability argument. We further prove that anisotropic perturbations of the outgoing data, arbitrarily small in a scale-critical norm, lead to the formation of a trapped surface. We also formulate and verify a matter-focusing condition under which a parabolic flow argument guarantees the existence of a corresponding marginally outer trapped surface (MOTS). Together, these results establish the nonlinear instability of $κ$-self-similar naked singularities beyond spherical symmetry in the Einstein--scalar field system and introduce a framework for applications across Einstein systems.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文未见作者明确说明使用 AI/LLM 进行研究、证明、代码或编辑。",
+        "aiEvidenceSource": "已检查 PDF 第 1--52 页关键词 AI、artificial intelligence、LLM、ChatGPT、GPT、Claude、language model，并检查致谢。",
+        "priorityScore": 58,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

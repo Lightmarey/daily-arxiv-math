@@ -3,93 +3,147 @@
   "arxivId": "2609.02516",
   "slug": "2609.02516",
   "latest": {
+    "id": "math.AP:2026-09-03:2609.02516:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-03",
     "arxivId": "2609.02516",
-    "metadata": {
-      "title": "Power convexity of the torsion function on horo-convex domains in hyperbolic space",
-      "authors": [
-        "Wei Zhang",
-        "Qi Zhou"
-      ],
-      "abstract": "In this paper, we study the torsion problem on bounded, smooth, strictly horo-convex domains in hyperbolic space. We prove that if the diameter of the domain is sufficiently small, then $-\\sqrt{u}$ is strictly convex, where $u$ denotes the torsion function. The main ingredients of our proof are the constant rank theorem, a boundary convexity estimate, and a deformation argument for the domain. We also show that the exponent $1/2$ is optimal, even among strictly horo-convex domains of arbitrarily small diameter.",
-      "categories": [
-        "math.AP",
-        "math.DG"
-      ],
-      "primaryCategory": "math.AP",
-      "version": 1,
-      "submittedAt": "2026-09-02T12:22:03Z",
-      "updatedAt": "2026-09-02T12:22:03Z"
+    "version": 1,
+    "entryKind": "new",
+    "title": "Power convexity of the torsion function on horo-convex domains in hyperbolic space",
+    "authors": [
+      "Wei Zhang",
+      "Qi Zhou"
+    ],
+    "abstract": "In this paper, we study the torsion problem on bounded, smooth, strictly horo-convex domains in hyperbolic space. We prove that if the diameter of the domain is sufficiently small, then $-\\sqrt{u}$ is strictly convex, where $u$ denotes the torsion function. The main ingredients of our proof are the constant rank theorem, a boundary convexity estimate, and a deformation argument for the domain. We also show that the exponent $1/2$ is optimal, even among strictly horo-convex domains of arbitrarily small diameter.",
+    "categories": [
+      "math.AP",
+      "math.DG"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.02516",
+    "pdfUrl": "https://arxiv.org/pdf/2609.02516",
+    "submittedAt": "2026-09-02T12:22:03Z",
+    "updatedAt": "2026-09-02T12:22:03Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "凸性与几何估计",
+    "workSummary": "论文研究双曲空间中小直径、光滑严格 horo-凸域上的扭转函数。令 $v=-\\sqrt u$ 并构造张量 $\\Lambda =\\nabla ^{2}v-|\\nabla v|g$，作者先在双曲球上证明 $\\Lambda $ 严格正，再用边界凸性估计和 $\\Lambda $ 的常秩定理处理一般域，最后通过保持严格 horo-凸性的曲率流将给定域连接到球，得到 v 的严格凸性并证明指数 1/2 的最优性。",
+    "techniques": [
+      "双曲空间径向扭转函数和球模型",
+      "边界凸性与 Hopf 引理",
+      "$\\Lambda $ 张量的常秩定理",
+      "保持 horo-凸性的曲率流连续法"
+    ],
+    "breakthrough": "在双曲空间严格 horo-凸域的扭转问题中，论文证明小直径条件下 $-\\sqrt u$ 严格凸，并通过欧氏反例的指数映射缩放说明 1/2 即使在任意小直径的严格 horo-凸域族中也不能提高。",
+    "limitations": "结论要求 $n\\ge 2$、域有界光滑严格 horo-凸且直径不超过 $r_0(n)=1/(2\\sqrt n)$；严格凸性依赖扭转方程和双曲几何条件，指数最优性通过特定缩放反例证明。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Proposition 3.1 证明小双曲球内的变换扭转函数 $v_B=-\\sqrt u_B$ 满足 $\\Lambda _B=\\nabla ^{2}v_B-|\\nabla v_B|g$ 严格正。",
+          "route": "利用径向方程把 $\\Lambda _B$ 的切向特征值化为 (coth $r-1)\\phi $，把径向特征值化为 $h=\\phi '-\\phi $；由 h(0)>0，假设首个零点并用(3.2)微分后的方程得到 h′>0，与首个零点的 $h'\\le 0$ 矛盾。",
+          "evidence": "PDF 第6–8页，第3节 Proposition 3.1 及证明；PDF 第6–7页式(3.1)–(3.4)，PDF 第7页关于 $\\rho _0(n)$ 的零点反证。"
+        },
+        {
+          "claim": "Proposition 4.1 和 Proposition 5.1 分别给出 $\\Lambda $ 在边界邻域的正性及在非负时的常秩性质。",
+          "route": "边界处用 Hopf 引理和严格 horo-凸性把切向 Hessian 写成 II−g 的正项，并按法向分量大小分情形得到 $\\Lambda >0$；若 $\\Lambda \\ge 0$，则取其最小秩 l 并令 $\\phi =\\sigma _{l+1}(\\Lambda )$，利用双曲协变导数恒等式证明 $\\Delta \\phi \\le C(\\phi +|\\nabla \\phi |)$，强最大值原理迫使秩处处恒定。",
+          "evidence": "PDF 第9–10页，第4节 Proposition 4.1 及式(4.1)–(4.2)；PDF 第10–18页，第5节 Proposition 5.1、式(5.1)–(5.3)及常秩计算。"
+        },
+        {
+          "claim": "Theorem 1.1 的连续法把任意满足直径条件的严格 horo-凸域上的 $\\Lambda $ 推到严格正，从而 $-\\sqrt u$ 严格凸。",
+          "route": "沿保持严格 horo-凸和小球包含关系的曲率流把初始域变形到测地球；球端由 Proposition 3.1 正，光滑收敛给出大时间内部正性，边界处由 Proposition 4.1 保持正性，Proposition 5.1 排除内部退化并将正性沿流传回初始时刻。",
+          "evidence": "PDF 第3–4页 Theorem 1.1 的定义与证明路线；PDF 第18–19页，第6节 Proof of Theorem 1.1，尤其式(6.1)、Propositions 3.1、4.1、5.1 的连续法组合。"
+        },
+        {
+          "claim": "第7节证明 Theorem 1.1 中的指数 1/2 最优：任意 $\\alpha >1/2$ 都存在任意小直径的严格 horo-凸域，使 $u^\\alpha $ 不凹。",
+          "route": "从欧氏严格凸边界域的扭转函数 U 构造 Hessian 正方向，利用指数映射 $F_\\delta $ 和重标度 $U_\\delta =\\delta ^{-2}u_\\delta ∘F_\\delta $；度量在 $\\delta \\to 0$ 时光滑趋于欧氏度量，故正方向保留，同时边界主曲率按 $\\delta ^{-1}$ 放大而直径按 $\\delta $ 缩小。",
+          "evidence": "PDF 第3页 Theorem 1.1 后的最优性陈述；PDF 第19–20页，第7节式(7.1)及 $F_\\delta 、U_\\delta $ 的缩放、曲率和直径估计。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "尖锐正则性质",
-      "workSummary": "对双曲空间中光滑严格 horo-convex 且直径足够小的域，证明扭转函数 u 的 -√u 严格凸，并证明指数 1/2 最优。",
-      "techniques": [
-        "常秩定理",
-        "边界凸性估计",
-        "区域变形"
-      ],
-      "breakthrough": "把欧氏幂凹性问题推进到双曲背景，并在任意小直径域中确认指数不可提升。",
-      "limitations": "要求严格 horo-convex、小直径和光滑边界；并未覆盖一般双曲凸域。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 65,
-      "priorityReason": "几何 PDE 的精确局部推广与最优性结果，方法清楚；区域限制决定其阅读优先级为中等。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "In this paper, we study the torsion problem on bounded, smooth, strictly horo-convex domains in hyperbolic space. We prove that if the diameter of the domain is sufficiently small, then $-\\sqrt{u}$ is strictly convex, where $u$ denotes the torsion function. The main ingredients of our proof are the constant rank theorem, a boundary convexity estimate, and a deformation argument for the domain. We also show that the exponent $1/2$ is optimal, even among strictly horo-convex domains of arbitrarily small diameter.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、致谢/参考文献以及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–21页（含 References）；缓存全文 2609.02516.txt。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-03",
-      "entry": {
+      "announcementDate": "2026-09-03",
+      "report": {
+        "id": "math.AP:2026-09-03:2609.02516:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-03",
         "arxivId": "2609.02516",
-        "metadata": {
-          "title": "Power convexity of the torsion function on horo-convex domains in hyperbolic space",
-          "authors": [
-            "Wei Zhang",
-            "Qi Zhou"
-          ],
-          "abstract": "In this paper, we study the torsion problem on bounded, smooth, strictly horo-convex domains in hyperbolic space. We prove that if the diameter of the domain is sufficiently small, then $-\\sqrt{u}$ is strictly convex, where $u$ denotes the torsion function. The main ingredients of our proof are the constant rank theorem, a boundary convexity estimate, and a deformation argument for the domain. We also show that the exponent $1/2$ is optimal, even among strictly horo-convex domains of arbitrarily small diameter.",
-          "categories": [
-            "math.AP",
-            "math.DG"
-          ],
-          "primaryCategory": "math.AP",
-          "version": 1,
-          "submittedAt": "2026-09-02T12:22:03Z",
-          "updatedAt": "2026-09-02T12:22:03Z"
+        "version": 1,
+        "entryKind": "new",
+        "title": "Power convexity of the torsion function on horo-convex domains in hyperbolic space",
+        "authors": [
+          "Wei Zhang",
+          "Qi Zhou"
+        ],
+        "abstract": "In this paper, we study the torsion problem on bounded, smooth, strictly horo-convex domains in hyperbolic space. We prove that if the diameter of the domain is sufficiently small, then $-\\sqrt{u}$ is strictly convex, where $u$ denotes the torsion function. The main ingredients of our proof are the constant rank theorem, a boundary convexity estimate, and a deformation argument for the domain. We also show that the exponent $1/2$ is optimal, even among strictly horo-convex domains of arbitrarily small diameter.",
+        "categories": [
+          "math.AP",
+          "math.DG"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.02516",
+        "pdfUrl": "https://arxiv.org/pdf/2609.02516",
+        "submittedAt": "2026-09-02T12:22:03Z",
+        "updatedAt": "2026-09-02T12:22:03Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "凸性与几何估计",
+        "workSummary": "论文研究双曲空间中小直径、光滑严格 horo-凸域上的扭转函数。令 $v=-\\sqrt u$ 并构造张量 $\\Lambda =\\nabla ^{2}v-|\\nabla v|g$，作者先在双曲球上证明 $\\Lambda $ 严格正，再用边界凸性估计和 $\\Lambda $ 的常秩定理处理一般域，最后通过保持严格 horo-凸性的曲率流将给定域连接到球，得到 v 的严格凸性并证明指数 1/2 的最优性。",
+        "techniques": [
+          "双曲空间径向扭转函数和球模型",
+          "边界凸性与 Hopf 引理",
+          "$\\Lambda $ 张量的常秩定理",
+          "保持 horo-凸性的曲率流连续法"
+        ],
+        "breakthrough": "在双曲空间严格 horo-凸域的扭转问题中，论文证明小直径条件下 $-\\sqrt u$ 严格凸，并通过欧氏反例的指数映射缩放说明 1/2 即使在任意小直径的严格 horo-凸域族中也不能提高。",
+        "limitations": "结论要求 $n\\ge 2$、域有界光滑严格 horo-凸且直径不超过 $r_0(n)=1/(2\\sqrt n)$；严格凸性依赖扭转方程和双曲几何条件，指数最优性通过特定缩放反例证明。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Proposition 3.1 证明小双曲球内的变换扭转函数 $v_B=-\\sqrt u_B$ 满足 $\\Lambda _B=\\nabla ^{2}v_B-|\\nabla v_B|g$ 严格正。",
+              "route": "利用径向方程把 $\\Lambda _B$ 的切向特征值化为 (coth $r-1)\\phi $，把径向特征值化为 $h=\\phi '-\\phi $；由 h(0)>0，假设首个零点并用(3.2)微分后的方程得到 h′>0，与首个零点的 $h'\\le 0$ 矛盾。",
+              "evidence": "PDF 第6–8页，第3节 Proposition 3.1 及证明；PDF 第6–7页式(3.1)–(3.4)，PDF 第7页关于 $\\rho _0(n)$ 的零点反证。"
+            },
+            {
+              "claim": "Proposition 4.1 和 Proposition 5.1 分别给出 $\\Lambda $ 在边界邻域的正性及在非负时的常秩性质。",
+              "route": "边界处用 Hopf 引理和严格 horo-凸性把切向 Hessian 写成 II−g 的正项，并按法向分量大小分情形得到 $\\Lambda >0$；若 $\\Lambda \\ge 0$，则取其最小秩 l 并令 $\\phi =\\sigma _{l+1}(\\Lambda )$，利用双曲协变导数恒等式证明 $\\Delta \\phi \\le C(\\phi +|\\nabla \\phi |)$，强最大值原理迫使秩处处恒定。",
+              "evidence": "PDF 第9–10页，第4节 Proposition 4.1 及式(4.1)–(4.2)；PDF 第10–18页，第5节 Proposition 5.1、式(5.1)–(5.3)及常秩计算。"
+            },
+            {
+              "claim": "Theorem 1.1 的连续法把任意满足直径条件的严格 horo-凸域上的 $\\Lambda $ 推到严格正，从而 $-\\sqrt u$ 严格凸。",
+              "route": "沿保持严格 horo-凸和小球包含关系的曲率流把初始域变形到测地球；球端由 Proposition 3.1 正，光滑收敛给出大时间内部正性，边界处由 Proposition 4.1 保持正性，Proposition 5.1 排除内部退化并将正性沿流传回初始时刻。",
+              "evidence": "PDF 第3–4页 Theorem 1.1 的定义与证明路线；PDF 第18–19页，第6节 Proof of Theorem 1.1，尤其式(6.1)、Propositions 3.1、4.1、5.1 的连续法组合。"
+            },
+            {
+              "claim": "第7节证明 Theorem 1.1 中的指数 1/2 最优：任意 $\\alpha >1/2$ 都存在任意小直径的严格 horo-凸域，使 $u^\\alpha $ 不凹。",
+              "route": "从欧氏严格凸边界域的扭转函数 U 构造 Hessian 正方向，利用指数映射 $F_\\delta $ 和重标度 $U_\\delta =\\delta ^{-2}u_\\delta ∘F_\\delta $；度量在 $\\delta \\to 0$ 时光滑趋于欧氏度量，故正方向保留，同时边界主曲率按 $\\delta ^{-1}$ 放大而直径按 $\\delta $ 缩小。",
+              "evidence": "PDF 第3页 Theorem 1.1 后的最优性陈述；PDF 第19–20页，第7节式(7.1)及 $F_\\delta 、U_\\delta $ 的缩放、曲率和直径估计。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "尖锐正则性质",
-          "workSummary": "对双曲空间中光滑严格 horo-convex 且直径足够小的域，证明扭转函数 u 的 -√u 严格凸，并证明指数 1/2 最优。",
-          "techniques": [
-            "常秩定理",
-            "边界凸性估计",
-            "区域变形"
-          ],
-          "breakthrough": "把欧氏幂凹性问题推进到双曲背景，并在任意小直径域中确认指数不可提升。",
-          "limitations": "要求严格 horo-convex、小直径和光滑边界；并未覆盖一般双曲凸域。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 65,
-          "priorityReason": "几何 PDE 的精确局部推广与最优性结果，方法清楚；区域限制决定其阅读优先级为中等。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "In this paper, we study the torsion problem on bounded, smooth, strictly horo-convex domains in hyperbolic space. We prove that if the diameter of the domain is sufficiently small, then $-\\sqrt{u}$ is strictly convex, where $u$ denotes the torsion function. The main ingredients of our proof are the constant rank theorem, a boundary convexity estimate, and a deformation argument for the domain. We also show that the exponent $1/2$ is optimal, even among strictly horo-convex domains of arbitrarily small diameter.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、致谢/参考文献以及全文中的 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–21页（含 References）；缓存全文 2609.02516.txt。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦双曲方程与守恒律，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

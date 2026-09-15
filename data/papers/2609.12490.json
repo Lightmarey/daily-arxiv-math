@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12490",
+  "slug": "2609.12490",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12490:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12490",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Internal controllability of first order quasilinear hyperbolic systems with a reduced number of controls",
+    "authors": [
+      "Fatiha Alabau-Boussouira",
+      "Jean-Michel Coron",
+      "Guillaume Olive"
+    ],
+    "abstract": "In this paper we investigate the exact controllability of $n \\times n$ first order one-dimensional quasilinear hyperbolic systems by $m<n$ internal controls that are localized in space in some part of the domain. We distinguish two situations. The first one is when the equations of the system have the same speed. In this case, we can use the method of characteristics and obtain a simple and complete characterization for linear systems. Thanks to a linear test this also provides some sufficient conditions for the local exact controllability around the trajectories of semilinear systems. However, when the speed of the equations are not anymore the same, we see that we encounter the problem of loss of derivatives if we try to control quasilinear systems with a reduced number of controls. To solve this problem, as in a prior article by J.-M. Coron and P. Lissy on a Navier-Stokes control system, we first use the notion of algebraic solvability due to M. Gromov. However, in contrast with this prior article where a standard fixed point argument could be used to treat the nonlinearities, we use here a fixed point theorem of Nash-Moser type due to M. Gromov in order to handle the problem of loss of derivatives.",
+    "categories": [
+      "math.OC",
+      "math.AP"
+    ],
+    "primaryCategory": "math.OC",
+    "arxivUrl": "https://arxiv.org/abs/2609.12490",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12490",
+    "submittedAt": "2026-09-11T06:39:47Z",
+    "updatedAt": "2026-09-11T06:39:47Z",
+    "topicId": "hyperbolic-conservation",
+    "topicLabel": "双曲方程与守恒律",
+    "progressType": "内部精确可控性",
+    "workSummary": "论文研究一维一阶拟线性双曲系统在内部控制数少于方程数时的精确可控性。对于同速线性系统，作者沿延拓特征线把问题化为带支集约束的参数化常微分方程，并给出由控制时间和 Gramian 可逆性组成的充要条件；对于半线性系统，线性化可控性通过 Banach 不动点推广。对于异速拟线性系统，作者在一个 $2\\times2$ 对角速度系统中用两个虚拟控制、代数可解性和 Gromov 型 Nash--Moser 不动点定理消除一个控制，证明零轨道附近的局部内部精确可控性。",
+    "techniques": [
+      "用延拓特征线描述周期边界下的传播，把线性双曲系统分解为相互独立的带时间支集约束的 ODE；用 resolvent 构造控制 Gramian，并通过其可逆性刻画每条特征线上的可控性。",
+      "在控制区域附近构造平滑截断，证明约束 Gramian 可在所有特征线上一致保持可逆；再沿特征线写出显式控制，将终端误差乘以 Gramian 逆并拼接回原周期区域。",
+      "对同速半线性系统在给定轨道处线性化，先以线性精确可控性提供右逆，再将非线性余项作为小扰动，使用 Banach 不动点定理获得局部精确可控性。",
+      "对异速 $2\\times2$ 拟线性系统先引入第二个虚拟控制并用延拓区域和边界可控性构造小控制；随后把 PDE 写成非线性微分算子 $D$，在非退化微分关系上显式构造一阶 infinitesimal inversion。",
+      "应用 Gromov 的 Nash--Moser 型固定点定理处理一个导数损失：局部性和归一化性质保证 Nash--Moser 产生的解能与虚拟控制解及无控制解在控制区域边界处匹配，并通过截断得到单一内部控制。"
+    ],
+    "breakthrough": "核心进展是将减少控制数的内部精确可控性推进到异速拟线性双曲系统。在线性同速情形给出完整的特征线和 Gramian 充要判据；在拟线性异速情形，条件 $\\partial f_2/\\partial y_1(0)\\ne0$ 使线性化算子可代数求逆，作者据此结合虚拟控制和 Gromov--Nash--Moser 方法克服标准固定点因导数损失失效的问题，证明一个控制可控两个方程的 $2\\times2$ 系统在零轨道附近可局部精确控制。",
+    "limitations": "拟线性主定理仅处理一维周期区域中的 $2\\times2$ 对角异速系统、一个内部控制和零轨道附近的小初末数据；需要速度非零且严格有序、耦合非退化条件 $\\partial f_2/\\partial y_1(0)\\ne0$，并满足显式控制时间下界。初末数据要求 $C^6$，而控制和所得解仅保证 $C^1$，作者指出该正则性可能不是最优且存在导数损失。对于 $n>2$，代数可解性会明显复杂，本文未处理；也未给出任意拟线性轨道、非周期边界、较少于 $n-1$ 控制或全局大数据可控性。半线性结论依赖相应线性化系统的精确可控性。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "同速线性系统的内部精确可控性等价于特征线覆盖条件和每条特征线 ODE 的支集约束可控性。",
+          "route": "沿延拓特征线 $X(t,x)$ 将 PDE 写成参数为初始位置 $x$ 的 ODE $(2.4)$，控制支集转化为时间区间约束 $(2.5)$。充分性先用 Lemma 2.6 对每条特征线的 Gramian 作一致截断，使其仍可逆，再由式 $(2.13)$ 构造 ODE 控制，并用式 $(2.14)$ 沿逆特征线拼回平滑周期控制；必要性分别选取穿过控制区之外的特征线排除时间不足，并用常值初末数据把 PDE 控制限制到每条特征线的 ODE。",
+          "evidence": "第 2.1 节 Theorem 2.2，条件 $(H1)$、$(H2)$，PDF 第 6 页；Proposition 2.3 的 Gramian 式 $(2.9)$，PDF 第 7 页；Lemma 2.6 式 $(2.11)$--$(2.12)$、Theorem 2.2 充分性证明式 $(2.13)$--$(2.14)$，PDF 第 8--9 页；必要性证明式 $(2.15)$--$(2.18)$，PDF 第 9--10 页。"
+        },
+        {
+          "claim": "带控制支集约束的 ODE Gramian 提供可检验的代数判据，并推出同速半线性系统的局部可控性。",
+          "route": "对带多个时间区间约束的线性 ODE，Proposition 2.3 用 Gramian 可逆性给出充要条件；常系数时化为 Kalman 型矩阵秩条件 $(2.10)$，变系数时由 Proposition 2.5 的某个控制时刻满秩条件保证可控。对半线性系统沿给定轨道线性化，Theorem 2.9 将线性控制产生的右逆与二阶非线性余项组合，在小邻域内用 Banach 不动点求出保持支集约束的精确控制。",
+          "evidence": "第 2.1.3 节 Propositions 2.3--2.5，式 $(2.7)$--$(2.10)$，PDF 第 7--8 页；第 2.2 节 Theorem 2.9，式 $(2.19)$--$(2.20)$，PDF 第 10--11 页。"
+        },
+        {
+          "claim": "为异速拟线性系统构造两个虚拟控制，并把控制支集压缩到严格内部。",
+          "route": "先在延拓空间区间上使用已有的全控制边界可控性结果，得到两个控制的系统；再用前向和后向无控制解、时间截断与空间截断在周期域中拼接，定义式 $(3.12)$ 的残差控制。支集和端点消失条件由式 $(3.13)$ 保证，随后在时间端点外自由演化，使控制延拓为零并获得式 $(3.5a)$ 的严格内部支集，同时保持小 $C^1$ 范数。",
+          "evidence": "第 3.1 节 Proposition 3.2，系统 $(3.8)$、延拓边界问题 $(3.10)$、拼接式 $(3.12)$--$(3.13)$，PDF 第 13--15 页；Theorem 3.1 的假设和结论 $(3.3)$--$(3.7)$，PDF 第 12--13 页。"
+        },
+        {
+          "claim": "代数可解性与 Gromov Nash--Moser 反演消除一个控制并闭合 Theorem 3.1。",
+          "route": "令 $D(y,\\Theta)=y_t+\\Lambda(y)y_x+f(y)-e_1\\Theta$，在系数 $a_{21}\\ne0$ 的开微分关系上考察其线性化。通过设置 $v=0$、$u=g_2/a_{21}$ 并按式 $(3.24)$ 定义 $\\Theta$，Proposition 3.6 构造一阶 infinitesimal inversion。对两个虚拟控制产生的扰动应用 Gromov Theorem 3.5，得到带导数损失但具有局部性和归一化性质的非线性逆；在控制区内部使用该逆，在外部与虚拟控制轨道匹配，最后按式 $(3.29)$ 和分片定义得到单一控制、目标终态及小性估计。",
+          "evidence": "第 3.2 节 Definition 3.4、Theorem 3.5，式 $(3.14)$--$(3.16)$，PDF 第 15--16 页；Proposition 3.6，式 $(3.18)$--$(3.24)$，PDF 第 17--19 页；Theorem 3.1 证明，式 $(3.25)$--$(3.29)$，PDF 第 19--20 页。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": null,
+    "aiEvidenceSource": "已核查 PDF 第 1--25 页全文，包括摘要、引言、Section 2、Section 3、附录证明、全部定理与公式、参考文献及正文末尾；检索了致谢、AI、LLM、ChatGPT、软件、代码、工具、编辑、校对、翻译、排版和图表声明。未发现作者明确披露 AI 或相关工具用于研究、证明、写作或其他列举用途。PDF 第 1 页的脚注仅说明部分作者获得 ERC 项目资助，正文末尾为参考文献，无独立致谢或 AI 声明。",
+    "priorityScore": 84,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“内部精确可控性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 84/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12490:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12490",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Internal controllability of first order quasilinear hyperbolic systems with a reduced number of controls",
+        "authors": [
+          "Fatiha Alabau-Boussouira",
+          "Jean-Michel Coron",
+          "Guillaume Olive"
+        ],
+        "abstract": "In this paper we investigate the exact controllability of $n \\times n$ first order one-dimensional quasilinear hyperbolic systems by $m<n$ internal controls that are localized in space in some part of the domain. We distinguish two situations. The first one is when the equations of the system have the same speed. In this case, we can use the method of characteristics and obtain a simple and complete characterization for linear systems. Thanks to a linear test this also provides some sufficient conditions for the local exact controllability around the trajectories of semilinear systems. However, when the speed of the equations are not anymore the same, we see that we encounter the problem of loss of derivatives if we try to control quasilinear systems with a reduced number of controls. To solve this problem, as in a prior article by J.-M. Coron and P. Lissy on a Navier-Stokes control system, we first use the notion of algebraic solvability due to M. Gromov. However, in contrast with this prior article where a standard fixed point argument could be used to treat the nonlinearities, we use here a fixed point theorem of Nash-Moser type due to M. Gromov in order to handle the problem of loss of derivatives.",
+        "categories": [
+          "math.OC",
+          "math.AP"
+        ],
+        "primaryCategory": "math.OC",
+        "arxivUrl": "https://arxiv.org/abs/2609.12490",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12490",
+        "submittedAt": "2026-09-11T06:39:47Z",
+        "updatedAt": "2026-09-11T06:39:47Z",
+        "topicId": "hyperbolic-conservation",
+        "topicLabel": "双曲方程与守恒律",
+        "progressType": "内部精确可控性",
+        "workSummary": "论文研究一维一阶拟线性双曲系统在内部控制数少于方程数时的精确可控性。对于同速线性系统，作者沿延拓特征线把问题化为带支集约束的参数化常微分方程，并给出由控制时间和 Gramian 可逆性组成的充要条件；对于半线性系统，线性化可控性通过 Banach 不动点推广。对于异速拟线性系统，作者在一个 $2\\times2$ 对角速度系统中用两个虚拟控制、代数可解性和 Gromov 型 Nash--Moser 不动点定理消除一个控制，证明零轨道附近的局部内部精确可控性。",
+        "techniques": [
+          "用延拓特征线描述周期边界下的传播，把线性双曲系统分解为相互独立的带时间支集约束的 ODE；用 resolvent 构造控制 Gramian，并通过其可逆性刻画每条特征线上的可控性。",
+          "在控制区域附近构造平滑截断，证明约束 Gramian 可在所有特征线上一致保持可逆；再沿特征线写出显式控制，将终端误差乘以 Gramian 逆并拼接回原周期区域。",
+          "对同速半线性系统在给定轨道处线性化，先以线性精确可控性提供右逆，再将非线性余项作为小扰动，使用 Banach 不动点定理获得局部精确可控性。",
+          "对异速 $2\\times2$ 拟线性系统先引入第二个虚拟控制并用延拓区域和边界可控性构造小控制；随后把 PDE 写成非线性微分算子 $D$，在非退化微分关系上显式构造一阶 infinitesimal inversion。",
+          "应用 Gromov 的 Nash--Moser 型固定点定理处理一个导数损失：局部性和归一化性质保证 Nash--Moser 产生的解能与虚拟控制解及无控制解在控制区域边界处匹配，并通过截断得到单一内部控制。"
+        ],
+        "breakthrough": "核心进展是将减少控制数的内部精确可控性推进到异速拟线性双曲系统。在线性同速情形给出完整的特征线和 Gramian 充要判据；在拟线性异速情形，条件 $\\partial f_2/\\partial y_1(0)\\ne0$ 使线性化算子可代数求逆，作者据此结合虚拟控制和 Gromov--Nash--Moser 方法克服标准固定点因导数损失失效的问题，证明一个控制可控两个方程的 $2\\times2$ 系统在零轨道附近可局部精确控制。",
+        "limitations": "拟线性主定理仅处理一维周期区域中的 $2\\times2$ 对角异速系统、一个内部控制和零轨道附近的小初末数据；需要速度非零且严格有序、耦合非退化条件 $\\partial f_2/\\partial y_1(0)\\ne0$，并满足显式控制时间下界。初末数据要求 $C^6$，而控制和所得解仅保证 $C^1$，作者指出该正则性可能不是最优且存在导数损失。对于 $n>2$，代数可解性会明显复杂，本文未处理；也未给出任意拟线性轨道、非周期边界、较少于 $n-1$ 控制或全局大数据可控性。半线性结论依赖相应线性化系统的精确可控性。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "同速线性系统的内部精确可控性等价于特征线覆盖条件和每条特征线 ODE 的支集约束可控性。",
+              "route": "沿延拓特征线 $X(t,x)$ 将 PDE 写成参数为初始位置 $x$ 的 ODE $(2.4)$，控制支集转化为时间区间约束 $(2.5)$。充分性先用 Lemma 2.6 对每条特征线的 Gramian 作一致截断，使其仍可逆，再由式 $(2.13)$ 构造 ODE 控制，并用式 $(2.14)$ 沿逆特征线拼回平滑周期控制；必要性分别选取穿过控制区之外的特征线排除时间不足，并用常值初末数据把 PDE 控制限制到每条特征线的 ODE。",
+              "evidence": "第 2.1 节 Theorem 2.2，条件 $(H1)$、$(H2)$，PDF 第 6 页；Proposition 2.3 的 Gramian 式 $(2.9)$，PDF 第 7 页；Lemma 2.6 式 $(2.11)$--$(2.12)$、Theorem 2.2 充分性证明式 $(2.13)$--$(2.14)$，PDF 第 8--9 页；必要性证明式 $(2.15)$--$(2.18)$，PDF 第 9--10 页。"
+            },
+            {
+              "claim": "带控制支集约束的 ODE Gramian 提供可检验的代数判据，并推出同速半线性系统的局部可控性。",
+              "route": "对带多个时间区间约束的线性 ODE，Proposition 2.3 用 Gramian 可逆性给出充要条件；常系数时化为 Kalman 型矩阵秩条件 $(2.10)$，变系数时由 Proposition 2.5 的某个控制时刻满秩条件保证可控。对半线性系统沿给定轨道线性化，Theorem 2.9 将线性控制产生的右逆与二阶非线性余项组合，在小邻域内用 Banach 不动点求出保持支集约束的精确控制。",
+              "evidence": "第 2.1.3 节 Propositions 2.3--2.5，式 $(2.7)$--$(2.10)$，PDF 第 7--8 页；第 2.2 节 Theorem 2.9，式 $(2.19)$--$(2.20)$，PDF 第 10--11 页。"
+            },
+            {
+              "claim": "为异速拟线性系统构造两个虚拟控制，并把控制支集压缩到严格内部。",
+              "route": "先在延拓空间区间上使用已有的全控制边界可控性结果，得到两个控制的系统；再用前向和后向无控制解、时间截断与空间截断在周期域中拼接，定义式 $(3.12)$ 的残差控制。支集和端点消失条件由式 $(3.13)$ 保证，随后在时间端点外自由演化，使控制延拓为零并获得式 $(3.5a)$ 的严格内部支集，同时保持小 $C^1$ 范数。",
+              "evidence": "第 3.1 节 Proposition 3.2，系统 $(3.8)$、延拓边界问题 $(3.10)$、拼接式 $(3.12)$--$(3.13)$，PDF 第 13--15 页；Theorem 3.1 的假设和结论 $(3.3)$--$(3.7)$，PDF 第 12--13 页。"
+            },
+            {
+              "claim": "代数可解性与 Gromov Nash--Moser 反演消除一个控制并闭合 Theorem 3.1。",
+              "route": "令 $D(y,\\Theta)=y_t+\\Lambda(y)y_x+f(y)-e_1\\Theta$，在系数 $a_{21}\\ne0$ 的开微分关系上考察其线性化。通过设置 $v=0$、$u=g_2/a_{21}$ 并按式 $(3.24)$ 定义 $\\Theta$，Proposition 3.6 构造一阶 infinitesimal inversion。对两个虚拟控制产生的扰动应用 Gromov Theorem 3.5，得到带导数损失但具有局部性和归一化性质的非线性逆；在控制区内部使用该逆，在外部与虚拟控制轨道匹配，最后按式 $(3.29)$ 和分片定义得到单一控制、目标终态及小性估计。",
+              "evidence": "第 3.2 节 Definition 3.4、Theorem 3.5，式 $(3.14)$--$(3.16)$，PDF 第 15--16 页；Proposition 3.6，式 $(3.18)$--$(3.24)$，PDF 第 17--19 页；Theorem 3.1 证明，式 $(3.25)$--$(3.29)$，PDF 第 19--20 页。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": null,
+        "aiEvidenceSource": "已核查 PDF 第 1--25 页全文，包括摘要、引言、Section 2、Section 3、附录证明、全部定理与公式、参考文献及正文末尾；检索了致谢、AI、LLM、ChatGPT、软件、代码、工具、编辑、校对、翻译、排版和图表声明。未发现作者明确披露 AI 或相关工具用于研究、证明、写作或其他列举用途。PDF 第 1 页的脚注仅说明部分作者获得 ERC 项目资助，正文末尾为参考文献，无独立致谢或 AI 声明。",
+        "priorityScore": 84,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“内部精确可控性”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 84/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

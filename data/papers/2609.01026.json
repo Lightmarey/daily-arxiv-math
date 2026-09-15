@@ -3,93 +3,147 @@
   "arxivId": "2609.01026",
   "slug": "2609.01026",
   "latest": {
+    "id": "math.AP:2026-09-02:2609.01026:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-02",
     "arxivId": "2609.01026",
-    "metadata": {
-      "title": "Quantitative avoidance for free boundary flows and applications",
-      "authors": [
-        "Yueheng Bao",
-        "Robert Haslhofer"
-      ],
-      "abstract": "In this article, we introduce a new distance function between hypersurfaces with free boundary. We show that our new quantity, which we call twisted Fermi distance, is monotone under mean curvature flow with free boundary. This overcomes the stumbling block that monotonicity of the usual distance function can fail for non-convex domains, and has several applications. Most importantly, we generalize the avoidance principle for free boundary Brakke flows, recently established by the first author for convex domains, to arbitrary domains. Using this, we then show that all results from our recent joint work, including the mean-convex neighborhood theorem and the uniqueness theorem for free boundary flows through cylindrical singularities, can be generalized to arbitrary domains without any convexity assumptions as well.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-01T10:23:12Z",
-      "updatedAt": "2026-09-01T10:23:12Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Quantitative avoidance for free boundary flows and applications",
+    "authors": [
+      "Yueheng Bao",
+      "Robert Haslhofer"
+    ],
+    "abstract": "In this article, we introduce a new distance function between hypersurfaces with free boundary. We show that our new quantity, which we call twisted Fermi distance, is monotone under mean curvature flow with free boundary. This overcomes the stumbling block that monotonicity of the usual distance function can fail for non-convex domains, and has several applications. Most importantly, we generalize the avoidance principle for free boundary Brakke flows, recently established by the first author for convex domains, to arbitrary domains. Using this, we then show that all results from our recent joint work, including the mean-convex neighborhood theorem and the uniqueness theorem for free boundary flows through cylindrical singularities, can be generalized to arbitrary domains without any convexity assumptions as well.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.01026",
+    "pdfUrl": "https://arxiv.org/pdf/2609.01026",
+    "submittedAt": "2026-09-01T10:23:12Z",
+    "updatedAt": "2026-09-01T10:23:12Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "自由边界流的定量避让与扭曲 Fermi 距离",
+    "workSummary": "论文为任意光滑域中的自由边界平均曲率流引入 twisted Fermi distance，并证明其沿流满足单调微分不等式。该距离修正了非凸边界使通常距离失去单调性的法向几何误差；作者先在光滑流上证明距离演化，再以半球 barrier 和 Brakke 单调性推广到积分 Brakke 流，从而得到一般域中的避让、均值凸邻域和穿过柱状奇点的唯一性应用。",
+    "techniques": [
+      "扭曲 Fermi 距离",
+      "最大值原理和距离微分不等式",
+      "半球 barrier",
+      "Brakke 流避让与奇点应用"
+    ],
+    "breakthrough": "论文找到能吸收非凸边界曲率项的距离修正，使自由边界流重新拥有可积的定量避让量，并将这一单调机制推广到任意域的 Brakke 流和柱状奇点唯一性。",
+    "limitations": "光滑距离演化和 Brakke 推广仍需域边界的给定正则性、自由边界正交条件和局部有限质量；结论提供避让及其应用，不等同于任意初值的全局存在或奇点分类。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "Proposition 2.1 证明 signed twisted Fermi distance 沿两条光滑自由边界流满足单调所需的二阶微分不等式。",
+          "route": "在最近点对处把普通距离的 Hessian 分解为两侧切向曲率和边界法向误差，再加入由域 defining function 构造的 twist 项抵消非凸边界贡献；流方程将空间 Hessian 与时间导数组合成非正量。",
+          "evidence": "PDF 第5–7页 Section 2 Proposition 2.1；距离定义、二阶展开和微分不等式。"
+        },
+        {
+          "claim": "Theorem 1.2/2.2 由 Proposition 2.1 和最大值原理推出光滑自由边界流的定量避让。",
+          "route": "若扭曲距离在初始时为正，单调微分不等式阻止其首次降至零；在边界达到最小值时结合 Hopf 引理和自由边界正交条件排除边界接触，故两流保持不交并获得显式距离下界。",
+          "evidence": "PDF 第3–4页 Theorem 1.2；PDF 第8–9页 Theorem 2.2 及 Proposition 2.1 后的最大值原理证明。"
+        },
+        {
+          "claim": "Lemma 2.3 的半球 barrier 和 Theorem 2.4 将光滑避让机制传递到自由边界 integral Brakke flows。",
+          "route": "在任意边界点构造与域相切的局部半球，使弱流测试函数的接触只能发生在受控区域；将扭曲距离的光滑近似代入 Brakke 不等式，利用半球 lemma 排除首次接触，得到测度流的避让。",
+          "evidence": "PDF 第9–11页 Lemma 2.3、Theorem 2.4；半球构造、Brakke 测试函数和 Proposition 2.1 代入。"
+        },
+        {
+          "claim": "Theorems 1.5–1.7 和 Corollary 1.8 将一般域避让应用于均值凸邻域、外/内流和穿过柱状奇点的唯一性。",
+          "route": "把新避让定理替换旧凸域版本中的距离 lemma，先控制紧自由边界流与 barrier 的分离，再用 outer/inner flow 的比较和短时间非膨胀构造唯一夹逼；柱状奇点附近以同一扭曲距离控制两侧 Brakke 解，拼接出唯一穿越。",
+          "evidence": "PDF 第4–5页 Theorems 1.5–1.7、Corollary 1.8；PDF 第11–12页各应用证明，明确以 Theorem 1.3 替换旧凸域避让结果。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新方法/推广",
-      "workSummary": "引入自由边界超曲面间的 twisted Fermi distance，并证明其沿自由边界平均曲率流单调。",
-      "techniques": [
-        "twisted Fermi 距离",
-        "Brakke 流",
-        "避免原理"
-      ],
-      "breakthrough": "把自由边界 Brakke 流避免原理及圆柱奇点唯一性从凸域推广到任意域。",
-      "limitations": "应用仍继承弱 Brakke 流框架及相应局部正则条件。",
-      "analysisDepth": "abstract",
-      "aiStatus": "no_disclosure_observed",
-      "aiEvidence": null,
-      "aiEvidenceSource": null,
-      "priorityScore": 88,
-      "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 88/100。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "In this article, we introduce a new distance function between hypersurfaces with free boundary. We show that our new quantity, which we call twisted Fermi distance, is monotone under mean curvature flow with free boundary. This overcomes the stumbling block that monotonicity of the usual distance function can fail for non-convex domains, and has several applications. Most importantly, we generalize the avoidance principle for free boundary Brakke flows, recently established by the first author for convex domains, to arbitrary domains. Using this, we then show that all results from our recent joint work, including the mean-convex neighborhood theorem and the uniqueness theorem for free boundary flows through cylindrical singularities, can be generalized to arbitrary domains without any convexity assumptions as well.",
-      "version": 1
-    }
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgements、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+    "aiEvidenceSource": "PDF 全文第1–12页（含 Acknowledgements 与 References）；缓存全文 2609.01026.txt。",
+    "priorityScore": 56,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-02",
-      "entry": {
+      "announcementDate": "2026-09-02",
+      "report": {
+        "id": "math.AP:2026-09-02:2609.01026:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-02",
         "arxivId": "2609.01026",
-        "metadata": {
-          "title": "Quantitative avoidance for free boundary flows and applications",
-          "authors": [
-            "Yueheng Bao",
-            "Robert Haslhofer"
-          ],
-          "abstract": "In this article, we introduce a new distance function between hypersurfaces with free boundary. We show that our new quantity, which we call twisted Fermi distance, is monotone under mean curvature flow with free boundary. This overcomes the stumbling block that monotonicity of the usual distance function can fail for non-convex domains, and has several applications. Most importantly, we generalize the avoidance principle for free boundary Brakke flows, recently established by the first author for convex domains, to arbitrary domains. Using this, we then show that all results from our recent joint work, including the mean-convex neighborhood theorem and the uniqueness theorem for free boundary flows through cylindrical singularities, can be generalized to arbitrary domains without any convexity assumptions as well.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-01T10:23:12Z",
-          "updatedAt": "2026-09-01T10:23:12Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Quantitative avoidance for free boundary flows and applications",
+        "authors": [
+          "Yueheng Bao",
+          "Robert Haslhofer"
+        ],
+        "abstract": "In this article, we introduce a new distance function between hypersurfaces with free boundary. We show that our new quantity, which we call twisted Fermi distance, is monotone under mean curvature flow with free boundary. This overcomes the stumbling block that monotonicity of the usual distance function can fail for non-convex domains, and has several applications. Most importantly, we generalize the avoidance principle for free boundary Brakke flows, recently established by the first author for convex domains, to arbitrary domains. Using this, we then show that all results from our recent joint work, including the mean-convex neighborhood theorem and the uniqueness theorem for free boundary flows through cylindrical singularities, can be generalized to arbitrary domains without any convexity assumptions as well.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.01026",
+        "pdfUrl": "https://arxiv.org/pdf/2609.01026",
+        "submittedAt": "2026-09-01T10:23:12Z",
+        "updatedAt": "2026-09-01T10:23:12Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "自由边界流的定量避让与扭曲 Fermi 距离",
+        "workSummary": "论文为任意光滑域中的自由边界平均曲率流引入 twisted Fermi distance，并证明其沿流满足单调微分不等式。该距离修正了非凸边界使通常距离失去单调性的法向几何误差；作者先在光滑流上证明距离演化，再以半球 barrier 和 Brakke 单调性推广到积分 Brakke 流，从而得到一般域中的避让、均值凸邻域和穿过柱状奇点的唯一性应用。",
+        "techniques": [
+          "扭曲 Fermi 距离",
+          "最大值原理和距离微分不等式",
+          "半球 barrier",
+          "Brakke 流避让与奇点应用"
+        ],
+        "breakthrough": "论文找到能吸收非凸边界曲率项的距离修正，使自由边界流重新拥有可积的定量避让量，并将这一单调机制推广到任意域的 Brakke 流和柱状奇点唯一性。",
+        "limitations": "光滑距离演化和 Brakke 推广仍需域边界的给定正则性、自由边界正交条件和局部有限质量；结论提供避让及其应用，不等同于任意初值的全局存在或奇点分类。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "Proposition 2.1 证明 signed twisted Fermi distance 沿两条光滑自由边界流满足单调所需的二阶微分不等式。",
+              "route": "在最近点对处把普通距离的 Hessian 分解为两侧切向曲率和边界法向误差，再加入由域 defining function 构造的 twist 项抵消非凸边界贡献；流方程将空间 Hessian 与时间导数组合成非正量。",
+              "evidence": "PDF 第5–7页 Section 2 Proposition 2.1；距离定义、二阶展开和微分不等式。"
+            },
+            {
+              "claim": "Theorem 1.2/2.2 由 Proposition 2.1 和最大值原理推出光滑自由边界流的定量避让。",
+              "route": "若扭曲距离在初始时为正，单调微分不等式阻止其首次降至零；在边界达到最小值时结合 Hopf 引理和自由边界正交条件排除边界接触，故两流保持不交并获得显式距离下界。",
+              "evidence": "PDF 第3–4页 Theorem 1.2；PDF 第8–9页 Theorem 2.2 及 Proposition 2.1 后的最大值原理证明。"
+            },
+            {
+              "claim": "Lemma 2.3 的半球 barrier 和 Theorem 2.4 将光滑避让机制传递到自由边界 integral Brakke flows。",
+              "route": "在任意边界点构造与域相切的局部半球，使弱流测试函数的接触只能发生在受控区域；将扭曲距离的光滑近似代入 Brakke 不等式，利用半球 lemma 排除首次接触，得到测度流的避让。",
+              "evidence": "PDF 第9–11页 Lemma 2.3、Theorem 2.4；半球构造、Brakke 测试函数和 Proposition 2.1 代入。"
+            },
+            {
+              "claim": "Theorems 1.5–1.7 和 Corollary 1.8 将一般域避让应用于均值凸邻域、外/内流和穿过柱状奇点的唯一性。",
+              "route": "把新避让定理替换旧凸域版本中的距离 lemma，先控制紧自由边界流与 barrier 的分离，再用 outer/inner flow 的比较和短时间非膨胀构造唯一夹逼；柱状奇点附近以同一扭曲距离控制两侧 Brakke 解，拼接出唯一穿越。",
+              "evidence": "PDF 第4–5页 Theorems 1.5–1.7、Corollary 1.8；PDF 第11–12页各应用证明，明确以 Theorem 1.3 替换旧凸域避让结果。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新方法/推广",
-          "workSummary": "引入自由边界超曲面间的 twisted Fermi distance，并证明其沿自由边界平均曲率流单调。",
-          "techniques": [
-            "twisted Fermi 距离",
-            "Brakke 流",
-            "避免原理"
-          ],
-          "breakthrough": "把自由边界 Brakke 流避免原理及圆柱奇点唯一性从凸域推广到任意域。",
-          "limitations": "应用仍继承弱 Brakke 流框架及相应局部正则条件。",
-          "analysisDepth": "abstract",
-          "aiStatus": "no_disclosure_observed",
-          "aiEvidence": null,
-          "aiEvidenceSource": null,
-          "priorityScore": 88,
-          "priorityReason": "按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 88/100。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "In this article, we introduce a new distance function between hypersurfaces with free boundary. We show that our new quantity, which we call twisted Fermi distance, is monotone under mean curvature flow with free boundary. This overcomes the stumbling block that monotonicity of the usual distance function can fail for non-convex domains, and has several applications. Most importantly, we generalize the avoidance principle for free boundary Brakke flows, recently established by the first author for convex domains, to arbitrary domains. Using this, we then show that all results from our recent joint work, including the mean-convex neighborhood theorem and the uniqueness theorem for free boundary flows through cylindrical singularities, can be generalized to arbitrary domains without any convexity assumptions as well.",
-          "version": 1
-        }
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页检查标题页、摘要、正文、Acknowledgements、作者信息和 References，并搜索 AI、LLM、ChatGPT、人工智能等词，未见作者明确说明使用 AI/LLM 进行研究、证明、写作、代码或编辑。",
+        "aiEvidenceSource": "PDF 全文第1–12页（含 Acknowledgements 与 References）；缓存全文 2609.01026.txt。",
+        "priorityScore": 56,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

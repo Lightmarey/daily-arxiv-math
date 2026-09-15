@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.11284",
+  "slug": "2609.11284",
+  "latest": {
+    "id": "math.AP:2026-09-11:2609.11284:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-11",
+    "arxivId": "2609.11284",
+    "version": 1,
+    "entryKind": "new",
+    "title": "A Sharp Mass Threshold for Fractional Choquard Equations with Lower Hardy-Littlewood-Sobolev and \\(L^2\\)-Critical Terms",
+    "authors": [
+      "Yongpeng Chen",
+      "Zhipeng Yang"
+    ],
+    "abstract": "For \\(\\frac12\\le s<1\\), we study a fractional Choquard equation with prescribed mass and nonlinearities at the lower Hardy-Littlewood-Sobolev and \\(L^2\\)-critical exponents. The sharp Hardy-Littlewood-Sobolev and Choquard Gagliardo-Nirenberg inequalities determine an explicit critical mass \\(a_*\\). For \\(0<a\\le a_*\\), we compute the exact infimum of the constrained energy and prove that it is not attained and that no normalized solution exists. For \\(a>a_*\\), the energy is unbounded from below on the mass sphere, while the Pohozaev set is nonempty.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.11284",
+    "pdfUrl": "https://arxiv.org/pdf/2609.11284",
+    "submittedAt": "2026-09-10T09:16:58Z",
+    "updatedAt": "2026-09-10T09:16:58Z",
+    "topicId": "variational",
+    "topicLabel": "变分方法",
+    "progressType": "正文级严格核查",
+    "workSummary": "论文研究带下临界 Hardy--Littlewood--Sobolev 项和 L2 临界项的分数阶 Choquard 约束能量。作者先收集锐利 HLS 与 Choquard Gagliardo--Nirenberg 不等式，定义临界质量 a*；再按 $a<a*、a=a*、a>a*$ 分别证明约束能量精确下确界、不取得性、无归一化解以及大质量下无界。",
+    "techniques": [
+      "分数阶 HLS 锐利不等式",
+      "Choquard Gagliardo--Nirenberg 不等式",
+      "质量保持缩放",
+      "Pohozaev 恒等式",
+      "约束变分"
+    ],
+    "breakthrough": "Theorem 1.1--1.3 给出 sharp mass $threshold：a\\le a*$ 时精确 infimum 不取得且不存在 normalized solution，a>a* 时能量在质量球面上趋于负无穷且 Pohozaev 集非空。",
+    "limitations": "结论针对指定分数阶模型和约束质量；大质量存在性仍有开放范围，不声称所有 a>a* 都有归一化解。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "锐利不等式给出质量阈值和能量下界。",
+          "route": "Lemma 2.2、Lemma 2.3 控制 HLS 卷积项和临界 Choquard 项，代入 J 把梯度系数写成 1-(a/a*) 的形式。",
+          "evidence": "PDF 第 5--7 页第 2 节 Lemma 2.2、Lemma 2.3；第 7 页 Proposition 3.1 式 (3.1)--(3.2)。"
+        },
+        {
+          "claim": "小质量的下确界通过质量保持缩放达到。",
+          "route": "Lemma 3.2 用 $u_sigma$ 保持 L2 质量并令梯度项消失，结合 Proposition 3.1 构造趋近序列，得到 Proposition 3.3 的精确 infimum。",
+          "evidence": "PDF 第 8--10 页 Lemma 3.2、Proposition 3.3。"
+        },
+        {
+          "claim": "$a\\le a*$ 时 infimum 不取得且没有 normalized solution。",
+          "route": "若存在极小元或解，Pohozaev 与 Euler--Lagrange 恒等式迫使它成为锐利优化器$；a=a*$ 时 Lemma 3.10 的方程与优化器分类不相容，a<a* 时与正梯度项矛盾。",
+          "evidence": "PDF 第 11--14 页 Lemma 3.8、Lemma 3.10、Proposition 3.6/3.16；第 22 页 Theorem 1.1、Theorem 1.2。"
+        },
+        {
+          "claim": "大质量时能量无界且 Pohozaev 集非空。",
+          "route": "取集中缩放测试函数使临界项增长快于正项，Proposition 4.1 得到 inf $J=-infinity$；尺度导数和符号条件再构造 Pohozaev 约束。",
+          "evidence": "PDF 第 15--21 页第 4 节 Proposition 4.1；第 22 页 Theorem 1.3 证明。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "全文检查摘要、正文证明、致谢、作者声明和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+    "aiEvidenceSource": "PDF 第 1--24 页全文，重点核查第 22--24 页末尾声明和全文 AI 关键词上下文。",
+    "priorityScore": 85,
+    "priorityTier": "high",
+    "priorityReason": "给出分数阶 Choquard 方程明确临界质量及小临界质量的非存在结论。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-11",
+      "report": {
+        "id": "math.AP:2026-09-11:2609.11284:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-11",
+        "arxivId": "2609.11284",
+        "version": 1,
+        "entryKind": "new",
+        "title": "A Sharp Mass Threshold for Fractional Choquard Equations with Lower Hardy-Littlewood-Sobolev and \\(L^2\\)-Critical Terms",
+        "authors": [
+          "Yongpeng Chen",
+          "Zhipeng Yang"
+        ],
+        "abstract": "For \\(\\frac12\\le s<1\\), we study a fractional Choquard equation with prescribed mass and nonlinearities at the lower Hardy-Littlewood-Sobolev and \\(L^2\\)-critical exponents. The sharp Hardy-Littlewood-Sobolev and Choquard Gagliardo-Nirenberg inequalities determine an explicit critical mass \\(a_*\\). For \\(0<a\\le a_*\\), we compute the exact infimum of the constrained energy and prove that it is not attained and that no normalized solution exists. For \\(a>a_*\\), the energy is unbounded from below on the mass sphere, while the Pohozaev set is nonempty.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.11284",
+        "pdfUrl": "https://arxiv.org/pdf/2609.11284",
+        "submittedAt": "2026-09-10T09:16:58Z",
+        "updatedAt": "2026-09-10T09:16:58Z",
+        "topicId": "variational",
+        "topicLabel": "变分方法",
+        "progressType": "正文级严格核查",
+        "workSummary": "论文研究带下临界 Hardy--Littlewood--Sobolev 项和 L2 临界项的分数阶 Choquard 约束能量。作者先收集锐利 HLS 与 Choquard Gagliardo--Nirenberg 不等式，定义临界质量 a*；再按 $a<a*、a=a*、a>a*$ 分别证明约束能量精确下确界、不取得性、无归一化解以及大质量下无界。",
+        "techniques": [
+          "分数阶 HLS 锐利不等式",
+          "Choquard Gagliardo--Nirenberg 不等式",
+          "质量保持缩放",
+          "Pohozaev 恒等式",
+          "约束变分"
+        ],
+        "breakthrough": "Theorem 1.1--1.3 给出 sharp mass $threshold：a\\le a*$ 时精确 infimum 不取得且不存在 normalized solution，a>a* 时能量在质量球面上趋于负无穷且 Pohozaev 集非空。",
+        "limitations": "结论针对指定分数阶模型和约束质量；大质量存在性仍有开放范围，不声称所有 a>a* 都有归一化解。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "锐利不等式给出质量阈值和能量下界。",
+              "route": "Lemma 2.2、Lemma 2.3 控制 HLS 卷积项和临界 Choquard 项，代入 J 把梯度系数写成 1-(a/a*) 的形式。",
+              "evidence": "PDF 第 5--7 页第 2 节 Lemma 2.2、Lemma 2.3；第 7 页 Proposition 3.1 式 (3.1)--(3.2)。"
+            },
+            {
+              "claim": "小质量的下确界通过质量保持缩放达到。",
+              "route": "Lemma 3.2 用 $u_sigma$ 保持 L2 质量并令梯度项消失，结合 Proposition 3.1 构造趋近序列，得到 Proposition 3.3 的精确 infimum。",
+              "evidence": "PDF 第 8--10 页 Lemma 3.2、Proposition 3.3。"
+            },
+            {
+              "claim": "$a\\le a*$ 时 infimum 不取得且没有 normalized solution。",
+              "route": "若存在极小元或解，Pohozaev 与 Euler--Lagrange 恒等式迫使它成为锐利优化器$；a=a*$ 时 Lemma 3.10 的方程与优化器分类不相容，a<a* 时与正梯度项矛盾。",
+              "evidence": "PDF 第 11--14 页 Lemma 3.8、Lemma 3.10、Proposition 3.6/3.16；第 22 页 Theorem 1.1、Theorem 1.2。"
+            },
+            {
+              "claim": "大质量时能量无界且 Pohozaev 集非空。",
+              "route": "取集中缩放测试函数使临界项增长快于正项，Proposition 4.1 得到 inf $J=-infinity$；尺度导数和符号条件再构造 Pohozaev 约束。",
+              "evidence": "PDF 第 15--21 页第 4 节 Proposition 4.1；第 22 页 Theorem 1.3 证明。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "全文检查摘要、正文证明、致谢、作者声明和参考文献，没有作者明确披露 AI、LLM、ChatGPT 等用于研究、证明、写作、代码、编辑或校对。",
+        "aiEvidenceSource": "PDF 第 1--24 页全文，重点核查第 22--24 页末尾声明和全文 AI 关键词上下文。",
+        "priorityScore": 85,
+        "priorityTier": "high",
+        "priorityReason": "给出分数阶 Choquard 方程明确临界质量及小临界质量的非存在结论。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

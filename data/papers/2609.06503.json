@@ -3,93 +3,149 @@
   "arxivId": "2609.06503",
   "slug": "2609.06503",
   "latest": {
+    "id": "math.AP:2026-09-09:2609.06503:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-09",
     "arxivId": "2609.06503",
-    "metadata": {
-      "title": "Short-time existence for the Schouten flow",
-      "authors": [
-        "Giovanni Catino",
-        "Carlo Mantegazza"
-      ],
-      "abstract": "Let $(M^n,g_0)$ be a closed smooth Riemannian manifold, with $n\\geqslant 3$. We prove short--time existence and uniqueness for the \"critical\" {\\em Ricci--Bourguignon flow} \\begin{equation} \\partial_t g=-2\\operatorname{Ric}_g+\\frac{R_g}{n-1}g\\,. \\end{equation} Up to a constant rescaling of time, this is the {\\em Schouten flow}, since the right--hand side of the equation is $-2(n-2)$ times the Schouten tensor. At the critical parameter, however, the principal symbol of the linearization of the operator that we obtain after the usual \"DeTurck modification\" still has a zero eigenvalue. We resolve this degeneracy by adjoining an independent scalar unknown $r$, intended to represent the scalar curvature, and considering an \"extended\" system consisting of a strictly parabolic equation for the metric coupled to a transport--reaction equation for $r$ with a curvature--square forcing. The extended system belongs to the class of nonlinear composite parabolic--hyperbolic systems studied by Vol'pert and Khudyaev~\\cite{VolpertKhudyaev1972}. Then, a standard compact--manifold adaptation of their theorem yields a unique smooth solution of the extended system. Finally, the difference $R_g-r$ satisfies a homogeneous linear parabolic equation, so the scalar--curvature constraint \"propagates\" and the original critical Ricci--Bourguignon flow is recovered. This settles the short--time existence and uniqueness problem at the critical ``Schouten'' value $ρ=1/(2(n-1))$, which was left open by the previous Ricci--Bourguignon theory in~\\cite{CatinoEtAl2017}.",
-      "categories": [
-        "math.DG",
-        "math.AP"
-      ],
-      "primaryCategory": "math.DG",
-      "version": 1,
-      "submittedAt": "2026-09-06T09:39:43Z",
-      "updatedAt": "2026-09-06T09:39:43Z"
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Short-time existence for the Schouten flow",
+    "authors": [
+      "Giovanni Catino",
+      "Carlo Mantegazza"
+    ],
+    "abstract": "Let $(M^n,g_0)$ be a closed smooth Riemannian manifold, with $n\\geqslant 3$. We prove short--time existence and uniqueness for the \"critical\" {\\em Ricci--Bourguignon flow} \\begin{equation} \\partial_t g=-2\\operatorname{Ric}_g+\\frac{R_g}{n-1}g\\,. \\end{equation} Up to a constant rescaling of time, this is the {\\em Schouten flow}, since the right--hand side of the equation is $-2(n-2)$ times the Schouten tensor. At the critical parameter, however, the principal symbol of the linearization of the operator that we obtain after the usual \"DeTurck modification\" still has a zero eigenvalue. We resolve this degeneracy by adjoining an independent scalar unknown $r$, intended to represent the scalar curvature, and considering an \"extended\" system consisting of a strictly parabolic equation for the metric coupled to a transport--reaction equation for $r$ with a curvature--square forcing. The extended system belongs to the class of nonlinear composite parabolic--hyperbolic systems studied by Vol'pert and Khudyaev~\\cite{VolpertKhudyaev1972}. Then, a standard compact--manifold adaptation of their theorem yields a unique smooth solution of the extended system. Finally, the difference $R_g-r$ satisfies a homogeneous linear parabolic equation, so the scalar--curvature constraint \"propagates\" and the original critical Ricci--Bourguignon flow is recovered. This settles the short--time existence and uniqueness problem at the critical ``Schouten'' value $ρ=1/(2(n-1))$, which was left open by the previous Ricci--Bourguignon theory in~\\cite{CatinoEtAl2017}.",
+    "categories": [
+      "math.DG",
+      "math.AP"
+    ],
+    "primaryCategory": "math.DG",
+    "arxivUrl": "https://arxiv.org/abs/2609.06503",
+    "pdfUrl": "https://arxiv.org/pdf/2609.06503",
+    "submittedAt": "2026-09-06T09:39:43Z",
+    "updatedAt": "2026-09-06T09:39:43Z",
+    "topicId": "elliptic-parabolic",
+    "topicLabel": "椭圆与抛物方程",
+    "progressType": "分析结果",
+    "workSummary": "本文解决临界 Ricci–Bourguignon 参数下闭流形 Schouten flow 的短时间存在唯一性。普通 DeTurck 修正仍有一个零特征值，作者因此把标量曲率 r 作为独立未知量，构造度量 g 与 r 耦合的 extended system：度量方程在 DeTurck 坐标下严格抛物，r 方程是输运–反应型并带曲率平方源项。复合抛物–双曲系统的局部理论给出平滑解后，作者对 $z=R_g-r$ 推导齐次线性抛物方程，利用 $z(0)=0$ 证明约束传播。最后通过谐映射热流和反向微分同胚把 DeTurck 解还原到原几何流，并用同一构造证明唯一性。",
+    "techniques": [
+      "临界参数下的 extended DeTurck system",
+      "复合抛物–输运反应方程局部理论",
+      "标量曲率变分公式与 Bianchi 恒等式",
+      "约束差 $z=R_g-r$ 的最大原理",
+      "谐映射热流和时间依赖拉回"
+    ],
+    "breakthrough": "论文用独立标量曲率变量绕过临界 DeTurck 线性化的零特征值：严格抛物的度量块负责局部正则性，随后 $z=R_g-r$ 的齐次方程把独立变量强制锁回真实标量曲率。这个“先扩展、再传播约束、最后拉回”的链条闭合了临界 Schouten flow 的短时理论。",
+    "limitations": "结论限于闭光滑流形和临界参数，得到的是短时间平滑解；extended system 的局部理论依赖紧致性和文中光滑初值，未讨论带边界、低正则初值或长期奇性。DeTurck 解与原几何流的对应依赖局部谐映射流保持微分同胚。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "加入标量曲率未知量 r 后的 extended DeTurck system 具有适合局部存在的严格抛物度量主部。",
+          "route": "用背景连接展开 Ricci 张量与 DeTurck Lie 导数，二阶项合并为 $g^{ij}\\nabla _i\\nabla _j g$，所有其余项至多含一个背景导数；r 方程只含输运、反应和 $|Ric_g|^{2}$ 源项，因此落入复合抛物–双曲系统的局部理论。",
+          "evidence": "PDF 第3–5页 Section 2、Lemma 2.1、extended system (2.1) 及 Theorem 2.3。"
+        },
+        {
+          "claim": "若初始 $r(0)=R_{g0}$，则扩展解始终满足 $r=R_g$。",
+          "route": "对度量方程使用标量曲率变分公式，把 contracted Bianchi 恒等式代入，得到 $R_g$ 的演化；减去 r 方程后$，z=R_g-r$ 满足无源线性抛物–输运方程，初值 $z=0$。最大原理/唯一性遂给出 z恒为零。",
+          "evidence": "PDF 第5–6页 Proposition 3.1，标量曲率变分计算及 z 方程。"
+        },
+        {
+          "claim": "extended DeTurck 解经时间依赖微分同胚拉回后满足原始临界 Ricci–Bourguignon/Schouten flow。",
+          "route": "对任意原方程解运行以张量场 W(g) 为速度的谐映射热流，局部保持微分同胚；其逆映射 $\\phi $ 的导数产生 $L_{W(g)}g$ 项。时间依赖拉回公式与 Ricci、标量曲率的自然性抵消 DeTurck 项，得到原几何流。",
+          "evidence": "PDF 第6–8页 Section 3、公式(3.2)–(3.4)及 Theorem 1.1 的存在性收束。"
+        },
+        {
+          "claim": "原始几何流具有短时间唯一性。",
+          "route": "给两条同初值的原流分别构造谐映射热流，拉回到同一个背景后得到相同 extended system；局部唯一性使拉回度量一致，谐映射速度的 ODE 唯一性再使两张映射一致，故原度量一致。对共同存在区间重复构造并用 open–closed 延拓。",
+          "evidence": "PDF 第7–8页 Theorem 1.1 唯一性证明、谐映射方程(3.2)–(3.3)及 Corollary 3.2。"
+        }
+      ]
     },
-    "sources": [],
-    "analysis": {
-      "topic": "几何分析、几何 PDE 与几何流",
-      "progressType": "新方法/构造",
-      "workSummary": "作者以独立标量曲率未知量构建扩展系统，证明临界 Schouten 流短时存在唯一性。",
-      "techniques": [
-        "DeTurck 修正",
-        "抛物–双曲耦合",
-        "约束传播"
-      ],
-      "breakthrough": "针对常规主符号仍退化的临界参数提出解法。",
-      "limitations": "需严查复合系统定理适用性与标量约束传播；作者明确披露 AI 策略建议。 已补读所列正文片段；这不是逐行独立证明审查。",
-      "analysisDepth": "full_text_sections",
-      "aiStatus": "explicit",
-      "aiEvidence": "作者评论与正文声明：主证明策略来自与 ChatGPT 的互动，作者随后发展并独立核验。",
-      "aiEvidenceSource": "https://arxiv.org/html/2609.06503v1（AI 声明/致谢；涉及摘要者同时核对元数据）",
-      "priorityScore": 92,
-      "priorityReason": "几何流基本适定性问题，技术路线值得优先核验。",
-      "lowPriorityReason": null
-    },
-    "analysisBasis": {
-      "abstract": "Let $(M^n,g_0)$ be a closed smooth Riemannian manifold, with $n\\geqslant 3$. We prove short--time existence and uniqueness for the \"critical\" {\\em Ricci--Bourguignon flow} \\begin{equation} \\partial_t g=-2\\operatorname{Ric}_g+\\frac{R_g}{n-1}g\\,. \\end{equation} Up to a constant rescaling of time, this is the {\\em Schouten flow}, since the right--hand side of the equation is $-2(n-2)$ times the Schouten tensor. At the critical parameter, however, the principal symbol of the linearization of the operator that we obtain after the usual \"DeTurck modification\" still has a zero eigenvalue. We resolve this degeneracy by adjoining an independent scalar unknown $r$, intended to represent the scalar curvature, and considering an \"extended\" system consisting of a strictly parabolic equation for the metric coupled to a transport--reaction equation for $r$ with a curvature--square forcing. The extended system belongs to the class of nonlinear composite parabolic--hyperbolic systems studied by Vol'pert and Khudyaev~\\cite{VolpertKhudyaev1972}. Then, a standard compact--manifold adaptation of their theorem yields a unique smooth solution of the extended system. Finally, the difference $R_g-r$ satisfies a homogeneous linear parabolic equation, so the scalar--curvature constraint \"propagates\" and the original critical Ricci--Bourguignon flow is recovered. This settles the short--time existence and uniqueness problem at the critical ``Schouten'' value $ρ=1/(2(n-1))$, which was left open by the previous Ricci--Bourguignon theory in~\\cite{CatinoEtAl2017}.",
-      "version": 1
-    }
+    "aiStatus": "explicit",
+    "aiEvidence": "作者明确声明主论证策略是在与 ChatGPT 5.6 Pro 的一系列交互中得到建议；随后作者自行检查、发展并独立验证全部数学论证，并对最终结果负责。",
+    "aiEvidenceSource": "PDF 第3页“AI USAGE STATEMENT”；并检查 PDF 第1–8页正文、Proof 与 Acknowledgments。",
+    "priorityScore": 67,
+    "priorityTier": "medium",
+    "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+    "lowPriorityReason": null,
+    "revisionSummary": null
   },
   "history": [
     {
-      "date": "2026-09-09",
-      "entry": {
+      "announcementDate": "2026-09-09",
+      "report": {
+        "id": "math.AP:2026-09-09:2609.06503:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-09",
         "arxivId": "2609.06503",
-        "metadata": {
-          "title": "Short-time existence for the Schouten flow",
-          "authors": [
-            "Giovanni Catino",
-            "Carlo Mantegazza"
-          ],
-          "abstract": "Let $(M^n,g_0)$ be a closed smooth Riemannian manifold, with $n\\geqslant 3$. We prove short--time existence and uniqueness for the \"critical\" {\\em Ricci--Bourguignon flow} \\begin{equation} \\partial_t g=-2\\operatorname{Ric}_g+\\frac{R_g}{n-1}g\\,. \\end{equation} Up to a constant rescaling of time, this is the {\\em Schouten flow}, since the right--hand side of the equation is $-2(n-2)$ times the Schouten tensor. At the critical parameter, however, the principal symbol of the linearization of the operator that we obtain after the usual \"DeTurck modification\" still has a zero eigenvalue. We resolve this degeneracy by adjoining an independent scalar unknown $r$, intended to represent the scalar curvature, and considering an \"extended\" system consisting of a strictly parabolic equation for the metric coupled to a transport--reaction equation for $r$ with a curvature--square forcing. The extended system belongs to the class of nonlinear composite parabolic--hyperbolic systems studied by Vol'pert and Khudyaev~\\cite{VolpertKhudyaev1972}. Then, a standard compact--manifold adaptation of their theorem yields a unique smooth solution of the extended system. Finally, the difference $R_g-r$ satisfies a homogeneous linear parabolic equation, so the scalar--curvature constraint \"propagates\" and the original critical Ricci--Bourguignon flow is recovered. This settles the short--time existence and uniqueness problem at the critical ``Schouten'' value $ρ=1/(2(n-1))$, which was left open by the previous Ricci--Bourguignon theory in~\\cite{CatinoEtAl2017}.",
-          "categories": [
-            "math.DG",
-            "math.AP"
-          ],
-          "primaryCategory": "math.DG",
-          "version": 1,
-          "submittedAt": "2026-09-06T09:39:43Z",
-          "updatedAt": "2026-09-06T09:39:43Z"
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Short-time existence for the Schouten flow",
+        "authors": [
+          "Giovanni Catino",
+          "Carlo Mantegazza"
+        ],
+        "abstract": "Let $(M^n,g_0)$ be a closed smooth Riemannian manifold, with $n\\geqslant 3$. We prove short--time existence and uniqueness for the \"critical\" {\\em Ricci--Bourguignon flow} \\begin{equation} \\partial_t g=-2\\operatorname{Ric}_g+\\frac{R_g}{n-1}g\\,. \\end{equation} Up to a constant rescaling of time, this is the {\\em Schouten flow}, since the right--hand side of the equation is $-2(n-2)$ times the Schouten tensor. At the critical parameter, however, the principal symbol of the linearization of the operator that we obtain after the usual \"DeTurck modification\" still has a zero eigenvalue. We resolve this degeneracy by adjoining an independent scalar unknown $r$, intended to represent the scalar curvature, and considering an \"extended\" system consisting of a strictly parabolic equation for the metric coupled to a transport--reaction equation for $r$ with a curvature--square forcing. The extended system belongs to the class of nonlinear composite parabolic--hyperbolic systems studied by Vol'pert and Khudyaev~\\cite{VolpertKhudyaev1972}. Then, a standard compact--manifold adaptation of their theorem yields a unique smooth solution of the extended system. Finally, the difference $R_g-r$ satisfies a homogeneous linear parabolic equation, so the scalar--curvature constraint \"propagates\" and the original critical Ricci--Bourguignon flow is recovered. This settles the short--time existence and uniqueness problem at the critical ``Schouten'' value $ρ=1/(2(n-1))$, which was left open by the previous Ricci--Bourguignon theory in~\\cite{CatinoEtAl2017}.",
+        "categories": [
+          "math.DG",
+          "math.AP"
+        ],
+        "primaryCategory": "math.DG",
+        "arxivUrl": "https://arxiv.org/abs/2609.06503",
+        "pdfUrl": "https://arxiv.org/pdf/2609.06503",
+        "submittedAt": "2026-09-06T09:39:43Z",
+        "updatedAt": "2026-09-06T09:39:43Z",
+        "topicId": "elliptic-parabolic",
+        "topicLabel": "椭圆与抛物方程",
+        "progressType": "分析结果",
+        "workSummary": "本文解决临界 Ricci–Bourguignon 参数下闭流形 Schouten flow 的短时间存在唯一性。普通 DeTurck 修正仍有一个零特征值，作者因此把标量曲率 r 作为独立未知量，构造度量 g 与 r 耦合的 extended system：度量方程在 DeTurck 坐标下严格抛物，r 方程是输运–反应型并带曲率平方源项。复合抛物–双曲系统的局部理论给出平滑解后，作者对 $z=R_g-r$ 推导齐次线性抛物方程，利用 $z(0)=0$ 证明约束传播。最后通过谐映射热流和反向微分同胚把 DeTurck 解还原到原几何流，并用同一构造证明唯一性。",
+        "techniques": [
+          "临界参数下的 extended DeTurck system",
+          "复合抛物–输运反应方程局部理论",
+          "标量曲率变分公式与 Bianchi 恒等式",
+          "约束差 $z=R_g-r$ 的最大原理",
+          "谐映射热流和时间依赖拉回"
+        ],
+        "breakthrough": "论文用独立标量曲率变量绕过临界 DeTurck 线性化的零特征值：严格抛物的度量块负责局部正则性，随后 $z=R_g-r$ 的齐次方程把独立变量强制锁回真实标量曲率。这个“先扩展、再传播约束、最后拉回”的链条闭合了临界 Schouten flow 的短时理论。",
+        "limitations": "结论限于闭光滑流形和临界参数，得到的是短时间平滑解；extended system 的局部理论依赖紧致性和文中光滑初值，未讨论带边界、低正则初值或长期奇性。DeTurck 解与原几何流的对应依赖局部谐映射流保持微分同胚。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "加入标量曲率未知量 r 后的 extended DeTurck system 具有适合局部存在的严格抛物度量主部。",
+              "route": "用背景连接展开 Ricci 张量与 DeTurck Lie 导数，二阶项合并为 $g^{ij}\\nabla _i\\nabla _j g$，所有其余项至多含一个背景导数；r 方程只含输运、反应和 $|Ric_g|^{2}$ 源项，因此落入复合抛物–双曲系统的局部理论。",
+              "evidence": "PDF 第3–5页 Section 2、Lemma 2.1、extended system (2.1) 及 Theorem 2.3。"
+            },
+            {
+              "claim": "若初始 $r(0)=R_{g0}$，则扩展解始终满足 $r=R_g$。",
+              "route": "对度量方程使用标量曲率变分公式，把 contracted Bianchi 恒等式代入，得到 $R_g$ 的演化；减去 r 方程后$，z=R_g-r$ 满足无源线性抛物–输运方程，初值 $z=0$。最大原理/唯一性遂给出 z恒为零。",
+              "evidence": "PDF 第5–6页 Proposition 3.1，标量曲率变分计算及 z 方程。"
+            },
+            {
+              "claim": "extended DeTurck 解经时间依赖微分同胚拉回后满足原始临界 Ricci–Bourguignon/Schouten flow。",
+              "route": "对任意原方程解运行以张量场 W(g) 为速度的谐映射热流，局部保持微分同胚；其逆映射 $\\phi $ 的导数产生 $L_{W(g)}g$ 项。时间依赖拉回公式与 Ricci、标量曲率的自然性抵消 DeTurck 项，得到原几何流。",
+              "evidence": "PDF 第6–8页 Section 3、公式(3.2)–(3.4)及 Theorem 1.1 的存在性收束。"
+            },
+            {
+              "claim": "原始几何流具有短时间唯一性。",
+              "route": "给两条同初值的原流分别构造谐映射热流，拉回到同一个背景后得到相同 extended system；局部唯一性使拉回度量一致，谐映射速度的 ODE 唯一性再使两张映射一致，故原度量一致。对共同存在区间重复构造并用 open–closed 延拓。",
+              "evidence": "PDF 第7–8页 Theorem 1.1 唯一性证明、谐映射方程(3.2)–(3.3)及 Corollary 3.2。"
+            }
+          ]
         },
-        "sources": [],
-        "analysis": {
-          "topic": "几何分析、几何 PDE 与几何流",
-          "progressType": "新方法/构造",
-          "workSummary": "作者以独立标量曲率未知量构建扩展系统，证明临界 Schouten 流短时存在唯一性。",
-          "techniques": [
-            "DeTurck 修正",
-            "抛物–双曲耦合",
-            "约束传播"
-          ],
-          "breakthrough": "针对常规主符号仍退化的临界参数提出解法。",
-          "limitations": "需严查复合系统定理适用性与标量约束传播；作者明确披露 AI 策略建议。 已补读所列正文片段；这不是逐行独立证明审查。",
-          "analysisDepth": "full_text_sections",
-          "aiStatus": "explicit",
-          "aiEvidence": "作者评论与正文声明：主证明策略来自与 ChatGPT 的互动，作者随后发展并独立核验。",
-          "aiEvidenceSource": "https://arxiv.org/html/2609.06503v1（AI 声明/致谢；涉及摘要者同时核对元数据）",
-          "priorityScore": 92,
-          "priorityReason": "几何流基本适定性问题，技术路线值得优先核验。",
-          "lowPriorityReason": null
-        },
-        "analysisBasis": {
-          "abstract": "Let $(M^n,g_0)$ be a closed smooth Riemannian manifold, with $n\\geqslant 3$. We prove short--time existence and uniqueness for the \"critical\" {\\em Ricci--Bourguignon flow} \\begin{equation} \\partial_t g=-2\\operatorname{Ric}_g+\\frac{R_g}{n-1}g\\,. \\end{equation} Up to a constant rescaling of time, this is the {\\em Schouten flow}, since the right--hand side of the equation is $-2(n-2)$ times the Schouten tensor. At the critical parameter, however, the principal symbol of the linearization of the operator that we obtain after the usual \"DeTurck modification\" still has a zero eigenvalue. We resolve this degeneracy by adjoining an independent scalar unknown $r$, intended to represent the scalar curvature, and considering an \"extended\" system consisting of a strictly parabolic equation for the metric coupled to a transport--reaction equation for $r$ with a curvature--square forcing. The extended system belongs to the class of nonlinear composite parabolic--hyperbolic systems studied by Vol'pert and Khudyaev~\\cite{VolpertKhudyaev1972}. Then, a standard compact--manifold adaptation of their theorem yields a unique smooth solution of the extended system. Finally, the difference $R_g-r$ satisfies a homogeneous linear parabolic equation, so the scalar--curvature constraint \"propagates\" and the original critical Ricci--Bourguignon flow is recovered. This settles the short--time existence and uniqueness problem at the critical ``Schouten'' value $ρ=1/(2(n-1))$, which was left open by the previous Ricci--Bourguignon theory in~\\cite{CatinoEtAl2017}.",
-          "version": 1
-        }
+        "aiStatus": "explicit",
+        "aiEvidence": "作者明确声明主论证策略是在与 ChatGPT 5.6 Pro 的一系列交互中得到建议；随后作者自行检查、发展并独立验证全部数学论证，并对最终结果负责。",
+        "aiEvidenceSource": "PDF 第3页“AI USAGE STATEMENT”；并检查 PDF 第1–8页正文、Proof 与 Acknowledgments。",
+        "priorityScore": 67,
+        "priorityTier": "medium",
+        "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+        "lowPriorityReason": null,
+        "revisionSummary": null
       }
     }
   ]

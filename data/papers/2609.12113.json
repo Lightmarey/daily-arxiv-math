@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12113",
+  "slug": "2609.12113",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12113:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12113",
+    "version": 1,
+    "entryKind": "cross_list",
+    "title": "Score-based Outlier Generation via Controlling the Radon-Nikodym Derivative",
+    "authors": [
+      "Amartya Mukherjee",
+      "Tristan Milne",
+      "Kry Yik-Chau Lui",
+      "Stephanie Hazlewood",
+      "Jun Liu"
+    ],
+    "abstract": "Outliers are important for stress-testing algorithms and understanding system behaviour under rare conditions. Despite being commonly described as low-likelihood events, existing generative approaches rarely control likelihood explicitly. In this work, we introduce a measure-theoretic notion of outliers based on the distribution of log-likelihood values, which is guaranteed to assign higher probability mass to low-likelihood events with a specifiable magnitude. Building on this formulation, we derive how likelihood reweighting modifies the diffusion score and use this relation to motivate a controlled modification of the reverse-time dynamics. In particular, likelihood reweighting implies a scaling of the score function with a control term derived from the Radon-Nikodym derivative of the likelihood distributions. Correspondingly, the updated score function can be obtained with no retraining of the diffusion model. We exploit the Ornstein-Uhlenbeck semigroup underlying diffusion models to motivate an exponentially interpolated controller which approximates the true control. Experiments demonstrate controlled generation of low-likelihood samples while remaining consistent with the data geometry.",
+    "categories": [
+      "cs.LG",
+      "math.AP",
+      "math.OC",
+      "math.PR",
+      "stat.ML"
+    ],
+    "primaryCategory": "cs.LG",
+    "arxivUrl": "https://arxiv.org/abs/2609.12113",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12113",
+    "submittedAt": "2026-09-10T18:39:10Z",
+    "updatedAt": "2026-09-10T18:39:10Z",
+    "topicId": "other-analysis",
+    "topicLabel": "其他分析方向",
+    "progressType": "基于似然分布控制的扩散模型异常样本生成",
+    "workSummary": "已核查论文 PDF 第 1--8 页。论文把异常样本定义为对数似然推前测度的分布性下移：目标测度在一阶随机占优下移向低似然区，并以 Wasserstein 距离量化幅度。作者证明似然重加权的 Radon--Nikodym 导数只依赖似然值，从而使分数函数获得标量乘法控制；再利用 Ornstein--Uhlenbeck 半群的指数收敛，以无需重新训练的指数衰减控制近似真实控制，并在高斯混合与 CIFAR-10 上验证。",
+    "techniques": [
+      "对数似然推前测度、一阶随机占优与 Wasserstein 距离异常定义",
+      "条件分解与 Radon--Nikodym 导数的测度重加权",
+      "Fokker--Planck 方程、对数密度方程与分数函数链式法则",
+      "Ornstein--Uhlenbeck 半群、Hermite 谱展开与指数收敛",
+      "概率流常微分方程的似然依赖控制与无重训练采样",
+      "高斯混合闭式分数、经验分布检验与 CIFAR-10 实验"
+    ],
+    "breakthrough": "核心进展是把异常样本从单点启发式判据提升为对数似然分布的可控偏移，并由条件保持的似然重加权严格推出 $d\\nu/d\\mu=z(l(x))$ 及分数缩放 $\\nabla\\log q=[1+c(l)]\\nabla\\log p$。这给出只修改概率流 ODE、无需重新训练扩散模型的控制机制；Ornstein--Uhlenbeck 的 Hermite 谱收敛进一步支持用 $e^{-t}c_0$ 近似真实时变控制，实验显示可按指定幅度把样本推向低似然区域且保持数据几何结构。",
+    "limitations": "理论要求概率密度及对数密度足够光滑，目标似然测度满足绝对连续性，且 Theorem 3--5 还依赖密度比下界、控制系数时间 Lipschitz、不同似然测度间范数等价等假设；真实控制 $c_t$ 依赖时变似然分布的 Radon--Nikodym 导数，实际方法用指数插值和近似分布，控制误差只在列出的范数条件下估计。理论没有分析神经网络分数的逼近误差、概率流数值积分误差、离散高维似然估计或目标分布不可微情形。实验仅覆盖可解析高斯混合和一个预训练 CIFAR-10 模型，以经验一阶随机占优和 Wasserstein 距离验证，未给出跨数据集、异常语义质量或安全性保证；方法控制的是似然分布而非特定个体异常。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "在似然值的推前测度上形式化分布性异常。",
+          "route": "将数据测度 $\\mu$ 通过 $l(x)=\\log p(x)$ 推前为 $L=l_\\#\\mu$，用一阶随机占优 $\\eta\\le_{st}L$ 表示目标向低似然方向移动，并用一维分位数表示的 $W_1(L,\\eta)$ 规定异常幅度 $\\rho$；条件分解保持给定似然水平内的数据结构。",
+          "evidence": "第 II.A 节 Definition 2--5，公式 (6)，PDF 第 2--3 页；Definition 5 给出 $\\eta\\le_{st}L$ 与 $W_1(L,\\eta)\\ge\\rho$ 的异常条件。"
+        },
+        {
+          "claim": "证明似然重加权导出精确的 Radon--Nikodym 结构和分数控制。",
+          "route": "令 $z=d\\eta/dL$，对条件分解积分应用测度分解定理，得到 $d\\nu/d\\mu=z(l(x))$；再对 $q=pz(l)$ 取空间梯度，链式法则把重加权影响压缩为沿原分数方向的标量因子 $1+c(l)$，由 Corollary 2 写成受控概率流 ODE。",
+          "evidence": "第 II.B 节 Theorem 2 与 Corollary 1、Proposition 2、Corollary 2，公式 (7)--(12)，PDF 第 3--4 页；Theorem 2 的证明在 PDF 第 3 页，分数恒等式为 (9)--(11)，控制动力学为 (12)。"
+        },
+        {
+          "claim": "用 OU 半群收敛构造无需重训练的指数控制近似并给出误差界。",
+          "route": "把密度比 $h_t=d\\mu_t/d\\gamma$ 写成 $g_t=h_t-1$，由 Fokker--Planck 方程得到 OU 方程 (13)，再用 Hermite 特征展开证明 $L^2$ 和梯度范数以 $e^{-t}$ 收敛到高斯平衡。对满足 Theorem 4 条件的目标族取 $\\widetilde c_t=e^{-t}c_0$，结合 Theorem 3 的收敛、下界和范数等价假设控制 $\\widetilde c_t-c_t$，得到 Corollary 3 的小时间和大时间误差 $O(\\min(t,e^{-t}))$。",
+          "evidence": "第 II.C 节 Theorem 3，公式 (13)，PDF 第 4--5 页；第 III.A 节 Theorem 4、Theorem 5、Corollary 3，公式 (14)--(15) 及假设 (A1)--(A2)，PDF 第 5--6 页。"
+        },
+        {
+          "claim": "在合成与图像扩散实验中检验低似然引导效果。",
+          "route": "对双高斯混合利用闭式分数 $\\nabla\\log p_t=\\tanh(m_t\\cdot x)m_t-x$ 直接求解概率流 ODE，并用抽样的似然推前分布检验一阶随机占优及目标 $W_1$ 位移；对预训练 CIFAR-10 扩散模型用反向概率流 ODE 估计参考似然分布，改变 $\\rho$ 观察似然分布位移、经验 Wasserstein 距离和视觉结构保持。",
+          "evidence": "第 IV.A--IV.B 节，公式 (16)--(17)、Tables I--III、Figures 1--4，PDF 第 6--8 页；实验报告高斯混合的经验占优和距离，以及 CIFAR-10 中随 $\\rho$ 增大而增加的似然分布位移。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "逐页核查 PDF 第 1--8 页，覆盖 Abstract、Sections I--V、证明、Funding 脚注、Conclusion、References 及全部实验图表；检索 artificial intelligence、generative AI、large language model、ChatGPT、Claude、Gemini、Copilot、Grammarly、LLM 等关键词，未发现作者明确披露 AI 或大语言模型用于研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+    "aiEvidenceSource": "论文 PDF 全文逐页核查（第 1--8 页），包括第 1 页资助脚注、正文末尾 Conclusion、References 及实验部分；未见 Acknowledgments 或 AI/LLM 使用声明，并执行相关关键词检索。",
+    "priorityScore": 55,
+    "priorityTier": "medium",
+    "priorityReason": "正文核查显示该文围绕“基于似然分布控制的扩散模型异常样本生成”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 55/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12113:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12113",
+        "version": 1,
+        "entryKind": "cross_list",
+        "title": "Score-based Outlier Generation via Controlling the Radon-Nikodym Derivative",
+        "authors": [
+          "Amartya Mukherjee",
+          "Tristan Milne",
+          "Kry Yik-Chau Lui",
+          "Stephanie Hazlewood",
+          "Jun Liu"
+        ],
+        "abstract": "Outliers are important for stress-testing algorithms and understanding system behaviour under rare conditions. Despite being commonly described as low-likelihood events, existing generative approaches rarely control likelihood explicitly. In this work, we introduce a measure-theoretic notion of outliers based on the distribution of log-likelihood values, which is guaranteed to assign higher probability mass to low-likelihood events with a specifiable magnitude. Building on this formulation, we derive how likelihood reweighting modifies the diffusion score and use this relation to motivate a controlled modification of the reverse-time dynamics. In particular, likelihood reweighting implies a scaling of the score function with a control term derived from the Radon-Nikodym derivative of the likelihood distributions. Correspondingly, the updated score function can be obtained with no retraining of the diffusion model. We exploit the Ornstein-Uhlenbeck semigroup underlying diffusion models to motivate an exponentially interpolated controller which approximates the true control. Experiments demonstrate controlled generation of low-likelihood samples while remaining consistent with the data geometry.",
+        "categories": [
+          "cs.LG",
+          "math.AP",
+          "math.OC",
+          "math.PR",
+          "stat.ML"
+        ],
+        "primaryCategory": "cs.LG",
+        "arxivUrl": "https://arxiv.org/abs/2609.12113",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12113",
+        "submittedAt": "2026-09-10T18:39:10Z",
+        "updatedAt": "2026-09-10T18:39:10Z",
+        "topicId": "other-analysis",
+        "topicLabel": "其他分析方向",
+        "progressType": "基于似然分布控制的扩散模型异常样本生成",
+        "workSummary": "已核查论文 PDF 第 1--8 页。论文把异常样本定义为对数似然推前测度的分布性下移：目标测度在一阶随机占优下移向低似然区，并以 Wasserstein 距离量化幅度。作者证明似然重加权的 Radon--Nikodym 导数只依赖似然值，从而使分数函数获得标量乘法控制；再利用 Ornstein--Uhlenbeck 半群的指数收敛，以无需重新训练的指数衰减控制近似真实控制，并在高斯混合与 CIFAR-10 上验证。",
+        "techniques": [
+          "对数似然推前测度、一阶随机占优与 Wasserstein 距离异常定义",
+          "条件分解与 Radon--Nikodym 导数的测度重加权",
+          "Fokker--Planck 方程、对数密度方程与分数函数链式法则",
+          "Ornstein--Uhlenbeck 半群、Hermite 谱展开与指数收敛",
+          "概率流常微分方程的似然依赖控制与无重训练采样",
+          "高斯混合闭式分数、经验分布检验与 CIFAR-10 实验"
+        ],
+        "breakthrough": "核心进展是把异常样本从单点启发式判据提升为对数似然分布的可控偏移，并由条件保持的似然重加权严格推出 $d\\nu/d\\mu=z(l(x))$ 及分数缩放 $\\nabla\\log q=[1+c(l)]\\nabla\\log p$。这给出只修改概率流 ODE、无需重新训练扩散模型的控制机制；Ornstein--Uhlenbeck 的 Hermite 谱收敛进一步支持用 $e^{-t}c_0$ 近似真实时变控制，实验显示可按指定幅度把样本推向低似然区域且保持数据几何结构。",
+        "limitations": "理论要求概率密度及对数密度足够光滑，目标似然测度满足绝对连续性，且 Theorem 3--5 还依赖密度比下界、控制系数时间 Lipschitz、不同似然测度间范数等价等假设；真实控制 $c_t$ 依赖时变似然分布的 Radon--Nikodym 导数，实际方法用指数插值和近似分布，控制误差只在列出的范数条件下估计。理论没有分析神经网络分数的逼近误差、概率流数值积分误差、离散高维似然估计或目标分布不可微情形。实验仅覆盖可解析高斯混合和一个预训练 CIFAR-10 模型，以经验一阶随机占优和 Wasserstein 距离验证，未给出跨数据集、异常语义质量或安全性保证；方法控制的是似然分布而非特定个体异常。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "在似然值的推前测度上形式化分布性异常。",
+              "route": "将数据测度 $\\mu$ 通过 $l(x)=\\log p(x)$ 推前为 $L=l_\\#\\mu$，用一阶随机占优 $\\eta\\le_{st}L$ 表示目标向低似然方向移动，并用一维分位数表示的 $W_1(L,\\eta)$ 规定异常幅度 $\\rho$；条件分解保持给定似然水平内的数据结构。",
+              "evidence": "第 II.A 节 Definition 2--5，公式 (6)，PDF 第 2--3 页；Definition 5 给出 $\\eta\\le_{st}L$ 与 $W_1(L,\\eta)\\ge\\rho$ 的异常条件。"
+            },
+            {
+              "claim": "证明似然重加权导出精确的 Radon--Nikodym 结构和分数控制。",
+              "route": "令 $z=d\\eta/dL$，对条件分解积分应用测度分解定理，得到 $d\\nu/d\\mu=z(l(x))$；再对 $q=pz(l)$ 取空间梯度，链式法则把重加权影响压缩为沿原分数方向的标量因子 $1+c(l)$，由 Corollary 2 写成受控概率流 ODE。",
+              "evidence": "第 II.B 节 Theorem 2 与 Corollary 1、Proposition 2、Corollary 2，公式 (7)--(12)，PDF 第 3--4 页；Theorem 2 的证明在 PDF 第 3 页，分数恒等式为 (9)--(11)，控制动力学为 (12)。"
+            },
+            {
+              "claim": "用 OU 半群收敛构造无需重训练的指数控制近似并给出误差界。",
+              "route": "把密度比 $h_t=d\\mu_t/d\\gamma$ 写成 $g_t=h_t-1$，由 Fokker--Planck 方程得到 OU 方程 (13)，再用 Hermite 特征展开证明 $L^2$ 和梯度范数以 $e^{-t}$ 收敛到高斯平衡。对满足 Theorem 4 条件的目标族取 $\\widetilde c_t=e^{-t}c_0$，结合 Theorem 3 的收敛、下界和范数等价假设控制 $\\widetilde c_t-c_t$，得到 Corollary 3 的小时间和大时间误差 $O(\\min(t,e^{-t}))$。",
+              "evidence": "第 II.C 节 Theorem 3，公式 (13)，PDF 第 4--5 页；第 III.A 节 Theorem 4、Theorem 5、Corollary 3，公式 (14)--(15) 及假设 (A1)--(A2)，PDF 第 5--6 页。"
+            },
+            {
+              "claim": "在合成与图像扩散实验中检验低似然引导效果。",
+              "route": "对双高斯混合利用闭式分数 $\\nabla\\log p_t=\\tanh(m_t\\cdot x)m_t-x$ 直接求解概率流 ODE，并用抽样的似然推前分布检验一阶随机占优及目标 $W_1$ 位移；对预训练 CIFAR-10 扩散模型用反向概率流 ODE 估计参考似然分布，改变 $\\rho$ 观察似然分布位移、经验 Wasserstein 距离和视觉结构保持。",
+              "evidence": "第 IV.A--IV.B 节，公式 (16)--(17)、Tables I--III、Figures 1--4，PDF 第 6--8 页；实验报告高斯混合的经验占优和距离，以及 CIFAR-10 中随 $\\rho$ 增大而增加的似然分布位移。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "逐页核查 PDF 第 1--8 页，覆盖 Abstract、Sections I--V、证明、Funding 脚注、Conclusion、References 及全部实验图表；检索 artificial intelligence、generative AI、large language model、ChatGPT、Claude、Gemini、Copilot、Grammarly、LLM 等关键词，未发现作者明确披露 AI 或大语言模型用于研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。",
+        "aiEvidenceSource": "论文 PDF 全文逐页核查（第 1--8 页），包括第 1 页资助脚注、正文末尾 Conclusion、References 及实验部分；未见 Acknowledgments 或 AI/LLM 使用声明，并执行相关关键词检索。",
+        "priorityScore": 55,
+        "priorityTier": "medium",
+        "priorityReason": "正文核查显示该文围绕“基于似然分布控制的扩散模型异常样本生成”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 55/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}

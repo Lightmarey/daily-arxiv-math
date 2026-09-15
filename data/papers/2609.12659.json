@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 2,
+  "arxivId": "2609.12659",
+  "slug": "2609.12659",
+  "latest": {
+    "id": "math.AP:2026-09-14:2609.12659:v1",
+    "categoryId": "math.AP",
+    "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+    "announcementDate": "2026-09-14",
+    "arxivId": "2609.12659",
+    "version": 1,
+    "entryKind": "new",
+    "title": "Multiphasic formulation of Vlasov equations and applications",
+    "authors": [
+      "Aymeric Baradat",
+      "Lucas Ertzbischoff",
+      "Daniel Han-Kwan"
+    ],
+    "abstract": "This work is a mathematical study of the multiphasic formulation of the Vlasov equation, which consists in recasting this collisionless kinetic equation as a system of coupled pressureless Euler equations. This framework allows to consider solutions that are only measure-valued in the velocity variable and is thus relevant to tackle physical problems where rough velocity distributions, such as Dirac masses, naturally arise. We specifically address the case of nonlinear Vlasov equations where the force field is one derivative more regular than some moments in velocity of the solution. Under this key assumption, a unified theory of local well-posedness at finite regularity (typically in Sobolev spaces) is developed from scratch for the multiphasic formulation, yielding corresponding results for the Cauchy problem of the associated Vlasov equation at low regularity. We thoroughly apply this abstract theory to two classes of equations, namely Vlasov-Poisson type systems, and Vlasov-Navier-Stokes type systems. In addition to the justification of the monokinetic limit, it also leads to specific applications for each class of equations, allowing possibly rough velocity distributions. For Vlasov-Poisson type systems, we justify the semiclassical limit from Hartree equations, and we describe the nonlinear instability of homogeneous equilibria. For Vlasov-Navier-Stokes type systems, we establish nonlinear asymptotic stability near monokinetic profiles. New results allowing a separation between the regularity in space and in velocity are proven, and along the way, we also provide new proofs of known results and generalize them to the case of rough solutions. Finally, the flexibility of the framework is exploited to obtain extensions to more sophisticated systems such as the Vlasov-Poisson equation for ions, or the Vlasov equation coupled with the compressible Navier-Stokes system.",
+    "categories": [
+      "math.AP"
+    ],
+    "primaryCategory": "math.AP",
+    "arxivUrl": "https://arxiv.org/abs/2609.12659",
+    "pdfUrl": "https://arxiv.org/pdf/2609.12659",
+    "submittedAt": "2026-09-11T10:05:48Z",
+    "updatedAt": "2026-09-11T10:05:48Z",
+    "topicId": "fluid-dynamics",
+    "topicLabel": "流体方程",
+    "progressType": "多相 Vlasov 统一理论与应用",
+    "workSummary": "构建多相 formulation，将无碰撞 Vlasov 方程改写为耦合的无压 Euler 系统。核心结果是在力场相对于速度矩获得一阶空间正则性增益的条件下，建立有限正则性 Sobolev 局部适定性、稳定性和爆破判据，并将其系统应用于 Vlasov--Poisson、Vlasov--Navier--Stokes 及相关模型。论文还处理粗糙速度分布、Schrödinger--Poisson 半经典极限、Penrose 不稳定性和单动量平衡态的长时间稳定性。",
+    "techniques": [
+      "把标签空间 $(I,\\mu)$ 上的密度--速度族作为基本未知量，通过积分速度矩恢复相空间测度解。",
+      "抽出只含速度族的抽象输运方程，以高正则性估计构造映射，以低正则性稳定估计在完备度量空间中做压缩映射。",
+      "对连续性方程使用 Sobolev、加权 Sobolev 和 Besov 估计，并通过特征线和相空间分布的推前证明多相与 kinetic formulation 的等价性。",
+      "在 Vlasov--Poisson 中结合 WKB 相位、相对稳定性和 Grenier 型线性到非线性方法，处理半经典极限与粗糙均匀平衡的不稳定性。",
+      "在 Vlasov--Navier--Stokes 中利用守恒律、线性化谱隙、精细能量估计、bootstrap 和指数衰减证明小扰动全局稳定。"
+    ],
+    "breakthrough": "统一框架允许初始分布在速度变量上仅为测度，仍保留空间有限正则性和矩的适定性。抽象定理 2.1.10 同时给出局部存在、唯一性、稳定性、时间正则性和爆破判据；其应用给出低速度正则性 Vlasov--Poisson 解、粗糙 WKB 数据的 Schrödinger--Poisson 半经典收敛，以及围绕满足 Penrose 条件的测度型均匀平衡的非线性不稳定性。对周期三维多相 Vlasov--Navier--Stokes，作者进一步证明靠近常值单动量平衡态的全局解、速度向守恒总动量确定的常向量指数收敛，以及密度向平移的渐近剖面收敛。",
+    "limitations": "抽象适定性要求力场相对于相关密度矩至少获得一阶空间正则性；力场与矩同阶或损失导数的情形不由主定理覆盖。抽象结果主要是局部时间的，高阶全局结论依赖具体模型、周期域和小扰动结构。Vlasov--Poisson 不稳定性要求周期域上的 Penrose 谱不稳定条件；论文没有解决稳定平衡、Landau damping 或一般长时间稳定性。Vlasov--Navier--Stokes 的指数衰减依赖周期谱隙，非线性额外阻力情形还要求标签积分指数取无穷，且全局正则性阈值并非最优。",
+    "analysisDepth": "full_text_sections",
+    "proofOutline": {
+      "status": "reviewed",
+      "steps": [
+        {
+          "claim": "建立多相表示与 kinetic formulation 之间的双向等价。",
+          "route": "先把标签族 $(\\rho^\\alpha,v^\\alpha)$ 映射为相空间 Radon 测度，再通过速度矩恢复连续性方程和速度方程；无耦合情形用特征线给出唯一性，耦合情形利用多相解的唯一性反推 kinetic 解，形成存在性和唯一性的双向传递。",
+          "evidence": "Section 1.3, Propositions 1.3.3, 1.3.5, 1.3.12, 1.3.13 and Theorem 1.3.14, PDF pp. 28--42；Propositions 1.3.16--1.3.17, PDF pp. 40--42。"
+        },
+        {
+          "claim": "在抽象力场假设 A1--A2 下证明有限正则性局部适定性。",
+          "route": "对给定试探速度解解线性输运方程，利用高阶 Sobolev 能量估计得到映射的统一高正则性界；对两次迭代作差并用低阶稳定性估计和 Grönwall 得到压缩性；Banach 不动点给出解，随后由逐标签能量估计恢复时间连续性、稳定性和爆破判据。",
+          "evidence": "Section 2.1, Assumptions A1--A2 and Theorem 2.1.10, PDF pp. 49--51；Proof of Theorem 2.1.10, high-regularity estimate (2.1.18), low-regularity estimate (2.1.20), contraction estimate (2.1.22), PDF pp. 56--60。"
+        },
+        {
+          "claim": "将抽象理论应用到 Vlasov--Poisson，并闭合半经典极限与粗糙平衡不稳定性。",
+          "route": "对 Poisson 力场验证密度矩到力场的一阶正则性增益，得到低空间正则性的局部唯一弱解；对 WKB 初值把 Schrödinger--Poisson 写成振幅和相位的多相系统，用稳定性估计令振幅与相位梯度收敛到多相 Vlasov--Poisson 解；在线性不稳定模态上施加小振幅并控制非线性余项，使其在 $O(|\\log\\delta|)$ 时间内放大到负 Sobolev 范数可见的量级。",
+          "evidence": "Chapter 3, Theorems 3.2.1 and 3.2.7, PDF pp. 109--115；Theorem 3.5.4 and its proof, formulas (3.5.3)--(3.5.7), PDF pp. 132--139；Theorem 3.6.4 and proof, formulas (3.6.7)--(3.6.16), PDF pp. 147--154；Theorem 3.7.2, formulas (3.7.1)--(3.7.4), PDF pp. 160--161。"
+        },
+        {
+          "claim": "证明多相及 kinetic Vlasov--Navier--Stokes 在常值单动量平衡附近的全局稳定和指数衰减。",
+          "route": "先由局部适定性得到解，再围绕 $(\\rho^\\alpha,v^\\alpha,U)=(1,V,V)$ 线性化；守恒律确定渐近总动量，谱隙给出梯度和相对速度的线性指数衰减；精细高阶能量估计控制非线性项，bootstrap 延拓全局时间，最后沿特征线把速度衰减转化为 Wasserstein 意义下密度向平移剖面的收敛。可压缩情形额外用流体密度方程和耦合耗散补偿声学项。",
+          "evidence": "Chapter 4, Theorem 4.5.1 formulas (4.5.7)--(4.5.11), PDF pp. 223--226；Theorem 4.5.9 formula (4.5.13), PDF pp. 227--228；linear decay Proposition 4.6.2 formulas (4.6.3)--(4.6.14), PDF pp. 238--242；proof of Theorem 4.5.1, Proposition 4.7.1 and Sections 4.7.2--4.7.4, PDF pp. 249--268；compressible counterpart Theorem 4.5.12 formulas (4.5.17)--(4.5.21) and Section 4.8, PDF pp. 229--282。"
+        }
+      ]
+    },
+    "aiStatus": "no_disclosure_observed",
+    "aiEvidence": "在指定核查范围内未发现作者明确披露使用 AI、LLM 或生成式工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。Preface 仅致谢学术讨论者，未将 AI 或软件工具列为贡献来源。",
+    "aiEvidenceSource": "已核查 PDF 全文，包括 Abstract、Preface、正文第 1--282 页、末尾 Bibliography 第 283--304 页及所有章节末尾内容；检索 artificial intelligence、AI、LLM、ChatGPT、GPT、OpenAI、software、code、proofread、translate、typeset、illustration、Acknowledgements 等相关披露词，未见作者 AI/工具声明。",
+    "priorityScore": 90,
+    "priorityTier": "high",
+    "priorityReason": "正文核查显示该文围绕“多相 Vlasov 统一理论与应用”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 90/100。",
+    "lowPriorityReason": null,
+    "revisionSummary": "首次正文级核查。"
+  },
+  "history": [
+    {
+      "announcementDate": "2026-09-14",
+      "report": {
+        "id": "math.AP:2026-09-14:2609.12659:v1",
+        "categoryId": "math.AP",
+        "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+        "announcementDate": "2026-09-14",
+        "arxivId": "2609.12659",
+        "version": 1,
+        "entryKind": "new",
+        "title": "Multiphasic formulation of Vlasov equations and applications",
+        "authors": [
+          "Aymeric Baradat",
+          "Lucas Ertzbischoff",
+          "Daniel Han-Kwan"
+        ],
+        "abstract": "This work is a mathematical study of the multiphasic formulation of the Vlasov equation, which consists in recasting this collisionless kinetic equation as a system of coupled pressureless Euler equations. This framework allows to consider solutions that are only measure-valued in the velocity variable and is thus relevant to tackle physical problems where rough velocity distributions, such as Dirac masses, naturally arise. We specifically address the case of nonlinear Vlasov equations where the force field is one derivative more regular than some moments in velocity of the solution. Under this key assumption, a unified theory of local well-posedness at finite regularity (typically in Sobolev spaces) is developed from scratch for the multiphasic formulation, yielding corresponding results for the Cauchy problem of the associated Vlasov equation at low regularity. We thoroughly apply this abstract theory to two classes of equations, namely Vlasov-Poisson type systems, and Vlasov-Navier-Stokes type systems. In addition to the justification of the monokinetic limit, it also leads to specific applications for each class of equations, allowing possibly rough velocity distributions. For Vlasov-Poisson type systems, we justify the semiclassical limit from Hartree equations, and we describe the nonlinear instability of homogeneous equilibria. For Vlasov-Navier-Stokes type systems, we establish nonlinear asymptotic stability near monokinetic profiles. New results allowing a separation between the regularity in space and in velocity are proven, and along the way, we also provide new proofs of known results and generalize them to the case of rough solutions. Finally, the flexibility of the framework is exploited to obtain extensions to more sophisticated systems such as the Vlasov-Poisson equation for ions, or the Vlasov equation coupled with the compressible Navier-Stokes system.",
+        "categories": [
+          "math.AP"
+        ],
+        "primaryCategory": "math.AP",
+        "arxivUrl": "https://arxiv.org/abs/2609.12659",
+        "pdfUrl": "https://arxiv.org/pdf/2609.12659",
+        "submittedAt": "2026-09-11T10:05:48Z",
+        "updatedAt": "2026-09-11T10:05:48Z",
+        "topicId": "fluid-dynamics",
+        "topicLabel": "流体方程",
+        "progressType": "多相 Vlasov 统一理论与应用",
+        "workSummary": "构建多相 formulation，将无碰撞 Vlasov 方程改写为耦合的无压 Euler 系统。核心结果是在力场相对于速度矩获得一阶空间正则性增益的条件下，建立有限正则性 Sobolev 局部适定性、稳定性和爆破判据，并将其系统应用于 Vlasov--Poisson、Vlasov--Navier--Stokes 及相关模型。论文还处理粗糙速度分布、Schrödinger--Poisson 半经典极限、Penrose 不稳定性和单动量平衡态的长时间稳定性。",
+        "techniques": [
+          "把标签空间 $(I,\\mu)$ 上的密度--速度族作为基本未知量，通过积分速度矩恢复相空间测度解。",
+          "抽出只含速度族的抽象输运方程，以高正则性估计构造映射，以低正则性稳定估计在完备度量空间中做压缩映射。",
+          "对连续性方程使用 Sobolev、加权 Sobolev 和 Besov 估计，并通过特征线和相空间分布的推前证明多相与 kinetic formulation 的等价性。",
+          "在 Vlasov--Poisson 中结合 WKB 相位、相对稳定性和 Grenier 型线性到非线性方法，处理半经典极限与粗糙均匀平衡的不稳定性。",
+          "在 Vlasov--Navier--Stokes 中利用守恒律、线性化谱隙、精细能量估计、bootstrap 和指数衰减证明小扰动全局稳定。"
+        ],
+        "breakthrough": "统一框架允许初始分布在速度变量上仅为测度，仍保留空间有限正则性和矩的适定性。抽象定理 2.1.10 同时给出局部存在、唯一性、稳定性、时间正则性和爆破判据；其应用给出低速度正则性 Vlasov--Poisson 解、粗糙 WKB 数据的 Schrödinger--Poisson 半经典收敛，以及围绕满足 Penrose 条件的测度型均匀平衡的非线性不稳定性。对周期三维多相 Vlasov--Navier--Stokes，作者进一步证明靠近常值单动量平衡态的全局解、速度向守恒总动量确定的常向量指数收敛，以及密度向平移的渐近剖面收敛。",
+        "limitations": "抽象适定性要求力场相对于相关密度矩至少获得一阶空间正则性；力场与矩同阶或损失导数的情形不由主定理覆盖。抽象结果主要是局部时间的，高阶全局结论依赖具体模型、周期域和小扰动结构。Vlasov--Poisson 不稳定性要求周期域上的 Penrose 谱不稳定条件；论文没有解决稳定平衡、Landau damping 或一般长时间稳定性。Vlasov--Navier--Stokes 的指数衰减依赖周期谱隙，非线性额外阻力情形还要求标签积分指数取无穷，且全局正则性阈值并非最优。",
+        "analysisDepth": "full_text_sections",
+        "proofOutline": {
+          "status": "reviewed",
+          "steps": [
+            {
+              "claim": "建立多相表示与 kinetic formulation 之间的双向等价。",
+              "route": "先把标签族 $(\\rho^\\alpha,v^\\alpha)$ 映射为相空间 Radon 测度，再通过速度矩恢复连续性方程和速度方程；无耦合情形用特征线给出唯一性，耦合情形利用多相解的唯一性反推 kinetic 解，形成存在性和唯一性的双向传递。",
+              "evidence": "Section 1.3, Propositions 1.3.3, 1.3.5, 1.3.12, 1.3.13 and Theorem 1.3.14, PDF pp. 28--42；Propositions 1.3.16--1.3.17, PDF pp. 40--42。"
+            },
+            {
+              "claim": "在抽象力场假设 A1--A2 下证明有限正则性局部适定性。",
+              "route": "对给定试探速度解解线性输运方程，利用高阶 Sobolev 能量估计得到映射的统一高正则性界；对两次迭代作差并用低阶稳定性估计和 Grönwall 得到压缩性；Banach 不动点给出解，随后由逐标签能量估计恢复时间连续性、稳定性和爆破判据。",
+              "evidence": "Section 2.1, Assumptions A1--A2 and Theorem 2.1.10, PDF pp. 49--51；Proof of Theorem 2.1.10, high-regularity estimate (2.1.18), low-regularity estimate (2.1.20), contraction estimate (2.1.22), PDF pp. 56--60。"
+            },
+            {
+              "claim": "将抽象理论应用到 Vlasov--Poisson，并闭合半经典极限与粗糙平衡不稳定性。",
+              "route": "对 Poisson 力场验证密度矩到力场的一阶正则性增益，得到低空间正则性的局部唯一弱解；对 WKB 初值把 Schrödinger--Poisson 写成振幅和相位的多相系统，用稳定性估计令振幅与相位梯度收敛到多相 Vlasov--Poisson 解；在线性不稳定模态上施加小振幅并控制非线性余项，使其在 $O(|\\log\\delta|)$ 时间内放大到负 Sobolev 范数可见的量级。",
+              "evidence": "Chapter 3, Theorems 3.2.1 and 3.2.7, PDF pp. 109--115；Theorem 3.5.4 and its proof, formulas (3.5.3)--(3.5.7), PDF pp. 132--139；Theorem 3.6.4 and proof, formulas (3.6.7)--(3.6.16), PDF pp. 147--154；Theorem 3.7.2, formulas (3.7.1)--(3.7.4), PDF pp. 160--161。"
+            },
+            {
+              "claim": "证明多相及 kinetic Vlasov--Navier--Stokes 在常值单动量平衡附近的全局稳定和指数衰减。",
+              "route": "先由局部适定性得到解，再围绕 $(\\rho^\\alpha,v^\\alpha,U)=(1,V,V)$ 线性化；守恒律确定渐近总动量，谱隙给出梯度和相对速度的线性指数衰减；精细高阶能量估计控制非线性项，bootstrap 延拓全局时间，最后沿特征线把速度衰减转化为 Wasserstein 意义下密度向平移剖面的收敛。可压缩情形额外用流体密度方程和耦合耗散补偿声学项。",
+              "evidence": "Chapter 4, Theorem 4.5.1 formulas (4.5.7)--(4.5.11), PDF pp. 223--226；Theorem 4.5.9 formula (4.5.13), PDF pp. 227--228；linear decay Proposition 4.6.2 formulas (4.6.3)--(4.6.14), PDF pp. 238--242；proof of Theorem 4.5.1, Proposition 4.7.1 and Sections 4.7.2--4.7.4, PDF pp. 249--268；compressible counterpart Theorem 4.5.12 formulas (4.5.17)--(4.5.21) and Section 4.8, PDF pp. 229--282。"
+            }
+          ]
+        },
+        "aiStatus": "no_disclosure_observed",
+        "aiEvidence": "在指定核查范围内未发现作者明确披露使用 AI、LLM 或生成式工具参与研究、证明、写作、代码、编辑、校对、翻译、排版、图表或插图。Preface 仅致谢学术讨论者，未将 AI 或软件工具列为贡献来源。",
+        "aiEvidenceSource": "已核查 PDF 全文，包括 Abstract、Preface、正文第 1--282 页、末尾 Bibliography 第 283--304 页及所有章节末尾内容；检索 artificial intelligence、AI、LLM、ChatGPT、GPT、OpenAI、software、code、proofread、translate、typeset、illustration、Acknowledgements 等相关披露词，未见作者 AI/工具声明。",
+        "priorityScore": 90,
+        "priorityTier": "high",
+        "priorityReason": "正文核查显示该文围绕“多相 Vlasov 统一理论与应用”给出可复查的具体机制与结论，按与偏微分方程主线的相关性、技术复用性和影响综合评分为 90/100。",
+        "lowPriorityReason": null,
+        "revisionSummary": "首次正文级核查。"
+      }
+    }
+  ]
+}
