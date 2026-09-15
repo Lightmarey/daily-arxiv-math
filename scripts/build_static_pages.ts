@@ -11,6 +11,7 @@ import { dirname, join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+import katex from 'katex';
 import ReactMarkdown from 'react-markdown';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
@@ -73,6 +74,27 @@ function scriptJson(value: unknown): string {
 }
 
 function markdownToHtml(markdown: string): string {
+  const normalized = normalizeMathText(markdown).replace(
+    /\$\$([\s\S]*?)\$\$|\$([^$\n]*?)\$/g,
+    (fragment, display: string | undefined, inline: string | undefined) => {
+      const source = display ?? inline ?? '';
+      try {
+        katex.renderToString(source, {
+          displayMode: display !== undefined,
+          strict: 'ignore',
+          throwOnError: true,
+        });
+        return fragment;
+      } catch {
+        const longestTicks = Math.max(
+          0,
+          ...Array.from(source.matchAll(/`+/g), (match) => match[0].length),
+        );
+        const fence = '`'.repeat(longestTicks + 1);
+        return `${fence}${source}${fence}`;
+      }
+    },
+  );
   return renderToStaticMarkup(
     createElement(
       ReactMarkdown,
@@ -80,7 +102,7 @@ function markdownToHtml(markdown: string): string {
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
       },
-      normalizeMathText(markdown),
+      normalized,
     ),
   );
 }

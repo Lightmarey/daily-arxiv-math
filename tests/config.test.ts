@@ -32,7 +32,7 @@ function applyFixture(fixture: ConfigFixture): unknown {
 const example = parseTrackingConfig(
   JSON.parse(await readFile('config.example.json', 'utf8')),
 );
-assert.deepEqual(example.fetchCategories, ['math.AP']);
+assert.deepEqual(example.fetchCategories, ['math.AP', 'math.DG']);
 assert.doesNotThrow(() =>
   parseTrackingConfig({
     ...testConfig,

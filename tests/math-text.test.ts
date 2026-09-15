@@ -26,5 +26,27 @@ assert.equal(
   normalizeMathText('由 Ld≤−θ tr a；得到 C³。'),
   '由 $Ld\\le -\\theta tr a$；得到 $C^{3}$。',
 );
+assert.equal(
+  normalizeMathText(
+    `$-\\partial_tL_T-${String.fromCharCode(8)}eta L_T\\ge0$`,
+  ),
+  '$-\\partial_tL_T-\\beta L_T\\ge0$',
+);
+assert.equal(
+  normalizeMathText('$\\lambda \u0304_T+\\delta \u0303+\\tau \u0302$'),
+  '$\\bar{\\lambda}_T+\\tilde{\\delta}+\\hat{\\tau}$',
+);
+assert.equal(
+  normalizeMathText('$A#B+L\\infty$'),
+  '$A\\#B+L\\infty$',
+);
+assert.equal(
+  normalizeMathText("$U^\\beta '+L_\\hat{Q}$"),
+  "$U^{\\beta'}+L_{\\hat{Q}}$",
+);
+assert.equal(
+  normalizeMathText('$|\nabla $u^q|^p$$ 与 $$u^{q+1}$$'),
+  '$|\\nabla u^q|^p$ 与 $u^{q+1}$',
+);
 
 console.log('math text tests passed');

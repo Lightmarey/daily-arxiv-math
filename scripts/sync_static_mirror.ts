@@ -275,6 +275,9 @@ async function main() {
       join(args.output, `data/daily/${item.announcementDate}.json`),
     );
     if (!old?.analyses) continue;
+    const oldCoverage = new Map(
+      old.coverage.categories.map((coverage) => [coverage.categoryId, coverage]),
+    );
     try {
       selected.set(
         item.announcementDate,
@@ -283,7 +286,18 @@ async function main() {
             date: old.announcementDate,
             lastUpdated: old.lastUpdated,
             categories,
-            coverage: old.coverage.categories,
+            coverage: categories.map(
+              (categoryId) =>
+                oldCoverage.get(categoryId) ?? {
+                  categoryId,
+                  expectedCount: null,
+                  publishedCount: null,
+                  databasePublicationCount: null,
+                  complete: false,
+                  requiredForCompletion: false,
+                  status: 'not_collected' as const,
+                },
+            ),
             reports: old.analyses,
           },
           config,

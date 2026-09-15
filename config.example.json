@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "site": {
-    "name": "分析与偏微分方程前沿日报",
-    "description": "面向研究阅读的 arXiv 公告追踪与分析",
+    "name": "分析、偏微分方程与几何前沿日报",
+    "description": "面向研究阅读的 arXiv 分析与几何公告追踪",
     "links": {
       "source": "https://github.com/Lightmarey/daily-arxiv-math"
     }
@@ -21,8 +21,22 @@
         { "id": "other-analysis", "label": "其他分析方向" }
       ],
       "readingPreferences": "优先关注偏微分方程的新机制、可复用估计、临界现象、正则性与长时间行为；降低仅做轻微参数推广工作的优先级。"
+    },
+    {
+      "id": "math.DG",
+      "label": "微分几何",
+      "color": "#2563a6",
+      "topics": [
+        { "id": "curvature-comparison", "label": "曲率与比较几何" },
+        { "id": "geometric-analysis", "label": "几何分析与几何 PDE" },
+        { "id": "geometric-flows", "label": "几何流" },
+        { "id": "riemannian-special", "label": "黎曼与特殊几何结构" },
+        { "id": "subriemannian-finsler", "label": "亚黎曼与 Finsler 几何" },
+        { "id": "other-dg", "label": "其他微分几何方向" }
+      ],
+      "readingPreferences": "优先关注曲率、比较几何、几何分析、几何 PDE、几何流、黎曼与特殊几何结构中的新机制和可复用技术；重视与奇异空间、拓扑及分析的实质联系。"
     }
   ],
-  "fetchCategories": ["math.AP"],
-  "displayCategories": ["math.AP"]
+  "fetchCategories": ["math.AP", "math.DG"],
+  "displayCategories": ["math.AP", "math.DG"]
 }

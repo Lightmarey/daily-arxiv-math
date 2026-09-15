@@ -27,7 +27,7 @@ import {
 
 const sharedAp = storedReport('math.AP', '2609.00001', {
   title: '<script>alert(1)</script> {{ site.secret }}',
-  abstract: '[bad](javascript:alert(1)) and $R_{ij}$',
+  abstract: '[bad](javascript:alert(1)) and $R_{ij}$ plus $G={F0$',
 });
 const sharedLg = storedReport('cs.LG', '2609.00001');
 const feed = {
@@ -112,6 +112,7 @@ assert.throws(() =>
 const markdown = renderDailyMarkdown(day, testPublicConfig.site.name);
 assert.doesNotMatch(markdown, /<script>/);
 assert.doesNotMatch(markdown, /\{\{ site\.secret \}\}/);
+assert.match(markdown, /\$R_\{ij\}\$/);
 assert.match(markdown, /尚未补读正文/);
 assert.match(markdown, /尚未核查 AI 声明/);
 let paper = mergeStaticPaper(
@@ -121,8 +122,8 @@ let paper = mergeStaticPaper(
 );
 paper = mergeStaticPaper(paper, sharedLg, testPublicConfig.displayCategories);
 assert.equal(paper.history.length, 2, 'paper history key includes category');
-assert.match(renderPaperMarkdown(paper), /分类分析：math\\\.AP/);
-assert.match(renderPaperMarkdown(paper), /分类分析：cs\\\.LG/);
+assert.match(renderPaperMarkdown(paper), /分类分析：math\.AP/);
+assert.match(renderPaperMarkdown(paper), /分类分析：cs\.LG/);
 const checkedPaper = mergeStaticPaper(
   undefined,
   storedReport('math.AP', '2609.00006', {
@@ -259,6 +260,8 @@ await buildStaticPages({ content, out, basePath: '/daily-arxiv-math' });
 const html = await readFile(join(out, 'index.html'), 'utf8');
 assert.doesNotMatch(html, /<script>alert\(1\)<\/script>/);
 assert.doesNotMatch(html, /href=["']javascript:/);
+assert.doesNotMatch(html, /katex-error/);
+assert.match(html, /<code>G=\{F0<\/code>/);
 assert.match(html, /math\.AP/);
 assert.match(html, /证明逻辑\/大纲/);
 assert.match(html, /尚未核查 AI 声明/);

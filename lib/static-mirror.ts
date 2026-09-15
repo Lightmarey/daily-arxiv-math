@@ -4,6 +4,7 @@ import {
   reportsForDisplay,
 } from './dashboard';
 import { aggregateWeeklyVolumes } from './volume';
+import { normalizeMathText } from './math-text';
 import {
   type AiStatus,
   type PaperReport,
@@ -252,14 +253,24 @@ export function mergeStaticPaper(
   };
 }
 
-function escapeMarkdown(value: string): string {
+function escapeMarkdownText(value: string): string {
   return value
-    .replaceAll('\\', '\\\\')
+    .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
-    .replace(/([`*_{}[\]()#+.!|])/g, '\\$1')
-    .replaceAll('{{', '&#123;&#123;')
-    .replaceAll('{%', '&#123;%');
+    .replace(
+      /[\\`*_{}[\]()#+!|$-]/g,
+      (character) => `&#${character.codePointAt(0)};`,
+    );
+}
+
+function escapeMarkdown(value: string): string {
+  return normalizeMathText(value)
+    .split(
+      /(\$\$[\s\S]*?\$\$|\$[^$\n]*?\$|\\\[[\s\S]*?\\\]|\\\([\s\S]*?\\\)|\\begin\{(?:equation\*?|align\*?|gather\*?|multline\*?)\}[\s\S]*?\\end\{(?:equation\*?|align\*?|gather\*?|multline\*?)\})/g,
+    )
+    .map((part, index) => (index % 2 === 1 ? part : escapeMarkdownText(part)))
+    .join('');
 }
 
 function safeExternalUrl(value: string): string {
