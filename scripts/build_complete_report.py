@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+"""Assemble one complete per-category ReportBatchV3."""
+from __future__ import annotations
+import argparse, json, os
+from datetime import datetime, timezone
+from pathlib import Path
+from tracking_config import category_config, config_version, load_config
+
+def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: str, config: dict, now: str | None = None, run_id: str | None = None, scheduled_for: str | None = None, started_at: str | None = None) -> dict:
+    version = config_version(config)
+    if source.get("configVersion") != version: raise ValueError("Source configVersion is stale")
+    category = category_config(config, category_id); manifest = source["manifests"].get(category_id)
+    if not manifest: raise ValueError(f"Source has no manifest for {category_id}")
+    category_analyses = analyses.get(category_id, analyses)
+    papers = {paper["arxivId"]: paper for paper in source["papers"] if paper["arxivId"] in set(manifest["expectedIds"])}
+    expected = set(manifest["expectedIds"]); missing_metadata = sorted(expected - papers.keys()); missing_analysis = sorted(expected - category_analyses.keys()); extra = sorted(set(category_analyses) - expected)
+    if missing_metadata or missing_analysis or extra: raise ValueError(f"Coverage mismatch: metadata={missing_metadata or 'none'}, analysis={missing_analysis or 'none'}, extra={extra or 'none'}")
+    topic_labels = {topic["id"]: topic["label"] for topic in category["topics"]}; new_ids = set(manifest["sourceManifest"]["newIds"]); reports = []
+    for arxiv_id in manifest["expectedIds"]:
+        paper, analysis = papers[arxiv_id], category_analyses[arxiv_id]; topic_id = analysis["topicId"]
+        if topic_id not in topic_labels: raise ValueError(f"Unknown topicId {topic_id} for {category_id}")
+        score = int(analysis["priorityScore"]); tier = "high" if score >= 75 else "medium" if score >= 50 else "low"
+        report = {"categoryId": category_id, "announcementDate": source["announcementDate"], "arxivId": arxiv_id, "version": paper["version"], "entryKind": "new" if arxiv_id in new_ids else "cross_list", "title": paper["title"], "authors": paper["authors"], "abstract": paper["abstract"], "categories": paper["categories"], "primaryCategory": paper["primaryCategory"], "arxivUrl": paper["arxivUrl"], "pdfUrl": paper["pdfUrl"], "submittedAt": paper["submittedAt"], "updatedAt": paper["updatedAt"], "topicId": topic_id, "topicLabel": topic_labels[topic_id], "progressType": analysis["progressType"], "workSummary": analysis["workSummary"], "techniques": analysis["techniques"], "breakthrough": analysis["breakthrough"], "limitations": analysis["limitations"], "analysisDepth": analysis.get("analysisDepth", "abstract"), "proofOutline": analysis.get("proofOutline", {"status": "not_reviewed", "steps": []}), "aiStatus": analysis.get("aiStatus", "not_checked"), "aiEvidence": analysis.get("aiEvidence"), "aiEvidenceSource": analysis.get("aiEvidenceSource"), "priorityScore": score, "priorityTier": tier, "priorityReason": analysis.get("priorityReason", f"按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 {score}/100。"), "lowPriorityReason": analysis.get("lowPriorityReason"), "revisionSummary": analysis.get("revisionSummary")}
+        if tier == "low" and not report["lowPriorityReason"]: raise ValueError(f"Low-priority report {arxiv_id} needs lowPriorityReason")
+        reports.append(report)
+    reports.sort(key=lambda item: item["priorityScore"], reverse=True); completed_at = now or datetime.now(timezone.utc).isoformat(); run_id = run_id or f"complete-{source['announcementDate']}-{completed_at.replace(':', '')}"; scheduled_for = scheduled_for or completed_at; started_at = started_at or scheduled_for
+    return {"schemaVersion": 3, "configVersion": version, "categoryId": category_id, "run": {"runId": run_id, "scheduledFor": scheduled_for, "startedAt": started_at, "completedAt": completed_at, "sourceCursor": source_cursor, "expectedCount": manifest["expectedCount"]}, "announcementDay": {"date": source["announcementDate"], "status": "announced", "source": manifest["source"]}, "sourceManifest": manifest["sourceManifest"], "dailyVolume": manifest["dailyVolume"], "reports": reports}
+
+def main() -> None:
+    parser = argparse.ArgumentParser(); parser.add_argument("source"); parser.add_argument("analyses"); parser.add_argument("--category", required=True); parser.add_argument("--source-cursor", required=True); parser.add_argument("--config"); parser.add_argument("--out", required=True); parser.add_argument("--run-id", default=os.environ.get("ARXIV_RUN_ID")); parser.add_argument("--scheduled-for", default=os.environ.get("ARXIV_SCHEDULED_FOR")); parser.add_argument("--started-at"); args = parser.parse_args()
+    if not args.run_id or not args.scheduled_for: parser.error("--run-id and --scheduled-for are required")
+    payload = build_batch(json.loads(Path(args.source).read_text(encoding="utf-8")), json.loads(Path(args.analyses).read_text(encoding="utf-8")), args.category, args.source_cursor, load_config(args.config), run_id=args.run_id, scheduled_for=args.scheduled_for, started_at=args.started_at)
+    Path(args.out).write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"); print(f"Built complete V3 batch for {args.category} with {len(payload['reports'])} reports")
+if __name__ == "__main__": main()

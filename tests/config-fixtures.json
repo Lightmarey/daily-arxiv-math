@@ -1,0 +1,48 @@
+[
+  {
+    "name": "default",
+    "valid": true,
+    "changes": []
+  },
+  {
+    "name": "dotless arxiv category",
+    "valid": true,
+    "changes": [
+      { "path": ["categories", 0, "id"], "value": "hep-th" },
+      { "path": ["fetchCategories", 0], "value": "hep-th" },
+      { "path": ["displayCategories", 0], "value": "hep-th" }
+    ]
+  },
+  {
+    "name": "empty fetch list",
+    "valid": true,
+    "changes": [{ "path": ["fetchCategories"], "value": [] }]
+  },
+  {
+    "name": "boolean schema version",
+    "valid": false,
+    "changes": [{ "path": ["schemaVersion"], "value": true }]
+  },
+  {
+    "name": "overlong site name",
+    "valid": false,
+    "changes": [
+      {
+        "path": ["site", "name"],
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ]
+  },
+  {
+    "name": "malformed http url",
+    "valid": false,
+    "changes": [{ "path": ["site", "links", "source"], "value": "https://" }]
+  },
+  {
+    "name": "non-http url",
+    "valid": false,
+    "changes": [
+      { "path": ["site", "links", "source"], "value": "ftp://example.test" }
+    ]
+  }
+]
