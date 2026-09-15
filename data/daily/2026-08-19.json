@@ -1,0 +1,2399 @@
+{
+  "schemaVersion": 3,
+  "announcementDate": "2026-08-19",
+  "lastUpdated": "2026-09-11T16:28:18.796Z",
+  "categories": [
+    "math.AP",
+    "math.DG"
+  ],
+  "coverage": {
+    "categories": [
+      {
+        "categoryId": "math.AP",
+        "expectedCount": 33,
+        "publishedCount": 33,
+        "databasePublicationCount": 33,
+        "complete": true,
+        "requiredForCompletion": true,
+        "status": "complete",
+        "completedAt": "2026-09-11T16:28:18.796Z"
+      },
+      {
+        "categoryId": "math.DG",
+        "expectedCount": null,
+        "publishedCount": null,
+        "databasePublicationCount": null,
+        "complete": false,
+        "requiredForCompletion": false,
+        "status": "not_collected",
+        "completedAt": null
+      }
+    ],
+    "expectedCount": 33,
+    "publishedCount": 33,
+    "complete": true
+  },
+  "aiDisclosureCount": 7,
+  "summaryItems": [
+    {
+      "analysisId": "math.AP:2026-08-19:2608.17156:v1",
+      "text": "论文证明一维三次 defocusing NLS 及一大类非可积三次色散流在负 Sobolev 正则度 s>−1/2 下的全局控制。作者先用密度—通量恒等式和守恒量控制低频能量，再以 interaction Morawetz 获得 $L6_{t,x}$ 与双线性 $L2_{t,x}$ 估计；高频非共振项通过隐式 normal form 转换重写为可吸收的良项。frequency envelope 将各 dyadic 块的 $H^s$ 规模传递给局部解，bootstrap 改进 $H^s、Strichartz$ 和 bilinear 界，最后连续性延拓到任意时间。"
+    },
+    {
+      "analysisId": "math.AP:2026-08-19:2608.17186:v1",
+      "text": "论文研究满足 Keller–Osserman 条件的半线性方程 $\\Delta u=f(u)$ 的 boundary blow-up 解唯一性。核心量 $Q_u=|\\nabla u|^{2}/(2F(u))$ 衡量梯度相对于爆破剖面能量的归一化；作者先用比较原理与径向 barrier 给 Q 的尾部下界，再把结构条件转化为 Q 的微分不等式。对 C1,1 域，距离函数 barrier 和局部椭圆估计证明 Q→1；对凸域，最小 blow-up 解满足 $Q\\le 1$，若 F 终端凸则任意解被最小解夹住。"
+    },
+    {
+      "analysisId": "math.AP:2026-08-19:2608.17074:v1",
+      "text": "论文建立带表面张力的二维两相 Brinkman 流自由界面问题的临界全局适定性与圆界面渐近稳定性。作者把界面写成 Fourier 扰动 f，先由边界积分和应力跳跃得到非局部演化方程，再用 Wiener 型代数及时间激活的指数权重处理临界尺度的解析非线性。线性化算子在 Fourier 模态上具有耗散谱，非线性积分项由卷积核与 Bessel 函数估计控制；Picard 映射在小初值球内收缩，给出唯一 mild 解、连续依赖和指数衰减。"
+    },
+    {
+      "analysisId": "math.AP:2026-08-19:2608.17693:v1",
+      "text": "论文把导体对 p-拉普拉斯型热扩散/热损失的变分量与凸几何中的 quermassintegrals 联系起来。对有 Lipschitz 边界的导体—外域对，作者将 p-能量和 p-拉普拉斯算子定义的容量通过光滑逼近、变分表示及 coarea/水平集公式对齐，得到新的热扩散定律。令外域趋于无穷后，论文把 p-容量不等式与等周不等式等价化，并推出固定平均宽度时球是热损失的唯一极值体。"
+    },
+    {
+      "analysisId": "math.AP:2026-08-19:2608.17081:v1",
+      "text": "论文构造反驳 Magnanini 猜想的平面细长蛇形管域。中心曲线由交替直线段和半圆组成，半径缓慢收缩的管状邻域保持多个弯折位置；通过无限条带与薄环面的显式扭转函数渐近，作者证明每个弯折处产生一个局部最大值。随后用域单调性和连续依赖把未收缩管域的热点保留下来，再用中轴/medial axis 分析说明轻微 taper 使边界距离函数只剩一个局部最大值。"
+    }
+  ],
+  "analyses": [
+    {
+      "id": "math.AP:2026-08-19:2608.17156:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17156",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Global solutions for 1D cubic defocusing dispersive equations, Part V: low regularity NLS",
+      "authors": [
+        "Mihaela Ifrim",
+        "Ryan Martinez",
+        "Daniel Tataru"
+      ],
+      "abstract": "This article is motivated by a broad conjecture, formulated by the first and last authors in earlier work, asserting that one-dimensional cubic defocusing dispersive flows with small initial data have global, dispersive solutions. The conjecture was first established for a class of semilinear Schrödinger-type models at $L^2$ regularity, the classical cubic NLS among them. In a complementary direction, Harrop-Griffiths, Killip and Vişan have recently shown, using the completely integrable structure, that the cubic NLS is globally well-posed in $H^s$ for every $-\\tfrac12 < s < 0$. Our aim here is to extend the reach of the global well-posedness conjecture for one dimensional cubic NLS problems to data which is small in negative Sobolev spaces, and to show that global dispersive bounds persist there. We do so for a broad class of nonlinearities which includes the cubic NLS but which in general generates flows that are not completely integrable. Our method is correspondingly robust, resting on density-flux identities, interaction Morawetz estimates and an implicit normal form transformation rather than on integrability, and it reaches all the way to the scaling-critical threshold, namely $s > -\\tfrac12$. As in the earlier work, the global bounds we obtain include both $L^6_{t,x}$ Strichartz estimates and bilinear $L^2_{t,x}$ estimates; these are new even for the classical defocusing cubic NLS at negative Sobolev regularity. There, by scaling, our dispersive bounds also extend to the large data case.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17156",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17156",
+      "submittedAt": "2026-08-17T21:44:07Z",
+      "updatedAt": "2026-08-17T21:44:07Z",
+      "topicId": "dispersive",
+      "topicLabel": "色散方程",
+      "progressType": "分析结果",
+      "workSummary": "论文证明一维三次 defocusing NLS 及一大类非可积三次色散流在负 Sobolev 正则度 s>−1/2 下的全局控制。作者先用密度—通量恒等式和守恒量控制低频能量，再以 interaction Morawetz 获得 $L6_{t,x}$ 与双线性 $L2_{t,x}$ 估计；高频非共振项通过隐式 normal form 转换重写为可吸收的良项。frequency envelope 将各 dyadic 块的 $H^s$ 规模传递给局部解，bootstrap 改进 $H^s、Strichartz$ 和 bilinear 界，最后连续性延拓到任意时间。",
+      "techniques": [
+        "density-flux identities",
+        "interaction Morawetz estimate",
+        "implicit normal-form transform",
+        "frequency envelopes",
+        "dyadic bootstrap"
+      ],
+      "breakthrough": "把全局 dispersive bounds 推到 scaling-critical 阈值 s>−1/2，并在一般非可积 cubic symbol 下获得负正则度的 Strichartz 与双线性估计。",
+      "limitations": "低正则结果要求初值足够小且符号满足 H1s–H3 等结构条件；经典可积 NLS 可借 scaling 放宽到大数据，但论文的一般非可积类没有给出无小性全局理论。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "局部 L2 解在负 Sobolev 初值下可由频率包络唯一构造。",
+            "route": "先对高频截断方程作 $X^{s}$ 型 contraction， admissible frequency envelope 同时控制 L2 和 $H^s$ dyadic 块；局部理论在 L2 质量守恒下给共同存在时间。",
+            "evidence": "PDF 第 16-22 页 Section 3 Theorem 6，equations (3.1)–(3.22)。"
+          },
+          {
+            "claim": "密度—通量与 interaction Morawetz 恒等式提供全局 spacetime 可积性。",
+            "route": "对频率截断解测试质量和动量通量，得到局部密度通量恒等式；对两份解的相互作用积分，正的 defocusing 符号给 $L6_{t,x}$ 控制和 dyadic bilinear L2 控制，低频能量因此不增长。",
+            "evidence": "PDF 第 24-33 页 Sections 4–5 Proposition 4.2、Lemma 4.3、Theorem 7，equations (4.1)–(5.31)。"
+          },
+          {
+            "claim": "隐式 normal form 将最坏的 cubic 高频共振项变成可控的良项。",
+            "route": "按最大 dyadic 频率对 cubic multiplier 分区，在非共振区用相位除法定义 $B^{2n+1}$ 修正；Theorem 8 的隐式方程 $v=u+\\Sigma B(v,...)$ 使导数落在相位上，剩余项满足频率包络可求和界并由 bootstrap 吸收。",
+            "evidence": "PDF 第 33-43 页 Sections 6–7 Theorems 7–8、Propositions 7.4、7.6，equations (6.66)–(7.26)。"
+          },
+          {
+            "claim": "bootstrap 界改进后，负 Sobolev 解可全局延拓并满足 Strichartz/bilinear bounds。",
+            "route": "将 Morawetz、normal-form 和 envelope 估计代回 Theorem 7 的四类 bootstrap 假设，得到严格更小常数；continuity argument 排除首次失控时间，迭代至任意 T，所需 L6 和 bilinear 界随即全局成立。",
+            "evidence": "PDF 第 43-57 页 Sections 8–9 Theorems 8、9 and global continuation argument，equations (8.1)–(9.28)。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–9、全部估计证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-92 页全文。",
+      "priorityScore": 91,
+      "priorityTier": "high",
+      "priorityReason": "论文聚焦色散方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17186:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17186",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Boundary blow-up solutions: gradient asymptotics and uniqueness",
+      "authors": [
+        "Seick Kim"
+      ],
+      "abstract": "Let $Ω\\subset\\mathbb R^n$ be a bounded domain, and let $f$ be a nonnegative, nondecreasing function satisfying the Keller-Osserman condition. We study boundary blow-up solutions of $Δu=f(u)$ in $Ω$. Although existence is classical, uniqueness under these assumptions is known in balls but remains open even for smooth convex domains. We identify the normalized gradient $Q_u=|\\nabla u|^2/(2F(u))$, $F'=f$, as a quantity governing uniqueness. Under a structural condition on $f$, a boundary blow-up solution $u$ is unique if $\\limsup_{x\\to\\partialΩ}Q_u(x)\\le 1$, without any regularity assumption on $\\partial Ω$. For $C^{1,1}$ domains, assuming a growth condition on $f$, we prove $Q_u(x)\\to 1$ for every boundary blow-up solution and hence obtain uniqueness under the structural condition. For convex domains, we prove $Q_u\\le 1$ for the minimal boundary blow-up solution and obtain uniqueness when $\\sqrt F$ is eventually convex, without imposing any additional boundary regularity.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17186",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17186",
+      "submittedAt": "2026-08-17T22:52:08Z",
+      "updatedAt": "2026-08-17T22:52:08Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文研究满足 Keller–Osserman 条件的半线性方程 $\\Delta u=f(u)$ 的 boundary blow-up 解唯一性。核心量 $Q_u=|\\nabla u|^{2}/(2F(u))$ 衡量梯度相对于爆破剖面能量的归一化；作者先用比较原理与径向 barrier 给 Q 的尾部下界，再把结构条件转化为 Q 的微分不等式。对 C1,1 域，距离函数 barrier 和局部椭圆估计证明 Q→1；对凸域，最小 blow-up 解满足 $Q\\le 1$，若 F 终端凸则任意解被最小解夹住。",
+      "techniques": [
+        "Keller–Osserman barriers",
+        "normalized gradient $Q_u$",
+        "comparison principle",
+        "distance-function asymptotics",
+        "convex-domain minimal solution"
+      ],
+      "breakthrough": "用不要求边界正则性的 normalized gradient limsup 条件统一唯一性，并在 C1,1/凸域分别证明 Q→1 或 $Q\\le 1$，扩大了 boundary blow-up 唯一性适用范围。",
+      "limitations": "一般域唯一性仍需结构条件和 limsup $Q\\le 1；Q\\to 1$ 结论要求 C1,1 及增长条件，凸域结论依赖最小解与最终凸性，不能直接覆盖非凸粗糙域或不满足 Keller–Osserman 的 f。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "边界 blow-up 解满足比较原理和由 Keller–Osserman 积分给出的统一下界。",
+            "route": "对任意解与一维 ODE profile 做内外球比较，Keller–Osserman 条件使 profile 在有限距离爆破；把 profile 的导数积分关系转成 u 与 $dist(x,\\partial \\Omega )$ 的上下界，为 Q 的归一化估计提供尺度。",
+            "evidence": "PDF 第 5-10 页 Sections 2–3 Lemmas 2.1–2.5、Theorem 2.3，equations (2.1)–(3.8)。"
+          },
+          {
+            "claim": "在结构条件下，若 $limsup_{\\partial \\Omega }Q_u\\le 1$，则任意 boundary blow-up 解唯一。",
+            "route": "对两个解 u,v，沿同一增长 profile 做平移/缩放构造上下 barrier；Q 的边界 limsup 控制梯度与 F(u) 的相对误差，使平移量趋零。比较原理给 $u\\le v$ 和 $v\\le u$，因而两解相同。",
+            "evidence": "PDF 第 10-16 页 Section 3 Theorem 3.9，equations (3.9)–(3.27)。"
+          },
+          {
+            "claim": "C1,1 域的每个 blow-up 解都有 $Q_u(x)\\to 1$。",
+            "route": "用 C1,1 距离函数构造 v(d) 的局部近边界解，边界曲率误差为 o(1)；Theorem 4.8 的梯度展开给 $|\\nabla u|^{2}/(2F(u))=1+o(1)$，再把该极限代入 Theorem 3.9 的唯一性条件。",
+            "evidence": "PDF 第 16-21 页 Section 4 Theorem 4.8、Corollary 4.13，equations (4.1)–(4.18)。"
+          },
+          {
+            "claim": "凸域中最小解满足 $Q\\le 1，F$ 最终凸时得到唯一性。",
+            "route": "对最小 blow-up 解做凸域内平移比较：凸性使平移后的内部球仍留在域内，比较原理将 profile 梯度界传回 $u_min$，得到 $Q\\le 1$；若 F 在尾部凸，任意解与 $u_min$ 的差可通过凸 barrier 压缩，Theorem 5.3 得到唯一性。",
+            "evidence": "PDF 第 21-27 页 Section 5 Theorems 5.1、5.3，equations (5.1)–(5.22)。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–6、全部 boundary barrier/唯一性证明和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-27 页全文。",
+      "priorityScore": 79,
+      "priorityTier": "high",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17074:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17074",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Critical global well-posedness for the two-phase Brinkman problem with surface tension",
+      "authors": [
+        "Jae Ho Choi"
+      ],
+      "abstract": "We study a system in which a fluid occupying a bounded simply connected region in $\\mathbb{R}^{2}$ is surrounded by another fluid with sharp boundary. They are incompressible Brinkman flows of the same viscosity saturating a porous medium with constant permeability. They interact via surface tension on their interface. We assume that the velocity has no jump across the interface and decays at infinity. We establish the asymptotic stability of the circular interface, which is a steady-state solution to our system. The technical threshold for the size of the initial perturbation for asymptotic stability can be explicitly calculated. We further show that the initial perturbation decays exponentially. We prove the existence, uniqueness, and continuous dependence on initial data of highly regular solutions by containing the perturbation variable in a Wiener-type algebra with a time-activated exponential weight, which allows for analytic solutions with much coarser initial data. The solution is contained in the Wiener-type algebra with the critical scaling exponent for our problem.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17074",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17074",
+      "submittedAt": "2026-08-17T19:24:51Z",
+      "updatedAt": "2026-08-17T19:24:51Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文建立带表面张力的二维两相 Brinkman 流自由界面问题的临界全局适定性与圆界面渐近稳定性。作者把界面写成 Fourier 扰动 f，先由边界积分和应力跳跃得到非局部演化方程，再用 Wiener 型代数及时间激活的指数权重处理临界尺度的解析非线性。线性化算子在 Fourier 模态上具有耗散谱，非线性积分项由卷积核与 Bessel 函数估计控制；Picard 映射在小初值球内收缩，给出唯一 mild 解、连续依赖和指数衰减。",
+      "techniques": [
+        "boundary-integral formulation",
+        "Wiener algebra",
+        "time-activated exponential weights",
+        "Fourier-mode semigroup",
+        "Bessel-kernel nonlinear estimates"
+      ],
+      "breakthrough": "在临界 Wiener 型尺度处理两相 Brinkman 自由边界，并显式给出小扰动阈值、全局解唯一性与界面扰动的指数衰减。",
+      "limitations": "结论针对二维、相同黏度/常渗透率、无速度跳和圆形背景；小数据阈值依赖参数，Wiener 代数方法不覆盖大扰动、三维界面或更一般的黏度跳跃。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "自由界面的流体速度可写成曲率扰动的边界积分和应力不平衡算子。",
+            "route": "用 Brinkman 基本解表示两侧速度，单层/双层边界势满足远场衰减；将速度连续条件与表面张力法向应力跳跃代入，消去压力得到 f 的非局部积分演化。",
+            "evidence": "PDF 第 3-5 页 Section 3.1–3.2，equations (3.1)–(3.18)。"
+          },
+          {
+            "claim": "线性化圆界面在 Wiener 临界范数中生成耗散解析半群。",
+            "route": "对 Fourier 模态线性化，边界积分核的圆对称性使每个模态对角化；Bessel 函数渐近给出模态特征值负实部并保留平移/面积约束零模，故线性半群具有指数衰减和时间平滑。",
+            "evidence": "PDF 第 9-18 页 Sections 9–10、equations (9.1)–(10.36)。"
+          },
+          {
+            "claim": "非线性积分项在时间激活指数 Wiener 空间中满足二次/三次 Lipschitz 估计。",
+            "route": "把曲率和参数化变量的非线性展开成 Fourier 卷积；对每项按最大频率分裂，Bessel kernel 的衰减提供可求和系数，时间权重补偿初始粗数据造成的高频增长，Section 12 的逐模态估计闭合。",
+            "evidence": "PDF 第 25-35 页 Sections 11–12 Theorems 11.5、11.7，Lemmas 11.3–11.4、12.1–12.2。"
+          },
+          {
+            "claim": "小数据 Picard 映射给出全局唯一解并使界面扰动指数趋零。",
+            "route": "Theorem 11.5 在任意有限 T 上把 Duhamel 映射压入闭球；非线性估计使压缩常数与初值范数成正比，且线性耗散给 $e^{-Ct}$。任意 T 的一致估计允许拼接，Theorem 11.7 给出全局 mild 解和指数衰减。",
+            "evidence": "PDF 第 23-26 页 Section 11 Theorems 11.5、11.7，equations (11.4)–(11.16)。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–12、固定点和非线性估计、附录与参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-35 页全文。",
+      "priorityScore": 76,
+      "priorityTier": "high",
+      "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17192:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17192",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Blow-up at finite time for the generalized SQG equations in the Sobolev well-posedness regime",
+      "authors": [
+        "Diego Córdoba",
+        "Óscar Domínguez",
+        "José Lucas-Manchón",
+        "Luis Martínez-Zoroa"
+      ],
+      "abstract": "We prove finite-time singularity formation for the forced generalized surface quasi-geostrophic equation in the singular velocity regime $γ\\in(0,1)$, where $γ=0$ corresponds to SQG. For every such $γ$, we construct a smooth, compactly supported initial datum and a time-dependent force $F$ for which the corresponding solution $θ$ is classical on $[0,1)$ with finite energy for all times, but loses Sobolev regularity at $t=1$. More precisely, there exists \\[ κ_0>2+γ+\\frac{γ^2(1-γ)}{25(4+γ)}, \\] such that the force satisfies $F\\in L^1([0,1];H^κ(\\mathbb{R}^2))$ for every $κ\\in[2+γ,κ_0]$, whereas \\[ \\lim_{T\\nearrow1}\\int_0^T\\|θ(\\cdot,t)\\|_{H^κ}\\,dt=\\infty \\] for every exponent in the same interval. At the same time, the solution remains uniformly bounded in $H^{κ_1}$ throughout its lifespan for any \\[κ_1\\in\\left[0,2+γ-\\frac{γ(1-γ)}{2(4+γ)}\\right].\\] Then, the singularity occurs within the Sobolev well-posedness regime and cannot be attributed to insufficient regularity of the force or the initial conditions. To the best of our knowledge, this is the first finite-time blow-up result for classical finite-energy solutions of the generalized SQG equations in a well-posedness regime.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17192",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17192",
+      "submittedAt": "2026-08-17T23:10:54Z",
+      "updatedAt": "2026-08-17T23:10:54Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文构造 forced generalized SQG 在 $0<\\gamma <1$ 的有限时 Sobolev 奇异。作者选取随时间移动/缩放的光滑 compactly-supported amplitudes 和主方向，使速度奇异积分在主项上形成可控的压缩；force F 用来抵消非主导误差，因而 $\\theta $ 在 t<1 保持经典和有限能量。通过按导数阶数、振幅和主方向分组的 Fourier/物理空间估计，逐层控制所有 remainder，证明力的 $H^\\kappa $ 时间可积性同时 $\\theta $ 的 $H^\\kappa $ 时间积分发散；另一组 $\\kappa _{1}$ 范围保持有界，显示奇异性集中在精确阈值区间。",
+      "techniques": [
+        "moving localized amplitudes",
+        "generalized SQG singular velocity",
+        "principal-direction decomposition",
+        "derivative-by-derivative remainder estimates",
+        "forced cancellation"
+      ],
+      "breakthrough": "对每个 $0<\\gamma <1$ 构造光滑紧支撑初值和时间力，使广义 SQG 在有限时间失去指定 Sobolev 正则性而保留有限能量，并给出力的可积正则度区间。",
+      "limitations": "这是带专门设计外力的构造性 blow-up，阈值依赖 $\\gamma $ 且只在二维全空间；不说明无外力方程或一般初值的奇异形成，也不保证 $t=1$ 后存在延拓。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "选择的 moving amplitude/profile 使广义 SQG 主速度项具有预设的导数增长。",
+            "route": "把 $\\theta $ 分解为有限个带主方向的局部波包，利用 $|D|^{-\\gamma }\\nabla $ 的齐次性计算每个波包速度；幅度 $C_i(t)$ 和位置/尺度按 ODE 选择，使主导导数项的符号与增长率一致。",
+            "evidence": "PDF 第 5-17 页 Section 2 Lemmas 1–4，equations (2.1)–(2.80)。"
+          },
+          {
+            "claim": "外力可抵消非主导项，使构造解在 [0,1) 上满足 forced SQG 且保持经典。",
+            "route": "将候选 $\\theta $ 代回方程定义 $F=\\partial t\\theta +u\\cdot \\nabla \\theta $；对每个 remainder 按导数阶、幅度和方向分组，Lemmas 5–11 给统一 $C\\infty /Sobolev$ 估计，故 F 在 t<1 光滑并紧支撑。",
+            "evidence": "PDF 第 18-31 页 Sections 3–4 Lemmas 5–11，equations (3.90)–(4.20)。"
+          },
+          {
+            "claim": "在 $\\kappa \\in [2+\\gamma ,\\kappa _{0}]$ 区间，F 的 $H^\\kappa $ 时间积分有限而 $\\theta $ 的 $H^\\kappa $ 时间积分发散。",
+            "route": "主项的幅度积分给 $\\theta $ 的下界，remainder 估计保证不会抵消；对 F 则用主项方程消去最高导数，剩余项的时间指数严格可积，参数不等式 $\\kappa _{0}>2+\\gamma +\\gamma ^{2}(1-\\gamma )/(25(4+\\gamma ))$ 保证区间非空。",
+            "evidence": "PDF 第 29-31 页 parameter assumptions；第 55-71 页 Lemmas 11–13 and Theorem 1 proof，equations (4.14)–(4.35)。"
+          },
+          {
+            "claim": "较低正则度的 $\\theta $ 保持有界，从而奇异性是选择性 Sobolev loss 而非能量爆破。",
+            "route": "把导数阶降至 $\\kappa _{1}\\le 2+\\gamma -\\gamma ^{2}(1-\\gamma )/(25(4+\\gamma ))$，主项时间指数变为可积；结合 Lemma 7 的 lower-order product estimate 和 compact support，得到 $sup_{t<1}||\\theta ||_{H^{\\kappa _{1}}}<\\infty $。",
+            "evidence": "PDF 第 3-4 页 Theorem 1(3)–(4)；第 50-61 页 Lemmas 7–11。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–4、所有构造和估计、附录及参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-71 页全文。",
+      "priorityScore": 76,
+      "priorityTier": "high",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17767:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17767",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Application of the Shape Design Method to Hidden Regularity of Degenerate Hyperbolic Equations with Degenerate Boundary",
+      "authors": [
+        "Dong-Hui Yang",
+        "Hongli Sun"
+      ],
+      "abstract": "This paper investigates the well-posedness and hidden regularity of boundary-degenerate hyperbolic equations in a two-dimensional setting. The shape design method is employed, which approximates the original degenerate problem by a family of uniformly elliptic problems on truncated subdomains and passes to the limit through uniform estimates. Within this framework, the existence and uniqueness of weak solutions are established in suitable weighted Sobolev spaces. A hidden regularity estimate for the conormal derivative on the nondegenerate portion of the boundary is obtained, providing a uniform bound in terms of the natural weighted energy norms of the initial data and source term. This estimate yields the boundary trace information essential for observability and controllability of degenerate hyperbolic systems.",
+      "categories": [
+        "math.AP",
+        "math.OC"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17767",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17767",
+      "submittedAt": "2026-08-18T13:30:50Z",
+      "updatedAt": "2026-08-18T13:30:50Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文用 shape design method 处理二维边界退化双曲方程的弱解、唯一性与隐藏正则性。作者在截断域 $\\Omega \\delta $ 上把退化权重替换为 uniformly positive $w\\delta $，先用加权 Poincaré、紧嵌入和 Galerkin 能量法建立一致的近似解$；\\delta \\to 0$ 时，初值和源项限制下的能量界允许抽取弱收敛子列并识别极限方程。为得到非退化边界 $\\Gamma $ 上的 conormal derivative，作者对截断解使用 multiplier/Rellich 恒等式，边界项在 $\\delta \\to 0$ 中保持一致，最终给出 $\\partial \\nu y$ 的 $L2(0,T;L2(\\Gamma ))$ 控制。",
+      "techniques": [
+        "shape design/truncated domains",
+        "weighted energy method",
+        "Galerkin approximation",
+        "Rellich multiplier identity",
+        "weak compactness and limit passage"
+      ],
+      "breakthrough": "在边界退化权重下同时获得唯一弱解与非退化边界部分的 conormal derivative 隐藏正则性，并把估计常数统一到退化极限。",
+      "limitations": "权重退化结构、域几何和非退化边界 $\\Gamma $ 需满足文中假设；隐藏正则性只在 $\\Gamma $ 上，不能直接延伸到退化边界，结论为弱解层面而非一般高阶经典正则性。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "退化加权双曲问题的能量空间具有紧嵌入和适定性所需的 coercivity。",
+            "route": "加权 Poincaré 控制 u 的 L2 范数，权重的局部退化阶保证梯度项不丢失；紧嵌入 $H^1_0(\\Omega ;w)\\to L2$ 让 Galerkin 投影的时间系数有强收敛子列。",
+            "evidence": "PDF 第 4-8 页 Section 2 Lemmas 2.1–2.3，equations (2.1)–(2.14)。"
+          },
+          {
+            "claim": "在截断域 $\\Omega \\delta $ 上，均匀正权问题有唯一弱解且能量界与 $\\delta $ 无关。",
+            "route": "以有限维 Galerkin 基测试方程，时间积分给 $y\\delta 、\\partial ty\\delta $ 和 $\\partial tt$ $y\\delta $ 的加权能量估计$；w\\delta \\ge c\\delta $ 先保证标准双曲适定性，关键是 multiplier 形式使最终常数只依赖原权重上界。",
+            "evidence": "PDF 第 17-21 页 Section 3 Theorem 3.1、Proposition 2，equations (3.1)–(3.12)。"
+          },
+          {
+            "claim": "$\\delta \\to 0$ 时截断解收敛到原退化问题的唯一弱解。",
+            "route": "将 y0,y1,f 限制到 $\\Omega \\delta $，统一能量界给弱收敛；对测试函数先取紧支撑于 $\\Omega $ 的光滑函数，再令 $\\delta \\to 0$ 识别加权双曲形式。差解能量恒等式为零，因而极限唯一，所有子列一致。",
+            "evidence": "PDF 第 21-24 页 Section 3 Theorem 3.2、equations (3.13)–(3.22)。"
+          },
+          {
+            "claim": "非退化边界 $\\Gamma $ 上的 conormal derivative 具有隐藏 L2 正则性。",
+            "route": "对截断方程乘以由 $\\Gamma $ 附近距离函数构造的向量场，积分分部把法向通量与体内能量配对；Uniform Rellich estimate 给 $\\partial \\nu $ $y\\delta $ 的边界 L2 界，随后用弱紧性和迹识别将界传至 $\\delta =0$ 的极限。",
+            "evidence": "PDF 第 24-29 页 Section 4 Proposition 3、equations (4.1)–(4.18)。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–4、近似/极限/隐藏正则性证明和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-29 页全文。",
+      "priorityScore": 76,
+      "priorityTier": "high",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17888:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17888",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Stability and Reconstruction of a Nonlinearity in a Parabolic Equation from Partial Boundary Data",
+      "authors": [
+        "Jason Choy",
+        "Maolin Deng",
+        "Bangti Jin",
+        "Yavar Kian"
+      ],
+      "abstract": "In this work, we investigate the inverse problem of determining a semilinear term in a nonlinear parabolic equation from one single boundary flux measurement taken on an arbitrary subset of the boundary. More precisely, we address both uniqueness and stability issues of the inverse problem and establish new Hölder-type stability estimates. The Hölder exponent depends explicitly on the measurement configuration as well as on regularity properties of the semilinear term. The analysis relies on a novel approach based on the derivation of a suitable integral identity involving solutions of the associated adjoint equation. This allows reformulating the inverse problem as an inverse source problem with a sign-changing source term. The main results are obtained by combining fundamental properties of parabolic equations, including maximum principle and appropriate energy estimates. Finally, we complement the theoretical analysis with an iterative reconstruction algorithm inspired by inverse source problems, and illustrate its accuracy on several numerical experiments.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17888",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17888",
+      "submittedAt": "2026-08-18T15:21:39Z",
+      "updatedAt": "2026-08-18T15:21:39Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文从任意部分边界上的单次通量测量恢复半线性抛物方程中的非线性项。作者对两组非线性 F1,F2 的解取差，并用伴随方程的积分恒等式把边界通量差转成含 F1−F2 的源项配对；通过选择辅助初值和最大值原理，源项符号变化被分区控制。能量估计给出源项的 Hölder 稳定性，C2 情形进一步改善指数；最后的迭代算法按该积分核逐步重建 F。",
+      "techniques": [
+        "adjoint integral identity",
+        "inverse source reduction",
+        "maximum principle",
+        "parabolic energy estimates",
+        "iterative reconstruction"
+      ],
+      "breakthrough": "用单次、任意边界子集上的通量数据同时得到非线性项的唯一性和显式 Hölder 稳定性，并把测量配置与非线性正则度写入稳定指数。",
+      "limitations": "需要初值/边界激励满足文中符号和正性条件，稳定性依赖测量子集几何、观测时间及 F 的 C1/C2 界；迭代重建是理论算法，不保证对噪声数据的数值收敛。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "解差的边界通量可以表示为未知非线性差与伴随解的空间时间积分。",
+            "route": "令 $w=u1-u2$，线性化系数取 F1(u1)−F1(u2) 的差商；将 w 与满足反向抛物伴随方程的 v 配对并积分分部，初始/边界项消去后只留下 (F1−F2)(u2)v 的源项。",
+            "evidence": "PDF 第 5-9 页 Section 2 Theorem 2.1，equations (2.1)–(2.18)。"
+          },
+          {
+            "claim": "最大值原理和辅助解构造把源项配对转成 F1−F2 在目标区间的点值控制。",
+            "route": "选择带有局部 bump 的初值，使 u2 在观测时段覆盖给定值区间；伴随解保持固定符号并在测量子域传递边界通量信息，源项的符号变化通过正负区域拆分后分别估计。",
+            "evidence": "PDF 第 9-14 页 Section 3 Lemmas 3.1–3.2，equations (3.1)–(3.22)。"
+          },
+          {
+            "claim": "单次部分边界测量给出非线性项的 Hölder 稳定性及唯一性。",
+            "route": "对能量恒等式中的内部源项用 Cauchy–Schwarz 和 parabolic smoothing 估计，观测通量范数控制其配对；插值低阶源项界与 C1/C2 正则度得到 Hölder 指数，若通量差为零则逐点得到 $F1=F2$。",
+            "evidence": "PDF 第 3-5 页 Theorems 2.1–2.2、Corollary 2.1；第 14-18 页 stability proof，equations (2.19)–(2.32)。"
+          },
+          {
+            "claim": "由积分稳定性可构造逐次逼近的非线性重建程序。",
+            "route": "把当前估计的 F 插入正问题，利用测量残差和伴随核更新非线性值；Theorem 2.2 的 Hölder 误差控制保证每次更新在有界区间内收缩到真实项，正则化后可处理测量离散误差。",
+            "evidence": "PDF 第 18-21 页 Section 4 reconstruction algorithm and convergence discussion。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–4、逆问题证明、算法、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-21 页全文。",
+      "priorityScore": 71,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17474:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17474",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Propagation phenomena in KPP-bistable periodic patchy environments",
+      "authors": [
+        "Quentin Griette",
+        "François Hamel",
+        "Mingmin Zhang",
+        "Min Zhao"
+      ],
+      "abstract": "This paper first investigates the propagation dynamics of solutions to the Cauchy problem for a one-dimensional reaction-diffusion equation in a spatially periodic environment consisting of two distinct patch types. The novelty of this work lies in the systematic analysis of a KPP-bistable heterogeneous framework. In this setting, the respective patch lengths, the linear stability of the zero solution and the positive periodic steady state, and the magnitude of the initial data play crucial roles in the long-time dynamics. We first establish persistence properties of the species, showing that uniform persistence holds when the zero steady state of the associated periodic patch model is unstable, while local persistence is obtained under additional suitable conditions. Using a dynamical systems approach, we further establish spreading properties and demonstrate the existence of pulsating traveling waves in two different cases, depending on whether the trivial solution is unstable or stable. Finally, we present two sets of sufficient conditions characterizing species extinction.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17474",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17474",
+      "submittedAt": "2026-08-18T08:01:16Z",
+      "updatedAt": "2026-08-18T08:01:16Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文分析一维周期 KPP-bistable 交替斑块环境中的传播、持久与灭绝。作者先用周期线性化主特征值和正周期稳态判断零解稳定性，利用比较原理建立全局/局部 persistence；在 KPP 斑块与 bistable 斑块长度、积分符号和初值幅度的不同组合下，构造局部 bump 与 traveling-wave sub/supersolutions。周期 traveling wave 的存在通过单调迭代和相邻周期边界值问题得到，最小传播速度由线性谱决定；对零解稳定而 bistable 积分为负的情形，能量下降与局部化比较给出灭绝。",
+      "techniques": [
+        "principal eigenvalue analysis",
+        "periodic sub/supersolutions",
+        "comparison principle",
+        "pulsating traveling waves",
+        "localized energy argument"
+      ],
+      "breakthrough": "系统刻画 KPP-bistable 周期 patch 中由斑块长度、谱稳定性和 bistable 面积符号共同决定的传播、局部持久和灭绝机制，并证明周期波的最小速度判据。",
+      "limitations": "环境限于一维周期、两类斑块和标量反应扩散，初值主要要求非负紧支撑；传播速度和灭绝判据依赖 $\\lambda _{1}$、斑块积分及长度阈值，不能直接推广到随机/多维异质环境。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "零解不稳定时，任意非零紧支撑初值在全空间均匀持久。",
+            "route": "主特征函数 $\\phi >0$ 给线性化增长率，取足够小的 $\\epsilon \\phi $ 作为初始下解并用周期正稳态作上解；比较原理反复跨周期传播，得到所有空间位置的长期正下界。",
+            "evidence": "PDF 第 7-9 页 Section 2 Theorem 2.1、Proposition 2.1，equations (2.1)–(2.18)。"
+          },
+          {
+            "claim": "bistable 斑块积分为正且足够长时，大于阈值的局部初值产生局部持久。",
+            "route": "在单个 bistable patch 内构造接近正稳态的 bump，patch 边界通过周期 KPP 区的比较流补偿；初值超过 $\\theta +\\eta $ 后，subsolution 在 patch 内保持正性，周期平移和局部 Harnack 估计给任意有界区的正 liminf。",
+            "evidence": "PDF 第 8-12 页 Theorem 2.2、Lemmas 3.1–3.3，equations (2.6)–(3.14)。"
+          },
+          {
+            "claim": "周期 traveling wave 存在当且仅当速度 $c\\ge c*$。",
+            "route": "指数尾部线性化给速度—衰减率色散关系，主特征值选择 c*；对 $c\\ge c*$ 在有限周期胞上解截断边值问题，单调迭代得到连接 q 到 0 的 wave，极限不变性排除平凡解；c<c* 被线性增长率矛盾排除。",
+            "evidence": "PDF 第 12-17 页 Theorems 2.3–2.4、Proposition 4.1，equations (3.15)–(4.18)。"
+          },
+          {
+            "claim": "当 bistable 积分为负且初值局部化时，解趋于零；正积分时则可形成向外传播的 pulsating front。",
+            "route": "负积分情形对 patch 能量构造严格下降的局部测试函数，边界通量由大 patch 长度和支撑距离吸收，forcing 最终不足以维持阈值，故 $L\\infty \\to 0$。正积分情形先构造周期正稳态，再用 traveling-wave subsolution 和周期 supersolution 夹逼，得到 front 与传播速度。",
+            "evidence": "PDF 第 10-14 页 Theorem 2.7；第 18-29 页 Sections 4–5 Theorems 2.5–2.6、Propositions 4.1–4.4。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–5、所有传播/持久/灭绝证明和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-51 页全文。",
+      "priorityScore": 70,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17385:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17385",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Global solutions to an initial-boundary value problem for a model of convection driven by surface tension",
+      "authors": [
+        "Wending Wu",
+        "Xiaojing Xu"
+      ],
+      "abstract": "This paper establishes the global existence of non-negative weak solutions to a two-dimensional, fourth-order nonlinear degenerate parabolic equation modeling surface-tension-driven convection in thin fluid films. First, we construct a regularized approximate problem and prove its solvability via the Galerkin method. Utilizing energy and entropy functionals alongside a singular entropy condition $1/h_0 \\in L^1(Ω)$, we secure uniform a priori bounds for higher-order spatial and time derivatives. These bounds enable the use of the Aubin-Lions lemma and Gagliardo-Nirenberg inequalities to achieve strong compactness and essential $L^6$-integrability. Furthermore, we adopt the Alber-Zhu framework to rigorously define higher-order local weak derivatives and pass to the limit. Finally, we prove the limit function is non-negative, confirming it as a global weak solution to the original problem.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17385",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17385",
+      "submittedAt": "2026-08-18T05:25:22Z",
+      "updatedAt": "2026-08-18T05:25:22Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文证明二维表面张力驱动薄膜方程的全局非负弱解存在。作者先对退化四阶方程加入正则化，利用 Galerkin 方法得到近似解；能量与奇异熵泛函给出 $h、\\nabla \\Delta h$、时间导数的统一估计，条件 $1/h0\\in L1$ 防止厚度变负。Aubin–Lions 与 Gagliardo–Nirenberg 产生强紧性和 L6 可积性；由于高阶局部弱导数不能直接用标准分布定义，作者使用 Alber–Zhu 框架在正厚度集合上定义它们，最后通过截断和下半连续性将正则化极限带回原方程。",
+      "techniques": [
+        "Galerkin regularization",
+        "energy and singular entropy estimates",
+        "Aubin–Lions compactness",
+        "Gagliardo–Nirenberg interpolation",
+        "Alber–Zhu local weak derivatives"
+      ],
+      "breakthrough": "在四阶退化且含对流的薄膜模型中保留全局弱解的非负性，补足高阶局部弱导数定义与极限传递这一技术缺口。",
+      "limitations": "初始厚度需满足奇异熵可积条件，解的结论是弱解且依赖二维有界域/边界条件；不提供唯一性、正则性提升或接触集的精细动力学。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "正则化问题有 Galerkin 近似解，并满足与 $\\kappa $ 无关的能量/熵估计。",
+            "route": "把退化 mobility 替换为正的 $\\kappa -regularized$ mobility，在有限维基上投影得到常微分系统；测试方程以 h 和 singular entropy primitive，四阶项给耗散，熵项控制 $h^{-1}$，得到 Lemmas 2.1–2.2 的 uniform bounds。",
+            "evidence": "PDF 第 5-12 页 Section 2 Theorem 2.4、Lemmas 2.1–2.2，equations (2.1)–(2.24)。"
+          },
+          {
+            "claim": "正则化序列在空间和时间上具有足够紧性，并获得 L6 控制。",
+            "route": "能量界控制 $\\nabla \\Delta h$ 与时间差分，Gagliardo–Nirenberg 将高阶空间量插值到 L6；Aubin–Lions 对 h 和 $\\nabla h$ 给强收敛子列，使非线性 mobility 与对流项可逐项极限。",
+            "evidence": "PDF 第 12-18 页 Section 3 Lemmas 3.1–3.5、Corollary 3.4，equations (3.1)–(3.28)。"
+          },
+          {
+            "claim": "极限 h 的高阶局部弱导数可在正厚度集合 Ah 上定义，并满足所需积分恒等式。",
+            "route": "在 $Ah={h>0}$ 的紧子集上利用 strong convergence 与 reciprocal bounds，按 Alber–Zhu 的局部测试定义 $\\nabla \\Delta h；Egorov$ 选择几乎一致收敛子列，逐层截断处理 h 接近零的区域，得到 Lemmas 4.2–4.3 的局部导数。",
+            "evidence": "PDF 第 18-23 页 Section 4 Lemmas 4.1–4.3，equations (4.1)–(4.18)。"
+          },
+          {
+            "claim": "正则化极限是原方程的全局非负弱解。",
+            "route": "对测试函数通过强/弱收敛传递四阶通量和对流项，熵下半连续性保持 $h\\ge 0$；任意有限 T 都有一致估计，故可对 $\\kappa _n\\to 0$ 对角抽取并延拓到 $[0,\\infty )$，得到 Theorem 1.3/2.4。",
+            "evidence": "PDF 第 22-34 页 Section 4 Theorem 1.3、Theorem 2.4、Lemma 4.4，equations (4.19)–(4.42)。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页检查摘要、引言、Sections 2–4、Galerkin/紧性/极限证明、附录和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第 1-21 页全文。",
+      "priorityScore": 68,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.18075:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.18075",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "Unique Ergodicity for the Projective Process of the 2D Navier--Stokes Equation with Nondegenerate Noise",
+      "authors": [
+        "Zeng Lian",
+        "Rongchang Liu",
+        "Kening Lu"
+      ],
+      "abstract": "We prove unique ergodicity of the projective process associated with the two dimensional Navier--Stokes equation in vorticity form, with additive diagonal noise acting on every nonzero real Fourier phase and satisfying two sided power law bounds. Consequently, the exact Furstenberg--Khasminskii formula for the top Lyapunov exponent holds. The main new ingredient is a compact dense mechanism for asymptotic generalized coupling in the absence of a Foiaş--Prodi type high-low mode decomposition for the projective dynamics. Using the dense range of the Malliavin derivative and compactness of the state derivative, we construct finite rank perturbations of the Wiener path that compensate, to first order, for perturbations of the initial condition, leaving a residual whose logarithmic growth has negative stationary mean and hence contracts locally at an exponential rate, with a cost controlled by a triangular scheme of blockwise Ramer transformations.",
+      "categories": [
+        "math.PR",
+        "math.AP"
+      ],
+      "primaryCategory": "math.PR",
+      "arxivUrl": "https://arxiv.org/abs/2608.18075",
+      "pdfUrl": "https://arxiv.org/pdf/2608.18075",
+      "submittedAt": "2026-08-18T17:58:37Z",
+      "updatedAt": "2026-08-18T17:58:37Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文证明带非退化对角噪声的二维 Navier–Stokes projective process 唯一遍历性。由于投影动力学没有通常的 high/low Foiaş–Prodi 分解，作者利用 Malliavin 导数的稠密值域和状态导数的紧性，构造有限秩 Wiener path 扰动来一阶补偿初值方向。修正后的残差满足负的平稳对数增长率，局部指数收缩；一组三角形 blockwise Ramer 变换把这些局部耦合拼成全局 asymptotic generalized coupling。强 Feller/irreducibility 与 Harris 型遍历性最终给唯一不变测度，并推出 Furstenberg–Khasminskii 顶 Lyapunov 指数公式。",
+      "techniques": [
+        "Malliavin derivative dense range",
+        "compact state derivative",
+        "finite-rank path perturbation",
+        "Ramer transformations",
+        "asymptotic generalized coupling"
+      ],
+      "breakthrough": "在 projectivisation 破坏传统 high/low coupling 的情形，建立紧致稠密的有限秩 Wiener path coupling 机制并证明唯一遍历性。",
+      "limitations": "要求每个非零 Fourier phase 受双侧幂律控制的对角非退化噪声和二维周期域；方法依赖局部 Malliavin 可微性、状态导数紧性与 blockwise construction，未覆盖退化噪声或三维情形。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "线性化 Malliavin 导数在每个固定时间对 projective fibre 具有稠密值域。",
+            "route": "对 Fourier mode 向量场计算 Lie brackets，weighted shifts 生成所有有限 Fourier 方向；截断后用噪声的两侧幂律控制逆 Gramian，闭包得到 Malliavin range 稠密。",
+            "evidence": "PDF 第 9-17 页 Section 3 Proposition 3.1、Lemmas 3.2–3.6、Theorem 3.7，equations (3.1)–(3.25)。"
+          },
+          {
+            "claim": "可以选取有限秩 path perturbation 一阶抵消初值扰动，并保留负的残差对数增长。",
+            "route": "在切空间图表中用 Malliavin range 选有限基，解有限维 Gramian 方程得到 $K_q$；与状态导数的紧性结合，把初值差的主线性项抵消，剩余项由 compact remainder 控制，其 logarithmic growth stationary mean 为负。",
+            "evidence": "PDF 第 18-24 页 Section 4 Proposition 4.3、Corollary 4.4，equations (4.5)–(4.18)。"
+          },
+          {
+            "claim": "三角形 blockwise Ramer 变换给出局部指数收缩的绝对连续耦合。",
+            "route": "按 block 时间长度逐步应用有限秩 $K_q$，把每步 residual 缩小并控制 Cameron–Martin cost；Ramer determinant 与二阶 Fréchet remainder 的乘积可求和，故变换后的 Wiener law 与原 law 等价并在目标邻域相遇。",
+            "evidence": "PDF 第 24-36 页 Sections 4–5 Lemmas 4.5–4.8、block coupling construction。"
+          },
+          {
+            "claim": "项目过程唯一遍历并满足 Furstenberg–Khasminskii 公式。",
+            "route": "局部 asymptotic coupling 加 irreducibility 产生唯一 invariant measure；Krylov–Bogoliubov/tightness 给存在性，coupling 收缩给唯一性和时间平均收敛。将 projective cocycle 的 logarithmic norm 按 invariant measure 积分，得到顶 Lyapunov 指数的精确公式。",
+            "evidence": "PDF 第 36-84 页 Theorem 2.1、Corollary 2.2、Sections 5–6 final ergodic argument。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者在 Use of generative artificial intelligence 中明确披露 OpenAI ChatGPT 用于 proof auditing 和 manuscript preparation，并说明作者对数学内容负责；两项均属于论文研究/制作相关 AI 使用。",
+      "aiEvidenceSource": "PDF 第 82 页 Use of generative artificial intelligence。",
+      "priorityScore": 68,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17383:v2",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17383",
+      "version": 2,
+      "entryKind": "new",
+      "title": "Compactly Supported Finite-Energy Stationary Solutions of the Three-Dimensional Navier-Stokes Equations",
+      "authors": [
+        "Xuanxuan Zhao"
+      ],
+      "abstract": "We construct nonzero compactly supported stationary distributional solutions $u\\in L^2(\\mathbb{R}^3;\\mathbb{R}^3)$ of the unforced incompressible Navier--Stokes equations, together with compactly supported pressures in $L^1$, with both norms arbitrarily small. The construction addresses the three-dimensional finite-energy endpoint at which the usual single-scale intermittent Mikado mechanism loses its algebraic gain against the Laplacian. The main new ingredient is a logarithmic Mikado profile, built from a truncated two-dimensional harmonic dipole and spread over logarithmically many transverse scales. The same perturbation yields a localized $h$-principle: nonzero stationary solutions are strongly dense in the localized $L^p$ classes for every $1\\leq p<2$ and in $H^{-1}$, and weakly dense at $p=2$, while strong $L^2$ density fails because of an exact isotropic quadratic-moment constraint. We also prescribe arbitrary positive $L^2$ norms, periodize the construction to $\\mathbb{T}^3$, and obtain a stationary-versus-Leray nonuniqueness mechanism for the evolutionary equations.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17383",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17383",
+      "submittedAt": "2026-08-18T05:18:53Z",
+      "updatedAt": "2026-08-27T23:31:46Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文构造三维无外力 Navier–Stokes 的非零紧支撑 stationary distributional 解，并描述其局部 h-principle。关键构造是 logarithmic Mikado profile：由截断二维 harmonic dipole 生成，在对数多级横向尺度上铺展，抵消临界端点中 Laplacian 对单尺度 Mikado 的损失。周期场满足散度、应力和 anti-divergence 恒等式；再以局部对称 anti-divergence、corrector viscosity 和 cutoff 将周期族嵌入任意球。尺度 $L\\to \\infty $ 后得到 Lp<2/H−1 强密度和 L2 弱密度，而各解的精确各向同性二阶矩阻止强 L2 稠密；周期化还产生 stationary 与 Leray 解的非唯一。",
+      "techniques": [
+        "logarithmic Mikado profile",
+        "periodic symmetric anti-divergence",
+        "localized stress identity",
+        "corrector viscosity",
+        "convex-integration density argument"
+      ],
+      "breakthrough": "在三维有限能量端点构造紧支撑 stationary Navier–Stokes 解，给出 p<2/H−1 的局部强密度与 $p=2$ 的精确矩约束，并实现任意正 L2 能量及周期化非唯一。",
+      "limitations": "解是 distributional stationary solutions，依赖特殊 logarithmic profile 和紧支撑局部化；强 L2 稠密性被各向同性矩约束排除，不能据此宣称 Leray–Hopf 类唯一性或一般初值柔性。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "logarithmic dipole 在多个横向尺度上产生可控的周期 Mikado 基元。",
+            "route": "从二维 harmonic dipole 截断构造 Lemma 4.1 的 compact profile，再按几何级数横向尺度叠加；对数权重抵消临界三维 Laplacian 的尺度损失，并保持均值零与可计算二阶矩。",
+            "evidence": "PDF 第 7-14 页 Sections 3–4 Lemma 4.1、Lemma 3.1，equations (3.1)–(4.18)。"
+          },
+          {
+            "claim": "每个频向量的周期场满足散度自由、零平均和精确 stress/anti-divergence 恒等式。",
+            "route": "利用频率的正交排列和相位平移消除交叉项，构造对称 trace-free stress S 与 skew potential $\\Omega ；Lemma$ 5.1–5.2 给 div $W=0、div(W⊗W)=0、div$ $S=\\Delta W$ 和 div $\\Omega =W$。",
+            "evidence": "PDF 第 13-18 页 Section 5 Proposition 5.2、Lemma 5.1，equations (5.1)–(5.17)。"
+          },
+          {
+            "claim": "周期族经局部化和 corrector viscosity 可嵌入任意球并形成 stationary NS 分布解。",
+            "route": "把周期场乘以空间振幅 $a_k$，局部化产生的 divergence/stress error 用 Bogovskii 与 local symmetric anti-divergence 修正；modulated viscosity 和 corrector stress 吸收 $\\Delta W$ 项，极限 $L\\to \\infty $ 使误差趋零，定义 compact pressure。",
+            "evidence": "PDF 第 18-27 页 Sections 6–8 Lemmas 6.1、7.1–7.2、Theorems 1.2–1.3，equations (6.1)–(8.24)。"
+          },
+          {
+            "claim": "局部密度、矩约束和周期化结论随 $L\\to \\infty $ 分别给出 p<2/H−1 密度、L2 障碍及 stationary/Leray 非唯一。",
+            "route": "velocity estimates make Lp and H−1 errors vanish for p<2; weak convergence survives at $p=2$. Meanwhile $∫u⊗u=(||u||^{2}/3)I$ is exact, so deviatoric moments remain zero and block strong L2 approximation. Choosing the energy scale and periodizing the profile yields the two evolutionary solutions in Corollaries 1.5–1.7.",
+            "evidence": "PDF 第 1-3 页 Theorem 1.3、Corollaries 1.5–1.7；第 27-34 页 Sections 8–9 density and periodic conclusions。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者在 Acknowledgments 中明确披露 ChatGPT (OpenAI) 作为 Lemma 4.1 准备的辅助工具，并说明该引理的全部数学论证和结论由作者独立检查验证；仍属于与论文制作/证明相关的 AI 使用。",
+      "aiEvidenceSource": "PDF 第 31 页 Acknowledgments。",
+      "priorityScore": 67,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于奇性与适定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17617:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17617",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Time-Asymptotic Stability of the Stationary Solution to the Impermeable Wall Problem for the radially Symmetric Navier-Stokes-Korteweg Equations",
+      "authors": [
+        "Jeongho Kim"
+      ],
+      "abstract": "We study the asymptotic behavior of the initial-boundary value problem for the radially symmetric Navier--Stokes--Korteweg (NSK) equations defined on the exterior domain $Ω= \\{x\\in\\R^n~|~|x|> 1\\}$. In particular, we consider the impermeable wall problem, where the velocity at the boundary $\\{x\\in\\R^n~|~|x|=1\\}$ is set to be zero. We show that, if the initial data is a small perturbation of the stationary solution, and the boundary data are sufficiently small, then there exists a global-in-time strong solution to the radially symmetric NSK equations, and it converges to the stationary solution time-asymptotically. Our method is based on elementary energy estimates with a combination of carefully designed energy functionals.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17617",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17617",
+      "submittedAt": "2026-08-18T10:32:55Z",
+      "updatedAt": "2026-08-18T10:32:55Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文研究 $n\\ge 3$ 的径向不可渗透壁 Navier–Stokes–Korteweg 初边值问题。作者先把密度与速度写成给定静态态的扰动，利用径向权重建立从 L2 到二阶导数的复合能量；在小边界数据和小初扰动下，这个能量控制密度正性并允许局部解延拓为全局强解。最后通过耗散量属于 $W^{1,1}(0,\\infty )$ 以及一维 Sobolev 不等式证明扰动及其梯度在无穷时间趋于零。",
+      "techniques": [
+        "径向扰动方程",
+        "相对内能",
+        "加权 L2 能量估计",
+        "高阶耗散估计",
+        "连续性延拓与时间渐近性"
+      ],
+      "breakthrough": "在外部径向区域和允许小非零边界密度梯度的条件下，给出静态解附近强解的全局存在与 $W^{1,\\infty }\\times L\\infty $ 渐近稳定性；核心是把 Korteweg 高阶项和压力/黏性耗散合并为与扰动范数等价的单一 Lyapunov 泛函。",
+      "limitations": "维数必须满足 $n\\ge 3$，且边界数据、初始扰动和密度上下界均需小性/正性条件；结果限于径向对称、不可渗透壁和论文给定压力与输运系数，未覆盖大数据或非径向扰动。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "静态密度附近的小扰动满足一个闭合的加权能量不等式。",
+            "route": "将密度扰动 ϕ 与径向速度 $\\psi $ 代入扰动系统，先用相对内能控制 ϕ 和 $ϕ_r$，再分别以 $ϕ_r、\\psi _r$ 乘方程并分部积分；压力差、黏性项和 Korteweg 项按径向权 $r^{n-1}$ 配对，合成式(3.19)的泛函 L，并由 (3.20)–(3.21) 证明它与 $N^{2}$ 等价。",
+            "evidence": "PDF 第6–15页 Section 3，Lemma 3.1–3.4，尤其 equations (3.7)、(3.19)–(3.21)。"
+          },
+          {
+            "claim": "在小性假设下，扰动范数在任意有限时间区间保持有界且耗散可积。",
+            "route": "把四个引理相加，选取小 $\\delta 、\\epsilon $ 吸收非线性余项 $C(\\delta +\\epsilon )D$，得到 Proposition 3.1 的积分估计；其中密度 $L\\infty $ 小量由 N(t) 控制，从而系数保持在静态态附近。",
+            "evidence": "PDF 第6页 Proposition 3.1 及第14–18页 equation (3.19)后的合并估计 (3.20)–(3.25)。"
+          },
+          {
+            "claim": "局部强解可延拓为全局强解而不会失去密度正性。",
+            "route": "Proposition 4.1 先给出带正密度下界的局部解；定义最大存在时间 T*，若其有限则 Proposition 3.1 保证 $N(t)<\\epsilon $，并由 Sobolev 控制 $||ϕ||\\infty $ 使密度仍远离真空，结合局部理论排除 T* 有限。",
+            "evidence": "PDF 第19–22页 Section 4.1，Proposition 4.1 与其后的 continuation argument，尤其 equation (4.1)。"
+          },
+          {
+            "claim": "全局解满足 $||ϕ(t)||_{W^{1,\\infty }}+||\\psi (t)||\\infty \\to 0$。",
+            "route": "利用 Lemma 4.1 的高阶时间导数能量和 Proposition 3.1，证明 $||ϕ_r||^{2}$ 与 $||G||^{2}$ 属于 $W^{1,1}(0,\\infty )$，故它们趋零；再用加权一维 Sobolev 不等式把 L2/导数衰减升级为 $L\\infty $ 衰减。",
+            "evidence": "PDF 第20–23页 Section 4.2，Lemma 4.1、equations (4.5)–(4.9)及 Theorem 1.1 结尾。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–4、全部能量估计、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露相关 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–25页全文。",
+      "priorityScore": 67,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17693:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17693",
+      "version": 1,
+      "entryKind": "new",
+      "title": "A Unified Quermassintegral Approach to Quasilinear Heat Dispersion and Loss",
+      "authors": [
+        "Xiaoshang Jin",
+        "Jie Xiao"
+      ],
+      "abstract": "This paper establishes a fundamental connection between quasilinear potential theory and convex geometric analysis by investigating the interplay between the quasilinear Laplace operator and quermassintegrals. We introduce a quasilinear heat dispersion law for convex conductors and prove that, among all convex conductors of a fixed mean width, the closed ball is a unique maximizer of this dispersion. By characterizing the quasilinear heat loss of a convex conductor explicitly in terms of its quermassintegrals, we demonstrate not only a formal equivalence between the isocapacitary and isoperimetric inequalities in the setting of mathematical physics but also that, among all convex conductors of a fixed mean width, the closed ball is a unique maximizer of this loss. These results provide a novel bridge between the metric properties of convex conductors and the variational analysis of quasilinear elliptic operators, offering a unified perspective on sharp geometric inequalities and their extremal cases.",
+      "categories": [
+        "math.AP",
+        "math.DG"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17693",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17693",
+      "submittedAt": "2026-08-18T12:09:17Z",
+      "updatedAt": "2026-08-18T12:09:17Z",
+      "topicId": "variational",
+      "topicLabel": "变分方法",
+      "progressType": "分析结果",
+      "workSummary": "论文把导体对 p-拉普拉斯型热扩散/热损失的变分量与凸几何中的 quermassintegrals 联系起来。对有 Lipschitz 边界的导体—外域对，作者将 p-能量和 p-拉普拉斯算子定义的容量通过光滑逼近、变分表示及 coarea/水平集公式对齐，得到新的热扩散定律。令外域趋于无穷后，论文把 p-容量不等式与等周不等式等价化，并推出固定平均宽度时球是热损失的唯一极值体。",
+      "techniques": [
+        "p-拉普拉斯变分容量",
+        "quermassintegral Steiner 展开",
+        "Hausdorff 光滑逼近",
+        "coarea 与水平集积分",
+        "等周/等容量不等式"
+      ],
+      "breakthrough": "建立了带边界 Robin 损失参数的 quasilinear heat dispersion 与 quermassintegrals 的统一表达，并把凸体 p-容量的尖锐等周不等式和经典等周不等式互相推出，明确球形等号情形。",
+      "limitations": "定理 1.1 依赖导体及外域具有 Lipschitz 边界和凸几何设定；定理 1.2 要求 1<p<n，部分曲率/边界公式还要求光滑边界或 $n\\ge 3$。证明中若干基础容量等式引用既有结果，论文不提供非凸导体或端点 $p=1,n$ 的同样结论。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "两种定义的带 Robin 参数 p-容量相等。",
+            "route": "先把 p-梯度能量的最小化写成 $C^{0,1}$ 试函数的变分问题，再把 p-拉普拉斯分布积分转为体积分与 $\\partial \\Omega$ 上的 Robin 边界项；对光滑导体验证等式后用 Hausdorff 逼近和容量下半连续性扩展到 Lipschitz 边界。",
+            "evidence": "PDF 第3–5页 Theorem 1.1(i)，equations (1.6)–(1.8)；第5–9页 Section 2.1 的 three phases 和 equations (2.1)–(2.15)。"
+          },
+          {
+            "claim": "quermassintegral 控制给出热扩散量的几何下界并在球上取等。",
+            "route": "将平行体 K+tB 的体积和表面积 Steiner 展开写成 $W_j(K)$，把变分热扩散表达中的边界积分按这些系数重排；再用 Alexandrov–Fenchel/Minkowski 型不等式逐项比较 $W_j(K)$ 与球，得到 Theorem 1.1(ii) 的尖锐界及固定平均宽度的球形极值。",
+            "evidence": "PDF 第3–4页 Theorem 1.1(ii)，equations (1.7)–(1.9)；第9–13页 Section 2.2 及 equations (2.15)–(2.24)。"
+          },
+          {
+            "claim": "p-容量等周不等式与 p-等周不等式相互等价。",
+            "route": "把无穷外域容量的归一化形式化为 (3.1)，一方面结合 Theorem 1.1 的边界估计推出经典表面积—体积不等式 (3.2)，另一方面从 (3.2) 反向代入容量/曲率估计得到 (3.1)；等号条件沿每个推导环节传递为闭球。",
+            "evidence": "PDF 第4页 Theorem 1.2(i)，equations (1.10)–(1.11)；第10–14页 Section 3.1，equations (3.1)–(3.15)。"
+          },
+          {
+            "claim": "固定平均宽度的凸导体中，闭球唯一最大化 quasilinear heat loss。",
+            "route": "令外域半径趋于无穷并使用 Theorem 1.2(ii) 的容量上界，把 $W_1(K)$ 固定后容量归一化为 quermassintegral 比值；尖锐 Alexandrov–Fenchel 等号迫使所有主曲率一致，结合连通凸体刚性得到 K 为闭球。",
+            "evidence": "PDF 第4页 Theorem 1.2(ii)；第14–16页 Section 3.2，尤其 equations (3.16)–(3.23) 及其球形等号讨论。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Theorems 1.1–1.2、Sections 2–3、Appendix A、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–25页全文。",
+      "priorityScore": 67,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦变分方法，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17768:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17768",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Stationary periodic solutions for nonlinear Dirac equations with non-coercive nonlinearity II: splitting",
+      "authors": [
+        "Ruijun Wu",
+        "Fuping Zhang"
+      ],
+      "abstract": "We study stationary periodic solutions of nonlinear Dirac equations with Soler-type nonlinearities. By splitting off a circle factor the problem is reduced to dimension two. The nonlinearity degenerates along a Lorentz null cone, causing difficulties for the variational analysis. Using a coercive perturbation we first obtain minimax perturbed solutions. The key new ingredient is a quantitative separation of the lowest positive eigenspace of the reduced Dirac operator from the null cone; together with a uniform resolvent estimate, it yields uniform bounds that allow us to remove the perturbation. This produces nontrivial periodic solutions for temporal frequencies near the corresponding positive spectral threshold, including frequencies above the mass.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17768",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17768",
+      "submittedAt": "2026-08-18T13:32:03Z",
+      "updatedAt": "2026-08-18T13:32:03Z",
+      "topicId": "variational",
+      "topicLabel": "变分方法",
+      "progressType": "分析结果",
+      "workSummary": "论文处理带非相干非线性项的三维周期非线性 Dirac 方程。沿圆周方向取相位模态 $\\psi =\\phi ⊗e^{i\\zeta x}$，把问题降到二维平坦环面上的自伴 Dirac 算子；作者先分析最低正特征空间，再用非线性双线性项与谱投影构造 coercive 扰动泛函。分离引理排除 Lorentz 零锥附近的退化方向，补空间 resolvent 估计保证 Palais–Smale 紧性，最后对扰动参数 $\\epsilon \\to 0$ 取极限，得到接近质量阈值且可高于质量的非平凡周期解。",
+      "techniques": [
+        "圆周相位模态约化",
+        "二维 Dirac 谱分解",
+        "谱投影与最低正特征空间",
+        "Lorentz 零锥分离",
+        "coercive minimax 与 Palais–Smale 紧性"
+      ],
+      "breakthrough": "在最低正谱空间与非相干非线性共同作用下证明存在一段质量参数的非平凡周期解，并通过对最低模态补空间的定量分离把解的能量和 $H^{1}$ 范数控制统一到 $\\epsilon $ 无关的范围。",
+      "limitations": "需要矩形三环面、指定自旋结构、相位旋转不变的 F1–F5 条件及参数 $\\nu \\in (1,2)$ 等结构假设；结论只覆盖 a 位于靠近正谱阈值的区间，且 $\\epsilon \\to 0$ 的极限依赖论文给定的非线性增长和正则性条件。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "三维周期 Dirac 方程可约化为二维环面上的参数化方程 (15)。",
+            "route": "把旋转相位 $e^{i\\zeta x}$ 从自旋量中提出，并利用环面平移不变性分离圆周导数；Lemma 3.1 给出二维 Dirac 与无质量算子的谱及重数，从而将三维问题转成 $\\phi $ 的二维非线性方程。",
+            "evidence": "PDF 第3页 Theorem 1.2 的模态陈述；第8–9页 Section 3，Lemma 3.1 和 equations (8)–(10)。"
+          },
+          {
+            "claim": "非线性双线性项小并不允许归一化向量完全落入最低正谱空间的 Lorentz 零锥。",
+            "route": "对补空间投影 $P^⊥_{m,\\zeta }$ 使用反证序列：若 $L^{4}$ 范数归一而双线性量趋零，则极限位于有限维最低谱空间且同时落在零锥；Lemma 4.2 的抽象分离再把这两个条件转成统一的 $\\kappa _{1},\\kappa _{2}$ 下界。",
+            "evidence": "PDF 第10–12页 Section 4，Lemmas 4.1–4.2，equations (12)–(14)。"
+          },
+          {
+            "claim": "补空间上的 Dirac resolvent 对所有 $a\\in [0,\\zeta ^{2}+m^{2}]$ 一致有界。",
+            "route": "将 $P^⊥(D_{T^{2}}-a)\\phi $ 的小量假设与谱分解结合；若估计失败，取 $a_k、\\phi _k$ 的归一化反证序列，椭圆紧性给出谱核极限，与补空间正交性矛盾，得到 Lemma 4.4 的 $L^{4/3}\\to L^{4}$ 界。",
+            "evidence": "PDF 第12–13页 Lemma 4.4，equation (15)及其反证段落。"
+          },
+          {
+            "claim": "扰动泛函存在非平凡临界点，且去除扰动后得到 Theorem 1.2 的周期解。",
+            "route": "在最低正特征空间上以谱投影分解定义 $J_{\\zeta ,\\epsilon }$，借助分离和 resolvent 界证明 Palais–Smale 序列 $H^{1}$ 有界并收敛（Proposition 6.1）；Theorems 6.6–6.7 给出临界点非零、能量上下界与 $\\epsilon $ 一致 $H^{1}$ 控制，随后 $\\epsilon \\to 0$ 提取解并把 a 限制到 $(m*,\\sqrt (\\zeta ^{2}+m^{2}))$。",
+            "evidence": "PDF 第16–19页 Proposition 6.1；第23–25页 Theorems 6.6–6.7 及其 uniform estimate proof。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–6、全部谱分析与变分证明、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–28页全文。",
+      "priorityScore": 67,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦变分方法，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17081:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17081",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Counterexamples to Magnanini's conjecture concerning critical points of the torsion function",
+      "authors": [
+        "Parker Edwards",
+        "Erik Lundberg",
+        "Koushik Ramachandran"
+      ],
+      "abstract": "We construct planar simply-connected domains whose torsion function has an arbitrary prescribed number of local maxima while the distance to the boundary has only one local maximum inside the domain. This disproves a conjecture of Magnanini asserting that the number of local maxima of the torsion function is bounded above by the number of local maxima of the distance function to the boundary. We also answer a question of Steinerberger concerning the eccentricity of level sets near the point where the torsion function attains its maximum in simply-connected domains.",
+      "categories": [
+        "math.AP",
+        "math.CV"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17081",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17081",
+      "submittedAt": "2026-08-17T19:38:45Z",
+      "updatedAt": "2026-08-17T19:38:45Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文构造反驳 Magnanini 猜想的平面细长蛇形管域。中心曲线由交替直线段和半圆组成，半径缓慢收缩的管状邻域保持多个弯折位置；通过无限条带与薄环面的显式扭转函数渐近，作者证明每个弯折处产生一个局部最大值。随后用域单调性和连续依赖把未收缩管域的热点保留下来，再用中轴/medial axis 分析说明轻微 taper 使边界距离函数只剩一个局部最大值。",
+      "techniques": [
+        "薄域渐近展开",
+        "条带与环面模型扭转函数",
+        "调和函数局部比较",
+        "域单调性与连续依赖",
+        "medial axis 距离函数分析"
+      ],
+      "breakthrough": "证明热斑数量可以任意大而 far spot 保持唯一，从而把扭转函数的热点数与到边界距离函数的最大点数彻底分离；同时给出 Neumann oval 上唯一但 Hessian 秩亏的显式例子。",
+      "limitations": "热点构造要求 $\\epsilon $ 足够小、中心曲线具有规定的 $C^{3}$ 几何与足够慢的 taper；证明针对二维蛇形管和特定 Neumann oval，不能直接推出一般非凸域的热点上界或距离函数结论。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "薄半圆弯折处的扭转函数值严格高于直线中轴上的基准值。",
+            "route": "用无限条带解 $v_s=\\epsilon ^{2}-y^{2}$ 近似直线段，用薄环面显式解 $v_a$ 比较半圆段；环面最大值展开 $v*=\\epsilon ^{2}+\\epsilon ^{4}/(9r_{0}^{2})+O(\\epsilon ^{6})$，其正的曲率修正使每个弯折候选点 $z_k*$ 超过虚轴上的条带上界。",
+            "evidence": "PDF 第3–4页薄环面公式 (1)–(2) 与 Theorem 1.2 构造；第6–7页 Proposition 2.3 及 equations (3)–(4)。"
+          },
+          {
+            "claim": "未 taper 的蛇形管域 $\\Omega_{\\epsilon ,0}$ 的扭转函数至少有 M 个局部最大值。",
+            "route": "在每个 $z_k*$ 处使用 Lemmas 2.1–2.2 的细长条带/环面调和比较，得到 $v(z_k*)$ 大于虚轴截面的 supremum；沿连通域取局部极大点即可在每个弯折邻域得到互异热点。",
+            "evidence": "PDF 第5–7页 Lemmas 2.1–2.2、Proposition 2.3，尤其 Proposition 2.3 后的比较证明。"
+          },
+          {
+            "claim": "缓慢收缩的管域仍保留 M 个热点。",
+            "route": "取 $\\delta _j↓0$ 的嵌套 taper 域 $\\Omega_{\\epsilon ,\\delta _j}$，由域单调性得 $v_j\\le v$，并用 Lemma 2.4 的解对域连续性使 $v_j(z_k*)\\to v(z_k*)$；当 j 足够大，各候选点仍高于虚轴上统一界，重复 Proposition 2.3 的极大值论证。",
+            "evidence": "PDF 第8页 Section 2 Step 2，domain sequence $\\Omega_j、Lemma$ 2.4 及其后的三步证明。"
+          },
+          {
+            "claim": "选择足够小的 taper 后，边界距离函数只有一个局部最大值。",
+            "route": "将距离函数的局部极大点限制到边界的 medial axis；Lemma 2.5 用曲线曲率与分离尺度控制中轴在每个弯折处的分支，选择半径单调收缩使所有非中心分支上的距离沿中轴严格下降，只留下中央 far spot。",
+            "evidence": "PDF 第8–10页 Section 2 Step 3，Lemma 2.5 及其后对 $Med(\\partial \\Omega_{\\epsilon ,\\delta })$ 的几何分析。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–3、Theorems 1.2/1.3/1.5、全部构造与数值/显式计算、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–15页全文。",
+      "priorityScore": 66,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于解的构造；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17194:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17194",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "Sharp Neumann eigenvalue estimates and $C^2$ elliptic regularity in non-obtuse polyhedral domains",
+      "authors": [
+        "Nick Edelen",
+        "Chao Li"
+      ],
+      "abstract": "For integers $n\\ge 1$, consider assertions: $\\mathbf{(P_n)}$: Let $Ω\\subset S^n$ be a spherical domain enclosed by totally geodesic $S^{n-1}$'s with non-obtuse dihedral angles. Then in $[0,2(n+1)]$, its Neumann spectrum can only take values among $\\{0,n,2(n+1)\\}$. Moreover, $n$ is a Neumann eigenvalue if and only if the corresponding eigenfunction is the restriction of a linear function in $\\mathbb{R}^{n+1}$, while $2(n+2)$ is a Neumann eigenvalue if and only if the corresponding eigenfunction is restriction of a quadratic polynomial in $\\mathbb{R}^{n+1}$. $\\mathbf{(Q_n)}$: A weak solution $u$ to $Δu = f$ with the Neumann boundary condition, with $f$ Hölder continuous, in a conical polyhedral domain $Ω$ in $\\mathbb{R}^n$ with non-obtuse dihedral angles, is in $C^{2,α}_{loc}(\\overlineΩ)$. We prove the implications \\[\\mathbf{(Q_n)} \\Rightarrow \\mathbf{(P_n)},\\qquad \\mathbf{(P_n)}\\Rightarrow \\mathbf{(Q_{n+1})}.\\] Consequently, both assertions hold in all dimensions. These give the optimal Neumann eigenvalue lower bound and $C^2$ elliptic regularity in non-obtuse Riemannian polyhedral domains.",
+      "categories": [
+        "math.DG",
+        "math.AP"
+      ],
+      "primaryCategory": "math.DG",
+      "arxivUrl": "https://arxiv.org/abs/2608.17194",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17194",
+      "submittedAt": "2026-08-17T23:16:47Z",
+      "updatedAt": "2026-08-17T23:16:47Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文证明非钝多面体球面域上的尖锐 Neumann 特征值间隙与圆锥域 $C^{2},\\alpha $ 正则性互相递推。令 $P_n$ 表示特征值不能落入 (n,2(n+1)) 且等号特征函数为二次调和多项式$，Q_n$ 表示局部 $C^{2},\\alpha $ 椭圆正则性；作者以球面特征函数的无迹 Hessian 张量建立 $Q_n⇒P_n$，再把圆锥上的调和提升、频率/分解和对称性归纳用于 $P_n⇒Q_{n+1}$，最终从低维基例推出所有维数。",
+      "techniques": [
+        "无迹 Hessian 张量恒等式",
+        "球面 Bochner/积分估计",
+        "多面体锥调和提升",
+        "对称性归纳与边界正则性",
+        "等号刚性与二次调和多项式"
+      ],
+      "breakthrough": "把球面非钝多面体的 Neumann 谱隙、等号刚性和锥域 $C^{2},\\alpha $ 正则性组织成 $P_n/Q_n$ 的双向维度递推，因此同时得到每一维的最优特征值区间与正则性结论。",
+      "limitations": "结论依赖非钝二面角、球面/多面体锥几何和相应 Neumann 边界条件；正则性命题带有局部 $C^\\alpha $ 数据及文中多重对称性条件，不能直接覆盖任意角度、任意椭圆算子或一般粗糙边界。AI 工具只辅助参考搜索、代数常数和证明表述，作者明确排除 AI 生成正文。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "若 $Q_n$ 成立，则球面多面体 Neumann 特征值不能位于 (n,2(n+1))，且 2(n+1) 等号特征函数来自二次调和多项式。",
+            "route": "对特征函数 u 定义无迹 Hessian $T=\\nabla ^{2}u+(\\lambda /n)ug$；由球面交换子得到 div $T=-((n-1)/n)(\\lambda -n)\\nabla u$ 和 $\\Delta T=(2n-\\lambda )T$。利用 $Q_n$ 提供的角点正则性在圆角域上积分 Bochner/张量恒等式，得到 $\\lambda $ 的谱隙；等号时 Lemma 2.6 的代数等式强制三阶导数消失，从而 u 是二次调和多项式。",
+            "evidence": "PDF 第3–9页 Theorem 1.2、Theorem 2.1、Propositions 2.2/2.4，equations (4)–(11)；第4页 AI disclosure 另见全文核查。"
+          },
+          {
+            "claim": "$P_n$ 的等号情形具有足够刚性，可为锥上的调和函数提供二阶控制。",
+            "route": "将球面特征函数按锥的径向变量提升为调和函数，谱等号对应齐次二次项$；P_n$ 的排除低阶模式和等号分类给出球面截面上的展开缺口，进而控制锥解的二阶导数并建立相应的 $P_{\\Omega\\times R^l}$。",
+            "evidence": "PDF 第8–10页 Section 2 末尾等号分析及 Section 3 的 Lemmas 3.1–3.3；第16页 Theorem 3.10 前的 $P_{\\Omega\\times R^l}$ 推导。"
+          },
+          {
+            "claim": "$P_n⇒Q_{n+1}$：圆锥上的调和解在角点满足 $C^{2},\\alpha $ 局部正则性。",
+            "route": "对具有平移对称的锥域按横截面和轴向作频率/球谐分解；先在更高对称度的锥上使用 PΩ 得到二阶估计，再由 Lemma 3.9 将高对称域的估计传回较低对称域，按对称维数反向归纳闭合 $C^{2},\\alpha $ 界。",
+            "evidence": "PDF 第11–16页 Section 3，Lemmas 3.3、3.8、3.9 与 Theorem 3.10；特别是第16页 Theorem 3.10 的 induction proof。"
+          },
+          {
+            "claim": "从低维基例出发$，P_n$ 与 $Q_n$ 在所有维数成立。",
+            "route": "二维/平滑边界情形提供初始正则性，Theorem 2.1 给出 $Q_n⇒P_n，Theorem$ 3.10 及相关锥乘积归纳给出 $P_n⇒Q_{n+1}$；交替应用即可逐维推进，并由 Corollary 1.3 得到非钝球面单纯形的 $µ_{1}\\ge 2(n+1)$ 及等号分类。",
+            "evidence": "PDF 第3–5页 Theorem 1.2、Corollary 1.3；第16–17页 Theorem 3.10 与结论段。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者明确说明使用 ChatGPT Pro 5.6 Sol 做参考文献搜索、寻找代数 Lemma 2.6 的最佳常数并帮助整理该引理证明的表述；同时明确声明论文其他部分由作者负责且不含 AI 生成文本。",
+      "aiEvidenceSource": "PDF 第4页 Section 1.5 “The use of AI”。",
+      "priorityScore": 65,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17339:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17339",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Scattering and nonlinear recovery for the 1$d$ NLW with localized nonlinearity",
+      "authors": [
+        "Luccas Campos",
+        "Jason Murphy",
+        "Renzo Scarpelli"
+      ],
+      "abstract": "We consider the wave equation in 1$d$ with a spatially-localized cubic nonlinearity. We establish scattering in a weighted space and demonstrate the injectivity of the scattering map, with a corresponding stability estimate for nonlinear recovery.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17339",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17339",
+      "submittedAt": "2026-08-18T03:58:28Z",
+      "updatedAt": "2026-08-18T03:58:28Z",
+      "topicId": "dispersive",
+      "topicLabel": "色散方程",
+      "progressType": "分析结果",
+      "workSummary": "论文研究一维带局部空间非线性的半线性波方程。作者在加权能量空间中先建立任意有界系数的全局适定性和局部 $L\\infty $ 控制，再沿特征线得到 Morawetz 型时空积分估计，使 Duhamel 非线性项在散射空间中收敛。由此证明解趋于自由波，并用 Born 近似把散射映射的首阶三次项写成 K 的积分变换，进而从散射映射稳定恢复局部化系数。",
+      "techniques": [
+        "特征线传播",
+        "加权能量空间",
+        "Morawetz 时空估计",
+        "Duhamel 散射展开",
+        "Born 近似与积分反演"
+      ],
+      "breakthrough": "在一维线性背景缺乏色散、局部非线性却可积累的情形下仍证明散射，并证明散射映射不仅唯一决定局部系数 K，还给出 $L\\infty $ 系数差的定量稳定性。",
+      "limitations": "系数需为 admissible、非负且局部化/具有文中衰减，初值取加权 $H^{1}\\times L^{2}$；结果针对一维立方非线性和支撑在有限区间的模型，不能直接覆盖常系数非衰减介质或高维色散机制。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "能量有限的解具有全局存在和统一的时空幅度控制。",
+            "route": "先用守恒能量控制 $H^{1}\\times L^{2}$ 范数，再在含 K 的紧支撑区间选取 cutoff；Sobolev 嵌入和特征线外传播把局部控制延伸到全空间，得到 Proposition 4.1 的 $L\\infty _{t,x}$ 界。",
+            "evidence": "PDF 第7页 Proposition 4.1 及 equations (4.1)–(4.4)，PDF 第4–8页 Section 4。"
+          },
+          {
+            "claim": "非线性项满足足够强的 Morawetz 加权积分估计。",
+            "route": "在双特征坐标中对 $L_+(L_-u)^2$ 和 $L_-(L_+u)^2$ 展开，乘以有限光锥权并对时空积分；边界项由能量和支撑控制，得到 $K(x)u^4$ 的加权可积性，再推出 Corollary 5.1 的无权局部时空估计。",
+            "evidence": "PDF 第9–11页 Section 5，Proposition 5.1 equation (5.1)、Corollary 5.1。"
+          },
+          {
+            "claim": "拉回自由波群后的 Duhamel 余项在散射空间中收敛。",
+            "route": "写出 $S(-t)(u,\\partial tu)=(u0,u1)-(N(t),M(t))$，用 Proposition 5.1/Corollary 5.1 控制 K $u^{3}$ 沿两条特征线的积分，并以 Cauchy–Schwarz 和 Proposition 4.1 证明 (N(t),M(t)) 在加权 Y 范数中有极限。",
+            "evidence": "PDF 第11–13页 Section 6，equations (6.1)–(6.8)及 Theorem 1.1 的证明。"
+          },
+          {
+            "claim": "散射映射定量决定 K。",
+            "route": "对小幅初值将 Duhamel 公式中的非线性解替换为相同初值的线性解，得到 $V_+$ 的三次 Born 主项 (1.5)；改变入射波包并利用 Fourier/特征线积分的可逆性抽取 K，余项由统一能量估计控制，形成 Theorem 1.2 的八次根稳定界。",
+            "evidence": "PDF 第3页 equation (1.5) 与 Theorem 1.2；第13–18页 Section 6 后半及 Theorem 1.2 proof。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–6、Appendix A、证明、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露相关 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–20页全文。",
+      "priorityScore": 64,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦色散方程，主要进展属于稳定性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17645:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17645",
+      "version": 1,
+      "entryKind": "new",
+      "title": "The initial-to-final inverse problem for the heat operator",
+      "authors": [
+        "Enric Alberola",
+        "Nesrine Aroua",
+        "Pedro Caro"
+      ],
+      "abstract": "We study an inverse problem for the heat equation in a medium that generates internal heat at a rate proportional to the heat density. The goal consists of determining the heat-generation coefficient $V$ from the knowledge of the initial-to-final map, which assigns to every initial heat density its final heat density. We state and prove a uniqueness result for the heat operator in a region modelled by $\\mathbb{R}^n$ with $n \\geq 2$. We assume that $V$ is bounded and decays super-exponentially. Our approach relies on constructing exponentially-growing solutions for the corresponding heat operator. A key contribution of our approach is to provide a weighted $L^2$-estimate, which follows from the moment generating function of a Gaussian random variable. This extends the initial-to-final-state inverse problem, previously studied for the Schrödinger equation, to the parabolic setting.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17645",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17645",
+      "submittedAt": "2026-08-18T11:01:51Z",
+      "updatedAt": "2026-08-18T11:01:51Z",
+      "topicId": "elliptic-parabolic",
+      "topicLabel": "椭圆与抛物方程",
+      "progressType": "分析结果",
+      "workSummary": "论文证明全空间热方程的 initial-to-final 映射可以唯一确定具有超指数空间衰减的零阶势 V。首先把相同末端映射转成解差与正向/反向解的积分恒等式；然后构造带指数增长权的正向和反向 CGO 型热解。热核的漂移加权估计控制这些解的误差，代入恒等式后得到 V1−V2 与指数测试函数的傅里叶型配对为零，最后通过解析延拓/傅里叶唯一性推出势相等。",
+      "techniques": [
+        "正向/反向热方程配对恒等式",
+        "指数加权热核估计",
+        "CGO 型增长解",
+        "Duhamel 误差修正",
+        "Fourier 唯一性"
+      ],
+      "breakthrough": "仅凭全空间热方程的初值到终值算子相同，就恢复时间空间依赖且超指数衰减的势函数，避免了有限域边界观测，并把抛物 CGO 构造具体化为热核漂移的加权估计。",
+      "limitations": "要求 $n\\ge 2、V_j\\in L^{1}_tL\\infty _x$ 并具有超指数空间衰减，且比较的是固定时间 T 的全初值到终值映射；不处理仅部分初值/终值数据、低于超指数衰减的势或带更高阶系数的算子。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "相同 initial-to-final 映射导致势差与任意正向/反向解的时空配对为零。",
+            "route": "令 u1 解 $(\\partial t-\\Delta -V1)u1=0，v2$ 解伴随的 $(\\partial t+\\Delta +V2)v2=0$；对 u1v2 在 $(0,T)\\times R^n$ 积分分部，初值/终值项由 $UT1=UT2$ 抵消，得到 $∫(V1-V2)u1v2=0$。",
+            "evidence": "PDF 第2页 equation (2) 和 Proposition 2.1；第2–5页 Section 2 的 Green identity。"
+          },
+          {
+            "claim": "可构造带指数增长因子的正向和反向解，并把其余项放入加权空间。",
+            "route": "以 $e^{|\\nu |^{2}t+\\nu \\cdot x}$ 与 $e^{|\\nu |^{2}(T-t)-\\nu \\cdot x}$ 乘线性热解，分别写成主项加修正项 u♯+u♭、v♯+v♭；超指数衰减使势乘指数函数可积，Volterra/Duhamel 算子在 $X_{\\epsilon \\nu ̂}$ 加权范数中可逆。",
+            "evidence": "PDF 第6–11页 Sections 3–4，Propositions 3.1–3.2 和 Proposition 4.1，尤其 equations (14)–(18)。"
+          },
+          {
+            "claim": "热核漂移算子在指数权下获得 $|\\nu |^{-1}$ 的小范数。",
+            "route": "旋转 $\\nu $ 到坐标轴并显式写出漂移热核 $S_\\nu $；计算 $e^{\\lambda \\nu ̂\\cdot x}$ 加权后的核 $L^{1}$ 范数，时间积分给出 $1/(2\\lambda |\\nu |)$ 因子，Young 不等式遂提供 Proposition 5.3 的吸收条件。",
+            "evidence": "PDF 第13–15页 Section 5，Theorem 5.3 及 equations (11)–(15)。"
+          },
+          {
+            "claim": "势差的 Fourier 变换处处为零，从而 $V1=V2$。",
+            "route": "将指数解代回配对恒等式，先由 Proposition 4.1 消去修正项，再令指数方向和频率变化；主项变成 V1−V2 与 $e^{i(\\tau t+\\xi \\cdot x)}$ 的配对。超指数衰减保证 Fourier 变换解析，所有频率为零即推出势差几乎处处为零。",
+            "evidence": "PDF 第10–12页 Proposition 4.1 后的 identities (18)–(19)；第16–22页 Section 6，Propositions 6.1–6.7 和 Theorem 1 的结论。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–6、附录、所有构造/估计、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–22页全文。",
+      "priorityScore": 64,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦椭圆与抛物方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17405:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17405",
+      "version": 1,
+      "entryKind": "new",
+      "title": "A concavity inequality and interior $C^2$ estimate for Hessian quotient equations",
+      "authors": [
+        "Zhisu Li",
+        "Ke Wu"
+      ],
+      "abstract": "We establish a concavity inequality for the Hessian quotient operators $\\frac{σ_k}{σ_l}$ in the cases $k-l\\in\\{1,2\\}$, and then derive the corresponding Jacobi inequality. Combining this with the framework developed by Lu and Tsai, we obtain an interior Hessian estimate for convex solutions of $\\frac{σ_k(D^2u)}{σ_l(D^2u)}=f$. As an application, we prove that any entire convex solution in $\\mathbb R^n$ with quadratic growth must be a quadratic polynomial.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17405",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17405",
+      "submittedAt": "2026-08-18T06:05:27Z",
+      "updatedAt": "2026-08-18T06:05:27Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文针对 Hessian quotient 方程 $\\sigma _k(D^{2}u)/\\sigma _l(D^{2}u)=f$，且 k−l 为 1 或 2，建立定量凹性和内部 $C^{2}$ 估计。作者先把相邻商 $q_k=\\sigma _k/\\sigma _{k-1}$ 的谱函数凹性加强为带最大特征值分离项的二阶不等式，再通过增维/嵌入处理一般 k−l。该不等式转化为最大特征值 $b=log$ $\\lambda _max(D^{2}u)$ 的 Jacobi 型粘性不等式，局部最大值原理给出 Hessian 有界；最后结合 Legendre 变换和 Evans–Krylov 得到二次增长整个解的 Liouville 刚性。",
+      "techniques": [
+        "对称多项式谱函数凹性",
+        "最大特征值二阶不等式",
+        "增维归约",
+        "Jacobi 粘性不等式",
+        "最大值原理与 Evans–Krylov"
+      ],
+      "breakthrough": "把相邻 Hessian 商在 $k-l=1,2$ 时的谱凹性加强到足以产生 interior $C^{2}$ 界，并据此完成相应凸解的正则性分类和二次增长整个解的二次多项式刚性。",
+      "limitations": "要求凸 $C^{4}$ 解、f为正且 $C^{1,1}、k-l\\in {1,2}$以及特定锥 $\\Gamma _k$；估计常数依赖局部梯度和 f 的正下界，不能覆盖 $k-l\\ge 3（$已有奇异例）或非凸分支。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "相邻商 $q_k$ 的 Hessian 满足带谱隙的定量凹性不等式。",
+            "route": "先利用 $\\sigma _j$ 的导数恒等式和 $q_k$ 的凹性刻画等号方向；Lemma 2.1–2.3 排除非比例退化序列，再按最大特征值重数分组，在反证极限中得到 Lemma 2.4 的 $\\kappa _{1}、\\kappa _{2}$ 与 $\\lambda _max-\\lambda _i$ 分母控制。",
+            "evidence": "PDF 第4–8页 Section 2，Lemmas 2.1–2.4，尤其 equations (2.1)–(2.8)。"
+          },
+          {
+            "claim": "定量谱不等式推出 Theorem 1.1 对一般 Hessian quotient 的二阶椭圆不等式。",
+            "route": "当 $k-l=1$ 直接令 $F=q_k$；当 $k-l=2$ 通过在一维增维矩阵中加入特征值并应用 Lemma 2.4，再按对称性恢复原变量。选择 $A=2Ã$ 吸收附加项，使所有 Fi、Fij 组合满足 (1.1)。",
+            "evidence": "PDF 第2页 Theorem 1.1；第8–11页 “Proof of Theorem 1.1”，equations (2.20)–(2.30)。"
+          },
+          {
+            "claim": "凸解的最大 Hessian 特征值满足 Jacobi 不等式并由此得到内部 $C^{2}$ 估计。",
+            "route": "在接触点对 $b=log$ $\\lambda _max(D^{2}u)$ 做最大特征值微分，代入 Theorem 1.1 的二阶不等式和 $F^{1/(k-l)}$ 的凹性，得到 Proposition 3.1 的粘性 Jacobi inequality；采用 cutoff 与局部最大值原理控制 b，再还原 $|D^{2}u(0)|$。",
+            "evidence": "PDF 第11–13页 Section 3，Proposition 3.1、Theorem 1.2 及 equations (3.1)–(3.11)。"
+          },
+          {
+            "claim": "满足二次增长的整个凸解必须是二次多项式。",
+            "route": "二次下界使梯度映射满射；对 u 作 Legendre 变换得到具有统一二次上界的对偶函数，Theorem 1.2 给出其 Hessian 全局有界。方程的常秩/等号结构与 Evans–Krylov 正则性随后迫使原函数 Hessian 恒定。",
+            "evidence": "PDF 第3页 Theorem 1.3；第13–16页 Section 4 proof，equations (4.1)–(4.12)及 constant-rank/Evans–Krylov 引用处。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–4、全部 Hessian 估计、Liouville 证明、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–16页全文。",
+      "priorityScore": 63,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.18032:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.18032",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Optimal convergence rates in periodic homogenization of nonconvex Hamilton--Jacobi equations",
+      "authors": [
+        "Jiwoong Jang",
+        "Qi Sun",
+        "Hung V. Tran",
+        "Yifeng Yu"
+      ],
+      "abstract": "We study the convergence rates in periodic homogenization of general nonconvex, coercive Hamilton--Jacobi equations. We show that the optimal convergence rate is $O(\\varepsilon^{1/2})$ in one dimension, $O(\\varepsilon^{1/3})$ in two dimensions (up to a logarithmic factor), and $O(\\varepsilon^{1/3})$ in dimension three or higher.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.18032",
+      "pdfUrl": "https://arxiv.org/pdf/2608.18032",
+      "submittedAt": "2026-08-18T17:25:08Z",
+      "updatedAt": "2026-08-18T17:25:08Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文构造周期、强制、非凸 Hamiltonian–Jacobi 方程的微观解，使均匀化误差达到 $\\epsilon ^{1/3}$ 的最坏阶。三维构造在动量平面布置尺度递减的环带/障碍，通过显式次解和比较原理制造 $t^{2/3}$ 的增长；再用周期 corrector 和 finite-propagation 把局部障碍转化为全局初值问题的误差上、下界。二维采用嵌套区间得到带对数损失的下界，一维则构造 Lipschitz corrector 选择并获得 $\\epsilon ^{1/2}$ 上界。",
+      "techniques": [
+        "周期均匀化",
+        "动量空间多尺度构造",
+        "粘性次解/比较原理",
+        "finite-propagation",
+        "corrector 与缩放误差估计"
+      ],
+      "breakthrough": "给出三维非凸周期 Hamiltonian–Jacobi 均匀化中 $\\epsilon ^{1/3}$ 误差阶的匹配上下界，并说明二维只能达到带对数因子的对应下界，同时以一维 Lipschitz corrector 选择解释 $\\epsilon ^{1/2}$ 改善。",
+      "limitations": "Hamiltonian 需周期、coercive、全局 Lipschitz 且在动量变量非凸；三维结果针对构造性的 Lipschitz 初值和时间窗 [0,1]，二维下界带对数损失，一维的更快阶依赖可选 corrector，不能推广成一般非凸情形。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "多尺度动量构造产生在特定环带上增长的粘性次解。",
+            "route": "选取递减 $p_j$、半径 $a_j$ 和整数 $N_j$，在动量平面布置交错离散点；用 $h_0,h_1$ 的非负性和每个尺度的局部斜率定义 $w_{i,j}、W_j，Lemma$ 2.3–2.5 验证它们为次解并可按有限传播时间拼接。",
+            "evidence": "PDF 第3–8页 Section 2.1，Lemmas 2.1–2.5、equations (17)–(29)。"
+          },
+          {
+            "claim": "构造解在时间 t 的特定点至少增长 c $t^{2/3}$。",
+            "route": "比较原解 U 与 $W_j$，按 t 所在的尺度区间选取最小 j 使 $t\\le T_j$；由 $T_j∼p_j^{-3}$ 和 $w_{i,j}$ 的高度 $p_j t$ 得 $p_j∼t^{-1/3}$，从而 Proposition 2.6 给出 $U(0,\\gamma _i,t)\\ge c_0t^{2/3}$。",
+            "evidence": "PDF 第8–9页 Proposition 2.6，equations (34)–(36)。"
+          },
+          {
+            "claim": "所构造的 corrector 将微观 Hamiltonian 的局部障碍传递到均匀化方程。",
+            "route": "用 Lemma 2.7 建立周期 Lipschitz corrector $\\chi _P$ 的粘性 cell equation，再将其嵌入三维周期 Hamiltonian；Proposition 2.8 验证 $H(P,0)=0$，并以周期性和 coercivity 识别有效 Hamiltonian。",
+            "evidence": "PDF 第9–10页 Lemma 2.7、Proposition 2.8、equations (39)–(40)。"
+          },
+          {
+            "claim": "缩放和有限传播给出 $\\epsilon ^{1/3}$ 的误差上界与下界。",
+            "route": "对微观解进行 $x/\\epsilon $ 缩放，选择截断 Lipschitz 初值后用 Lemma 2.9 把局部初值信息传播到 (0,0,1)；Proposition 2.6 提供下界，标准周期均匀化/稳定性给出上界，遂得到 Theorem 1.1 的 $c\\epsilon ^{1/3}\\le ||u\\epsilon -u||\\infty \\le C\\epsilon ^{1/3}$。二维按 Section 3 的嵌套尺度重复并产生 log 因子。",
+            "evidence": "PDF 第10–12页 Section 2.5 Proof of Theorem 1.1；第11–13页 Proof of Theorem 1.2；Theorems 1.1–1.2。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者明确披露在早期探索阶段通过多轮与 OpenAI GPT-5.6 Sol 的对话，征求可能的 Hamiltonian 选择；同时明确说明这些初始 AI 构造/论证未用于最终稿，最终构造及数学论证由作者开发、撰写和核验。",
+      "aiEvidenceSource": "PDF 第3页 “AI assistance” 段落。",
+      "priorityScore": 63,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17403:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17403",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "Green function asymptotics for the $σ_2$-Yamabe problem",
+      "authors": [
+        "Bin Deng",
+        "Han Lu"
+      ],
+      "abstract": "We establish, at every pole, the asymptotic expansion of the normalized $Γ_2$-Green function with a finite pole set in every dimension $n\\ge5$. In dimensions $5\\le n\\le7$ the first correction is a unique nonnegative constant, whereas dimension $8$ exhibits a Weyl-driven $\\sqrt{\\log}$ term. For $n>8$ we construct the finite local curvature parametrix through the first positive indicial resonance and identify the first genuinely global coefficient by a relative Newton flux.",
+      "categories": [
+        "math.DG",
+        "math.AP"
+      ],
+      "primaryCategory": "math.DG",
+      "arxivUrl": "https://arxiv.org/abs/2608.17403",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17403",
+      "submittedAt": "2026-08-18T05:58:43Z",
+      "updatedAt": "2026-08-18T05:58:43Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文给出 $\\Gamma _{2}-Green$ 函数在每个极点附近的维数分层渐近。作者先在 Kelvin 变换后的远场把 Green 端写成 $\\Gamma _{2}$ 锥上的渐近方程，再用比较原理和 blow-down 紧性锁定主项$；5\\le n\\le 7$ 得到唯一常数项$，n=8$ 出现 Weyl 驱动的对数项，n>8 则通过球面 indicial 算子逐阶解局部曲率 cell。首次正 indicial resonance 之前的系数由局部曲率决定，跨过 resonance 的系数由相对 Newton flux 从全局 Green 函数中确定。",
+      "techniques": [
+        "Kelvin/远场变换",
+        "$\\Gamma _{2}$ 锥比较原理",
+        "blow-down 紧性",
+        "球面 indicial 算子",
+        "局部 parametrix 与 Newton flux"
+      ],
+      "breakthrough": "建立所有 $n\\ge 5$ 和有限极点集合的 $\\Gamma _{2}-Green$ 端展开，精确区分低维常数项$、n=8$ Weyl 对数项以及高维首共振前的局部曲率级数，并识别第一个真正全局系数。",
+      "limitations": "假设紧致光滑流形的 Schouten 特征值处于 $\\Gamma _{2}、Green$ 函数满足 admissible strict comparison principle；高维非平坦分支要求 $C_{0}$不恒为零，平坦/退化分支需另行的首个非零 cell 条件，不能把展开无条件延伸到 resonance 之后。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "Green 函数经 Kelvin/共形变换后具有标准主奇异项，并可由比较原理得到统一远场界。",
+            "route": "在极点附近取 conformal normal representative，令 U 为归一化 Green 因子并作反演得到 W；用 $\\Gamma _{2}$ 可容许性、初始衰减和严格比较原理构造上下 barrier，Propositions 2.2–3.2 给出 W→1 及导数控制。",
+            "evidence": "PDF 第3–8页 Theorems 1.1–1.2、Section 2 equations (1.8)–(2.19)；第8–13页 Propositions 3.1–3.6。"
+          },
+          {
+            "claim": "$5\\le n\\le 7$ 时首个自由项是唯一非负常数$，n=8$ 时 Weyl 曲率产生对数项。",
+            "route": "在次临界维数用 blow-down 序列提取 $\\Gamma _{2}$ 锥上的常切向极限，Proposition 3.10 锁定其常数系数并由强比较给出唯一性$；n=8$ 时二次曲率 cell 与齐次阶共振，Proposition 4.3–4.10 解出含 $|W_g(p)|$ $r^{-2}log r$ 的障碍项。",
+            "evidence": "PDF 第8–17页 Section 3 Theorem 1.1(i)、Section 4 的 Propositions 4.1–4.10，Theorem 1.1(ii) equations (1.11)–(1.13)。"
+          },
+          {
+            "claim": "n>8 非平坦分支的局部曲率系数可递归求至首个正 indicial root 之前。",
+            "route": "构造球面算子 $L_µ；Theorem$ 6.5 证明 0<µ<n−6 时 $L_µ$ 可逆，Proposition 6.9 因而逐阶解 $ϕ_{2},…,ϕ_{n-7}。Theorem$ 5.7 先给出 $P_{2}$ 粗逼近，Lemma 6.8 反复提升误差，得到 Theorem 6.10 的统一多阶 parametrix。",
+            "evidence": "PDF 第24–29页 Sections 5–6，Theorem 6.5、Proposition 6.9、Theorem 6.10 equations (6.16)–(6.30)。"
+          },
+          {
+            "claim": "首个共振后的系数由全局 Newton flux 唯一决定。",
+            "route": "在首共振阶构造正球面核函数 $\\psi *$，由 Fredholm/Green 恒等式把局部剩余与全局通量 $F\\infty $ 配对；Theorem 7.6 给出候选系数 $B*=F\\infty /\\tau *$，再用缩放反证和 Caccioppoli 紧性证明真实余项收敛到 $B*r^{-m}\\psi *$。",
+            "evidence": "PDF 第29–40页 Sections 7，Theorems 7.6、7.13，equations (7.6)、(7.60)–(7.61)。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–8、全部 Green 函数展开/参数构造、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–47页全文。",
+      "priorityScore": 61,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于长时间行为；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17456:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17456",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Non-unique $L^2$ solutions to the stationary Navier--Stokes equations on the whole plane",
+      "authors": [
+        "Mikihiro Fujii"
+      ],
+      "abstract": "We prove that, for a suitable small external force in $\\dot H^{-2}(\\mathbb R^2)$, the stationary Navier--Stokes equations on $\\mathbb R^2$ admit multiple solutions in $L^2(\\mathbb R^2)$.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17456",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17456",
+      "submittedAt": "2026-08-18T07:35:31Z",
+      "updatedAt": "2026-08-18T07:35:31Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文用 Golovkin 型 Fourier 构造证明二维稳态 Navier–Stokes 在临界 Besov 空间中非唯一。作者先选取对称 Fourier 模式构造背景流 $v_N$，使带权离散算子 $L_N$ 的核恰为一维 span；再证明其在 $\\ell^q$ 上有界右逆，并将二维散度自由场写成 Fourier 流函数。对剩余二次非线性构造双线性 dyadic 算子 $E_N$，频率分解给出 $N^{-1}$ 小量，最终校正得到非零 $w_N$，使 $v_N\\pm w_N$ 产生同一个微小外力。",
+      "techniques": [
+        "Fourier 流函数表示",
+        "$Besov/\\ell^q$ 频率权",
+        "Golovkin 核空间构造",
+        "dyadic paraproduct 估计",
+        "Oseen 右逆与非唯一性组装"
+      ],
+      "breakthrough": "在二维临界 $L^{2}$ 对应的均匀 Besov 尺度 q>1 中构造任意小外力下的两支稳态解，绕开 q>2 才能工作的凸积分方案，并把非唯一性归结为离散核与二次项的可控校正。",
+      "limitations": "仅处理 $R^{2}$、散度自由小外力和 q>1 的 Besov 族，构造依赖特殊对称 Fourier 模式与 $q\\le 2$ 的 dyadic 估计；结果是存在性反例，不提供一般外力的分类或时间依赖 Navier–Stokes 适定性。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "离散算子 $L_N$ 的核恰为 $span{\\omega _N}$，因而可在其补空间求解校正。",
+            "route": "由 $H_N\\omega _N=\\omega _N$ 直接得一维核候选；若 $L_Np=0$，则递推 $(1+\\nu _{N,j})p_j=p_{j-1}$，而系数比值正好等于 $\\omega _{N,j-1}/\\omega _{N,j}$，所以 $p_j/\\omega _{N,j}$ 恒定，得到 Lemma 2.6。",
+            "evidence": "PDF 第9页 Lemma 2.6，kernel recursion equations (2.14)–(2.17)。"
+          },
+          {
+            "claim": "背景流对应的 Oseen 线性算子在加权序列空间上可逆且校正有 $N^{-1}$ 小量。",
+            "route": "把流场写为 $U[\\psi ]$ 后 Fourier 变换 Oseen 算子，按输入/输出频率分解并用 Lemmas 2.4–2.5 控制卷积核；Lemma 2.7 给出 ker $L~_N=span{W\\omega _N}$，随后取核补空间构造右逆。",
+            "evidence": "PDF 第10–14页 Lemma 2.7 及 Section 2 的 right inverse construction；第11页 Proposition 3.2 前的 Oseen formula。"
+          },
+          {
+            "claim": "剩余二次项 $E_N$ 在 $X^q_sym$ 上满足 $||E_N\\psi ||\\le C$ $N^{-q}||\\psi ||$。",
+            "route": "将三频率相互作用分成 A1/A2，按 dyadic 区间的相对大小分别应用 Lemma 3.4 的符号/核导数估计；Lemmas 3.10–3.12 汇总五类项，再对 j,k,ℓ 求和得到 Proposition 3.9 的 $N^{-q}$ 界。",
+            "evidence": "PDF 第15–20页 Section 3.3，Proposition 3.9、Lemmas 3.10–3.12 及 equations (3.5)–(3.18)。"
+          },
+          {
+            "claim": "可构造非零 $w_N$，使 $v_N\\pm w_N$ 对应同一微小外力。",
+            "route": "用 Proposition 3.2 的非平凡解 $w_N=N^{-1}U[\\psi _N]$ 校正 Oseen 方程，将 $u_N^\\pm =v_N\\pm w_N$ 代回稳态方程；定义 $f_N=-\\Delta v_N+P$ $div(v_N⊗v_N+w_N⊗w_N)$，交叉项因 Oseen 关系抵消，Besov 范数随 $N\\to \\infty $ 同时趋零。",
+            "evidence": "PDF 第11页 Proposition 3.2；第21–23页 Section 4，Theorem 1.1 proof and definitions of $u_N^\\pm $, $f_N$。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者明确披露早期 brainstorming 阶段使用 ChatGPT 5.6 Pro；作者同时说明所有计算由作者完成并对全文内容负责，AI 仅用于初始思路而非替代最终数学推导。",
+      "aiEvidenceSource": "PDF 第24页致谢/Conflict of interest 段落。",
+      "priorityScore": 61,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17560:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17560",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Homogenization of a relaxed compressible viscous two-phase fluid model in a domain with very tiny holes",
+      "authors": [
+        "Florian Oschmann",
+        "Florian Wendt"
+      ],
+      "abstract": "We study an approximate system for the compressible Navier-Stokes-Korteweg equations in a bounded domain periodically perforated by small obstacles. As the size of the obstacles decrease much faster to zero than their mutual distances, we show in spatial dimension two and three that the limiting system remains unchanged. Our result applies for a large class of monotone and non-monotone pressure functions. In particular, it holds in the physically relevant case when the approximate system is used to describe the dynamics of a compressible viscous two-phase fluid extending the corresponding homogenization results known for the compressible Navier-Stokes equations in a single-phase setting.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17560",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17560",
+      "submittedAt": "2026-08-18T09:22:11Z",
+      "updatedAt": "2026-08-18T09:22:11Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文研究周期性微小孔洞中的松弛压缩黏性两相流模型。孔半径 $\\epsilon ^\\alpha $ 比孔间距 $\\epsilon $ 缩小更快$（\\alpha >d）$时，作者把定义在穿孔域的密度、速度和毛细松弛变量延拓到固定域，建立与 $\\epsilon $ 无关的能量、高可积性和 Bogovskii 压力估计。紧性提取弱极限后，利用截断连续性方程识别密度强收敛，最终把非单调压力和毛细耦合项通过极限，证明二维/三维极限系统与无孔模型相同。",
+      "techniques": [
+        "穿孔域统一延拓算子",
+        "Bogovskii 压力提升",
+        "能量与高可积性估计",
+        "截断连续性方程",
+        "弱/强紧性与非线性极限识别"
+      ],
+      "breakthrough": "在孔洞半径远小于孔间距的 $\\alpha >d$ 区间，首次对具有非单调 Van der Waals 压力的松弛压缩 NSKE 两相模型证明孔洞在极限中不改变方程，并同时覆盖二维和三维。",
+      "limitations": "只处理 $d\\in {2,3}$、光滑固定母域、周期孔洞且 $\\alpha $ 满足文中严格指数条件；采用有限能量弱解并需压力、初值和松弛参数满足 (2.4)–(2.7)，不覆盖临界 $\\alpha =d$、随机孔洞或更强奇异压力。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "穿孔域上的密度、速度和毛细变量可在固定域获得 $\\epsilon $ 一致的基本控制。",
+            "route": "Lemma 2.1 构造梯度和各 $L^s$ 范数均不依赖 $\\epsilon $ 的延拓 $E_\\epsilon $；将 rNSKE 测试为速度、密度能量和毛细方程测试函数，得到密度 $L\\infty _tL^\\gamma $、速度 $L^{2}_tW^{1,2}、c$ 的 $W^{1,2}$ 控制。",
+            "evidence": "PDF 第3–7页 Section 2，Lemma 2.1、system (2.7)–(2.9) 与 Theorem 2.2 的假设。"
+          },
+          {
+            "claim": "三维密度/压力具有足以通过非线性极限的更高可积性。",
+            "route": "用 Bogovskii 算子 $B_\\epsilon $ 作用于截断密度，利用连续性方程和无孔边界的法向迹消去散度项；与动量方程配对后得到 $\\rho _\\epsilon 、p_ς(\\rho _\\epsilon )$ 的 $5\\gamma /3$ 型界，并结合 cut-off 估计控制孔洞附近误差。",
+            "evidence": "PDF 第8–13页 Section 3，Lemmas 3.1–3.7，尤其 equations (3.2)–(3.11)。"
+          },
+          {
+            "claim": "延拓序列存在满足极限方程的弱收敛子列。",
+            "route": "由统一界、Aubin–Lions 型时间紧性及毛细方程的抛物正则性，提取 $\\rho ̃_\\epsilon 、ũ_\\epsilon 、E_\\epsilon c_\\epsilon $ 的弱/弱连续极限；Lemma 3.8 同时给出动量、毛细变量和通量的收敛模式，并把穿孔测试函数逼近到固定域。",
+            "evidence": "PDF 第13–15页 Lemma 3.8，equations (3.13)–(3.15)；第17–20页对应二维 Section 4 的 compactness estimates。"
+          },
+          {
+            "claim": "密度强收敛并识别非单调压力及毛细耦合项，故极限系统是不带孔的 rNSKE。",
+            "route": "对截断密度 $T_k(\\rho ̃_\\epsilon )$ 使用 renormalized continuity equation，先取 k 固定得到弱连续极限，再令 $k\\to \\infty ；Lemma$ 3.9 的强收敛使 $p_ς(\\rho ̃_\\epsilon )\\to p_ς(\\rho )，\\rho ̃_\\epsilon \\nabla E_\\epsilon c_\\epsilon \\to \\rho \\nabla c$，从而逐项通过动量和 c 方程。",
+            "evidence": "PDF 第15–18页 Lemma 3.9 及其 proof；第18–22页 Proof of Theorem 2.2，equations (3.14)–(3.16) 和二维结论。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–4、定理/引理证明、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–31页全文。",
+      "priorityScore": 61,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17661:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17661",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Global solutions of compressible Navier-Stokes equations with small viscosity",
+      "authors": [
+        "Lv Cai",
+        "Ning-An Lai",
+        "Zexian Zhang",
+        "Yi Zhou"
+      ],
+      "abstract": "In this paper, we study the Cauchy problem for the compressible Navier-Stokes system in $\\mathbb{R}^3$. Suppose that the viscosity coefficients satisfy $0<\\max\\{μ, ν=λ+2μ\\}<1$, and set $\\varepsilon=\\min\\{μ, ν=λ+2μ\\}$. We establish the global existence of classical solutions when the initial perturbations of the density and the curl-free part of the velocity are smaller than $\\varepsilon^{\\frac12+}$ (up to a logarithmic loss), while the divergence part of the initial velocity is smaller than $\\varepsilon$. This improves the classical global existence result of Matsumura-Nishida \\cite{MaN80}, which requires all the initial data to be smaller than $\\varepsilon (<1)$. We expect that this result is representative of general Shizuta-Kawashima systems arising in physical applications. The improvement of the index from $1$ to $\\frac12+$ relies on exploiting the hidden Kawashima-type dissipation for the density and controlling the spacetime trace norm of the solution at the scale $\\sqrt{\\varepsilon}$. These two ingredients are obtained through a weighted trace inequality and a Morawetz-type inequality for the perturbed sound speed and the divergence of the velocity.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17661",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17661",
+      "submittedAt": "2026-08-18T11:36:03Z",
+      "updatedAt": "2026-08-18T11:36:03Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文研究三维小黏性压缩 Navier–Stokes 在常密度平衡附近的全局经典解。将速度分为 curl-free 与 divergence-free 部分，并对密度、声速扰动和速度使用空间/旋转向量场。高阶能量控制非线性，密度的隐藏 Kawashima 耗散和加权 trace 不等式把声速梯度控制提升到 $\\epsilon ^{1/2}$ 尺度；对声速及散度速度建立 Morawetz 时空估计，再以低阶抛物估计闭合 bootstrap，允许势流初扰动约为 $\\epsilon ^{1/2}（$带对数损失）而散度自由部分仅需 $\\epsilon $。",
+      "techniques": [
+        "curl-free/divergence-free 分解",
+        "旋转向量场交换估计",
+        "隐藏 Kawashima 耗散",
+        "加权 trace 不等式",
+        "Morawetz 与高阶 bootstrap"
+      ],
+      "breakthrough": "把经典小黏性全局理论中密度/势流初值的 $\\epsilon $ 小性放宽到 $\\epsilon ^{1/2}（$对数损失），同时保留散度部分 $\\epsilon $ 尺度；关键是把密度隐藏耗散与时空 trace/Morawetz 控制结合进统一能量。",
+      "limitations": "只考虑 $R^{3}、p(\\rho )=\\rho ^\\gamma $、紧支撑高阶初值和 $0<max{µ,\\lambda +2µ}<1$；需要 $N\\ge 10$、特定 curl/div 初始分解和小性条件，不能直接覆盖大数据、非小黏性、真空或一般状态方程。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "向量场交换与非线性阶次分裂使高阶能量中的每个非线性项带有可吸收的小因子。",
+            "route": "把方程改写为 $\\tau =\\rho -1$ 与 u 的对称系统，应用空间导数和旋转场 $\\Gamma ；Lemma$ 2.6 的 order splitting 保证乘积至少含一个低阶因子，Lemma 3.1–3.3 将交换后的源项分配到声速和两类速度耗散。",
+            "evidence": "PDF 第6–12页 Section 2–3，Lemmas 2.1–2.6、3.1–3.3，尤其 system (2.17) 与 nonlinear splitting。"
+          },
+          {
+            "claim": "高阶能量与密度估计在小初值下闭合。",
+            "route": "对所有 $|k|\\le N$ 的 $\\Gamma ^k$ 方程求能量，得到 Lemma 4.1 的 $E_N+D_N$ 不等式；再用声速方程和 curl-free 速度的耦合建立 Lemma 4.2 的 $G_N$ 估计，使密度项的 $\\epsilon ^{-1/2}$ 增益被隐藏耗散抵消。",
+            "evidence": "PDF 第22–27页 Section 4，Lemma 4.1 equation (4.6)–(4.9) 与 Lemma 4.2 equation (4.25)–(4.27)。"
+          },
+          {
+            "claim": "势流分量和密度获得 $\\epsilon ^{1/2}$ 尺度的低阶控制。",
+            "route": "对 divergence-free/curl-free 分解使用低阶抛物估计，配合 weighted trace inequality 将时间切片上的声速/散度 trace 归入空间时间耗散；在 Lemma 4.3 中吸收非线性项后，初始势流 $\\epsilon ^{1/2}(log$ $\\epsilon ^{-1})^{-1}$ 的量级保持。",
+            "evidence": "PDF 第27–30页 Lemma 4.3，equations (4.39)–(4.45) 及其 bootstrap 条件 (BA1)–(BA3)。"
+          },
+          {
+            "claim": "Morawetz 型时空界完成全局 bootstrap 并推出 Theorem 1.1。",
+            "route": "对扰动声速和 divergence u 使用径向/时空乘子，得到 Lemma 4.4 的 Morawetz bound $M_N$；把该界代回 Lemmas 4.1–4.3 的能量链，选择 M 大$、\\delta $ 小后禁止控制量在有限时间首次越界，连续性法遂给出全局经典解。",
+            "evidence": "PDF 第30–33页 Lemma 4.4 equation (4.57)–(4.58)，第4页 Theorem 1.1及 Section 4 结尾 bootstrap closure。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–4、所有能量/Morawetz估计、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–34页全文。",
+      "priorityScore": 61,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于存在性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17155:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17155",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Fixed-particle-number optimizers for the Lieb--Oxford inequality",
+      "authors": [
+        "Matthew Rosenzweig"
+      ],
+      "abstract": "Let $\\mathsf{d}\\geq1$, $0<\\mathsf{s}<\\mathsf{d}$, and $N\\geq1$. We prove that the optimal fixed-particle-number constant $Λ_N(\\mathsf{s},\\mathsf{d})$ in the Riesz Lieb--Oxford inequality is attained and that these constants are strictly increasing in $N$. The proof combines grand-canonical concentration--compactness with a strict one-particle extension. After recentering, a limiting plan arising from a maximizing sequence may assign positive probability to several particle numbers and hence be grand-canonical. A strict $N$-particle completion excludes this case, while the inequalities $Λ_N>Λ_k$ for $k<N$ exclude limits with a fixed lower particle number. Once attainment at particle number $N$ is known, the compact-support theorem of Di Marino and Lelotte arXiv:2607.11440, valid for all $0<\\mathsf{s}<\\mathsf{d}$, permits a non-product one-particle extension and yields $Λ_{N+1}(\\mathsf{s},\\mathsf{d})>Λ_N(\\mathsf{s},\\mathsf{d})$. Together, these implications close an induction beginning at $N=1$.",
+      "categories": [
+        "math.AP",
+        "cond-mat.stat-mech",
+        "math-ph",
+        "math.OC"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17155",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17155",
+      "submittedAt": "2026-08-17T21:41:45Z",
+      "updatedAt": "2026-08-17T21:41:45Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文证明 Riesz Lieb–Oxford 不等式在固定粒子数 N 下的最优常数 $\\Lambda _N$ 被达到，且严格随 N 增大。作者先用最优传输计划和 profile decomposition 对最大化序列做 grand-canonical concentration–compactness；若极限混合多个粒子数，completion identity 构造严格改进，若固定在较低粒子数则用 $\\Lambda _N>\\Lambda _k$ 排除。达到 $\\Lambda _N$ 后再借助紧支撑定理和非乘积一粒子延拓严格构造 N+1 的改进，归纳闭合。",
+      "techniques": [
+        "多重边缘最优传输",
+        "grand-canonical concentration–compactness",
+        "profile decomposition",
+        "严格 completion comparison",
+        "非乘积一粒子 extension"
+      ],
+      "breakthrough": "在任意 $d\\ge 1、0<s<d$ 和每个有限 N 同时建立最优计划/密度的 attainment 与 $\\Lambda _{1}<\\Lambda _{2}<…$，从而说明普适 Lieb–Oxford 常数的上确界不在任何有限粒子数达到。",
+      "limitations": "使用 Riesz 核 0<s<d、对称概率计划和 $L^{1}\\cap L^p$ 密度；严格 extension 依赖 Di Marino–Lelotte 的紧支撑结果及文中 completion 构造，结论是存在性/严格单调性，不给出优化器显式公式或 $N\\to \\infty $ 的增长率。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "最大化序列的 profile 极限不能丢失质量且每个 profile 的粒子数至多为 N。",
+            "route": "利用 scaling 将 $L(\\rho _n)=1$，选择相应最优计划后由 Hartree 与 Riesz 代价有界；Proposition 3.3 提取平移 profile family，并用 profile cost lower semicontinuity 分解总增益，排除空 profile 或粒子数超过 N。",
+            "evidence": "PDF 第8–14页 Sections 3–4，Proposition 3.3、Lemma 4.1–4.3及 equations (3.30)–(4.6)。"
+          },
+          {
+            "claim": "若 grand-canonical 极限混合不同粒子数，completion 会严格提高增益，故不能成为 $\\Lambda _N$ 的极限。",
+            "route": "对有 Var(K)>0 的 profile，按固定粒子数加入远处的 diffuse particle；Lemma 4.1 的 completion identity 把增益差写成带符号的交互缺陷，Proposition 4.3 通过两尺度 annulus 扰动证明该缺陷严格为正，矛盾于极大性。",
+            "evidence": "PDF 第10–13页 Section 4，Lemma 4.1、Lemma 4.2、Proposition 4.3。"
+          },
+          {
+            "claim": "严格高于所有较低粒子数常数时$，\\Lambda _N$ 被某个 N 粒子密度达到。",
+            "route": "在 Proposition 5.1 中取归一化最大化序列；profile 分解若只有确定粒子数 k<N，则每个 profile 的比值$\\le \\Lambda _k<\\Lambda _N$，若多个 profile 则由 concavity 仍不能达到 $\\Lambda _N$，故质量集中到单一 N 粒子 profile，得到 attainment 和紧支撑。",
+            "evidence": "PDF 第14–17页 Proposition 5.1 及其 proof，equations (5.1)–(5.5)。"
+          },
+          {
+            "claim": "一个 N 粒子优化器可严格扩展为 N+1 粒子，从而 $\\Lambda _{N+1}>\\Lambda _N$。",
+            "route": "由紧支撑定理取优化器及最优计划，Lemma 6.2/6.3 给出外部 Riesz 势的唯一性和正的交互缺陷；Proposition 6.4 用非乘积 coupling 加入一粒子并严格降低归一化代价，得到 $\\Lambda _{N+1}>\\Lambda _N$，结合 (1.11)–(1.13) 归纳闭合。",
+            "evidence": "PDF 第18–22页 Section 6、Propositions 6.1–6.4；第3页 induction implications (1.11)–(1.13)。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者明确说明在论文开发与制作期间使用 OpenAI ChatGPT 和 Codex：查找相关文献、探索和测试数学论证、改善 exposition、检查内部一致性和交叉引用；作者强调所有 AI 输出均为待独立核验的临时材料，最终决定和责任由作者承担。",
+      "aiEvidenceSource": "PDF 第5页 Section 1.5 “Statement on AI use”。",
+      "priorityScore": 60,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17797:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17797",
+      "version": 1,
+      "entryKind": "new",
+      "title": "The Calderón problem for the infinity Laplacian with large affine boundary data",
+      "authors": [
+        "Yi-Hsuan Lin"
+      ],
+      "abstract": "We study the Calderón problem for the equation $-Δ_\\infty u+q(x)u=0$ in a bounded convex domain with $C^2$ boundary. We prove that a positive potential $q$ is uniquely determined and explicitly reconstructible from the measurements $Λ_q\\bigl(t(e\\cdot x+b)|_{\\partialΩ}\\bigr)$, where $e\\in\\mathbb S^{n-1}$, the offset $b>\\sup_{\\overlineΩ}|x|$ is fixed, and $t\\to\\infty$. The first potential-dependent term in the large amplitude asymptotics determines weighted integrals of $q$ over the chords parallel to $e$. Combining the measurements in the directions $e$ and $-e$ gives the X-ray transform of the zero extension of $q$, and the Fourier slice identity yields reconstruction and uniqueness.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17797",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17797",
+      "submittedAt": "2026-08-18T13:57:25Z",
+      "updatedAt": "2026-08-18T13:57:25Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文研究凸域中无穷拉普拉斯 Calderón 问题。对大振幅 affine 边界数据 t(e·x+b)，作者先把解减去 affine 主项并以 $\\epsilon =t^{-2}$ 缩放，得到沿平行 chord 的一维极限方程；局部 chord-tube barrier 与全局界把差商的法向导数误差控制到 $O(\\epsilon )$。两端点测量组合出 q 的 chord 加权积分，正反方向相加消掉 affine 权得到零延拓 q 的 X-ray transform，再用 Fourier-slice identity 显式重建并证明唯一性。",
+      "techniques": [
+        "无穷拉普拉斯粘性解",
+        "大振幅缩放",
+        "平行弦几何",
+        "局部 chord-tube barrier",
+        "X-ray/Fourier-slice 反演"
+      ],
+      "breakthrough": "只沿每个方向使用一参数 affine 边界振幅趋于无穷的 DN 数据，就能恢复正势 q；首个大振幅修正项给出弦积分，正反方向组合后得到显式 Fourier 重建公式。",
+      "limitations": "要求 Ω 有界凸且 $C^{2}、q\\in C^{2}(\\Omega)$ 且 $q\\ge c_{0}>0$，偏微分算子为退化的 $\\infty -Laplacian$，数据需对所有方向和充分大的振幅可用；结果不覆盖非凸域、符号变势或有限振幅噪声数据。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "正势下 Dirichlet 问题有唯一粘性解且边界法向导数可定义。",
+            "route": "利用 $F_q$ 对解变量严格递增建立 comparison principle 和唯一性；局部 Lipschitz 正则性配合边界 differentiability theorem 给出每个 $C^{1}$ 边界点的梯度与法向导数，定义 DN map。",
+            "evidence": "PDF 第2–4页 Section 1，equations (1.1)–(1.3)；第7–10页 Propositions 2.3–2.6。"
+          },
+          {
+            "claim": "大振幅 DN 数据的首个修正项等于沿 chord 的一维边值问题法向导数。",
+            "route": "令 $\\epsilon =t^{-2}$，把 $u_{t}-t\\ell$ 除以 $t^{-1}$ 得 $z_\\epsilon ；Lemma$ 4.1 写出 $z_\\epsilon $ 的精确方程，Proposition 4.2 给出全局界，Lemma 5.1 在每条 chord 周围构造 barrier，Proposition 5.3 于是得到端点法向导数与 $w_{q,e,b}$ 的 $O(t^{-2})$ 误差。",
+            "evidence": "PDF 第13–18页 Sections 4–5，Lemma 4.1、Proposition 4.2、Lemma 5.1、Propositions 5.3–5.4，Theorem 1.1 equations (1.10)–(1.13)。"
+          },
+          {
+            "claim": "两个端点的修正测量确定 q 的每条平行弦积分。",
+            "route": "沿 chord 解 $w(s)=q(y+se)(s+b)$，把两端法向修正项按 $e\\cdot \\nu $ 加权；Lemma 6.1 给出端点 identity，Lemma 6.2 去除 affine 权，正反方向 e 与 −e 相加后得到 $I_q(e,b;y)+I_q(-e,b;y)=2b$ XQ(e,y)。",
+            "evidence": "PDF 第5–7页 equations (1.11)–(1.14)；第18–20页 Section 6，Lemmas 6.1–6.2。"
+          },
+          {
+            "claim": "X-ray transform的 Fourier-slice identity 给出 q 的显式重建和唯一性。",
+            "route": "对每个 $\\xi $ 取 $e_\\xi ⊥\\xi $，将弦积分代入 Lemma 6.3 的 Fourier slice formula，得到 $Q̂(\\xi )$ 的已知积分；连续性确定 $\\xi =0，Fourier$ inversion 恢复零延拓 Q，再限制到 Ω 得 q，Theorem 1.2 的两个势因数据相同而一致。",
+            "evidence": "PDF 第6页 Corollary 1.3，equation (1.14)；第19–21页 Proposition 6.4、Lemma 6.3 和 Theorem 1.2 proof。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–6、所有粘性解/反演证明、Statements and declarations、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–22页全文。",
+      "priorityScore": 60,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17022:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17022",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "Sharp hypocoercive convergence estimates for underdamped Langevin dynamics with specular reflection",
+      "authors": [
+        "Hengrong Du",
+        "Qi Feng",
+        "Lingjiong Zhu"
+      ],
+      "abstract": "We study the underdamped (kinetic) Langevin dynamics confined to a bounded convex domain $Ω\\subset\\mathbb{R}^d$ by specular reflection of the velocity at the boundary. This process is the natural momentum-based analogue of the normally reflected overdamped Langevin diffusion, and it is used in practice for constrained sampling; however, no explicit quantitative convergence rate is available in the literature. We provide the first such rate. Assuming only that the position marginal $μ_x\\propto e^{-U}$ satisfies a Poincaré inequality on $Ω$ with constant $m>0$ and that $\\nabla^2U\\succeq-K\\,\\mathrm{Id}$, we prove that the law converges to the Gibbs measure exponentially fast in $L^2$, with an explicit rate that scales like $\\sqrt m$, which is optimal when $U$ is convex. Since the normally reflected overdamped dynamics converges exactly at rate $m$, this establishes a square-root acceleration for constrained sampling in the small-gap regime when $m$ is small, matching the acceleration known in the unconstrained case. The proof adapts the modified $L^2$ hypocoercivity method of Dolbeault--Mouhot--Schmeiser with the gap-shifted corrector of Fan--Li--Lu. The specular symmetry makes the transport operator antisymmetric, and that the corrector automatically selects the Neumann realization of the overdamped generator, which is precisely the boundary condition that keeps every auxiliary function inside the specular class. The Bochner identity used in the whole-space argument is replaced by a weighted Reilly formula, whose boundary contribution involves the second fundamental form of $\\partialΩ$ and is nonnegative for convex $Ω$.",
+      "categories": [
+        "math.PR",
+        "math.AP"
+      ],
+      "primaryCategory": "math.PR",
+      "arxivUrl": "https://arxiv.org/abs/2608.17022",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17022",
+      "submittedAt": "2026-08-17T18:17:11Z",
+      "updatedAt": "2026-08-17T18:17:11Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文研究凸有界域上带镜面反射的欠阻尼 Langevin 动力学。速度反射使输运算子在 specular 类上反对称，作者利用 gap-shifted corrector 把位置边缘的 Neumann Poincaré 间隙转成全相空间的耗散。加权 Reilly 公式给出位置梯度的二阶控制，corrector 界再与对称耗散组合成 modified $L^{2}$ 能量，最终得到显式指数收敛率约为 $\\sqrt m$，并证明凸势时该尺度最优。",
+      "techniques": [
+        "镜面反射输运反对称性",
+        "modified $L^{2}$ hypocoercivity",
+        "gap-shifted corrector",
+        "加权 Green/Reilly 公式",
+        "Poincaré 与熵/距离收敛转换"
+      ],
+      "breakthrough": "首次为凸约束域上的欠阻尼 Langevin 给出显式定量收敛率；只假设位置 Gibbs 边缘满足 Poincaré 不等式且 Hessian 下界为 −K，就获得含 m、K 的 $\\sqrt m$ 级速率，并在凸势时达到最优尺度。",
+      "limitations": "要求凸 $C^{2,1}$ 域、势 $U\\in C^{2}$、位置边缘 Poincaré 常数 $m>0、\\nabla ^{2}U⪰-KId$ 以及文中的 well-posedness 假设；反射边界和 Gibbs 权重固定，结果不直接给出非凸位置势的更强速率。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "镜面边界下输运算子在 specular 类上反对称，并由此消除速度边界项。",
+            "route": "定义速度反射 $R_x$，将函数限制到满足 $f(x,v)=f(x,R_xv)$ 的 specular class；Lemma 4/5 对 v 积分分部，反射配对抵消边界通量，得到 $⟨f,L_af⟩=0$ 及与 affine-in-v 场的反对称恒等式。",
+            "evidence": "PDF 第5–9页 Lemmas 4–5，equations (20)–(28)。"
+          },
+          {
+            "claim": "位置 Neumann 问题提供带权二阶控制。",
+            "route": "将 Neumann realization $L_o$ 的方程与加权 Green 公式配对，利用凸域边界第二基本形式的符号和 $\\nabla ^{2}U⪰-KId$ 控制交叉项；Lemma 16 的 weighted Reilly formula 将 $||\\nabla ^{2}_x$ h|| 与 $||\\nabla _x$ $h||、L_o h$ 联系起来。",
+            "evidence": "PDF 第9–13页 Lemmas 6–7、Lemma 16 及 equations (29)–(35)。"
+          },
+          {
+            "claim": "gap-shifted corrector 把位置 Poincaré gap 转成全空间耗散。",
+            "route": "对密度的空间平均和速度零均值部分分别应用 corrector 解；Lemma 17 给出 corrector 的 $L^{2}$、梯度和算子界，选择摩擦 $\\gamma =16\\sqrt m+2K$ 后，交叉项由 Poincaré 控制并被主耗散吸收，形成 modified hypocoercive quadratic form。",
+            "evidence": "PDF 第13–18页 Lemma 17、Section 5 equations (73)–(92)。"
+          },
+          {
+            "claim": "分布以显式 $\\sqrt m$ 速率指数收敛，且凸势时该尺度达到最优。",
+            "route": "将生成元演化 $f_t=L f$ 代入 modified 能量微分不等式，Grönwall 给出 Theorem 11 的 $L^{2}(µ)$ decay；再用 Corollary 12 的 $\\chi ^{2}、total$ variation 与 Wasserstein 比较把 $L^{2}$ 衰减传给概率律，并由 Proposition 13 的一维例子说明 $\\sqrt m$ 标度不能改善。",
+            "evidence": "PDF 第14–16页 Theorem 11 equation (47)、Corollary 12；第31–33页 Proposition 13。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–5、定理/引理证明、附录、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–33页全文。",
+      "priorityScore": 58,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.18074:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.18074",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "On Chern's conjecture for minimal submanifolds of the sphere",
+      "authors": [
+        "Benjy Firester",
+        "Raphael Tsiamis"
+      ],
+      "abstract": "A well-known conjecture of Chern, do Carmo, and Kobayashi asserts that, for $n,m \\geq 1$, the scalar curvature of a closed, minimally immersed $n$-submanifold of $\\mathbb{S}^{n+m}$ with second fundamental form of constant length takes values in a discrete set. This property holds in every codimension when $n \\in \\{1,2\\}$. We disprove this conjecture for all $n \\geq 3$ with $m \\geq 4$, and for even $n \\geq 4$ with $m \\geq 3$.",
+      "categories": [
+        "math.DG",
+        "math.AP"
+      ],
+      "primaryCategory": "math.DG",
+      "arxivUrl": "https://arxiv.org/abs/2608.18074",
+      "pdfUrl": "https://arxiv.org/pdf/2608.18074",
+      "submittedAt": "2026-08-18T17:57:24Z",
+      "updatedAt": "2026-08-18T17:57:24Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文反驳高维极小子流形中第二基本形式平方长度离散化的 Chern 猜想。作者先用等变约化把一般 (n,m) 的问题压缩到 $(n,m)=(2k,3)$ 和 (3,4)，再从球面中的基本极小嵌入出发，将其与圆周因子组合并施加显式整数参数。通过计算平均曲率为零、第二基本形式长度恒定以及嵌入闭合性，得到可数族且长度参数在一个有界区间内稠密。",
+      "techniques": [
+        "等变约化",
+        "球面极小嵌入",
+        "$M\\times S^{1}$ 构造",
+        "第二基本形式显式计算",
+        "整数参数稠密性"
+      ],
+      "breakthrough": "在每个 $n\\ge 3、m\\ge 4（$偶数 $n\\ge 4$ 时 $m\\ge 3）$构造闭嵌入极小子流形族，使恒定的 $|A|^{2}$ 在有界区间稠密，从而在这些维数和余维中否定 Chern 猜想。",
+      "limitations": "构造限于球面中指定维数/余维的显式等变族，稠密区间由参数化方案给出而非所有可能 $|A|^{2}$；不涉及一般环境流形、非闭嵌入或 Chern 猜想未覆盖的低余维情形。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "只需构造两类基本维数/余维的极小嵌入即可覆盖定理范围。",
+            "route": "Lemma 2 将 $M^n\\times S^{1}$ 的等变嵌入转为球面中的极小嵌入，并说明 $|A|^{2}$ 恒定性在约化/提升中保持；作者由此把偶数维情形降到 (2k,3)，奇数/一般情形降到 (3,4)，其余余维通过标准球面坐标嵌入提升。",
+            "evidence": "PDF 第2–4页 Theorem 1 前的 reduction，Lemma 2 及其 proof。"
+          },
+          {
+            "claim": "偶数维情形构造出闭的线性满极小嵌入且 $|A|^{2}$ 只由 coprime 参数决定。",
+            "route": "令 $n=2k$，选取奇数 a 与 b 互素，利用复坐标中两个等变因子定义映射；周期条件使映射在商空间闭合，直接微分计算显示平均曲率为零，第二基本形式的平方长度为常数 $S_j=(a/b)^2$ 等显式函数。",
+            "evidence": "PDF 第4–6页 “Proof of Theorem 1 for n even”，参数化公式及其 $|A|^{2}$ 计算。"
+          },
+          {
+            "claim": "$(n,m)=(3,4)$ 的显式参数族同样给出闭嵌入和恒定 $|A|^{2}$。",
+            "route": "取 $r=(a/b)^2\\in (0,1/3)$，把 $S^{2}\\subset R^{3}\\subset C^{3}$ 的点与相位参数组合成映射；计算导数的正交性和球面约束，验证二阶基本形式长度恒定，并由 coprime 参数保证没有自交。",
+            "evidence": "PDF 第6–8页 “Proof of Theorem 1 for $n=3”$，定义 $r、u\\in S^{2}$ 与映射的显式计算。"
+          },
+          {
+            "claim": "这些常数值在有界区间内稠密，因而产生 Chern 猜想反例。",
+            "route": "让互素整数参数的比值 a/b 遍历其区间，所得 $S_j$ 是连续函数的有理点取值；有理数在区间稠密，因此 $S_j$ 稠密于相应有界区间。结合前两类构造和余维提升，得到 Theorem 1 的 countable family。",
+            "evidence": "PDF 第1页 Theorem 1；第4–9页参数范围、稠密性讨论及 construction conclusion。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、reduction、两类构造、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–9页全文。",
+      "priorityScore": 58,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17100:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17100",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Almost sure pointwise convergence for the 2D periodic quintic NLS",
+      "authors": [
+        "Daniel Eceizabarrena",
+        "Pablo Merino"
+      ],
+      "abstract": "We prove probabilistic pointwise convergence to the initial datum for the 2D periodic quintic NLS for data in $H^s(\\mathbb T^2)$ with $s > 0$. This is an improvement with respect to the deterministic setting, in which convergence is known to fail if $s < 1/3$. The proof is based on a nonlinear maximal characterization for convergence, Bourgain's linear-nonlinear decomposition and the corresponding nonlinear smoothing for which we employ random tensor estimates.",
+      "categories": [
+        "math.AP",
+        "math.CA",
+        "math.PR"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17100",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17100",
+      "submittedAt": "2026-08-17T20:17:18Z",
+      "updatedAt": "2026-08-17T20:17:18Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文证明二维周期五次 NLS 对特定 Gaussian 随机初值几乎处处满足 t→0 时逐点回到初值。作者把线性演化的最大函数估计与非线性余项分离：先对随机 Fourier 系数做高概率 Bernstein/Wiener 混沌估计，再将五线性非共振项按最大频率分类，用随机 tensor estimate 和 Schur/计数界获得非线性 $smoothing。X^{s,b}$ 固定点和 Borel–Cantelli 随后把高概率估计转成几乎处处的短时解及逐点收敛。",
+      "techniques": [
+        "随机 Fourier 级数",
+        "最大函数估计",
+        "linear–nonlinear decomposition",
+        "随机张量/高斯大偏差估计",
+        "$X^{s,b}$ 固定点与 Borel–Cantelli"
+      ],
+      "breakthrough": "优化五次非线性项的随机 smoothing，使随机数据正则度 $s<\\alpha $ 时二维周期 quintic NLS 仍有几乎处处的 t→0 逐点收敛，且不依赖聚焦/散焦符号。",
+      "limitations": "初值是论文定义的 Gaussian 随机 Fourier 数据，结论为局部时间几乎处处事件；需要 $s<\\alpha $ 且 $\\alpha >0、X^{s,b}$ 参数满足 $\\alpha +\\sigma >1/2$，不能直接推广到确定性粗糙数据或更高维/长时间散射。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "线性随机演化的最大函数控制足以处理初值项的逐点极限。",
+            "route": "用随机 Fourier 系数的高斯尾界和 Bernstein 空间时间不等式，建立 $sup_{0<t<\\delta }|e^{it\\Delta }f^\\omega |$ 的概率估计；最大函数 characterization 将其转化为几乎处处的线性逐点收敛。",
+            "evidence": "PDF 第2–4页 Introduction equations (10)–(16)，Section 3.1 Lemma 3.1。"
+          },
+          {
+            "claim": "五次非线性余项在高概率下获得超过线性正则度的 smoothing。",
+            "route": "先作 gauge renormalization，将非线性写成随机线性主项加 D；按最高频率把每个因子标为 R/D，Propositions 4.4/4.6 将接近抛物面的共振情形分离，剩余频率用 Lemma 4.3 的随机 multilinear tensor bound 和 Schur 计数求和。",
+            "evidence": "PDF 第9–15页 Section 3.3–4.2，Theorem 3.3、Propositions 4.1、4.4、4.6、equations (23)–(35)。"
+          },
+          {
+            "claim": "非线性 D 满足可用于局部解的 $X^{s,b}$ 控制。",
+            "route": "将 random tensor estimate 得到的五频率和式代入 Proposition 4.7，取得每个 $\\epsilon >0$ 以概率至少 $1-\\epsilon $ 的 $X^{s,b}$ 范数界；与 Duhamel 映射的线性 Strichartz 和 transference 界合并，Theorem 3.3 给出 D 的 smoothing。",
+            "evidence": "PDF 第15–20页 Proposition 4.7、Theorem 4.9、Section 5 proof。"
+          },
+          {
+            "claim": "几乎所有随机初值的局部解在 t→0 时逐点收敛到初值。",
+            "route": "Theorem 3.3 与 Corollary 3.4 使非线性 D 的最大函数趋零$，X^{s,b}$ contraction 给出局部解；把高概率估计按 $\\epsilon _j$ 可求和并用 Borel–Cantelli，再与线性最大函数结论合并，得到 Theorem 1.1 的 almost sure pointwise convergence。",
+            "evidence": "PDF 第7–9页 Section 3.4 Corollary 3.4；第20–24页 Theorem 1.1 proof 与 gauge renormalization。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–5、随机估计、定理证明、附录、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–44页全文。",
+      "priorityScore": 57,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17141:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17141",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Homogenization of Interaction Energy of Dislocation Loops",
+      "authors": [
+        "Pascal Steinke"
+      ],
+      "abstract": "We consider the sum of interaction energies of an array of dislocation loops placed on a homogenization lattice as the lattice spacing and diameter of the loops tend to zero. Under suitable well-separation and L2 -boundedness assumptions, a formula for the limit of the total interaction energy is derived in terms of the weak limit, the generated H-measure and the generated Wigner measure of the associated Burgers vectors and oriented surface areas.",
+      "categories": [
+        "math.AP"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17141",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17141",
+      "submittedAt": "2026-08-17T21:24:27Z",
+      "updatedAt": "2026-08-17T21:24:27Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文研究晶格上缩小的位错环阵列的相互作用能极限。作者先从线性弹性 Green 核写出离散环之间的双积分相互作用，并将每个环替换为 Burgers 向量与定向表面积的局部数据。按 weak-long/weak-short 振荡分解，长程部分通过宏观卷积算子和弱极限得到体积分与 H-measure 贡献，短程部分以 Wigner measure 捕捉高频方向振荡；组合后得到总能量极限，并在各向同性/立方晶格下展示细尺度方向振荡可降低能量。",
+      "techniques": [
+        "弹性 Green 核与 Fourier 表示",
+        "weak-long/weak-short 分解",
+        "H-measure",
+        "Wigner measure",
+        "晶格求和与宏观积分算子"
+      ],
+      "breakthrough": "给出位错环相互作用能在晶格尺度和环径同时趋零时的完整极限公式，分离弱极限、H-measure 与 Wigner measure 三类贡献，并证明即使宏观定向表面积弱极限为零，高频方向振荡仍可留下负的能量极限。",
+      "limitations": "要求环阵列满足 $well-separation、\\ell^{2}$ 有界性及给定晶格缩放；显式负能量结论还需弹性张量各向同性和晶格立方对称，结果只针对相互作用能而不包括自能/线张力 $\\Gamma -$极限。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "离散相互作用能可表示为由 Green 核诱导的 Burgers/表面积双线性形式。",
+            "route": "对每个闭位错环应用 Stokes 定理，把弹性位移梯度的线积分改写为定向滑移面的积分；Fourier 变换 Green 函数得到齐次核 M，并把格点位移缩放后的能量写成环数组之间的卷积。",
+            "evidence": "PDF 第5–11页 Section 2，equations (2.1)–(2.12)、Lemma 2.4。"
+          },
+          {
+            "claim": "weak-long 部分的能量极限由弱极限和 H-measure 决定。",
+            "route": "用 Lemma 4.12 将数组分成只含长程振荡与短程振荡的两部分；对 weak-long 序列，宏观卷积算子强/弱收敛给出平均场项，Theorem 4.3 的 H-measure 记录空间位置与频率方向的二次振荡，继而证明 Proposition 3.3。",
+            "evidence": "PDF 第18–25页 Section 4.1–4.3，Theorem 4.3、Lemmas 4.1–4.7、Proposition 3.3。"
+          },
+          {
+            "claim": "weak-short 部分不会在零频率集中，且能量由 Wigner measure 表示。",
+            "route": "对短程项使用 $\\ell^{2}(L^{1})$ 界和 dyadic decomposition，Lemma 4.10/4.11 排除 Wigner measure 在 $\\xi =0$ 的集中；Green 核在非零频率处连续，因此可把卷积能量极限传给 $µ_W$，得到 Proposition 3.5。",
+            "evidence": "PDF 第26–34页 Section 4.4–4.5，Lemmas 4.9–4.12 和 equations (4.21)–(4.32)。"
+          },
+          {
+            "claim": "两类测度贡献组合成 Theorem 3.6，并可产生负的极限相互作用能。",
+            "route": "将 Lemma 4.12 的分解分别代入 Propositions 3.3 和 3.5，得到总能量由宏观项、H-measure 和 Wigner measure 的 $\\Psi $ 加权积分组成；在各向同性 L 与立方晶格下计算 lattice sum S，选择方向振荡使 $\\Psi $ 的测度配对为负，推出 Corollary 3.8。",
+            "evidence": "PDF 第12–17页 Theorem 3.6；第35–41页 Section 5 Lemmas 5.1–5.2、Corollary 3.8。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–5、主定理与测度极限证明、附录、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–53页全文。",
+      "priorityScore": 57,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17838:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17838",
+      "version": 1,
+      "entryKind": "new",
+      "title": "Failure of almost monotonicity of harmonic measure density ratios at points of vanishing codimension-one density",
+      "authors": [
+        "Luis Lloret",
+        "Xavier Tolsa"
+      ],
+      "abstract": "In this paper we study the behavior of the density ratios of harmonic measure at points with vanishing density. Given an arbitrary open set $Ω\\subset\\mathbb R^{n+1}$ with harmonic measure $ω$, we show that at $ω$-almost every point $x\\in\\partialΩ$ where $\\liminf_{r\\to0}\\frac{ω(B(x,r))}{r^n}=0$, the density ratio $\\frac{ω(B(x,r))}{r^n}$ is not almost monotone with respect to the radius $r$, and therefore exhibits arbitrarily large oscillations at small scales.",
+      "categories": [
+        "math.AP",
+        "math.CA"
+      ],
+      "primaryCategory": "math.AP",
+      "arxivUrl": "https://arxiv.org/abs/2608.17838",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17838",
+      "submittedAt": "2026-08-18T14:37:05Z",
+      "updatedAt": "2026-08-18T14:37:05Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文证明任意有界边界开集的 harmonic measure 在密度为零的点上，其密度比不可能近似单调。设 Z 为 n 维密度完全趋于零的 harmonic-measure 点集，作者反设某个正 harmonic-measure 子集上的密度比 almost monotone；通过 David–Mattila 晶格、Riesz 变换控制和一个 rectifiability criterion，从这种尺度控制构造承载正 harmonic measure 的 n-可整流集合。另一方面 harmonic measure 在 Z 的任何 n-可整流子集上都为零，矛盾遂证明任意小尺度存在无界振荡。",
+      "techniques": [
+        "harmonic measure 密度比",
+        "David–Mattila dyadic lattice",
+        "Riesz transform rectifiability criterion",
+        "Wiener regular approximation",
+        "最大原理与绝对连续性矛盾"
+      ],
+      "breakthrough": "将密度趋零与密度比的任意大尺度振荡联系起来：在几乎处处零密度点，harmonic measure 的比值既非 almost increasing 也非 almost decreasing，并由此得到更弱 liminf 零密度集合上的 Corollary 1.1。",
+      "limitations": "只针对任意开集的 harmonic measure、紧边界和固定极点；关键 rectifiability criterion 依赖测度增长、Riesz 变换振荡及 dyadic 几何假设，结论是定性振荡，不给出具体尺度频率或振幅速率。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "若密度比在某个正 harmonic-measure 子集上 almost monotone，则可选出满足多项式增长和 Riesz 控制的好球/好集合。",
+            "route": "在 David–Mattila 晶格中按密度比筛选 doubling cubes，结合 harmonic measure 的 Markov/Wiener 正则性与 density 假设，获得大子集 G 和嵌套球 $B_0\\supset B_1；almost$ monotonicity 提供 $B_1$ 上与 $B_0$ 同阶的密度。",
+            "evidence": "PDF 第3–7页 Theorem 1.1 后的 Section 2，Lemmas 2.1–2.12 及 dyadic construction。"
+          },
+          {
+            "claim": "这些几何条件和小 Riesz 振荡满足 rectifiability criterion 的假设。",
+            "route": "把 harmonic measure 限制到 G，利用核的反对称性、Riesz 变换 $L^{2}$ 振荡和选球的密度比较控制 suppressed Riesz transform；Theorem 3.1 的 corona/停止球迭代把局部条件转成一块 n-可整流集合。",
+            "evidence": "PDF 第8–13页 Section 3，Theorems 3.1–3.2 及其 proof，特别是 density/riesz 条件 (i)–(iii)。"
+          },
+          {
+            "claim": "该 criterion 产生承载正 harmonic measure 的 n-可整流子集。",
+            "route": "对测度 $\\mu =\\omega ^p_\\Omega$ 在所选 ball 内应用 Theorem 3.1，得到 $\\Gamma $ 与 $\\mu (\\Gamma )>0$ 的 n-rectifiable set；通过 Wiener regular approximation 和 Lemma 2.8 将局部构造提升到原开集边界，不损失 harmonic measure。",
+            "evidence": "PDF 第3页 Theorem 3.1 后结论；第13–18页 Section 4 reduction，Lemmas 2.7–2.8 与 approximation $\\Omega_\\epsilon $。"
+          },
+          {
+            "claim": "与 harmonic measure 在零 n-density 可整流集合上为零相矛盾，故密度比必须出现无界振荡。",
+            "route": "若 Z 中存在正 measure 的 almost-monotone 部分，前两步会给出 $\\Gamma \\subset Z$ 且 $\\omega (\\Gamma )>0$；但零密度定义和 rectifiable density theorem 使 $H^n$ 密度为零，进而 harmonic measure 在 $\\Gamma $ 上消失，矛盾。对 liminf 密度为零的 Z* 逐次选尺度应用同一论证，得到 Corollary 1.1 的双重 limsup。",
+            "evidence": "PDF 第2–3页 Theorem 1.1/Corollary 1.1；第25–41页 Section 5 proof，尤其 final contradiction 段落。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–5、全部 rectifiability 与 harmonic-measure 证明、结论、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–41页全文。",
+      "priorityScore": 57,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.16915:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.16915",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "Exact mean-covariance dynamics of the Weber field in the stochastic Lagrangian representation of the 3D Navier-Stokes equations",
+      "authors": [
+        "Triphop Mahithitarmmatorn"
+      ],
+      "abstract": "The Constantin-Iyer formula represents a smooth solution of the incompressible Navier-Stokes equations on $\\mathbb{T}^3$ as $u=\\mathbb{P}\\,\\mathbb{E}[(\\nabla A_t)^\\top(u_0\\circ A_t)]$, the projected expectation of a stochastic Weber field. We separate this expectation into the product of the means and a centred covariance, and show that the covariance -- together with the second moment of the inverse deformation gradient and the two-point covariance -- satisfies a closed deterministic advection-diffusion equation: because every Lagrangian label is driven by the same Brownian path, the quadratic covariation collapses into a Laplacian and no moment hierarchy appears. From these equations we obtain an energy/production balance, pointwise and Holder covariance bounds, and an exact degeneracy of the two-point operator in the separation variable. A second group of results concerns the mean displacement, which solves a forced heat equation along the flow; its $L^2$ norm is controlled unconditionally by the initial energy, while an exact family of Navier-Stokes shear flows shows that no analogous Holder bound can hold uniformly down to $t=0$. We further isolate several obstructions, each backed by an explicit counterexample -- the norm of an expected deformation gradient does not control the expected norm, even for genuine stochastic flows of smooth divergence-free drifts; a spatial Holder bound on the mean does not imply parabolic Campanato decay -- and we prove a gauge-invariant quotient criterion equivalent to the Serrin norm of the velocity, together with a Liouville-type rigidity theorem for ancient solutions whose mean coordinate is affine of rank at least one. No claim is made regarding global regularity; the missing steps are stated explicitly as open problems.",
+      "categories": [
+        "math.PR",
+        "math.AP"
+      ],
+      "primaryCategory": "math.PR",
+      "arxivUrl": "https://arxiv.org/abs/2608.16915",
+      "pdfUrl": "https://arxiv.org/pdf/2608.16915",
+      "submittedAt": "2026-07-24T17:41:32Z",
+      "updatedAt": "2026-07-24T17:41:32Z",
+      "topicId": "fluid-dynamics",
+      "topicLabel": "流体方程",
+      "progressType": "分析结果",
+      "workSummary": "论文把 Constantin–Iyer 随机拉格朗日表示中的 Weber 场拆成均值乘积与中心协方差，并证明这些量满足封闭的确定性输运–扩散方程。共同 Brownian 路径使二次协变项恰好变成 Laplacian，因此不存在矩阶层级；作者进一步给出协方差能量/生成平衡、单点与双点 Hölder 界、均值位移能量估计，以及共同噪声不产生分离变量平滑的退化。最后建立与 Serrin 范数等价的 gauge quotient continuation criterion 和仿射均值坐标下的古解刚性，同时明确不声称 Navier–Stokes 全局正则性。",
+      "techniques": [
+        "Itô–Wentzell 随机流计算",
+        "均值—协方差闭合方程",
+        "能量/production balance",
+        "双点退化与 Hölder 估计",
+        "Serrin–Weber 商范数"
+      ],
+      "breakthrough": "揭示单一共同噪声下 Weber 场协方差的精确闭合动力学，并把协方差来源、分离变量无平滑障碍和 Serrin–Weber 延拓判据放在同一可计算框架中；结果明确保留了未解决的全局正则性缺口。",
+      "limitations": "所有定理假设给定时间区间上的光滑周期 Navier–Stokes 解和共同 Brownian 随机流；若干 Hölder 界只对 t>0 成立，仿射刚性与延拓判据带有额外 Type-I/Serrin 假设，不能推出无条件全局正则性。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "Weber 场均值与协方差满足封闭确定性方程。",
+            "route": "对逆流 $A_t$ 应用 Itô–Wentzell，令 $J=\\nabla A、V=u_{0}∘A、F=JᵀV$；共同噪声的二次协变与 Laplacian 合并。对 E[JᵀV] 做均值乘积分解，使用 product rule (7) 消去随机项，得到 R 的闭合方程 (9)。",
+            "evidence": "PDF 第2–4页 equations (5)–(9)、Theorem 3.1；第4页 covariance equation 与定义。"
+          },
+          {
+            "claim": "协方差能量满足含生产源项的精确平衡。",
+            "route": "将闭合方程与 R 配对并在 $T^{3}$ 积分，散度自由性消去输运项，G 的反对称部分在二次型中消失；扩散给出 $\\nu ||\\nabla R||^{2}$，而均值变形梯度的乘积留下右端 production term。",
+            "evidence": "PDF 第4–5页 Proposition 3.4，equation (13)，以及 Proposition 3.5 的 covariance bounds (14)。"
+          },
+          {
+            "claim": "共同噪声不能为 Weber 两点协方差提供 separation 变量的平滑。",
+            "route": "对两点方程改用中心 $c=(x+y)/2$ 与分离 $r=x-y；(\\nabla x+\\nabla y)^{2}$只等于 $\\Delta _c$，输运分解出相对速度的 r 导数。取任意有界 h(r) 得静止解，说明扩散机制完全看不到分离方向。",
+            "evidence": "PDF 第5–6页 Theorem 4.1、Proposition 4.2，center/separation identities。"
+          },
+          {
+            "claim": "协方差商范数有限给出 Serrin 延拓，而仿射均值条件下古解具刚性。",
+            "route": "由 $u=P$ F̄ 和 Helmholtz 投影，F̄ 到梯度场的 $L^q$ 商范数与 u 的 $L^q$ 范数双向控制；在 $q>3、2/p+3/q\\le 1$ 时套用 Serrin 延拓。对古解的仿射均值坐标，以协方差方程和 Type-I 控制的缩放积分证明仿射部分只能保持规定秩。",
+            "evidence": "PDF 第9–12页 Theorems 7.1–7.2，equation (24)及 affine rigidity proof；第12–13页 Section 8 open problems。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–8、全部定理/反例/开放问题、致谢和参考文献，并检索 AI、LLM、ChatGPT、Claude、OpenAI、generative 等词；未见作者明确披露 AI/LLM 使用。",
+      "aiEvidenceSource": "PDF 第1–13页全文。",
+      "priorityScore": 56,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦流体方程，主要进展属于正则性；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.17845:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.17845",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "Duality-Based $\\textit{A Posteriori}$ Error Identities for Subgradient Flows Based on the Brézis-Ekeland-Nayroles Principle",
+      "authors": [
+        "Harbir Antil",
+        "Alex Kaltenbach",
+        "Keegan L. A. Kirk"
+      ],
+      "abstract": "We derive duality-based $\\textit{a posteriori}$ error identities for a broad class of subgradient flows induced by time-dependent convex integral functionals. Starting from the Brézis-Ekeland-Nayroles principle, we identify an unsteady primal energy functional and derive its Fenchel dual formulation, including strong duality and the corresponding optimality system under general normal-integrand assumptions. This Fenchel duality framework is used to derive $\\textit{a posteriori}$ error identities for subgradient flows. In doing so, we depart from the usual duality-based $\\textit{a posteriori}$ error control framework in the unsteady setting, since the Brézis-Ekeland-Nayroles formulation reveals the following unsteady feature: the minimal primal value and the maximal dual value are both prescribed by the initial datum. This allows us to pass from a combined primal-dual gap identity to separate primal and dual gap identities. These identities quantify the primal and dual errors independently and admit representations in terms of generalized Bregman divergences and, under a spatial convex conjugation formula, as non-negative time-space integral quantities suitable for localization. The abstract framework is applied to a number of variational problems of physical interest, including the unsteady heat equation, the unsteady Stokes equations, the unsteady Navier-Lamé equations, the unsteady Bingham flow through a pipe, the unsteady obstacle problem, and the unsteady elasto-plastic torsion problem.",
+      "categories": [
+        "math.NA",
+        "math.AP",
+        "math.FA",
+        "math.OC"
+      ],
+      "primaryCategory": "math.NA",
+      "arxivUrl": "https://arxiv.org/abs/2608.17845",
+      "pdfUrl": "https://arxiv.org/pdf/2608.17845",
+      "submittedAt": "2026-08-18T14:42:48Z",
+      "updatedAt": "2026-08-18T14:42:48Z",
+      "topicId": "variational",
+      "topicLabel": "变分方法",
+      "progressType": "分析结果",
+      "workSummary": "论文从时间依赖凸积分泛函的 Brézis–Ekeland–Nayroles 原理出发，建立次梯度流的非稳态 primal 泛函和 Fenchel dual。作者在一般 normal-integrand 假设下证明强对偶及最优性包含，并利用初值同时固定 primal 最小值和 dual 最大值，把通常的联合 primal–dual gap 拆成独立的 primal gap 与 dual gap。两种 gap 进一步写成广义 Bregman 散度和非负时空积分，在热方程、Stokes、Navier–Lamé、Bingham、障碍及弹塑性扭转模型中给出具体实例。",
+      "techniques": [
+        "Brézis–Ekeland–Nayroles 变分原理",
+        "Fenchel 共轭与强对偶",
+        "normal-integrand 可测性",
+        "广义 Bregman 散度",
+        "primal/dual a posteriori gap"
+      ],
+      "breakthrough": "识别非稳态问题中 primal 与 dual 最优值均由初值预先固定这一结构，从联合 gap 精确分离出两个可独立计算的误差恒等式，并在空间凸共轭可用时获得非负时空积分表示。",
+      "limitations": "抽象恒等式依赖凸 normal-integrand、可积性、初值空间和强对偶/最优性条件；不同应用（如 Stokes、障碍、Bingham）还需额外连续性或共轭公式，误差恒等式本身不等于离散化误差的自动可计算估计。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "次梯度流解等价于 BEN primal 能量的最小化，且最小值由初值范数固定。",
+            "route": "将演化约束 $\\partial _t$ $u+\\partial \\phi (t,u)∋0$ 编入含时间导数和积分泛函的 E(u)；Fenchel–Young 不等式给 $E(u)\\ge (1/2)||u_{0}||^{2}$，取满足流方程的 u 使每个 Fenchel 缺口为零，Proposition 3.7 得到等号和 primal minimizer。",
+            "evidence": "PDF 第7–11页 Section 3，Proposition 3.7 及 equations (3.8)–(3.10)。"
+          },
+          {
+            "claim": "Fenchel 共轭构造 dual 泛函并与 primal 强对偶。",
+            "route": "把时间导数/空间算子组成线性算子 L，利用 normal-integrand 的 Fenchel 共轭和 Lemmas 2.7–2.10 识别积分泛函共轭；密度引理 3.11 处理初值/终值迹，Theorem 3.9 给出 dual 解、强对偶关系 (1.12) 和最优性包含。",
+            "evidence": "PDF 第3页 equation (1.12)；第11–19页 Theorem 3.9、Lemma 3.11及其 proof。"
+          },
+          {
+            "claim": "primal gap 可精确写成 BEN 能量与初值常数的差，并进一步成为 Bregman 型非负量。",
+            "route": "由于 $E(u)=1/2||u_{0}||^{2}$，对任意近似 v 直接从 gap 定义减去该固定最小值，得到 Theorem 4.5 的恒等式；Lemma 4.2 将 Fenchel 缺口拆成 $\\phi $ 的 Bregman 散度与时间导数残差，Corollary 4.8 在空间共轭公式成立时把它写成时空积分。",
+            "evidence": "PDF 第20–22页 Theorem 4.5 equation (4.19)、Lemma 4.2、Lemma 4.6 与 Corollary 4.8。"
+          },
+          {
+            "claim": "dual gap 具有对偶的独立恒等式，并可用于各物理模型。",
+            "route": "用强对偶 $D(z,µ)=1/2||u_{0}||^{2}$ 对任意 $(y,\\lambda )$ 减去固定最优值，得到 Theorem 4.9 的 dual gap；Lemma 4.3/4.10 将其写为 dual Bregman 缺口，Sections 5 的共轭公式逐一代入热、Stokes、Navier–Lamé、Bingham 和障碍流，产生模型级 primal/dual 估计器。",
+            "evidence": "PDF 第22–25页 Theorem 4.9 equation (4.26)、Lemmas 4.3/4.10；第27–46页 Section 5 Lemmas 5.1–5.13。"
+          }
+        ]
+      },
+      "aiStatus": "no_disclosure_observed",
+      "aiEvidence": "逐页核查摘要、引言、Sections 2–5、所有抽象定理和模型应用、Statements/致谢和参考文献，并区分机构名称中的 Artificial Intelligence；未见作者明确披露 AI/LLM 用于研究或论文制作。",
+      "aiEvidenceSource": "PDF 第1–47页全文。",
+      "priorityScore": 53,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦变分方法，主要进展属于控制理论；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    },
+    {
+      "id": "math.AP:2026-08-19:2608.18068:v1",
+      "categoryId": "math.AP",
+      "configVersion": "a112882405d892ef84f655de83676822e3471e89da4cac51c50d06a9f0396388",
+      "announcementDate": "2026-08-19",
+      "arxivId": "2608.18068",
+      "version": 1,
+      "entryKind": "cross_list",
+      "title": "A dimension-free weak-type $(1,1)$ bound for the vector Riesz transform on $\\mathbb{R}^n$",
+      "authors": [
+        "Yuyuan Ouyang",
+        "Daniel Spector",
+        "Cody B. Stockdale"
+      ],
+      "abstract": "We show that the best constant in the weak-type $(1,1)$ bound for the vector Riesz transform on $\\mathbb{R}^n$ is at most $2$, independent of the dimension $n$. The proof relies on a new decomposition of the input data involving an obstacle problem for the fractional Laplacian and an associated Lewy-Stampacchia type estimate on an unbounded domain. This settles a problem posed by E. M. Stein at the 1986 International Congress of Mathematicians.",
+      "categories": [
+        "math.CA",
+        "math.AP"
+      ],
+      "primaryCategory": "math.CA",
+      "arxivUrl": "https://arxiv.org/abs/2608.18068",
+      "pdfUrl": "https://arxiv.org/pdf/2608.18068",
+      "submittedAt": "2026-08-18T17:56:00Z",
+      "updatedAt": "2026-08-18T17:56:00Z",
+      "topicId": "other-analysis",
+      "topicLabel": "其他分析方向",
+      "progressType": "分析结果",
+      "workSummary": "论文证明全向量 Riesz 变换在任意维数的弱型 (1,1) 常数至多为 2。核心是对非负 f 做 fractional obstacle/partial balayage 分解：构造 u 与密度 µ，使 $f=µ+(-\\Delta )^{\\alpha /2}u、µ\\le \\lambda $ 且 u 的接触集有有限测度。取 $\\alpha =1$ 对 $f^+、f^-$ 分解后，R $f=R$ $µ+\\nabla u$；梯度项只支撑在接触集，弱型超水平集被接触集与 Rµ 分割$，L^{2}$ 强型估计控制后者，得到维数无关常数 2。",
+      "techniques": [
+        "fractional obstacle problem",
+        "Lewy–Stampacchia 估计",
+        "partial balayage 分解",
+        "分数 Laplacian 与 Riesz 变换恒等式",
+        "弱型超水平集分解"
+      ],
+      "breakthrough": "解决 Stein 提出的维数无关 vector Riesz transform weak-(1,1) 问题，得到 $||Rf||_{1,\\infty }\\le 2||f||_{1}$；常数不随维数变化，关键来自适配 $R=\\nabla (-\\Delta )^{-1/2}$ 结构的障碍分解。",
+      "limitations": "最初通过 $L^{1}\\cap L^{2}$、非负数据和 $0<\\alpha <2$ 的分数能量建立分解，再由密度扩展到 $L^{1}$；结果针对欧氏全空间 Riesz 变换，不自动覆盖一般 Calderón–Zygmund 算子或边界域，且常数 2 是上界而非文中对所有维数的最优性声明。",
+      "analysisDepth": "full_text_sections",
+      "proofOutline": {
+        "status": "reviewed",
+        "steps": [
+          {
+            "claim": "fractional obstacle 泛函存在唯一非负极小元 u。",
+            "route": "在 $K_\\alpha ={v\\ge 0}$ 上最小化 $J^\\alpha _\\lambda (v)=E_\\alpha (v)-∫(f-\\lambda )v；Proposition$ 4.1 给出 minimizing sequence 的 $E_\\alpha +L^{1}$ 界，弱紧性和能量下半连续性得到存在，严格凸性给出 Theorem 4.1 的唯一性。",
+            "evidence": "PDF 第3–8页 Sections 3–4，Propositions 4.1、Theorem 4.1。"
+          },
+          {
+            "claim": "极小元导出受限密度 µ，其上界、质量和接触集性质满足 Theorem 1.2。",
+            "route": "对 $u-\\epsilon \\phi $ 取正部作为变分竞争函数，利用变分不等式和截断 chain rule 得 Theorem 5.1 的 Lewy–Stampacchia 界 $\\eta \\le (\\lambda -f)_+$；令 $µ=\\lambda -\\eta $，再用 cutoff $\\chi _R$ 和能量恒等式证明 $||µ||_{1}=||f||_{1}，Lemma$ 5.3 证明 $µ=\\lambda $ 于 {u>0}。",
+            "evidence": "PDF 第9–11页 Theorem 5.1、Lemma 5.1、Lemma 5.3 及 equations (5.1)–(5.4)。"
+          },
+          {
+            "claim": "分解 $f=µ+(-\\Delta )^{\\alpha /2}u$ 且 $\\alpha \\ge 1$ 时 $\\nabla u$ 在接触集外消失。",
+            "route": "Theorem 4.2 的变分不等式给分布恒等式 $f-µ=(-\\Delta )^{\\alpha /2}u$；当 $\\alpha \\ge 1，u\\in H^{1}$，正部/负部 chain rule 和互补性说明 u 在 $\\Omega^c={u=0}$ 的梯度几乎处处为零，同时 $\\lambda |\\Omega|\\le ||f||_{1}$。",
+            "evidence": "PDF 第8–11页 Theorem 4.2、Lemma 5.2–5.3、Theorem 1.2 proof。"
+          },
+          {
+            "claim": "障碍分解将 Riesz 超水平集控制为常数 2 的 $L^{1}$ 量。",
+            "route": "先对 $f=f^+-f^-$ 分别取 $\\alpha =1$ 的分解，写 $Rf=Rµ+\\nabla u$；在 Ω 外梯度为零，于是 ${|Rf|>\\lambda }\\subset \\Omega\\cup {|Rµ|>\\lambda }$。接触集测度由 $\\lambda |\\Omega|\\le ||f||_{1}$ 控制，µ 的 $L^{2}$ 范数由 $|µ|\\le \\lambda $ 和质量控制，Chebyshev/Plancherel 给 $\\lambda |{|Rµ|>\\lambda }|\\le ||f||_{1}$，合并即得 $2||f||_{1}$。",
+            "evidence": "PDF 第2–4页 Theorem 1.1/1.2；第11–13页 final proof of Theorem 1.1，尤其 decomposition and superlevel-set estimates。"
+          }
+        ]
+      },
+      "aiStatus": "explicit",
+      "aiEvidence": "作者专门加入 “Artificial Intelligence Statement”：证明策略由 LLM 对话发展，包括 ChatGPT（GPT-5.6 Sol）、Codex CLI/web、数学推理 agents、Claude Opus 5.0；作者描述了这些工具如何参与寻找 Stein 问题的思路、变分障碍方案和 Euclidean proof basis，并说明最终由作者讨论、核验和承担责任。",
+      "aiEvidenceSource": "PDF 第11–12页 “Artificial Intelligence Statement”。",
+      "priorityScore": 52,
+      "priorityTier": "medium",
+      "priorityReason": "论文聚焦其他分析方向，主要进展属于分析结果；排序综合考虑其与 PDE 机制、可复用估计、正则性和长时间行为的相关程度。",
+      "lowPriorityReason": null,
+      "revisionSummary": null
+    }
+  ]
+}
