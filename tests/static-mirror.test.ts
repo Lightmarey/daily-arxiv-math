@@ -26,7 +26,8 @@ import {
 } from './helpers';
 
 const sharedAp = storedReport('math.AP', '2609.00001', {
-  title: 'Unsafe <script>alert(1)</script> {{ site.secret }} $\\Lambda$',
+  title:
+    'Unsafe <script>alert(1)</script> {{ site.secret }} Schr\\"odinger $\\Lambda$',
   abstract: '[bad](javascript:alert(1)) and $R_{ij}$ plus $G={F0$',
   workSummary: 'Controls $BV^{\\mathcal A}$ solutions.',
   techniques: ['$\\sigma_k$ curvature', 'Energy estimate'],
@@ -268,7 +269,10 @@ assert.doesNotMatch(html, /href=["']javascript:/);
 assert.doesNotMatch(html, /katex-error/);
 assert.match(html, /<code>G=\{F0<\/code>/);
 assert.match(html, /技术路径以<span class="katex">/);
-assert.match(html, /<h4><a [^>]+>Unsafe &lt;script&gt;[^<]*<span class="katex">/);
+assert.match(
+  html,
+  /<h4><a [^>]+>Unsafe &lt;script&gt;[^<]*Schrödinger <span class="katex">/,
+);
 assert.match(html, /<dd>Controls <span class="katex">/);
 assert.match(html, /annotation encoding="application\/x-tex">\\Lambda<\/annotation>/);
 assert.match(html, /annotation encoding="application\/x-tex">BV\^\{\\mathcal A\}<\/annotation>/);

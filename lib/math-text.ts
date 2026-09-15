@@ -144,6 +144,29 @@ function wrapBareMath(value: string): string {
   });
 }
 
+const textAccentMarks: Record<string, string> = {
+  '"': '\u0308',
+  "'": '\u0301',
+  '`': '\u0300',
+  '^': '\u0302',
+  '~': '\u0303',
+  '=': '\u0304',
+  '.': '\u0307',
+  u: '\u0306',
+  v: '\u030c',
+  H: '\u030b',
+  r: '\u030a',
+  c: '\u0327',
+};
+
+function normalizeLatexText(value: string): string {
+  return value
+    .replace(/\\(["'`^~=.uvHrc])\{?([A-Za-z])\}?/g, (_match, accent: string, letter: string) =>
+      `${letter}${textAccentMarks[accent]}`.normalize('NFC'),
+    )
+    .replaceAll('--', '–');
+}
+
 function sanitizeLatexMath(value: string): string {
   return value
     .replaceAll(`${String.fromCharCode(7)}lpha`, '\\alpha')
@@ -202,7 +225,7 @@ export function normalizeMathText(value: string): string {
   return normalized
     .split(/(\$\$[\s\S]*?\$\$|\$[^$\n]*?\$)/g)
     .map((part) => {
-      if (!part.startsWith('$')) return wrapBareMath(part);
+      if (!part.startsWith('$')) return wrapBareMath(normalizeLatexText(part));
       const delimiter = part.startsWith('$$') ? '$$' : '$';
       return `${delimiter}${sanitizeLatexMath(part.slice(delimiter.length, -delimiter.length))}${delimiter}`;
     })

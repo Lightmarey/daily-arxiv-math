@@ -19,6 +19,10 @@ assert.equal(
   '已有 $x^2$ 和 $$y^2$$',
 );
 assert.equal(
+  normalizeMathText('Chern--Simons--Schr\\"odinger'),
+  'Chern–Simons–Schrödinger',
+);
+assert.equal(
   normalizeMathText('定义 $u$ 时有 D²ρ−θI∈Γ2。'),
   '定义 $u$ 时有 $D^{2}\\rho -\\theta I\\in \\Gamma _{2}$。',
 );
