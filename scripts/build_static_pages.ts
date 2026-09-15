@@ -107,6 +107,10 @@ function markdownToHtml(markdown: string): string {
   );
 }
 
+function inlineMarkdownToHtml(markdown: string): string {
+  return markdownToHtml(markdown).replace(/^<p>([\s\S]*)<\/p>$/, '$1');
+}
+
 function pathUrl(basePath: string, value = ''): string {
   const suffix = value.replace(/^\/+/, '');
   return `${basePath}/${suffix}`.replace(/\/{2,}/g, '/');
@@ -156,17 +160,17 @@ function renderPaperCard(report: PaperReport, basePath: string): string {
     .toLocaleLowerCase('zh-CN');
   return `<article class="paper" data-paper data-ai="${report.aiStatus}" data-topic="${escapeHtml(`${report.categoryId}:${report.topicId}`)}" data-priority="${report.priorityTier}" data-search="${escapeHtml(search)}">
   <div class="paper-meta"><span>${escapeHtml(report.categories.join(' · '))}</span><span>${report.priorityScore} · ${priorityLabel(report)}</span></div>
-  <p class="progress">${escapeHtml(report.progressType)}</p>
+  <p class="progress">${inlineMarkdownToHtml(report.progressType)}</p>
   <p class="analysis-depth">${report.analysisDepth === 'abstract' ? '摘要级分析' : '已补读正文关键部分'}</p>
-  <h4><a href="${paperUrl(basePath, report.arxivId)}">${escapeHtml(report.title)}</a></h4>
+  <h4><a href="${paperUrl(basePath, report.arxivId)}">${inlineMarkdownToHtml(report.title)}</a></h4>
   <p class="authors">${escapeHtml(report.authors.join(' · '))}</p>
   <dl>
-    <div><dt>完成的工作</dt><dd>${escapeHtml(report.workSummary)}</dd></div>
-    <div><dt>技术</dt><dd>${escapeHtml(report.techniques.join(' · '))}</dd></div>
-    <div><dt>可能的突破</dt><dd>${escapeHtml(report.breakthrough)}</dd></div>
-    <div><dt>需谨慎处</dt><dd>${escapeHtml(report.limitations)}</dd></div>
+    <div><dt>完成的工作</dt><dd>${inlineMarkdownToHtml(report.workSummary)}</dd></div>
+    <div><dt>技术</dt><dd>${report.techniques.map(inlineMarkdownToHtml).join(' · ')}</dd></div>
+    <div><dt>可能的突破</dt><dd>${inlineMarkdownToHtml(report.breakthrough)}</dd></div>
+    <div><dt>需谨慎处</dt><dd>${inlineMarkdownToHtml(report.limitations)}</dd></div>
     <div><dt>证明逻辑/大纲</dt><dd>${proofOutlineHtml(report)}</dd></div>
-    <div><dt>排序理由</dt><dd>${escapeHtml(report.lowPriorityReason ?? report.priorityReason)}</dd></div>
+    <div><dt>排序理由</dt><dd>${inlineMarkdownToHtml(report.lowPriorityReason ?? report.priorityReason)}</dd></div>
   </dl>
   <a class="detail-link" href="${paperUrl(basePath, report.arxivId)}">完整分析 →</a>
 </article>`;
@@ -238,18 +242,18 @@ function renderOverview(day: StaticDayV2): string {
     ? day.overview.breakthroughPoints
         .map(
           (item) =>
-            `<li><strong>${escapeHtml(item.title)}</strong>：${escapeHtml(item.summary)}</li>`,
+            `<li><strong>${inlineMarkdownToHtml(item.title)}</strong>：${inlineMarkdownToHtml(item.summary)}</li>`,
         )
         .join('')
     : '<li>本期没有足够证据支持单独标注突破点。</li>';
   const cautions = day.overview.cautions.length
     ? day.overview.cautions
-        .map((item) => `<li>${escapeHtml(item)}</li>`)
+        .map((item) => `<li>${inlineMarkdownToHtml(item)}</li>`)
         .join('')
     : '<li>仍建议回查原论文的精确定理、假设和证明细节。</li>';
   return `<section class="overview">
     <div><p class="eyebrow">Daily synthesis</p><h2>当日总览</h2></div>
-    <div class="overview-row"><h3>主要方向与技术进展</h3><div>${day.overview.mainProgress.map((item) => `<p>${escapeHtml(item)}</p>`).join('')}</div></div>
+    <div class="overview-row"><h3>主要方向与技术进展</h3><div>${day.overview.mainProgress.map((item) => `<p>${inlineMarkdownToHtml(item)}</p>`).join('')}</div></div>
     <div class="overview-row"><h3>可能的突破点</h3><ul>${breakthroughs}</ul></div>
     <div class="overview-row"><h3>需谨慎处</h3><ul>${cautions}</ul></div>
   </section>`;
