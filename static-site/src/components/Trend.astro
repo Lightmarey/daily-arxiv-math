@@ -1,0 +1,33 @@
+---
+import type {
+  StaticMirrorManifestV3,
+  StaticVolumeV3,
+} from '../../../lib/static-mirror';
+
+interface Props {
+  manifest: StaticMirrorManifestV3;
+  volume: StaticVolumeV3;
+}
+
+const { manifest } = Astro.props;
+const categories = manifest.config.categories.filter((item) =>
+  manifest.config.displayCategories.includes(item.id),
+);
+---
+
+<section class="trend" id="trend">
+  <div class="section-head">
+    <div><p class="eyebrow">Publication pulse</p><h2>每周发文趋势</h2></div>
+    <button type="button" data-trend-toggle aria-expanded="false">
+      展开至 2 年
+    </button>
+  </div>
+  <div class="trend-legend" aria-label="趋势分类">
+    {
+      categories.map((item) => (
+        <span style={`color:${item.color ?? 'currentColor'}`}>{item.id}</span>
+      ))
+    }
+  </div>
+  <div class="chart" data-chart></div>
+</section>

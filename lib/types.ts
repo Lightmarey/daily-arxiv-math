@@ -84,40 +84,6 @@ export interface PaperReport {
   revisionSummary?: string | null;
 }
 
-export type PaperSummary = Pick<
-  PaperReport,
-  | 'id'
-  | 'categoryId'
-  | 'announcementDate'
-  | 'arxivId'
-  | 'version'
-  | 'title'
-  | 'authors'
-  | 'categories'
-  | 'arxivUrl'
-  | 'pdfUrl'
-  | 'topicId'
-  | 'topicLabel'
-  | 'progressType'
-  | 'workSummary'
-  | 'analysisDepth'
-  | 'aiStatus'
-  | 'priorityScore'
-  | 'priorityTier'
-  | 'priorityReason'
->;
-
-export interface DailyOverview {
-  paperCount: number;
-  mainProgress: string[];
-  breakthroughPoints: Array<{
-    arxivId: string;
-    title: string;
-    summary: string;
-  }>;
-  cautions: string[];
-}
-
 export interface ReportFeed {
   date: string;
   lastUpdated: string;
@@ -130,8 +96,7 @@ export interface DashboardData {
   lastUpdated: string;
   config: PublicTrackingConfig;
   volumes: VolumePoint[];
-  reports: PaperSummary[];
-  overview: DailyOverview;
+  reports: PaperReport[];
   dataMode: 'database' | 'preview' | 'loading' | 'unavailable';
   coverage: CategoryCoverage[];
 }

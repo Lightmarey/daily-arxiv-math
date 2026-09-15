@@ -1,0 +1,45 @@
+---
+import type { StaticDayV3 } from '../../../lib/static-mirror';
+import { reportAnchor } from '../lib/runtime';
+import MathText from './MathText.astro';
+
+interface Props {
+  day: StaticDayV3;
+}
+
+const { day } = Astro.props;
+const reportById = new Map(day.analyses.map((report) => [report.id, report]));
+const compactSummary = (value: string) =>
+  (value.match(/[^。！？；]+[。！？；]?/gu) ?? [value])
+    .slice(0, 2)
+    .join('')
+    .trim();
+---
+
+<section class="overview" id="overview">
+  <header class="overview-head">
+    <h1>当日总览</h1>
+    <div class="status-badges" aria-label="日报状态">
+      <span>完整收敛 {day.coverage.publishedCount}/{day.coverage.expectedCount}</span>
+      <span>AI 协作 {day.aiDisclosureCount}</span>
+    </div>
+  </header>
+  <div class="overview-summary">
+    <p class="overview-label">AI 摘要</p>
+    <ul class="summary-items">
+      {
+        day.summaryItems.slice(0, 3).map((item) => {
+          const report = reportById.get(item.analysisId);
+          if (!report) return null;
+          return (
+            <li>
+              <a href={`#${reportAnchor(report)}`} data-summary-link>
+                <MathText value={compactSummary(item.text)} />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

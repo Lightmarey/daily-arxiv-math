@@ -20,26 +20,7 @@ const commands = [
   ],
   [
     process.execPath,
-    [
-      resolve('node_modules/tsx/dist/cli.mjs'),
-      'tests/legacy-math-backfill.test.ts',
-    ],
-  ],
-  [
-    process.execPath,
-    [resolve('node_modules/tsx/dist/cli.mjs'), 'tests/dashboard.test.ts'],
-  ],
-  [
-    process.execPath,
-    [resolve('node_modules/tsx/dist/cli.mjs'), 'tests/health.test.ts'],
-  ],
-  [
-    process.execPath,
     [resolve('node_modules/tsx/dist/cli.mjs'), 'tests/static-mirror.test.ts'],
-  ],
-  [
-    process.execPath,
-    [resolve('node_modules/tsx/dist/cli.mjs'), 'tests/repository.test.ts'],
   ],
   ['python', ['-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py']],
 ];

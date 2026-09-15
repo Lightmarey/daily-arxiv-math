@@ -1,0 +1,102 @@
+---
+import type {
+  StaticDayV3,
+  StaticMirrorManifestV3,
+  StaticVolumeV3,
+} from '../../../lib/static-mirror';
+import { staticTopicOrder } from '../../../lib/static-mirror';
+import { categoryAnchor, topicAnchor } from '../lib/runtime';
+import Filters from './Filters.astro';
+import Overview from './Overview.astro';
+import PaperCard from './PaperCard.astro';
+import Toc from './Toc.astro';
+import TopControls from './TopControls.astro';
+import Trend from './Trend.astro';
+
+interface Props {
+  day: StaticDayV3;
+  manifest: StaticMirrorManifestV3;
+  volume: StaticVolumeV3;
+}
+
+const { day, manifest, volume } = Astro.props;
+const categories = manifest.config.categories.filter((category) =>
+  manifest.config.displayCategories.includes(category.id),
+);
+const payload = JSON.stringify({
+  volume,
+  config: manifest.config,
+  dates: manifest.days.map((entry) => entry.announcementDate),
+})
+  .replaceAll('<', '\\u003c')
+  .replaceAll('\u2028', '\\u2028')
+  .replaceAll('\u2029', '\\u2029');
+---
+
+<div class="day-page" data-filter-root>
+  <TopControls day={day} manifest={manifest} />
+  <div class="page-layout">
+    <Toc day={day} manifest={manifest} />
+    <div class="page-content">
+      <Overview day={day} />
+
+      <section class="reports">
+        <div class="section-head"><h2>全部论文</h2></div>
+        <Filters manifest={manifest} />
+        <div data-report-list>
+          {
+            categories.map((category) => {
+              const reports = day.analyses.filter(
+                (report) => report.categoryId === category.id,
+              );
+              const topics = staticTopicOrder(manifest.config, [category.id], reports);
+              return (
+                <section
+                  class="field-group"
+                  id={categoryAnchor(category.id)}
+                  data-field-group={category.id}
+                >
+                  <div class="field-heading">
+                    <div><p>{category.id}</p><h2>{category.label}</h2></div>
+                    <span data-field-count>{reports.length}</span>
+                  </div>
+                  {topics.map((topic) => {
+                    const topicReports = reports.filter(
+                      (report) =>
+                        `${report.categoryId}:${report.topicId}` === topic.key,
+                    );
+                    if (!topicReports.length) return null;
+                    return (
+                      <section
+                        class="topic-group"
+                        id={topicAnchor(category.id, topic.id)}
+                        data-group
+                        data-category={category.id}
+                        data-topic={topic.key}
+                      >
+                        <div class="topic-heading">
+                          <h3>{topic.label}</h3>
+                          <span data-group-count>{topicReports.length}</span>
+                        </div>
+                        {topicReports.map((report) => <PaperCard report={report} />)}
+                      </section>
+                    );
+                  })}
+                  {!reports.length && <p class="field-empty">当日无论文</p>}
+                </section>
+              );
+            })
+          }
+          <p class="empty" data-empty hidden>当前筛选条件下没有论文。</p>
+        </div>
+      </section>
+
+      <Trend manifest={manifest} volume={volume} />
+    </div>
+  </div>
+</div>
+
+<script id="mirror-data" type="application/json" is:inline set:html={payload}></script>
+<script>
+  import '../scripts/day';
+</script>

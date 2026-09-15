@@ -1,0 +1,71 @@
+---
+import type { PaperReport } from '../../../lib/types';
+import { aiLabel, priorityLabel } from '../lib/labels';
+import { reportAnchor, safeExternalUrl } from '../lib/runtime';
+import MathText from './MathText.astro';
+import ProofOutline from './ProofOutline.astro';
+
+interface Props {
+  report: PaperReport;
+}
+
+const { report } = Astro.props;
+const search = [
+  report.title,
+  ...report.authors,
+  report.abstract,
+  report.workSummary,
+  ...report.proofOutline.steps.flatMap((step) => [
+    step.claim,
+    step.route,
+    step.evidence,
+  ]),
+]
+  .join(' ')
+  .toLocaleLowerCase('zh-CN')
+  .replace(/[<>{}]/g, ' ');
+---
+
+<article
+  class="paper"
+  id={reportAnchor(report)}
+  data-paper
+  data-category={report.categoryId}
+  data-ai={report.aiStatus}
+  data-topic={`${report.categoryId}:${report.topicId}`}
+  data-priority={report.priorityTier}
+  data-search={search}
+>
+  <div class="paper-meta">
+    <span>{report.categoryId} · {report.topicLabel}</span>
+    <span>{report.priorityScore} · {priorityLabel(report.priorityTier)}</span>
+  </div>
+  <h4>
+    <a href={safeExternalUrl(report.arxivUrl)} target="_blank" rel="noreferrer">
+      <MathText value={report.title} inline />
+    </a>
+  </h4>
+  <p class="authors">{report.authors.join(' · ')}</p>
+  <details class="paper-section" open>
+    <summary>完成的工作</summary>
+    <MathText value={report.workSummary} />
+  </details>
+  <details class="paper-section" open>
+    <summary>技术</summary>
+    <MathText value={report.techniques.join(' · ')} />
+  </details>
+  <details class="paper-section" open>
+    <summary>AI 披露</summary>
+    <p>{aiLabel(report.aiStatus)}</p>
+    {report.aiStatus === 'explicit' && report.aiEvidence && <MathText value={report.aiEvidence} />}
+  </details>
+  <details class="paper-section">
+    <summary>可能的突破</summary>
+    <MathText value={report.breakthrough} />
+  </details>
+  <details class="paper-section">
+    <summary>需谨慎</summary>
+    <MathText value={report.limitations} />
+  </details>
+  <ProofOutline outline={report.proofOutline} />
+</article>

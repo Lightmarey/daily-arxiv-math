@@ -1,0 +1,57 @@
+---
+import type { StaticMirrorManifestV3 } from '../../../lib/static-mirror';
+
+interface Props {
+  manifest: StaticMirrorManifestV3;
+}
+
+const { manifest } = Astro.props;
+const categories = manifest.config.categories.filter((category) =>
+  manifest.config.displayCategories.includes(category.id),
+);
+---
+
+<div class="filters" aria-label="论文筛选">
+  <label>
+    <span>领域</span>
+    <select name="category">
+      <option value="all">全部领域</option>
+      {categories.map((category) => <option value={category.id}>{category.label}</option>)}
+    </select>
+  </label>
+  <label>
+    <span>主题</span>
+    <select name="topic">
+      <option value="all">全部主题</option>
+      {
+        categories.map((category) => (
+          <optgroup label={category.label} data-category={category.id}>
+            {category.topics.map((topic) => (
+              <option value={`${category.id}:${topic.id}`} data-category={category.id}>
+                {topic.label}
+              </option>
+            ))}
+          </optgroup>
+        ))
+      }
+    </select>
+  </label>
+  <label>
+    <span>AI 状态</span>
+    <select name="ai">
+      <option value="all">全部</option>
+      <option value="not_checked">尚未核查</option>
+      <option value="no_disclosure_observed">已核查未见披露</option>
+      <option value="explicit">明确披露使用</option>
+    </select>
+  </label>
+  <label>
+    <span>优先级</span>
+    <select name="priority">
+      <option value="all">全部</option>
+      <option value="high">高</option>
+      <option value="medium">中</option>
+      <option value="low">低</option>
+    </select>
+  </label>
+</div>

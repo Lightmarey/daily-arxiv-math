@@ -11,10 +11,11 @@
 # testing
 /coverage
 
-# next.js
+# retired local build artifacts
 /.next/
 /.vinext/
-/out/
+/.wrangler/
+/dist/
 
 # misc
 .DS_Store
@@ -29,14 +30,16 @@ yarn-error.log*
 # local environment
 .env
 .env.*
-!.env.example
 
 # deployment and generated files
 .vercel
 next-env.d.ts
 *.tsbuildinfo
-/dist/
-/.wrangler/
+/.astro/
+/static-site/.astro/
+/static-site/.build-*/
+/static-site/dist/
+/static-site/node_modules/
 /outputs/
 /work/
 /.automation/

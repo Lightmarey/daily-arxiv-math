@@ -1,0 +1,109 @@
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+import { publicTrackingConfigSchema } from '../../../lib/config';
+import {
+  STATIC_MIRROR_SCHEMA_VERSION,
+  normalizeStaticReport,
+  validateStaticDay,
+  type StaticDayV3,
+  type StaticMirrorManifestV3,
+  type StaticVolumeV3,
+} from '../../../lib/static-mirror';
+import { paperReportInputSchema } from '../../../lib/validation';
+import { contentRoot } from './runtime';
+
+export interface StaticContent {
+  manifest: StaticMirrorManifestV3;
+  volume: StaticVolumeV3;
+  days: StaticDayV3[];
+}
+
+async function readJson<T>(path: string): Promise<T> {
+  return JSON.parse(await readFile(path, 'utf8')) as T;
+}
+
+function validateContent(content: StaticContent): void {
+  const { manifest, volume, days } = content;
+  if (
+    manifest.schemaVersion !== STATIC_MIRROR_SCHEMA_VERSION ||
+    volume.schemaVersion !== STATIC_MIRROR_SCHEMA_VERSION
+  ) {
+    throw new Error('Unsupported static mirror schema version');
+  }
+  if (
+    !manifest.days.length ||
+    manifest.latestDate !== manifest.days[0].announcementDate
+  ) {
+    throw new Error(
+      'Manifest latest date does not match the first archived day',
+    );
+  }
+
+  for (const [index, day] of days.entries()) {
+    if (!day.coverage.complete) {
+      throw new Error(`Incomplete static day ${day.announcementDate}`);
+    }
+    validateStaticDay(day);
+    const entry = manifest.days[index];
+    if (
+      !entry ||
+      entry.announcementDate !== day.announcementDate ||
+      entry.expectedCount !== day.coverage.expectedCount ||
+      entry.publishedCount !== day.coverage.publishedCount ||
+      entry.lastUpdated !== day.lastUpdated
+    )
+      throw new Error(`Manifest mismatch for ${day.announcementDate}`);
+    for (const report of day.analyses) {
+      if (!paperReportInputSchema.safeParse(report).success) {
+        throw new Error(
+          `Invalid report ${report.arxivId} on ${day.announcementDate}`,
+        );
+      }
+    }
+  }
+  for (const point of volume.points) {
+    if (
+      Object.values(point.counts).some(
+        (value) => value !== null && (!Number.isInteger(value) || value < 0),
+      )
+    ) {
+      throw new Error(`Invalid volume point ${point.announcementDate}`);
+    }
+  }
+}
+
+let cached: Promise<StaticContent> | undefined;
+
+export function loadStaticContent(): Promise<StaticContent> {
+  cached ??= (async () => {
+    const root = contentRoot();
+    const manifest = await readJson<StaticMirrorManifestV3>(
+      join(root, 'data/manifest.json'),
+    );
+    const config = publicTrackingConfigSchema.parse(
+      await readJson<unknown>(join(root, 'data/config.json')),
+    );
+    if (JSON.stringify(config) !== JSON.stringify(manifest.config)) {
+      throw new Error('Public config does not match the static manifest');
+    }
+    const volume = await readJson<StaticVolumeV3>(
+      join(root, 'data/volume.json'),
+    );
+    const days = (
+      await Promise.all(
+        manifest.days.map((entry) =>
+          readJson<StaticDayV3>(
+            join(root, `data/daily/${entry.announcementDate}.json`),
+          ),
+        ),
+      )
+    ).map((day) => ({
+      ...day,
+      analyses: day.analyses.map(normalizeStaticReport),
+    }));
+    const content = { manifest, volume, days };
+    validateContent(content);
+    return content;
+  })();
+  return cached;
+}

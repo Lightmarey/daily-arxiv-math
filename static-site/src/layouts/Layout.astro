@@ -1,0 +1,31 @@
+---
+import 'katex/dist/katex.min.css';
+import '../styles/site.css';
+import { pathUrl } from '../lib/runtime';
+
+interface Props {
+  title: string;
+  description: string;
+  siteName: string;
+}
+
+const { title, description, siteName } = Astro.props;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body data-base-path={pathUrl().replace(/\/$/, '')}>
+    <header class="site-header">
+      <div>
+        <a class="brand" href={pathUrl()}><i>A.</i><span>{siteName}</span></a>
+      </div>
+    </header>
+    <main><slot /></main>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+---
+import type { ProofOutline as ProofOutlineData } from '../../../lib/types';
+import MathText from './MathText.astro';
+
+interface Props {
+  outline: ProofOutlineData;
+}
+
+const { outline } = Astro.props;
+---
+
+{
+  <details class="proof-outline">
+    <summary>
+      <span>证明逻辑/大纲</span>
+      {outline.status === 'reviewed' && <small>{outline.steps.length} 步</small>}
+    </summary>
+    {outline.status === 'reviewed' ? (
+      <ol>
+        {outline.steps.map((step, index) => (
+          <li>
+            <p class="proof-step">第 {index + 1} 步</p>
+            <MathText value={step.claim} class="proof-claim" />
+            <div class="proof-route">
+              <span>路线：</span><MathText value={step.route} inline />
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : null}
+  </details>
+}

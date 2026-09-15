@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from 'astro';
+import DayPage from '../../components/DayPage.astro';
+import Layout from '../../layouts/Layout.astro';
+import { loadStaticContent } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const { manifest, volume, days } = await loadStaticContent();
+  return days.map((day) => ({
+    params: { date: day.announcementDate },
+    props: { day, manifest, volume },
+  }));
+}) satisfies GetStaticPaths;
+
+const { day, manifest, volume } = Astro.props;
+---
+
+<Layout
+  title={`${day.announcementDate} · ${manifest.config.site.name}`}
+  description={manifest.config.site.description}
+  siteName={manifest.config.site.name}
+>
+  <DayPage day={day} manifest={manifest} volume={volume} />
+</Layout>

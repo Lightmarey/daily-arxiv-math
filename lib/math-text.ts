@@ -144,66 +144,8 @@ function wrapBareMath(value: string): string {
   });
 }
 
-const textAccentMarks: Record<string, string> = {
-  '"': '\u0308',
-  "'": '\u0301',
-  '`': '\u0300',
-  '^': '\u0302',
-  '~': '\u0303',
-  '=': '\u0304',
-  '.': '\u0307',
-  u: '\u0306',
-  v: '\u030c',
-  H: '\u030b',
-  r: '\u030a',
-  c: '\u0327',
-};
-
-function normalizeLatexText(value: string): string {
-  return value
-    .replace(/\\(["'`^~=.uvHrc])\{?([A-Za-z])\}?/g, (_match, accent: string, letter: string) =>
-      `${letter}${textAccentMarks[accent]}`.normalize('NFC'),
-    )
-    .replaceAll('--', '–');
-}
-
-function sanitizeLatexMath(value: string): string {
-  return value
-    .replaceAll(`${String.fromCharCode(7)}lpha`, '\\alpha')
-    .replaceAll(`${String.fromCharCode(8)}ar`, '\\bar')
-    .replaceAll(`${String.fromCharCode(8)}eta`, '\\beta')
-    .replaceAll(`${String.fromCharCode(11)}arepsilon`, '\\varepsilon')
-    .replaceAll(`${String.fromCharCode(11)}arnothing`, '\\varnothing')
-    .replaceAll(`${String.fromCharCode(11)}arphi`, '\\varphi')
-    .replaceAll(`${String.fromCharCode(11)}arrho`, '\\varrho')
-    .replaceAll(`${String.fromCharCode(11)}artheta`, '\\vartheta')
-    .replaceAll(`${String.fromCharCode(12)}rac`, '\\frac')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&amp;/g, '&')
-    .replace(/(\\[A-Za-z]+|[A-Za-z0-9α-ωΑ-Ω])\s*\u0304/gu, '\\bar{$1}')
-    .replace(/(\\[A-Za-z]+|[A-Za-z0-9α-ωΑ-Ω])\s*\u0303/gu, '\\tilde{$1}')
-    .replace(/(\\[A-Za-z]+|[A-Za-z0-9α-ωΑ-Ω])\s*\u0302/gu, '\\hat{$1}')
-    .replace(/(\\[A-Za-z]+|[A-Za-z0-9α-ωΑ-Ω])\s*\u030a/gu, '\\mathring{$1}')
-    .replace(/(?<!\\)#/g, '\\#')
-    .replace(/\^(\\[A-Za-z]+)\s*'/g, "^{$1'}")
-    .replace(/_\\hat\{([^{}]+)\}/g, '_{\\hat{$1}}')
-    .replace(/\\\(/g, '(')
-    .replace(/\\\)/g, ')');
-}
-
 export function normalizeMathText(value: string): string {
   const normalized = value
-    .replaceAll(`${String.fromCharCode(7)}symp`, '\\asymp')
-    .replaceAll(`${String.fromCharCode(9)}heta`, '\\theta')
-    .replaceAll(`${String.fromCharCode(9)}au`, '\\tau')
-    .replaceAll(`${String.fromCharCode(9)}ext`, '\\text')
-    .replaceAll(`${String.fromCharCode(10)}abla`, '\\nabla')
-    .replaceAll(`${String.fromCharCode(13)}ho`, '\\rho')
-    .replace(
-      /\$\|\\nabla\s*\$u\^q\|\^p\$\$\s*与\s*\$\$u\^\{q\+1\}\$\$/g,
-      '$|\\nabla u^q|^p$ 与 $u^{q+1}$',
-    )
     .replace(
       /\\begin\{(equation\*?|align\*?|gather\*?|multline\*?)\}([\s\S]*?)\\end\{\1\}/g,
       (_match, environment: string, body: string) => {
@@ -224,10 +166,6 @@ export function normalizeMathText(value: string): string {
     );
   return normalized
     .split(/(\$\$[\s\S]*?\$\$|\$[^$\n]*?\$)/g)
-    .map((part) => {
-      if (!part.startsWith('$')) return wrapBareMath(normalizeLatexText(part));
-      const delimiter = part.startsWith('$$') ? '$$' : '$';
-      return `${delimiter}${sanitizeLatexMath(part.slice(delimiter.length, -delimiter.length))}${delimiter}`;
-    })
+    .map((part) => (part.startsWith('$') ? part : wrapBareMath(part)))
     .join('');
 }

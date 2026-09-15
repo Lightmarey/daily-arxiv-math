@@ -1,0 +1,15 @@
+---
+import { inlineMarkdownToHtml, markdownToHtml } from '../lib/markdown';
+
+interface Props {
+  value: string;
+  inline?: boolean;
+  class?: string;
+}
+
+const { value, inline = false, class: className } = Astro.props;
+const html = inline ? inlineMarkdownToHtml(value) : markdownToHtml(value);
+const Tag = inline ? 'span' : 'div';
+---
+
+<Tag class:list={['math-text', className]} set:html={html} />

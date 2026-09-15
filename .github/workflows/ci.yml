@@ -45,21 +45,6 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  migrations:
-    name: migrations
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-      - run: npm ci
-      - run: npm run db:check
-      - run: npm run db:generate
-      - name: Require generated migrations to be committed
-        run: git diff --exit-code -- drizzle
-
   secrets:
     name: secrets
     runs-on: ubuntu-latest
@@ -75,28 +60,6 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - run: npm run security:check
 
-  build:
-    name: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-      - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          cache: npm
-      - run: npm ci
-      - run: npm run build
-      - run: npm run security:check:dist
-      - name: Install pinned Gitleaks
-        run: |
-          curl --fail --location --silent --show-error \
-            --output /tmp/gitleaks.tar.gz \
-            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
-          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  /tmp/gitleaks.tar.gz" | sha256sum --check
-          tar -xzf /tmp/gitleaks.tar.gz -C /tmp gitleaks
-      - name: Scan the production bundle
-        run: /tmp/gitleaks dir dist --config .gitleaks.toml --redact --no-banner
-
   static-pages:
     name: static-pages
     runs-on: ubuntu-latest
@@ -107,31 +70,29 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
       - run: npm ci
+      - name: Check Astro templates
+        run: npm run static:check
       - name: Type-check mirror schemas and generators
         run: npm run typecheck
       - name: Build and verify the hostile-content fixture
         run: npx tsx tests/static-mirror.test.ts
       - name: Check trusted mirror source for secrets
-        run: node scripts/check_secrets.mjs lib/static-mirror.ts scripts/sync_static_mirror.ts scripts/build_static_pages.ts static-mirror
+        run: node scripts/check_secrets.mjs lib/static-mirror.ts scripts/sync_static_mirror.ts scripts/build_static_pages.ts static-site
 
   gate:
     name: gate
     if: ${{ always() }}
-    needs: [quality, tests, migrations, secrets, build, static-pages]
+    needs: [quality, tests, secrets, static-pages]
     runs-on: ubuntu-latest
     steps:
       - name: Require every CI job to pass
         env:
           QUALITY: ${{ needs.quality.result }}
           TESTS: ${{ needs.tests.result }}
-          MIGRATIONS: ${{ needs.migrations.result }}
           SECRETS: ${{ needs.secrets.result }}
-          BUILD: ${{ needs.build.result }}
           STATIC_PAGES: ${{ needs.static-pages.result }}
         run: |
           test "$QUALITY" = success
           test "$TESTS" = success
-          test "$MIGRATIONS" = success
           test "$SECRETS" = success
-          test "$BUILD" = success
           test "$STATIC_PAGES" = success

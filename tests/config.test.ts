@@ -33,6 +33,13 @@ const example = parseTrackingConfig(
   JSON.parse(await readFile('config.example.json', 'utf8')),
 );
 assert.deepEqual(example.fetchCategories, ['math.AP', 'math.DG']);
+assert.deepEqual(example.displayCategories, ['math.AP', 'math.DG']);
+assert.equal(
+  example.categories
+    .find((category) => category.id === 'math.DG')
+    ?.topics.some((topic) => topic.id === 'geometric-flows'),
+  true,
+);
 assert.doesNotThrow(() =>
   parseTrackingConfig({
     ...testConfig,

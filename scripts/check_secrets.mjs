@@ -7,9 +7,6 @@ import { relative, resolve } from 'node:path';
 const root = process.cwd();
 const ignoredDirectories = new Set([
   '.git',
-  '.next',
-  '.vinext',
-  '.wrangler',
   'node_modules',
 ]);
 

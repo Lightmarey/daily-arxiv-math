@@ -2,9 +2,11 @@
 set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
-site_url="${1:-$(tr -d '\r\n' < "$repo_root/.automation/site-url")}" 
-required_date="${2:-}"
-batch_path="${3:-}"
+cd "$repo_root"
+config_path="${1:?usage: publish_static_mirror.sh <config> <batch[,batch]> [required-date] [volume-file]}"
+batch_path="${2:?usage: publish_static_mirror.sh <config> <batch[,batch]> [required-date] [volume-file]}"
+required_date="${3:-}"
+volume_path="${4:-}"
 lock_dir="$repo_root/.automation/static-mirror.lock"
 
 if ! mkdir "$lock_dir" 2>/dev/null; then
@@ -21,24 +23,25 @@ trap cleanup EXIT
 
 git -C "$repo_root" fetch origin main daily-content
 git -C "$repo_root" worktree add --detach "$worktree" origin/daily-content
+git -C "$worktree" rm -r --ignore-unmatch README.md index.md archive.md daily papers data/papers
 
 sync_args=(
   "$repo_root/node_modules/.bin/tsx"
   "$repo_root/scripts/sync_static_mirror.ts"
-  --site "$site_url"
   --output "$worktree"
-  --days 10
+  --config "$config_path"
+  --batch "$batch_path"
 )
 if [[ -n "$required_date" ]]; then
   sync_args+=(--required-date "$required_date")
 fi
-if [[ -n "$batch_path" ]]; then
-  sync_args+=(--batch "$batch_path")
+if [[ -n "$volume_path" ]]; then
+  sync_args+=(--volume-file "$volume_path")
 fi
 "${sync_args[@]}"
 
 node "$repo_root/scripts/check_secrets.mjs" "$worktree"
-git -C "$worktree" add README.md index.md archive.md daily papers data
+git -C "$worktree" add data
 if git -C "$worktree" diff --cached --quiet; then
   echo '{"status":"unchanged"}'
   exit 0
@@ -49,7 +52,8 @@ git -C "$worktree" commit -m "content: mirror ${latest_date}"
 git -C "$worktree" push origin HEAD:daily-content
 content_sha="$(git -C "$worktree" rev-parse HEAD)"
 
-gh api --method POST "repos/Lightmarey/daily-arxiv-math/dispatches" \
+repo_name="$(gh repo view --json nameWithOwner --jq .nameWithOwner)"
+gh api --method POST "repos/${repo_name}/dispatches" \
   -f event_type=static-content-updated \
   -F "client_payload[content_sha]=${content_sha}"
 echo "{\"status\":\"pushed\",\"latestDate\":\"${latest_date}\",\"contentSha\":\"${content_sha}\"}"

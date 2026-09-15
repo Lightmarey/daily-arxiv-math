@@ -27,7 +27,7 @@ jobs:
         with:
           ref: main
           path: source
-          fetch-depth: 1
+          fetch-depth: 0
       - name: Resolve and authorize content commit
         id: resolve
         working-directory: source
@@ -39,7 +39,7 @@ jobs:
             *[!0-9a-f]*|'') exit 1 ;;
           esac
           test "${#REQUESTED_SHA}" -eq 40
-          git fetch --no-tags origin daily-content
+          git fetch --no-tags origin "+refs/heads/daily-content:refs/remotes/origin/daily-content"
           resolved="$(git rev-parse "${REQUESTED_SHA}^{commit}")"
           test "$resolved" = "$REQUESTED_SHA"
           git merge-base --is-ancestor "$resolved" origin/daily-content
@@ -75,8 +75,12 @@ jobs:
         run: |
           node scripts/check_secrets.mjs "$GITHUB_WORKSPACE/content" "$GITHUB_WORKSPACE/_site"
           test -f "$GITHUB_WORKSPACE/_site/index.html"
-          test -f "$GITHUB_WORKSPACE/_site/archive/index.html"
-          ! grep -R -E 'fetch\(|/api/(reports|volume|ingest)' "$GITHUB_WORKSPACE/_site/assets"
+          latest_date="$(node -e 'const fs=require("fs"); const p=JSON.parse(fs.readFileSync(process.argv[1],"utf8")); process.stdout.write(p.latestDate)' "$GITHUB_WORKSPACE/content/data/manifest.json")"
+          test -f "$GITHUB_WORKSPACE/_site/daily/$latest_date/index.html"
+          test -d "$GITHUB_WORKSPACE/_site/_astro"
+          ! grep -R -E 'fetch\(|/api/(reports|volume|ingest)' "$GITHUB_WORKSPACE/_site/_astro"
+          ! test -e "$GITHUB_WORKSPACE/_site/archive/index.html"
+          ! test -d "$GITHUB_WORKSPACE/_site/papers"
           grep -q '/daily-arxiv-math/' "$GITHUB_WORKSPACE/_site/index.html"
       - name: Upload immutable Pages artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
