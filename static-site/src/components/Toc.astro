@@ -1,6 +1,6 @@
 ---
 import type { StaticDayV3, StaticMirrorManifestV3 } from '../../../lib/static-mirror';
-import { categoryAnchor, topicAnchor } from '../lib/runtime';
+import { reportAnchor } from '../lib/runtime';
 
 interface Props {
   day: StaticDayV3;
@@ -11,41 +11,32 @@ const { day, manifest } = Astro.props;
 const categories = manifest.config.categories.filter((category) =>
   manifest.config.displayCategories.includes(category.id),
 );
-const count = (categoryId: string, topicId?: string) =>
-  day.analyses.filter(
-    (report) =>
-      report.categoryId === categoryId &&
-      (!topicId || report.topicId === topicId),
-  ).length;
+const categoryOrder = new Map(categories.map((category, index) => [category.id, index]));
+const reports = [...day.analyses]
+  .filter((report) => categoryOrder.has(report.categoryId))
+  .sort(
+    (left, right) =>
+      categoryOrder.get(left.categoryId)! - categoryOrder.get(right.categoryId)! ||
+      right.priorityScore - left.priorityScore ||
+      left.arxivId.localeCompare(right.arxivId),
+  );
 ---
 
 <aside class="toc" aria-label="本页目录">
-  <details open>
+  <details open data-toc>
     <summary>目录</summary>
     <nav>
-      <a href="#overview">当日总览</a>
       {
-        categories.map((category) => (
-          <div class="toc-field">
-            <a href={`#${categoryAnchor(category.id)}`}>
-              <span>{category.label}</span><small>{count(category.id)}</small>
-            </a>
-            <div>
-              {category.topics.map((topic) => {
-                const topicCount = count(category.id, topic.id);
-                return topicCount ? (
-                  <a href={`#${topicAnchor(category.id, topic.id)}`}>
-                    <span>{topic.label}</span><small>{topicCount}</small>
-                  </a>
-                ) : (
-                  <span class="toc-empty"><span>{topic.label}</span><small>0</small></span>
-                );
-              })}
-            </div>
-          </div>
+        reports.map((report) => (
+          <a
+            href={`#${reportAnchor(report)}`}
+            data-toc-paper
+            data-report-target={reportAnchor(report)}
+          >
+            {report.title}
+          </a>
         ))
       }
-      <a href="#trend">每周趋势</a>
     </nav>
   </details>
 </aside>

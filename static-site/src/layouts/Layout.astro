@@ -19,6 +19,17 @@ const { title, description, siteName } = Astro.props;
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem('theme');
+        document.documentElement.dataset.theme =
+          saved === 'light' || saved === 'dark'
+            ? saved
+            : matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+      })();
+    </script>
   </head>
   <body data-base-path={pathUrl().replace(/\/$/, '')}>
     <header class="site-header">

@@ -75,6 +75,10 @@ if (filterRoot) {
       paper.hidden = !matches;
       if (matches) visible += 1;
     }
+    for (const link of filterRoot.querySelectorAll<HTMLElement>('[data-toc-paper]')) {
+      const paper = document.getElementById(link.dataset.reportTarget ?? '');
+      link.hidden = !paper || paper.hidden;
+    }
     for (const group of filterRoot.querySelectorAll<HTMLElement>(
       '[data-group]',
     )) {
@@ -149,6 +153,25 @@ if (filterRoot) {
   syncTopics();
   applyFilters();
 }
+
+const toc = document.querySelector<HTMLDetailsElement>('[data-toc]');
+if (toc && matchMedia('(max-width: 900px)').matches) toc.open = false;
+
+const themeToggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+const syncThemeToggle = () => {
+  if (!themeToggle) return;
+  const dark = document.documentElement.dataset.theme === 'dark';
+  themeToggle.textContent = dark ? '浅色' : '深色';
+  themeToggle.setAttribute('aria-label', dark ? '切换为浅色模式' : '切换为深色模式');
+  themeToggle.setAttribute('aria-pressed', String(dark));
+};
+themeToggle?.addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = theme;
+  localStorage.setItem('theme', theme);
+  syncThemeToggle();
+});
+syncThemeToggle();
 
 const chart = document.querySelector<HTMLElement>('[data-chart]');
 const toggle = document.querySelector<HTMLButtonElement>('[data-trend-toggle]');
