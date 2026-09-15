@@ -28,7 +28,7 @@
     "topicId": "other-analysis",
     "topicLabel": "其他分析方向",
     "progressType": "正文分析",
-    "workSummary": "论文给出任意阶实心调和多项式对应最大 Riesz 变换的无维 Lp 估计的更短证明。作者把截断 Riesz 变换在 Fourier 侧写成原 Riesz 变换与可积径向核 $Bs^(n)$ 的乘积，于是最大 Riesz 量被 B*(n) 作用控制；随后用超球面平均导数、广义超球面均值的显式超几何核、分维度情形的正性和向量值 Fefferman–Stein 插值，得到常数只依赖 p、阶数（以及向量值版本的 q），不依赖维数和多项式。",
+    "workSummary": "论文给出任意阶实心调和多项式对应最大 Riesz 变换的无维 $L^p$ 估计的更短证明。作者把截断 Riesz 变换在 Fourier 侧写成原 Riesz 变换与可积径向核 $B_s^{(n)}$ 的乘积，于是最大 Riesz 量被 $B_*^{(n)}$ 作用控制；随后用超球面平均导数、广义超球面均值的显式超几何核、分维度情形的正性和向量值 Fefferman–Stein 插值，得到常数只依赖 $p$、阶数（以及向量值版本的 $q$），不依赖维数和多项式。",
     "techniques": [
       "截断 Riesz 的 Fourier 乘子分解",
       "超球面平均与导数",
@@ -37,29 +37,29 @@
       "Fefferman–Stein 向量值插值"
     ],
     "breakthrough": "贡献是把此前依赖复杂调和分析的无维最大 Riesz 控制压缩成“径向核—球面均值最大估计”的直接链条，并补出了广义球面均值的向量值估计论证。",
-    "limitations": "函数先限制为 Schwartz 类$、p\\in (1,\\infty )$，高阶 Riesz 还要求相应维数/阶数范围；向量值扩展的常数依赖 q，不能直接推出端点 $p=1$ 或 $p=\\infty $。",
+    "limitations": "函数先限制为 Schwartz 类、$p\\in(1,\\infty)$，高阶 Riesz 还要求相应维数/阶数范围；向量值扩展的常数依赖 $q$，不能直接推出端点 $p=1$ 或 $p=\\infty$。",
     "analysisDepth": "full_text_sections",
     "proofOutline": {
       "status": "reviewed",
       "steps": [
         {
           "claim": "截断 Riesz 变换可由原 Riesz 变换与径向可积核卷积表示。",
-          "route": "对截断核作 Fourier 变换得到 (1.2)，其中 $Bs^(n)(x)=s-dB(d,n)(s-1|x|)$；取半径上确界后有 $R*(P)f\\le B*(n)R(P)f$，从而只需估计径向核的最大算子。",
+          "route": "对截断核作 Fourier 变换得到 (1.2)，其中 $B_s^{(n)}(x)=s^{-d}B^{(d,n)}(s^{-1}|x|)$；取半径上确界后有 $R_*^{(P)}f\\le B_*^{(n)}[R^{(P)}f]$，从而只需估计径向核的最大算子。",
           "evidence": "公式 (1.1)–(1.3) 与 Proposition 1.2（PDF 第 1–2 页）。"
         },
         {
-          "claim": "B(d,n) 在球内外可用超几何公式和球面平均导数展开。",
-          "route": "将径向卷积换成球面平均积分 (3.1)，用超几何求导恒等式递归把核表示成 $Ar^(k)$ 或广义均值 $Mr^(\\alpha )$ 的组合，并分别处理偶数/奇数阶及大/小维数。",
+          "claim": "$B^{(d,n)}$ 在球内外可用超几何公式和球面平均导数展开。",
+          "route": "将径向卷积换成球面平均积分 (3.1)，用超几何求导恒等式递归把核表示成 $A_r^{(k)}$ 或广义均值 $M_r^{(\\alpha)}$ 的组合，并分别处理偶数/奇数阶及大/小维数。",
           "evidence": "第 3 节及公式 (3.1) 后的 Sections 3.1–3.7（PDF 第 5–13 页）。"
         },
         {
-          "claim": "广义球面均值的最大算子满足维数无关的 Lp 界。",
-          "route": "将核的超几何系数按正性和单调性控制，调用 Stein 广义球面均值最大不等式；对截断半径分层，得到 B*(n) 的 Lp 界并代回第一步的乘子控制。",
+          "claim": "广义球面均值的最大算子满足维数无关的 $L^p$ 界。",
+          "route": "将核的超几何系数按正性和单调性控制，调用 Stein 广义球面均值最大不等式；对截断半径分层，得到 $B_*^{(n)}$ 的 $L^p$ 界并代回第一步的乘子控制。",
           "evidence": "Theorem 4.1 的证明、Lemma 4.9 和公式 (4.15)（PDF 第 19–20 页）。"
         },
         {
           "claim": "导数球面均值的向量值 Fefferman–Stein 估计成立，从而得到相应最大 Riesz 向量值界。",
-          "route": "先用 Theorem 4.1 对 $\\alpha =-j$ 的广义均值估计，再用论文与球面导数关系把 $Ar^(k)$ 展成有限个 $Mr^(-j)$；有限和保持 $Lp(\\ellq(L\\infty ))$ 控制，完成 Theorem 4.2。",
+          "route": "先用 Theorem 4.1 对 $\\alpha=-j$ 的广义均值估计，再用论文中的球面导数关系把 $A_r^{(k)}$ 展成有限个 $M_r^{(-j)}$；有限和保持 $L^p(\\ell^q(L^\\infty))$ 控制，完成 Theorem 4.2。",
           "evidence": "Theorem 4.2 证明及公式 (4.4)（PDF 第 20 页）。"
         }
       ]
@@ -102,7 +102,7 @@
         "topicId": "other-analysis",
         "topicLabel": "其他分析方向",
         "progressType": "正文分析",
-        "workSummary": "论文给出任意阶实心调和多项式对应最大 Riesz 变换的无维 Lp 估计的更短证明。作者把截断 Riesz 变换在 Fourier 侧写成原 Riesz 变换与可积径向核 $Bs^(n)$ 的乘积，于是最大 Riesz 量被 B*(n) 作用控制；随后用超球面平均导数、广义超球面均值的显式超几何核、分维度情形的正性和向量值 Fefferman–Stein 插值，得到常数只依赖 p、阶数（以及向量值版本的 q），不依赖维数和多项式。",
+        "workSummary": "论文给出任意阶实心调和多项式对应最大 Riesz 变换的无维 $L^p$ 估计的更短证明。作者把截断 Riesz 变换在 Fourier 侧写成原 Riesz 变换与可积径向核 $B_s^{(n)}$ 的乘积，于是最大 Riesz 量被 $B_*^{(n)}$ 作用控制；随后用超球面平均导数、广义超球面均值的显式超几何核、分维度情形的正性和向量值 Fefferman–Stein 插值，得到常数只依赖 $p$、阶数（以及向量值版本的 $q$），不依赖维数和多项式。",
         "techniques": [
           "截断 Riesz 的 Fourier 乘子分解",
           "超球面平均与导数",
@@ -111,29 +111,29 @@
           "Fefferman–Stein 向量值插值"
         ],
         "breakthrough": "贡献是把此前依赖复杂调和分析的无维最大 Riesz 控制压缩成“径向核—球面均值最大估计”的直接链条，并补出了广义球面均值的向量值估计论证。",
-        "limitations": "函数先限制为 Schwartz 类$、p\\in (1,\\infty )$，高阶 Riesz 还要求相应维数/阶数范围；向量值扩展的常数依赖 q，不能直接推出端点 $p=1$ 或 $p=\\infty $。",
+        "limitations": "函数先限制为 Schwartz 类、$p\\in(1,\\infty)$，高阶 Riesz 还要求相应维数/阶数范围；向量值扩展的常数依赖 $q$，不能直接推出端点 $p=1$ 或 $p=\\infty$。",
         "analysisDepth": "full_text_sections",
         "proofOutline": {
           "status": "reviewed",
           "steps": [
             {
               "claim": "截断 Riesz 变换可由原 Riesz 变换与径向可积核卷积表示。",
-              "route": "对截断核作 Fourier 变换得到 (1.2)，其中 $Bs^(n)(x)=s-dB(d,n)(s-1|x|)$；取半径上确界后有 $R*(P)f\\le B*(n)R(P)f$，从而只需估计径向核的最大算子。",
+              "route": "对截断核作 Fourier 变换得到 (1.2)，其中 $B_s^{(n)}(x)=s^{-d}B^{(d,n)}(s^{-1}|x|)$；取半径上确界后有 $R_*^{(P)}f\\le B_*^{(n)}[R^{(P)}f]$，从而只需估计径向核的最大算子。",
               "evidence": "公式 (1.1)–(1.3) 与 Proposition 1.2（PDF 第 1–2 页）。"
             },
             {
-              "claim": "B(d,n) 在球内外可用超几何公式和球面平均导数展开。",
-              "route": "将径向卷积换成球面平均积分 (3.1)，用超几何求导恒等式递归把核表示成 $Ar^(k)$ 或广义均值 $Mr^(\\alpha )$ 的组合，并分别处理偶数/奇数阶及大/小维数。",
+              "claim": "$B^{(d,n)}$ 在球内外可用超几何公式和球面平均导数展开。",
+              "route": "将径向卷积换成球面平均积分 (3.1)，用超几何求导恒等式递归把核表示成 $A_r^{(k)}$ 或广义均值 $M_r^{(\\alpha)}$ 的组合，并分别处理偶数/奇数阶及大/小维数。",
               "evidence": "第 3 节及公式 (3.1) 后的 Sections 3.1–3.7（PDF 第 5–13 页）。"
             },
             {
-              "claim": "广义球面均值的最大算子满足维数无关的 Lp 界。",
-              "route": "将核的超几何系数按正性和单调性控制，调用 Stein 广义球面均值最大不等式；对截断半径分层，得到 B*(n) 的 Lp 界并代回第一步的乘子控制。",
+              "claim": "广义球面均值的最大算子满足维数无关的 $L^p$ 界。",
+              "route": "将核的超几何系数按正性和单调性控制，调用 Stein 广义球面均值最大不等式；对截断半径分层，得到 $B_*^{(n)}$ 的 $L^p$ 界并代回第一步的乘子控制。",
               "evidence": "Theorem 4.1 的证明、Lemma 4.9 和公式 (4.15)（PDF 第 19–20 页）。"
             },
             {
               "claim": "导数球面均值的向量值 Fefferman–Stein 估计成立，从而得到相应最大 Riesz 向量值界。",
-              "route": "先用 Theorem 4.1 对 $\\alpha =-j$ 的广义均值估计，再用论文与球面导数关系把 $Ar^(k)$ 展成有限个 $Mr^(-j)$；有限和保持 $Lp(\\ellq(L\\infty ))$ 控制，完成 Theorem 4.2。",
+              "route": "先用 Theorem 4.1 对 $\\alpha=-j$ 的广义均值估计，再用论文中的球面导数关系把 $A_r^{(k)}$ 展成有限个 $M_r^{(-j)}$；有限和保持 $L^p(\\ell^q(L^\\infty))$ 控制，完成 Theorem 4.2。",
               "evidence": "Theorem 4.2 证明及公式 (4.4)（PDF 第 20 页）。"
             }
           ]
