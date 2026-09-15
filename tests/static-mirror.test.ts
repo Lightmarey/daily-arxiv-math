@@ -281,8 +281,10 @@ assert.match(html, /证明逻辑\/大纲/);
 assert.match(html, /尚未核查 AI 声明/);
 assert.match(html, /摘要级分析/);
 assert.match(html, /data-chart/);
+assert.match(html, /data-trend-range/);
+assert.match(html, /data-trend-toggle aria-expanded="false"/);
 assert.match(
   await readFile(join(out, 'assets/site.js'), 'utf8'),
-  /displayCategories/,
+  /Number\.isInteger\(week\.counts/,
 );
 console.log('Static mirror tests passed');

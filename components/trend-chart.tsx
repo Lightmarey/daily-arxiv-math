@@ -45,18 +45,20 @@ export function TrendChart({
   );
   const [hidden, setHidden] = useState<Record<string, boolean>>({});
   const weekly = useMemo(
-    () =>
-      aggregateWeeklyVolumes(volumes, categoryIds).filter(
-        (point) => point.complete,
-      ),
+    () => aggregateWeeklyVolumes(volumes, categoryIds),
     [volumes, categoryIds],
   );
-  const data = range === '6m' ? weekly.slice(-26) : weekly;
+  const data = (range === '6m' ? weekly.slice(-26) : weekly).filter((point) =>
+    series.some((item) => typeof point.counts[item.id] === 'number'),
+  );
   const latest = data.at(-1);
   const values = data.flatMap((point) =>
     series
       .filter((item) => !hidden[item.id])
-      .map((item) => point.counts[item.id] ?? 0),
+      .flatMap((item) => {
+        const value = point.counts[item.id];
+        return typeof value === 'number' ? [value] : [];
+      }),
   );
   const maximum = Math.max(5, ...values);
   const yMaximum = Math.ceil(maximum / 10) * 10 || 10;
@@ -78,7 +80,7 @@ export function TrendChart({
   return (
     <div>
       <div className="mb-2 flex justify-end text-[10px] text-muted-foreground">
-        最新完整周：
+        最新有数据周：
         {latest ? `${latest.weekStart} 至 ${latest.weekEnding}` : '暂无'}
       </div>
       <div
@@ -163,36 +165,42 @@ export function TrendChart({
             .filter((item) => !hidden[item.id])
             .map((item) => (
               <g key={item.id}>
-                <polyline
+                <path
                   fill="none"
                   stroke={item.color}
                   strokeWidth="2"
                   strokeLinejoin="round"
                   strokeLinecap="round"
-                  points={data
-                    .map(
-                      (point, index) =>
-                        `${x(index)},${y(point.counts[item.id] ?? 0)}`,
-                    )
+                  d={data
+                    .map((point, index) => {
+                      const value = point.counts[item.id];
+                      if (typeof value !== 'number') return '';
+                      const previous = data[index - 1]?.counts[item.id];
+                      return `${typeof previous === 'number' ? 'L' : 'M'}${x(index)},${y(value)}`;
+                    })
+                    .filter(Boolean)
                     .join(' ')}
                 />
-                {data.map((point, index) => (
-                  <circle
-                    key={point.weekEnding}
-                    cx={x(index)}
-                    cy={y(point.counts[item.id] ?? 0)}
-                    r="7"
-                    fill="transparent"
-                  >
-                    <title>{`${item.id} · ${point.weekStart} 至 ${point.weekEnding} · ${point.counts[item.id] ?? 0} 篇`}</title>
-                  </circle>
-                ))}
+                {data.map((point, index) => {
+                  const value = point.counts[item.id];
+                  return typeof value === 'number' ? (
+                    <circle
+                      key={point.weekEnding}
+                      cx={x(index)}
+                      cy={y(value)}
+                      r="7"
+                      fill="transparent"
+                    >
+                      <title>{`${item.id} · ${point.weekStart} 至 ${point.weekEnding} · ${value} 篇`}</title>
+                    </circle>
+                  ) : null;
+                })}
               </g>
             ))}
         </svg>
       ) : (
         <p className="py-12 text-center text-sm text-muted-foreground">
-          暂无完整周数据
+          暂无周数据
         </p>
       )}
 

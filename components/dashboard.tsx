@@ -16,6 +16,7 @@ import {
   reportsForDisplay,
   topicOrder,
 } from '@/lib/dashboard';
+import { aggregateWeeklyVolumes } from '@/lib/volume';
 import {
   type AiStatus,
   type DashboardData,
@@ -203,6 +204,21 @@ export function Dashboard({
     [aiStatus, topic, priority, query, displayReports, topics],
   );
   const dailyOverview = data.overview;
+  const trendWeeks = useMemo(
+    () =>
+      aggregateWeeklyVolumes(data.volumes, selectedCategories).filter(
+        (point) =>
+          selectedCategories.some(
+            (id) => typeof point.counts[id] === 'number',
+          ),
+      ).length,
+    [data.volumes, selectedCategories],
+  );
+  const canExpandTrend = trendWeeks > 26;
+
+  useEffect(() => {
+    if (!canExpandTrend && range === '2y') setRange('6m');
+  }, [canExpandTrend, range]);
   const aiCount = displayReports.filter(
     (paper) => paper.aiStatus === 'explicit',
   ).length;
@@ -656,13 +672,24 @@ export function Dashboard({
                 type="button"
                 className="inline-flex h-8 w-fit items-center gap-1.5 rounded-[4px] border border-border bg-background px-2.5 text-sm font-medium hover:bg-muted"
                 aria-expanded={range === '2y'}
+                disabled={!canExpandTrend}
                 onClick={() =>
                   setRange((current) => (current === '6m' ? '2y' : '6m'))
                 }
               >
                 <CalendarDays />
-                {range === '6m' ? '展开至两年' : '收回近六月'}
-                {range === '6m' ? <ChevronDown /> : <ChevronUp />}
+                {canExpandTrend
+                  ? range === '6m'
+                    ? '展开至两年'
+                    : '收回近六月'
+                  : `当前仅有 ${trendWeeks} 周历史`}
+                {canExpandTrend ? (
+                  range === '6m' ? (
+                    <ChevronDown />
+                  ) : (
+                    <ChevronUp />
+                  )
+                ) : null}
               </button>
             </div>
             <Suspense fallback={null}>

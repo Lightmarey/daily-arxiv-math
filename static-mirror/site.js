@@ -70,14 +70,23 @@
   let expanded = false;
   const renderChart = () => {
     if (!chart || !payload.volume) return;
-    const weeks = (
-      expanded ? payload.volume.weeks104 : payload.volume.weeks26
-    ).filter((week) => week.complete);
     const categories = payload.manifest.config.categories.filter((item) =>
       payload.manifest.config.displayCategories.includes(item.id),
     );
+    const weeks = (
+      expanded ? payload.volume.weeks104 : payload.volume.weeks26
+    ).filter((week) =>
+      categories.some((category) =>
+        Number.isInteger(week.counts[category.id]),
+      ),
+    );
+    const range = document.querySelector('[data-trend-range]');
+    if (range)
+      range.textContent = expanded
+        ? `现有全部 ${weeks.length} 周`
+        : `最近 ${weeks.length} 周`;
     if (!weeks.length) {
-      chart.textContent = '暂无完整周数据。';
+      chart.textContent = '暂无周数据。';
       return;
     }
     const width = 900,
@@ -102,7 +111,7 @@
     svg.setAttribute('role', 'img');
     svg.setAttribute(
       'aria-label',
-      `最近 ${weeks.length} 个完整周的分类发文趋势`,
+      `最近 ${weeks.length} 个有数据周的分类发文趋势`,
     );
     [0, 0.25, 0.5, 0.75, 1].forEach((ratio) => {
       const line = document.createElementNS(svg.namespaceURI, 'line'),
@@ -130,13 +139,21 @@
     ];
     categories.forEach((category, seriesIndex) => {
       const path = document.createElementNS(svg.namespaceURI, 'path');
+      let connected = false;
       path.setAttribute(
         'd',
         weeks
-          .map(
-            (week, index) =>
-              `${index ? 'L' : 'M'}${x(index).toFixed(2)},${y(week.counts[category.id]).toFixed(2)}`,
-          )
+          .map((week, index) => {
+            const value = week.counts[category.id];
+            if (!Number.isInteger(value)) {
+              connected = false;
+              return '';
+            }
+            const command = connected ? 'L' : 'M';
+            connected = true;
+            return `${command}${x(index).toFixed(2)},${y(value).toFixed(2)}`;
+          })
+          .filter(Boolean)
           .join(' '),
       );
       path.setAttribute('fill', 'none');
@@ -146,6 +163,19 @@
       );
       path.setAttribute('stroke-width', '2');
       svg.append(path);
+      weeks.forEach((week, index) => {
+        const value = week.counts[category.id];
+        if (!Number.isInteger(value)) return;
+        const point = document.createElementNS(svg.namespaceURI, 'circle');
+        point.setAttribute('cx', String(x(index)));
+        point.setAttribute('cy', String(y(value)));
+        point.setAttribute('r', '2.5');
+        point.setAttribute(
+          'fill',
+          category.color || palette[seriesIndex % palette.length],
+        );
+        svg.append(point);
+      });
     });
     const tickEvery = Math.max(1, Math.ceil(weeks.length / 7));
     weeks.forEach((week, index) => {
@@ -159,11 +189,19 @@
     });
     chart.replaceChildren(svg);
   };
-  if (toggle)
-    toggle.addEventListener('click', () => {
-      expanded = !expanded;
-      toggle.textContent = expanded ? '收回至 6 个月' : '展开至 2 年';
-      renderChart();
-    });
+  if (toggle) {
+    const totalWeeks = payload.volume?.weeks104?.length ?? 0;
+    const canExpand = totalWeeks > (payload.volume?.weeks26?.length ?? 0);
+    if (!canExpand) {
+      toggle.disabled = true;
+      toggle.textContent = `当前仅有 ${totalWeeks} 周历史`;
+    } else
+      toggle.addEventListener('click', () => {
+        expanded = !expanded;
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.textContent = expanded ? '收回至 6 个月' : '展开至 2 年';
+        renderChart();
+      });
+  }
   renderChart();
 })();
