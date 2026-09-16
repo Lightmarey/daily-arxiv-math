@@ -91,12 +91,30 @@ h4 { font-size: 22px; }
   font-weight: 700;
   text-decoration: none;
 }
+.brand a { text-decoration: none; }
+.brand-mark {
+  display: grid;
+  width: 30px;
+  height: 34px;
+  border: 0;
+  padding: 0;
+  place-items: center;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
 .brand i {
   color: var(--gold);
   font-family: 'Segoe UI Historic', 'Noto Sans Egyptian Hieroglyphs', serif;
   font-size: 24px;
   font-style: normal;
 }
+:root[data-radar='on'] .brand-mark {
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--gold) 14%, transparent);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--gold) 65%, transparent);
+}
+.brand-mark:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 main {
   width: min(1280px, calc(100% - 32px));
   margin: 0 auto;

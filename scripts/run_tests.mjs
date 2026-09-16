@@ -22,6 +22,10 @@ const commands = [
     process.execPath,
     [resolve('node_modules/tsx/dist/cli.mjs'), 'tests/static-mirror.test.ts'],
   ],
+  [
+    process.execPath,
+    [resolve('node_modules/tsx/dist/cli.mjs'), 'tests/radar.test.ts'],
+  ],
   ['python', ['-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_*.py']],
 ];
 for (const [command, args] of commands) {

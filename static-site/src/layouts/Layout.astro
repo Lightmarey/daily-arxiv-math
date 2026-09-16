@@ -33,7 +33,12 @@ const { title, description } = Astro.props;
   <body data-base-path={pathUrl().replace(/\/$/, '')} data-filter-root>
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href={pathUrl()}><i aria-hidden="true">𓅆</i><span>Arxiv日报</span></a>
+        <div class="brand">
+          <button type="button" class="brand-mark" aria-label="站点标记" data-radar-trigger>
+            <i aria-hidden="true">𓅆</i>
+          </button>
+          <a href={pathUrl()}><span>Arxiv日报</span></a>
+        </div>
         <slot name="header-controls" />
       </div>
     </header>

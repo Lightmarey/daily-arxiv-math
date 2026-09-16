@@ -14,7 +14,12 @@ const search = [
   report.title,
   ...report.authors,
   report.abstract,
+  report.topicLabel,
   report.workSummary,
+  ...report.techniques,
+  report.breakthrough,
+  report.limitations,
+  report.priorityReason,
   ...report.proofOutline.steps.flatMap((step) => [
     step.claim,
     step.route,
@@ -34,6 +39,7 @@ const search = [
   data-ai={report.aiStatus}
   data-topic={`${report.categoryId}:${report.topicId}`}
   data-priority={report.priorityTier}
+  data-priority-score={report.priorityScore}
   data-search={search}
 >
   <div class="paper-meta">
