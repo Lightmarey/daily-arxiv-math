@@ -1,5 +1,3 @@
-import type { PublicTrackingConfig } from './config';
-
 export type AiStatus = 'explicit' | 'no_disclosure_observed' | 'not_checked';
 export type PriorityTier = 'high' | 'medium' | 'low';
 
@@ -28,26 +26,11 @@ export interface CategoryCoverage {
   categoryId: string;
   expectedCount: number | null;
   publishedCount: number | null;
-  databasePublicationCount?: number | null;
   complete: boolean;
   requiredForCompletion: boolean;
   status: 'complete' | 'incomplete' | 'not_collected';
   completedAt?: string | null;
 }
-export interface CategoryHealth extends CategoryCoverage {
-  latestAnnouncementDate: string | null;
-  latestSuccessfulRunAt: string | null;
-  sourceCursor: string | null;
-  hasDailyVolume: boolean;
-}
-export interface HealthSnapshot {
-  status: 'ok' | 'degraded';
-  checkedAt: string;
-  categories: CategoryHealth[];
-  latestCompleteWeek: WeeklyVolumePoint | null;
-  checks: { database: boolean; coverage: boolean; weeklyVolume: boolean };
-}
-
 export interface PaperReport {
   id: string;
   categoryId: string;
@@ -90,18 +73,4 @@ export interface ReportFeed {
   categories: string[];
   coverage: CategoryCoverage[];
   reports: PaperReport[];
-}
-export interface DashboardData {
-  latestDate: string;
-  lastUpdated: string;
-  config: PublicTrackingConfig;
-  volumes: VolumePoint[];
-  reports: PaperReport[];
-  dataMode: 'database' | 'preview' | 'loading' | 'unavailable';
-  coverage: CategoryCoverage[];
-}
-export interface PaperAnalyses {
-  arxivId: string;
-  primary: PaperReport;
-  analyses: PaperReport[];
 }

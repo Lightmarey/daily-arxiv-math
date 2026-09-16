@@ -100,12 +100,8 @@ export async function buildStaticPages(args: Args): Promise<{
     STATIC_MIRROR_OUT_DIR: astroOut,
     STATIC_MIRROR_BASE_PATH: args.basePath,
   };
-  process.env.STATIC_MIRROR_CONTENT_DIR = content;
-  process.env.STATIC_MIRROR_OUT_DIR = astroOut;
-  process.env.STATIC_MIRROR_BASE_PATH = args.basePath;
-  const staticContent = await loadStaticContent();
-
   try {
+    const staticContent = await loadStaticContent(content);
     await rm(out, { recursive: true, force: true });
     await run(
       process.execPath,

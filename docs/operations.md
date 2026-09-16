@@ -32,13 +32,15 @@ npm run static:build -- \
   --base-path /daily-arxiv-math
 ```
 
-一次性从 v3 迁移历史内容时，先为 manifest 中每个日期生成一个以日期命名的 sidecar。sidecar 可以直接放在目录中，也可以分放在 `a/`、`b/` 等子目录；文件名必须全局唯一。迁移器完整读取并校验全部日期后才原子创建新目录：
+历史趋势缺口修复仅使用官方 catchup 页面生成指定分类的精确公告量：
 
 ```bash
-npx tsx scripts/migrate_static_mirror_v4.ts \
-  --content <v3-content> \
-  --overviews <sidecar-root> \
-  --output <new-v4-content>
+python scripts/backfill_volume.py \
+  --out <volume-history.json> \
+  --category <category> \
+  --config <config.local.json> \
+  --start <YYYY-MM-DD> \
+  --end <YYYY-MM-DD>
 ```
 
 ## 发布

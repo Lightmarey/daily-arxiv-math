@@ -108,7 +108,6 @@ function feedFromBatches(
       categoryId,
       expectedCount: null,
       publishedCount: null,
-      databasePublicationCount: null,
       complete: false,
       requiredForCompletion: false,
       status: 'not_collected' as const,

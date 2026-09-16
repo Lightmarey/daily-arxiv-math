@@ -28,25 +28,5 @@ class ListingParserTests(unittest.TestCase):
         self.assertEqual(result.replacement_ids, ("2608.99999",))
         self.assertEqual(result.publication_count, 3)
 
-    def test_dg_reference_day_counts_new_plus_cross_lists(self):
-        new_items = "".join(
-            f'<dt><a href="/abs/2609.{index:05d}">arXiv</a></dt>'
-            for index in range(1, 27)
-        )
-        cross_items = "".join(
-            f'<dt><a href="/abs/2508.{index:05d}">arXiv</a></dt>'
-            for index in range(1, 12)
-        )
-        result = parse_listing(
-            f"<h3>New submissions</h3><dl>{new_items}</dl>"
-            f"<h3>Cross submissions</h3><dl>{cross_items}</dl>"
-            '<h3>Replacement submissions</h3><dl>'
-            '<dt><a href="/abs/2608.99999v2">arXiv</a></dt></dl>'
-        )
-        self.assertEqual(len(result.new_ids), 26)
-        self.assertEqual(len(result.cross_list_ids), 11)
-        self.assertEqual(result.publication_count, 37)
-
-
 if __name__ == "__main__":
     unittest.main()

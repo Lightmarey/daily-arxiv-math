@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { publicTrackingConfigSchema } from '../../../lib/config';
 import {
   STATIC_MIRROR_SCHEMA_VERSION,
@@ -72,28 +72,29 @@ function validateContent(content: StaticContent): void {
   }
 }
 
-let cached: Promise<StaticContent> | undefined;
+const cachedByRoot = new Map<string, Promise<StaticContent>>();
 
-export function loadStaticContent(): Promise<StaticContent> {
+export function loadStaticContent(root = contentRoot()): Promise<StaticContent> {
+  const resolvedRoot = resolve(root);
+  let cached = cachedByRoot.get(resolvedRoot);
   cached ??= (async () => {
-    const root = contentRoot();
     const manifest = await readJson<StaticMirrorManifestV4>(
-      join(root, 'data/manifest.json'),
+      join(resolvedRoot, 'data/manifest.json'),
     );
     const config = publicTrackingConfigSchema.parse(
-      await readJson<unknown>(join(root, 'data/config.json')),
+      await readJson<unknown>(join(resolvedRoot, 'data/config.json')),
     );
     if (JSON.stringify(config) !== JSON.stringify(manifest.config)) {
       throw new Error('Public config does not match the static manifest');
     }
     const volume = await readJson<StaticVolumeV4>(
-      join(root, 'data/volume.json'),
+      join(resolvedRoot, 'data/volume.json'),
     );
     const days = (
       await Promise.all(
         manifest.days.map((entry) =>
           readJson<StaticDayV4>(
-            join(root, `data/daily/${entry.announcementDate}.json`),
+            join(resolvedRoot, `data/daily/${entry.announcementDate}.json`),
           ),
         ),
       )
@@ -105,5 +106,6 @@ export function loadStaticContent(): Promise<StaticContent> {
     validateContent(content);
     return content;
   })();
+  cachedByRoot.set(resolvedRoot, cached);
   return cached;
 }

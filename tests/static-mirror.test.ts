@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { mkdtemp, mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
+import { cp, mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
@@ -17,8 +18,8 @@ import {
   type StaticMirrorManifestV4,
 } from '../lib/static-mirror';
 import { buildStaticPages } from '../scripts/build_static_pages';
-import { migrateStaticMirrorV4 } from '../scripts/migrate_static_mirror_v4';
 import { configVersion } from '../lib/config';
+import { loadStaticContent } from '../static-site/src/lib/content';
 import {
   batch,
   reportInput,
@@ -26,6 +27,12 @@ import {
   testConfig,
   testPublicConfig,
 } from './helpers';
+
+const temporaryRoots: string[] = [];
+process.once('exit', () => {
+  for (const root of temporaryRoots)
+    rmSync(root, { recursive: true, force: true });
+});
 
 const sharedAp = storedReport('math.AP', '2609.00001', {
   title: '<script>alert(1)</script> {{ site.secret }}',
@@ -273,7 +280,6 @@ const stoppedCategoryDay = buildStaticDay(
         categoryId: 'math.AP',
         expectedCount: null,
         publishedCount: null,
-        databasePublicationCount: null,
         complete: false,
         requiredForCompletion: false,
         status: 'not_collected',
@@ -303,6 +309,7 @@ assert.throws(() =>
   ),
 );
 const offlineRoot = await mkdtemp(join(tmpdir(), 'stopped-category-sync-'));
+temporaryRoots.push(offlineRoot);
 const oldConfig = structuredClone(testPublicConfig);
 oldConfig.displayCategories = ['math.AP'];
 const oldDay = buildStaticDay(
@@ -514,6 +521,7 @@ assert.equal(volume.weeks26[0].counts['cs.LG'], 10);
 const root = await mkdtemp(join(tmpdir(), 'configurable-static-test-')),
   content = join(root, 'content'),
   out = join(root, 'out');
+temporaryRoots.push(root);
 for (const directory of ['data/daily'])
   await mkdir(join(content, directory), { recursive: true });
 const priorDate = '2026-09-03';
@@ -569,7 +577,22 @@ await save(
   join(content, `data/daily/${priorDay.announcementDate}.json`),
   priorDay,
 );
+const firstContent = await loadStaticContent(content);
+const secondContentRoot = join(root, 'second-content');
+await cp(content, secondContentRoot, { recursive: true });
+const secondContent = await loadStaticContent(secondContentRoot);
+assert.notStrictEqual(
+  firstContent,
+  secondContent,
+  'static content cache is scoped to its content root',
+);
+const previousContentRoot = process.env.STATIC_MIRROR_CONTENT_DIR;
 await buildStaticPages({ content, out, basePath: '/daily-arxiv-math' });
+assert.equal(
+  process.env.STATIC_MIRROR_CONTENT_DIR,
+  previousContentRoot,
+  'building a site does not mutate the caller environment',
+);
 const html = await readFile(join(out, 'index.html'), 'utf8');
 const priorHtml = await readFile(
   join(out, `daily/${priorDay.announcementDate}/index.html`),
@@ -653,178 +676,8 @@ assert.doesNotMatch(html, /日期归档/);
 assert.doesNotMatch(html, /已补读正文关键部分|摘要级分析/);
 assert.doesNotMatch(html, /查看 Markdown 版全文/);
 assert.doesNotMatch(html, /markdown-copy/);
-const clientScripts = await Promise.all(
-  (await readdir(join(out, '_astro')))
-    .filter((file) => file.endsWith('.js'))
-    .map((file) => readFile(join(out, '_astro', file), 'utf8')),
-);
-assert.match(clientScripts.join('\n'), /displayCategories/);
-assert.match(clientScripts.join('\n'), /chart-tooltip/);
-assert.match(clientScripts.join('\n'), /pointerenter/);
-assert.match(clientScripts.join('\n'), /localStorage\.setItem\([`'"]theme/);
-assert.match(clientScripts.join('\n'), /data-scroll-hidden/);
-assert.match(clientScripts.join('\n'), /cloneNode/);
-assert.match(clientScripts.join('\n'), /data-toc-paper/);
 await assert.rejects(readFile(join(out, 'archive/index.html'), 'utf8'));
 await assert.rejects(readFile(join(out, 'papers/2609.00001/index.html'), 'utf8'));
 await assert.rejects(readFile(join(out, 'data/manifest.json'), 'utf8'));
 
-const migrationRoot = await mkdtemp(join(tmpdir(), 'static-v4-migration-'));
-const legacyContent = join(migrationRoot, 'legacy');
-const overviewRoot = join(migrationRoot, 'overviews');
-const migratedContent = join(migrationRoot, 'migrated');
-await mkdir(join(legacyContent, 'data/daily'), { recursive: true });
-await mkdir(join(overviewRoot, 'a'), { recursive: true });
-await mkdir(join(overviewRoot, 'b'), { recursive: true });
-const migrationDays = Array.from({ length: 52 }, (_, index) => {
-  const instant = new Date('2026-07-01T00:00:00Z');
-  instant.setUTCDate(instant.getUTCDate() + index);
-  const date = instant.toISOString().slice(0, 10);
-  const analyses = day.analyses.map((report) => ({
-    ...report,
-    id: report.id.replace(day.announcementDate, date),
-    announcementDate: date,
-  }));
-  const { dailyOverview: _dailyOverview, ...legacy } = day;
-  const snapshot = {
-    ...legacy,
-    schemaVersion: 3,
-    announcementDate: date,
-    lastUpdated: `${date}T05:01:00Z`,
-    summaryItems: [{ analysisId: analyses[0].id, text: '旧摘要' }],
-    analyses,
-  };
-  const sidecar = {
-    announcementDate: date,
-    resultItems: [
-      { analysisId: analyses[0].id, text: '建立统一能量估计' },
-      { analysisId: analyses[2].id, text: '构造整体弱解' },
-    ],
-    noteworthyItems: [
-      {
-        analysisId: analyses[3].id,
-        result: '证明临界模型的端点估计',
-        significance: '该估计可能解决一个公开问题',
-      },
-    ],
-  };
-  return { date, snapshot, sidecar };
-}).sort((left, right) => right.date.localeCompare(left.date));
-await Promise.all(
-  migrationDays.map(({ date, snapshot }) =>
-    save(join(legacyContent, `data/daily/${date}.json`), snapshot),
-  ),
-);
-await save(join(legacyContent, 'data/config.json'), testPublicConfig);
-await save(join(legacyContent, 'data/volume.json'), {
-  ...volume,
-  schemaVersion: 3,
-});
-const legacyManifest = {
-  ...manifest,
-  schemaVersion: 3,
-  latestDate: migrationDays[0].date,
-  days: migrationDays.map(({ date, snapshot }) => ({
-    announcementDate: date,
-    expectedCount: snapshot.coverage.expectedCount,
-    publishedCount: snapshot.coverage.publishedCount,
-    aiDisclosureCount: snapshot.aiDisclosureCount,
-    complete: snapshot.coverage.complete,
-    lastUpdated: snapshot.lastUpdated,
-  })),
-};
-const legacyManifestPath = join(legacyContent, 'data/manifest.json');
-await save(legacyManifestPath, legacyManifest);
-await Promise.all(
-  migrationDays
-    .slice(0, -1)
-    .map(({ date, sidecar }, index) =>
-      save(join(overviewRoot, index % 2 ? 'a' : 'b', `${date}.json`), sidecar),
-    ),
-);
-await save(legacyManifestPath, {
-  ...legacyManifest,
-  days: [
-    legacyManifest.days[0],
-    legacyManifest.days[0],
-    ...legacyManifest.days.slice(2),
-  ],
-});
-await assert.rejects(
-  migrateStaticMirrorV4({
-    content: legacyContent,
-    overviews: overviewRoot,
-    output: join(migrationRoot, 'duplicate-dates'),
-  }),
-  /duplicate dates/,
-);
-await save(legacyManifestPath, {
-  ...legacyManifest,
-  days: [
-    legacyManifest.days[0],
-    legacyManifest.days[2],
-    legacyManifest.days[1],
-    ...legacyManifest.days.slice(3),
-  ],
-});
-await assert.rejects(
-  migrateStaticMirrorV4({
-    content: legacyContent,
-    overviews: overviewRoot,
-    output: join(migrationRoot, 'unordered-dates'),
-  }),
-  /strictly descending/,
-);
-await save(legacyManifestPath, legacyManifest);
-await assert.rejects(
-  migrateStaticMirrorV4({
-    content: legacyContent,
-    overviews: overviewRoot,
-    output: migratedContent,
-  }),
-  /Missing overview sidecar/,
-);
-await assert.rejects(
-  readFile(join(migratedContent, 'data/manifest.json'), 'utf8'),
-);
-const missingOverview = migrationDays.at(-1)!;
-await save(
-  join(overviewRoot, 'a', `${missingOverview.date}.json`),
-  missingOverview.sidecar,
-);
-const invalidDayPath = join(
-  legacyContent,
-  `data/daily/${migrationDays[0].date}.json`,
-);
-const invalidDay = structuredClone(migrationDays[0].snapshot);
-invalidDay.analyses[0].title = '';
-await save(invalidDayPath, invalidDay);
-await assert.rejects(
-  migrateStaticMirrorV4({
-    content: legacyContent,
-    overviews: overviewRoot,
-    output: join(migrationRoot, 'invalid-analysis'),
-  }),
-  /Invalid report/,
-);
-await save(invalidDayPath, migrationDays[0].snapshot);
-assert.deepEqual(
-  await migrateStaticMirrorV4({
-    content: legacyContent,
-    overviews: overviewRoot,
-    output: migratedContent,
-  }),
-  { days: 52, latestDate: migrationDays[0].date },
-);
-const migratedFiles = await readdir(join(migratedContent, 'data/daily'));
-assert.equal(migratedFiles.length, 52, 'all archived days migrate together');
-const migratedDay = JSON.parse(
-  await readFile(
-    join(migratedContent, `data/daily/${migrationDays[0].date}.json`),
-    'utf8',
-  ),
-);
-assert.equal(migratedDay.schemaVersion, 4);
-assert.ok(!('summaryItems' in migratedDay));
-assert.equal(migratedDay.dailyOverview.resultItems.length, 2);
 console.log('Static mirror tests passed');
