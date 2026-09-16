@@ -146,6 +146,21 @@ assert.deepEqual(
   ],
   'topic counts use canonical reports and configured category order',
 );
+const revision = storedReport('math.AP', '2609.99999', {
+  entryKind: 'revision',
+  topicId: 'fluid',
+  topicLabel: 'Fluid equations',
+});
+assert.equal(
+  canonicalDailyReports([...day.analyses, revision]).length,
+  3,
+  'revisions do not increase the daily paper total',
+);
+assert.deepEqual(
+  dailyTopicCounts([...day.analyses, revision], testPublicConfig),
+  dailyTopicCounts(day.analyses, testPublicConfig),
+  'revisions do not affect daily topic counts',
+);
 assert.ok(!('summaryItems' in day), 'schema v4 removes summaryItems');
 assert.throws(
   () =>
@@ -671,7 +686,7 @@ await save(join(legacyContent, 'data/volume.json'), {
   ...volume,
   schemaVersion: 3,
 });
-await save(join(legacyContent, 'data/manifest.json'), {
+const legacyManifest = {
   ...manifest,
   schemaVersion: 3,
   latestDate: migrationDays[0].date,
@@ -683,7 +698,9 @@ await save(join(legacyContent, 'data/manifest.json'), {
     complete: snapshot.coverage.complete,
     lastUpdated: snapshot.lastUpdated,
   })),
-});
+};
+const legacyManifestPath = join(legacyContent, 'data/manifest.json');
+await save(legacyManifestPath, legacyManifest);
 await Promise.all(
   migrationDays
     .slice(0, -1)
@@ -691,6 +708,40 @@ await Promise.all(
       save(join(overviewRoot, index % 2 ? 'a' : 'b', `${date}.json`), sidecar),
     ),
 );
+await save(legacyManifestPath, {
+  ...legacyManifest,
+  days: [
+    legacyManifest.days[0],
+    legacyManifest.days[0],
+    ...legacyManifest.days.slice(2),
+  ],
+});
+await assert.rejects(
+  migrateStaticMirrorV4({
+    content: legacyContent,
+    overviews: overviewRoot,
+    output: join(migrationRoot, 'duplicate-dates'),
+  }),
+  /duplicate dates/,
+);
+await save(legacyManifestPath, {
+  ...legacyManifest,
+  days: [
+    legacyManifest.days[0],
+    legacyManifest.days[2],
+    legacyManifest.days[1],
+    ...legacyManifest.days.slice(3),
+  ],
+});
+await assert.rejects(
+  migrateStaticMirrorV4({
+    content: legacyContent,
+    overviews: overviewRoot,
+    output: join(migrationRoot, 'unordered-dates'),
+  }),
+  /strictly descending/,
+);
+await save(legacyManifestPath, legacyManifest);
 await assert.rejects(
   migrateStaticMirrorV4({
     content: legacyContent,
@@ -707,6 +758,22 @@ await save(
   join(overviewRoot, 'a', `${missingOverview.date}.json`),
   missingOverview.sidecar,
 );
+const invalidDayPath = join(
+  legacyContent,
+  `data/daily/${migrationDays[0].date}.json`,
+);
+const invalidDay = structuredClone(migrationDays[0].snapshot);
+invalidDay.analyses[0].title = '';
+await save(invalidDayPath, invalidDay);
+await assert.rejects(
+  migrateStaticMirrorV4({
+    content: legacyContent,
+    overviews: overviewRoot,
+    output: join(migrationRoot, 'invalid-analysis'),
+  }),
+  /Invalid report/,
+);
+await save(invalidDayPath, migrationDays[0].snapshot);
 assert.deepEqual(
   await migrateStaticMirrorV4({
     content: legacyContent,

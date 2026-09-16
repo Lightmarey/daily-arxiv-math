@@ -19,6 +19,7 @@ import {
   type StaticVolumeV4,
 } from '../lib/static-mirror';
 import { publicTrackingConfigSchema } from '../lib/config';
+import { paperReportInputSchema } from '../lib/validation';
 
 interface LegacyStaticDayV3 extends Omit<
   StaticDayV4,
@@ -165,6 +166,24 @@ export async function migrateStaticMirrorV4(args: MigrationArgs): Promise<{
     manifest.latestDate !== manifest.days[0].announcementDate
   )
     throw new Error('Invalid schema v3 manifest ordering');
+  const manifestDates = manifest.days.map((entry) => entry.announcementDate);
+  if (new Set(manifestDates).size !== manifestDates.length)
+    throw new Error('Schema v3 manifest contains duplicate dates');
+  const validDate = (date: string) => {
+    const timestamp = Date.parse(`${date}T00:00:00Z`);
+    return (
+      /^\d{4}-\d{2}-\d{2}$/.test(date) &&
+      Number.isFinite(timestamp) &&
+      new Date(timestamp).toISOString().slice(0, 10) === date
+    );
+  };
+  if (
+    manifestDates.some((date) => !validDate(date)) ||
+    manifestDates.some(
+      (date, index) => index > 0 && manifestDates[index - 1] <= date,
+    )
+  )
+    throw new Error('Schema v3 manifest dates must be valid and strictly descending');
   for (const point of volume.points) {
     if (
       Object.values(point.counts).some(
@@ -192,6 +211,12 @@ export async function migrateStaticMirrorV4(args: MigrationArgs): Promise<{
       const legacy = await readJson<LegacyStaticDayV3>(
         join(content, `data/daily/${entry.announcementDate}.json`),
       );
+      for (const report of legacy.analyses) {
+        if (!paperReportInputSchema.safeParse(report).success)
+          throw new Error(
+            `Invalid report ${report.arxivId} on ${entry.announcementDate}`,
+          );
+      }
       if (
         legacy.announcementDate !== entry.announcementDate ||
         legacy.lastUpdated !== entry.lastUpdated ||

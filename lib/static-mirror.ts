@@ -160,7 +160,9 @@ export function sortReports(reports: PaperReport[]): PaperReport[] {
 
 export function canonicalDailyReports(reports: PaperReport[]): PaperReport[] {
   const groups = new Map<string, PaperReport[]>();
-  for (const report of sortReports(reports)) {
+  for (const report of sortReports(
+    reports.filter((item) => item.entryKind !== 'revision'),
+  )) {
     const group = groups.get(report.arxivId) ?? [];
     group.push(report);
     groups.set(report.arxivId, group);
