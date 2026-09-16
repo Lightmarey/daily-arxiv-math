@@ -38,6 +38,12 @@ const sharedAp = storedReport('math.AP', '2609.00001', {
   },
 });
 const sharedLg = storedReport('cs.LG', '2609.00001');
+const sharedApSecond = storedReport('math.AP', '2609.00002', {
+  workSummary: '第三篇论文的完整结果简述。',
+});
+const sharedLgSecond = storedReport('cs.LG', '2609.00003', {
+  workSummary: '第四篇论文先得到存在性。随后证明唯一性。最后给出稳定性。',
+});
 const feed = {
   date: '2026-09-04',
   lastUpdated: '2026-09-04T05:01:00Z',
@@ -45,22 +51,22 @@ const feed = {
   coverage: [
     {
       categoryId: 'math.AP',
-      expectedCount: 1,
-      publishedCount: 1,
+      expectedCount: 2,
+      publishedCount: 2,
       complete: true,
       requiredForCompletion: true,
       status: 'complete' as const,
     },
     {
       categoryId: 'cs.LG',
-      expectedCount: 1,
-      publishedCount: 1,
+      expectedCount: 2,
+      publishedCount: 2,
       complete: true,
       requiredForCompletion: true,
       status: 'complete' as const,
     },
   ],
-  reports: [sharedAp, sharedLg],
+  reports: [sharedAp, sharedLg, sharedApSecond, sharedLgSecond],
 };
 assert.deepEqual(
   normalizeStaticReport({
@@ -95,12 +101,12 @@ assert.equal(
   '这里是结果。',
 );
 const day = buildStaticDay(feed, testPublicConfig);
-assert.equal(day.analyses.length, 2, 'all category analyses remain available');
-assert.equal(day.summaryItems.length, 2, 'summary links representative analyses');
+assert.equal(day.analyses.length, 4, 'all category analyses remain available');
+assert.equal(day.summaryItems.length, 4, 'summary links representative analyses');
 const stoppedCategoryDay = buildStaticDay(
   {
     ...feed,
-    reports: [sharedLg],
+    reports: [sharedLg, sharedLgSecond],
     coverage: [
       {
         categoryId: 'math.AP',
@@ -136,7 +142,7 @@ const oldDay = buildStaticDay(
     lastUpdated: feed.lastUpdated,
     categories: ['math.AP'],
     coverage: [feed.coverage[0]],
-    reports: [sharedAp],
+    reports: [sharedAp, sharedApSecond],
   },
   oldConfig,
 );
@@ -277,8 +283,8 @@ const manifest: StaticMirrorManifestV3 = {
   days: [
     {
       announcementDate: day.announcementDate,
-      expectedCount: 2,
-      publishedCount: 2,
+      expectedCount: 4,
+      publishedCount: 4,
       aiDisclosureCount: 0,
       complete: true,
       lastUpdated: day.lastUpdated,
@@ -303,18 +309,24 @@ assert.match(html, /<summary>/);
 assert.match(html, /<input[^>]+type="date"/);
 assert.match(html, /<header class="site-header">/);
 assert.match(html, /<i aria-hidden="true">𓅆<\/i><span>Arxiv日报<\/span>/);
-assert.match(html, /完整收敛 2\/2/);
+assert.match(html, /完整收敛 4\/4/);
 assert.match(html, /AI 协作 0/);
-assert.match(html, /当日共收录 2 篇文章/);
+assert.match(html, /当日共收录 4 篇文章/);
 assert.match(html, /囊括了 Other analysis、Other learning 等问题/);
 assert.match(html, /<option value="math\.AP">math\.AP<\/option>/);
 assert.doesNotMatch(html, /<option value="math\.AP">Analysis<\/option>/);
 assert.match(html, /data-category="math\.AP"/);
-assert.match(html, /data-summary-link/);
+assert.equal((html.match(/data-summary-link/g) ?? []).length, 4);
+assert.match(html, /全部结果简述/);
+assert.match(html, /最后给出稳定性/);
+assert.doesNotMatch(html, /<p class="overview-label">主要结果<\/p>/);
 assert.match(html, /data-toc-category/);
 assert.match(html, /data-toc-topic/);
 assert.match(html, /data-toc-paper/);
 assert.match(html, /href="#analysis-math-AP-2026-09-04-2609-00001-v1"/);
+assert.match(html, /href="#analysis-math-AP-2026-09-04-2609-00002-v1"/);
+assert.match(html, /href="#analysis-cs-LG-2026-09-04-2609-00001-v1"/);
+assert.match(html, /href="#analysis-cs-LG-2026-09-04-2609-00003-v1"/);
 assert.match(html, /href="https:\/\/arxiv\.org/);
 assert.match(html, /<details class="paper-section" open>/);
 assert.match(html, /data-chart/);

@@ -8,7 +8,6 @@ interface Props {
 }
 
 const { day } = Astro.props;
-const reportById = new Map(day.analyses.map((report) => [report.id, report]));
 const topicLabels = [
   ...new Map(
     day.analyses.map((report) => [
@@ -17,11 +16,6 @@ const topicLabels = [
     ]),
   ).values(),
 ];
-const compactSummary = (value: string) =>
-  (value.match(/[^。！？；]+[。！？；]?/gu) ?? [value])
-    .slice(0, 2)
-    .join('')
-    .trim();
 ---
 
 <section class="overview" id="overview">
@@ -36,20 +30,18 @@ const compactSummary = (value: string) =>
     <p class="overview-lead">
       当日共收录 {day.coverage.publishedCount} 篇文章，囊括了 {topicLabels.join('、')} 等问题。
     </p>
-    <p class="overview-label">主要结果</p>
+    <p class="overview-label">全部结果简述</p>
     <ul class="summary-items">
       {
-        day.summaryItems.slice(0, 3).map((item) => {
-          const report = reportById.get(item.analysisId);
-          if (!report) return null;
-          return (
-            <li>
-              <a href={`#${reportAnchor(report)}`} data-summary-link>
-                <MathText value={compactSummary(item.text)} />
-              </a>
-            </li>
-          );
-        })
+        day.analyses.map((report) => (
+          <li>
+            <a href={`#${reportAnchor(report)}`} data-summary-link>
+              <strong><MathText value={report.title} inline /></strong>
+              <span>： </span>
+              <MathText value={report.workSummary} inline />
+            </a>
+          </li>
+        ))
       }
     </ul>
   </div>
