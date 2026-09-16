@@ -34,9 +34,9 @@ const { title, description } = Astro.props;
     <header class="site-header">
       <div class="header-inner">
         <div class="brand">
-          <button type="button" class="brand-mark" aria-label="站点标记" data-radar-trigger>
+          <span class="brand-mark">
             <i aria-hidden="true">𓅆</i>
-          </button>
+          </span>
           <a href={pathUrl()}><span>Arxiv日报</span></a>
         </div>
         <slot name="header-controls" />

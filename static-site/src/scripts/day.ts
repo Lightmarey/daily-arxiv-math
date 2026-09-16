@@ -1,5 +1,3 @@
-import { radarScore, radarTier } from '../lib/radar';
-
 interface WeeklyPoint {
   weekStart: string;
   weekEnding: string;
@@ -24,19 +22,9 @@ const basePath = document.body.dataset.basePath || '';
 const normalize = (value: string) => value.trim().toLocaleLowerCase('zh-CN');
 
 if (filterRoot) {
-  const radarStorageKey = 'arxiv-daily:personal-radar';
-  let radarEnabled = localStorage.getItem(radarStorageKey) === 'on';
   const papers = [
     ...filterRoot.querySelectorAll<HTMLElement>('[data-paper]'),
   ];
-  for (const paper of papers) {
-    const score = radarScore({
-      topic: paper.dataset.topic ?? '',
-      priorityScore: Number(paper.dataset.priorityScore ?? 0),
-      text: paper.dataset.search ?? '',
-    });
-    paper.dataset.radarTier = radarTier(score) ?? 'none';
-  }
 
   const fields = ['q', 'category', 'topic', 'ai', 'priority'] as const;
   const params = new URLSearchParams(location.search);
@@ -90,8 +78,7 @@ if (filterRoot) {
         (values.topic === 'all' || paper.dataset.topic === values.topic) &&
         (values.ai === 'all' || paper.dataset.ai === values.ai) &&
         (values.priority === 'all' ||
-          paper.dataset.priority === values.priority) &&
-        (!radarEnabled || paper.dataset.radarTier !== 'none');
+          paper.dataset.priority === values.priority);
       paper.hidden = !matches;
       if (matches) visible += 1;
     }
@@ -123,8 +110,7 @@ if (filterRoot) {
       Boolean(values.q) ||
       values.topic !== 'all' ||
       values.ai !== 'all' ||
-      values.priority !== 'all' ||
-      radarEnabled;
+      values.priority !== 'all';
     for (const group of filterRoot.querySelectorAll<HTMLElement>(
       '[data-field-group]',
     )) {
@@ -184,32 +170,6 @@ if (filterRoot) {
   });
   syncTopics();
   applyFilters();
-
-  const radarTrigger = document.querySelector<HTMLButtonElement>(
-    '[data-radar-trigger]',
-  );
-  const syncRadarState = () => {
-    document.documentElement.dataset.radar = radarEnabled ? 'on' : 'off';
-    radarTrigger?.setAttribute('aria-pressed', String(radarEnabled));
-    radarTrigger?.setAttribute(
-      'aria-label',
-      radarEnabled ? '个人雷达已开启' : '站点标记',
-    );
-  };
-  const radarClicks: number[] = [];
-  radarTrigger?.addEventListener('click', () => {
-    const now = Date.now();
-    while (radarClicks.length && now - radarClicks[0] > 3000)
-      radarClicks.shift();
-    radarClicks.push(now);
-    if (radarClicks.length < 5) return;
-    radarClicks.length = 0;
-    radarEnabled = !radarEnabled;
-    localStorage.setItem(radarStorageKey, radarEnabled ? 'on' : 'off');
-    syncRadarState();
-    applyFilters();
-  });
-  syncRadarState();
 }
 
 const toc = document.querySelector<HTMLDetailsElement>('[data-toc]');

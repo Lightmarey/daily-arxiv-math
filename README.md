@@ -34,6 +34,15 @@ data/daily/YYYY-MM-DD.json
 
 当日总览的论文总数和主题计数由站点按唯一 arXiv ID 计算；结果短语与值得关注项来自日级 sidecar，页面切换领域或主题时保持不变。
 
+## 个人雷达 userscript
+
+个人雷达不属于 Astro 构建产物。仓库中的
+[`userscripts/arxiv-daily-personal-radar.user.js`](userscripts/arxiv-daily-personal-radar.user.js)
+是空配置通用模板，不包含个人关键词或主题权重。复制到
+`userscripts/local/`（该目录已被 Git 忽略），只在副本顶部的 `CONFIG` 中填写个人规则，
+再用 Tampermonkey 或 Violentmonkey 安装副本。脚本只读取当前页面已有的论文数据，
+在本地标记匹配的论文，不访问 API；按 `Alt+Shift+R` 可切换显示，状态保存在浏览器本地。
+
 ## 本地检查
 
 需要 Node.js 22.13 或更高版本和 Python 3。

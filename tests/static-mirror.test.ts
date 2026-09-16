@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { cp, mkdtemp, mkdir, readFile, writeFile } from 'node:fs/promises';
+import {
+  cp,
+  mkdtemp,
+  mkdir,
+  readFile,
+  readdir,
+  writeFile,
+} from 'node:fs/promises';
 import { rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -607,8 +614,12 @@ assert.match(html, /<details class="proof-outline">/);
 assert.match(html, /<summary>/);
 assert.match(html, /<input[^>]+type="date"/);
 assert.match(html, /<header class="site-header">/);
-assert.match(html, /data-radar-trigger><i aria-hidden="true">𓅆<\/i><\/button>/);
+assert.match(html, /<span class="brand-mark"><i aria-hidden="true">𓅆<\/i><\/span>/);
 assert.match(html, /<a href="\/daily-arxiv-math\/"><span>Arxiv日报<\/span><\/a>/);
+assert.doesNotMatch(
+  html,
+  /data-radar-trigger|data-personal-radar|arxiv-daily:personal-radar/,
+);
 assert.match(html, /完整收敛 4\/4/);
 assert.match(html, /AI 协作 0/);
 assert.match(html, /今日共收录 3 篇论文/);
@@ -676,6 +687,15 @@ assert.doesNotMatch(html, /日期归档/);
 assert.doesNotMatch(html, /已补读正文关键部分|摘要级分析/);
 assert.doesNotMatch(html, /查看 Markdown 版全文/);
 assert.doesNotMatch(html, /markdown-copy/);
+const clientScripts = await Promise.all(
+  (await readdir(join(out, '_astro')))
+    .filter((file) => file.endsWith('.js'))
+    .map((file) => readFile(join(out, '_astro', file), 'utf8')),
+);
+assert.doesNotMatch(
+  clientScripts.join('\n'),
+  /data-personal-radar|arxiv-daily:personal-radar/,
+);
 await assert.rejects(readFile(join(out, 'archive/index.html'), 'utf8'));
 await assert.rejects(readFile(join(out, 'papers/2609.00001/index.html'), 'utf8'));
 await assert.rejects(readFile(join(out, 'data/manifest.json'), 'utf8'));
