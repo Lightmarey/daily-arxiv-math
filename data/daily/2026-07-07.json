@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-07-07",
   "lastUpdated": "2026-09-11T19:08:43.280Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 6,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-07-07:2607.04214:v2",
-      "text": "论文排除三维聚焦能量临界 NLS 中满足低速漂移的非零临界元，并将其转化为一类初值集合的条件散射。作者先用阈值以下 coercivity 得到正 virial gap，临界紧性给出尾部小量和漂移半径控制；再推导固定中心的局部 virial 恒等式与误差估计，使 virial 在长时间内线性增长，而 action 上界只有漂移半径的次线性增长，最终矛盾排除临界元。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-07:2607.04952:v1",
-      "text": "论文研究 $k\\ge 2$ 的能量临界 k-等变波映射有限能量有限时间爆破的辐射正则性。作者先用连续时间孤子分解把解写成有序多泡、紧支撑小辐射和误差，再通过调制参数、局部 virial 泛函及能量展开控制最宽泡尺度；最后按辐射主导与内泡相互作用主导的时间区域分割，证明最宽尺度不可能在有限时间降到零，从而排除满足 $H^3\\times H^2$ 辐射条件的爆破。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-07:2607.05237:v1",
-      "text": "论文研究三维不可压旋转 Navier–Stokes 方程在大旋转速度下的全局温和解。作者先按旋转 Stokes–Coriolis 半群的相位退化层分解频率，获得比插值更快且在 $p=4$ 带对数修正的线性衰减；再以零均值和一阶矩条件估计热核平移差，处理 Duhamel 非线性项并闭合小数据 bootstrap；最后对显式高斯旋涡数据给出线性主项下界，证明衰减率尖锐。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-07:2607.03677:v1",
-      "text": "论文研究有界光滑域上带 Caputo 时间导数的趋化滑动聚集系统，并结合保持非负/正性的 PINN 数值模拟。分析部分把方程写成 Mittag–Leffler 算子族的 mild Duhamel 系统，证明质量守恒、n 的非负性和 c 的正下界；构造含相对熵与 $|\\nabla c|^{2}/c$ 的分数阶 Lyapunov 泛函，得到耗散和统一积分界，再通过二维 Moser bootstrap 得到 n 的 $L\\infty $ 与 c 的 $W^{1,q}$ 全局界，以延拓获得全局 mild 解和正则性。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-07:2607.05388:v1",
-      "text": "论文研究有界开凸域上 Neumann 拉普拉斯低阶正特征值比。作者以第一特征函数 u 生成多项式试验空间：二次变换给出 $µ_{2}\\le 4µ_{1}$，三次空间与加权多项式不等式给出 $µ_{3}\\le 9µ_{1}；Bochner--Reilly$ 恒等式、凸边界项符号、矩估计和二维矩阵正性共同提供尖锐常数，最后用光滑严格凸域逼近处理一般凸域。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-07-07:2607.04214:v2",
@@ -6049,5 +6026,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Solutions for Strongly Monotone Operator Equations in Riesz Spaces》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-07-07:2607.05388:v1",
+        "text": "Neumann 拉普拉斯前三个正特征值满足 μ₃≤9μ₁"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.04952:v1",
+        "text": "能量临界 k-等变波映射不存在满足辐射正则性的有限时间爆破"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.05237:v1",
+        "text": "大旋转速度下三维旋转 Navier–Stokes 小数据解获得尖锐衰减率"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.02877:v2",
+        "text": "非线性尺寸结构输运方程的反馈闭环获得唯一性与切换斜率"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.03677:v1",
+        "text": "Caputo 趋化滑动聚集系统保持质量守恒、非负性与浓度正下界"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.04214:v2",
+        "text": "在三维 below-threshold 聚焦能量临界 NLS 的 bounded-scale finite-mass almost-periodic 类中，低速漂移临界元只能为零。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.04657:v1",
+        "text": "二维严格凸图的高斯曲率由非线性 DN 映射唯一确定"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.02979:v2",
+        "text": "二维非散度平流扩散局部缺陷具有双 Lipschitz 坐标与 Liouville 估计"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-07-07:2607.03373:v1",
+        "result": "Ambrosio–Tortorelli 梯度流获得内部与相容边界正则性",
+        "significance": "把变分梯度流的边界正则性推进到兼容初边值情形。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-07:2607.03773:v1",
+        "result": "周期 QHD 在正密度、无旋及统一 Sobolev 假设下，扣除 τ⁻¹e^{-t/τ²}J₀ 初始层后强收敛至量子漂移扩散，并给出密度一阶展开。",
+        "significance": "明确初始层剥离后的强收敛机制，并由密度一阶展开刻画周期量子流体的松弛误差。"
+      }
+    ]
+  }
 }

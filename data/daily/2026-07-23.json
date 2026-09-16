@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-07-23",
   "lastUpdated": "2026-09-11T16:34:33.586Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 0,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-07-23:2607.19710:v1",
-      "text": "论文研究半空间三维可压 MHD 方程在磁场垂直电阻趋零时的全局正则性、大时间衰减和极限收敛。作者先对密度、速度和磁场做能量分解，利用水平耗散、边界条件与 divergence 约束建立高阶 uniform estimates；再构造无垂直磁阻的 limit system 并证明其全局解；最后对原系统与极限系统作差，通过 Lemma 2.6 型耗散密度差估计得到随电阻参数消失的收敛率。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-23:2607.19700:v2",
-      "text": "论文研究二维不可压 Euler 方程大初值产生的自相似解。作者把 vorticity 写成自相似变量，得到带线性膨胀漂移、非局部 Biot–Savart 和非线性输运的 profile 方程；先用辅助 Biot–Savart 估计和 nonlinear maximum principle 建立 profile 的有界性，再以线性 drift-diffusion 正则化与固定点/紧性构造 hypodissipative profile，最后将 profile 恢复为 Euler 的自相似速度和涡量场。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-23:2607.20025:v1",
-      "text": "论文研究带径向非谐约束势的全空间 Boltzmann 方程旋转平衡与线性稳定。作者先按角动量和质量/能量约束分类旋转 Maxwellian 平衡，再在平衡附近做 stationary projection 和归一化；空间退化的微观 coercivity 通过远场权转移恢复，宏观方程用加权 Poincaré–Korn 控制，最后闭合宏观/微观系统并证明模去 stationary modes 的代数衰减。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-23:2607.19737:v1",
-      "text": "论文研究具有实谱但非 Hermitian 的缓变量子动力学绝热定理。作者先构造正 Hermitian metric $\\Theta _T(s)$，把非 Hermitian Hamiltonian 通过 $\\Theta _T^{1/2}$ 相似变换为 Hermitian counterpart；再调用 Hermitian adiabatic theorem 控制谱投影演化。随后用 pulled-back propagator 和 Dyson 展开比较原系统与 Hermitian 系统的投影，得到非 Hermitian spectral subspace 的绝热不变性与 $O(T^{-1})$ 型误差。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-23:2607.19887:v1",
-      "text": "论文证明二维方形环面上 Kuramoto–Sivashinsky 方程原点的非线性不稳定性。作者先选取有限个线性增长 Fourier 模态，递归求解近似解的非共振高阶项，构造包含 $e^{\\lambda t}$ 主模态和多阶校正的 $\\phi _app；Lemma$ 3.4–3.5 控制近似解及残差。再把真实解写成近似解加 remainder，在长但有限时间窗内用能量/半群估计和 fixed point 控制 remainder，最后以增长模态超过初始小量证明离开原点。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-07-23:2607.19710:v1",
@@ -2147,5 +2124,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Modified Mean Curvature Flow in Fuchsian Manifolds》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19887:v1",
+        "text": "二维方形环面上的 Kuramoto–Sivashinsky 原点对任意小扰动都非线性不稳定，并具有明确的离开时间尺度。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19710:v1",
+        "text": "半空间三维可压 MHD 在高阶小初值、兼容边界和指定黏性/磁阻结构下保持全局正则，并收敛到无垂直磁阻极限。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19737:v1",
+        "text": "具有实谱的非 Hermitian 量子动力学在正 Hermitian metric 下满足绝热定理，绝热不变性延伸到谱子空间。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.20016:v1",
+        "text": "区间到圆的 half-harmonic maps 在每个非零拓扑次数下都有非恒定解，固定边界相位时还出现乘性多重性。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19700:v2",
+        "text": "二维不可压 Euler 在大初始涡量背景下存在非平凡自相似 profile，并满足相应的速度、涡量正则性与衰减。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.20025:v1",
+        "text": "径向非谐约束势下的 Boltzmann 方程具有可分类的旋转平衡；去除平衡模态后线性扰动稳定并代数衰减。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19736:v9",
+        "text": "外部域 Navier-slip 流体与弹性结构耦合具有正则性和半群衰减，边界摩擦效应可纳入全局小数据控制。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19684:v1",
+        "text": "迭代球面平均公式对 polyharmonic 性质既充分又必要，并给出精确与渐近形式及不可降低的迭代阶数。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-07-23:2607.20076:v1",
+        "result": "带 Maxwell 反射或漫反射边界的线性 kinetic Fokker–Planck 弱解获得边界 Hölder 与高阶正则性。",
+        "significance": "镜面与漫反射机制在同一边界正则性框架下得到定量控制。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-23:2607.19939:v1",
+        "result": "测度函数提升到随机变量空间后具有链式法则，测度方向导数可由 Hilbert 空间变分表示。",
+        "significance": "统一弱拓扑、Wasserstein 拓扑和 lifted 导数之间的微分转换。"
+      }
+    ]
+  }
 }

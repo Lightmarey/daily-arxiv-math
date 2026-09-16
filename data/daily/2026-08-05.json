@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-05",
   "lastUpdated": "2026-09-11T19:08:46.956Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 3,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-05:2608.03332:v1",
-      "text": "正文第1.2节先把径向调和映射热流经 $ṽ=r^{-1}u$ 改写成 $n=d+2$ 维径向半线性热方程，再用相似坐标得到演化方程 (1.17)。第2节建立相似剖面方程；第3节围绕圆球剖面作 $\\psi _\\epsilon =\\psi _0+ϕ_\\epsilon $ 分解，把问题化为含小势项、余项和二次非线性的扰动方程。第4节分析线性化算子的半群和谱，并通过消除时间平移产生的唯一不稳定方向，结合非线性固定点得到扰动衰减和稳定自相似爆破。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-05:2608.03713:v1",
-      "text": "正文研究带时间依赖阻尼 b(t)、质量 m(t) 和导数型非线性 $|u_t|^p$ 的波方程。作者把阻尼与质量组合为 $B(t)=∫b$ 和 $V(t)=m-b'/2-b^{2}/4$，要求 V 可积；主定理用 Glassey 型积分 $H_p$ 给出有限时间爆破及寿命反函数上界。核心构造是空间修正 Helmholtz 测试函数与时间伴随解的乘积：Liouville 变换把伴随 ODE 化为含 V 的方程，Volterra 压缩得到正伴随模态，随后两个加权泛函导出标量微分不等式。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-05:2608.03869:v2",
-      "text": "正文研究有界光滑凸域上的完全抛物 Keller–Segel 系统，证明同一个显式条件 $\\mu >N\\chi /4$ 对所有 $\\tau >0$ 都保证全局经典解和一致 $L\\infty /W^{1,\\infty }$ 有界。作者构造辅助量 $Y_\\tau =u+(\\chi \\tau /2)|\\nabla v|^{2}-(\\tau -1)\\Delta v$，在凸边界条件下满足闭合标量抛物不等式$。\\tau \\ge 1$ 时比较原理直接给出 $Y_\\tau $ 上界并转成 u 的 logistic 控制$；0<\\tau <1$ 时先控制 v，再对 $z=e^{-\\chi v/2}$ 做不同扩散率的抛挤，获得 Hölder 正则性，随后用 Hölder–Sobolev 插值、加权最大 $L^p$ 正则性和抛物平滑闭合估计。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-05:2608.03126:v1",
-      "text": "正文构造相对论输运方程的固定系数反例，说明仅用动量 Hölder 半范数不能控制动量 Hessian 的 Hölder 正则性。第2节通过 $\\Phi (p)=p/⟨p⟩$ 将相对论动量变量精确共轭到单位球速度变量，使扩散变成拉普拉斯、诱导漂移完全抵消。第3节取单一空间频率的 Kolmogorov 振荡 $I_N$，得到平稳解 $f_N$；虽然 $||f_N||\\infty =O(N^{-2/3})$ 且源的动量半范数为零，动量 Hessian 半范数却增长为 $N^{\\alpha /3}$。再将常数加入解并重写为有界零阶系数，得到零外源版本。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-05:2608.03654:v1",
-      "text": "正文构造二维不可压 Euler 的均匀旋转涡块：一个外部单连通区域包围 $m\\ge 2$ 个按正 m 边形排列、尺度 $\\epsilon $ 而中心距 $\\epsilon ^\\alpha $ 的内部高浓缩组件。第2节从 contour dynamics 得到外边界和参考内边界的方程并用旋转对称性降为两个标量方程；第3节识别圆盘/点涡极限并选取角速度缩放；第4节在对称 Hölder 空间建立非线性算子的连续性；第5节显示极限线性化是 Fourier 对角且可逆，再用带连续参数的隐函数定理得到两种反射对称的旋转解。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-05:2608.03332:v1",
@@ -1858,5 +1835,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Reduced-order modeling for electromagnetic inverse problems: a layered medium benchmark》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03332:v1",
+        "text": "目标球面的小几何扰动下，调和映射热流在 $3\\le d\\le6$ 仍存在自相似爆破剖面，并对协旋转扰动渐近稳定。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03869:v2",
+        "text": "完全抛物 Keller–Segel 系统在 $\\mu>N\\chi/4$ 时对所有固定 $\\tau>0$ 存在全局经典解，并有一致上界。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03126:v1",
+        "text": "相对论输运方程存在固定系数反例，动量 Hölder 半范数有界仍不能控制动量 Hessian 的 Hölder 正则性。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03713:v1",
+        "text": "带时间依赖阻尼和质量的导数型半线性波方程满足统一爆破判据，爆破寿命上界由辅助函数的反函数显式控制。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03654:v1",
+        "text": "二维不可压 Euler 构造外部涡块包围 $m\\ge2$ 个高浓缩内部涡块的均匀旋转弱解；内部涡块同步塌缩，涡量测度极限为 Rankine 涡加中心负点涡。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03321:v1",
+        "text": "$\\mathbb R^4$ 有界 $C^6$ 域上的临界指数双调和 Choquard Navier 问题具有多泡解、局部唯一性和可计算的 Morse 指数。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03194:v1",
+        "text": "一维准周期 Schrödinger 演化在长时间区间满足算术型 Strichartz 估计，二次频率从 $T>C^{2+\\epsilon}$ 起达到重聚焦标度。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03373:v2",
+        "text": "带权退化椭圆算子在混合维边界上具有 $L^p$ Dirichlet 可解性，一般边界数据和内部 tent 数据均有弱解估计。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03460:v1",
+        "result": "非负正则源且 λ∈(λ₁,λ₂) 时，Uη 上 λ_f≥λ₁+ε；若 f_n⇀f，则 min{λ_f,λ₂}≤liminf λ_{f_n}。",
+        "significance": "线性反极值区间的比较与极限稳定性被推广到更宽的源项类别。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-05:2608.03672:v1",
+        "result": "在给定通量或压降及颗粒尺度、分离假设下，任一弱累积点满足含 Brinkman 项 $Gu-J$ 的有效稳态 Navier–Stokes 方程，并保持统一速度压力界。",
+        "significance": "给定通量或压降下的颗粒微结构可在弱极限中转化为宏观阻力。"
+      }
+    ]
+  }
 }

@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-07-29",
   "lastUpdated": "2026-09-11T17:57:28.856Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 4,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-07-29:2607.25759:v2",
-      "text": "论文研究三维临界 Hartree 型 Brezis–Nirenberg 问题的最小化解 blow-up。作者先用非局部 Sobolev 最优常数和 Green 函数构造集中 bubble；Pohozaev 恒等式把边界几何、势 Q 与 $\\epsilon V$ 的贡献精确展开，再以 Lyapunov–Schmidt 分解消除正交余项，得到峰值位置、尺度和能量的渐近。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-29:2607.25009:v1",
-      "text": "论文研究带 dual-scale hereditary viscosity 的 Navier–Stokes。非局部记忆耗散破坏精确尺度不变性，作者在 Hörmander 符号类中建立 Lp–Lq 衰减并识别临界 pc；超临界频率调制双线性流直接在 Fourier 空间构造 norm inflation，而 $p\\to \\infty $ 的拓扑极限由记忆项阻止传统临界崩溃并给出全局小数据适定。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-29:2607.25100:v1",
-      "text": "论文分析 Barron 边界数据下调和 Dirichlet 解的正则性及 Deep Ritz 误差。作者构造半空间/矩形中的 Barron 数据，使 harmonic extension 通常既非 Lipschitz 也不在 H2；同时用 Poisson 核和频率截断证明精度 $\\epsilon $ 的 Barron 近似可取范数 O(|log $\\epsilon |)$。将这些正则性界代入 Ritz 泛函，得到神经网络 PDE solver 的先验误差估计。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-29:2607.25602:v1",
-      "text": "论文对任意周期介质的线性弹性静力/动力学做二阶周期均匀化。两尺度展开得到有效刚度/惯性张量，cell 解的 reciprocity identity 减少所需 cell problems；直接高阶均匀化的四阶算子可能不适定，作者用带可调标量权的 Boussinesq trick 重写为符号定、对称且 coercive 的 strain-gradient elasticity 模型，再以 Hille–Yosida 建立瞬态和受迫响应适定性。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-29:2607.25876:v1",
-      "text": "论文建立由 Minkowski 泛函和各向异性径向导数定义的 sharp L2 Caffarelli–Kohn–Nirenberg 不等式。作者用基于 RK(u) 的精确积分恒等式拆分梯度能量，Hardy 项与球面/凸体极坐标测度给最佳常数；等号方程的常微分解刻画 extremizer。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-07-29:2607.25759:v2",
@@ -1995,5 +1972,54 @@
       "lowPriorityReason": null,
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25100:v1",
+        "text": "Barron 边界数据不自动传递给调和 Dirichlet 解的 Lipschitz 或 $H^2$ 正则性，但半空间和矩形上可获得低范数对数精度近似。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25759:v2",
+        "text": "三维临界 Hartree 型 Brezis–Nirenberg 最小化解发生 bubble 集中，其位置和尺度渐近由非局部临界性与边界几何共同决定。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25876:v1",
+        "text": "一般凸体的 Minkowski 几何下，anisotropic $L^2$-CKN 不等式具有 sharp 常数和完整等号结构。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25009:v1",
+        "text": "双尺度记忆黏性在 1<p<p_c 的特定初值类出现瞬时范数膨胀，而 p→∞ 拓扑极限仅对小数据全局适定。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25602:v1",
+        "text": "任意周期介质的线性弹性静力与动力学具有二阶均匀化模型，有效刚度和惯性张量保持适定性。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25112:v1",
+        "text": "带正则变质量交换率的齐次 Boltzmann 方程在无高阶初始矩假设下避免 gelation，并获得全局存在。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25735:v1",
+        "text": "三维非径向质量临界 NLS 的 bounded-scale finite-mass almost-periodic 通道不存在，below-threshold 散射的主要障碍被排除。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25981:v1",
+        "text": "非负 Ricci 完备非紧流形上的拟线性 Liouville 方程满足 sharp 对数下界，余项仅需 $o(\\log r)$。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25836:v1",
+        "result": "二维周期 shear flow 在常磁场 resistive MHD 线性化下具有可判定的长波不稳定谱。",
+        "significance": "剪切、黏性、电阻和磁场的耦合被统一纳入长波稳定性判据。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-29:2607.25571:v1",
+        "result": "紧 Lie 群上的非自治阻尼波方程中，系数 $\\phi(t)$ 的时间可积性决定全局延拓、爆破与散射衰减区域。",
+        "significance": "时间非自治 forcing 被转化为半线性波长期行为的明确阈值。"
+      }
+    ]
+  }
 }

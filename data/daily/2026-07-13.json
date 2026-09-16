@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-07-13",
   "lastUpdated": "2026-09-11T19:08:44.059Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 1,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-07-13:2607.08919:v1",
-      "text": "论文建立带 Hamiltonian 项的退化全非线性自由 transmission 问题 viscosity 解梯度正则性。通过 sub/supersolution 不等式、改进振荡估计和局部缩放，先得局部 $C^{1,\\alpha }$，再在每个点给出按退化指数 $\\gamma _i$ 和数据增长 m 的尖锐 pointwise $C^{1,\\alpha }$。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-13:2607.08866:v3",
-      "text": "论文提出一种抑制 3D Navier–Stokes 临界点奇异性的几何机制。若涡量在 $L^{3/2,\\infty }$ 临界集中且方向属于权 $bmo_{1/|log$ r|}，局部 Coifman–Rochberg–Weiss commutator 使 stretching eigenvalue 在缩小超水平集上按对数衰减；插值 De Giorgi 能量法将涡量推进次临界 Lorentz–Zygmund 空间，排除奇异时间。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-13:2607.08895:v1",
-      "text": "论文在临界 Triebel–Lizorkin 空间 $F^{1+1/p}_{p,q}(R)$ 中给出 Camassa–Holm 方程尖锐适定性图。对 $p=1、q<\\infty $，通过 Lagrangian 坐标变换证明 Hadamard 局部适定；对 $1<p<\\infty $ 或 $p=q=\\infty $，以 smooth atomic decomposition 构造任意小初值的 norm inflation 和有限寿命，得到强失适定。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-13:2607.09023:v1",
-      "text": "论文研究圆周上的调制 KdV 方程，目标是把不规则时间调制带来的正则化推进到全局适定性。作者重新设计缩放 $u^\\lambda $、时间尺度 $\\lambda ^b$ 以及调制后的双线性驱动器，使 I-method 的局部时间损失和修正能量增量可同时控制，最终在定理 1.5 的参数区域内得到 $H^s(T)$ 全局适定；当调制足够不规则时，这个区域可覆盖任意固定负正则度。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-13:2607.09147:v1",
-      "text": "论文建立 Matryoshka 型高对比弹性介质中的亚波长共振和环形缺陷导波理论。作者从位移到牵引映射和变分问题得到共振的充要条件，把低频共振展开到广义刚度张量的广义特征系统，再用 Gohberg–Sigal 与 Puiseux 理论处理多重根；在同心球层状情形将刚度矩阵化为平移/转动块并分析三对角谱，最后证明足够多层、合适环形缺陷支持径向层状地震波导。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-07-13:2607.08919:v1",
@@ -1439,5 +1416,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Online Komlós converges to mean curvature flow》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-07-13:2607.08895:v1",
+        "text": "临界 Triebel–Lizorkin 空间中的 Camassa–Holm 方程获得适定性图与 norm inflation"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.08866:v3",
+        "text": "三维 Navier–Stokes 临界涡量集中被几何机制排除奇异时间"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09023:v1",
+        "text": "圆周调制 KdV 在更宽参数范围内实现全局适定性结果"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.08919:v1",
+        "text": "退化全非线性自由 transmission 方程获得尖锐梯度正则性"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09147:v1",
+        "text": "Matryoshka 弹性介质亚波长共振具有谱充要条件与环形导波"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09062:v1",
+        "text": "二维弹性波远场数据可唯一重建不可穿透散射体的真实形状"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09033:v1",
+        "text": "圆周乘性随机热方程在低正则空间中具有路径全局适定性"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09585:v1",
+        "text": "Schrödinger 逆平方势两权分数积分算子获得完整强型映射范围"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09085:v1",
+        "result": "紧致非正曲率流形上的 Schrödinger Strichartz 估计在频率时间窗内无导数损失",
+        "significance": "改善临界 NLS 的 Sobolev 增长控制并覆盖双端点。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-13:2607.09619:v2",
+        "result": "旋转反向自相似 Navier–Stokes 在极端旋转区间 profile 必为零",
+        "significance": "为 Type I 自相似奇异性排除提供新的 Liouville 判据。"
+      }
+    ]
+  }
 }

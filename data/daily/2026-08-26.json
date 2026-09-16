@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-26",
   "lastUpdated": "2026-09-11T19:08:52.757Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 11,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-26:2608.24286:v1",
-      "text": "论文把时间依赖传播速度的高频波动方程写成变分能量问题。对严格双曲标量 ODE，递归选择倒数速度系数构造高阶几乎守恒能量；对仅可积系数则以带权泛函和约束最小化比较近似能量，明确区分正则化代价与对原速度的 fidelity 误差。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-26:2608.24088:v1",
-      "text": "论文研究带线性阻尼的能量临界复 Ginzburg–Landau 方程，先在 $d=3,4$ 建立 aligned 流的全局正则性，再处理一般复系数和 $d=3–6$ 的奇异极限。局部能量耗散、短时稳定、零色散极限和临界 $\\epsilon -$正则性共同把强解延拓到任意有限时间，并将系数退化的极限识别为相应 Schrödinger 型流。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-26:2608.24330:v1",
-      "text": "论文提出带非线性 anticipation 和智能控制边界的交通流模型，建立原系统与 profile 系统的局部/全局存在、指数趋于常态以及大 relaxation time 极限。证明以特征线能量、边界耗散和 $uniform-in-\\tau $ 先验估计为骨架，并用 compactness 把快变量过滤到 profile 方程。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-26:2608.24840:v1",
-      "text": "论文研究无界通道与全平面 Couette 流附近的二维 Euler 长时间动力学，按涡量符号区分增强色散、密度一阻尼、约束和 non-damping。通道中用沿线性轨道移动的 Lyapunov 泛函证明正涡量均匀逃逸；全平面中用 Hamiltonian 守恒和幂权泛函得到正涡量密度一衰减及负涡量不衰减。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-26:2608.23710:v1",
-      "text": "论文研究紧 metric graph 上非线性 Schrödinger 方程的 least-energy normalized 解与 nodal 解唯一性/非唯一性。图拓扑通过 pendant、环和 equilateral subgraph 改变变分紧性；作者以重排、Nehari 约束和图上的 Euler–Lagrange 分支分析，给出 ground state 选择与 nodal threshold。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-26:2608.24286:v1",
@@ -2766,5 +2743,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Borell--Brascamp--Lieb inequality with finitely many output functions》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24286:v1",
+        "text": "时间依赖波速方程的递归系数构成高阶几乎守恒能量"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24088:v1",
+        "text": "能量临界复 Ginzburg–Landau 方程获得全局正则性与一般系数奇异极限"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24330:v1",
+        "text": "非线性预见交通模型建立 profile 系统，并证明长期行为与大松弛时间极限"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24840:v1",
+        "text": "Couette 流附近的涡量符号决定正涡量无粘阻尼与非正涡量不阻尼的动力学二分"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24599:v1",
+        "text": "在所给三维稳态超声速 short-pulse 构造下，压缩量于有限光学时间 blow-up，而几何坐标保持可控。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.23710:v1",
+        "text": "紧致度量图上的非线性 Schrödinger 方程出现由 pendant 与等距子图决定的基态非唯一性"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24530:v1",
+        "text": "$\\sigma _2/\\sigma _1$ 方程的半凸解获得内点 Hessian 估计"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24589:v1",
+        "text": "拉伸管上的分数阶 Dirichlet Laplacian 按 s<1、s=1、s>1 区分谱极限，并推出半群收敛"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24375:v1",
+        "result": "临界 SQG 由逐点 Leibniz 交换子公式获得全局正则性",
+        "significance": "交换子公式直接控制耗散对数梯度而无需额外频率分解"
+      },
+      {
+        "analysisId": "math.AP:2026-08-26:2608.24393:v1",
+        "result": "临界 n-Laplace 系统存在 W^{1,n} 有限能量但不连续的解",
+        "significance": "对称势产生的对数振荡给出真正的临界不连续例子"
+      }
+    ]
+  }
 }

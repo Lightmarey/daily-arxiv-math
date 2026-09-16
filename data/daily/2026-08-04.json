@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-04",
   "lastUpdated": "2026-09-11T11:09:39.417Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 8,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-04:2608.01455:v1",
-      "text": "正文研究带斜导数边界条件的完全非线性抛物方程 $F(D^2u,x,t)-u_t=f$。作者在半柱面边界同时处理 $\\beta \\cdot Du=g$，通过 F-caloric 逼近、仿射/二次多项式切向迭代，分别得到临界 $f\\in L^{n+2}$ 时的 $C^{0,Log-Lip}，p>n+2$ 时的最优梯度 Hölder，f 为 Hölder 函数时的 Schauder $C^{2+\\alpha }$，以及 $f\\in BMO$ 时的 $C^{1,Log-Lip}$。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-04:2608.00727:v2",
-      "text": "正文研究带小型静态外力的三维可压缩 Navier–Stokes–Korteweg 方程在全空间的低 Mach 数极限。作者先以 $B=p'(\\rho \\infty )-\\kappa \\rho \\infty \\Delta $ 的椭圆算子构造统一的驻定 NSK 解，再对非驻定扰动建立含 Korteweg 对称变量的高阶/低频能量估计，分析低频波型与高频 Schrödinger 型的声学-毛细半群，最后分别控制可压缩 Helmholtz 分量和不可压缩投影误差，得到 Besov 混合范数中的全局收敛率。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-04:2608.01380:v1",
-      "text": "正文研究 $R^4$ 中临界指数的指数型双调和 Choquard 方程。论文先从 normal finite-mass 分布解出发证明光滑性、对数表示和精确质量，再经立体投影把气泡处线性化算子化为球面 Paneitz 算子与紧积分算子的有界扰动，完整计算球谐谱、Morse 指标和核。最后将 Adams–Choquard deficit 的二阶展开与最近点调制结合，得到相对于共形极值流形的尖锐局部稳定常数。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-04:2608.01182:v1",
-      "text": "正文系统研究能量核 $K(z)=-|z|^q（0<q<2）$生成的 Wasserstein MMD 梯度流及其粒子模型。论文在次临界 $L^p$ 和有限矩条件下建立连续流的全局适定性与能量耗散；证明粒子系统全局无碰撞、固定 N 趋向无碰撞临界集，并建立粒子到连续临界性的桥梁和有限时间 mean-field 估计。后半部分分类绝对连续 Lagrangian 临界点、证明长时间渐近临界性，且用平移和高频构造否定统一 MMD 衰减模和若干全局 Polyak–Łojasiewicz 不等式。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-04:2608.00465:v2",
-      "text": "正文研究三维带时间无关势力的可压缩 Navier–Stokes 方程，围绕空间非齐次驻定密度建立扰动系统。作者在仅要求正阶齐次范数小、允许扰动 $L^2$ 范数任意大的条件下，用 $Ḣ^{1/2-\\delta }$ 端点估计$、Ḣ^3$ 能量闭合和 Shizuta–Kawashima 结构得到全局强解；再以负 Besov 低频传播、低频 Duhamel 估计和高频 Lyapunov 不等式证明解与一阶空间导数的最优衰减，并用局部 dyadic 能量和 decay-character 频块给出匹配下界。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-04:2608.01455:v1",
@@ -5465,5 +5442,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Capacity estimates and improved lower bounds for the inner radius of nodal domains》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-04:2608.01380:v1",
+        "text": "四维临界指数双调和 Choquard 方程的线性化谱被完整分解，二阶球谐决定横向 sharp 稳定性常数。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.01455:v1",
+        "text": "带斜导数边界的完全非线性抛物方程在临界可积源下具有最优梯度 Hölder 指数，并延伸到 Schauder 估计。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.00465:v2",
+        "text": "三维可压 Navier–Stokes 在大 $L^2$ 初值和小正阶扰动下存在全局强解，低阶无权衰减达到最优速率。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.00727:v2",
+        "text": "三维可压 Navier–Stokes–Korteweg 方程在低 Mach 数下全局收敛到不可压极限，误差率显式依赖频率与毛细系数。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.01182:v1",
+        "text": "Wasserstein MMD 梯度流和粒子系统具有全局适定性与能量耗散，有限时间 MMD 距离还满足指数稳定界。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.01216:v2",
+        "text": "无界域上的全局 $L^p$ 二阶交换子分解出显式主符号与紧余项，并支持沿双特征线的输运分析。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.02557:v1",
+        "text": "混合局部—非局部加权椭圆方程具有局部有界、Hölder、Harnack 与弱 Harnack 估计，尾项依赖被显式保留。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.00199:v1",
+        "text": "锥域 Poisson 与 $p$-Laplacian 问题的顶点 Lipschitz 阈值由球面截面第一本征值决定，梯度加权估计同步成立。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-04:2608.00293:v1",
+        "result": "带三重点拖曳的多相相场模型形式上收敛到曲率流，三重点满足含 mobility 的拖曳律并保留能量耗散。",
+        "significance": "三重点运动和拓扑变化可由同一 Allen–Cahn 型模型描述。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-04:2608.01132:v1",
+        "result": "Heisenberg 群分数结构阻尼方程具有由 decay character 决定的小数据全局区间，并在临界指数下发生有限时爆破。",
+        "significance": "衰减指标与临界指数被统一到非欧空间的 Fujita 型阈值中。"
+      }
+    ]
+  }
 }

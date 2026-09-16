@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-14",
   "lastUpdated": "2026-09-11T19:08:49.946Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 6,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-14:2608.13443:v2",
-      "text": "论文研究带凸势 Dirichlet p-Laplacian 的 fundamental gap。先在一维把第二特征函数按唯一节点分解为两个第一特征函数，经过平移缩放化为带线性势的一参数首特征值，并用变分表示证明该函数偶且凹，得到任意凸势的一维 sharp gap。高维部分证明凸势下正第一特征函数 log-concave；再把 p-Laplacian 的 Picone/ground-state remainder 与退化加权 Poincaré 不等式结合，得到 $p\\ge 2$ 的稳定性和 gap 下界。最后分析细长凸域和直径归一化极小序列，证明 p>2 时极小域存在且 p→2 时趋于塌缩。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-14:2608.12381:v1",
-      "text": "论文建立一维带反应项退化扩散方程的压力变量与自由边界正则性理论。压力变换 $v=\\Psi (u)$ 把原方程化成 $v_t=B(v)v_{xx}+h(x,v)$，先用 Bernstein 方法控制 $v_x$，再对方程两次微分并以抛物比较构造线性下障碍，得到 Aronson–Bénilan 型 $v_{xx}$ 下界和 $v_t$ 上界。对等待时间后的自由边界，作者用边界压力渐近、Hopf 型估计和 Darcy 关系证明右边界严格向右、左边界严格向左；在更高结构正则性下，通过边界缩放、Schauder 估计和迭代 barrier 控制所有高阶空间导数，并将这些界延伸到边界运动的高阶正则性。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-14:2608.12952:v1",
-      "text": "论文以 Minkowski functional 和各向异性径向导数 RK 为核心，建立精确的 anisotropic Lp Hardy 与 Caffarelli–Kohn–Nirenberg remainder identities，并刻画 equality/extremal functions。先通过各向异性极坐标公式和 cone measure 将散度积分化为径向积分；再对 $A(r)、\\psi (r)$ 施加加权 vector-field identity，余项 Rp(s,t) 的非负性直接产生 Hardy/CKN 估计。接着用一维单调重排和径向化 uK 比较全梯度与径向导数，得到 sharp anisotropic inequalities；最后在适定参数范围内用等号条件强迫函数径向并满足一阶 ODE，描述所有 extremals，并讨论非原点对称 K 的限制。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-14:2608.12983:v1",
-      "text": "论文研究带两个独立频率参数和速度参数的三分量二次非线性 Schrödinger 系统。通过 Galilean gauge 变换把 traveling solitary waves 约化为带三频率的椭圆系统，并在 Nehari constraint 上定义原始与 zero-mass 变换后的 action。作者用 elliptic regularity、Pohozaev identity 和 coercivity 控制弱解，再以 profile translation 和 Lieb compactness 排除质量逃逸，证明 Theorem 1.4 的 ground state 存在；随后用 Nehari 流不变性与 Pohozaev 界推出若干全局适定性，最后用 action splitting、轨道紧性和 modulation 控制证明 ground-state sets 的 orbital stability。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-14:2608.12815:v1",
-      "text": "论文证明二维和三维 Boussinesq 系统在局部区域、仅控制温度和 N−2 个速度分量时的局部零可控性。核心困难是 Stokes 与 Dirichlet 热方程没有共同的谱分解；作者对伴随 Stokes–heat cascade 只对 Stokes 终端数据做谱截断，先证明混合短时可观测不等式，再利用高频 Stokes 衰减迭代 Lebeau–Robbiano 控制。线性控制估计通过时间分片和小数据固定点/逆映射转移到非线性系统。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-14:2608.13443:v2",
@@ -2659,5 +2636,54 @@
       "lowPriorityReason": null,
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-14:2608.13443:v2",
+        "text": "凸势 Dirichlet p-Laplacian 的 fundamental gap 在 p>2 时存在极小域，并在 p→2 时塌缩"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.12952:v1",
+        "text": "各向异性 Hardy/CKN 不等式获得显式余项、尖锐常数和极值函数"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.12381:v1",
+        "text": "椭圆方程二阶导数的抛物比较给出线性下障碍与正则性估计"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.12815:v1",
+        "text": "Boussinesq 系统在任意非空控制区域局部零可控，二维无需直接控制速度、三维仅需控制一个速度分量。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.13356:v2",
+        "text": "剪切背景下 Vlasov–Poisson–Boltzmann 自相似剖面全局稳定、唯一，并具有空间导数指数衰减。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.12983:v1",
+        "text": "三分量二次非线性 Schrödinger 系统存在基态，并具有全局适定性与轨道稳定性"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.13323:v1",
+        "text": "三维可压缩磁弹性模型存在保持同胚性的能量极小解"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.12744:v1",
+        "text": "固定边界 collar 内构造严格 subsolution 并得到对应存在性结论"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-14:2608.13392:v1",
+        "result": "群上 Taylor 展开含积分余项，并延伸到无限体积 PAM 与奇异初值",
+        "significance": "统一展开覆盖纯空间噪声和超出 Young regime 的情形"
+      },
+      {
+        "analysisId": "math.AP:2026-08-14:2608.13440:v1",
+        "result": "Vlasov–Fokker–Planck 的记忆长度使不稳定模式逐一稳定",
+        "significance": "临界记忆尺度按频率排序抑制不稳定模态"
+      }
+    ]
+  }
 }

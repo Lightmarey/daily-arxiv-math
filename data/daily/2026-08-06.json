@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-06",
   "lastUpdated": "2026-09-11T19:08:47.508Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 6,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-06:2608.04422:v2",
-      "text": "正文把 $\\sigma _k(-D^{2}u)=u^p$ 的全空间可容许解分成次临界、临界和指数临界情形。第2节建立 Newton 张量的删除性质、定量 Newton–Maclaurin 不等式及径向比较工具；第3节把这些工具代入带权截断积分，证明 p−<p<p* 时非负解只能为零；第4节用 Hessian 测度的光滑近似把结论扩展到局部有界弱解。第5–6节构造向量场 J，先由加权通量估计得到 div $J=0$，再由等号结构把 $u^{-2k/(n-2k)}$ 的 Hessian 化为常数倍单位阵，最终得到 Hessian–Sobolev bubble；n>4k 时由第6节的增长估计补上通量条件。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-06:2608.04619:v1",
-      "text": "正文将周期 Camassa–Holm 方程写成输运项加非局部二次项的形式。第2节建立周期 Littlewood–Paley/Triebel–Lizorkin 输运估计、统一局部周期化和嵌套原子；第3节把周期 Green 核沿 degree-one Lagrangian 流比较，得到非局部项的 Lipschitz 控制。第4节用平滑截断、统一寿命、紧性和 Lagrangian Gronwall 证明局部存在、唯一性及连续依赖。第5节用嵌套奇原子保持临界范数有界，却令原点导数趋于负无穷，再结合奇数据波破裂寿命界和临界 Besov 对数估计证明范数膨胀。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-06:2608.04402:v2",
-      "text": "正文研究三维耦合 Vlasov–Hartree 系统在 Coulomb、长程 $1/2<\\alpha <1$ 和短程 $1<\\alpha <2$ 势下的小数据长时行为。第3节以 Galilean 向量场、壳层分解和加权输运估计闭合全局 bootstrap。Coulomb 情形第4节分别构造 Schrödinger 振幅极限、Vlasov 自由输运极限和由极限密度产生的对数相位；长程情形用时间依赖辛变换吸收沿 $x=tv$ 的主导力，再以频率截断相位控制导数损失；短程情形利用可积时间衰减直接得到线性散射。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-06:2608.04908:v1",
-      "text": "正文从小弹性常数下的局部极小 Q-tensor 出发，利用已知紧性得到局部能量最小 harmonic map Q0 进入双轴真空流形 Nb。作者用四元数八重覆盖 $P:S^{3}\\to Nb$ 计算 Frobenius metric 的提升，识别为 rescaled Berger metric；假设奇点存在后，单调性与 blow-up 得到非恒定 harmonic two-sphere $ϕ:S^{2}\\to (S^{3},g4)$ 作为切锥链接。第4节沿 Hopf 方向构造目标特定变分场，证明其面积二次变分严格负；第5节把该不稳定性与切锥稳定性矛盾，排除所有内部点奇点。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-06:2608.04859:v1",
-      "text": "正文是一篇综述性 essay，提出统一研究“极值流”的三步框架：先由能量、谱不等式和正则性得到可实现增长的 rigorous upper bounds；再把增长量在约束下写成变分优化问题并数值求最大器；最后比较最大器是否饱和上界，从而判定 bound sharp 并解释物理机制。作者以 Navier–Stokes/Euler、Burgers、耗散异常和若干简化模型为案例，区分已闭合问题与仍开放的三维奇性/湍流问题，并在末尾讨论约束、离散化和方法改进。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-06:2608.04422:v2",
@@ -2590,5 +2567,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Non-uniqueness of geodesic limits and a question of Grayson and Gage》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04422:v2",
+        "text": "$\\sigma_k(-D^2u)=u^p$ 的全空间可容许解在次临界区只能为零，临界区的非零解恰为显式 Hessian–Sobolev bubble。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04619:v1",
+        "text": "周期 Camassa–Holm 方程在临界 Triebel–Lizorkin/Besov 空间局部适定，临界初值还能产生范数膨胀。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04402:v2",
+        "text": "三维 Vlasov–Hartree 系统跨越 Coulomb 阈值呈现修正散射，长程势产生相位修正，短程势恢复线性散射。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04859:v1",
+        "text": "极端流综述把 rigorous upper bounds、优化和饱和组织成可复用框架，并梳理流体问题中已知的 sharp 情形与开放问题。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04908:v1",
+        "text": "双轴 Landau–de Gennes 局部极小极限不存在内部点缺陷，但允许线缺陷，点缺陷排除依赖 Berger 度量下的变分不稳定性。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04976:v1",
+        "text": "平面 degree 2 和 degree 3 Ginzburg–Landau 涡旋均非退化，Fourier 分块分析还确定了它们的 Morse 指数。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04357:v1",
+        "text": "环面 Schrödinger 方程的实部控制可控子空间等于纯虚驻态的正交补，粗糙乘积时空集下仍由共振 Fourier 模式决定。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04380:v1",
+        "text": "分数阶半经典 Schrödinger 的量子化 $k$ 峰族具有可计算 Morse 指数和局部唯一性，度公式进一步锁定给定集中类中的解。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-06:2608.05077:v2",
+        "result": "点自由定量均匀化框架在抽象算子公理下给出 norm-resolvent 误差，周期谱隙情形恢复 $O(\\epsilon)$ 有效系数误差。",
+        "significance": "误差由微观谱 resolvent 与通量交换子控制；周期谱隙给出 $O(\\epsilon)$ 率，随机速率仍需额外 density-of-states 假设。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-06:2608.04671:v1",
+        "result": "二维外域导数型非线性阻尼波方程对小数据全局存在，时间导数具有 sharp 衰减并趋向扩散型主剖面。",
+        "significance": "导数型非线性在二维外域仍可保持全局扩散行为。"
+      }
+    ]
+  }
 }

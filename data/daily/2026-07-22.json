@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-07-22",
   "lastUpdated": "2026-09-11T16:18:45.487Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 1,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-07-22:2607.19283:v1",
-      "text": "论文解决 ENO–TV 猜想，研究紧支撑单元平均值经 k 阶 ENO 重构后产生的非负源项是否控制相邻跳跃的 k+1 次幂。作者先把局部 FMT 源项精确化为 stencil 差分能量，再在均匀网格上利用 B-spline 稳定性、离散 Gagliardo–Nirenberg 和偶差分能量恒等式证明奇数阶 coercivity；偶数阶则构造多项式核中的长平台反例。随后给出大跳/商空间控制，并将奇数阶结论推广到准均匀网格、刻画非规则网格失败。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-22:2607.19071:v1",
-      "text": "论文研究二维 Boussinesq 方程在仅有水平耗散、接近 hydrostatic balance 时的全球非线性稳定性。对速度和温度的小 $H^k\\cap W^{3,1}$ 初值，作者先利用 Fourier 局部化、各向异性乘积/交换子和线性分数耗散衰减估计控制低频；再对非线性方程做高阶能量估计，将水平耗散、垂直耦合和浮力项组织成可吸收的 bootstrap 不等式；最后由时间积分耗散与低阶 $L^2/L^\\infty $ 衰减闭合 global existence 和趋于 hydrostatic equilibrium 的结论。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-22:2607.18784:v1",
-      "text": "论文研究非散度型变系数热方程在零初值、非恒定 Dirichlet 边界值下的短时行为。作者先用 viscosity/椭圆问题的 Varadhan 公式将边界正值集合 S 的距离编码进 $-\\epsilon log$ $U_\\epsilon $；再通过 Laplace 变换把抛物解的短时指数率转成椭圆解的渐近。由此得到一般非负边界数据的热含量展开，并分析等温/不变曲面：大时间解析性迫使边界数据为常数，进而推出同心球刚性；符号变换时则用正负边界距离和正则集分解证明内部不变曲面不存在。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-22:2607.19091:v1",
-      "text": "论文研究 n≡3 (mod 4) 球面上中间次数 curl 算子的共形 Sobolev 商及其尖锐常数。作者先按 curl 特征空间分解形式并建立一阶特征形式与高阶特征形式的收缩估计；再计算临界流形 M 上的二阶变分，证明标准球面上的每个极小点在切空间正交补方向具有谱隙，从而得到 J1 的局部稳定不等式。随后用负方向扰动证明 M 不是 J2 和另一 Sobolev 商的局部极小集，并在附录讨论新的共形不变量和 $n=3$ 下界。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-22:2607.18487:v1",
-      "text": "论文研究临界 $p=d$ 时，单位球面附近大量小孔洞上的 p-Laplacian 边值问题均匀化。孔洞间距约 $\\epsilon $、直径 $\\alpha (\\epsilon )\\epsilon $ 且在球面上渐近均匀分布，作者以 p-容量构造径向和局部比较函数，先控制单孔贡献及球帽计数，再把离散孔洞的边界条件压缩为球面上的有效 Robin 型通量。最终得到解和梯度在内域的极限，以及临界尺度下容量密度决定的有效边界行为。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-07-22:2607.19283:v1",
@@ -1997,5 +1974,54 @@
       "lowPriorityReason": null,
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-07-22:2607.18784:v1",
+        "text": "非恒定 Dirichlet 数据下的热流短时指数由正边界集合到内点的距离决定，不变曲面在正则条件下只能来自同心球。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.18487:v1",
+        "text": "临界 $p=d$ 的球面孔洞阵列在均匀化后表现为球面上的有效 Robin 通量，并获得解的梯度与能量渐近。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.19071:v1",
+        "text": "二维仅水平耗散的 Boussinesq 方程在 hydrostatic 平衡附近保持小扰动全局稳定，并具有速度与温度衰减率。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.19283:v1",
+        "text": "ENO–TV coercivity 呈现奇偶二分：二阶和奇数阶成立，偶数 $k\\ge4$ 存在精确多项式障碍，奇数阶在准均匀网格上仍稳定。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.19091:v1",
+        "text": "$n\\equiv3\\pmod4$ 的球面 curl–Sobolev 商在第一特征流形附近具有局部稳定性，但该流形不是更高阶商的局部极小集。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.18701:v1",
+        "text": "内圆耗散、外圆无耗散的径向旋流在小周期边界扰动下存在唯一亚音速时间周期解，并具有指数稳定性。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.19052:v1",
+        "text": "部分耦合扩散的反应扩散系统存在旅行波，最小速度由不稳定平衡出发并命中目标流形的射击条件决定。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.19073:v1",
+        "text": "四个半周期奇点的环面球面度量与广义 Lamé 方程的 apparent 参数相对应，临界点类型和退化情形得到分类。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-07-22:2607.19103:v1",
+        "result": "多变量 Mittag–Leffler 函数在 Hankel 轮廓框架下具有积分表示和按复平面扇区区分的完整渐近展开。",
+        "significance": "同一表示统一了多变量特殊函数的解析延拓、主项选择和扇区渐近。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-22:2607.18939:v1",
+        "result": "抽象动理学极限定理把非线性 Fokker–Planck、BGK 和 Boltzmann–Fermi–Dirac 模型统一纳入不可压 Navier–Stokes 极限。",
+        "significance": "碰撞算子只需满足统一的守恒、耗散和振荡控制，避免为每个模型重复谱分析。"
+      }
+    ]
+  }
 }

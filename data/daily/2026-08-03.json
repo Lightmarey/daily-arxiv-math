@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-03",
   "lastUpdated": "2026-09-11T09:58:03.473Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 5,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-03:2607.29318:v2",
-      "text": "正文第1节将问题写成对数拉普拉斯热流的温和方程（1.1）、变参数初值 $\\mu u_{0}$ 和 Duhamel 公式（1.5）。作者先刻画由空间尾部决定的线性寿命 $T_{\\mu ,0}$，再把非线性 f 在零点和无穷远的 Osgood 条件与该寿命比较；正文明确区分非临界尾部与临界尾部，并分别得到提前爆破、满线性寿命和关于 $\\mu $ 的阈值情形。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-03:2607.29379:v1",
-      "text": "正文研究有界域上带分数结构阻尼的半线性波方程，并把 $\\theta \\in [0,1]$ 的摩擦到 Kelvin–Voigt 全尺度统一处理。作者定义能量解、势阱深度 d、能量 E 和 Nehari 泛函 I，分别用一个消去阻尼混合项的凹性泛函给出爆破时间上界，再把耗散通过 Hölder/Young 估计吸收得到下界。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-03:2607.29502:v1",
-      "text": "正文是一篇关于极小子流形空间二分的综述性短文。作者用单调密度、薄 slab 中的体积 doubling、height–excess 估计和 Jacobi 场/频率函数解释：极小子流形要么在空间中以空间填充方式游走，要么被约束并获得定量体积控制；欧氏体积增长对应代数刚性。末节给出主 doubling 定理的证明思路和三个典型曲面实例。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-03:2607.29029:v1",
-      "text": "正文研究带时间依赖阻尼 $\\sigma (t)$ 和饱和容量 h(t) 的 Langmuir 色谱型非自治守恒律系统。通过 v/h、w/h 变换，系统化为两个特征速度分别为 $1/((1+V)^2h(t))$ 和 1/((1+V)h(t)) 的严格双曲系统；作者对双跳扰动 Riemann 数据的七种状态排序逐一跟踪激波、稀疏波、接触间断和 delta shock 的相遇、穿透、分裂与强度演化，证明扰动解在局部 Radon 测度意义下收敛到单跳 Riemann 解。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-03:2607.28733:v1",
-      "text": "这篇 proceedings 方法论文以渐近 Plateau 问题为测试场，讨论在双曲空间 $H^4$ 中用物理信息神经网络构造边界无穷远处给定结的近极小圆盘。正文把核心困难归结为两层：边界条件与已知边界渐近必须嵌入模型结构，以及二阶椭圆残差在训练内外嵌套自动微分中的计算代价。作者给出硬约束模型、二阶 jet 前向传播和一次性图编译的完整实现，并在第 4 节以同一模型、采样点、硬件和双精度比较四条残差流水线；表 1 的编译 2-jet 在 Adam/L-BFGS 批量上分别达到约 49.7 倍/41.7 倍加速，正文还报告生产训练约 40 分钟而基线外推超过一天。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-03:2607.29318:v2",
@@ -2495,5 +2472,54 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《The large mass limit of monopoles: abelian limits and Dirac singularities》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29318:v2",
+        "text": "对数拉普拉斯热方程的寿命按初值尾部分叉；相应 Osgood 条件下小参数可达到线性寿命、大参数提前爆破，阈值结论还需额外的反应项假设。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29502:v1",
+        "text": "极小子流形的空间二分综述以体积增长和 doubling 误差阈值组织刚性结果，并指出薄 slab 中 $O(r^{-2})$ 误差的尖锐性。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29379:v1",
+        "text": "有界域分数结构阻尼半线性波方程具有可计算的爆破时间双侧界，上界和下界对阻尼参数均有明确适用范围。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29029:v1",
+        "text": "Langmuir 型非自治守恒律的双跳扰动在 $\\epsilon\\to0$ 时收敛到单跳 Riemann 解，并覆盖 delta shock 等非经典波相互作用。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.28733:v1",
+        "text": "几何分析 PINN 将边界和正性约束内置于参数化，二阶 jet 与嵌套自动微分一致，并显著加速静态图编译。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29298:v1",
+        "text": "两相混合物模型在周期环面上具有局部强适定性，速度、相场和压力分别获得相应的 Sobolev 时间正则性。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.28988:v1",
+        "text": "凸 $k$-Hessian 方程的凸黏性解满足 $H^{n-1}_{\\mathrm{loc}}(\\mathrm{Sing}(u))=0$，并属于 $W^{2,1}_{\\mathrm{loc}}$。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29332:v2",
+        "text": "带短程势的非紧有限度量图上，$L^2$ 超临界 NLS 对每个质量约束存在正归一化解和正拉格朗日乘子。"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-03:2607.28963:v1",
+        "result": "Klein–Gordon–Schrödinger 系统在非相对论极限下有低、高正则 WKB 近似，误差在指定时间窗内为 $O(\\epsilon^2)$。",
+        "significance": "快速相位振荡的 Schrödinger 主轮廓获得统一的定量收敛率。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-03:2607.29605:v1",
+        "result": "三叉薄裂缝反应输运收敛到 bulk–metric graph 有效问题，并有包含节点层、角层和出流层的复合渐近展开。",
+        "significance": "裂缝角度对高阶校正的影响被显式纳入误差估计。"
+      }
+    ]
+  }
 }

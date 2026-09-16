@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-07-02",
   "lastUpdated": "2026-09-11T19:09:43.309Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 1,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-07-02:2607.00891:v1",
-      "text": "论文研究带表面张力、闭合自由界面的三维不可压理想磁流体力学。作者在一般有界域、不要求图结构、周期性或单连通性的条件下，将先验估计降到 $H^{3}$；通过压力边界估计、辅助能量和反向能量不等式得到包含边界自交、边界正则性、法向速度及内部 MHD 量的有限时间爆破判据；最后在光滑近似域上向后求解并取紧性极限，构造有限时间自由边界自交而速度和磁场仍保持正则的解。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-02:2607.00458:v1",
-      "text": "论文研究 $R^{2}ᵈ$ 上速度变量具有非线性扩散 $\\Psi (f)$、空间变量仅由动理学输运耦合的 kinetic Fokker–Planck 方程。作者把方程写成按 kinetic level $\\zeta $ 参数化的线性 Kolmogorov 方程，以对 $\\Psi '(\\zeta )$ 和 $\\Psi ″(\\zeta )$ 的参数半群导数估计获得各向异性 Besov 正则性；通过正则化、局部紧性和 Aubin–Lions–Simon 极限构造弱解，再在质量守恒阈值下构造 renormalized kinetic solution，最后以 kinetic doubling-of-variables 证明 $L^{1}$ 稳定性和唯一性。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-02:2607.01154:v1",
-      "text": "论文研究二维周期域上 Chern–Simons 系统在共同正则爆破点和完全 bubbling 情形下的两列解。作者先改进局部误差、质量分配、尺度参数和外部展开，证明此前作为假设的 fully bubbling 行为及精确 Pohozaev 关系；再对两列解的差作局部/外部分区估计和归一化极限，利用 Liouville 系统非退化性得到差的渐近控制。最后以局部 Pohozaev 恒等式把常数模态压为零、以爆破点能量函数 Hessian 的非退化性消除位置模态，得到局部唯一性，并对线性化解归一化反证得到非退化性。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-02:2607.00344:v1",
-      "text": "论文建立两组运输计划在路径空间上通过双线性相互作用成本耦合的二人零和极小极大理论。作者先将端点固定的路径成本化为关于路径对的极值问题，证明极小极大计划存在；在紧性、连续性和下半连续性条件下证明 $minimax=maximin$ 并得到 Nash equilibrium transport plan。随后把路径计划投影到端点有效成本，针对二次动能/相互作用成本用最小/最大路径、twist 条件和经典最优输运理论构造 Nash–Monge–Kantorovich 映射，最后给出耦合对偶势和互补松弛表述。"
-    },
-    {
-      "analysisId": "math.AP:2026-07-02:2607.00655:v1",
-      "text": "论文在紧致度量图上建立静态 Schrödinger 问题、熵最优输运和 Kantorovich 最优输运之间的完整联系，并构造动态 Schrödinger 问题。静态部分利用度量图热核的路径和表达及高斯上下界证明熵输运泛函 $\\Gamma $ 收敛到带图距离代价的最优输运；动态部分从 Schrödinger 系统的热半群因子构造连续性方程解，证明静态与动态变分问题等价，并把最小值和极小元的收敛传递到动态侧，最后给出原始-对偶数值算法。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-07-02:2607.00891:v1",
@@ -1589,5 +1566,54 @@
       "lowPriorityReason": null,
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00891:v1",
+        "text": "三维自由边界理想 MHD 可在有限时间发生界面自交而速度磁场保持正则"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.01154:v1",
+        "text": "二维周期 Chern–Simons 完全 bubbling 两列解具有局部唯一性与非退化性"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00458:v1",
+        "text": "非线性 kinetic Fokker–Planck 方程获得 renormalized 解与 L¹ 稳定唯一性"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00344:v1",
+        "text": "双线性路径相互作用运输问题存在 Nash 均衡计划"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00655:v1",
+        "text": "度量图 Schrödinger 问题收敛到 Kantorovich 最优输运且静动态等价"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00225:v1",
+        "text": "Nernst–Planck–Euler/ Navier–Stokes 系统满足耦合能量恒等式与唯一性"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00094:v3",
+        "text": "prescribed contact angle 离散运动方案收敛到唯一 viscosity 解"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.01135:v1",
+        "text": "有界域 Dirichlet 特征值满足 N 项倒数间隙不等式且等号刻画球"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00450:v1",
+        "result": "三维毛细液滴 Euler 常涡量演化满足旋转对称刚性",
+        "significance": "明确常涡量约束对自由边界几何的限制。"
+      },
+      {
+        "analysisId": "math.AP:2026-07-02:2607.00749:v1",
+        "result": "Euler–Maxwell–Two–Fluid 快速极限因共振区别于慢极限",
+        "significance": "说明共振会改变有效电场模型，不能直接套用慢极限。"
+      }
+    ]
+  }
 }

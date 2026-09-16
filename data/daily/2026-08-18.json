@@ -1,5 +1,4 @@
 {
-  "schemaVersion": 3,
   "announcementDate": "2026-08-18",
   "lastUpdated": "2026-09-11T19:08:50.961Z",
   "categories": [
@@ -34,28 +33,6 @@
     "complete": true
   },
   "aiDisclosureCount": 12,
-  "summaryItems": [
-    {
-      "analysisId": "math.AP:2026-08-18:2608.15086:v1",
-      "text": "论文研究三维 L2 临界 Zakharov–Kuznetsov 方程 $u_t+(\\Delta u+|u|^{4/3}u)_x=0$ 的临界动力学。正文先回顾地面态 Pohozaev/缩放恒等式，再作略超临界调制推导，最后用全三维 Fourier 赝谱、积分因子 RK4 和多 GPU 计算扰动地面态、高斯和双峰数据，观察辐射、集中与分散。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-18:2608.16653:v1",
-      "text": "论文证明符号改变的奇异摄动全非线性椭圆方程 $F(D^{2}u_\\epsilon )=\\alpha /\\epsilon ^{2}$ $\\beta (u_\\epsilon /\\epsilon )$ 的尺度最优统一 Lipschitz 估计。正文构造精确一维平面过渡及其斜率图，借曲率测试函数穿过塌缩反应层，再建立弥散版 De Silva–Savin 衰减/线性替代；二分迭代由缓冲 level-boundary seminorm 和 first-passage 大斜率矛盾闭合。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-18:2608.16846:v1",
-      "text": "论文在 Herglotz 变分框架下研究接触型 Hamilton–Jacobi 广义 Hamiltonian gradient flow 的基本解 $h_L$。作者先用最小轨迹的变分结构得到一阶敏感关系，把 $h_L$ 的时空/终点导数联系到 minimizing arc 的对偶动量；再用轨迹二阶变分、Jacobi 场和短时间强制凸性证明局部 semiconcavity/semiconvexity。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-18:2608.15650:v1",
-      "text": "论文发展两种 Brownian optional stopping 方法：相对容量命中概率给出零体积 equilibrium measure 的谱不等式和热可观测性；加权 Feynman–Kac exit moments 给出临界 gauge、频率/倍增和 Remez 控制。后半部分用一阶 exit law 研究特征函数 nodal domains、superlevel components，并以反射 Brownian 与边界 local time 得到 Steklov 边界到 collar 的估计。"
-    },
-    {
-      "analysisId": "math.AP:2026-08-18:2608.16437:v1",
-      "text": "论文证明二维全范围 0<s<1 的平稳分数耗散 Navier–Stokes 中，若 $u\\in Ḣ^s$ 满足自然能量条件，则 u恒为0、压力为常数。按 $s<1/3、s=1/3、s>1/3$ 分三段，分别用方程导出的 $L^{2}$ 界、流函数截断、对流项与分数耗散的尺度平衡。"
-    }
-  ],
   "analyses": [
     {
       "id": "math.AP:2026-08-18:2608.15086:v1",
@@ -3699,5 +3676,56 @@
       "lowPriorityReason": "摘要层面的证据与当前 PDE 阅读偏好关联较弱，论文主要讨论《Characterisation of some multivalued harmonic functions on $\\mathbb{R}^{n}$》。",
       "revisionSummary": null
     }
-  ]
+  ],
+  "schemaVersion": 4,
+  "dailyOverview": {
+    "resultItems": [
+      {
+        "analysisId": "math.AP:2026-08-18:2608.15086:v1",
+        "text": "数值实验显示三维 L² 临界 Zakharov–Kuznetsov 方程的 blow-up 与 soliton 动力学存在不同分支。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.15650:v1",
+        "text": "加权 Feynman–Kac exit moments 控制临界 gauge、频率倍增和 Remez 估计"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16653:v1",
+        "text": "双相奇异摄动全非线性椭圆方程获得与 ε 无关的最优 Lipschitz 估计"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16846:v1",
+        "text": "接触 Hamiltonian 基本解获得定量二阶正则性和短时间 uniform convexity"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16437:v1",
+        "text": "二维 stationary hypodissipative Navier–Stokes 方程满足覆盖全分数阶耗散的 Liouville 定理"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.14904:v1",
+        "text": "曲率几何中的 kinetic Fokker–Planck 方程获得正时间平滑和指数趋于平衡"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16106:v1",
+        "text": "孤立边界奇异半线性椭圆方程出现周期唯一的全局正 bumpy 分支"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16243:v2",
+        "text": "奇异分数阶 p-Laplacian 的梯度 Hölder 正则性覆盖整个 sp>p−1 区间"
+      }
+    ],
+    "noteworthyItems": [
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16655:v1",
+        "result": "排斥 Coulomb 粒子系统向有界密度极限方程的定量 mean-field 收敛得到推进",
+        "significance": "结果把奇异核收敛延伸到仅有有界密度的极限正则性",
+        "text": "将排斥 Coulomb 粒子系统的定量 mean-field 收敛推进到仅有有界密度的极限正则性。"
+      },
+      {
+        "analysisId": "math.AP:2026-08-18:2608.16352:v1",
+        "result": "Heisenberg 群临界问题结合 profile decomposition 获得极值存在性",
+        "significance": "临界嵌入与源项小性共同排除集中缺陷并闭合变分极限",
+        "text": "利用 profile decomposition 与源项小性克服 Heisenberg 临界失紧，并构造多个正解。"
+      }
+    ]
+  }
 }
