@@ -82,9 +82,7 @@ try {
     Invoke-Checked git @('-C', $resolvedWorktree, 'push', 'origin', 'HEAD:daily-content')
     $contentSha = (& git -C $resolvedWorktree rev-parse HEAD).Trim()
     if ($LASTEXITCODE -ne 0) { throw 'Unable to resolve content commit.' }
-    $repoName = (& gh repo view --json nameWithOwner --jq '.nameWithOwner').Trim()
-    if ($LASTEXITCODE -ne 0 -or -not $repoName) { throw 'Unable to resolve GitHub repository.' }
-    Invoke-Checked gh @('api', '--method', 'POST', "repos/$repoName/dispatches", '-f', 'event_type=static-content-updated', '-F', "client_payload[content_sha]=$contentSha")
+    Invoke-Checked gh @('workflow', 'run', 'pages.yml', '--ref', 'main', '-f', "content_sha=$contentSha")
     @{ status = 'pushed'; latestDate = $manifest.latestDate; contentSha = $contentSha } | ConvertTo-Json -Compress
 } finally {
     if ($worktreeAdded) {

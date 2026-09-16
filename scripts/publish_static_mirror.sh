@@ -62,8 +62,5 @@ git -C "$worktree" commit -m "content: mirror ${latest_date}"
 git -C "$worktree" push origin HEAD:daily-content
 content_sha="$(git -C "$worktree" rev-parse HEAD)"
 
-repo_name="$(gh repo view --json nameWithOwner --jq .nameWithOwner)"
-gh api --method POST "repos/${repo_name}/dispatches" \
-  -f event_type=static-content-updated \
-  -F "client_payload[content_sha]=${content_sha}"
+gh workflow run pages.yml --ref main -f "content_sha=${content_sha}"
 echo "{\"status\":\"pushed\",\"latestDate\":\"${latest_date}\",\"contentSha\":\"${content_sha}\"}"
