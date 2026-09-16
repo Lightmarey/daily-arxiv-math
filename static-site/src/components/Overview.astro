@@ -9,6 +9,14 @@ interface Props {
 
 const { day } = Astro.props;
 const reportById = new Map(day.analyses.map((report) => [report.id, report]));
+const topicLabels = [
+  ...new Map(
+    day.analyses.map((report) => [
+      `${report.categoryId}:${report.topicId}`,
+      report.topicLabel,
+    ]),
+  ).values(),
+];
 const compactSummary = (value: string) =>
   (value.match(/[^。！？；]+[。！？；]?/gu) ?? [value])
     .slice(0, 2)
@@ -25,7 +33,10 @@ const compactSummary = (value: string) =>
     </div>
   </header>
   <div class="overview-summary">
-    <p class="overview-label">AI 摘要</p>
+    <p class="overview-lead">
+      当日共收录 {day.coverage.publishedCount} 篇文章，囊括了 {topicLabels.join('、')} 等问题。
+    </p>
+    <p class="overview-label">主要结果</p>
     <ul class="summary-items">
       {
         day.summaryItems.slice(0, 3).map((item) => {

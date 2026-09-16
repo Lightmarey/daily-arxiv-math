@@ -35,23 +35,28 @@ if (filterRoot) {
     if (node && value) node.value = value;
   }
 
+  const topicSelect = field('topic') as HTMLSelectElement | null;
+  const topicGroups = topicSelect
+    ? [...topicSelect.querySelectorAll('optgroup')].map(
+        (group) => group.cloneNode(true) as HTMLOptGroupElement,
+      )
+    : [];
+
   const fieldValue = (name: string): string => field(name)?.value ?? '';
   const syncTopics = () => {
     const category = fieldValue('category');
-    const topic = field('topic') as HTMLSelectElement | null;
-    if (!topic) return;
-    for (const group of topic.querySelectorAll<HTMLOptGroupElement>('optgroup')) {
-      const visible = category === 'all' || group.dataset.category === category;
-      group.disabled = !visible;
-      group.hidden = !visible;
+    if (!topicSelect) return;
+    const selectedValue = topicSelect.value;
+    topicSelect.querySelectorAll('optgroup').forEach((group) => group.remove());
+    for (const group of topicGroups) {
+      if (category === 'all' || group.dataset.category === category)
+        topicSelect.append(group.cloneNode(true));
     }
-    const selected = topic.selectedOptions[0];
-    if (
-      selected?.dataset.category &&
-      category !== 'all' &&
-      selected.dataset.category !== category
+    topicSelect.value = [...topicSelect.options].some(
+      (option) => option.value === selectedValue,
     )
-      topic.value = 'all';
+      ? selectedValue
+      : 'all';
   };
   const applyFilters = () => {
     const values = Object.fromEntries(
@@ -75,9 +80,21 @@ if (filterRoot) {
       paper.hidden = !matches;
       if (matches) visible += 1;
     }
-    for (const link of filterRoot.querySelectorAll<HTMLElement>('[data-toc-paper]')) {
-      const paper = document.getElementById(link.dataset.reportTarget ?? '');
-      link.hidden = !paper || paper.hidden;
+    for (const item of filterRoot.querySelectorAll<HTMLElement>(
+      '[data-toc-paper]',
+    )) {
+      const paper = document.getElementById(item.dataset.reportTarget ?? '');
+      item.hidden = !paper || paper.hidden;
+    }
+    for (const item of filterRoot.querySelectorAll<HTMLElement>(
+      '[data-toc-topic]',
+    )) {
+      item.hidden = !item.querySelector('[data-toc-paper]:not([hidden])');
+    }
+    for (const item of filterRoot.querySelectorAll<HTMLElement>(
+      '[data-toc-category]',
+    )) {
+      item.hidden = !item.querySelector('[data-toc-paper]:not([hidden])');
     }
     for (const group of filterRoot.querySelectorAll<HTMLElement>(
       '[data-group]',
@@ -100,8 +117,7 @@ if (filterRoot) {
         group.dataset.fieldGroup === values.category;
       const total = group.querySelectorAll('[data-paper]').length;
       const count = group.querySelectorAll('[data-paper]:not([hidden])').length;
-      group.hidden =
-        !categoryMatches || (total > 0 ? count === 0 : narrowed);
+      group.hidden = !categoryMatches || (total > 0 ? count === 0 : narrowed);
       const node = group.querySelector<HTMLElement>('[data-field-count]');
       if (node) node.textContent = String(count);
     }
@@ -157,21 +173,47 @@ if (filterRoot) {
 const toc = document.querySelector<HTMLDetailsElement>('[data-toc]');
 if (toc && matchMedia('(max-width: 900px)').matches) toc.open = false;
 
-const themeToggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
+const themeToggle = document.querySelector<HTMLButtonElement>(
+  '[data-theme-toggle]',
+);
+const themeIcon = themeToggle?.querySelector<HTMLElement>('[data-theme-icon]');
 const syncThemeToggle = () => {
   if (!themeToggle) return;
   const dark = document.documentElement.dataset.theme === 'dark';
-  themeToggle.textContent = dark ? '浅色' : '深色';
-  themeToggle.setAttribute('aria-label', dark ? '切换为浅色模式' : '切换为深色模式');
+  if (themeIcon) themeIcon.textContent = dark ? '☀' : '☾';
+  themeToggle.setAttribute(
+    'aria-label',
+    dark ? '切换为浅色模式' : '切换为深色模式',
+  );
+  themeToggle.title = dark ? '切换为浅色模式' : '切换为深色模式';
   themeToggle.setAttribute('aria-pressed', String(dark));
 };
 themeToggle?.addEventListener('click', () => {
-  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  const theme =
+    document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   document.documentElement.dataset.theme = theme;
   localStorage.setItem('theme', theme);
   syncThemeToggle();
 });
 syncThemeToggle();
+
+const siteHeader = document.querySelector<HTMLElement>('.site-header');
+let previousScrollY = scrollY;
+addEventListener(
+  'scroll',
+  () => {
+    if (!siteHeader) return;
+    const currentScrollY = scrollY;
+    if (Math.abs(currentScrollY - previousScrollY) < 6) return;
+    const hidden =
+      currentScrollY > previousScrollY &&
+      currentScrollY > siteHeader.offsetHeight;
+    siteHeader.toggleAttribute('data-scroll-hidden', hidden);
+    siteHeader.inert = hidden;
+    previousScrollY = currentScrollY;
+  },
+  { passive: true },
+);
 
 const chart = document.querySelector<HTMLElement>('[data-chart]');
 const toggle = document.querySelector<HTMLButtonElement>('[data-trend-toggle]');

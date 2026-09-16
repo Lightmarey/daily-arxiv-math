@@ -1,6 +1,7 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import DayPage from '../../components/DayPage.astro';
+import TopControls from '../../components/TopControls.astro';
 import Layout from '../../layouts/Layout.astro';
 import { loadStaticContent } from '../../lib/content';
 
@@ -16,9 +17,9 @@ const { day, manifest, volume } = Astro.props;
 ---
 
 <Layout
-  title={`${day.announcementDate} · ${manifest.config.site.name}`}
+  title={`${day.announcementDate} · Arxiv日报`}
   description={manifest.config.site.description}
-  siteName={manifest.config.site.name}
 >
+  <TopControls slot="header-controls" day={day} manifest={manifest} />
   <DayPage day={day} manifest={manifest} volume={volume} />
 </Layout>

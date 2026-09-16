@@ -6,10 +6,9 @@ import { pathUrl } from '../lib/runtime';
 interface Props {
   title: string;
   description: string;
-  siteName: string;
 }
 
-const { title, description, siteName } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -31,10 +30,11 @@ const { title, description, siteName } = Astro.props;
       })();
     </script>
   </head>
-  <body data-base-path={pathUrl().replace(/\/$/, '')}>
+  <body data-base-path={pathUrl().replace(/\/$/, '')} data-filter-root>
     <header class="site-header">
-      <div>
-        <a class="brand" href={pathUrl()}><i>A.</i><span>{siteName}</span></a>
+      <div class="header-inner">
+        <a class="brand" href={pathUrl()}><i aria-hidden="true">𓅆</i><span>Arxiv日报</span></a>
+        <slot name="header-controls" />
       </div>
     </header>
     <main><slot /></main>

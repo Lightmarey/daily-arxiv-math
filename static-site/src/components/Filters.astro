@@ -16,7 +16,7 @@ const categories = manifest.config.categories.filter((category) =>
     <span>领域</span>
     <select name="category">
       <option value="all">全部领域</option>
-      {categories.map((category) => <option value={category.id}>{category.label}</option>)}
+      {categories.map((category) => <option value={category.id}>{category.id}</option>)}
     </select>
   </label>
   <label>
@@ -25,7 +25,7 @@ const categories = manifest.config.categories.filter((category) =>
       <option value="all">全部主题</option>
       {
         categories.map((category) => (
-          <optgroup label={category.label} data-category={category.id}>
+          <optgroup label={category.id} data-category={category.id}>
             {category.topics.map((topic) => (
               <option value={`${category.id}:${topic.id}`} data-category={category.id}>
                 {topic.label}

@@ -10,29 +10,34 @@ const { day, manifest } = Astro.props;
 const dates = manifest.days.map((entry) => entry.announcementDate);
 ---
 
-<div class="page-topbar">
-  <p class="day-stamp">{day.announcementDate}</p>
-  <div class="top-controls">
-    <label>
-      <span class="visually-hidden">选择日报日期</span>
-      <input
-        type="date"
-        name="date"
-        value={day.announcementDate}
-        min={dates.at(-1)}
-        max={dates[0]}
-        data-date
-      />
-    </label>
-    <label class="top-search">
-      <span class="visually-hidden">搜索当前日报</span>
-      <input
-        type="search"
-        name="q"
-        placeholder="搜索题目、作者或结果"
-        autocomplete="off"
-      />
-    </label>
-    <button type="button" data-theme-toggle>深色</button>
-  </div>
+<div class="top-controls">
+  <label>
+    <span class="visually-hidden">选择日报日期</span>
+    <input
+      type="date"
+      name="date"
+      value={day.announcementDate}
+      min={dates.at(-1)}
+      max={dates[0]}
+      data-date
+    />
+  </label>
+  <label class="top-search">
+    <span class="visually-hidden">搜索当前日报</span>
+    <input
+      type="search"
+      name="q"
+      placeholder="搜索题目、作者或结果"
+      autocomplete="off"
+    />
+  </label>
+  <button
+    type="button"
+    class="theme-toggle"
+    aria-label="切换颜色模式"
+    title="切换颜色模式"
+    data-theme-toggle
+  >
+    <span aria-hidden="true" data-theme-icon>☾</span>
+  </button>
 </div>
