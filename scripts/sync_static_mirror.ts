@@ -13,7 +13,11 @@ import {
 } from '../lib/static-mirror';
 import { parseTrackingConfig, publicConfig } from '../lib/config';
 import type { PaperReport, ReportFeed, VolumePoint } from '../lib/types';
-import { reportBatchV3Schema, type ReportBatchV3 } from '../lib/validation';
+import {
+  assertCrossCategoryPriorityConsistency,
+  reportBatchV3Schema,
+  type ReportBatchV3,
+} from '../lib/validation';
 
 interface Args {
   output: string;
@@ -81,6 +85,7 @@ function feedFromBatches(
   if (!date) throw new Error('At least one batch is required');
   const batchMap = new Map(batches.map((batch) => [batch.categoryId, batch]));
   if (batchMap.size !== batches.length) throw new Error('Duplicate category batch');
+  assertCrossCategoryPriorityConsistency(batches);
   const existingCoverage = new Map(
     existing?.coverage.categories.map((item) => [item.categoryId, item]) ?? [],
   );

@@ -29,6 +29,14 @@ const genericProofLanguage =
   /(?:沿正文主结果的证明段落收束|完成存在性、正则性、稳定性或渐近结论|正文首次出现处|正文中部|正文先建立方程.{0,30}再在主证明章节组合辅助引理|主结果依赖正文中的局部估计和结构性引理|尺度分析、能量或核估计控制误差项)/u;
 const genericFullTextLanguage =
   /(?:结论依赖文中给定的正则性、几何、尺度或小数据假设|未将数值实验或参考文献替代证明)/u;
+const priorityComponentsSchema = z
+  .object({
+    advance: z.number().int().min(0).max(35),
+    method: z.number().int().min(0).max(25),
+    strength: z.number().int().min(0).max(20),
+    fieldValue: z.number().int().min(0).max(20),
+  })
+  .strict();
 
 export const paperReportInputSchema = z
   .object({
@@ -58,6 +66,7 @@ export const paperReportInputSchema = z
     aiStatus: z.enum(['explicit', 'no_disclosure_observed', 'not_checked']),
     aiEvidence: z.string().trim().min(1).max(3000).nullish(),
     aiEvidenceSource: z.string().trim().min(1).max(300).nullish(),
+    priorityComponents: priorityComponentsSchema.optional(),
     priorityScore: z.number().int().min(0).max(100),
     priorityTier: z.enum(['high', 'medium', 'low']),
     priorityReason: z.string().min(1).max(3000),
@@ -65,6 +74,18 @@ export const paperReportInputSchema = z
     revisionSummary: z.string().max(5000).nullish(),
   })
   .superRefine((value, context) => {
+    if (value.priorityComponents) {
+      const componentTotal = Object.values(value.priorityComponents).reduce(
+        (sum, component) => sum + component,
+        0,
+      );
+      if (value.priorityScore !== componentTotal)
+        context.addIssue({
+          code: 'custom',
+          path: ['priorityScore'],
+          message: 'priorityScore must equal priorityComponents',
+        });
+    }
     const expectedTier =
       value.priorityScore >= 75
         ? 'high'
@@ -227,6 +248,8 @@ export const paperReportInputSchema = z
     }
   });
 
+export const archivedPaperReportInputSchema = paperReportInputSchema;
+
 const manifestSchema = z.object({
   newIds: z.array(arxivId).max(2000),
   crossListIds: z.array(arxivId).max(2000),
@@ -258,6 +281,12 @@ export const reportBatchV3Schema = z
     reports: z.array(paperReportInputSchema).max(2500),
   })
   .superRefine((value, context) => {
+    if (value.reports.some((report) => !report.priorityComponents))
+      context.addIssue({
+        code: 'custom',
+        path: ['reports'],
+        message: 'current report batches require priorityComponents',
+      });
     if (value.dailyVolume.announcementDate !== value.announcementDay.date)
       context.addIssue({
         code: 'custom',
@@ -331,6 +360,37 @@ export const reportBatchV3Schema = z
 
 export type ReportBatchV3 = z.infer<typeof reportBatchV3Schema>;
 export type PaperReportInput = z.infer<typeof paperReportInputSchema>;
+
+export function assertCrossCategoryPriorityConsistency(
+  batches: ReportBatchV3[],
+): void {
+  const scores = new Map<
+    string,
+    Pick<
+      PaperReportInput,
+      'categoryId' | 'priorityComponents' | 'priorityScore' | 'priorityTier'
+    >
+  >();
+  for (const report of batches.flatMap((batch) => batch.reports)) {
+    const previous = scores.get(report.arxivId);
+    if (!previous) {
+      scores.set(report.arxivId, report);
+      continue;
+    }
+    const differingFields = [
+      JSON.stringify(previous.priorityComponents) ===
+      JSON.stringify(report.priorityComponents)
+        ? null
+        : 'priorityComponents',
+      previous.priorityScore === report.priorityScore ? null : 'priorityScore',
+      previous.priorityTier === report.priorityTier ? null : 'priorityTier',
+    ].filter(Boolean);
+    if (differingFields.length)
+      throw new Error(
+        `Conflicting priority scoring for ${report.arxivId} across ${previous.categoryId} and ${report.categoryId}: ${differingFields.join(', ')}`,
+      );
+  }
+}
 
 export const volumeHistoryV2Schema = z
   .object({

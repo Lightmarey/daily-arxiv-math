@@ -197,6 +197,7 @@ class BuildCompleteReportTests(unittest.TestCase):
         self.assertEqual(batch["run"]["runId"], "slot-1")
         self.assertEqual(batch["run"]["scheduledFor"], "2026-09-04T13:30:00+08:00")
         self.assertEqual(report["aiStatus"], "not_checked")
+        self.assertEqual(report["priorityComponents"], analyses["2609.00001"]["priorityComponents"])
         self.assertEqual(
             report["proofOutline"], {"status": "not_reviewed", "steps": []}
         )

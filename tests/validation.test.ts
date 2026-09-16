@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import {
+  archivedPaperReportInputSchema,
+  assertCrossCategoryPriorityConsistency,
   paperReportInputSchema,
   reportBatchV3Schema,
   volumeHistoryV2Schema,
@@ -9,6 +11,28 @@ import { batch } from './helpers';
 const valid = batch();
 assert.equal(reportBatchV3Schema.safeParse(valid).success, true);
 const baseReport = valid.reports[0];
+const { priorityComponents: _priorityComponents, ...archivedReport } = baseReport;
+assert.equal(
+  archivedPaperReportInputSchema.safeParse(archivedReport).success,
+  true,
+  'archived static reports may predate component scoring',
+);
+assert.equal(
+  reportBatchV3Schema.safeParse({
+    ...valid,
+    reports: [archivedReport],
+  }).success,
+  false,
+  'new report batches require priority components',
+);
+assert.equal(
+  paperReportInputSchema.safeParse({
+    ...baseReport,
+    priorityScore: baseReport.priorityScore - 1,
+  }).success,
+  false,
+  'priorityScore equals the persisted component total',
+);
 assert.equal(
   paperReportInputSchema.safeParse({
     ...baseReport,
@@ -227,6 +251,25 @@ const cross = batch('math.AP', '2609.00002');
 cross.sourceManifest = { newIds: [], crossListIds: ['2609.00002'] };
 cross.reports[0].entryKind = 'cross_list';
 assert.equal(reportBatchV3Schema.safeParse(cross).success, true);
+const crossCategory = batch('cs.LG', '2609.00001');
+assert.doesNotThrow(() =>
+  assertCrossCategoryPriorityConsistency([valid, crossCategory]),
+);
+const conflictingComponents = structuredClone(crossCategory);
+conflictingComponents.reports[0].priorityComponents!.advance -= 1;
+conflictingComponents.reports[0].priorityComponents!.method += 1;
+assert.throws(
+  () => assertCrossCategoryPriorityConsistency([valid, conflictingComponents]),
+  /Conflicting priority scoring for 2609\.00001.*priorityComponents/,
+);
+const conflictingScore = structuredClone(crossCategory);
+conflictingScore.reports[0].priorityComponents!.advance -= 10;
+conflictingScore.reports[0].priorityScore = 70;
+conflictingScore.reports[0].priorityTier = 'medium';
+assert.throws(
+  () => assertCrossCategoryPriorityConsistency([valid, conflictingScore]),
+  /priorityComponents, priorityScore, priorityTier/,
+);
 assert.equal(
   reportBatchV3Schema.safeParse({
     ...cross,

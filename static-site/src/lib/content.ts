@@ -9,7 +9,7 @@ import {
   type StaticMirrorManifestV4,
   type StaticVolumeV4,
 } from '../../../lib/static-mirror';
-import { paperReportInputSchema } from '../../../lib/validation';
+import { archivedPaperReportInputSchema } from '../../../lib/validation';
 import { contentRoot } from './runtime';
 
 export interface StaticContent {
@@ -54,7 +54,7 @@ function validateContent(content: StaticContent): void {
     )
       throw new Error(`Manifest mismatch for ${day.announcementDate}`);
     for (const report of day.analyses) {
-      if (!paperReportInputSchema.safeParse(report).success) {
+      if (!archivedPaperReportInputSchema.safeParse(report).success) {
         throw new Error(
           `Invalid report ${report.arxivId} on ${day.announcementDate}`,
         );

@@ -1,6 +1,13 @@
 export type AiStatus = 'explicit' | 'no_disclosure_observed' | 'not_checked';
 export type PriorityTier = 'high' | 'medium' | 'low';
 
+export interface PriorityComponents {
+  advance: number;
+  method: number;
+  strength: number;
+  fieldValue: number;
+}
+
 export interface ProofOutlineStep {
   claim: string;
   route: string;
@@ -60,6 +67,7 @@ export interface PaperReport {
   aiStatus: AiStatus;
   aiEvidence?: string | null;
   aiEvidenceSource?: string | null;
+  priorityComponents?: PriorityComponents;
   priorityScore: number;
   priorityTier: PriorityTier;
   priorityReason: string;

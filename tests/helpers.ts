@@ -71,6 +71,12 @@ export function reportInput(
     analysisDepth: 'abstract',
     proofOutline: { status: 'not_reviewed', steps: [] },
     aiStatus: 'not_checked',
+    priorityComponents: {
+      advance: 29,
+      method: 20,
+      strength: 16,
+      fieldValue: 15,
+    },
     priorityScore: 80,
     priorityTier: 'high',
     priorityReason: 'Relevant.',
