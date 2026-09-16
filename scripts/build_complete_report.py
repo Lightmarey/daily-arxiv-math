@@ -21,6 +21,12 @@ BARE_MATH_PATTERN = re.compile(
     r"[Α-Ωα-ω≤≥≪≫∞∂∇∆ΔΣΠ√∈∉→↦×²³⁴⁵⁶⁷⁸⁹⁰₀-₉=<>^_]"
     r"|\\[A-Za-z]+|\b[OCHWLSTNR]\s*(?:\d|\()|\b(?:exp|det)\s*\("
 )
+PRIORITY_COMPONENT_LIMITS = {
+    "advance": 35,
+    "method": 25,
+    "strength": 20,
+    "fieldValue": 20,
+}
 
 def _outside_math(text: str) -> str:
     output = []
@@ -75,6 +81,30 @@ def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
             if len(str(step.get("evidence", "")).strip()) < 8:
                 raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow evidence locator")
 
+def _validate_priority_score(arxiv_id: str, analysis: dict) -> int:
+    components = analysis.get("priorityComponents")
+    if not isinstance(components, dict) or set(components) != set(PRIORITY_COMPONENT_LIMITS):
+        raise ValueError(f"Analysis {arxiv_id} needs all four priorityComponents")
+    for name, maximum in PRIORITY_COMPONENT_LIMITS.items():
+        value = components[name]
+        if isinstance(value, bool) or not isinstance(value, int) or not 0 <= value <= maximum:
+            raise ValueError(f"Analysis {arxiv_id} has invalid priority component {name}")
+    score = sum(components.values())
+    if analysis.get("priorityScore") != score:
+        raise ValueError(f"Analysis {arxiv_id} priorityScore must equal priorityComponents")
+    if components["advance"] <= 12 and score > 64:
+        raise ValueError(f"Analysis {arxiv_id} with routine advance cannot score above 64")
+    if analysis.get("analysisDepth", "abstract") == "abstract":
+        if components["method"] > 16 or components["strength"] > 16 or score > 79:
+            raise ValueError(f"Analysis {arxiv_id} abstract-only priority exceeds its provisional cap")
+    if score >= 90 and (
+        components["advance"] < 30
+        or components["method"] < 18
+        or components["strength"] < 16
+    ):
+        raise ValueError(f"Analysis {arxiv_id} does not meet the 90-point minimum components")
+    return score
+
 def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: str, config: dict, now: str | None = None, run_id: str | None = None, scheduled_for: str | None = None, started_at: str | None = None) -> dict:
     version = config_version(config)
     if source.get("configVersion") != version: raise ValueError("Source configVersion is stale")
@@ -90,7 +120,7 @@ def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: s
         _validate_analysis_text(arxiv_id, analysis)
         _validate_analysis_quality(arxiv_id, analysis)
         if topic_id not in topic_labels: raise ValueError(f"Unknown topicId {topic_id} for {category_id}")
-        score = int(analysis["priorityScore"]); tier = "high" if score >= 75 else "medium" if score >= 50 else "low"
+        score = _validate_priority_score(arxiv_id, analysis); tier = "high" if score >= 75 else "medium" if score >= 50 else "low"
         report = {"categoryId": category_id, "announcementDate": source["announcementDate"], "arxivId": arxiv_id, "version": paper["version"], "entryKind": "new" if arxiv_id in new_ids else "cross_list", "title": paper["title"], "authors": paper["authors"], "abstract": paper["abstract"], "categories": paper["categories"], "primaryCategory": paper["primaryCategory"], "arxivUrl": paper["arxivUrl"], "pdfUrl": paper["pdfUrl"], "submittedAt": paper["submittedAt"], "updatedAt": paper["updatedAt"], "topicId": topic_id, "topicLabel": topic_labels[topic_id], "progressType": analysis["progressType"], "workSummary": analysis["workSummary"], "techniques": analysis["techniques"], "breakthrough": analysis["breakthrough"], "limitations": analysis["limitations"], "analysisDepth": analysis.get("analysisDepth", "abstract"), "proofOutline": analysis.get("proofOutline", {"status": "not_reviewed", "steps": []}), "aiStatus": analysis.get("aiStatus", "not_checked"), "aiEvidence": analysis.get("aiEvidence"), "aiEvidenceSource": analysis.get("aiEvidenceSource"), "priorityScore": score, "priorityTier": tier, "priorityReason": analysis.get("priorityReason", f"按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 {score}/100。"), "lowPriorityReason": analysis.get("lowPriorityReason"), "revisionSummary": analysis.get("revisionSummary")}
         if tier == "low" and not report["lowPriorityReason"]: raise ValueError(f"Low-priority report {arxiv_id} needs lowPriorityReason")
         reports.append(report)

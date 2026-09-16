@@ -3,11 +3,58 @@ import unittest
 from build_complete_report import (
     _validate_analysis_quality,
     _validate_analysis_text,
+    _validate_priority_score,
     build_batch,
 )
 
 
 class BuildCompleteReportTests(unittest.TestCase):
+    def test_priority_score_uses_the_four_component_rubric(self):
+        analysis = {
+            "analysisDepth": "full_text_sections",
+            "priorityComponents": {
+                "advance": 24,
+                "method": 20,
+                "strength": 17,
+                "fieldValue": 15,
+            },
+            "priorityScore": 76,
+        }
+        self.assertEqual(_validate_priority_score("2609.00001", analysis), 76)
+
+        invalid = [
+            ({**analysis, "priorityScore": 75}, "must equal"),
+            (
+                {
+                    "analysisDepth": "abstract",
+                    "priorityComponents": {
+                        "advance": 29,
+                        "method": 16,
+                        "strength": 16,
+                        "fieldValue": 19,
+                    },
+                    "priorityScore": 80,
+                },
+                "provisional cap",
+            ),
+            (
+                {
+                    "analysisDepth": "full_text_sections",
+                    "priorityComponents": {
+                        "advance": 12,
+                        "method": 20,
+                        "strength": 18,
+                        "fieldValue": 15,
+                    },
+                    "priorityScore": 65,
+                },
+                "routine advance",
+            ),
+        ]
+        for value, message in invalid:
+            with self.subTest(message=message), self.assertRaisesRegex(ValueError, message):
+                _validate_priority_score("2609.00002", value)
+
     def test_rejects_shallow_analysis_before_publication(self):
         with self.assertRaisesRegex(ValueError, "shallow workSummary"):
             _validate_analysis_quality(
@@ -126,6 +173,12 @@ class BuildCompleteReportTests(unittest.TestCase):
                 "breakthrough": "结果把已有的局部构造推进到包含存在、唯一、稳定性和逼近收敛的统一框架，并明确给出控制解范数与初值扰动传播的定量估计。相较只证明短时解或只处理光滑数据的结果，这套论证能够覆盖更宽的能量型初值，并为后续研究长时间行为提供可复用的紧性与稳定性工具。",
                 "limitations": "结论仍限于能量次临界指数、指定边界条件和定理列出的正则初值空间，关键先验界也依赖这些结构。临界指数、低于能量空间的粗糙数据、不同边界条件以及可能出现的有限时奇性均不在当前定理覆盖范围内；文章也没有给出临界阈值附近的散射或爆破解析。",
                 "priorityScore": 60,
+                "priorityComponents": {
+                    "advance": 18,
+                    "method": 16,
+                    "strength": 14,
+                    "fieldValue": 12,
+                },
                 "priorityReason": "问题与非线性偏微分方程适定性直接相关，结果给出可复用的能量和紧性框架，但摘要没有显示它解决了临界情形或引入全新的核心机制。",
             }
         }
