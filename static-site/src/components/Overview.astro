@@ -22,6 +22,8 @@ const reportFor = (analysisId: string) => {
   if (!report) throw new Error(`Missing overview report ${analysisId}`);
   return report;
 };
+const overviewText = (value: string) =>
+  value.trim().replace(/[。；;，,、]+$/u, '');
 ---
 
 <section class="overview" id="overview">
@@ -60,7 +62,7 @@ const reportFor = (analysisId: string) => {
             <>
               {index > 0 && '、'}
               <a href={`#${reportAnchor(report)}`} data-overview-result-link>
-                <MathText value={item.text} inline />
+                <MathText value={overviewText(item.text)} inline />
               </a>
             </>
           );
@@ -79,10 +81,10 @@ const reportFor = (analysisId: string) => {
                   {index > 0 && '；此外，'}
                   {abstractOnly && '论文声称'}
                   <a href={`#${reportAnchor(report)}`} data-overview-noteworthy-link>
-                    <MathText value={item.result} inline />
+                    <MathText value={overviewText(item.result)} inline />
                   </a>
                   ；{abstractOnly && '若成立，'}
-                  <MathText value={item.significance} inline />
+                  <MathText value={overviewText(item.significance)} inline />
                 </>
               );
             })
