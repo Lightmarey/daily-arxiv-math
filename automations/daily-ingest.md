@@ -13,10 +13,11 @@
 
 1. 运行一次 `scripts/arxiv_listing.py --date <date>`，让它按 `fetchCategories` 生成同一个多分类 manifest。只把官方 New submissions 与 Cross-lists 计入，Replacements 不计入。
 2. 把这个多分类 manifest 传给 `scripts/arxiv_fetch.py --manifest`，对全部分类的 ID 并集获取一次元数据；校验 `expectedIds` 与元数据完整一致。
-3. 先对全部论文完成基于标题和摘要的分类分析，按分类分成不超过 25 篇的独立 subagent 批次并持久化分片；同一论文跨分类时分别使用各分类主题分析。不得为每篇论文单独启动一个 subagent。
-4. 摘要初筛后，最多选择当日 6 篇高优先级论文补读 HTML/PDF 正文并补全可复查证明大纲。正文不可得不阻断日报，保留 `analysisDepth=abstract`、`proofOutline.status=not_reviewed`；不得根据摘要编造证明步骤或作者 AI 披露。
-5. 每个分类用 `scripts/build_complete_report.py --category <id>` 生成独立 `ReportBatchV3`。`expected`、`fetched`、`analyzed` 必须完全一致；低优先级必须有具体靠后理由。
-6. 汇总同日全部分类，生成符合 `docs/daily-overview.schema.json` 的总览：通常 8 个带论文引用的具体结果和 2 个值得关注项。只写问题、结果、方法与意义，不写抓取、阅读、模型或防御性说明；数学表达式使用 LaTeX。
+3. 标题和摘要只用于初筛、主题分类与安排正文读取顺序，不是最终分析。按去重后的论文分成每批不超过 4 篇的数学分析 subagent，逐篇读取可用的 arXiv HTML 或 PDF 正文并持久化一篇一份的结果；同一论文跨分类时正文证据只读取一次，再分别生成各分类的主题与优先级判断。不得设置“每天只读若干篇正文”的上限。
+4. 每篇论文必须给出有信息密度的完整分析：`workSummary` 用 2–4 句覆盖研究问题、关键假设和全部主要结果；`techniques` 给出 3–6 项论文特有的方法，并说明各自在论证中的作用；`breakthrough` 与 `limitations` 分别说明相对已有工作的推进及结论边界。不能用标题改写、摘要逐句翻译、通用方法名或短句占位。
+5. 有定理证明结构的论文必须生成 `reviewed` 证明大纲，通常 2–6 步；每步分别写清 claim、关键估计/构造如何推进到下一步的 route，以及节、定理、引理、公式或 PDF 页码 evidence。综述、纯数值或没有可辨认定理证明结构的正文才可使用 `not_applicable`。只有 HTML/PDF 确实不可得时才允许 `analysisDepth=abstract`、`proofOutline.status=not_reviewed`，并在运行分片中记录失败 URL 与错误；不得根据摘要编造证明步骤或作者 AI 披露。
+6. 每个分析分片完成后交给独立 proof-verifier subagent 核对主结果、证明路线和 evidence 是否与正文相符；不一致的逐篇退回重做。随后每个分类用 `scripts/build_complete_report.py --category <id>` 生成独立 `ReportBatchV3`。`expected`、`fetched`、`analyzed` 必须完全一致；低优先级必须有具体靠后理由。构建器的逐篇质量门槛失败时必须退回对应分片重做，不得为了覆盖率缩短内容或降级正文分析。
+7. 汇总同日全部分类，生成符合 `docs/daily-overview.schema.json` 的总览：通常 8 个带论文引用的具体结果和 2 个值得关注项。只写问题、结果、方法与意义，不写抓取、阅读、模型或防御性说明；数学表达式使用 LaTeX。
 
 分析字段使用简体中文，标题、作者和英文摘要保留原文。`explicit` 只用于作者明确披露 AI 使用；没有检查时使用 `not_checked`。
 

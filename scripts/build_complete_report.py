@@ -48,6 +48,33 @@ def _validate_analysis_text(arxiv_id: str, analysis: dict) -> None:
     if BARE_MATH_PATTERN.search(outside_math):
         raise ValueError(f"Analysis {arxiv_id} contains math outside LaTeX delimiters")
 
+def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
+    minimum_lengths = {
+        "workSummary": 80,
+        "breakthrough": 60,
+        "limitations": 60,
+        "priorityReason": 40,
+    }
+    for field, minimum in minimum_lengths.items():
+        value = str(analysis.get(field, "")).strip()
+        if len(value) < minimum:
+            raise ValueError(f"Analysis {arxiv_id} has shallow {field}: minimum {minimum} characters")
+    techniques = analysis.get("techniques", [])
+    if len(techniques) < 3 or any(len(str(item).strip()) < 8 for item in techniques):
+        raise ValueError(f"Analysis {arxiv_id} needs at least three paper-specific techniques")
+    outline = analysis.get("proofOutline", {"status": "not_reviewed", "steps": []})
+    if outline.get("status") == "reviewed":
+        steps = outline.get("steps", [])
+        if not 2 <= len(steps) <= 6:
+            raise ValueError(f"Analysis {arxiv_id} needs 2-6 reviewed proof steps")
+        for index, step in enumerate(steps):
+            if len(str(step.get("claim", "")).strip()) < 20:
+                raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow claim")
+            if len(str(step.get("route", "")).strip()) < 60:
+                raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow route")
+            if len(str(step.get("evidence", "")).strip()) < 8:
+                raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow evidence locator")
+
 def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: str, config: dict, now: str | None = None, run_id: str | None = None, scheduled_for: str | None = None, started_at: str | None = None) -> dict:
     version = config_version(config)
     if source.get("configVersion") != version: raise ValueError("Source configVersion is stale")
@@ -61,6 +88,7 @@ def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: s
     for arxiv_id in manifest["expectedIds"]:
         paper, analysis = papers[arxiv_id], category_analyses[arxiv_id]; topic_id = analysis["topicId"]
         _validate_analysis_text(arxiv_id, analysis)
+        _validate_analysis_quality(arxiv_id, analysis)
         if topic_id not in topic_labels: raise ValueError(f"Unknown topicId {topic_id} for {category_id}")
         score = int(analysis["priorityScore"]); tier = "high" if score >= 75 else "medium" if score >= 50 else "low"
         report = {"categoryId": category_id, "announcementDate": source["announcementDate"], "arxivId": arxiv_id, "version": paper["version"], "entryKind": "new" if arxiv_id in new_ids else "cross_list", "title": paper["title"], "authors": paper["authors"], "abstract": paper["abstract"], "categories": paper["categories"], "primaryCategory": paper["primaryCategory"], "arxivUrl": paper["arxivUrl"], "pdfUrl": paper["pdfUrl"], "submittedAt": paper["submittedAt"], "updatedAt": paper["updatedAt"], "topicId": topic_id, "topicLabel": topic_labels[topic_id], "progressType": analysis["progressType"], "workSummary": analysis["workSummary"], "techniques": analysis["techniques"], "breakthrough": analysis["breakthrough"], "limitations": analysis["limitations"], "analysisDepth": analysis.get("analysisDepth", "abstract"), "proofOutline": analysis.get("proofOutline", {"status": "not_reviewed", "steps": []}), "aiStatus": analysis.get("aiStatus", "not_checked"), "aiEvidence": analysis.get("aiEvidence"), "aiEvidenceSource": analysis.get("aiEvidenceSource"), "priorityScore": score, "priorityTier": tier, "priorityReason": analysis.get("priorityReason", f"按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 {score}/100。"), "lowPriorityReason": analysis.get("lowPriorityReason"), "revisionSummary": analysis.get("revisionSummary")}

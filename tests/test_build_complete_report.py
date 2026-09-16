@@ -1,9 +1,26 @@
 import unittest
 
-from build_complete_report import _validate_analysis_text, build_batch
+from build_complete_report import (
+    _validate_analysis_quality,
+    _validate_analysis_text,
+    build_batch,
+)
 
 
 class BuildCompleteReportTests(unittest.TestCase):
+    def test_rejects_shallow_analysis_before_publication(self):
+        with self.assertRaisesRegex(ValueError, "shallow workSummary"):
+            _validate_analysis_quality(
+                "2609.00001",
+                {
+                    "workSummary": "得到一个存在性结论。",
+                    "techniques": ["能量估计"],
+                    "breakthrough": "有新结果。",
+                    "limitations": "有假设。",
+                    "priorityReason": "相关。",
+                },
+            )
+
     def test_rejects_process_narration_in_display_fields(self):
         with self.assertRaisesRegex(ValueError, "forbidden display prose"):
             _validate_analysis_text(
@@ -100,11 +117,16 @@ class BuildCompleteReportTests(unittest.TestCase):
             "2609.00001": {
                 "topicId": "other",
                 "progressType": "新结果",
-                "workSummary": "摘要分析",
-                "techniques": [],
-                "breakthrough": "摘要分析",
-                "limitations": "结论限于能量次临界指数范围。",
+                "workSummary": "论文研究一个非线性演化方程的初边值问题，在给定能量空间与次临界指数条件下建立弱解存在性，并给出解对初值的连续依赖、先验控制以及适用参数范围；这些结论共同描述了模型的基本适定性。",
+                "techniques": [
+                    "能量测试用于建立时间一致的先验界",
+                    "紧性方法用于从逼近解中提取收敛子列",
+                    "稳定性估计用于控制两组解之间的差异",
+                ],
+                "breakthrough": "结果把已有的局部构造推进到完整的弱解存在性与稳定性框架，并明确给出控制解范数的定量估计，从而能够处理一类此前缺少统一适定性结论的初值数据。",
+                "limitations": "结论仍限于能量次临界指数、指定边界条件和摘要列出的正则初值空间；临界指数、粗糙数据及可能出现的有限时奇性不在当前定理覆盖范围内。",
                 "priorityScore": 60,
+                "priorityReason": "问题与非线性偏微分方程适定性直接相关，结果给出可复用的能量和紧性框架，但摘要没有显示它解决了临界情形或引入全新的核心机制。",
             }
         }
         batch = build_batch(
