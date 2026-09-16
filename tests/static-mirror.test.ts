@@ -7,10 +7,16 @@ import {
   STATIC_MIRROR_SCHEMA_VERSION,
   buildStaticDay,
   buildStaticVolume,
+  canonicalDailyReports,
+  dailyTopicCounts,
   normalizeStaticReport,
-  type StaticMirrorManifestV3,
+  parseStaticOverviewSidecar,
+  validateStaticDay,
+  type StaticDailyOverview,
+  type StaticMirrorManifestV4,
 } from '../lib/static-mirror';
 import { buildStaticPages } from '../scripts/build_static_pages';
+import { migrateStaticMirrorV4 } from '../scripts/migrate_static_mirror_v4';
 import { configVersion } from '../lib/config';
 import {
   batch,
@@ -37,7 +43,9 @@ const sharedAp = storedReport('math.AP', '2609.00001', {
     ],
   },
 });
-const sharedLg = storedReport('cs.LG', '2609.00001');
+const sharedLg = storedReport('cs.LG', '2609.00001', {
+  primaryCategory: 'math.AP',
+});
 const sharedApSecond = storedReport('math.AP', '2609.00002', {
   workSummary: '第三篇论文的完整结果简述。',
 });
@@ -67,6 +75,23 @@ const feed = {
     },
   ],
   reports: [sharedAp, sharedLg, sharedApSecond, sharedLgSecond],
+};
+const overview: StaticDailyOverview = {
+  resultItems: [
+    { analysisId: sharedApSecond.id, text: '构造第二个模型的整体解' },
+  ],
+  noteworthyItems: [
+    {
+      analysisId: sharedLgSecond.id,
+      result: '给出此前未知的临界估计',
+      significance: '该估计可能关闭一个公开问题',
+    },
+    {
+      analysisId: sharedAp.id,
+      result: '建立测试方程的稳定性结论',
+      significance: '正文证明给出了完整的闭合论证',
+    },
+  ],
 };
 assert.deepEqual(
   normalizeStaticReport({
@@ -100,9 +125,97 @@ assert.equal(
   }).workSummary,
   '这里是结果。',
 );
-const day = buildStaticDay(feed, testPublicConfig);
+const day = buildStaticDay(feed, testPublicConfig, overview);
 assert.equal(day.analyses.length, 4, 'all category analyses remain available');
-assert.equal(day.summaryItems.length, 4, 'summary links representative analyses');
+assert.equal(
+  canonicalDailyReports(day.analyses).length,
+  3,
+  'cross-lists count once',
+);
+assert.deepEqual(
+  dailyTopicCounts(day.analyses, testPublicConfig),
+  [
+    {
+      categoryId: 'math.AP',
+      topics: [{ id: 'other', label: 'Other analysis', count: 2 }],
+    },
+    {
+      categoryId: 'cs.LG',
+      topics: [{ id: 'other', label: 'Other learning', count: 1 }],
+    },
+  ],
+  'topic counts use canonical reports and configured category order',
+);
+assert.ok(!('summaryItems' in day), 'schema v4 removes summaryItems');
+assert.throws(
+  () =>
+    validateStaticDay({
+      ...day,
+      dailyOverview: {
+        resultItems: [{ analysisId: sharedAp.id, text: '第一项结果' }],
+        noteworthyItems: [
+          {
+            analysisId: sharedLg.id,
+            result: '重复论文结果',
+            significance: '重复论文意义',
+          },
+        ],
+      },
+    }),
+  /Duplicate overview paper/,
+  'overview references one arXiv paper at most once across both sections',
+);
+assert.throws(
+  () =>
+    parseStaticOverviewSidecar({
+      announcementDate: feed.date,
+      resultItems: Array.from({ length: 13 }, (_, index) => ({
+        analysisId: `analysis-${index}`,
+        text: '结果',
+      })),
+      noteworthyItems: [],
+    }),
+  /Invalid daily overview sidecar/,
+);
+assert.throws(
+  () =>
+    parseStaticOverviewSidecar({
+      announcementDate: feed.date,
+      resultItems: [{ analysisId: sharedAp.id, text: '过'.repeat(121) }],
+      noteworthyItems: [],
+    }),
+  /Invalid daily overview result item/,
+);
+assert.throws(
+  () =>
+    parseStaticOverviewSidecar({
+      announcementDate: feed.date,
+      resultItems: [{ analysisId: sharedAp.id, text: '结果' }],
+      noteworthyItems: [
+        {
+          analysisId: sharedLgSecond.id,
+          result: '长'.repeat(141),
+          significance: '意义',
+        },
+      ],
+    }),
+  /Invalid daily overview noteworthy item/,
+);
+assert.throws(
+  () =>
+    parseStaticOverviewSidecar({
+      announcementDate: feed.date,
+      resultItems: [{ analysisId: sharedAp.id, text: '结果' }],
+      noteworthyItems: [
+        {
+          analysisId: sharedLgSecond.id,
+          result: '值得关注的结果',
+          significance: '长'.repeat(121),
+        },
+      ],
+    }),
+  /Invalid daily overview noteworthy item/,
+);
 const stoppedCategoryDay = buildStaticDay(
   {
     ...feed,
@@ -121,6 +234,13 @@ const stoppedCategoryDay = buildStaticDay(
     ],
   },
   testPublicConfig,
+  {
+    resultItems: [
+      { analysisId: sharedLg.id, text: '得到第一项结果' },
+      { analysisId: sharedLgSecond.id, text: '得到第二项结果' },
+    ],
+    noteworthyItems: [],
+  },
 );
 assert.equal(
   stoppedCategoryDay.coverage.complete,
@@ -131,6 +251,7 @@ assert.throws(() =>
   buildStaticDay(
     { ...feed, coverage: feed.coverage.slice(0, 1) },
     testPublicConfig,
+    overview,
   ),
 );
 const offlineRoot = await mkdtemp(join(tmpdir(), 'stopped-category-sync-'));
@@ -145,6 +266,10 @@ const oldDay = buildStaticDay(
     reports: [sharedAp, sharedApSecond],
   },
   oldConfig,
+  {
+    resultItems: overview.resultItems.slice(0, 2),
+    noteworthyItems: [],
+  },
 );
 await mkdir(join(offlineRoot, 'mirror/data/daily'), { recursive: true });
 await writeFile(
@@ -191,8 +316,36 @@ const nextDayBatch = batch('cs.LG', '2609.00004', {
 const stoppedConfigPath = join(offlineRoot, 'config.json');
 const nextDayBatchPath = join(offlineRoot, 'batch.json');
 const nextDayVolumePath = join(offlineRoot, 'volume.json');
+const nextDayOverviewPath = join(offlineRoot, 'overview.json');
+const wrongDayOverviewPath = join(offlineRoot, 'wrong-overview.json');
 await writeFile(stoppedConfigPath, JSON.stringify(stoppedConfig));
 await writeFile(nextDayBatchPath, JSON.stringify(nextDayBatch));
+await writeFile(
+  nextDayOverviewPath,
+  JSON.stringify({
+    announcementDate: '2026-09-05',
+    resultItems: [
+      {
+        analysisId: 'cs.LG:2026-09-05:2609.00004:v1',
+        text: '证明新模型的稳定性',
+      },
+    ],
+    noteworthyItems: [],
+  }),
+);
+await writeFile(
+  wrongDayOverviewPath,
+  JSON.stringify({
+    announcementDate: '2026-09-06',
+    resultItems: [
+      {
+        analysisId: 'cs.LG:2026-09-05:2609.00004:v1',
+        text: '证明新模型的稳定性',
+      },
+    ],
+    noteworthyItems: [],
+  }),
+);
 await writeFile(
   nextDayVolumePath,
   JSON.stringify({
@@ -203,6 +356,44 @@ await writeFile(
       },
     ],
   }),
+);
+assert.throws(() =>
+  execFileSync(
+    process.execPath,
+    [
+      'node_modules/tsx/dist/cli.mjs',
+      'scripts/sync_static_mirror.ts',
+      '--output',
+      join(offlineRoot, 'mirror'),
+      '--batch',
+      nextDayBatchPath,
+      '--config',
+      stoppedConfigPath,
+      '--volume-file',
+      nextDayVolumePath,
+    ],
+    { stdio: 'pipe' },
+  ),
+);
+assert.throws(() =>
+  execFileSync(
+    process.execPath,
+    [
+      'node_modules/tsx/dist/cli.mjs',
+      'scripts/sync_static_mirror.ts',
+      '--output',
+      join(offlineRoot, 'mirror'),
+      '--batch',
+      nextDayBatchPath,
+      '--config',
+      stoppedConfigPath,
+      '--overview',
+      wrongDayOverviewPath,
+      '--volume-file',
+      nextDayVolumePath,
+    ],
+    { stdio: 'pipe' },
+  ),
 );
 execFileSync(
   process.execPath,
@@ -215,6 +406,8 @@ execFileSync(
     nextDayBatchPath,
     '--config',
     stoppedConfigPath,
+    '--overview',
+    nextDayOverviewPath,
     '--volume-file',
     nextDayVolumePath,
   ],
@@ -275,7 +468,26 @@ const root = await mkdtemp(join(tmpdir(), 'configurable-static-test-')),
   out = join(root, 'out');
 for (const directory of ['data/daily'])
   await mkdir(join(content, directory), { recursive: true });
-const manifest: StaticMirrorManifestV3 = {
+const priorDate = '2026-09-03';
+const priorAnalyses = day.analyses.map((report) => ({
+  ...report,
+  id: report.id.replace(day.announcementDate, priorDate),
+  announcementDate: priorDate,
+}));
+const priorDay = {
+  ...day,
+  announcementDate: priorDate,
+  lastUpdated: `${priorDate}T05:01:00Z`,
+  dailyOverview: {
+    resultItems: [
+      { analysisId: priorAnalyses[0].id, text: '得到前一日的核心估计' },
+    ],
+    noteworthyItems: [],
+  },
+  analyses: priorAnalyses,
+};
+validateStaticDay(priorDay);
+const manifest: StaticMirrorManifestV4 = {
   schemaVersion: STATIC_MIRROR_SCHEMA_VERSION,
   latestDate: day.announcementDate,
   generatedAt: day.lastUpdated,
@@ -289,6 +501,14 @@ const manifest: StaticMirrorManifestV3 = {
       complete: true,
       lastUpdated: day.lastUpdated,
     },
+    {
+      announcementDate: priorDay.announcementDate,
+      expectedCount: priorDay.coverage.expectedCount,
+      publishedCount: priorDay.coverage.publishedCount,
+      aiDisclosureCount: priorDay.aiDisclosureCount,
+      complete: true,
+      lastUpdated: priorDay.lastUpdated,
+    },
   ],
 };
 const save = (path: string, value: unknown) =>
@@ -297,8 +517,16 @@ await save(join(content, 'data/manifest.json'), manifest);
 await save(join(content, 'data/config.json'), testPublicConfig);
 await save(join(content, 'data/volume.json'), volume);
 await save(join(content, `data/daily/${day.announcementDate}.json`), day);
+await save(
+  join(content, `data/daily/${priorDay.announcementDate}.json`),
+  priorDay,
+);
 await buildStaticPages({ content, out, basePath: '/daily-arxiv-math' });
 const html = await readFile(join(out, 'index.html'), 'utf8');
+const priorHtml = await readFile(
+  join(out, `daily/${priorDay.announcementDate}/index.html`),
+  'utf8',
+);
 assert.doesNotMatch(html, /<script>alert\(1\)<\/script>/);
 assert.doesNotMatch(html, /href=["']javascript:/);
 assert.doesNotMatch(html, /href=["']t["']/);
@@ -311,15 +539,52 @@ assert.match(html, /<header class="site-header">/);
 assert.match(html, /<i aria-hidden="true">𓅆<\/i><span>Arxiv日报<\/span>/);
 assert.match(html, /完整收敛 4\/4/);
 assert.match(html, /AI 协作 0/);
-assert.match(html, /当日共收录 4 篇文章/);
-assert.match(html, /囊括了 Other analysis、Other learning 等问题/);
+assert.match(html, /今日共收录 3 篇论文/);
+assert.match(html, /math\.AP 涉及Other analysis（2 篇）/);
+assert.match(html, /cs\.LG 涉及Other learning（1 篇）/);
 assert.match(html, /<option value="math\.AP">math\.AP<\/option>/);
 assert.doesNotMatch(html, /<option value="math\.AP">Analysis<\/option>/);
 assert.match(html, /data-category="math\.AP"/);
-assert.equal((html.match(/data-summary-link/g) ?? []).length, 4);
-assert.match(html, /全部结果简述/);
-assert.match(html, /最后给出稳定性/);
-assert.doesNotMatch(html, /<p class="overview-label">主要结果<\/p>/);
+assert.equal((html.match(/data-overview-result-link/g) ?? []).length, 1);
+assert.equal((html.match(/data-overview-noteworthy-link/g) ?? []).length, 2);
+assert.match(
+  html,
+  /href="#analysis-math-AP-2026-09-04-2609-00002-v1" data-overview-result-link/,
+);
+assert.match(
+  html,
+  /href="#analysis-cs-LG-2026-09-04-2609-00003-v1" data-overview-noteworthy-link/,
+);
+assert.match(
+  html,
+  /href="#analysis-math-AP-2026-09-04-2609-00001-v1" data-overview-noteworthy-link/,
+);
+assert.match(html, /今天的结果包括/);
+assert.match(html, /值得一看的是/);
+assert.match(html, /论文声称/);
+assert.match(html, /若成立/);
+assert.equal((html.match(/论文声称/g) ?? []).length, 1);
+assert.equal((html.match(/若成立/g) ?? []).length, 1);
+assert.doesNotMatch(html, /主要结果|全部结果简述/);
+assert.equal(
+  (
+    html
+      .match(/<div class="overview-summary">[\s\S]*?<\/div>/)?.[0]
+      .match(/<p/g) ?? []
+  ).length,
+  3,
+  'a noteworthy day renders three overview paragraphs',
+);
+assert.equal(
+  (
+    priorHtml
+      .match(/<div class="overview-summary">[\s\S]*?<\/div>/)?.[0]
+      .match(/<p/g) ?? []
+  ).length,
+  2,
+  'a regular day renders two overview paragraphs',
+);
+assert.doesNotMatch(priorHtml, /值得一看的是/);
 assert.match(html, /data-toc-category/);
 assert.match(html, /data-toc-topic/);
 assert.match(html, /data-toc-paper/);
@@ -354,4 +619,111 @@ assert.match(clientScripts.join('\n'), /data-toc-paper/);
 await assert.rejects(readFile(join(out, 'archive/index.html'), 'utf8'));
 await assert.rejects(readFile(join(out, 'papers/2609.00001/index.html'), 'utf8'));
 await assert.rejects(readFile(join(out, 'data/manifest.json'), 'utf8'));
+
+const migrationRoot = await mkdtemp(join(tmpdir(), 'static-v4-migration-'));
+const legacyContent = join(migrationRoot, 'legacy');
+const overviewRoot = join(migrationRoot, 'overviews');
+const migratedContent = join(migrationRoot, 'migrated');
+await mkdir(join(legacyContent, 'data/daily'), { recursive: true });
+await mkdir(join(overviewRoot, 'a'), { recursive: true });
+await mkdir(join(overviewRoot, 'b'), { recursive: true });
+const migrationDays = Array.from({ length: 52 }, (_, index) => {
+  const instant = new Date('2026-07-01T00:00:00Z');
+  instant.setUTCDate(instant.getUTCDate() + index);
+  const date = instant.toISOString().slice(0, 10);
+  const analyses = day.analyses.map((report) => ({
+    ...report,
+    id: report.id.replace(day.announcementDate, date),
+    announcementDate: date,
+  }));
+  const { dailyOverview: _dailyOverview, ...legacy } = day;
+  const snapshot = {
+    ...legacy,
+    schemaVersion: 3,
+    announcementDate: date,
+    lastUpdated: `${date}T05:01:00Z`,
+    summaryItems: [{ analysisId: analyses[0].id, text: '旧摘要' }],
+    analyses,
+  };
+  const sidecar = {
+    announcementDate: date,
+    resultItems: [
+      { analysisId: analyses[0].id, text: '建立统一能量估计' },
+      { analysisId: analyses[2].id, text: '构造整体弱解' },
+    ],
+    noteworthyItems: [
+      {
+        analysisId: analyses[3].id,
+        result: '证明临界模型的端点估计',
+        significance: '该估计可能解决一个公开问题',
+      },
+    ],
+  };
+  return { date, snapshot, sidecar };
+}).sort((left, right) => right.date.localeCompare(left.date));
+await Promise.all(
+  migrationDays.map(({ date, snapshot }) =>
+    save(join(legacyContent, `data/daily/${date}.json`), snapshot),
+  ),
+);
+await save(join(legacyContent, 'data/config.json'), testPublicConfig);
+await save(join(legacyContent, 'data/volume.json'), {
+  ...volume,
+  schemaVersion: 3,
+});
+await save(join(legacyContent, 'data/manifest.json'), {
+  ...manifest,
+  schemaVersion: 3,
+  latestDate: migrationDays[0].date,
+  days: migrationDays.map(({ date, snapshot }) => ({
+    announcementDate: date,
+    expectedCount: snapshot.coverage.expectedCount,
+    publishedCount: snapshot.coverage.publishedCount,
+    aiDisclosureCount: snapshot.aiDisclosureCount,
+    complete: snapshot.coverage.complete,
+    lastUpdated: snapshot.lastUpdated,
+  })),
+});
+await Promise.all(
+  migrationDays
+    .slice(0, -1)
+    .map(({ date, sidecar }, index) =>
+      save(join(overviewRoot, index % 2 ? 'a' : 'b', `${date}.json`), sidecar),
+    ),
+);
+await assert.rejects(
+  migrateStaticMirrorV4({
+    content: legacyContent,
+    overviews: overviewRoot,
+    output: migratedContent,
+  }),
+  /Missing overview sidecar/,
+);
+await assert.rejects(
+  readFile(join(migratedContent, 'data/manifest.json'), 'utf8'),
+);
+const missingOverview = migrationDays.at(-1)!;
+await save(
+  join(overviewRoot, 'a', `${missingOverview.date}.json`),
+  missingOverview.sidecar,
+);
+assert.deepEqual(
+  await migrateStaticMirrorV4({
+    content: legacyContent,
+    overviews: overviewRoot,
+    output: migratedContent,
+  }),
+  { days: 52, latestDate: migrationDays[0].date },
+);
+const migratedFiles = await readdir(join(migratedContent, 'data/daily'));
+assert.equal(migratedFiles.length, 52, 'all archived days migrate together');
+const migratedDay = JSON.parse(
+  await readFile(
+    join(migratedContent, `data/daily/${migrationDays[0].date}.json`),
+    'utf8',
+  ),
+);
+assert.equal(migratedDay.schemaVersion, 4);
+assert.ok(!('summaryItems' in migratedDay));
+assert.equal(migratedDay.dailyOverview.resultItems.length, 2);
 console.log('Static mirror tests passed');

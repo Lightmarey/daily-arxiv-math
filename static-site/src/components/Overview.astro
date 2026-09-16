@@ -1,21 +1,27 @@
 ---
-import type { StaticDayV3 } from '../../../lib/static-mirror';
+import {
+  canonicalDailyReports,
+  dailyTopicCounts,
+  type StaticDayV4,
+} from '../../../lib/static-mirror';
+import type { PublicTrackingConfig } from '../../../lib/config';
 import { reportAnchor } from '../lib/runtime';
 import MathText from './MathText.astro';
 
 interface Props {
-  day: StaticDayV3;
+  day: StaticDayV4;
+  config: PublicTrackingConfig;
 }
 
-const { day } = Astro.props;
-const topicLabels = [
-  ...new Map(
-    day.analyses.map((report) => [
-      `${report.categoryId}:${report.topicId}`,
-      report.topicLabel,
-    ]),
-  ).values(),
-];
+const { day, config } = Astro.props;
+const canonicalReports = canonicalDailyReports(day.analyses);
+const topicCounts = dailyTopicCounts(day.analyses, config);
+const reportsById = new Map(day.analyses.map((report) => [report.id, report]));
+const reportFor = (analysisId: string) => {
+  const report = reportsById.get(analysisId);
+  if (!report) throw new Error(`Missing overview report ${analysisId}`);
+  return report;
+};
 ---
 
 <section class="overview" id="overview">
@@ -28,21 +34,61 @@ const topicLabels = [
   </header>
   <div class="overview-summary">
     <p class="overview-lead">
-      当日共收录 {day.coverage.publishedCount} 篇文章，囊括了 {topicLabels.join('、')} 等问题。
-    </p>
-    <p class="overview-label">全部结果简述</p>
-    <ul class="summary-items">
-      {
-        day.analyses.map((report) => (
-          <li>
-            <a href={`#${reportAnchor(report)}`} data-summary-link>
-              <strong><MathText value={report.title} inline /></strong>
-              <span>： </span>
-              <MathText value={report.workSummary} inline />
-            </a>
-          </li>
+      今日共收录 {canonicalReports.length} 篇论文{
+        topicCounts.length > 0 && '，其中 '
+      }{
+        topicCounts.map((group, groupIndex) => (
+          <>
+            {groupIndex > 0 && '；'}
+            {group.categoryId} 涉及{
+              group.topics.map((topic, topicIndex) => (
+                <>
+                  {topicIndex > 0 && '、'}
+                  {topic.label}（{topic.count} 篇）
+                </>
+              ))
+            }
+          </>
         ))
-      }
-    </ul>
+      }。
+    </p>
+    <p>
+      今天的结果包括{
+        day.dailyOverview.resultItems.map((item, index) => {
+          const report = reportFor(item.analysisId);
+          return (
+            <>
+              {index > 0 && '、'}
+              <a href={`#${reportAnchor(report)}`} data-overview-result-link>
+                <MathText value={item.text} inline />
+              </a>
+            </>
+          );
+        })
+      }。
+    </p>
+    {
+      day.dailyOverview.noteworthyItems.length > 0 && (
+        <p>
+          值得一看的是，{
+            day.dailyOverview.noteworthyItems.map((item, index) => {
+              const report = reportFor(item.analysisId);
+              const abstractOnly = report.analysisDepth === 'abstract';
+              return (
+                <>
+                  {index > 0 && '；此外，'}
+                  {abstractOnly && '论文声称'}
+                  <a href={`#${reportAnchor(report)}`} data-overview-noteworthy-link>
+                    <MathText value={item.result} inline />
+                  </a>
+                  ；{abstractOnly && '若成立，'}
+                  <MathText value={item.significance} inline />
+                </>
+              );
+            })
+          }。
+        </p>
+      )
+    }
   </div>
 </section>

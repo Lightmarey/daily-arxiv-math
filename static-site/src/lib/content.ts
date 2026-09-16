@@ -5,17 +5,17 @@ import {
   STATIC_MIRROR_SCHEMA_VERSION,
   normalizeStaticReport,
   validateStaticDay,
-  type StaticDayV3,
-  type StaticMirrorManifestV3,
-  type StaticVolumeV3,
+  type StaticDayV4,
+  type StaticMirrorManifestV4,
+  type StaticVolumeV4,
 } from '../../../lib/static-mirror';
 import { paperReportInputSchema } from '../../../lib/validation';
 import { contentRoot } from './runtime';
 
 export interface StaticContent {
-  manifest: StaticMirrorManifestV3;
-  volume: StaticVolumeV3;
-  days: StaticDayV3[];
+  manifest: StaticMirrorManifestV4;
+  volume: StaticVolumeV4;
+  days: StaticDayV4[];
 }
 
 async function readJson<T>(path: string): Promise<T> {
@@ -77,7 +77,7 @@ let cached: Promise<StaticContent> | undefined;
 export function loadStaticContent(): Promise<StaticContent> {
   cached ??= (async () => {
     const root = contentRoot();
-    const manifest = await readJson<StaticMirrorManifestV3>(
+    const manifest = await readJson<StaticMirrorManifestV4>(
       join(root, 'data/manifest.json'),
     );
     const config = publicTrackingConfigSchema.parse(
@@ -86,13 +86,13 @@ export function loadStaticContent(): Promise<StaticContent> {
     if (JSON.stringify(config) !== JSON.stringify(manifest.config)) {
       throw new Error('Public config does not match the static manifest');
     }
-    const volume = await readJson<StaticVolumeV3>(
+    const volume = await readJson<StaticVolumeV4>(
       join(root, 'data/volume.json'),
     );
     const days = (
       await Promise.all(
         manifest.days.map((entry) =>
-          readJson<StaticDayV3>(
+          readJson<StaticDayV4>(
             join(root, `data/daily/${entry.announcementDate}.json`),
           ),
         ),

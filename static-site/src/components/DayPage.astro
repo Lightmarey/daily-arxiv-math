@@ -1,8 +1,8 @@
 ---
 import type {
-  StaticDayV3,
-  StaticMirrorManifestV3,
-  StaticVolumeV3,
+  StaticDayV4,
+  StaticMirrorManifestV4,
+  StaticVolumeV4,
 } from '../../../lib/static-mirror';
 import { staticTopicOrder } from '../../../lib/static-mirror';
 import { categoryAnchor, topicAnchor } from '../lib/runtime';
@@ -13,9 +13,9 @@ import Toc from './Toc.astro';
 import Trend from './Trend.astro';
 
 interface Props {
-  day: StaticDayV3;
-  manifest: StaticMirrorManifestV3;
-  volume: StaticVolumeV3;
+  day: StaticDayV4;
+  manifest: StaticMirrorManifestV4;
+  volume: StaticVolumeV4;
 }
 
 const { day, manifest, volume } = Astro.props;
@@ -36,7 +36,7 @@ const payload = JSON.stringify({
   <div class="page-layout">
     <Toc day={day} manifest={manifest} />
     <div class="page-content">
-      <Overview day={day} />
+      <Overview day={day} config={manifest.config} />
 
       <section class="reports">
         <div class="section-head"><h2>全部论文</h2></div>

@@ -4,10 +4,11 @@ import {
   STATIC_MIRROR_SCHEMA_VERSION,
   buildStaticDay,
   buildStaticVolume,
+  parseStaticOverviewSidecar,
   validateStaticDay,
-  type StaticDayV3,
-  type StaticMirrorManifestV3,
-  type StaticVolumeV3,
+  type StaticDayV4,
+  type StaticMirrorManifestV4,
+  type StaticVolumeV4,
 } from '../lib/static-mirror';
 import { parseTrackingConfig, publicConfig } from '../lib/config';
 import type { PaperReport, ReportFeed, VolumePoint } from '../lib/types';
@@ -17,6 +18,7 @@ interface Args {
   output: string;
   requiredDate?: string;
   batches: string[];
+  overviewFile: string;
   volumeFile?: string;
   configFile: string;
 }
@@ -31,13 +33,15 @@ function parseArgs(argv: string[]): Args {
   }
   const output = values.get('output');
   const configFile = values.get('config');
-  if (!output || !configFile)
+  const overviewFile = values.get('overview');
+  if (!output || !configFile || !overviewFile)
     throw new Error(
-      'Usage: sync_static_mirror.ts --output <dir> --config <config.json> --batch <a.json,b.json> [--volume-file volume.json] [--required-date YYYY-MM-DD]',
+      'Usage: sync_static_mirror.ts --output <dir> --config <config.json> --batch <a.json,b.json> --overview <overview.json> [--volume-file volume.json] [--required-date YYYY-MM-DD]',
     );
   return {
     output: resolve(output),
     configFile: resolve(configFile),
+    overviewFile: resolve(overviewFile),
     requiredDate: values.get('required-date'),
     batches: values.get('batch')?.split(',').filter(Boolean) ?? [],
     volumeFile: values.get('volume-file'),
@@ -70,7 +74,7 @@ function feedFromBatches(
   batches: ReportBatchV3[],
   categories: string[],
   requiredCategories: Set<string>,
-  existing?: StaticDayV3,
+  existing?: StaticDayV4,
 ): ReportFeed {
   const date = batches[0]?.announcementDay.date;
   if (!date) throw new Error('At least one batch is required');
@@ -146,15 +150,20 @@ async function main(): Promise<void> {
     throw new Error('Batch announcement date does not match --required-date');
   if (batches.some((batch) => batch.configVersion !== config.configVersion))
     throw new Error('Static batch configVersion does not match public config');
+  const overview = parseStaticOverviewSidecar(
+    JSON.parse(await readFile(args.overviewFile, 'utf8')) as unknown,
+  );
+  if (overview.announcementDate !== date)
+    throw new Error('Overview announcement date does not match batch date');
 
-  const existingManifest = await readJson<StaticMirrorManifestV3>(
+  const existingManifest = await readJson<StaticMirrorManifestV4>(
     join(args.output, 'data/manifest.json'),
   );
   if (existingManifest && existingManifest.schemaVersion !== STATIC_MIRROR_SCHEMA_VERSION)
-    throw new Error('Migrate static content to schema v3 before syncing');
-  const selected = new Map<string, StaticDayV3>();
+    throw new Error('Migrate static content to schema v4 before syncing');
+  const selected = new Map<string, StaticDayV4>();
   for (const entry of existingManifest?.days ?? []) {
-    const old = await readJson<StaticDayV3>(
+    const old = await readJson<StaticDayV4>(
       join(args.output, `data/daily/${entry.announcementDate}.json`),
     );
     if (!old) throw new Error(`Missing archived day ${entry.announcementDate}`);
@@ -165,6 +174,10 @@ async function main(): Promise<void> {
   const day = buildStaticDay(
     feedFromBatches(batches, categories, requiredCategories, selected.get(date)),
     config,
+    {
+      resultItems: overview.resultItems,
+      noteworthyItems: overview.noteworthyItems,
+    },
   );
   validateStaticDay(day);
   selected.set(date, day);
@@ -172,7 +185,7 @@ async function main(): Promise<void> {
     b.announcementDate.localeCompare(a.announcementDate),
   );
 
-  const existingVolume = await readJson<StaticVolumeV3>(
+  const existingVolume = await readJson<StaticVolumeV4>(
     join(args.output, 'data/volume.json'),
   );
   const points: VolumePoint[] = args.volumeFile
@@ -192,7 +205,7 @@ async function main(): Promise<void> {
   for (const batch of batches) point.counts[batch.categoryId] = batch.dailyVolume.count;
   const volume = buildStaticVolume(points, categories);
   const generatedAt = days.map((item) => item.lastUpdated).sort().at(-1)!;
-  const manifest: StaticMirrorManifestV3 = {
+  const manifest: StaticMirrorManifestV4 = {
     schemaVersion: STATIC_MIRROR_SCHEMA_VERSION,
     latestDate: days[0].announcementDate,
     generatedAt,

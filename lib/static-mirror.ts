@@ -9,14 +9,29 @@ import {
 } from './types';
 import type { PublicTrackingConfig } from './config';
 
-export const STATIC_MIRROR_SCHEMA_VERSION = 3 as const;
+export const STATIC_MIRROR_SCHEMA_VERSION = 4 as const;
 
-export interface StaticSummaryItem {
+export interface StaticOverviewResultItem {
   analysisId: string;
   text: string;
 }
 
-export interface StaticDayV3 {
+export interface StaticOverviewNoteworthyItem {
+  analysisId: string;
+  result: string;
+  significance: string;
+}
+
+export interface StaticDailyOverview {
+  resultItems: StaticOverviewResultItem[];
+  noteworthyItems: StaticOverviewNoteworthyItem[];
+}
+
+export interface StaticOverviewSidecar extends StaticDailyOverview {
+  announcementDate: string;
+}
+
+export interface StaticDayV4 {
   schemaVersion: typeof STATIC_MIRROR_SCHEMA_VERSION;
   announcementDate: string;
   lastUpdated: string;
@@ -28,17 +43,17 @@ export interface StaticDayV3 {
     complete: boolean;
   };
   aiDisclosureCount: number;
-  summaryItems: StaticSummaryItem[];
+  dailyOverview: StaticDailyOverview;
   analyses: PaperReport[];
 }
-export interface StaticVolumeV3 {
+export interface StaticVolumeV4 {
   schemaVersion: typeof STATIC_MIRROR_SCHEMA_VERSION;
   points: VolumePoint[];
   weeks26: WeeklyVolumePoint[];
   weeks104: WeeklyVolumePoint[];
 }
 
-export interface StaticMirrorDayEntryV3 {
+export interface StaticMirrorDayEntryV4 {
   announcementDate: string;
   expectedCount: number;
   publishedCount: number;
@@ -47,12 +62,12 @@ export interface StaticMirrorDayEntryV3 {
   lastUpdated: string;
 }
 
-export interface StaticMirrorManifestV3 {
+export interface StaticMirrorManifestV4 {
   schemaVersion: typeof STATIC_MIRROR_SCHEMA_VERSION;
   latestDate: string;
   generatedAt: string;
   config: PublicTrackingConfig;
-  days: StaticMirrorDayEntryV3[];
+  days: StaticMirrorDayEntryV4[];
 }
 
 const priorityRank: Record<PriorityTier, number> = {
@@ -143,30 +158,65 @@ export function sortReports(reports: PaperReport[]): PaperReport[] {
   );
 }
 
-function buildSummaryItems(reports: PaperReport[]): StaticSummaryItem[] {
-  const selected: PaperReport[] = [];
-  const topics = new Set<string>();
-  for (const report of reports) {
-    const key = `${report.categoryId}:${report.topicId}`;
-    if (topics.has(key)) continue;
-    topics.add(key);
-    selected.push(report);
-    if (selected.length === 5) break;
+export function canonicalDailyReports(reports: PaperReport[]): PaperReport[] {
+  const groups = new Map<string, PaperReport[]>();
+  for (const report of sortReports(reports)) {
+    const group = groups.get(report.arxivId) ?? [];
+    group.push(report);
+    groups.set(report.arxivId, group);
   }
-  for (const report of reports) {
-    if (selected.length === 5) break;
-    if (!selected.includes(report)) selected.push(report);
-  }
-  return selected.map((report) => ({
-    analysisId: report.id,
-    text: report.workSummary,
-  }));
+  return [...groups.values()].map(
+    (group) =>
+      group.find((report) => report.categoryId === report.primaryCategory) ??
+      group[0],
+  );
+}
+
+export interface StaticTopicCount {
+  categoryId: string;
+  topics: { id: string; label: string; count: number }[];
+}
+
+export function dailyTopicCounts(
+  reports: PaperReport[],
+  config: PublicTrackingConfig,
+): StaticTopicCount[] {
+  const canonical = canonicalDailyReports(reports);
+  return config.displayCategories.flatMap((categoryId) => {
+    const category = config.categories.find((item) => item.id === categoryId);
+    const topicOrder = new Map(
+      category?.topics.map((topic, index) => [topic.id, index]) ?? [],
+    );
+    const topics = new Map<
+      string,
+      { id: string; label: string; count: number }
+    >();
+    for (const report of canonical.filter(
+      (item) => item.categoryId === categoryId,
+    )) {
+      const old = topics.get(report.topicId);
+      topics.set(report.topicId, {
+        id: report.topicId,
+        label: currentTopicLabel(report, config),
+        count: (old?.count ?? 0) + 1,
+      });
+    }
+    const ordered = [...topics.values()].sort(
+      (left, right) =>
+        right.count - left.count ||
+        (topicOrder.get(left.id) ?? Number.MAX_SAFE_INTEGER) -
+          (topicOrder.get(right.id) ?? Number.MAX_SAFE_INTEGER) ||
+        left.id.localeCompare(right.id),
+    );
+    return ordered.length ? [{ categoryId, topics: ordered }] : [];
+  });
 }
 
 export function buildStaticDay(
   feed: ReportFeed,
   config: PublicTrackingConfig,
-): StaticDayV3 {
+  dailyOverview: StaticDailyOverview,
+): StaticDayV4 {
   for (const coverage of feed.coverage) {
     const publicationCount = feed.reports.filter(
       (paper) =>
@@ -229,20 +279,84 @@ export function buildStaticDay(
         .filter((paper) => paper.aiStatus === 'explicit')
         .map((paper) => paper.arxivId),
     ).size,
-    summaryItems: buildSummaryItems(sortedAnalyses),
+    dailyOverview,
     analyses: sortedAnalyses,
   };
 }
 
-export function validateStaticDay(day: StaticDayV3): void {
+const OVERVIEW_RESULT_MAX_LENGTH = 120;
+const OVERVIEW_NOTEWORTHY_RESULT_MAX_LENGTH = 140;
+const OVERVIEW_SIGNIFICANCE_MAX_LENGTH = 120;
+
+function validOverviewText(value: unknown, maxLength: number): value is string {
+  return (
+    typeof value === 'string' &&
+    value.trim().length > 0 &&
+    value.length <= maxLength
+  );
+}
+
+export function parseStaticOverviewSidecar(
+  value: unknown,
+): StaticOverviewSidecar {
+  if (!value || typeof value !== 'object')
+    throw new Error('Invalid daily overview sidecar');
+  const sidecar = value as Partial<StaticOverviewSidecar>;
+  if (
+    typeof sidecar.announcementDate !== 'string' ||
+    !Array.isArray(sidecar.resultItems) ||
+    sidecar.resultItems.length < 1 ||
+    sidecar.resultItems.length > 12 ||
+    !Array.isArray(sidecar.noteworthyItems) ||
+    sidecar.noteworthyItems.length > 3
+  )
+    throw new Error('Invalid daily overview sidecar');
+  for (const item of sidecar.resultItems) {
+    if (
+      !item ||
+      typeof item.analysisId !== 'string' ||
+      !validOverviewText(item.text, OVERVIEW_RESULT_MAX_LENGTH)
+    )
+      throw new Error('Invalid daily overview result item');
+  }
+  for (const item of sidecar.noteworthyItems) {
+    if (
+      !item ||
+      typeof item.analysisId !== 'string' ||
+      !validOverviewText(item.result, OVERVIEW_NOTEWORTHY_RESULT_MAX_LENGTH) ||
+      !validOverviewText(item.significance, OVERVIEW_SIGNIFICANCE_MAX_LENGTH)
+    )
+      throw new Error('Invalid daily overview noteworthy item');
+  }
+  return sidecar as StaticOverviewSidecar;
+}
+
+export function validateStaticDay(day: StaticDayV4): void {
   if (day.schemaVersion !== STATIC_MIRROR_SCHEMA_VERSION)
     throw new Error(`Unsupported static day ${day.announcementDate}`);
   if (day.categories.length !== day.coverage.categories.length)
     throw new Error(`Missing category coverage on ${day.announcementDate}`);
-  const knownIds = new Set(day.analyses.map((report) => report.id));
-  for (const item of day.summaryItems) {
-    if (!knownIds.has(item.analysisId) || !item.text.trim())
-      throw new Error(`Invalid summary item on ${day.announcementDate}`);
+  const reportsById = new Map(
+    day.analyses.map((report) => [report.id, report]),
+  );
+  const overview = parseStaticOverviewSidecar({
+    announcementDate: day.announcementDate,
+    ...day.dailyOverview,
+  });
+  const overviewArxivIds = new Set<string>();
+  const validateReference = (analysisId: string) => {
+    const report = reportsById.get(analysisId);
+    if (!report || report.announcementDate !== day.announcementDate)
+      throw new Error(`Invalid overview reference on ${day.announcementDate}`);
+    if (overviewArxivIds.has(report.arxivId))
+      throw new Error(`Duplicate overview paper on ${day.announcementDate}`);
+    overviewArxivIds.add(report.arxivId);
+  };
+  for (const item of overview.resultItems) {
+    validateReference(item.analysisId);
+  }
+  for (const item of overview.noteworthyItems) {
+    validateReference(item.analysisId);
   }
   for (const coverage of day.coverage.categories) {
     const count = day.analyses.filter(
@@ -273,7 +387,7 @@ export function validateStaticDay(day: StaticDayV3): void {
 export function buildStaticVolume(
   points: VolumePoint[],
   categories: string[],
-): StaticVolumeV3 {
+): StaticVolumeV4 {
   const allOrdered = [...points].sort((a, b) =>
     a.announcementDate.localeCompare(b.announcementDate),
   );

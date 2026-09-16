@@ -1,17 +1,17 @@
 ---
-import type { StaticDayV3, StaticMirrorManifestV3 } from '../../../lib/static-mirror';
+import type { StaticDayV4, StaticMirrorManifestV4 } from '../../../lib/static-mirror';
 import { categoryAnchor, reportAnchor, topicAnchor } from '../lib/runtime';
 
 interface Props {
-  day: StaticDayV3;
-  manifest: StaticMirrorManifestV3;
+  day: StaticDayV4;
+  manifest: StaticMirrorManifestV4;
 }
 
 const { day, manifest } = Astro.props;
 const categories = manifest.config.categories.filter((category) =>
   manifest.config.displayCategories.includes(category.id),
 );
-const ordered = (reports: StaticDayV3['analyses']) =>
+const ordered = (reports: StaticDayV4['analyses']) =>
   [...reports].sort(
     (left, right) =>
       right.priorityScore - left.priorityScore || left.arxivId.localeCompare(right.arxivId),

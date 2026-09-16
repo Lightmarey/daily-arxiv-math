@@ -11,8 +11,9 @@
 1. 从 `config.local.json` 固定本轮配置版本。
 2. 分别读取每个 `fetchCategories` 分类的官方公告列表。Replacements 不计发文量；无法确认的日期保持缺失，不能写成零篇。
 3. 对所有分类的论文 ID 并集读取一次共享元数据，再按分类主题和阅读偏好独立分析。
-4. 每个分类生成一个 `ReportBatchV3`。同日所有仍抓取且展示的分类批次齐全后，才可运行静态同步。
-5. 静态同步只重建本轮日期；其他 v3 日期先独立校验，再原样保留。manifest 不设隐式“最近 N 天”裁剪。
+4. 每个分类生成一个 `ReportBatchV3`。同日所有仍抓取且展示的分类批次齐全后，再跨领域生成一个日级总览 sidecar。
+5. sidecar 必须符合 [`daily-overview.schema.json`](daily-overview.schema.json)：包含 1–12 个结果和 0–3 个值得关注项，所有引用对应当日不同的 arXiv 论文。
+6. 静态同步只重建本轮日期；其他 v4 日期先独立校验，再原样保留。manifest 不设隐式“最近 N 天”裁剪。
 
 离线预览：
 
@@ -21,6 +22,7 @@ npx tsx scripts/sync_static_mirror.ts \
   --output <daily-content-worktree> \
   --config <config.local.json> \
   --batch <ap.json,dg.json> \
+  --overview <daily-overview.json> \
   --required-date <YYYY-MM-DD> \
   --volume-file <volume.json>
 
@@ -28,6 +30,15 @@ npm run static:build -- \
   --content <daily-content-worktree> \
   --out <site-dir> \
   --base-path /daily-arxiv-math
+```
+
+一次性从 v3 迁移历史内容时，先为 manifest 中每个日期生成一个以日期命名的 sidecar。sidecar 可以直接放在目录中，也可以分放在 `a/`、`b/` 等子目录；文件名必须全局唯一。迁移器完整读取并校验全部日期后才原子创建新目录：
+
+```bash
+npx tsx scripts/migrate_static_mirror_v4.ts \
+  --content <v3-content> \
+  --overviews <sidecar-root> \
+  --output <new-v4-content>
 ```
 
 ## 发布

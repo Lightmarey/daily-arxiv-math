@@ -3,10 +3,11 @@ set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
-config_path="${1:?usage: publish_static_mirror.sh <config> <batch[,batch]> [required-date] [volume-file]}"
-batch_path="${2:?usage: publish_static_mirror.sh <config> <batch[,batch]> [required-date] [volume-file]}"
-required_date="${3:-}"
-volume_path="${4:-}"
+config_path="${1:?usage: publish_static_mirror.sh <config> <batch[,batch]> <overview> [required-date] [volume-file]}"
+batch_path="${2:?usage: publish_static_mirror.sh <config> <batch[,batch]> <overview> [required-date] [volume-file]}"
+overview_path="${3:?usage: publish_static_mirror.sh <config> <batch[,batch]> <overview> [required-date] [volume-file]}"
+required_date="${4:-}"
+volume_path="${5:-}"
 lock_dir="$repo_root/.automation/static-mirror.lock"
 
 if ! mkdir "$lock_dir" 2>/dev/null; then
@@ -31,6 +32,7 @@ sync_args=(
   --output "$worktree"
   --config "$config_path"
   --batch "$batch_path"
+  --overview "$overview_path"
 )
 if [[ -n "$required_date" ]]; then
   sync_args+=(--required-date "$required_date")
