@@ -6,7 +6,7 @@
 
 1. 更新可信生成器到 `origin/main`，读取 `origin/daily-content:data/manifest.json`；现有日期一律保留。
 2. 在最新已发布日之后查找官方公告日，按最早缺失日顺序处理；已出现在静态清单中的日期直接跳过。
-3. 每个日期使用独立的 `.automation/static-runs/<date>/`。同一 `configVersion`、分类、公告日和 `expectedIds` 的 listing、metadata 与分析分片可以复用；其余缓存必须丢弃。
+3. 每个日期使用独立的 `.automation/static-runs/<date>/`。同一 `configVersion`、分类、公告日和 `expectedIds` 的 listing、metadata 与分析分片可以复用；但缺少 `priorityComponents` 的旧分析分片必须重新生成。其余缓存必须丢弃。
 4. 一个公告日是原子单位。任一必需分类失败或不完整时不得发布该日，也不得用空值覆盖既有内容。官方页面缺失或无法确认时保持缺失，不得伪造零篇。
 
 ## 抓取与分析
