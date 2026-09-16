@@ -5,6 +5,7 @@ import {
   buildStaticDay,
   buildStaticVolume,
   parseStaticOverviewSidecar,
+  validateCanonicalOverviewMath,
   validateStaticDay,
   type StaticDayV4,
   type StaticMirrorManifestV4,
@@ -153,6 +154,7 @@ async function main(): Promise<void> {
   const overview = parseStaticOverviewSidecar(
     JSON.parse(await readFile(args.overviewFile, 'utf8')) as unknown,
   );
+  validateCanonicalOverviewMath(overview);
   if (overview.announcementDate !== date)
     throw new Error('Overview announcement date does not match batch date');
 

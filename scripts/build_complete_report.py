@@ -1,10 +1,52 @@
 #!/usr/bin/env python3
 """Assemble one complete per-category ReportBatchV3."""
 from __future__ import annotations
-import argparse, json, os
+import argparse, json, os, re
 from datetime import datetime, timezone
 from pathlib import Path
 from tracking_config import category_config, config_version, load_config
+
+FORBIDDEN_ANALYSIS_PHRASES = (
+    "摘要给出",
+    "本文围绕",
+    "研究《",
+    "在所列设定下",
+    "在给定假设下",
+    "可检验的定量估计或结构性结论",
+    "结构性刻画",
+    "已补读正文",
+    "尚未补读正文",
+)
+BARE_MATH_PATTERN = re.compile(
+    r"[Α-Ωα-ω≤≥≪≫∞∂∇∆ΔΣΠ√∈∉→↦×²³⁴⁵⁶⁷⁸⁹⁰₀-₉=<>^_]"
+    r"|\\[A-Za-z]+|\b[OCHWLSTNR]\s*(?:\d|\()|\b(?:exp|det)\s*\("
+)
+
+def _outside_math(text: str) -> str:
+    output = []
+    index = 0
+    while index < len(text):
+        delimiter = next((pair for pair in (("$$", "$$"), ("$", "$"), (r"\(", r"\)"), (r"\[", r"\]")) if text.startswith(pair[0], index)), None)
+        if not delimiter:
+            output.append(text[index]); index += 1; continue
+        start, end = delimiter
+        closing = text.find(end, index + len(start))
+        if closing < 0: raise ValueError("unbalanced math delimiters")
+        index = closing + len(end)
+    return "".join(output)
+
+def _validate_analysis_text(arxiv_id: str, analysis: dict) -> None:
+    values = [analysis.get(key, "") for key in ("workSummary", "breakthrough", "limitations", "priorityReason", "lowPriorityReason")]
+    values.extend(analysis.get("techniques", []))
+    for step in analysis.get("proofOutline", {}).get("steps", []):
+        values.extend(step.get(key, "") for key in ("claim", "route", "evidence"))
+    text = "\n".join(str(value) for value in values if value)
+    phrase = next((item for item in FORBIDDEN_ANALYSIS_PHRASES if item in text), None)
+    if phrase: raise ValueError(f"Analysis {arxiv_id} contains forbidden display prose: {phrase}")
+    try: outside_math = _outside_math(text)
+    except ValueError as error: raise ValueError(f"Analysis {arxiv_id} has unbalanced math delimiters") from error
+    if BARE_MATH_PATTERN.search(outside_math):
+        raise ValueError(f"Analysis {arxiv_id} contains math outside LaTeX delimiters")
 
 def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: str, config: dict, now: str | None = None, run_id: str | None = None, scheduled_for: str | None = None, started_at: str | None = None) -> dict:
     version = config_version(config)
@@ -18,6 +60,7 @@ def build_batch(source: dict, analyses: dict, category_id: str, source_cursor: s
     topic_labels = {topic["id"]: topic["label"] for topic in category["topics"]}; new_ids = set(manifest["sourceManifest"]["newIds"]); reports = []
     for arxiv_id in manifest["expectedIds"]:
         paper, analysis = papers[arxiv_id], category_analyses[arxiv_id]; topic_id = analysis["topicId"]
+        _validate_analysis_text(arxiv_id, analysis)
         if topic_id not in topic_labels: raise ValueError(f"Unknown topicId {topic_id} for {category_id}")
         score = int(analysis["priorityScore"]); tier = "high" if score >= 75 else "medium" if score >= 50 else "low"
         report = {"categoryId": category_id, "announcementDate": source["announcementDate"], "arxivId": arxiv_id, "version": paper["version"], "entryKind": "new" if arxiv_id in new_ids else "cross_list", "title": paper["title"], "authors": paper["authors"], "abstract": paper["abstract"], "categories": paper["categories"], "primaryCategory": paper["primaryCategory"], "arxivUrl": paper["arxivUrl"], "pdfUrl": paper["pdfUrl"], "submittedAt": paper["submittedAt"], "updatedAt": paper["updatedAt"], "topicId": topic_id, "topicLabel": topic_labels[topic_id], "progressType": analysis["progressType"], "workSummary": analysis["workSummary"], "techniques": analysis["techniques"], "breakthrough": analysis["breakthrough"], "limitations": analysis["limitations"], "analysisDepth": analysis.get("analysisDepth", "abstract"), "proofOutline": analysis.get("proofOutline", {"status": "not_reviewed", "steps": []}), "aiStatus": analysis.get("aiStatus", "not_checked"), "aiEvidence": analysis.get("aiEvidence"), "aiEvidenceSource": analysis.get("aiEvidenceSource"), "priorityScore": score, "priorityTier": tier, "priorityReason": analysis.get("priorityReason", f"按相关性、新颖性、技术复用性、潜在影响与证据清晰度综合评分为 {score}/100。"), "lowPriorityReason": analysis.get("lowPriorityReason"), "revisionSummary": analysis.get("revisionSummary")}

@@ -8,6 +8,7 @@ import {
   type CategoryCoverage,
 } from './types';
 import type { PublicTrackingConfig } from './config';
+import { normalizeMathText } from './math-text';
 
 export const STATIC_MIRROR_SCHEMA_VERSION = 4 as const;
 
@@ -326,11 +327,24 @@ export function parseStaticOverviewSidecar(
       !item ||
       typeof item.analysisId !== 'string' ||
       !validOverviewText(item.result, OVERVIEW_NOTEWORTHY_RESULT_MAX_LENGTH) ||
-      !validOverviewText(item.significance, OVERVIEW_SIGNIFICANCE_MAX_LENGTH)
+      !validOverviewText(item.significance, OVERVIEW_SIGNIFICANCE_MAX_LENGTH) ||
+      item.result.trimStart().startsWith('论文声称') ||
+      item.significance.trimStart().startsWith('若成立')
     )
       throw new Error('Invalid daily overview noteworthy item');
   }
   return sidecar as StaticOverviewSidecar;
+}
+
+export function validateCanonicalOverviewMath(
+  sidecar: StaticOverviewSidecar,
+): void {
+  const values = [
+    ...sidecar.resultItems.map((item) => item.text),
+    ...sidecar.noteworthyItems.flatMap((item) => [item.result, item.significance]),
+  ];
+  if (values.some((value) => normalizeMathText(value) !== value))
+    throw new Error('Daily overview math must use explicit LaTeX delimiters');
 }
 
 export function validateStaticDay(day: StaticDayV4): void {

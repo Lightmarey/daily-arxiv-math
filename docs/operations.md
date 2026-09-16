@@ -43,7 +43,7 @@ npx tsx scripts/migrate_static_mirror_v4.ts \
 
 ## 发布
 
-`scripts/publish_static_mirror.sh` 使用本地锁和临时 worktree：
+`scripts/publish_static_mirror.ps1`（Windows）和 `.sh`（Unix）使用本地锁和临时 worktree：
 
 1. 从 `origin/daily-content` 创建临时检出；
 2. 校验并合并同日批次；

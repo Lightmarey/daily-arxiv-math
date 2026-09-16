@@ -11,6 +11,7 @@ import {
   dailyTopicCounts,
   normalizeStaticReport,
   parseStaticOverviewSidecar,
+  validateCanonicalOverviewMath,
   validateStaticDay,
   type StaticDailyOverview,
   type StaticMirrorManifestV4,
@@ -228,9 +229,41 @@ assert.throws(
           significance: '长'.repeat(121),
         },
       ],
-    }),
+  }),
   /Invalid daily overview noteworthy item/,
 );
+assert.throws(
+  () =>
+    parseStaticOverviewSidecar({
+      announcementDate: feed.date,
+      resultItems: [{ analysisId: sharedAp.id, text: '结果' }],
+      noteworthyItems: [
+        {
+          analysisId: sharedLgSecond.id,
+          result: '论文声称得到一个结果',
+          significance: '若成立，将有重要意义',
+        },
+      ],
+    }),
+  /Invalid daily overview noteworthy item/,
+  'renderer owns abstract-only qualification',
+);
+assert.throws(
+  () =>
+    validateCanonicalOverviewMath({
+      announcementDate: feed.date,
+      resultItems: [{ analysisId: sharedAp.id, text: '得到 α≥1 的估计' }],
+      noteworthyItems: [],
+    }),
+  /explicit LaTeX delimiters/,
+);
+validateCanonicalOverviewMath({
+  announcementDate: feed.date,
+  resultItems: [
+    { analysisId: sharedAp.id, text: '得到 $\\alpha\\geq1$ 的估计' },
+  ],
+  noteworthyItems: [],
+});
 const stoppedCategoryDay = buildStaticDay(
   {
     ...feed,

@@ -30,7 +30,7 @@ data/daily/YYYY-MM-DD.json
 3. 各领域独立生成一个 `ReportBatchV3`；同一论文可以保留多份领域分析。
 4. 汇总当天全部领域分析，生成符合 [`docs/daily-overview.schema.json`](docs/daily-overview.schema.json) 的日级总览 sidecar。
 5. `scripts/sync_static_mirror.ts` 在本地把同日批次和总览原子合并进 v4 内容快照。
-6. `scripts/publish_static_mirror.sh` 快进推送 `daily-content`，并以精确内容 SHA 触发 Pages 构建。
+6. `scripts/publish_static_mirror.ps1`（Windows）或 `.sh`（Unix）快进推送 `daily-content`，并以精确内容 SHA 触发 Pages 构建。
 
 当日总览的论文总数和主题计数由站点按唯一 arXiv ID 计算；结果短语与值得关注项来自日级 sidecar，页面切换领域或主题时保持不变。
 
@@ -46,13 +46,12 @@ npm run static:build -- --content <daily-content-worktree> --out <site-dir> --ba
 
 发布命令：
 
-```bash
-bash scripts/publish_static_mirror.sh \
-  <config.local.json> \
-  <math.AP-batch.json,math.DG-batch.json> \
-  <daily-overview.json> \
-  <YYYY-MM-DD> \
-  <volume.json>
+```powershell
+& scripts/publish_static_mirror.ps1 `
+  -ConfigPath <config.local.json> `
+  -BatchPath <math.AP-batch.json,math.DG-batch.json> `
+  -OverviewPath <daily-overview.json> `
+  -RequiredDate <YYYY-MM-DD>
 ```
 
 完整约束见 [docs/operations.md](docs/operations.md)。

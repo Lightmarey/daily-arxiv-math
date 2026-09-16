@@ -1,9 +1,50 @@
 import unittest
 
-from build_complete_report import build_batch
+from build_complete_report import _validate_analysis_text, build_batch
 
 
 class BuildCompleteReportTests(unittest.TestCase):
+    def test_rejects_process_narration_in_display_fields(self):
+        with self.assertRaisesRegex(ValueError, "forbidden display prose"):
+            _validate_analysis_text(
+                "2609.00001",
+                {
+                    "workSummary": "摘要给出的设定与主线是一个占位概括。",
+                    "techniques": [],
+                },
+            )
+        with self.assertRaisesRegex(ValueError, "math outside LaTeX delimiters"):
+            _validate_analysis_text(
+                "2609.00003",
+                {
+                    "workSummary": "得到 α≥1 时的 \\Delta u=0。",
+                    "techniques": [],
+                },
+            )
+        for index, formula in enumerate(
+            ("$\\Delta u=0$", "$$\\Delta u=0$$", r"\(\Delta u=0\)", r"\[\Delta u=0\]")
+        ):
+            _validate_analysis_text(
+                f"2609.1000{index}",
+                {"workSummary": f"得到 {formula}。", "techniques": []},
+            )
+        with self.assertRaisesRegex(ValueError, "forbidden display prose"):
+            _validate_analysis_text(
+                "2609.00002",
+                {
+                    "workSummary": "得到一个估计。",
+                    "techniques": [],
+                    "proofOutline": {
+                        "steps": [
+                            {
+                                "claim": "闭合估计",
+                                "route": "已补读正文关键部分后整理。",
+                            }
+                        ]
+                    },
+                },
+            )
+
     def test_missing_full_text_analysis_stays_explicitly_unreviewed(self):
         config = {
             "schemaVersion": 1,
@@ -62,7 +103,7 @@ class BuildCompleteReportTests(unittest.TestCase):
                 "workSummary": "摘要分析",
                 "techniques": [],
                 "breakthrough": "摘要分析",
-                "limitations": "尚未补读正文",
+                "limitations": "结论限于能量次临界指数范围。",
                 "priorityScore": 60,
             }
         }

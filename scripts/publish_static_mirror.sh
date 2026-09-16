@@ -23,6 +23,14 @@ cleanup() {
 trap cleanup EXIT
 
 git -C "$repo_root" fetch origin main daily-content
+if [[ "$(git -C "$repo_root" rev-parse HEAD)" != "$(git -C "$repo_root" rev-parse origin/main)" ]]; then
+  echo "Static mirror generator must be exactly origin/main." >&2
+  exit 1
+fi
+if [[ -n "$(git -C "$repo_root" status --porcelain --untracked-files=no)" ]]; then
+  echo "Static mirror generator has tracked working-tree changes." >&2
+  exit 1
+fi
 git -C "$repo_root" worktree add --detach "$worktree" origin/daily-content
 git -C "$worktree" rm -r --ignore-unmatch README.md index.md archive.md daily papers data/papers
 
