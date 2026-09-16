@@ -50,17 +50,17 @@ def _validate_analysis_text(arxiv_id: str, analysis: dict) -> None:
 
 def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
     minimum_lengths = {
-        "workSummary": 80,
-        "breakthrough": 60,
-        "limitations": 60,
-        "priorityReason": 40,
+        "workSummary": 140,
+        "breakthrough": 90,
+        "limitations": 90,
+        "priorityReason": 50,
     }
     for field, minimum in minimum_lengths.items():
         value = str(analysis.get(field, "")).strip()
         if len(value) < minimum:
             raise ValueError(f"Analysis {arxiv_id} has shallow {field}: minimum {minimum} characters")
     techniques = analysis.get("techniques", [])
-    if len(techniques) < 3 or any(len(str(item).strip()) < 8 for item in techniques):
+    if len(techniques) < 3 or any(len(str(item).strip()) < 20 for item in techniques):
         raise ValueError(f"Analysis {arxiv_id} needs at least three paper-specific techniques")
     outline = analysis.get("proofOutline", {"status": "not_reviewed", "steps": []})
     if outline.get("status") == "reviewed":
@@ -68,9 +68,9 @@ def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
         if not 2 <= len(steps) <= 6:
             raise ValueError(f"Analysis {arxiv_id} needs 2-6 reviewed proof steps")
         for index, step in enumerate(steps):
-            if len(str(step.get("claim", "")).strip()) < 20:
+            if len(str(step.get("claim", "")).strip()) < 24:
                 raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow claim")
-            if len(str(step.get("route", "")).strip()) < 60:
+            if len(str(step.get("route", "")).strip()) < 80:
                 raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow route")
             if len(str(step.get("evidence", "")).strip()) < 8:
                 raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow evidence locator")
