@@ -9,6 +9,7 @@
 3. 使用 `scripts/arxiv_fetch.py --manifest` 对所有成功分类的 ID 并集获取一次元数据。
 4. 按分类独立分析并使用该分类的主题与阅读偏好。同一论文跨分类时保留各自分析。
 5. 每个成功分类用 `scripts/build_complete_report.py --category <id>` 生成 `ReportBatchV3`。expected、抓取和分析数量不一致时停止该分类。
+6. 汇总同日所有分类的报告，生成符合 `docs/daily-overview.schema.json` 的总览 JSON：用 1–12 个带论文引用的短语概括当天具体结果，并可选 0–3 个值得关注项；写数学结果及其意义，不写阅读过程、章节位置或防御性说明。
 
 输出字段使用简体中文；数学表达式使用 LaTeX。证明大纲只记录可复查的论证步骤。`explicit` 只用于作者明确披露 AI 使用；未检查时使用 `not_checked`。
 
@@ -20,6 +21,7 @@
 bash scripts/publish_static_mirror.sh \
   <config.local.json> \
   <category-a.json,category-b.json> \
+  <daily-overview.json> \
   <YYYY-MM-DD> \
   <volume.json>
 ```
