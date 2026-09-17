@@ -18,6 +18,7 @@ USER_AGENT = "ConfigurableArxivBrief/3.0 (research briefing; contact via deploye
 MIN_REQUEST_INTERVAL_SECONDS = 4.0
 DEFAULT_RETRY_AFTER_SECONDS = 60.0
 MAX_WAIT_SECONDS = 20 * 60
+MAX_ATTEMPTS = 5
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -177,13 +178,16 @@ def _request(url: str, timeout: int) -> bytes:
 
 def download(url: str, timeout: int = 90) -> bytes:
     last_error: Exception | None = None
-    for _attempt in range(3):
+    for attempt in range(MAX_ATTEMPTS):
         _reserve_request()
         try:
             return _request(url, timeout)
         except urllib.error.HTTPError as error:
             if error.code in {406, 429}:
-                _defer(_retry_after(error.headers))
+                delay = _retry_after(error.headers)
+                if error.code == 429 and not (error.headers and error.headers.get("Retry-After")):
+                    delay *= 2**attempt
+                _defer(delay)
             elif not 500 <= error.code < 600:
                 raise RuntimeError(f"arXiv request failed with HTTP {error.code}") from error
             last_error = error
@@ -194,4 +198,4 @@ def download(url: str, timeout: int = 90) -> bytes:
             OSError,
         ) as error:
             last_error = error
-    raise RuntimeError(f"arXiv request failed after three attempts: {last_error}")
+    raise RuntimeError(f"arXiv request failed after {MAX_ATTEMPTS} attempts: {last_error}")

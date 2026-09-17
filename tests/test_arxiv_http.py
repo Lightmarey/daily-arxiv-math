@@ -57,6 +57,12 @@ class ArxivHttpTests(unittest.TestCase):
             self.assertEqual(arxiv_http.download("https://arxiv.org/retry"), b"ok")
         self.assertEqual(self.sleeps, [60.0])
 
+    def test_repeated_rate_limits_back_off_exponentially(self):
+        limited = urllib.error.HTTPError("https://arxiv.org/retry", 429, "limited", {}, None)
+        with patch.object(arxiv_http.time, "time", side_effect=self.clock), patch.object(arxiv_http.time, "sleep", side_effect=self.sleep), patch.object(arxiv_http, "_request", side_effect=[limited, limited, b"ok"]):
+            self.assertEqual(arxiv_http.download("https://arxiv.org/retry"), b"ok")
+        self.assertEqual(self.sleeps, [60.0, 120.0])
+
     def test_transient_406_uses_the_same_cooldown(self):
         limited = urllib.error.HTTPError("https://arxiv.org/retry", 406, "limited", {}, None)
         with patch.object(arxiv_http.time, "time", side_effect=self.clock), patch.object(arxiv_http.time, "sleep", side_effect=self.sleep), patch.object(arxiv_http, "_request", side_effect=[limited, b"ok"]):
