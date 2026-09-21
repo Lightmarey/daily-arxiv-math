@@ -67,6 +67,32 @@ class BuildCompleteReportTests(unittest.TestCase):
                     "priorityReason": "相关。",
                 },
             )
+        # Abstract-tier allows 80 chars workSummary, 40 chars breakthrough/limitations, and 2 techniques
+        valid_abstract = {
+            "analysisDepth": "abstract",
+            "workSummary": "针对空间非均匀系数下的变指数双重非线性抛物型方程，通过 Rothe 时间半离散化、单调算子方法与弱比较原理建立全局弱解存在性与唯一性，并给出详细的大时间渐近收敛性分析。",
+            "techniques": [
+                "利用 Rothe 时间半离散化格式与椭圆正则性构造逼近解序列",
+                "借助 Minty 单调算子方法与抛物弱比较原理闭合强收敛极限"
+            ],
+            "breakthrough": "在空间非均匀系数和变指数双重非线性条件下建立了自洽的弱解存在与唯一性理论，并推广了经典结论。",
+            "limitations": "结论仅针对齐次 Neumann 边界条件和特定双重非线性结构，未覆盖具有外力项的一般非牛顿流体系统。",
+            "priorityReason": "数学推进16分；方法16分；完备度15分；领域价值14分，为变指数抛物问题提供自洽理论。",
+        }
+        _validate_analysis_quality("2609.00002", valid_abstract)
+
+        # Abstract-tier still rejects < 80 chars workSummary
+        with self.assertRaisesRegex(ValueError, "shallow workSummary"):
+            _validate_analysis_quality(
+                "2609.00003",
+                {**valid_abstract, "workSummary": "太短的摘要。"}
+            )
+        # Abstract-tier still rejects < 2 techniques
+        with self.assertRaisesRegex(ValueError, "needs at least 2 paper-specific techniques"):
+            _validate_analysis_quality(
+                "2609.00004",
+                {**valid_abstract, "techniques": ["单项技术至少二十个字符长度说明"]}
+            )
 
     def test_rejects_process_narration_in_display_fields(self):
         with self.assertRaisesRegex(ValueError, "forbidden display prose"):

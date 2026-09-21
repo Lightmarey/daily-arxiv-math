@@ -55,19 +55,30 @@ def _validate_analysis_text(arxiv_id: str, analysis: dict) -> None:
         raise ValueError(f"Analysis {arxiv_id} contains math outside LaTeX delimiters")
 
 def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
-    minimum_lengths = {
-        "workSummary": 140,
-        "breakthrough": 90,
-        "limitations": 90,
-        "priorityReason": 50,
-    }
+    is_abstract_tier = analysis.get("analysisDepth", "full_text_sections") == "abstract"
+    if is_abstract_tier:
+        minimum_lengths = {
+            "workSummary": 80,
+            "breakthrough": 40,
+            "limitations": 40,
+            "priorityReason": 40,
+        }
+        min_techniques = 2
+    else:
+        minimum_lengths = {
+            "workSummary": 140,
+            "breakthrough": 90,
+            "limitations": 90,
+            "priorityReason": 50,
+        }
+        min_techniques = 3
     for field, minimum in minimum_lengths.items():
         value = str(analysis.get(field, "")).strip()
         if len(value) < minimum:
             raise ValueError(f"Analysis {arxiv_id} has shallow {field}: minimum {minimum} characters")
     techniques = analysis.get("techniques", [])
-    if len(techniques) < 3 or any(len(str(item).strip()) < 20 for item in techniques):
-        raise ValueError(f"Analysis {arxiv_id} needs at least three paper-specific techniques")
+    if len(techniques) < min_techniques or any(len(str(item).strip()) < 20 for item in techniques):
+        raise ValueError(f"Analysis {arxiv_id} needs at least {min_techniques} paper-specific techniques")
     outline = analysis.get("proofOutline", {"status": "not_reviewed", "steps": []})
     if outline.get("status") == "reviewed":
         steps = outline.get("steps", [])
