@@ -124,22 +124,30 @@ def validate_item(arxiv_id: str, data: dict, expected_target_cats: list[str] | N
     # 4. Check proofOutline
     outline = data.get("proofOutline", {})
     status = outline.get("status")
+    steps = outline.get("steps", [])
     if status not in ("reviewed", "not_applicable", "not_reviewed"):
         errors.append(f"Invalid proofOutline.status: {status}")
-    elif status == "reviewed":
-        steps = outline.get("steps", [])
-        if not 2 <= len(steps) <= 6:
-            errors.append(f"proofOutline.steps must have 2-6 items, got {len(steps)}")
-        for idx, s in enumerate(steps):
-            claim = str(s.get("claim", "")).strip()
-            route = str(s.get("route", "")).strip()
-            evidence = str(s.get("evidence", "")).strip()
-            if len(claim) < 24:
-                errors.append(f"step #{idx+1} claim too short ({len(claim)} < 24)")
-            if len(route) < 80:
-                errors.append(f"step #{idx+1} route too short ({len(route)} < 80)")
-            if len(evidence) < 8:
-                errors.append(f"step #{idx+1} evidence too short ({len(evidence)} < 8)")
+    if is_abstract_tier:
+        if status != "not_reviewed" or len(steps) != 0:
+            errors.append(f"Abstract tier must have proofOutline.status='not_reviewed' and empty steps, got status='{status}', len(steps)={len(steps)}")
+    else:
+        if status == "not_reviewed":
+            errors.append("full_text_sections analysis cannot leave proofOutline as 'not_reviewed'")
+        elif status == "not_applicable" and len(steps) != 0:
+            errors.append("not_applicable proofOutline must have empty steps")
+        elif status == "reviewed":
+            if not 2 <= len(steps) <= 6:
+                errors.append(f"proofOutline.steps must have 2-6 items, got {len(steps)}")
+            for idx, s in enumerate(steps):
+                claim = str(s.get("claim", "")).strip()
+                route = str(s.get("route", "")).strip()
+                evidence = str(s.get("evidence", "")).strip()
+                if len(claim) < 24:
+                    errors.append(f"step #{idx+1} claim too short ({len(claim)} < 24)")
+                if len(route) < 80:
+                    errors.append(f"step #{idx+1} route too short ({len(route)} < 80)")
+                if len(evidence) < 8:
+                    errors.append(f"step #{idx+1} evidence too short ({len(evidence)} < 8)")
 
     # 5. Check priorityComponents
     comps = data.get("priorityComponents")
@@ -155,6 +163,13 @@ def validate_item(arxiv_id: str, data: dict, expected_target_cats: list[str] | N
             errors.append(f"priorityScore ({data.get('priorityScore')}) != sum of components ({score})")
         if comps.get("advance", 0) <= 12 and score > 64:
             errors.append(f"advance <= 12 cannot score > 64, got {score}")
+        if is_abstract_tier:
+            if comps.get("method", 0) > 16:
+                errors.append(f"abstract tier method component exceeds cap of 16, got {comps.get('method')}")
+            if comps.get("strength", 0) > 16:
+                errors.append(f"abstract tier strength component exceeds cap of 16, got {comps.get('strength')}")
+            if score >= 75:
+                errors.append(f"abstract tier score must be < 75 (capped at 74), got {score}")
         if score >= 90:
             if comps.get("advance", 0) < 30 or comps.get("method", 0) < 18 or comps.get("strength", 0) < 16:
                 errors.append("score >= 90 requires advance>=30, method>=18, strength>=16")
@@ -163,6 +178,19 @@ def validate_item(arxiv_id: str, data: dict, expected_target_cats: list[str] | N
             errors.append(f"priorityTier ({data.get('priorityTier')}) != expected {expected_tier}")
         if expected_tier == "low" and not data.get("lowPriorityReason"):
             errors.append("low priority item requires non-empty lowPriorityReason")
+
+    # 6. Check AI disclosure verification (eliminate not_checked)
+    ai_status = data.get("aiStatus")
+    if ai_status not in ("explicit", "no_disclosure_observed"):
+        errors.append(f"aiStatus must be 'explicit' or 'no_disclosure_observed', got '{ai_status}' (not_checked is forbidden)")
+    elif ai_status == "explicit":
+        if not data.get("aiEvidence"):
+            errors.append("aiStatus='explicit' requires non-empty aiEvidence quote")
+        if not data.get("aiEvidenceSource"):
+            errors.append("aiStatus='explicit' requires non-empty aiEvidenceSource")
+    elif ai_status == "no_disclosure_observed":
+        if not data.get("aiEvidenceSource"):
+            errors.append("aiStatus='no_disclosure_observed' requires non-empty aiEvidenceSource")
 
     # 6. Text quality & bare math
     all_texts = [
