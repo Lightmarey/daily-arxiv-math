@@ -13,24 +13,40 @@
 
 1. 运行一次 `scripts/arxiv_listing.py --date <date>`，让它按 `fetchCategories` 生成同一个多分类 manifest。只把官方 New submissions 与 Cross-lists 计入，Replacements 不计入。
 2. 把这个多分类 manifest 传给 `scripts/arxiv_fetch.py --manifest`，对全部分类的 ID 并集获取一次元数据；校验 `expectedIds` 与元数据完整一致。
-3. 采用“两阶段分级精读（Tiered Analysis）”控制 Token 消耗并聚焦核心学术价值：
-   - **Phase 1（前置快速粗筛）**：基于全量论文的标题与英文摘要快速初排主题与价值梯队，划分分析深度：前 30%–40% 的重大突破与核心理论采用 `analysisDepth="full_text_sections"`；其余 60%–70% 的常规推广、工程/生物应用或交叉模型采用 `analysisDepth="abstract"`。
-   - **Phase 2（差异化并行分析）**：
-     - **精读组（full_text_sections）**：逐篇阅读正文导论、主定理、方法或证明概览，撰写详实分析（`workSummary` 通常 140–350 字符，`breakthrough`/`limitations` >= 90 字符，`techniques` 给出 3–6 项特有技术，证明大纲给出 2–6 步 `reviewed` 步骤）。
-     - **速览组（abstract）**：不抓取正文，直接基于摘要提炼核心问题与适用边界，注重语言精炼（`workSummary` >= 80 字符，`breakthrough`/`limitations`/`priorityReason` >= 40 字符，`techniques` 至少 2 项，证明大纲直接标记为 `status="not_applicable"`, `steps=[]`）。
-4. 无论何种深度，分析字段均不得使用标题改写、摘要逐句直译、通用套话或短句占位，严禁出现裸露数学公式与 9 项指定违规套话。同一论文跨分类时正文只读一次，公共分数相同，主题归类可独立设置。
-5. 证明大纲规范：有清晰证明结构的论文给出 2–6 步 `reviewed` 大纲（写清 claim、route 与定位证据）；综述、纯数值、常规模型或速览组统一使用 `status="not_applicable", steps=[]`。
+3. 采用“两阶段分级精读（Tiered Analysis - 各学科方向独立 25% 配额）”控制 Token 消耗并聚焦核心学术价值：
+   - **Phase 1（前置轻量分流 - 独立 25% 配额）**：
+     - 运行 `scripts/triage_papers.py` 分别读取各学科方向（`math.AP` 与 `math.DG`）的论文列表，独立计算各方向 25% 高优精读配额（公式：$\lfloor 0.25 \times N_{\text{category}} \rfloor$），严禁各方向聚合混合统计。
+     - 若交叉论文（Cross-lists）在任一学科方向入选前 25%，则该论文在所有分类中均标记为 `analysisDepth="full_text_sections"` 并共享分析结果。其余 $\ge 75\%$ 论文赋予 `analysisDepth="abstract"`。
+   - **Phase 2（靶向截取与差异化分析）**：
+     - 运行 `scripts/extract_paper_sections.py`。
+     - **AI 披露自动检测（全量 100% 覆盖）**：脚本自动扫描正文致谢与声明，自动填充 `aiStatus`（`explicit` 或 `no_disclosure_observed`）与 `aiEvidenceSource`，杜绝遗留 `not_checked`。
+     - **速览组（各方向剩余 75%，Score $< 75$）**：设置 `analysisDepth="abstract"`。零正文抓取，完全基于标题与摘要提炼。
+       - 质量底线：`workSummary` $\ge 80$ 字符，`breakthrough`/`limitations`/`priorityReason` $\ge 40$ 字符，`techniques` 至少 2 项。
+       - **Schema 严格约束**：证明大纲统一为 `status="not_reviewed", steps=[]`（严禁填 `not_applicable`，否则 Zod 校验报错）。
+       - 评分上限：方法与强度各 $\le 16$，总分 $< 75$（受暂定上限 74 分约束）。
+     - **精读组（各方向前 25%，Score $\ge 75$）**：设置 `analysisDepth="full_text_sections"`。
+       - 仅靶向截取 HTML 中的导言、主定理、证明思路与致谢（截取后文本控制在 15k 字符内，丢弃 80% 以上冗余证明与附录）。
+       - 质量标准：`workSummary` 通常 140–350 字符，`breakthrough`/`limitations` $\ge 90$ 字符，`techniques` 给出 3–6 项特有技术，证明大纲给出 2–6 步 `reviewed` 步骤（纯综述或纯数值工作除外，可设 `not_applicable`）。
+4. 无论何种深度，分析字段均不得使用标题改写、摘要逐句直译、通用套话或短句占位，严禁出现裸露数学公式与 11 项指定违规套话。同一论文跨分类时正文只读一次，公共分数相同，主题归类可独立设置。
+5. 证明大纲规范：
+   - 精读组（`full_text_sections`）：有清晰证明结构的论文给出 2–6 步 `reviewed` 大纲（写清 claim、route 与定位证据）；综述或纯数值工作使用 `status="not_applicable", steps=[]`。
+   - 速览组（`abstract`）：统一且必须使用 `status="not_reviewed", steps=[]`。
 6. 公共阅读优先级按四项独立评分并输出 `priorityComponents`：`advance` 数学推进 0–35，`method` 方法与技术复用性 0–25，`strength` 结果强度与完备度 0–20，`fieldValue` 领域价值 0–20；`priorityScore` 必须等于四项之和。数学推进 0–12 表示常规推广、适配或已有链条复现，13–22 表示既有框架下的实质新定理，23–29 表示尖锐或较广结果、解决明确障碍，30–35 只用于可能改变领域认识的推进。方法分 0–8 为标准方法直接应用，9–16 为有意义的组合或适配，17–21 为可复用技术推进，22–25 为新的核心方法。完备度 0–8 为部分或概念性结果，9–14 为范围明确的完整定理，15–17 为强或尖锐结果，18–20 为最优性、完整分类或特别完备的理论。领域价值 0–8 为很窄或增量工作，9–13 为明确的专门方向价值，14–17 为较广的子领域价值，18–20 为领域级价值。
-7. 分档为 0–49 低、50–74 中、75–89 高、90–100 特别高；存储时 75 分以上仍使用 `priorityTier=high`。数学推进不超过 12 时总分不得超过 64。摘要级分析是暂定判断，方法分和完备度各不得超过 16，总分不得超过 79。90 分以上必须同时满足数学推进至少 30、方法至少 18、完备度至少 16。不得因篇幅、公式数量、作者声望或 AI 披露加分；同一论文跨分类时公共分数和四项分值相同，主题归类可以不同。`priorityReason` 必须写明四项分值及论文特有依据；低分另给具体 `lowPriorityReason`。
-8. 全部论文评分后做一次分布复核：若 75 分以上超过 35%、低分不足 10%、中位数超过 72，或 90 分以上超过 5%，逐篇对照上述锚点复查高分和临界分；这只是发现整体虚高的信号，不得为了凑比例机械改分。个人阅读兴趣不进入公共分数。
+7. 分档为 0–49 低、50–74 中、75–89 高、90–100 特别高；存储时 75 分以上仍使用 `priorityTier=high`。数学推进不超过 12 时总分不得超过 64。摘要级分析是暂定判断，方法分和完备度各不得超过 16，总分不得超过 74（速览组总分 $< 75$）。90 分以上必须同时满足数学推进至少 30、方法至少 18、完备度至少 16。不得因篇幅、公式数量、作者声望或 AI 披露加分；同一论文跨分类时公共分数和四项分值相同，主题归类可以不同。`priorityReason` 必须写明四项分值及论文特有依据；低分另给具体 `lowPriorityReason`。
+8. 全部论文评分后按学科方向（`math.AP` 与 `math.DG`）独立做分布复核：
+   - 75 分以上（High Priority）：各方向独立 $\le 25\%$。
+   - 低分（$< 50$）：各方向独立 $\ge 10\%$。
+   - 90 分以上（Top Breakthrough）：各方向独立 $\le 5\%$。
+   - 中位数：各方向独立 $\le 72$。
+   若触发上述边界，逐篇对照上述锚点复查高分和临界分；这只是发现整体虚高的信号，不得为了凑比例机械改分。个人阅读兴趣不进入公共分数。
 9. 不做独立 proof-verifier 或逐篇数学审稿。每个分类直接用 `scripts/build_complete_report.py --category <id>` 生成 `ReportBatchV3`；`expected`、`fetched`、`analyzed` 必须完全一致。构建器的信息量或评分规则失败时只修正对应字段，不额外扩展为正确性核验。
 10. 汇总同日全部分类，生成符合 `docs/daily-overview.schema.json` 的总览：通常 8 个带论文引用的具体结果和 2 个值得关注项。只写问题、结果、方法与意义，不写抓取、阅读、模型或防御性说明；数学表达式使用 LaTeX。
 
 分析字段使用简体中文，标题、作者和英文摘要保留原文。
-**AI 披露核查规范**：积极核查正文致谢（Acknowledgments）、声明（Declarations）或尾注：
+**AI 披露核查规范**：必须保证 100% 明确核查：
 - 若作者明确披露使用了大模型/生成式 AI，使用 `aiStatus="explicit"`，并在 `aiEvidence` 中完整摘录原句，在 `aiEvidenceSource` 中注明章节页码。
 - 若核查后确认无 AI 使用声明，使用 `aiStatus="no_disclosure_observed"`，并在 `aiEvidenceSource` 中注明核查范围（例如 `正文致谢与声明章节已核查，未见AI使用披露`）。
-- 尽量避免直接输出 `not_checked`，力求全站呈现清晰、透明的 AI 披露核查结论。
+- 严禁输出 `not_checked`，力求全站呈现清晰、透明的 AI 披露核查结论。
 
 ## 预检、发布与线上验收
 
