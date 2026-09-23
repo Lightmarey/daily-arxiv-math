@@ -55,7 +55,7 @@ def _validate_analysis_text(arxiv_id: str, analysis: dict) -> None:
         raise ValueError(f"Analysis {arxiv_id} contains math outside LaTeX delimiters")
 
 def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
-    is_abstract_tier = analysis.get("analysisDepth", "full_text_sections") == "abstract"
+    is_abstract_tier = analysis.get("analysisDepth", "abstract") == "abstract"
     if is_abstract_tier:
         minimum_lengths = {
             "workSummary": 80,
@@ -80,17 +80,26 @@ def _validate_analysis_quality(arxiv_id: str, analysis: dict) -> None:
     if len(techniques) < min_techniques or any(len(str(item).strip()) < 20 for item in techniques):
         raise ValueError(f"Analysis {arxiv_id} needs at least {min_techniques} paper-specific techniques")
     outline = analysis.get("proofOutline", {"status": "not_reviewed", "steps": []})
-    if outline.get("status") == "reviewed":
-        steps = outline.get("steps", [])
-        if not 2 <= len(steps) <= 6:
-            raise ValueError(f"Analysis {arxiv_id} needs 2-6 reviewed proof steps")
-        for index, step in enumerate(steps):
-            if len(str(step.get("claim", "")).strip()) < 24:
-                raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow claim")
-            if len(str(step.get("route", "")).strip()) < 80:
-                raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow route")
-            if len(str(step.get("evidence", "")).strip()) < 8:
-                raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow evidence locator")
+    status = outline.get("status")
+    steps = outline.get("steps", [])
+    if is_abstract_tier:
+        if status != "not_reviewed" or len(steps) != 0:
+            raise ValueError(f"Analysis {arxiv_id} abstract-tier proofOutline must have status='not_reviewed' and empty steps")
+    else:
+        if status == "not_reviewed":
+            raise ValueError(f"Analysis {arxiv_id} full_text_sections cannot have status='not_reviewed'")
+        if status == "not_applicable" and len(steps) != 0:
+            raise ValueError(f"Analysis {arxiv_id} not_applicable proofOutline must have empty steps")
+        if status == "reviewed":
+            if not 2 <= len(steps) <= 6:
+                raise ValueError(f"Analysis {arxiv_id} needs 2-6 reviewed proof steps")
+            for index, step in enumerate(steps):
+                if len(str(step.get("claim", "")).strip()) < 24:
+                    raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow claim")
+                if len(str(step.get("route", "")).strip()) < 80:
+                    raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow route")
+                if len(str(step.get("evidence", "")).strip()) < 8:
+                    raise ValueError(f"Analysis {arxiv_id} proof step {index + 1} has a shallow evidence locator")
 
 def _validate_priority_score(arxiv_id: str, analysis: dict) -> int:
     components = analysis.get("priorityComponents")
